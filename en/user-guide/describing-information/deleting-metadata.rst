@@ -1,0 +1,4 @@
+.. deleting-metadata:
+
+Deleting metadata
+=================
