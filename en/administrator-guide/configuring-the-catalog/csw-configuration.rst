@@ -1,1 +1,4 @@
-# Configuring CSW
+.. _csw-configuration:
+
+Configuring CSW
+===============

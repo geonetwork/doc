@@ -1,1 +1,4 @@
-# Configuration for the INSPIRE Directive
+.. _inspire-configuration:
+
+Configuring for the INSPIRE Directive
+=====================================

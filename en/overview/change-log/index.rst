@@ -1,3 +1,10 @@
-# Change log
+.. _change-log:
 
-* [Version 3.0.0](version-3.0.0.md)
+Change log
+##########
+
+
+.. toctree::
+   :maxdepth: 2
+
+   version-3.0.0.rst

@@ -1,1 +1,4 @@
-# Configuring virtual CSW
+.. _virtual-csw-configuration:
+
+Configuring virtual CSW
+=======================

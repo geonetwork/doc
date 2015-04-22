@@ -11,4 +11,5 @@ User guide
    associating-resources/index.rst
    tag-information/index.rst
    publishing/index.rst
+   workflow/index.rst
    harvesting/index.rst
