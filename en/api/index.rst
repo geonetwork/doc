@@ -1,3 +1,5 @@
+.. _api-guide:
+
 API guide
 =========
 
