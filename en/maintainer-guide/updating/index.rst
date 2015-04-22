@@ -1,7 +1,7 @@
 .. _updating:
 
-Updating application
-####################
+Updating the application
+########################
 
 .. toctree::
    :maxdepth: 2

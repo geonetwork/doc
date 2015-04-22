@@ -1,7 +1,7 @@
 .. _overview:
 
 Overview
-========
+########
 
 The GeoNetwork project started out in year 2001 as a Spatial Data Catalogue System for
 the Food and Agriculture organisation of the United Nations (`FAO <http://www.fao.org>`_),

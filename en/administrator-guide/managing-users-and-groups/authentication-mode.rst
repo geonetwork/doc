@@ -2,7 +2,7 @@
 
 
 Authentication mode
-===================
+###################
 
 
 Configuring LDAP

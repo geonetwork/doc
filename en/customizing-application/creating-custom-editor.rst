@@ -4,5 +4,5 @@ Customizing editor
 ##################
 
 Adding new view
-===============
+###############
 

@@ -1,7 +1,7 @@
 .. _associating_resources:
 
 Associating resources
-=====================
+#####################
 
 
 .. toctree::

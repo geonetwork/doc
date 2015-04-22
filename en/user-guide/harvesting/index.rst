@@ -1,7 +1,7 @@
 .. _harvesting:
 
 Harvesting
-==========
+##########
 
 .. toctree::
    :maxdepth: 2

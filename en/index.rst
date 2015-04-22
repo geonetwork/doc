@@ -1,7 +1,7 @@
 .. _toc:
 
 Full table of contents
-======================
+######################
 
 .. toctree::
    :maxdepth: 3
