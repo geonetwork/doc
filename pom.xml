@@ -48,6 +48,24 @@
               <workingDirectory>${basedir}</workingDirectory>
             </configuration>
           </execution>
+          <execution>
+            <id>build-docs-fr</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>sphinx-build</executable>
+              <arguments>
+                <argument>-a</argument>
+                <argument>-b</argument>
+                <argument>html</argument>
+                <argument>fr</argument>
+                <argument>target/doc/fr</argument>
+              </arguments>
+              <workingDirectory>${basedir}</workingDirectory>
+            </configuration>
+          </execution>
           <!--<execution>
             <id>build-docs-en-json</id>
             <phase>prepare-package</phase>
