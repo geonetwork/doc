@@ -31,6 +31,7 @@ import shlex
 # ones.
 extensions = [
     'sphinx.ext.todo',
+    'sphinx.ext.extlinks',
     'sphinx.ext.ifconfig',
 ]
 
@@ -277,9 +278,13 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'GeoNetworkopensource', u'GeoNetwork opensource Documentation',
-   author, 'GeoNetworkopensource', 'One line description of project.',
-   'Miscellaneous'),
+  (master_doc,
+  'GeoNetworkopensource',
+  u'GeoNetwork opensource Documentation',
+  author,
+  'GeoNetworkopensource',
+  'One line description of project.',
+  'Miscellaneous')
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -293,3 +298,22 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+extlinks = {
+ 'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #'),
+ 'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
+ 'code': ('https://github.com/geonetwork/core-geonetwork/tree/develop/%s', 'source file '),
+ 'repo': ('https://github.com/geonetwork/%s', 'code repository '),
+ 'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page ')
+}
+
+rst_epilog = """
+.. |project_name| replace:: GeoNetwork
+.. |project_url| replace:: http://geonetwork-opensource.org
+.. |jdbc.properties| replace:: ``WEB-INF/config-db/jdbc.properties``
+.. |config.node.folder| replace:: ``WEB-INF/config-node``
+.. |default.node| replace:: ``srv``
+.. |default.node.config.file| replace:: ``WEB-INF/config-node/srv.xml``
+.. |install.homepage| replace:: your installation
+.. _install.homepage: http://localhost:8080/geonetwork
+"""
