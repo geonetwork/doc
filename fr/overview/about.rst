@@ -1,2 +1,5 @@
-About
-#####
+.. _about:
+
+
+À propos de ce projet
+#####################

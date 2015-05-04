@@ -1,8 +1,11 @@
-Author
-######
+.. _authors:
 
-Project Steering Committee (PSC)
---------------------------------
+
+Les auteurs
+###########
+
+Comité de pilotage (PSC)
+------------------------
 
 The GeoNetwork Project Steering Committee (PSC) makes decisions on
 GeoNetwork opensource project issues.
@@ -12,8 +15,8 @@ Proposals are available for review for at least two days, and a single veto
 is sufficient to delay progress though ultimately a majority of members
 can pass a proposal.
 
-Members of the Project Steering Committee
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Les membres du comité de pilotage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Emanuele Tajariol
 * Francois Prunayre
@@ -23,27 +26,27 @@ Members of the Project Steering Committee
 * Patrizia Monteduro
 * Simon Pigot
 
-Former members of the PSC
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Les anciens membres
+~~~~~~~~~~~~~~~~~~~
 
 * Andrea Carboni
 * Archie Warnock
 
 
-Committers
-----------
+Les committers
+--------------
 
 Committers list is available `here for the core team <https://github.com/orgs/geonetwork/teams/committers>`_
 and `here for the documenter team <https://github.com/orgs/geonetwork/teams/documenters>`_.
 
-Contributors
-------------
+Les contributeurs
+-----------------
 
 
 Contributors list is available `here <https://github.com/geonetwork/core-geonetwork/graphs/contributors>`_.
 
-The documentation
------------------
+La documentation
+----------------
 
 The documentation was written by the GeoNetwork opensource developers and
 other community members.
