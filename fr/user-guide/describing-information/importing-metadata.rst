@@ -1,4 +1,4 @@
 .. _importing-metadata:
 
-Importing metadata
-##################
+Importer de nouvelles fiches
+############################

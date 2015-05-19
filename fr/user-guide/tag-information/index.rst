@@ -1,7 +1,7 @@
 .. _tag-information:
 
-Classify information
-####################
+Classer les informations
+########################
 
 
 .. toctree::

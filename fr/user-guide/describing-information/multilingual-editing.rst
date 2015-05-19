@@ -1,5 +1,5 @@
 .. _multilingual-editing:
 
 
-Multilingual editing
-####################
+Saisir des métadonnées en plusieurs langues
+###########################################

@@ -1,4 +1,4 @@
 .. _virtual-csw-configuration:
 
-Configuring virtual CSW
-#######################
+Configurer un point d’accès CSW virtuel
+#######################################

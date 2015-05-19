@@ -1,7 +1,7 @@
 .. _customizing-guide:
 
-Customizing guide
-#################
+Personnaliser l'application
+###########################
 
 
 

@@ -1,7 +1,7 @@
 .. _maintainer-guide:
 
-Maintainer guide
-################
+Guide du mainteneur
+###################
 
 
 

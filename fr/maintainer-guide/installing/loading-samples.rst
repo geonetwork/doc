@@ -1,4 +1,4 @@
 .. _loading-samples:
 
-Loading samples
-###############
+Importer les examples
+#####################

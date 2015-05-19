@@ -1,5 +1,5 @@
 .. _transfering-privileges:
 
-Transfering privileges
-######################
+Transférer les privilèges
+#########################
 

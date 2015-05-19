@@ -1,4 +1,4 @@
 .. _managing-categories:
 
-Managing categories
-###################
+Gérer les catégories
+####################

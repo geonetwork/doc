@@ -1,7 +1,7 @@
 .. _harvesting:
 
-Harvesting
-##########
+Moissonner des sources de données
+#################################
 
 .. toctree::
    :maxdepth: 2

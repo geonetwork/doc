@@ -1,4 +1,4 @@
 .. _managing-metadata-standards:
 
-Managing metadata standards
-###########################
+Gérer les standards de métadonnées
+##################################

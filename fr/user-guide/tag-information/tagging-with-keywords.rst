@@ -1,5 +1,5 @@
 .. _tagging-with-keywords:
 
-Tagging with keywords
-#####################
+Attribuer des mots clés
+#######################
 

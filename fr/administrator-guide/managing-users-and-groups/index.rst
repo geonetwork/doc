@@ -1,7 +1,7 @@
 .. _managing-users-and-groups:
 
-Managing users and groups
-#########################
+Gérer les utilisateurs & les groupes
+####################################
 
 
 .. toctree::

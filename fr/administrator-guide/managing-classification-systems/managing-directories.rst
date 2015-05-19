@@ -1,4 +1,4 @@
 .. _managing-directories:
 
-Managing directories
-####################
+Gérer les annuaires
+###################

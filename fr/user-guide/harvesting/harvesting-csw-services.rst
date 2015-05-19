@@ -1,5 +1,5 @@
 .. _harvesting-csw-services:
 
-Harvesting CSW services
-#######################
+Moissonner un service CSW
+#########################
 

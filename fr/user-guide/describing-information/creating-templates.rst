@@ -1,4 +1,4 @@
 .. _creating-templates:
 
-Creating templates
-##################
+Créer des modèles de fiches
+###########################

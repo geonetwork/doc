@@ -1,8 +1,8 @@
 .. _writing-documentation:
 
 
-Writing documentation
-#####################
+Écrire la documentation
+#######################
 
 This section gives some guidelines to write consistent documentation
 for |project_name|.

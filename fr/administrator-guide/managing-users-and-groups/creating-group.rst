@@ -1,5 +1,5 @@
 .. _creating-group:
 
 
-Creating group
-##############
+Créer des groupes
+#################

@@ -1,7 +1,7 @@
 .. _describing-information:
 
-Describing information
-######################
+Référencer des informations
+###########################
 
 
 .. toctree::

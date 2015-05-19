@@ -1,4 +1,4 @@
 .. _installing-from-war-file:
 
-Installing from WAR file
-########################
+Installer à partir du WAR
+#########################

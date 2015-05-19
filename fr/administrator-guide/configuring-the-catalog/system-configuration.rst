@@ -1,4 +1,4 @@
 .. _system-configuration:
 
-System configuration
-####################
+Configurer le système
+#####################

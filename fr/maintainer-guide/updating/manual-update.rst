@@ -1,4 +1,4 @@
 .. _manual-update:
 
-Manual update
-#############
+Mise à jour manuellement
+########################

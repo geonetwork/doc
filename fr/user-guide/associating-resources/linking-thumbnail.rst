@@ -1,5 +1,5 @@
 .. _linking-thumbnail:
 
 
-Adding overview
-###############
+Associer des aperçus
+####################

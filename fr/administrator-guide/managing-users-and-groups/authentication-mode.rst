@@ -1,8 +1,8 @@
 .. _authentication-mode:
 
 
-Authentication mode
-###################
+Configurer le mode d’authentification
+#####################################
 
 
 Configuring LDAP

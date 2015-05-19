@@ -1,7 +1,7 @@
 .. _installing:
 
-Installing the application
-##########################
+Installer l'application
+#######################
 
 Before using |project_name| on your own computer, you need to install it.
 There is different ways to install |project_name|:

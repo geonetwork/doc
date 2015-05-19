@@ -1,7 +1,7 @@
 .. _administrator-guide:
 
-Administrator guide
-###################
+Guide de l’administrateur
+#########################
 
 
 .. toctree::

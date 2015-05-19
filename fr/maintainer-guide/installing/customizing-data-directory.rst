@@ -1,4 +1,4 @@
 .. _customizing-data-directory:
 
-Customizing the data directory
-##############################
+Configurer le datadir
+#####################

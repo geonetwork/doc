@@ -1,4 +1,4 @@
 .. _using-multinode-mode:
 
-Using multinode mode
-####################
+Utiliser le mode multi-noeuds
+#############################

@@ -1,6 +1,6 @@
 .. _configuring-the-catalog:
 
-Configuring the catalog
+Configurer le catalogue
 #######################
 
 

@@ -1,4 +1,4 @@
 .. _map-server-configuration:
 
-Map servers configuration for geopublication
-############################################
+Configurer les serveurs cartographiques pour la géopublication
+##############################################################

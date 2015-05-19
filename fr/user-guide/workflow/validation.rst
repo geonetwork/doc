@@ -1,5 +1,5 @@
 .. _validation:
 
-Validation
-##########
+Valider une fiche
+#################
 

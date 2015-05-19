@@ -1,8 +1,8 @@
 .. _configuring-database:
 
 
-Configuring the database
-########################
+Configurer la base de données
+#############################
 
 This section describe how to configure the database connection.
 

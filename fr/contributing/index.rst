@@ -1,5 +1,5 @@
-Contributing guide
-##################
+Contribuer
+##########s
 
 The guide for people who want to contribute to GeoNetwork.
 

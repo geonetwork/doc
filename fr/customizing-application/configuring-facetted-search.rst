@@ -1,5 +1,5 @@
 .. _configuring-facetted-search:
 
-Configuring facetted search
-###########################
+Configurer les facettes
+#######################
 

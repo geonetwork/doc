@@ -1,4 +1,4 @@
 .. deleting-metadata:
 
-Deleting metadata
-#################
+Supprimer une fiche
+###################

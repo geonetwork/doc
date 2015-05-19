@@ -1,5 +1,5 @@
 .. _creating-user:
 
 
-Creating user
-#############
+Créer des utilisateurs
+######################

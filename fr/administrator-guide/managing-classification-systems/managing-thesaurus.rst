@@ -1,4 +1,4 @@
 .. _managing-thesaurus:
 
-Managing thesaurus
-##################
+Gérer les thésaurus
+###################

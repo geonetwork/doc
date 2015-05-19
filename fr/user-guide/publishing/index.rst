@@ -1,7 +1,7 @@
 .. _publishing:
 
-Publishing
-##########
+Publier l’information
+#####################
 
 .. toctree::
    :maxdepth: 2

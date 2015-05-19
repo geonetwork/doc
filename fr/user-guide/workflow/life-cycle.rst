@@ -1,5 +1,5 @@
 .. _life-cycle:
 
-Life cycle
-##########
+Suivre le cycle de vie
+######################
 

@@ -1,8 +1,9 @@
 .. _creating-custom-editor:
 
-Customizing editor
-##################
+Personnaliser l'éditeur de fiches
+#################################
 
-Adding new view
-###############
+
+Ajouter une mise en page
+########################
 

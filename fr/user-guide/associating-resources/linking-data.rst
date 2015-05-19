@@ -1,5 +1,5 @@
 .. _linking-data:
 
 
-Linking data
-############
+Associer des ressources
+#######################

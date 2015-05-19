@@ -1,4 +1,4 @@
 .. _backup-application:
 
-Backup the application
-######################
+Sauvegarder l’application
+#########################

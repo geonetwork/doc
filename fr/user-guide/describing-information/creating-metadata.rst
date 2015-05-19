@@ -1,7 +1,7 @@
 .. _creating-metadata:
 
-Creating metadata
-#################
+Créer de nouvelles fiches
+#########################
 
 
 .. figure:: img/creating-metadata.png

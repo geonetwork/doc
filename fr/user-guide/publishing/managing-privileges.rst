@@ -1,5 +1,5 @@
 .. _managing-privileges:
 
-Managing privileges
-###################
+Gérer les privilèges
+####################
 

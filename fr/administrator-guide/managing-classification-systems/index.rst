@@ -1,7 +1,7 @@
 .. _managing-classification-system:
 
-Managing classification system
-##############################
+Gérer les nomenclatures
+#######################
 
 
 .. toctree::
