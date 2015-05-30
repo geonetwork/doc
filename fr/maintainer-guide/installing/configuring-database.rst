@@ -4,10 +4,11 @@
 Configurer la base de données
 #############################
 
-This section describe how to configure the database connection.
+Cette section explique comment configurer la connexion à la base de données.
 
-First check which type of database is used. Depending on the node
-(default node name is |default.node|) check the node configuration file
-|default.node.config.file|. Choose the database type to use.
+Tout d'abord, vérifier le type de base de données utilisé dans le fichier de
+configuration du nœud (par défaut |default.node|) |default.node.config.file|.
+Activer la base de données à utiliser.
 
-Then update the |jdbc.properties| file with connection information.
+Ensuite modifier le fichier |jdbc.properties| pour définir les informations
+de connexion.

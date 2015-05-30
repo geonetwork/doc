@@ -3,8 +3,8 @@
 Installer l'application
 #######################
 
-Before using |project_name| on your own computer, you need to install it.
-There is different ways to install |project_name|:
+Avant d'utiliser |project_name| sur votre ordinateur, vous devez l'installer.
+Il y a différent mode d'installation possible :
 
 
 .. toctree::
@@ -15,7 +15,7 @@ There is different ways to install |project_name|:
    installing-from-source-code.rst
 
 
-After installing the application, you can can configure the following:
+Après l'installation, vous devez la configurer :
 
 .. toctree::
    :maxdepth: 2

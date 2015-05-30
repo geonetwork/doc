@@ -310,6 +310,7 @@ rst_epilog = """
 .. |project_url| replace:: http://geonetwork-opensource.org
 .. |jdbc.properties| replace:: ``WEB-INF/config-db/jdbc.properties``
 .. |config.node.folder| replace:: ``WEB-INF/config-node``
+.. |web.xml| replace:: ``WEB-INF/web.xml``
 .. |default.node| replace:: ``srv``
 .. |default.node.config.file| replace:: ``WEB-INF/config-node/srv.xml``
 .. |install.homepage| replace:: votre installation
