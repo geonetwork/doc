@@ -9,18 +9,17 @@ Harvesting is the process of ingesting metadata from remote sources and storing 
 
 GeoNetwork is able to harvest from the following sources (for more details see below):
 
- #. Another GeoNetwork node (version 2.1 or above). See :ref:`harvesting-geonetwork.rst`
-
- #. A WebDAV server. See :ref:`harvesting-webdav.rst`
- #. A CSW 2.0.1 or 2.0.2 catalogue server. See :ref:`harvesting-csw-services.rst`
- #. A GeoPortal 9.3.x or 10.x server. See :ref:`harvesting-geoportal.rst`
- #. A File system acessible by GeoNetwork. See :ref:`harvesting-filesystem.rst`
- #. An OAI-PMH server. See :ref:`harvesting-oaimph.rst`
- #. An OGC service using its GetCapabilities document. These include WMS, WFS, WPS and WCS services. See :ref:`harvesting-ogcwxs.rst`
- #. An ArcSDE server. See :ref:`harvesting-sde.rst`
- #. A THREDDS catalog. See :ref:`harvested-thredds.rst`
- #. An OGC WFS using a GetFeature query. See :ref:`harvesting-wfs-features.rst`
- #. One or more Z3950 servers. See :ref:`harvested-z3950.rst`
+ #. Another GeoNetwork node (version 2.1 or above). See :ref:`harvesting-geonetwork`
+ #. A WebDAV server. See :ref:`harvesting-webdav`
+ #. A CSW 2.0.1 or 2.0.2 catalogue server. See :ref:`harvesting-csw-services`
+ #. A GeoPortal 9.3.x or 10.x server. See :ref:`harvesting-geoportal`
+ #. A File system acessible by GeoNetwork. See :ref:`harvesting-filesystem`
+ #. An OAI-PMH server. See :ref:`harvesting-oaimph`
+ #. An OGC service using its GetCapabilities document. These include WMS, WFS, WPS and WCS services. See :ref:`harvesting-ogcwxs`
+ #. An ArcSDE server. See :ref:`harvesting-sde`
+ #. A THREDDS catalog. See :ref:`harvested-thredds`
+ #. An OGC WFS using a GetFeature query. See :ref:`harvesting-wfs-features`
+ #. One or more Z3950 servers. See :ref:`harvested-z3950`
 
 Mechanism overview
 ------------------
