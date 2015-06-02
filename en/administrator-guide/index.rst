@@ -11,3 +11,11 @@ Administrator guide
    managing-users-and-groups/index.rst
    managing-classification-systems/index.rst
    managing-metadata-standards/index.rst
+
+   
+    .. figure:: admin.png
+
+	*Administration Dashboard*
+		
+All Admin functions are available from the Admin Dashboard from the main menu.
+On the Admin Dashboard you will find shortcuts to any administration option your role can access.

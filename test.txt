@@ -1,0 +1,620 @@
+Listening for transport dt_socket at address: 54207
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Documentation module 3.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ doc ---
+[INFO] Deleting C:\work\doc\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ doc ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\work\doc\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ doc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ doc ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\work\doc\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ doc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ doc ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\work\doc\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- exec-maven-plugin:1.1:exec (build-docs-en) @ doc ---
+[INFO] Running Sphinx v1.1.2
+[INFO] loading pickled environment... not yet created
+[INFO] building [html]: all source files
+[INFO] updating environment: 100 added, 0 changed, 0 removed
+[INFO] reading sources... [  1%] administrator-guide/configuring-the-catalog/csw-configuration
+[INFO] reading sources... [  2%] administrator-guide/configuring-the-catalog/index
+[INFO] reading sources... [  3%] administrator-guide/configuring-the-catalog/inspire-configuration
+[INFO] reading sources... [  4%] administrator-guide/configuring-the-catalog/map-server-configuration
+[INFO] reading sources... [  5%] administrator-guide/configuring-the-catalog/system-configuration
+[INFO] reading sources... [  6%] administrator-guide/configuring-the-catalog/virtual-csw-configuration
+[INFO] reading sources... [  7%] administrator-guide/index
+[INFO] reading sources... [  8%] administrator-guide/managing-classification-systems/index
+[INFO] reading sources... [  9%] administrator-guide/managing-classification-systems/managing-categories
+[INFO] reading sources... [ 10%] administrator-guide/managing-classification-systems/managing-directories
+[INFO] reading sources... [ 11%] administrator-guide/managing-classification-systems/managing-thesaurus
+[INFO] reading sources... [ 12%] administrator-guide/managing-metadata-standards/index
+[INFO] reading sources... [ 13%] administrator-guide/managing-users-and-groups/authentication-mode
+[INFO] reading sources... [ 14%] administrator-guide/managing-users-and-groups/creating-group
+[INFO] reading sources... [ 15%] administrator-guide/managing-users-and-groups/creating-user
+[INFO] reading sources... [ 16%] administrator-guide/managing-users-and-groups/index
+[INFO] reading sources... [ 17%] administrator-guide/managing-users-and-groups/user-self-registration
+[INFO] reading sources... [ 18%] annexes/glossary/index
+[INFO] reading sources... [ 19%] annexes/index
+[INFO] reading sources... [ 20%] annexes/mef-format
+[INFO] reading sources... [ 21%] annexes/standards/dublin-core/index
+[INFO] reading sources... [ 22%] annexes/standards/index
+[INFO] reading sources... [ 23%] annexes/standards/iso19139/index
+[INFO] reading sources... [ 24%] api/csw
+[INFO] reading sources... [ 25%] api/index
+[INFO] reading sources... [ 26%] api/oai-pmh
+[INFO] reading sources... [ 27%] api/opensearch
+[INFO] reading sources... [ 28%] api/rdf-dcat
+[INFO] reading sources... [ 29%] api/the-geonetwork-api
+[INFO] reading sources... [ 30%] api/z39-50
+[INFO] reading sources... [ 31%] contributing/doing-a-release
+[INFO] reading sources... [ 32%] contributing/index
+[INFO] reading sources... [ 33%] contributing/making-a-pull-request
+[INFO] reading sources... [ 34%] contributing/writing-documentation
+[INFO] reading sources... [ 35%] customizing-application/configuring-facetted-search
+[INFO] reading sources... [ 36%] customizing-application/creating-custom-editor
+[INFO] reading sources... [ 37%] customizing-application/implementing-a-schema-plugin
+[INFO] reading sources... [ 38%] customizing-application/index
+[INFO] reading sources... [ 39%] index
+[INFO] reading sources... [ 40%] maintainer-guide/backup/index
+[INFO] reading sources... [ 41%] maintainer-guide/index
+[INFO] reading sources... [ 42%] maintainer-guide/installing/configuring-database
+[INFO] reading sources... [ 43%] maintainer-guide/installing/customizing-data-directory
+[INFO] reading sources... [ 44%] maintainer-guide/installing/index
+[INFO] reading sources... [ 45%] maintainer-guide/installing/installing-from-source-code
+[INFO] reading sources... [ 46%] maintainer-guide/installing/installing-from-the-installer
+[INFO] reading sources... [ 47%] maintainer-guide/installing/installing-from-war-file
+[INFO] reading sources... [ 48%] maintainer-guide/installing/loading-samples
+[INFO] reading sources... [ 49%] maintainer-guide/installing/using-multinode-mode
+[INFO] reading sources... [ 50%] maintainer-guide/updating/automatic-update
+[INFO] reading sources... [ 51%] maintainer-guide/updating/index
+[INFO] reading sources... [ 52%] maintainer-guide/updating/manual-update
+[INFO] reading sources... [ 53%] overview/about
+[INFO] reading sources... [ 54%] overview/authors
+[INFO] reading sources... [ 55%] overview/change-log/index
+[INFO] reading sources... [ 56%] overview/change-log/version-3.0.0
+[INFO] reading sources... [ 57%] overview/index
+[INFO] reading sources... [ 58%] overview/license
+[INFO] reading sources... [ 59%] user-guide/associating-resources/index
+[INFO] reading sources... [ 60%] user-guide/associating-resources/linking-data
+[INFO] reading sources... [ 61%] user-guide/associating-resources/linking-thumbnail
+[INFO] reading sources... [ 62%] user-guide/describing-information/creating-metadata
+[INFO] reading sources... [ 63%] user-guide/describing-information/deleting-metadata
+[INFO] reading sources... [ 64%] user-guide/describing-information/importActions
+[INFO] reading sources... [ 65%] user-guide/describing-information/importing-metadata
+[INFO] reading sources... [ 66%] user-guide/describing-information/index
+[INFO] reading sources... [ 67%] user-guide/describing-information/managing-templates
+[INFO] reading sources... [ 68%] user-guide/describing-information/multilingual-editing
+[INFO] reading sources... [ 69%] user-guide/export/index
+[INFO] reading sources... [ 70%] user-guide/harvesting/common/common_categories
+[INFO] reading sources... [ 71%] user-guide/harvesting/common/common_notes
+[INFO] reading sources... [ 72%] user-guide/harvesting/common/common_options
+[INFO] reading sources... [ 73%] user-guide/harvesting/common/common_privileges
+[INFO] reading sources... [ 74%] user-guide/harvesting/harvesting-csw-services
+[INFO] reading sources... [ 75%] user-guide/harvesting/harvesting-filesystem
+[INFO] reading sources... [ 76%] user-guide/harvesting/harvesting-geonetwork
+[INFO] reading sources... [ 77%] user-guide/harvesting/harvesting-geoportal
+[INFO] reading sources... [ 78%] user-guide/harvesting/harvesting-oaimph
+[INFO] reading sources... [ 79%] user-guide/harvesting/harvesting-ogcwxs
+[INFO] reading sources... [ 80%] user-guide/harvesting/harvesting-sde
+[INFO] reading sources... [ 81%] user-guide/harvesting/harvesting-thredds
+[INFO] reading sources... [ 82%] user-guide/harvesting/harvesting-webdav
+[INFO] reading sources... [ 83%] user-guide/harvesting/harvesting-wfs-features
+[INFO] reading sources... [ 84%] user-guide/harvesting/harvesting-z3950
+[INFO] reading sources... [ 85%] user-guide/harvesting/index
+[INFO] reading sources... [ 86%] user-guide/index
+[INFO] reading sources... [ 87%] user-guide/metadata-discovery/index
+[INFO] reading sources... [ 88%] user-guide/publishing/index
+[INFO] reading sources... [ 89%] user-guide/publishing/managing-privileges
+[INFO] reading sources... [ 90%] user-guide/publishing/ownership/index
+[INFO] reading sources... [ 91%] user-guide/publishing/restricting-information-to-metadata-sections
+[INFO] reading sources... [ 92%] user-guide/publishing/transfering-privileges
+[INFO] reading sources... [ 93%] user-guide/tag-information/index
+[INFO] reading sources... [ 94%] user-guide/tag-information/tagging-with-categories
+[INFO] reading sources... [ 95%] user-guide/tag-information/tagging-with-keywords
+[INFO] reading sources... [ 96%] user-guide/workflow/index
+[INFO] reading sources... [ 97%] user-guide/workflow/life-cycle
+[INFO] reading sources... [ 98%] user-guide/workflow/suggestion
+[INFO] reading sources... [ 99%] user-guide/workflow/validation
+[INFO] reading sources... [100%] user-guide/workflow/versioning
+[INFO] 
+[INFO] Making output directory...
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\system-configuration.rst:50: WARNING: undecodable source characters, replacing with "?": '*Host* The node>>>\x92<<<s address or IP number. If your node is publicly accessible from the Internet, you have to use the domain name. If your node is hidden inside your private network and you have a firewall or web server that redirects incoming requests to the node, you have to enter the public address of the firewall or web server. A typical configuration is to have an Apache web server on address A that is publicly accessible and redirects the requests to a Tomcat server on a private address B. In this case you have to enter A in the host parameter.'
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\system-configuration.rst:52: WARNING: undecodable source characters, replacing with "?": '*Port* The node>>>\x92<<<s port (usually 80 or 8080). If the node is hidden, you have to enter the port on the public firewall or web server. '
+[INFO] C:\work\doc\en\administrator-guide\index.rst:7: WARNING: toctree contains reference to nonexisting document u'administrator-guide/ .. figure:: admin.png'
+[INFO] C:\work\doc\en\administrator-guide\index.rst:7: WARNING: toctree contains reference to nonexisting document u'administrator-guide/     *Administration Dashboard*'
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-group.rst:None: WARNING: image file not readable: administrator-guide\managing-users-and-groups\admin-group-management.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-group.rst:None: WARNING: image file not readable: administrator-guide\managing-users-and-groups\GroupManag.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-group.rst:None: WARNING: image file not readable: administrator-guide\managing-users-and-groups\addGroup.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-group.rst:None: WARNING: image file not readable: administrator-guide\managing-users-and-groups\privilegesSetting1.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-user.rst:None: WARNING: image file not readable: administrator-guide\managing-users-and-groups\admin-user-management.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-user.rst:5: WARNING: image file not readable: administrator-guide\managing-users-and-groups\AddUser.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\creating-user.rst:5: WARNING: image file not readable: administrator-guide\managing-users-and-groups\InsertUserInfo.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\index.rst:45: WARNING: undecodable source characters, replacing with "?": '    - Rights to change users/groups>>>\x92<<< profiles'
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\index.rst:7: WARNING: toctree contains reference to nonexisting document u'administrator-guide/managing-users-and-groups/user_self_registration'
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\user-self-registration.rst:9: WARNING: image file not readable: administrator-guide\managing-users-and-groups\usr-banner-functions.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\user-self-registration.rst:13: WARNING: image file not readable: administrator-guide\managing-users-and-groups\usr-self-registration-form.png
+[INFO] C:\work\doc\en\user-guide\associating-resources\linking-thumbnail.rst:17: WARNING: undecodable source characters, replacing with "?": '- To create a small or large thumbnail, click on the Browse button next to either one. It is recommended that you use 180 pixels for small thumbnails and 800x600 for large thumbnails. Using the >>>\x91<<<Large thumbnail\x92 option allows you to create both a small and large thumbnail in one go.'
+[INFO] C:\work\doc\en\user-guide\associating-resources\linking-thumbnail.rst:17: WARNING: undecodable source characters, replacing with "?": '- To create a small or large thumbnail, click on the Browse button next to either one. It is recommended that you use 180 pixels for small thumbnails and 800x600 for large thumbnails. Using the \x91Large thumbnail>>>\x92<<< option allows you to create both a small and large thumbnail in one go.'
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:57: WARNING: undecodable source characters, replacing with "?": '#. From the metadata creation page, select the metadata standard to use from the dropdown list (Figure 4.3, >>>\x93<<<Template selection\x94)'
+[INFO] looking for now-outdated files... none found
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:57: WARNING: undecodable source characters, replacing with "?": '#. From the metadata creation page, select the metadata standard to use from the dropdown list (Figure 4.3, \x93Template selection>>>\x94<<<)'
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:128: WARNING: undecodable source characters, replacing with "?": 'As we mentioned in the introduction to this guide, GeoNetwork provides tools to describe any type of geographic data (vector layers, raster, tables, map services, etc.) as well as general documents like reports, projects, papers, etc. For the purpose of this Quick Start Guide, an example of required and useful metadata elements to properly describe a thematic map will be provided hereafter. You should gather as much information as possible to identify and understand the map>>>\x92<<<s resource and characteristics you want to describe. Use the default view to start. If necessary, you can always switch to advanced view or come back later and edit the record with the additional information collected.'
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:178: WARNING: undecodable source characters, replacing with "?": '**Metadata Author** \\* : Provide information about the author of the map, including the person>>>\x92<<<s name, organization, position, role and any other contact information available.'
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\login.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\Admin.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\metadataCreation.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\selectGroup.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\switchViews.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\advancedView.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\xmlView1.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\PoC_Maint.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:None: WARNING: image file not readable: user-guide\describing-information\multipleElement.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:203: WARNING: image file not readable: user-guide\describing-information\validationreport.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:231: WARNING: image file not readable: user-guide\describing-information\computebbox-selectkeyword.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:236: WARNING: image file not readable: user-guide\describing-information\computebbox-button.png
+[INFO] C:\work\doc\en\user-guide\describing-information\creating-metadata.rst:241: WARNING: image file not readable: user-guide\describing-information\computebbox-results.png
+[INFO] C:\work\doc\en\user-guide\describing-information\multilingual-editing.rst:29: WARNING: image file not readable: user-guide\describing-information\editor-multilingual.png
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:216: ERROR: Malformed table.
+[INFO] Text in column margin at line offset 3.
+[INFO] 
+[INFO] =====    ==============================================================
+[INFO] Icon     Description
+[INFO] =====    ==============================================================
+[INFO] V     The harvesting was OK, no errors were found. In this case, a
+[INFO]          tool tip will show some harvesting results (like the number of
+[INFO]          harvested metadata etc...).
+[INFO] |imp|    The harvesting was aborted due to an unexpected condition. In
+[INFO]          this case, a tool tip will show some information about the
+[INFO]          error.
+[INFO] =====    ==============================================================
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:259: ERROR: Malformed table.
+[INFO] Text in column margin at line offset 3.
+[INFO] 
+[INFO] ==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
+[INFO] Result vs harvesting type        GeoNetwork  WebDAV     CSW      OAI-PMH  OGC Service  OGC WFS Features  THREDDS  Z3950 Server(s)  GeoPortal REST
+[INFO] ==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
+[INFO] Total                            V        V       V     V     V         V              V     V             V
+[INFO] Added                            V        V       V     V     V                                    V             V
+[INFO] Removed                          V        V       V     V     V                                    V             V
+[INFO] Updated                          V        V       V     V                                             V             V
+[INFO] Unchanged                        V        V       V     V                                             V             V
+[INFO] Unknown schema                   V        V       V     V     V                                    V             V
+[INFO] Unretrievable                    V        V       V     V     V                           V     V             V
+[INFO] Bad Format                                   V                V                                             V             V
+[INFO] Does Not Validate                            V                V                  V                       V             V
+[INFO] Thumbnails / Thumbnails failed                                            V                           V
+[INFO] Metadata URL attribute used                                               V
+[INFO] Services Added                                                                                           V
+[INFO] Collections Added                                                                                        V
+[INFO] Atomics Added                                                                                            V
+[INFO] Subtemplates Added                                                                     V              V
+[INFO] Subtemplates removed                                                                   V              V
+[INFO] Fragments w/Unknown Schema                                                             V              V
+[INFO] Fragments Returned                                                                     V              V
+[INFO] Fragments Matched                                                                      V              V
+[INFO] Existing datasets                                                                                        V
+[INFO] Records Built                                                                          V              V
+[INFO] Could not insert                                                          V                                    V
+[INFO] ==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:207: ERROR: Undefined substitution referenced: "fcl".
+[INFO] pickling environment... done
+[INFO] checking consistency... done
+[INFO] preparing documents... done
+[INFO] writing output... [  1%] administrator-guide/configuring-the-catalog/csw-configuration
+[INFO] writing output... [  2%] administrator-guide/configuring-the-catalog/index
+[INFO] writing output... [  3%] administrator-guide/configuring-the-catalog/inspire-configuration
+[INFO] writing output... [  4%] administrator-guide/configuring-the-catalog/map-server-configuration
+[INFO] writing output... [  5%] administrator-guide/configuring-the-catalog/system-configuration
+[INFO] writing output... [  6%] administrator-guide/configuring-the-catalog/virtual-csw-configuration
+[INFO] writing output... [  7%] administrator-guide/index
+[INFO] writing output... [  8%] administrator-guide/managing-classification-systems/index
+[INFO] writing output... [  9%] administrator-guide/managing-classification-systems/managing-categories
+[INFO] writing output... [ 10%] administrator-guide/managing-classification-systems/managing-directories
+[INFO] writing output... [ 11%] administrator-guide/managing-classification-systems/managing-thesaurus
+[INFO] writing output... [ 12%] administrator-guide/managing-metadata-standards/index
+[INFO] writing output... [ 13%] administrator-guide/managing-users-and-groups/authentication-mode
+[INFO] writing output... [ 14%] administrator-guide/managing-users-and-groups/creating-group
+[INFO] writing output... [ 15%] administrator-guide/managing-users-and-groups/creating-user
+[INFO] writing output... [ 16%] administrator-guide/managing-users-and-groups/index
+[INFO] writing output... [ 17%] administrator-guide/managing-users-and-groups/user-self-registration
+[INFO] writing output... [ 18%] annexes/glossary/index
+[INFO] writing output... [ 19%] annexes/index
+[INFO] writing output... [ 20%] annexes/mef-format
+[INFO] writing output... [ 21%] annexes/standards/dublin-core/index
+[INFO] writing output... [ 22%] annexes/standards/index
+[INFO] writing output... [ 23%] annexes/standards/iso19139/index
+[INFO] writing output... [ 24%] api/csw
+[INFO] writing output... [ 25%] api/index
+[INFO] writing output... [ 26%] api/oai-pmh
+[INFO] writing output... [ 27%] api/opensearch
+[INFO] writing output... [ 28%] api/rdf-dcat
+[INFO] writing output... [ 29%] api/the-geonetwork-api
+[INFO] writing output... [ 30%] api/z39-50
+[INFO] writing output... [ 31%] contributing/doing-a-release
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:208: ERROR: Undefined substitution referenced: "clo".
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:210: ERROR: Undefined substitution referenced: "exe".
+[INFO] C:\work\doc\en\user-guide\metadata-discovery\index.rst:21: WARNING: undecodable source characters, replacing with "?": 'Metadata, commonly defined as >>>\x93<<<data about data\x94 or "information about data", is a structured set of information which describes data (including both digital and non-digital datasets)'
+[INFO] C:\work\doc\en\user-guide\metadata-discovery\index.rst:21: WARNING: undecodable source characters, replacing with "?": 'Metadata, commonly defined as \x93data about data>>>\x94<<< or "information about data", is a structured set of information which describes data (including both digital and non-digital datasets)'
+[INFO] C:\work\doc\en\user-guide\publishing\ownership\index.rst:67: WARNING: image file not readable: user-guide\publishing\ownership\privileges.png
+[INFO] C:\work\doc\en\user-guide\tag-information\tagging-with-categories.rst:None: WARNING: image file not readable: user-guide\tag-information\categoriesManag.png
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\user-self-registration.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\describing-information\importActions.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\export\index.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\common\common_categories.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\common\common_notes.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\common\common_options.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\common\common_privileges.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-csw-services.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-filesystem.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-geonetwork.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-geoportal.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-oaimph.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-ogcwxs.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-sde.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-thredds.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-webdav.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-wfs-features.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\harvesting\harvesting-z3950.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\user-guide\publishing\ownership\index.rst:: WARNING: document isn't included in any toctree
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:15: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:32: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:45: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:54: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:62: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:72: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:82: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:97: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:110: WARNING: Pygments lexer name u'shell' is not known
+[INFO] writing output... [ 32%] contributing/index
+[INFO] writing output... [ 33%] contributing/making-a-pull-request
+[INFO] writing output... [ 34%] contributing/writing-documentation
+[INFO] writing output... [ 35%] customizing-application/configuring-facetted-search
+[INFO] writing output... [ 36%] customizing-application/creating-custom-editor
+[INFO] writing output... [ 37%] customizing-application/implementing-a-schema-plugin
+[INFO] writing output... [ 38%] customizing-application/index
+[INFO] writing output... [ 39%] index
+[INFO] writing output... [ 40%] maintainer-guide/backup/index
+[INFO] writing output... [ 41%] maintainer-guide/index
+[INFO] writing output... [ 42%] maintainer-guide/installing/configuring-database
+[INFO] writing output... [ 43%] maintainer-guide/installing/customizing-data-directory
+[INFO] writing output... [ 44%] maintainer-guide/installing/index
+[INFO] writing output... [ 45%] maintainer-guide/installing/installing-from-source-code
+[INFO] writing output... [ 46%] maintainer-guide/installing/installing-from-the-installer
+[INFO] writing output... [ 47%] maintainer-guide/installing/installing-from-war-file
+[INFO] writing output... [ 48%] maintainer-guide/installing/loading-samples
+[INFO] writing output... [ 49%] maintainer-guide/installing/using-multinode-mode
+[INFO] writing output... [ 50%] maintainer-guide/updating/automatic-update
+[INFO] writing output... [ 51%] maintainer-guide/updating/index
+[INFO] writing output... [ 52%] maintainer-guide/updating/manual-update
+[INFO] writing output... [ 53%] overview/about
+[INFO] writing output... [ 54%] overview/authors
+[INFO] writing output... [ 55%] overview/change-log/index
+[INFO] writing output... [ 56%] overview/change-log/version-3.0.0
+[INFO] writing output... [ 57%] overview/index
+[INFO] writing output... [ 58%] overview/license
+[INFO] writing output... [ 59%] user-guide/associating-resources/index
+[INFO] writing output... [ 60%] user-guide/associating-resources/linking-data
+[INFO] writing output... [ 61%] user-guide/associating-resources/linking-thumbnail
+[INFO] writing output... [ 62%] user-guide/describing-information/creating-metadata
+[INFO] writing output... [ 63%] user-guide/describing-information/deleting-metadata
+[INFO] writing output... [ 64%] user-guide/describing-information/importActions
+[INFO] writing output... [ 65%] user-guide/describing-information/importing-metadata
+[INFO] writing output... [ 66%] user-guide/describing-information/index
+[INFO] writing output... [ 67%] user-guide/describing-information/managing-templates
+[INFO] writing output... [ 68%] user-guide/describing-information/multilingual-editing
+[INFO] writing output... [ 69%] user-guide/export/index
+[INFO] writing output... [ 70%] user-guide/harvesting/common/common_categories
+[INFO] writing output... [ 71%] user-guide/harvesting/common/common_notes
+[INFO] writing output... [ 72%] user-guide/harvesting/common/common_options
+[INFO] writing output... [ 73%] user-guide/harvesting/common/common_privileges
+[INFO] writing output... [ 74%] user-guide/harvesting/harvesting-csw-services
+[INFO] writing output... [ 75%] user-guide/harvesting/harvesting-filesystem
+[INFO] writing output... [ 76%] user-guide/harvesting/harvesting-geonetwork
+[INFO] writing output... [ 77%] user-guide/harvesting/harvesting-geoportal
+[INFO] writing output... [ 78%] user-guide/harvesting/harvesting-oaimph
+[INFO] writing output... [ 79%] user-guide/harvesting/harvesting-ogcwxs
+[INFO] writing output... [ 80%] user-guide/harvesting/harvesting-sde
+[INFO] writing output... [ 81%] user-guide/harvesting/harvesting-thredds
+[INFO] writing output... [ 82%] user-guide/harvesting/harvesting-webdav
+[INFO] writing output... [ 83%] user-guide/harvesting/harvesting-wfs-features
+[INFO] writing output... [ 84%] user-guide/harvesting/harvesting-z3950
+[INFO] writing output... [ 85%] user-guide/harvesting/index
+[INFO] writing output... [ 86%] user-guide/index
+[INFO] writing output... [ 87%] user-guide/metadata-discovery/index
+[INFO] writing output... [ 88%] user-guide/publishing/index
+[INFO] writing output... [ 89%] user-guide/publishing/managing-privileges
+[INFO] writing output... [ 90%] user-guide/publishing/ownership/index
+[INFO] writing output... [ 91%] user-guide/publishing/restricting-information-to-metadata-sections
+[INFO] writing output... [ 92%] user-guide/publishing/transfering-privileges
+[INFO] writing output... [ 93%] user-guide/tag-information/index
+[INFO] writing output... [ 94%] user-guide/tag-information/tagging-with-categories
+[INFO] writing output... [ 95%] user-guide/tag-information/tagging-with-keywords
+[INFO] writing output... [ 96%] user-guide/workflow/index
+[INFO] writing output... [ 97%] user-guide/workflow/life-cycle
+[INFO] writing output... [ 98%] user-guide/workflow/suggestion
+[INFO] writing output... [ 99%] user-guide/workflow/validation
+[INFO] writing output... [100%] user-guide/workflow/versioning
+[INFO] 
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:119: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:130: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\doing-a-release.rst:152: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\writing-documentation.rst:23: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\contributing\writing-documentation.rst:56: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\customizing-application\implementing-a-schema-plugin.rst:210: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\customizing-application\implementing-a-schema-plugin.rst:217: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\customizing-application\implementing-a-schema-plugin.rst:495: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\customizing-application\implementing-a-schema-plugin.rst:781: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\customizing-application\implementing-a-schema-plugin.rst:872: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\maintainer-guide\installing\using-multinode-mode.rst:121: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\system-configuration.rst:80: WARNING: undefined label: adv_configuration (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\system-configuration.rst:183: WARNING: undefined label: csw_configuration (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\virtual-csw-configuration.rst:61: WARNING: undefined label: adv_configuration_overriddes (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\administrator-guide\configuring-the-catalog\virtual-csw-configuration.rst:83: WARNING: undefined label: adv_configuration_overriddes (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\administrator-guide\managing-users-and-groups\user-self-registration.rst:6: WARNING: undefined label: config_user_self_registration (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:12: WARNING: undefined label: harvesting-geonetwork.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:14: WARNING: undefined label: harvesting-webdav.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:15: WARNING: undefined label: harvesting-csw-services.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:16: WARNING: undefined label: harvesting-geoportal.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:17: WARNING: undefined label: harvesting-filesystem.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:18: WARNING: undefined label: harvesting-oaimph.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:19: WARNING: undefined label: harvesting-ogcwxs.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:20: WARNING: undefined label: harvesting-sde.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:21: WARNING: undefined label: harvested-thredds.rst (if the link has no caption the label must precede a section header)
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:22: WARNING: undefined label: harvesting-wfs-features.rst (if the link has no caption the label must precede a section header)
+[INFO] writing additional files... genindex search
+[INFO] copying images... [  7%] customizing-application\img/Editor-Constraints-Choices.png
+[INFO] copying images... [ 15%] maintainer-guide\installing\img/node-change-warning.png
+[INFO] copying images... [ 23%] user-guide\publishing\ownership\dotransfer.png
+[INFO] copying images... [ 30%] user-guide\describing-information\templates.png
+[INFO] copying images... [ 38%] user-guide\describing-information\importform.png
+[INFO] copying images... [ 46%] user-guide\describing-information\importbutton.png
+[INFO] copying images... [ 53%] customizing-application\img/Editor-Constraints-Choices-Modified.png
+[INFO] copying images... [ 61%] customizing-application\img/editor-helper.png
+[INFO] copying images... [ 69%] user-guide\publishing\ownership\transfer.png
+[INFO] copying images... [ 76%] user-guide\describing-information\img/creating-metadata.png
+[INFO] copying images... [ 84%] administrator-guide\configuring-the-catalog\csw.png
+[INFO] copying images... [ 92%] user-guide\export\export.png
+[INFO] copying images... [100%] administrator-guide\configuring-the-catalog\settings.png
+[INFO] 
+[INFO] copying static files... done
+[INFO] dumping search index... done
+[INFO] dumping object inventory... done
+[INFO] build succeeded, 99 warnings.
+[INFO] C:\work\doc\en\user-guide\harvesting\index.rst:23: WARNING: undefined label: harvested-z3950.rst (if the link has no caption the label must precede a section header)
+[INFO] 
+[INFO] --- exec-maven-plugin:1.1:exec (build-docs-fr) @ doc ---
+[INFO] Running Sphinx v1.1.2
+[INFO] loading pickled environment... not yet created
+[INFO] building [html]: all source files
+[INFO] updating environment: 80 added, 0 changed, 0 removed
+[INFO] reading sources... [  1%] administrator-guide/configuring-the-catalog/csw-configuration
+[INFO] reading sources... [  2%] administrator-guide/configuring-the-catalog/index
+[INFO] reading sources... [  3%] administrator-guide/configuring-the-catalog/inspire-configuration
+[INFO] reading sources... [  5%] administrator-guide/configuring-the-catalog/map-server-configuration
+[INFO] reading sources... [  6%] administrator-guide/configuring-the-catalog/system-configuration
+[INFO] reading sources... [  7%] administrator-guide/configuring-the-catalog/virtual-csw-configuration
+[INFO] reading sources... [  8%] administrator-guide/index
+[INFO] reading sources... [ 10%] administrator-guide/managing-classification-systems/index
+[INFO] reading sources... [ 11%] administrator-guide/managing-classification-systems/managing-categories
+[INFO] reading sources... [ 12%] administrator-guide/managing-classification-systems/managing-directories
+[INFO] reading sources... [ 13%] administrator-guide/managing-classification-systems/managing-thesaurus
+[INFO] reading sources... [ 15%] administrator-guide/managing-metadata-standards/index
+[INFO] reading sources... [ 16%] administrator-guide/managing-users-and-groups/authentication-mode
+[INFO] reading sources... [ 17%] administrator-guide/managing-users-and-groups/creating-group
+[INFO] reading sources... [ 18%] administrator-guide/managing-users-and-groups/creating-user
+[INFO] reading sources... [ 20%] administrator-guide/managing-users-and-groups/index
+[INFO] reading sources... [ 21%] annexes/glossary/index
+[INFO] reading sources... [ 22%] annexes/index
+[INFO] reading sources... [ 23%] annexes/mef-format
+[INFO] reading sources... [ 25%] annexes/standards/dublin-core/index
+[INFO] reading sources... [ 26%] annexes/standards/index
+[INFO] reading sources... [ 27%] annexes/standards/iso19139/index
+[INFO] reading sources... [ 28%] api/csw
+[INFO] reading sources... [ 30%] api/index
+[INFO] reading sources... [ 31%] api/oai-pmh
+[INFO] reading sources... [ 32%] api/opensearch
+[INFO] reading sources... [ 33%] api/rdf-dcat
+[INFO] reading sources... [ 35%] api/the-geonetwork-api
+[INFO] reading sources... [ 36%] api/z39-50
+[INFO] reading sources... [ 37%] contributing/doing-a-release
+[INFO] reading sources... [ 38%] contributing/index
+[INFO] reading sources... [ 40%] contributing/making-a-pull-request
+[INFO] reading sources... [ 41%] contributing/writing-documentation
+[INFO] reading sources... [ 42%] customizing-application/configuring-facetted-search
+[INFO] reading sources... [ 43%] customizing-application/creating-custom-editor
+[INFO] reading sources... [ 45%] customizing-application/index
+[INFO] reading sources... [ 46%] index
+[INFO] reading sources... [ 47%] maintainer-guide/backup/index
+[INFO] reading sources... [ 48%] maintainer-guide/index
+[INFO] reading sources... [ 50%] maintainer-guide/installing/configuring-database
+[INFO] reading sources... [ 51%] maintainer-guide/installing/customizing-data-directory
+[INFO] reading sources... [ 52%] maintainer-guide/installing/index
+[INFO] reading sources... [ 53%] maintainer-guide/installing/installing-from-source-code
+[INFO] reading sources... [ 55%] maintainer-guide/installing/installing-from-the-installer
+[INFO] reading sources... [ 56%] maintainer-guide/installing/installing-from-war-file
+[INFO] reading sources... [ 57%] maintainer-guide/installing/loading-samples
+[INFO] reading sources... [ 58%] maintainer-guide/installing/using-multinode-mode
+[INFO] reading sources... [ 60%] maintainer-guide/updating/automatic-update
+[INFO] reading sources... [ 61%] maintainer-guide/updating/index
+[INFO] reading sources... [ 62%] maintainer-guide/updating/manual-update
+[INFO] reading sources... [ 63%] overview/about
+[INFO] reading sources... [ 65%] overview/authors
+[INFO] reading sources... [ 66%] overview/change-log/index
+[INFO] reading sources... [ 67%] overview/change-log/version-3.0.0
+[INFO] reading sources... [ 68%] overview/index
+[INFO] reading sources... [ 70%] overview/license
+[INFO] reading sources... [ 71%] user-guide/associating-resources/index
+[INFO] reading sources... [ 72%] user-guide/associating-resources/linking-data
+[INFO] reading sources... [ 73%] user-guide/associating-resources/linking-thumbnail
+[INFO] reading sources... [ 75%] user-guide/describing-information/creating-metadata
+[INFO] reading sources... [ 76%] user-guide/describing-information/creating-templates
+[INFO] reading sources... [ 77%] user-guide/describing-information/deleting-metadata
+[INFO] reading sources... [ 78%] user-guide/describing-information/importing-metadata
+[INFO] reading sources... [ 80%] user-guide/describing-information/index
+[INFO] reading sources... [ 81%] user-guide/describing-information/multilingual-editing
+[INFO] reading sources... [ 82%] user-guide/harvesting/harvesting-csw-services
+[INFO] reading sources... [ 83%] user-guide/harvesting/index
+[INFO] reading sources... [ 85%] user-guide/index
+[INFO] reading sources... [ 86%] user-guide/publishing/index
+[INFO] reading sources... [ 87%] user-guide/publishing/managing-privileges
+[INFO] reading sources... [ 88%] user-guide/publishing/restricting-information-to-metadata-sections
+[INFO] reading sources... [ 90%] user-guide/publishing/transfering-privileges
+[INFO] reading sources... [ 91%] user-guide/tag-information/index
+[INFO] reading sources... [ 92%] user-guide/tag-information/tagging-with-categories
+[INFO] reading sources... [ 93%] user-guide/tag-information/tagging-with-keywords
+[INFO] reading sources... [ 95%] user-guide/workflow/index
+[INFO] reading sources... [ 96%] user-guide/workflow/life-cycle
+[INFO] reading sources... [ 97%] user-guide/workflow/suggestion
+[INFO] reading sources... [ 98%] user-guide/workflow/validation
+[INFO] reading sources... [100%] user-guide/workflow/versioning
+[INFO] 
+[INFO] looking for now-outdated files... none found
+[INFO] pickling environment... done
+[INFO] checking consistency... done
+[INFO] preparing documents... done
+[INFO] writing output... [  1%] administrator-guide/configuring-the-catalog/csw-configuration
+[INFO] writing output... [  2%] administrator-guide/configuring-the-catalog/index
+[INFO] writing output... [  3%] administrator-guide/configuring-the-catalog/inspire-configuration
+[INFO] writing output... [  5%] administrator-guide/configuring-the-catalog/map-server-configuration
+[INFO] writing output... [  6%] administrator-guide/configuring-the-catalog/system-configuration
+[INFO] writing output... [  7%] administrator-guide/configuring-the-catalog/virtual-csw-configuration
+[INFO] writing output... [  8%] administrator-guide/index
+[INFO] writing output... [ 10%] administrator-guide/managing-classification-systems/index
+[INFO] writing output... [ 11%] administrator-guide/managing-classification-systems/managing-categories
+[INFO] writing output... [ 12%] administrator-guide/managing-classification-systems/managing-directories
+[INFO] writing output... [ 13%] administrator-guide/managing-classification-systems/managing-thesaurus
+[INFO] writing output... [ 15%] administrator-guide/managing-metadata-standards/index
+[INFO] writing output... [ 16%] administrator-guide/managing-users-and-groups/authentication-mode
+[INFO] writing output... [ 17%] administrator-guide/managing-users-and-groups/creating-group
+[INFO] writing output... [ 18%] administrator-guide/managing-users-and-groups/creating-user
+[INFO] writing output... [ 20%] administrator-guide/managing-users-and-groups/index
+[INFO] writing output... [ 21%] annexes/glossary/index
+[INFO] writing output... [ 22%] annexes/index
+[INFO] writing output... [ 23%] annexes/mef-format
+[INFO] writing output... [ 25%] annexes/standards/dublin-core/index
+[INFO] writing output... [ 26%] annexes/standards/index
+[INFO] writing output... [ 27%] annexes/standards/iso19139/index
+[INFO] writing output... [ 28%] api/csw
+[INFO] writing output... [ 30%] api/index
+[INFO] writing output... [ 31%] api/oai-pmh
+[INFO] writing output... [ 32%] api/opensearch
+[INFO] writing output... [ 33%] api/rdf-dcat
+[INFO] writing output... [ 35%] api/the-geonetwork-api
+[INFO] writing output... [ 36%] api/z39-50
+[INFO] writing output... [ 37%] contributing/doing-a-release
+[INFO] writing output... [ 38%] contributing/index
+[INFO] writing output... [ 40%] contributing/making-a-pull-request
+[INFO] writing output... [ 41%] contributing/writing-documentation
+[INFO] writing output... [ 42%] customizing-application/configuring-facetted-search
+[INFO] writing output... [ 43%] customizing-application/creating-custom-editor
+[INFO] writing output... [ 45%] customizing-application/index
+[INFO] writing output... [ 46%] index
+[INFO] writing output... [ 47%] maintainer-guide/backup/index
+[INFO] writing output... [ 48%] maintainer-guide/index
+[INFO] writing output... [ 50%] maintainer-guide/installing/configuring-database
+[INFO] writing output... [ 51%] maintainer-guide/installing/customizing-data-directory
+[INFO] writing output... [ 52%] maintainer-guide/installing/index
+[INFO] writing output... [ 53%] maintainer-guide/installing/installing-from-source-code
+[INFO] writing output... [ 55%] maintainer-guide/installing/installing-from-the-installer
+[INFO] writing output... [ 56%] maintainer-guide/installing/installing-from-war-file
+[INFO] writing output... [ 57%] maintainer-guide/installing/loading-samples
+[INFO] writing output... [ 58%] maintainer-guide/installing/using-multinode-mode
+[INFO] writing output... [ 60%] maintainer-guide/updating/automatic-update
+[INFO] writing output... [ 61%] maintainer-guide/updating/index
+[INFO] writing output... [ 62%] maintainer-guide/updating/manual-update
+[INFO] writing output... [ 63%] overview/about
+[INFO] writing output... [ 65%] overview/authors
+[INFO] writing output... [ 66%] overview/change-log/index
+[INFO] writing output... [ 67%] overview/change-log/version-3.0.0
+[INFO] writing output... [ 68%] overview/index
+[INFO] writing output... [ 70%] overview/license
+[INFO] writing output... [ 71%] user-guide/associating-resources/index
+[INFO] writing output... [ 72%] user-guide/associating-resources/linking-data
+[INFO] writing output... [ 73%] user-guide/associating-resources/linking-thumbnail
+[INFO] writing output... [ 75%] user-guide/describing-information/creating-metadata
+[INFO] writing output... [ 76%] user-guide/describing-information/creating-templates
+[INFO] writing output... [ 77%] user-guide/describing-information/deleting-metadata
+[INFO] writing output... [ 78%] user-guide/describing-information/importing-metadata
+[INFO] writing output... [ 80%] user-guide/describing-information/index
+[INFO] writing output... [ 81%] user-guide/describing-information/multilingual-editing
+[INFO] writing output... [ 82%] user-guide/harvesting/harvesting-csw-services
+[INFO] writing output... [ 83%] user-guide/harvesting/index
+[INFO] writing output... [ 85%] user-guide/index
+[INFO] writing output... [ 86%] user-guide/publishing/index
+[INFO] writing output... [ 87%] user-guide/publishing/managing-privileges
+[INFO] writing output... [ 88%] user-guide/publishing/restricting-information-to-metadata-sections
+[INFO] writing output... [ 90%] user-guide/publishing/transfering-privileges
+[INFO] writing output... [ 91%] user-guide/tag-information/index
+[INFO] writing output... [ 92%] user-guide/tag-information/tagging-with-categories
+[INFO] writing output... [ 93%] user-guide/tag-information/tagging-with-keywords
+[INFO] writing output... [ 95%] user-guide/workflow/index
+[INFO] writing output... [ 96%] user-guide/workflow/life-cycle
+[INFO] writing output... [ 97%] user-guide/workflow/suggestion
+[INFO] writing output... [ 98%] user-guide/workflow/validation
+[INFO] writing output... [100%] user-guide/workflow/versioning
+[INFO] 
+[INFO] writing additional files... genindex search
+[INFO] copying images... [ 50%] user-guide\describing-information\img/creating-metadata.png
+[INFO] copying images... [100%] maintainer-guide\installing\img/node-change-warning.png
+[INFO] 
+[INFO] copying static files... done
+[INFO] dumping search index... done
+[INFO] dumping object inventory... done
+[INFO] build succeeded, 15 warnings.
+[INFO] Making output directory...
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:15: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:32: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:45: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:54: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:62: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:72: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:82: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:97: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:110: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:119: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:130: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\doing-a-release.rst:152: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\writing-documentation.rst:23: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\contributing\writing-documentation.rst:56: WARNING: Pygments lexer name u'shell' is not known
+[INFO] C:\work\doc\fr\maintainer-guide\installing\using-multinode-mode.rst:126: WARNING: Pygments lexer name u'shell' is not known
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ doc ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: C:\work\doc\target\doc-3.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ doc ---
+[INFO] Installing C:\work\doc\target\doc-3.0.0-SNAPSHOT.jar to C:\Users\paul\.m2\repository\org\geonetwork-opensource\doc\3.0.0-SNAPSHOT\doc-3.0.0-SNAPSHOT.jar
+[INFO] Installing C:\work\doc\pom.xml to C:\Users\paul\.m2\repository\org\geonetwork-opensource\doc\3.0.0-SNAPSHOT\doc-3.0.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:09.663s
+[INFO] Finished at: Tue Jun 02 17:13:43 CEST 2015
+[INFO] Final Memory: 7M/122M
+[INFO] ------------------------------------------------------------------------

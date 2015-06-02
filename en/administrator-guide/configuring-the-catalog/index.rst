@@ -12,3 +12,5 @@ Configuring the catalog
    virtual-csw-configuration.rst
    inspire-configuration.rst
    map-server-configuration.rst
+
+   
