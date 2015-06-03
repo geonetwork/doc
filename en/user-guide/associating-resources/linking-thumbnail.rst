@@ -14,7 +14,11 @@ From the editing menu, click on the Thumbnails button on the top or bottom of th
 
 - You will be taken to the Thumbnail Management wizard.
 
-- To create a small or large thumbnail, click on the Browse button next to either one. It is recommended that you use 180 pixels for small thumbnails and 800x600 for large thumbnails. Using the ‘Large thumbnail’ option allows you to create both a small and large thumbnail in one go.
+.. figure:: thumb.png
+
+    *Add a thumbnail*
+
+- To create a small or large thumbnail, click on the Browse button next to either one. It is recommended that you use 180 pixels for small thumbnails and 800x600 for large thumbnails. Using the ``Large thumbnail`` option allows you to create both a small and large thumbnail in one go.
 
 - You can use GIF, PNG and JPEG images as input for the thumbnails.
 
@@ -25,6 +29,15 @@ From the editing menu, click on the Thumbnails button on the top or bottom of th
 - Your thumbnail will be added and displayed on the following page.
 
 - You can then click on Back to Editing and save your record.
+
+
+If you have a WMS online resource in your metadata, the thumbnail can be generated automatically. You need to go in ``thumbnail maker`` tab and chose the extent of the layer you want to show in the image.
+The generation of the images is based on mapfishprint.
+
+.. figure:: thumbprint.png
+
+    *Generate thumbnail from WMS resource*
+
 
 
 
