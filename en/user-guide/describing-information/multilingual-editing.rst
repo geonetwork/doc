@@ -4,7 +4,9 @@
 Multilingual editing
 ####################
 
-Editors can create multilingual metadata for ISO19139. A default template is provided but user could add translation to an existing record.
+Some standards support multilingual metadata (eg. ISO19139, ISO19115-1). A default
+template is provided for ISO19139 but user could easily add translation to an existing record.
+
 
 To declare a new language in a metadata record:
 
@@ -13,23 +15,25 @@ To declare a new language in a metadata record:
 - then add one or more languages in the other language in the metadata section.
 
 
+Once done, the editor form provides one field per languages declared. 2 types of
+layout is available:
 
-In editing mode, each multilingual elements are composed of:
+- One field per language displayed one below the others (eg. default mode for title)
+  in order to quickly have a look to all translations available
 
-- text input
+- One field per language with the list of language to switch from one language to another.
 
-- language selection list (language declared on the other language section are listed here)
+.. figure:: img/multilingual-editing.png
 
+User can switch from one mode to another using the ``all`` link.
 
-
-By default, the selected language is the GUI language if language is defined in the metadata.
-
-.. figure:: editor-multilingual.png
-
-
-Alternatively, Google translation service could be used. Translation could be suggested to the editor using the small icon right to the language selector. The translation convert the default metadata character string in the current selected language. 
+When loading the editor, the selected language is the user interface language
+used if the language is defined in the current record.
 
 
-In view mode, according to GUI language : if GUI language is available in the metadata, the element is displayed in this language else the element is displayed in metadata default language.
-This behaviour is also applied to dublin core output for CSW services.
+When viewing the record, if a translation exist in the user interface language,
+this translation is used, if not, the main metadata language is used.
+
+Note: This behaviour also applied to multilinhgual ISO19139 records requested
+in dublin core from the CSW services.
 

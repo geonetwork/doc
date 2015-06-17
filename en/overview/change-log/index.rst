@@ -8,3 +8,4 @@ Change log
    :maxdepth: 2
 
    version-3.0.0.rst
+   version-3.0.1.rst

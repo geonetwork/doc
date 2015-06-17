@@ -1,12 +1,14 @@
-.. _locating-metadata:
+.. _quick_start:
 
-Metadata Discovery
-##################
+Quick start
+###########
 
 Find & get information
 ''''''''''''''''''''''
 
-GeoNetwork provides an easy to use web interface to search geospatial data across multiple catalogs. The search provides full-text search as well as faceted search on keywords, resource types, organizations, scale, ... Users can refine a search and view the records of interests.
+GeoNetwork provides an easy to use web interface to search geospatial data
+across multiple catalogs. The search provides full-text search as well as
+faceted search on keywords, resource types, organizations, scale, ... Users can refine a search and view the records of interests.
 
 GeoSpatial datasets, but also services, maps and non geographic datasets can be registered in the catalog. 
 
@@ -18,7 +20,7 @@ The interactive map viewer provides access to map services (WMS, WMTS, WFS) and 
 What is Metadata?
 -----------------
 
-Metadata, commonly defined as “data about data” or "information about data", is a structured set of information which describes data (including both digital and non-digital datasets)
+Metadata, commonly defined as ï¿½data about dataï¿½ or "information about data", is a structured set of information which describes data (including both digital and non-digital datasets)
 stored in administrative systems. Metadata may provide a short summary about the
 content, purpose, quality, location of the data as well as information related to
 its creation.

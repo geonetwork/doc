@@ -7,7 +7,7 @@ User guide
 .. toctree::
    :maxdepth: 2
 
-   metadata-discovery/index.rst
+   quick-start/index.rst
    describing-information/index.rst
    associating-resources/index.rst
    tag-information/index.rst

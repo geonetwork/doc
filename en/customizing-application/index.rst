@@ -14,3 +14,4 @@ Customizing guide
    creating-custom-view.rst
    creating-custom-editor.rst
    implementing-a-schema-plugin.rst
+   misc.rst

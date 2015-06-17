@@ -203,10 +203,10 @@ Harvesting Status and Error Icons
 =====    ========    =======================================================
 Icon     Status      Description
 =====    ========    =======================================================
-|fcl|    Inactive    The harvester is stopped.
-|clo|    Active      The harvesting engine is waiting for the next scheduled
+``fcl``    Inactive    The harvester is stopped.
+``clo``    Active      The harvesting engine is waiting for the next scheduled
                      run time of the harvester. 
-|exe|    Running     The harvesting engine is currently running, fetching 
+``exe``    Running     The harvesting engine is currently running, fetching
                      metadata. When the process is 
                      finished, the result of the harvest will be available 
                      as an icon in the *Errors* column
@@ -218,7 +218,7 @@ Icon     Description
 V     The harvesting was OK, no errors were found. In this case, a
          tool tip will show some harvesting results (like the number of
          harvested metadata etc...).
-|imp|    The harvesting was aborted due to an unexpected condition. In
+``imp``    The harvesting was aborted due to an unexpected condition. In
          this case, a tool tip will show some information about the
          error.
 =====    ==============================================================
