@@ -61,6 +61,28 @@ to check for any warnings:
 Links
 -----
 
+Images
+~~~~~~
+
+Place images in an ``img`` folder in the directory where the rst file is
+located. Use images with:
+
+.. code-block:: rst
+
+     .. figure:: img/thumbprint.png
+
+Code block
+~~~~~~~~~~
+
+Use the following directive to highlight code block:
+
+
+.. code-block:: rst
+
+
+      .. code-block:: xml
+
+
 Reference to a section within a file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

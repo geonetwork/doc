@@ -7,11 +7,11 @@ This section describes how to catalog resources. First, user needs to choose
 a standard to use. In general, the following rules apply:
 
 - `Dublin core <http://dublincore.org/>`_ usually used for opendata portal,
-   referencing publication, report, ...
+  referencing publication, report, ...
 - `ISO 19115/119/139 <http://www.iso.org/iso/en/home/store/catalogue_tc/catalogue_detail.htm?csnumber=32557>`_
-   used for spatial resources (eg. datasets, services, maps)
+  used for spatial resources (eg. datasets, services, maps)
 - `ISO 19110 <http://www.iso.org/iso/en/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39965>`_
-   used for feature attribute table
+  used for feature attribute table
 
 
 The editor form provides uploading of data, graphics, documents, pdf files and
