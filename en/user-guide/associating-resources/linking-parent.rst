@@ -11,6 +11,7 @@ a general description of the collection may be done in a parent metadata
 which is then attached to each datasets of the serie.
 
 - Corine Land Cover
+
  - Corine Land Cover 2002
  - Corine Land Cover 2012
  - ...

@@ -20,9 +20,9 @@ External, Local and Register Thesauri
 
 There are three types of thesaurus in GeoNetwork. The different types are based on where the thesaurus comes from:
 
-- *External*: A thesaurus managed by an external organisation and imported as a SKOS file. It is flagged to ”external” which means that users are not allowed to edit the thesaurus.
+- *External*: A thesaurus managed by an external organisation and imported as a SKOS file. It is flagged to ``external`` which means that users are not allowed to edit the thesaurus.
 
-- *Local*: A thesaurus built in the GeoNetwork thesaurus editor and stored as a SKOS file. It is flagged as ”local” which means that users are allowed to edit the thesaurus.
+- *Local*: A thesaurus built in the GeoNetwork thesaurus editor and stored as a SKOS file. It is flagged as ``local`` which means that users are allowed to edit the thesaurus.
 
 - *Register*: A SKOS thesaurus created from an ISO19135 register record. Users can edit the thesaurus by changing the content of the ISO19135 register record in the GeoNetwork metadata editor and then regenerating the thesaurus. Users cannot edit the thesaurus in thesaurus manager.
 
@@ -52,7 +52,7 @@ A concept is defined by an identifier, a preferred label, a definition and links
 - broader terms
 - narrower terms
 
-For example, a concept ”ABLETTE” could be defined as follow with a label in French and English, linked to broader concept::
+For example, a concept ``ABLETTE`` could be defined as follow with a label in French and English, linked to broader concept::
 
     <skos:Concept rdf:about="http://www.oieau.org/concept#c4fc54576dc00227b82a709287ac3681">
         <skos:prefLabel xml:lang="fr">ABLETTE</skos:prefLabel>
@@ -134,23 +134,19 @@ Creating or Importing a Thesaurus
 External and local thesauri are created or imported using the thesaurus manager. You can use the thesaurus manager by:
 
 - logging in as an administrator 
-- navigating to the 'Administration' page and clicking on the link ”Manage thesauri”
+- navigating to the 'Administration' page and clicking on the link ``Manage thesauri``
 
 The thesaurus manager page will show a list of thesauri that have been created or imported. The upper part of the page provides the user with functions to edit, add, modify or search a thesaurus. The lower part provides a function to upload an external thesaurus in SKOS format.
 
 Creating a local thesaurus
 ``````````````````````````
 
-To create a local thesaurus, click the ”+” sign on the category you want your
+To create a local thesaurus, click the ``+`` sign on the category you want your
 thesaurus to be in. Once created, the thesaurus can be updated through the
 edit interface. The meaning of each column is as follows:
 
 - **Type** - This is an identifier assigned to the thesaurus in GeoNetwork. It is composed of the ISO category to which the thesaurus has been assigned (see the codelist for the gmd:MD_KeywordTypeCode element in http://www.isotc211.org/2005/resources/gmxCodelist.xml), whether the thesaurus is a local, external or register thesaurus and the filename of the SKOS file that holds the thesaurus. (Note: the name of the file used to hold a register thesaurus is the uuid of the ISO19135 register record that describes the thesaurus). 
 - **Name** - This is the name of the thesaurus which is the administrator on creation or the filename if the thesaurus is ting a thesaurus, the name of the thesaurus will be the filename of the thesaurus.
-
-.. figure:: thesaurus-Admin.png
-
-    *Administration interface for thesaurus*
 
 For each thesaurus the following buttons are available:
 
@@ -164,9 +160,6 @@ Import an external thesaurus
 
 GeoNetwork allows thesaurus import in SKOS format. Once uploaded, an external thesaurus cannot be updated. Select the category, browse for the thesaurus file and click upload. The SKOS file will be in ``GEONETWORK_DATA_DIR/config/codelist/external/thesauri/<category>``.
 
-.. figure:: thesaurus-upload.png
-
-    *Upload interface for thesaurus*
 
 At the bottom of the page there are the following buttons:
 
@@ -179,13 +172,10 @@ Creating a register thesaurus
 
 An ISO19135 record in the local GeoNetwork catalog can be turned into a SKOS file and used as a thesaurus in GeoNetwork. ISO19135 records not in the local catalog can be harvested from other catalogs (eg. the catalog of the organisation that manages the register). Once the ISO19135 register record is in the local catalog, the process of turning it into a thesaurus for use in the keywords selector begins a search for the record. Having located the record in the search results, one of the actions on the record is to 'Create/Update Thesaurus'.
 
-.. figure:: thesaurus-iso19135SearchResults.png
-
     *Search results showing ISO19135 record with thesaurus creation action*
 
 After selecting this action, you can choose the ISO thesaurus category appropriate for this thesaurus:
 
-.. figure:: thesaurus-iso19135ChooseISOCategory.png
 
     *Selecting the ISO thesaurus category when creating a thesaurus*
 
@@ -201,13 +191,6 @@ From the thesaurus administration interface, click on the edit button for a loca
 
 Use the textbox and the type of search in order to search for keywords.
 
-.. figure:: thesaurus-KeywordSearch.png
-
-    *Browse interface for thesaurus*
-
-.. figure:: thesaurus-KeywordDesc.png
-
-    *Keyword description*
 
 Editing a register thesaurus
 ----------------------------
@@ -224,13 +207,8 @@ Register records can be very large. For example, a register record describing th
 - search for and select the register record
 - choose 'Extract register items' from the 'Actions on selected set' menu
 
-.. figure:: register-ExtractRegisterItems.png
-
-    *Extracting subtemplates from a register record*
 
 - After the register items have been extracted, you should see a results summary like the following.
-
-.. figure:: register-ExtractRegisterItemsResults.png
 
 - The figure for 'Subtemplates extracted' is the number of register items extracted from the ISO19135 register record.
 
@@ -241,16 +219,9 @@ To edit/change any of the register items that have been extracted as subtemplate
 
 - select 'Register Item (GeoNetwork)' as the type of subtemplate to edit as follows.
 
-.. figure:: register-RegisterItemDirectory.png
-
-    *Managing a Directory of subtemplates, selecting 'Register Item' subtemplates*
-
 - enter a search term or just select the search option to return the first 50 register items.
 - register items will appear in the left hand side bar, selecting on one will open an editing interface in the right hand panel.
 
-.. figure:: register-RegisterItemDirectorySearchResultsAndEditing.png
-
-    *Managing a Directory of subtemplates, opening a Register Item for editing*
 
 Editing global register information
 ```````````````````````````````````
@@ -268,17 +239,6 @@ When editing an ISO metadata record, a keyword (or concept) picker can be used w
 
 The editor can also control how many keywords from searches are displayed in the keyword picker (default is 50).
 
-.. figure:: thesaurus-KeywordSelection.png
-
-    *Keyword selection interface (editing mode)*
-
-.. figure:: thesaurus-KeywordAfterSelection.png
-
-    *Keywords in Metadata Record (editing mode)*
-
-.. figure:: thesaurus-KeywordView.png
-
-    *Keywords in Metadata Record (view mode)*
 
 Notice that a URL pointing to the source thesaurus is included in the Thesaurus Name citation (the actual element used for this is gmd:otherCitationDetails/gmx:FileName). The thesaurus can be downloaded as a SKOS file if it is a local or external thesaurus. For register thesauri the URL refers to the ISO19135 register record from which the thesaurus was created.
 
@@ -288,13 +248,6 @@ Search criteria: keywords
 You can search on keywords in the advanced search interface. To help select a keyword you can click in the keyword search field to bring up a list of all the keywords that have been used in the metadata records in this catalog. These keywords are indexed by Lucene on creation/update of metadata. 
 Each keyword in the list has the number of records that use the keyword displayed next to it.
 
-.. figure:: thesaurus-SearchInterface.png
-
-    *Thesaurus search interface*
-
-.. figure:: thesaurus-SearchKeywordAutocomp.png
-
-    *Auto-complete function in thesaurus search interface*
 
 If an XML element named keyword-select-panel is present as a child of the search element in the *config-gui.xml* file (in the WEB-INF directory), then search for keyword using the keyword selection panel is available as in the metadata editor::
   

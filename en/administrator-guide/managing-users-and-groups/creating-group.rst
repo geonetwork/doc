@@ -13,24 +13,15 @@ To create new groups you should be logged on with an account that has Administra
 
 #. Select the *Administration* button in the menu. On the Administration page, select *Group management*.
 
-    .. figure:: admin-group-management.png
-
-        *Administration page - Group management*
 
 #. Select *Add a new group*. You may want to remove the *Sample* group;
 
-    .. figure:: GroupManag.png
-
-        *Group management*
 
 #. Fill out the details. The email address will be used to send feedback on data downloads when they occur for resources that are part of the Group.
 
     .. warning:: 
         The Name should *NOT* contain spaces! You can use the Localization panel to provide localized names for groups.
 
-    .. figure:: addGroup.png
-
-        *Group edit form*
 
 #. Click on *Save*
 
@@ -44,7 +35,3 @@ data *Download*, *Interactive Map* access and display of the record in the *Feat
 *Notify* defines what Groups are notified when a file managed by GeoNetwork is downloaded.
 
 Below is an example of the privileges management table related to a dataset.
-
-.. figure:: privilegesSetting1.png
-
-  *Privilege settings*

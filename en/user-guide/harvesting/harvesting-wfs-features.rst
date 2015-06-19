@@ -29,11 +29,11 @@ The available options are:
 
 - **Options**
 
-.. include:: common/common_options.rst
+
 
 - **Privileges** 
 
-.. include:: common/common_privileges.rst
+
 
 - **Category for subtemplates** - When fragments are saved to GeoNetwork as subtemplates they will be assigned to the category selected here.
 

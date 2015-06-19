@@ -14,4 +14,5 @@ Customizing guide
    creating-custom-view.rst
    creating-custom-editor.rst
    implementing-a-schema-plugin.rst
+   characterset.rst
    misc.rst

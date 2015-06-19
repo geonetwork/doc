@@ -7,19 +7,23 @@ Data discovery gets more interesting once multiple catalogs and services share t
 
 Harvesting is the process of ingesting metadata from remote sources and storing it locally in GeoNetwork for fast searching via Lucene. It is a scheduled process, so it is not a single import, local and remote metadata are kept aligned. 
 
-GeoNetwork is able to harvest from the following sources (for more details see below):
+The following sources can be harvested:
 
- #. Another GeoNetwork node (version 2.1 or above). See :ref:`harvesting-geonetwork`
- #. A WebDAV server. See :ref:`harvesting-webdav`
- #. A CSW 2.0.1 or 2.0.2 catalogue server. See :ref:`harvesting-csw-services`
- #. A GeoPortal 9.3.x or 10.x server. See :ref:`harvesting-geoportal`
- #. A File system acessible by GeoNetwork. See :ref:`harvesting-filesystem`
- #. An OAI-PMH server. See :ref:`harvesting-oaimph`
- #. An OGC service using its GetCapabilities document. These include WMS, WFS, WPS and WCS services. See :ref:`harvesting-ogcwxs`
- #. An ArcSDE server. See :ref:`harvesting-sde`
- #. A THREDDS catalog. See :ref:`harvested-thredds`
- #. An OGC WFS using a GetFeature query. See :ref:`harvesting-wfs-features`
- #. One or more Z3950 servers. See :ref:`harvested-z3950`
+
+.. toctree::
+   :maxdepth: 2
+
+   harvesting-geonetwork.rst
+   harvesting-csw.rst
+   harvesting-ogcwxs.rst
+   harvesting-filesystem.rst
+   harvesting-webdav.rst
+   harvesting-oaipmh.rst
+   harvesting-sde.rst
+   harvesting-geoportal.rst
+   harvesting-thredds.rst
+   harvesting-wfs-features.rst
+   harvesting-z3950.rst
 
 Mechanism overview
 ------------------
@@ -200,30 +204,7 @@ The second row contains general purpose buttons. Here is the meaning of each but
 Harvesting Status and Error Icons
 ---------------------------------
 
-=====    ========    =======================================================
-Icon     Status      Description
-=====    ========    =======================================================
-``fcl``    Inactive    The harvester is stopped.
-``clo``    Active      The harvesting engine is waiting for the next scheduled
-                     run time of the harvester. 
-``exe``    Running     The harvesting engine is currently running, fetching
-                     metadata. When the process is 
-                     finished, the result of the harvest will be available 
-                     as an icon in the *Errors* column
-=====    ========    =======================================================
 
-=====    ==============================================================
-Icon     Description
-=====    ==============================================================
-V     The harvesting was OK, no errors were found. In this case, a
-         tool tip will show some harvesting results (like the number of
-         harvested metadata etc...).
-``imp``    The harvesting was aborted due to an unexpected condition. In
-         this case, a tool tip will show some information about the
-         error.
-=====    ==============================================================
-
-*Possible error icons*
 
 Harvesting result tips
 ----------------------
@@ -254,36 +235,6 @@ a table, with some rows labelled as follows:
 - **Records built** - Number of records built by the harvester from the template and fragments.
 - **Could not insert** - Number of records that the harvester could not insert into the catalog (usually because the record was already present eg. in the Z3950 harvester this can occur if the same record is harvested from different servers).
 
-
-==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
-Result vs harvesting type        GeoNetwork  WebDAV     CSW      OAI-PMH  OGC Service  OGC WFS Features  THREDDS  Z3950 Server(s)  GeoPortal REST
-==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
-Total                            V        V       V     V     V         V              V     V             V
-Added                            V        V       V     V     V                                    V             V
-Removed                          V        V       V     V     V                                    V             V
-Updated                          V        V       V     V                                             V             V
-Unchanged                        V        V       V     V                                             V             V
-Unknown schema                   V        V       V     V     V                                    V             V
-Unretrievable                    V        V       V     V     V                           V     V             V
-Bad Format                                   V                V                                             V             V
-Does Not Validate                            V                V                  V                       V             V
-Thumbnails / Thumbnails failed                                            V                           V
-Metadata URL attribute used                                               V
-Services Added                                                                                           V
-Collections Added                                                                                        V
-Atomics Added                                                                                            V
-Subtemplates Added                                                                     V              V
-Subtemplates removed                                                                   V              V
-Fragments w/Unknown Schema                                                             V              V
-Fragments Returned                                                                     V              V
-Fragments Matched                                                                      V              V
-Existing datasets                                                                                        V
-Records Built                                                                          V              V
-Could not insert                                                          V                                    V
-==============================   ==========  ======     ======   =======  ===========  ================  =======  ===============  ==============
-
-
-*Result information supported by harvesting types*
 
 Adding new harvesters 
 ---------------------

@@ -24,5 +24,3 @@ An item element defines a facet with the following parameters:
 * (optional) max: the number of values to be returned for the facet. Defaults is 10.
 
 When an item is modified or added, reload the lucene configuration and rebuild the index from the administration panel.
-
-For easier update, config overrides could be used to modify the config-summary file (See :ref:`adv_configuration_overriddes`).

@@ -18,7 +18,7 @@ Adding a WebDAV harvester
 
 - **Options** - Scheduling options.
 
-.. include:: common/common_options.rst
+
 
 - **Options** - Specific harvesting options for this harvester.
 
@@ -27,16 +27,16 @@ Adding a WebDAV harvester
 
 - **Privileges** - Assign privileges to harvested metadata. 
 
-.. include:: common/common_privileges.rst
+
 
 - **Categories** 
 
-.. include:: common/common_categories.rst
+
 
 Notes
 `````
 
 - The same metadata could be harvested several times by different instances of the WebDAV harvester. This is not good practise because copies of the same metadata record will have a different UUID.
 
-.. include:: common/common_notes.rst
+
 

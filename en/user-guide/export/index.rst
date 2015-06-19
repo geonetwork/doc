@@ -1,13 +1,11 @@
 .. _export:
 
-Export facilities
+Exporting records
 =================
 
 GeoNetwork has three different export options to export metadata. They operate on selected sets of metadata from the search results. As such they are accessible from the "actions on selection" menu as shown in the following example:
 
-.. figure:: export.png
-
-*The export functions: ZIP, PDF and CSV*
+.. figure:: img/export.png
 
 Export as a ZIP archive
 ```````````````````````

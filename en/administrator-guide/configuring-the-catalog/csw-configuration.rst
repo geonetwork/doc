@@ -6,7 +6,7 @@ Configuring CSW
 
 To get to the CSW server configuration, you must be logged on as administrator first. Open 'Settings' from the Administration page and select CSW Server configuration.
 
-.. figure:: csw.png
+.. figure:: img/csw.png
 
 The Open Geospatial Catalogue Service for the Web (OGC-CSW) service,
 is a self-describing service that allows query, update and insertion of metadata records. 

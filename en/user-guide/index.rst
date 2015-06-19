@@ -14,3 +14,4 @@ User guide
    publishing/index.rst
    workflow/index.rst
    harvesting/index.rst
+   export/index.rst

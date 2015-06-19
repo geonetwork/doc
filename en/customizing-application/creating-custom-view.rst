@@ -14,9 +14,11 @@ Metadata views are called 'formatters'. They are located in the schema-plugin re
 
 It's possible to update formatters from the web interface. In the admin panel at 'metadata and templates', there is a tab 'formatters'. On this page you can upload, change and preview formatters.
 
-    .. figure:: formatter.png
-	*Formatter admin*
-	
+    .. figure:: img/formatter.png
+
+
+
+
 After having created a new formatter you will have to update your application code, so the new formatter-output can be visualised from your application. If the goal of the formatter is to introduce a new html view on metadata, then you can add a reference to it in /catalog/views/default/config.js (searchSettings.formatter.list).
 
 

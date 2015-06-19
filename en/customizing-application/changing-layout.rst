@@ -1,5 +1,6 @@
-.. _configuring-facetted-search:
+.. _configuring-layout:
 
-Configuring facetted search
-###########################
+
+Theming
+#######
 

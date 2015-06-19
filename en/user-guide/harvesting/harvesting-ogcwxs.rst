@@ -35,11 +35,11 @@ Configuration options:
     
 - **Options** - Scheduling Options. 
 
-.. include:: common/common_options.rst
+
 
 - **Privileges**
 
-.. include:: common/common_privileges.rst
+
 
 - **Category for service** - Metadata for the harvested service is assigned to the category selected in this option (eg. "interactive resources").
 

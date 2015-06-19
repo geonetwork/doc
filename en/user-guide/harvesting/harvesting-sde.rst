@@ -25,7 +25,7 @@ Configuration options:
 
 - **Options**
 
-.. include:: common/common_options.rst
+
 
 - **Harvested Content**
 
@@ -34,8 +34,8 @@ Configuration options:
 
 - **Privileges**
 
-.. include:: common/common_privileges.rst
+
 
 - **Categories** 
 
-.. include:: common/common_categories.rst
+

@@ -9,7 +9,7 @@ Managing users and groups
 
    creating-group.rst
    creating-user.rst
-   user_self_registration.rst
+   user-self-registration.rst
    authentication-mode.rst
 
    
@@ -42,7 +42,7 @@ Rights associated with the roles are illustrated in detail in the list below:
     These include:
     
     - Full rights for creating new groups and new users
-    - Rights to change users/groups’ profiles
+    - Rights to change users/groups profiles
     - Full rights for creating/editing/deleting new/old metadata
     - Perform system administration and configuration tasks.
 

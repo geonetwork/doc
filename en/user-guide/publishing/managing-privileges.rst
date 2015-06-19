@@ -26,3 +26,70 @@ Below is a brief description for each privilege to help you identify which ones 
 **Featured**: When randomly selected by GeoNetwork, the metadata record can appear in the `Featured` section of the GeoNetwork home page.
 
 **Notify**: Users in the specified group receive notification if data attached to the metadata record is downloaded.
+
+
+Please review and make sure that you understand :ref:`user_profiles` in the User and Group Administration section of this manual.
+
+.. note:: A public metadata record is a metadata record that has the view privilege for the group named "All".
+
+The following rules apply to Viewing and Editing permissions on a metadata record:
+
+Viewing
+-------
+
+An *administrator* can view any metadata.
+
+A *content reviewer* can view a metadata if:
+
+#. The metadata is public or
+
+#. The metadata is part of a group that the user is a member of.
+
+A *user administrator* or an *editor* can view:
+
+#. All metadata that has the view privilege selected for one of the groups she/he is member of.
+
+#. All metadata created by her/him.
+
+A *registered user* can view:
+
+#. All metadata that has the view privilege selected for one of the groups she/he is member of.
+
+Public metadata can be viewed by any user (logged in or not).
+
+Editing
+-------
+
+An *administrator* can edit any metadata.
+
+A *reviewer* can edit a metadata if:
+
+#. The metadata owner is member of one of the groups assigned to the reviewer.
+
+#. She/he is the metadata owner.
+
+A *User Administrator* or an *Editor* can only edit metadata she/he created.
+
+Setting Privileges on a metadata record
+---------------------------------------
+
+A button to access the Privileges page for a metadata record will appear in the search results or when the record is being viewed for:
+
+#. All Administrators
+
+#. All Reviewers that are member of one of the groups assigned to the metadata owner.
+
+#. The Owner of the metadata
+
+Privileges for the All and Intranet groups can only be edited by Administrators and Reviewers.
+
+Setting Privileges on a selected set of metadata records
+--------------------------------------------------------
+
+Privileges can be set on a selected set of records in the search results using the "actions on selected set" menu. The following screenshot shows how to access this function:
+
+
+The following rules apply:
+
+- the groups that will appear in the Privileges page will be those that the user belongs to
+- the Privileges specified will only be applied to records that the user has ownership or administration rights on - any other records will be skipped.

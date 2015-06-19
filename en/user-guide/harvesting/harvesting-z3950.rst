@@ -19,7 +19,7 @@ The available options are:
 
 - **Options** - Scheduling options.
 
-.. include:: common/common_options.rst
+
 
 - **Harvested Content**
 
@@ -28,11 +28,11 @@ The available options are:
 
 - **Privileges**
 
-.. include:: common/common_privileges.rst
+
 
 - **Categories** 
 
-.. include:: common/common_categories.rst
+
 
 .. note:: this harvester automatically creates a new Category named after each of the Z3950 servers that return records. Records that are returned by a server are assigned to the category named after that server.
 

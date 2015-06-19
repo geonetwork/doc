@@ -21,7 +21,7 @@ The figure above shows the options available:
 
 - **Options** - Scheduling options.
 
-.. include:: common/common_options.rst
+
 
 - **Options** - Specific harvesting options for this harvester.
 
@@ -29,13 +29,13 @@ The figure above shows the options available:
 
 - **Privileges** - Assign privileges to harvested metadata. 
 
-.. include:: common/common_privileges.rst
+
 
 - **Categories** 
 
-.. include:: common/common_categories.rst
+
 
 Notes
 `````
 
-.. include:: common/common_notes.rst
+

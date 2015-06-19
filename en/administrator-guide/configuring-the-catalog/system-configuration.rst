@@ -21,7 +21,7 @@ To see the System configuration parameters, you must be logged on as administrat
 
 Clicking the link bring up the system configuration menu. A detailed description of these parameters follows.
 
-.. figure:: settings.png
+.. figure:: img/settings.png
 
     *The configuration options*
 
@@ -47,9 +47,9 @@ Here you have to enter the details of the web address of your GeoNetwork node. T
 
 *Protocol* The HTTP protocol used to access the server. Choosing http means that all communication with GeoNetwork will be visible to anyone listening to the protocol. Since this includes usernames and passwords this is not secure. Choosing https means that all communication with GeoNetwork will be encrypted and thus much harder for a listener to decode. 
 
-*Host* The node’s address or IP number. If your node is publicly accessible from the Internet, you have to use the domain name. If your node is hidden inside your private network and you have a firewall or web server that redirects incoming requests to the node, you have to enter the public address of the firewall or web server. A typical configuration is to have an Apache web server on address A that is publicly accessible and redirects the requests to a Tomcat server on a private address B. In this case you have to enter A in the host parameter.
+*Host* The node's address or IP number. If your node is publicly accessible from the Internet, you have to use the domain name. If your node is hidden inside your private network and you have a firewall or web server that redirects incoming requests to the node, you have to enter the public address of the firewall or web server. A typical configuration is to have an Apache web server on address A that is publicly accessible and redirects the requests to a Tomcat server on a private address B. In this case you have to enter A in the host parameter.
 
-*Port* The node’s port (usually 80 or 8080). If the node is hidden, you have to enter the port on the public firewall or web server. 
+*Port* The node's port (usually 80 or 8080). If the node is hidden, you have to enter the port on the public firewall or web server.
 
 
 Intranet Parameters
@@ -77,7 +77,7 @@ Configuration settings in this group determine how many processor threads are al
 
 *Number of processing threads* The maximum number of processing threads that can be allocated to an indexing task. 
 
-Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See :ref:`adv_configuration` for more details of how to configure the number of connections in the database connection pool.
+Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See the advanced configuration for more details of how to configure the number of connections in the database connection pool.
 
 Lucene Index Optimizer
 ```````````````````````
@@ -180,7 +180,7 @@ Enables/disables the INSPIRE support:
 - CSW GetCapabilities includes the INSPIRE section (ie. ExtendedCapabilities) that administrator can customize in xml/csw/capabilities_inspire.xml 
   and response support language extensions. The language provided defines:
 
- - Natural language fields are returned in the language requested (see :ref:`csw_configuration`)
+ - Natural language fields are returned in the language requested (see :ref:`csw-configuration`)
 
  - The end-points are returned for the language requested
 

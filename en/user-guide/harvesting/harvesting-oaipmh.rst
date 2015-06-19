@@ -34,15 +34,15 @@ Configuration options:
     
 - **Options** - Scheduling Options. 
 
-.. include:: common/common_options.rst
+
     
 - **Privileges**
 
-.. include:: common/common_privileges.rst
+
 
 - **Categories**
 
-.. include:: common/common_categories.rst
+
 
 
 Notes
@@ -52,4 +52,4 @@ Notes
 - when you edit a previously created OAIPMH harvester instance, both the *set* and *prefix* drop down lists will be empty. You have to press the retrieve info button again to connect to the remote server and retrieve set and prefix information.
 - the id of the remote server must be a UUID. If not, metadata can be harvested but during hierarchical propagation id clashes could corrupt harvested metadata.
 
-.. include:: common/common_notes.rst
+

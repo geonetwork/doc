@@ -35,11 +35,11 @@ The available options are:
 
 - **Options** - Scheduling Options. 
 
-.. include:: common/common_options.rst
+
 
 - **Privileges** 
 
-.. include:: common/common_privileges.rst
+
 
 - **Category for Service** - Select the category to assign to the ISO19119 service records for the THREDDS services.
 - **Category for Datasets** - Select the category to assign the generated metadata records (and any subtemplates) to.
