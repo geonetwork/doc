@@ -3,93 +3,123 @@
 Quick start
 ###########
 
-Find & get information
-''''''''''''''''''''''
 
-GeoNetwork provides an easy to use web interface to search geospatial data
-across multiple catalogs. The search provides full-text search as well as
-faceted search on keywords, resource types, organizations, scale, ... Users can refine a search and view the records of interests.
+GeoNetwork is a catalog application to manage spatially referenced resources.
+It provides powerful metadata editing and search functions as well as
+an interactive web map viewer. It is currently used in numerous
+Spatial Data Infrastructure initiatives across the world.
 
-GeoSpatial datasets, but also services, maps and non geographic datasets can be registered in the catalog. 
+Apart from how to start the catalog, this Quick Start describes:
+* some of the different ways you can search for spatial data
+* how to download and display data from the search results
 
-Make your maps
-''''''''''''''
 
-The interactive map viewer provides access to map services (WMS, WMTS, WFS) and spatial files (kml, json, owc). Connected to the catalog, users can easily find new services, layers and even dynamic maps to combine them together. User maps can be annotated, printed and shared with others.
+Starting the catalog
+--------------------
 
-What is Metadata?
------------------
+After going through the installer steps, simply go to bin folder and click
+on start.bat (on windows) or start.sh (on linux).
 
-Metadata, commonly defined as �data about data� or "information about data", is a structured set of information which describes data (including both digital and non-digital datasets)
-stored in administrative systems. Metadata may provide a short summary about the
-content, purpose, quality, location of the data as well as information related to
-its creation.
 
-What are Metadata Standards?
-----------------------------
+Go to the home page at ``http://localhost:8880/geonetwork``. Your first view
+should look like this:
 
-Metadata standards provide data producers with the format and content for properly
-describing their data, allowing users to evaluate the usefulness of the data in
-addressing their specific needs.
+.. figure:: img/home-page.png
 
-The standards provide a documented, common set of terms and definitions
-that are presented in a structured format.
 
-Why do we need Standardised Metadata?
--------------------------------------
 
-Standardised metadata support users in effectively and efficiently accessing data
-by using a common set of terminology and metadata elements that allow for a quick
-means of data discovery and retrieval from metadata clearinghouses. The metadata
-based on standards ensure information consistency and quality and avoid that
-important parts of data knowledge are lost.
+Signing in and load templates
+-----------------------------
 
-Geographic Information Metadata Standard
-----------------------------------------
 
-Geographic data, which can be defined as any data with a geographic component, is
-often produced by one individual or organisation, and may address the needs of
-various users, including information system analysts, programme planners, developers
-of geographic information or policy makers. Proper standard documentation on
-geographic data enable different users to better evaluate the appropriateness of
-data to be used for data production, storage, update.
+Click the ``sign in`` to connect as administrator. The default account is
+username ``admin`` with password ``admin``.
 
-The metadata standards supported by GeoNetwork opensource are the **ISO 19115:2003** -
-approved by the international community in April 2003 as a tool to define metadata
-in the field of geographic information - and the **FGDC** - the metadata standard 
-adopted in the United States by the Federal Geographic Data Committee. 
-In addition, GeoNetwork opensource supports also the international
-standard **Dublin Core** for the description of general documents.
+.. figure:: img/signin.png
 
-This ISO Standard precisely defines how geographic information and related
-services should be described, providing mandatory and conditional metadata sections,
-metadata entities and metadata elements. This standard applies to data series,
-independent datasets, individual geographic features and feature properties. Despite
-ISO 19115:2003 was designed for digital data, its principles can be extended to many
-other forms of geographic data such as maps, charts, and textual documents as well
-as non-geographic data.
 
-The underlying format of an ISO19115:2003 compliant metadata is XML. GeoNetwork
-uses the *ISO Technical Specification 19139 Geographic information - Metadata -
-XML schema implementation* for the encoding of this XML.
+Once connected, the top toolbar should provide a link to the ``admin console``
+and your login details.
 
-Metadata profiles
------------------
+.. figure:: img/identified-user.png
 
-A metadata profile is an adaptation of a metadata standard to suit the needs of a community. For example, the ANZLIC profile is an adaptation of the ISO19115/19139 metadata standard for Australian and New Zealand communities. A metadata profile could be implemented as:
 
-- a specific metadata *template* that restricts the fields/elements a user can see with a set of validation rules to check compliance
-- all of the above plus new fields/elements to capture concepts that aren't in the basic metadata standard
+Go to the ``admin console`` and click on metadata and templates:
 
-Building a metadata profile is described in the Schema Plugins section of the GeoNetwork Developers Manual. Using this guide and the GeoNetwork schema plugin capability, a profile can be built by an experienced XML/XSL software engineer.
 
-Transition between metadata standards
--------------------------------------
+.. figure:: ../describing-information/img/metadata-and-templates.png
 
-With the ISO19115:2003 Metadata standard for Geographic Information now
-being the preferred common standard, many have a need to migrate legacy metadata
-into the new standard.
+Choose all standards and click ``load samples`` and then ``load templates`` in
+order to load examples:
 
-GeoNetwork provides import (and export) functionality and has a number of
-transformers in place. It is an easy process for a system administrator to
-install custom transformers based on XSLT.
+.. figure:: ../describing-information/img/templates.png
+
+
+Go back to the search page to see examples:
+
+.. figure:: img/once-samples-are-loaded.png
+
+
+Searching information
+---------------------
+
+The search form provides different ways for search:
+
+* a full text search box providing suggestions
+
+.. figure:: img/full-text.png
+
+
+* facets which defines groups that you can easily click on to browse the content of the catalog
+
+.. figure:: img/facets.png
+
+
+* spatial filtering to choose information in specific areas
+
+.. figure:: img/spatial-filter.png
+
+
+* advanced search
+
+.. figure:: img/advanced.png
+
+
+
+Discovering information
+-----------------------
+
+Search results present main information about each resources: title, abstract,
+categories, status, overview and links.
+
+.. figure:: img/a-result.png
+
+
+Clicking the record will provide more in depth details about the resources:
+
+* Download and links
+* About the resource
+* Technical information
+* Metadata details
+
+.. figure:: img/a-record.png
+
+
+To get more information, switch the advanced view mode.
+To update the record, click the edit button.
+
+
+
+From the results or the record view, you can easily add WMS layers referenced in
+a metadata record on the map. With the map, you can visualize your data, choose
+your background maps, query objects, display on a 3D globe and more ...
+
+
+.. figure:: img/map-africa-basin.png
+
+
+
+For more information
+--------------------
+
+Continue reading the documentation.
