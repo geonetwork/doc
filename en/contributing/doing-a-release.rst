@@ -10,7 +10,7 @@ This section documents the steps followed by the development team to do a new re
 Once the release branch has been thoroughly tested and is stable a release can be made.
 
 
-#. Get the branch
+1. Get the branch
 
 .. code-block:: shell
 
@@ -26,7 +26,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd geonetwork-$versionbranch
 
 
-#. Create or move to the branch for the version
+2. Create or move to the branch for the version
 
 
 .. code-block:: shell
@@ -38,7 +38,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git checkout $versionbranch
 
 
-#. Update version number
+3. Update version number
 
 
 
@@ -48,7 +48,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 
 
-#. Build the new release
+4. Build the new release
 
 
 .. code-block:: shell
@@ -56,7 +56,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     mvn clean install -DskipTests -Pwith-doc
 
 
-#. Create the installer
+5. Create the installer
 
 
 .. code-block:: shell
@@ -66,7 +66,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd ..
 
 
-#. Test the installer
+6. Test the installer
 
 
 .. code-block:: shell
@@ -76,7 +76,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 
 
-# Generate list of changes
+7 Generate list of changes
 
 
 .. code-block:: shell
@@ -91,7 +91,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git log --pretty='format:- %s' origin/$previousversion... >> docs/changes$newversion.txt
 
 
-#. Commit the new version (in submodule first and then in the main module)
+8. Commit the new version (in submodule first and then in the main module)
 
 
 .. code-block:: shell
@@ -104,7 +104,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git commit -m "Update version to $newversion"
 
 
-#. Tag the release
+9. Tag the release
 
 
 .. code-block:: shell
@@ -113,18 +113,28 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git push origin $version
 
 
-#. Set version number to SNAPSHOT
+10. Set version number to SNAPSHOT
 
 
 .. code-block:: shell
 
     ./update-version.sh $newversion $version-SNAPSHOT
+    cd geoserver
     git add .
     git commit -m "Update version to $version-SNAPSHOT"
+    cd ..
+    git add .
+    git commit -m "Update version to $version-SNAPSHOT"
+
+
+    cd geoserver
+    git push origin $versionbranch
+    cd ..
     git push origin $versionbranch
 
 
-#. Publish in sourceforge
+
+11. Publish in sourceforge
 
 
 .. code-block:: shell
@@ -136,7 +146,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd /home/frs/project/g/ge/geonetwork/cd GeoNetwork_unstable_development_versions/
     mkdir 3.0.0
     cd 3.0.0
-    put docs/changes$newversion.txt
+    put docs/changes3.0.0-0.txt
     put geonetwork*/*.jar
     put web/target/geonetwork.war
 

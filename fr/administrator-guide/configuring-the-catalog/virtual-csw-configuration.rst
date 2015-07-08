@@ -3,33 +3,34 @@
 Configurer un point d’accès CSW virtuel
 #######################################
 
-Le CSW virtuel permet de définir un CSW spécifique qui fournira une réponse 
-filtrée. Celle-ci n'intégre par exemple que les données caractérisées comme 
-"opendata" si un filtre "opendata" a été configuré. Grâce à ce mécanisme, 
-le gestionnaire du catalogue peut créer différentes entrées CSW pour son 
-catalogue afin de répondre à ses besoins et/ou obligations.
+Un CSW virtuel permet de définir un ou plusieurs service CSW avec des URL spécifiques
+qui fourniront un service de recherche sur un sous-ensemble du catalogue. Cela permet
+de simplifier le moissonnage d'un sous ensemble du catalogue. En effet, l'URL permet
+de récupérer les fiches correspondant à certains critères. Ce mécanisme est fréquemment
+utilisé pour créer un service csw-inspire fournissant les fiches entrant dans le cadre
+de la directive INSPIRE ou csw-opendata pour les fiches à moissonner par les portails
+opendata.
 
-La paramétrisation d'un CSW virtuel se réalise au niveau de la section 
-"Administration > Paramètres > CSW virtuel". 
+Pour ajouter un CSW virtuel, allez dans "Administration > Paramètres > CSW virtuel".
 
 
 .. figure:: img/csw-virtuel.png
 
 
-La créatin d'un nouveau CSW virtuel se fait de manière aisée en complétant 
-le formulaire de configuration du  CSW vituel au moyen des élements suivants:
+Cliquer sur ``ajouter`` pour ajouter un nouveau CSW virtuel et configurer les
+élements suivants :
 
-- Nom - Nom du CSW virtuel (il est nécessaire de le nommer avec le préfixe "csv-")
-- Description - Simple description
-- Filtres - Outil permettant de définir un filtre afin de limiter le point CSW au 
-  seules métadonnées répondant positivement au filtre. Plusieurs éléments de 
-  description des métadonnées peuvent être intégrés au niveau du filtre. Il est, 
-  par ailleurs, possible de combiner plusieurs filte pour un CSW virtuel
+- Nom - Nom du CSW virtuel (il DOIT être préfixé par "csw-")
+- Description - Description du service
+- Filtres - Outil permettant de définir un ou plusieurs filtres afin de sélectionner
+  un sous-ensemble de fiche. Sélectionner le critère et la valeur à filtrer. Il est
+  possible de combiner plusieurs filtres.
 
-Il est possible de modifier/supprimer un CSW virtuel en le sélectionnant dans
-la liste des CSW virtuels disponibles.
+
+Chaque CSW virtuel peuvent être modifiés ou supprimés. Utilisez l'interface de test
+pour vérifier que les critères sont correctement configurés.
+
 
 .. warning::
-  N'oubliez pas d'activer le CSW pour bénéficier des points d'accès CSW (voir 
-  `Configurer le CSW <./csw-configuration.html>`_) 
+  N'oubliez pas d'activer le CSW pour bénéficier des points d'accès CSW (cf. :ref:`csw-configuration`)
 

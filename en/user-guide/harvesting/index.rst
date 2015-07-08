@@ -3,9 +3,13 @@
 Harvesting
 ##########
 
-Data discovery gets more interesting once multiple catalogs and services share there resources. 
+Data discovery gets more interesting once multiple catalogs and services
+share there resources.
 
-Harvesting is the process of ingesting metadata from remote sources and storing it locally in GeoNetwork for fast searching via Lucene. It is a scheduled process, so it is not a single import, local and remote metadata are kept aligned. 
+Harvesting is the process of ingesting metadata from remote sources and
+storing it locally in the catalog for fast searching. It is a scheduled
+process, so local copy and remote metadata are kept aligned.
+
 
 The following sources can be harvested:
 
@@ -28,30 +32,56 @@ The following sources can be harvested:
 Mechanism overview
 ------------------
 
-The harvesting mechanism relies on the concept of a *universally unique identifier (UUID)*.  This is a special id because it is not only unique locally to the node that generated it but it is globally unique.  It is a combination of the network interface MAC address, the current date/time and a random number. Every time you create a new metadata record in GeoNetwork, a new UUID is generated and assigned to it.
+The harvesting mechanism relies on the concept of a ``universally unique identifier (UUID)``.
+This is a special id because it is not only unique locally to the node that generated it
+but it is globally unique.  It is a combination of :
 
-Another important concept behind the harvesting is the *last change date*.
+* the network interface MAC address,
+* the current date/time
+* and a random number.
+
+
+For every new record, a UUID is generated and assigned to it.
+
+Another important concept behind the harvesting is the ``last change date``.
 Every time you change a metadata record, the last change date is
 updated. Just storing this parameter and comparing it with a new one allows any
 system to find out if the metadata record has been modified since last update.
 
-These two concepts allow GeoNetwork to fetch remote metadata, check if it has
-been updated and remove it locally if it has been removed remotely. Furthermore,
-thanks to UUIDs, a hierarchy of harvesting nodes can be built where B harvests from C and A harvests from B.
+These two concepts allow catalogs to fetch remote metadata, check if it has
+been updated and remove it locally if it has been removed remotely. UUIDs also
+allowed cross catalog harvesting in case B harvests from C and A harvests from B.
+
 
 Harvesting life cycle
 ---------------------
 
-When a harvester is first set up, there is no harvested metadata. During the first run, all remote matching metadata are retrieved and stored locally. For some harvesters, after the first run, only metadata that has changed will be retrieved. 
+When a harvester is created, there is no harvested metadata.
+During the first run, all remote matching metadata are retrieved and
+stored locally. For some harvesters, after the first run, only metadata
+that has changed will be retrieved.
+
 
 Harvested metadata are (by default) not editable for the following reasons:
 
-#. The harvesting is periodic so any local change to harvested metadata will be lost during the next run.
-#. The change date may be used to keep track of changes so if the metadata gets changed, the harvesting mechanism may be compromised.
+#. The harvesting is periodic so any local change to harvested metadata
+   will be lost during the next run.
+#. The change date may be used to keep track of changes so if the
+   metadata gets changed, the harvesting mechanism may be compromised.
 
-Metadata properties (like categories, privileges etc...) on harvested metadata records cannot be changed.
+Metadata properties (like categories, privileges etc...) on harvested metadata
+records can be updated but will be updated on next run.
 
-.. note:: if you really want to edit harvested metadata records and aren't worried by the possible issues described above, there is now a configuration setting which will permit this. See :ref:`editing_harvested_records` for more details.
+.. note:: if you really want to edit harvested metadata records and
+   aren't worried by the possible issues described above, there is now a
+   configuration setting which will permit this. See :ref:`editing_harvested_records`
+   for more details.
+
+   Another option would be to assign the harvested records to the local
+   catalog and then modify them. For the time being, no interface allows
+   to change record's source catalog.
+
+
 
 The harvesting process goes on until one of the following situations arises:
 
