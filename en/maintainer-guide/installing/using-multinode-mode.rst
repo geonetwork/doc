@@ -51,7 +51,7 @@ in |web.xml| in order to declare the URL mapping:
 .. code-block:: xml
 
       <servlet-mapping>
-        <servlet-name>gn-servlet</servlet-name>
+        <servlet-name>spring</servlet-name>
         <url-pattern>/geosource-8/*</url-pattern>
       </servlet-mapping>
 

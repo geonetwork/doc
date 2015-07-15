@@ -53,7 +53,7 @@ déclarer le nouveau nœud dans le fichier |web.xml| afin de déclarer l'URL :
 .. code-block:: xml
 
       <servlet-mapping>
-        <servlet-name>gn-servlet</servlet-name>
+        <servlet-name>spring</servlet-name>
         <url-pattern>/geosource-8/*</url-pattern>
       </servlet-mapping>
 
