@@ -13,6 +13,12 @@ produced by an OGC Web Map Service.
 
 You can associate one or more thumbnails with a record.
 
+
+Thumbnails are displayed in search results and metadata view:
+
+.. figure:: img/thumb-in-search-results.png
+
+
 From the ``Associated resources`` panel, click on the ``Add a thumbnail`` button
 to open the ``Add an overview to the current metadata`` wizard. Thumbnails can be added
 using 3 approaches:

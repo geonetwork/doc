@@ -10,4 +10,5 @@ Workflow
    validation.rst
    suggestion.rst
    life-cycle.rst
+   geopublication.rst
    versioning.rst

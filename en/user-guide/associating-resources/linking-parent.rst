@@ -16,9 +16,18 @@ which is then attached to each datasets of the serie.
  - Corine Land Cover 2012
  - ...
 
-Parent/child relations can be set on ISO19139 and Dublin Core records.
+Parent/child relations can be set on ISO19139 and Dublin Core records. In ISO19139,
+the link to a parent record is encoded in the child record using the following:
 
-.. todo:: Add encoding details
+
+.. code-block:: xml
+
+   <gmd:parentIdentifier>
+      <gco:CharacterString>78f93047-74f8-4419-ac3d-fc62e4b0477b</gco:CharacterString>
+   </gmd:parentIdentifier>
+
+
+Parent/Child relation in ISO19139 may also be encoded using aggregates (see :ref:`linking-others`).
 
 
 When creating such relationship, users will be able to navigate between the

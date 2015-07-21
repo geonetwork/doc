@@ -6,6 +6,9 @@ Linking website, web services, ... using URL
 This section applies mainly to ISO19139 records and partially
 to Dublin Core (ie. only documents can be associated in Dublin Core) standards.
 
+
+.. _linking-online-resources-doc:
+
 Linking a document
 ------------------
 
@@ -90,10 +93,46 @@ To add a WMS layer:
 .. figure:: img/addonlinesrcwms.png
 
 
+.. _linking-online-resources-georesource:
 
 
-Linking a database table or a file on the network
--------------------------------------------------
+Linking a database table or a GIS file on the network
+-----------------------------------------------------
+
+To reference a GIS file or a database table, user can upload or link to a that resource
+(see :ref:`linking-online-resources-doc`). The type of protocol depends on the type of
+resource associated:
+
+
+===================== ==============================================================================================================================================
+Type of resource      Vector file uploaded (eg. zipped Shapefile)
+===================== ==============================================================================================================================================
+URL                   File URL created after upload on the catalog. eg. http://localhost:8080/geonetwork/srv/eng/resources.get?id=1631&fname=CCM.zip&access=private
+Protocol              WWW:DOWNLOAD
+Name                  File name (readonly)
+===================== ==============================================================================================================================================
+
+===================== ==============================================================================================================================================
+Type of resource      Vector file on the network
+===================== ==============================================================================================================================================
+URL                   File path. eg. file:///shared/geodata/world/hydrology/rivers.shp
+Protocol              FILE:GEO or FILE:RASTER
+Name                  File description
+===================== ==============================================================================================================================================
+
+===================== ==============================================================================================================================================
+Type of resource      Vector (Table PostGIS)
+===================== ==============================================================================================================================================
+URL                   jdbc:postgresql://localhost:5432/login:password@db
+Protocol              DB:POSTGIS
+Name                  Table name
+===================== ==============================================================================================================================================
+
+
+When having information about the database or file on the local network, it may
+be relevant to hide those informations for public users
+(see :ref:`restricting-information-to-metadata-sections`).
+
 
 .. todo:: Add doc & link to geopublisher
 
