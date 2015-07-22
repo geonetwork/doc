@@ -16,29 +16,36 @@ wizard is available in the metadata editor.
 .. figure:: img/geopublication-wizard.png
 
 Choose a resource from the list to display the wizard.
-
-.. figure:: img/geopublication-wizard-open.png
-
 The wizard display the list of map servers available:
 
 .. figure:: img/geopublication-wizard-serverlist.png
 
 Choose the server you want to publish the data in. When selected, the catalog
 will check if the dataset is already published or not. If found, it will be
-added to the map, if not, the status message indicates that the dataset is not
+added to the map.
+
+.. figure:: img/geopublication-wizard-open.png
+
+If not, the status message indicates that the dataset is not
 available.
 
 .. figure:: img/geopublication-wizard-notavailable.png
 
-Click the ``check`` button to verify that the dataset is already published in the selected map server.
+From the menu, control the publication process:
 
-Click the ``publish`` button to register the data on the selected map server.
+.. figure:: img/geopublication-wizard-menu.png
 
-Click the ``unpublish`` button to unregister the data on the selected map server.
+* Click the ``check`` button to verify that the dataset is already published in the selected map server.
 
-Click the ``link service to metadata`` button to add links to the OGC service
-in the current metadata record for the published layer.
+* Click the ``publish`` button to register the data on the selected map server.
+
+* Click the ``unpublish`` button to unregister the data on the selected map server.
+
+* Click the ``link service to metadata`` button to add links to the OGC service
+  in the current metadata record for the published layer.
 
 
 
+Once a WMS layer is registered in a metadata record, remember that you can easily generate
+an overview using the service (see :ref:`linking-thumbnail-from-wms`).
 

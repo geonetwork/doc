@@ -57,6 +57,8 @@ Choose a file on your computer or drag&drop a file on the popup.
 Click ``Add a thumbnail`` to trigger the upload.
 
 
+.. _linking-thumbnail-from-wms:
+
 
 Generating a thumbnail using WMS layers
 ---------------------------------------
