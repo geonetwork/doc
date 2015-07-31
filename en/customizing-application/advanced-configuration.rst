@@ -9,14 +9,15 @@ User session timeout configuration
 ----------------------------------
 
 
-Default session timeout is set to 35 minutes (See :ref:`user-session`). This timeout can be configured in
-WEB-INF/web.xml by changing the value
+Default session timeout is set to 35 minutes (See :ref:`user-session`).
+This timeout can be configured in ``WEB-INF/web.xml`` by changing the value
+of the session-timeout (time is in minute):
 
 
 .. code-block:: xml
 
     <session-config>
-        <session-timeout>${sessionTimeout}</session-timeout>
+        <session-timeout>35</session-timeout>
     </session-config>
 
 
