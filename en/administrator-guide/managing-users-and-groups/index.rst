@@ -12,21 +12,59 @@ Managing users and groups
    user-self-registration.rst
    authentication-mode.rst
 
-   
-GeoNetwork uses the concept of Users, Groups and User Profiles. 
+.. _user-defaults;
+
+Default user
+------------
+
+After installation a default user with name ``admin`` and password ``admin``
+is created. Use this credentials to start with.
+
+
+.. _user-session:
+
+User session
+------------
+
+After identification, a user session is created. This session will be closed
+automatically at some point by the server for security reasons. Default session
+timeout is set to 35 min (see :ref:`session-timeout-configuration` for details).
+
+When there is no activity in the browser and that the session is about
+to expire (3 min before), a warning is displayed next to the user details:
+
+.. figure:: img/session-will-expire-soon.png
+
+1 min before the end of the timeout, another message is displayed:
+
+.. figure:: img/session-about-to-be-cancelled.png
+
+When the session has been probably cancelled by the catalog, a message recommend
+to refresh the page and sign in again if needed:
+
+.. figure:: img/session-has-expired.png
+
+
+
+
+
+.. _user_profiles:
+
+Users, Groups and Roles
+-----------------------
+
+
+The catalog uses the concept of Users, Groups and User Profiles.
 
 - A User can be part of one or more Groups.
 
-- A User has a Role in a Group. 
+- A User has a Role in a Group.
 
 - The Administrator Role is not related to a Group.
 
 The combination of Role and Group defines what tasks the User can perform on the system or on specific metadata records.
 
-.. _user_profiles:
 
-Roles
--------------
 
 Users can have different roles in different groups.
 A role defines what tasks the user can perform.

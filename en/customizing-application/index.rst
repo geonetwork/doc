@@ -13,6 +13,7 @@ Customizing guide
    configuring-search-fields.rst
    creating-custom-view.rst
    creating-custom-editor.rst
+   advanced-configuration.rst
    implementing-a-schema-plugin.rst
    characterset.rst
    misc.rst
