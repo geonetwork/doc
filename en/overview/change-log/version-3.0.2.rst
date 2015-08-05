@@ -7,6 +7,7 @@ Version 3.0.2
 New features
 ------------
 
+* End of session notification (See :ref:`user-session`)
 * Vacuum batch process help cleaning ISO19139 and Dublin Core records
 
 

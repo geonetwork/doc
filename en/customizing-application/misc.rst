@@ -4,6 +4,13 @@ Miscellaneous
 #############
 
 
+.. _batch-process-add:
+
+Adding batch process
+--------------------
+
+.. todo:: Describe how to add process in <schema>/process/filename.xsl
+
 
 
 .. _customizing-xslt-conversion:

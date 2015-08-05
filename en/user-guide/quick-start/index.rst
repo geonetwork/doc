@@ -10,6 +10,7 @@ an interactive web map viewer. It is currently used in numerous
 Spatial Data Infrastructure initiatives across the world.
 
 Apart from how to start the catalog, this Quick Start describes:
+
 * some of the different ways you can search for spatial data
 * how to download and display data from the search results
 
@@ -44,7 +45,7 @@ and your login details.
 .. figure:: img/identified-user.png
 
 
-Go to the ``admin console`` and click on metadata and templates:
+Go to the ``admin console`` and click on ``metadata and templates``:
 
 
 .. figure:: ../describing-information/img/metadata-and-templates.png

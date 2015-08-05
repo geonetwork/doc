@@ -12,3 +12,4 @@ Workflow
    life-cycle.rst
    geopublication.rst
    versioning.rst
+   batchupdate.rst
