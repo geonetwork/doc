@@ -45,6 +45,10 @@ the following information:
 .. figure:: img/batch-report.png
 
 
+Before running a process, it is recommended to make a backup of all metadata
+records to be updated in case something goes wrong with the process.
+
+
 .. todo:: Document other processes
 
 
@@ -103,7 +107,8 @@ The last parameter is the vacuum mode defining what to do with empty elements:
 
 
 
-
+After the configuration done, user can preview the changes by clicking the ``Test`` button
+and then apply the changes with ``Run``
 
 
 

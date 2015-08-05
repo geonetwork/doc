@@ -10,4 +10,6 @@ Suivi des informations
    validation.rst
    suggestion.rst
    life-cycle.rst
+   geopublication.rst
    versioning.rst
+   batchupdate.rst

@@ -10,3 +10,4 @@ Personnaliser l'application
 
    configuring-facetted-search.rst
    creating-custom-editor.rst
+   misc.rst
