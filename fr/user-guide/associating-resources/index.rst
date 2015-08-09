@@ -25,7 +25,7 @@ Different types of resources can be associated:
 
 
 .. toctree::
-:maxdepth: 2
+   :maxdepth: 2
 
    linking-thumbnail.rst
    linking-online-resources.rst
