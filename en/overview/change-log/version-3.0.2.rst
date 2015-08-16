@@ -7,9 +7,14 @@ Version 3.0.2
 New features
 ------------
 
-* End of session notification (See :ref:`user-session`)
-* Vacuum batch process help cleaning ISO19139 and Dublin Core records
-
+* Search / Add hierarchical facet support
+* Search / Add facet on source catalog and resolution
+* Metadata view / Better navigation between datasets and maps
+* Editor / Automatically enable workflow for records in a group
+* Thesaurus / Update region thesaurus based on Natural Earth and Sea Vox
+* Processing / Vacuum batch process help cleaning ISO19139 and Dublin Core records
+* Harvester / Filesystem harvester can harvest subtemplates
+* Administration / End of session notification (See :ref:`user-session`)
 
 Bug Fixes
 ---------
