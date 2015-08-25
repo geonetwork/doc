@@ -18,7 +18,8 @@ Default user
 ------------
 
 After installation a default user with name ``admin`` and password ``admin``
-is created. Use this credentials to start with.
+is created. Use this credentials to start with. It is recommended to update
+the default password after installation.
 
 
 .. _user-session:

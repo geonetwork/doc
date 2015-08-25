@@ -3,20 +3,31 @@
 User Self-Registration
 ======================
 
-To enable the self-registration functions, see :ref:`system-configuration` section of this manual. When self-registration is enabled, the banner menu functions shown to a user who has not logged in should contain two additional choices: 'Forgot your password?' and 'Register' as follows:
+To enable the self-registration functions, see :ref:`system-configuration`.
+When self-registration is enabled, the login page shows to a user
+who are not connected, a ``Need an account`` link:
 
-If 'Register' is chosen the user will be asked to fill out a form as follows:
+.. figure:: img/selfregistration-start.png
+
+
+Click the ``Create an account`` and fill out the registration forms:
+
+.. figure:: img/selfregistration-form.png
+
 
 
 The fields in this form are self-explanatory except for the following: 
 
-*Email*: The user's email address. This is mandatory and will be used as the username.
+- **Email**: The user's email address. This is mandatory and will be used as the username.
 
-*Profile*: By default, self-registered users are given the 'Registered User' 
-profile (see previous section). If any other profile is selected: 
+- **Profile**: By default, self-registered users are given the ``Registered User``
+  profile (see previous section). If any other profile is selected:
 
-- the user will still be given the 'Registered User' profile
-- an email will be sent to the Email address nominated in the Feedback section of the 'System Administration' menu, informing them of the request for a more privileged profile
+ - the user will still be given the ``Registered User`` profile
+
+ - an email will be sent to the Email address nominated in the Feedback section
+   of the 'System Administration' menu, informing them of the request for a more
+   privileged profile
 
 
 What happens when a user self-registers?
@@ -47,11 +58,16 @@ new account details that looks something like the following:
 		Yours sincerely,
 		The team at The Greenhouse GeoNetwork Site
 
-Notice that the user has requested an 'Editor' profile. As a result an email will be sent to the Email address nominated in the Feedback section of the 'System Administration' menu which looks something like the following:
+Notice that the user has requested an 'Editor' profile. As a result an email will
+be sent to the Email address nominated in the Feedback (see :ref:`_system-config-feedback`)
+section of the ``System Administration`` menu which looks something like the following:
 
-Notice also that the user has been added to the built-in user group 'GUEST'. This is a security restriction. An administrator/user-administrator can add the user to other groups if that is required later.
+Notice also that the user has been added to the built-in user group 'GUEST'.
+This is a security restriction. An administrator/user-administrator can add
+the user to other groups if that is required later.
 
-If you want to change the content of this email, you should modify INSTALL_DIR/web/geonetwork/xsl/registration-pwd-email.xsl.
+If you want to change the content of this email, you should modify
+``xslt/service/account/registration-pwd-email.xsl``.
 
 ::
 
@@ -78,12 +94,19 @@ If you want to change the content of this email, you should modify INSTALL_DIR/w
 
 	The Greenhouse GeoNetwork Site
 
-If you want to change the content of this email, you should modify INSTALL_DIR/web/geonetwork/xsl/registration-prof-email.xsl.
+If you want to change the content of this email, you should modify ``xslt/service/account/registration-prof-email.xsl``.
+
 
 The 'Forgot your password?' function
 ------------------------------------
 
-This function allows users who have forgotten their password to request a new one. For security reasons, only users that have the 'Registered User' profile can request a new password.
+This function allows users who have forgotten their password to request a new one.
+Go to the sign in page to access the form:
+
+.. figure:: img/password-forgot.png
+
+
+For security reasons, only users that have the ``Registered User`` profile can request a new password.
 
 If a user takes this option they will receive an email inviting them to change their password as follows:
 
@@ -99,15 +122,14 @@ If a user takes this option they will receive an email inviting them to change t
 
 		Greenhouse GeoNetwork Site
 
-GeoNetwork has generated a changeKey from the forgotten password and the 
+The catalog has generated a changeKey from the forgotten password and the
 current date and emailed that to the user as part of a link to a 
 change password form. 
 
-If you want to change the content of this email, you should modify INSTALL_DIR/web/geonetwork/xsl/password-forgotten-email.xsl.
+If you want to change the content of this email, you should modify ``xslt/service/account/password-forgotten-email.xsl``.
 
 When the user clicks on the link, a change password form is displayed in 
-their browser and a 
-new password can be entered. When that form is submitted to GeoNetwork, the 
+their browser and a new password can be entered. When that form is submitted, the
 changeKey is regenerated and checked with the changeKey supplied in the link, 
 if they match then the password is changed to the new password supplied by 
 the user.
@@ -123,4 +145,4 @@ address of the user confirming that a change of password has taken place:
 
 	The Greenhouse GeoNetwork Site team
 
-If you want to change the content of this email, you should modify INSTALL_DIR/web/geonetwork/xsl/password-changed-email.xsl.
+If you want to change the content of this email, you should modify ``xslt/service/account/password-changed-email.xsl``.
