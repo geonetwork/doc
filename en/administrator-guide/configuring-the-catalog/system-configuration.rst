@@ -324,26 +324,7 @@ Restart the catalog to take all OAI settings into account.
 
 INSPIRE Directive configuration
 ```````````````````````````````
-
-Enables/disables the INSPIRE support:
-
-- **INSPIRE** Enable indexing of INSPIRE themes and annexes (INSPIRE themes thesaurus MUST be
-  added to the list of thesaurus - see :ref:`anaging-thesaurus`).
-
- - CSW GetCapabilities includes the INSPIRE section (ie. ExtendedCapabilities)
-  that administrator can customize in ``xml/csw/capabilities_inspire.xml``
-  and response support language extensions. The language provided defines:
-
-  - Natural language fields are returned in the language requested (see :ref:`csw-configuration`)
-
-  - The end-points are returned for the language requested
-
- - INSPIRE themes are indexed (check that INSPIRE themes thesaurus is available and reindex the catalog)
-
-- **INSPIRE search panel** Add INSPIRE criteria in the advanced search panel (eg. Annex, INSPIRE theme)
-
-.. deprecated:: 3.0.0
-
+See :ref:`inspire-configuration`.
 
 
 

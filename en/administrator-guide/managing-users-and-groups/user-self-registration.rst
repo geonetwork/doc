@@ -59,7 +59,7 @@ new account details that looks something like the following:
 		The team at The Greenhouse GeoNetwork Site
 
 Notice that the user has requested an 'Editor' profile. As a result an email will
-be sent to the Email address nominated in the Feedback (see :ref:`_system-config-feedback`)
+be sent to the Email address nominated in the Feedback (see :ref:`system-config-feedback`)
 section of the ``System Administration`` menu which looks something like the following:
 
 Notice also that the user has been added to the built-in user group 'GUEST'.
