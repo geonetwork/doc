@@ -3,8 +3,6 @@
 Annexes
 #######
 
-test
-
 
 .. toctree::
    :maxdepth: 2
