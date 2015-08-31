@@ -326,6 +326,55 @@ INSPIRE Directive configuration
 ```````````````````````````````
 See :ref:`inspire-configuration`.
 
+INSPIRE Atom Feed
+`````````````````
+
+Allows to define the configuration of Atom Feeds referenced by the metadata to provide services related to the `INSPIRE technical guidance for download services <http://inspire.ec.europa.eu/documents/Network_Services/Technical_Guidance_Download_Services_3.0.pdf>`_:
+
+- Select the type of atom feed:
+
+  - Remote: retrieve the atom feeds referenced by the metadata in the online resources.
+
+  - Local (to implement in future versions): create the atom feed using the metadata content.
+
+- Schedule for feed retrieval: the retrieval of the atom feeds can be scheduled to be done periodically.
+
+- Atom protocol value: value of the protocol in the metadata online resources to identify the atom feed resources (the default value is INSPIRE Atom). GeoNetwork identifies an Atom file from other resources by looking at the protocol value of the onlineresource. Since there is no general accepted value for this protocol, GeoNetwork allows an administrator to set the value to be used as protocol identifying Atom resources::
+
+                  <gmd:transferOptions>
+                      <gmd:MD_DigitalTransferOptions>
+                        <gmd:onLine>
+                          <gmd:CI_OnlineResource>
+                            <gmd:linkage>
+                              <gmd:URL>http://geodata.nationaalgeoregister.nl/atom/index.xml</gmd:URL>
+                            </gmd:linkage>
+                            <gmd:protocol>
+                              <gco:CharacterString>INSPIRE Atom</gco:CharacterString>
+                            </gmd:protocol>
+                          </gmd:CI_OnlineResource>
+                        </gmd:onLine>
+                      </gmd:MD_DigitalTransferOptions>
+                    </gmd:transferOptions>
+
+
+
+The following services are available:
+
+- http://SERVER/geonetwork/opensearch/eng/UUID/OpenSearchDescription.xml
+- http://SERVER/geonetwork/opensearch/eng/UUID/search?queryParams
+- http://SERVER/geonetwork/opensearch/eng/search?queryParams
+- http://SERVER/geonetwork/opensearch/eng/UUID/describe?queryParams
+- http://SERVER/geonetwork/opensearch/eng/describe?queryParams
+
+In above url's {UUID} is the fileidentifier of the download service metadata.
+
+In the  service feed of your download service make sure to add the GeoNetwork OpenSearch endpoint as the OpenSearchDescription for the service::
+
+                  <link rel="search" href="http://SERVER/geonetwork/opensearch/eng/{uuid}/OpenSearchDescription.xml" 
+                  type="application/opensearchdescription+xml" title="Open Search document for INSPIRE Download service"/>
+
+
+The INSPIRE Atom/OpenSearch implementation can be verified with the Atom tests in Esdin Test Framework (http://elfproject.eu/documentation/geotool/etf) or INSPIRE metadata validator (http://inspire-geoportal.ec.europa.eu/validator2).
 
 
 
