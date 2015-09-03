@@ -8,6 +8,7 @@ Customizing guide
 .. toctree::
    :maxdepth: 2
 
+   search-ui/index.rst
    changing-layout.rst
    configuring-facetted-search.rst
    configuring-search-fields.rst
