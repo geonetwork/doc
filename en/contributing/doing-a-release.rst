@@ -15,11 +15,12 @@ Once the release branch has been thoroughly tested and is stable a release can b
 .. code-block:: shell
 
     versionbranch=3.0.x
-    version=3.0.0
+    version=3.0.2
     minorversion=0
     newversion=$version-$minorversion
-    currentversion=3.0.0-SNAPSHOT
-    previousversion=2.10.x
+    currentversion=3.0.2-SNAPSHOT
+    previousversion=3.0.1
+    nextversion=3.0.3-SNAPSHOT
     modules=( "geoserver" "e2e-tests" )
     git clone --recursive https://github.com/geonetwork/core-geonetwork.git \
               geonetwork-$versionbranch
@@ -88,7 +89,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     ===
     ================================================================================
     EOF
-    git log --pretty='format:- %s' origin/$previousversion... >> docs/changes$newversion.txt
+    git log --pretty='format:- %s' $previousversion... >> docs/changes$newversion.txt
 
 
 8. Commit the new version (in submodule first and then in the main module)
@@ -118,13 +119,13 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    ./update-version.sh $newversion $version-SNAPSHOT
+    ./update-version.sh $newversion $nextversion
     cd geoserver
     git add .
-    git commit -m "Update version to $version-SNAPSHOT"
+    git commit -m "Update version to $nextversion"
     cd ..
     git add .
-    git commit -m "Update version to $version-SNAPSHOT"
+    git commit -m "Update version to $nextversion"
 
 
     cd geoserver
@@ -133,8 +134,27 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git push origin $versionbranch
 
 
+11. Add migration script for the next version.
 
-11. Publish in sourceforge
+In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version:
+
+.. code-block:: xml
+
+        <entry key="3.0.3">
+          <list>
+            <value>WEB-INF/classes/setup/sql/migrate/v303/migrate-</value>
+          </list>
+        </entry>
+
+In ``WEB-INF/classes/setup/sql/migrate``, create the SQL migration script:
+
+.. code-block:: sql
+
+      UPDATE Settings SET value='3.0.3' WHERE name='system/platform/version';
+      UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
+
+
+12. Publish in sourceforge
 
 
 .. code-block:: shell
@@ -149,21 +169,5 @@ Once the release branch has been thoroughly tested and is stable a release can b
     put docs/changes3.0.0-0.txt
     put geonetwork*/*.jar
     put web/target/geonetwork.war
-
-
-
-
-.. seealso::
-
-  Branches are not created for submodule. It may be relevant if the release plan to make major
-  changes in them.
-
-
-  .. code-block:: shell
-
-        for i in "${modules[@]}"
-        do
-              cd $i; git checkout -b $versionbranch origin/develop; cd ..
-        done
-
+    bye
 
