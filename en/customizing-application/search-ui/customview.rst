@@ -36,10 +36,13 @@ Let's say we want to create a custom view name `geoportal`.
     (function() {
 
       goog.provide('gn_search_geoportal');
-      var module = angular.module('gn_search_geoportal', []);
+      goog.require('gn_search');
+
+      var module = angular.module('gn_search_geoportal', ['gn_search']);
 
     })();
 
+.. note:: You must include ``gn_search`` module.
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/less/gn_search_geoportal.less`` containing
 

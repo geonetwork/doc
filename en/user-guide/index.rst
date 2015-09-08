@@ -15,3 +15,4 @@ User guide
    workflow/index.rst
    harvesting/index.rst
    export/index.rst
+   tutorials/index.rst
