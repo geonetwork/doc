@@ -15,20 +15,29 @@ A detailed description of what constitutes a metadata schema for GeoNetwork can 
 
 Adding a schema
 ```````````````
-To add a metadata schema to GeoNetwork, there are 4 actions required.
-#. Verify and if compatible update the version of geonetwork referenced from the pom.xml file in the schema plugin.
-#. Place the schema in /schemas
-#. Add a reference in /schemas/pom.xml to the newly aded schema
-#. Add references to the newly added schema in /web/pom.xml 
-<dependency>
-<groupId>${project.groupId}</groupId>
-<artifactId>{myschema}</artifactId>
-<version>${project.version}</version>
-</dependency>
-and
-<resource>
-<directory>${project.basedir}/../schemas/{myschema}/src/main/plugin</directory>
-<targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
-</resource>
+To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In a source-code tree there are 4 actions to be done.
 
-Then rebuild your instance of GeoNetwork.
+- Place the schema-folder in /schemas
+
+- Verify and if compatible update the version of geonetwork (parent) referenced from the pom.xml file in the schema plugin.
+
+- Add a reference in /schemas/pom.xml to the newly added schema
+
+	<module>{myschema}</module>
+
+- Add references to the newly added schema in /web/pom.xml 
+
+	<dependency>
+	<groupId>${project.groupId}</groupId>
+	<artifactId>{myschema}</artifactId>
+	<version>${project.version}</version>
+	</dependency>
+
+and
+
+	<resource>
+	<directory>${project.basedir}/../schemas/{myschema}/src/main/plugin</directory>
+	<targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
+	</resource>
+
+Then Build and deploy your instance of GeoNetwork.
