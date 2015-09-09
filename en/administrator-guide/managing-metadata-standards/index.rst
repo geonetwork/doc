@@ -15,7 +15,7 @@ A detailed description of what constitutes a metadata schema for GeoNetwork can 
 
 Adding a schema
 ```````````````
-To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In a source-code tree there are 4 actions to be done.
+To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In a source-code tree there are 4 actions to be done in the settings (database) 1.
 
 - Place the schema-folder in /schemas
 
@@ -26,18 +26,23 @@ To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In
 	<module>{myschema}</module>
 
 - Add references to the newly added schema in /web/pom.xml 
-
+	
 	<dependency>
 	<groupId>${project.groupId}</groupId>
 	<artifactId>{myschema}</artifactId>
 	<version>${project.version}</version>
 	</dependency>
-
-and
-
+	
+- and
+	
 	<resource>
 	<directory>${project.basedir}/../schemas/{myschema}/src/main/plugin</directory>
 	<targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
 	</resource>
 
 Then Build and deploy your instance of GeoNetwork.
+
+- Via settings in the admin ui you can specify some settings for your schema
+
+	"{myschema}":{"defaultTab":"default","displayToolTip":false,"related":{"display":true,"readonly":true,"categories":["dataset"]},
+	
