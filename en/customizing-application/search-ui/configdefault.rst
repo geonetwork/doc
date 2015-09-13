@@ -43,9 +43,10 @@ The ``gnSearchSettings`` object contains all settings regarding to the main sear
 Update this settings
 --------------------
 
-Note that some settings are set in the database (for example the ``viewerSettings.mapConfig`` object comes from database settings) so you can edit them in :ref:`settings admin page <system-configuration>`.
+Note that some settings are set in the database (for example the ``viewerSettings.mapConfig`` object comes from
+database settings) so you can edit them in :ref:`settings admin page <system-configuration>`.
 
-For others, you can just edit the `config file <https://github.com/geonetwork/core-geonetwork/blob/develop/web-ui/src/main/resources/catalog/views/default/config.js>`_ and change some setting values.
+For others, you can just edit the config file (See :code:`web-ui/src/main/resources/catalog/views/default/config.js`) and change some setting values.
 
 .. important:: If you change existing files, you expose yourself to having merge issues on new version upgrades.
  The best way keeps to create your own view.

@@ -25,25 +25,26 @@ Let's say we want to create a custom view name `geoportal`.
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/templates/index.html`` containing
 
-::
+.. code-block:: html
+
 
     <div class="geoportal">Welcome to geoportal</div>
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/search.js`` containing
 
-::
+.. code-block:: js
+
 
     (function() {
 
       goog.provide('gn_search_geoportal');
       var module = angular.module('gn_search_geoportal', []);
-
     })();
 
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/less/gn_search_geoportal.less`` containing
 
-::
+.. code-block:: css
 
     .geoportal {
         font-size: 36px;

@@ -12,7 +12,8 @@ Managing users and groups
    user-self-registration.rst
    authentication-mode.rst
 
-.. _user-defaults;
+
+.. _user-defaults:
 
 Default user
 ------------

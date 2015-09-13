@@ -21,7 +21,8 @@ All components are stored in the folder `components <https://github.com/geonetwo
 
 Main search input
 
-  ::
+.. code-block:: html
+
 
             <input type="text"
                    class="form-control input-lg"
@@ -37,7 +38,7 @@ Main search input
 
 Facets panel
 
-  ::
+.. code-block:: html
 
         <div data-ng-show="searchResults.records.length > 0"
              data-gn-facet-dimension-list="searchResults.dimension"
@@ -48,13 +49,13 @@ Facets panel
 
 Alert info manager
 
-  ::
+.. code-block:: html
 
   <div data-gn-alert-manager=""></div>
 
 Result list
 
-  ::
+.. code-block:: html
 
         <div data-ng-show="searchResults.records.length > 0"
              data-gn-results-container=""
@@ -64,7 +65,7 @@ Result list
 
 Geographic search
 
-  ::
+.. code-block:: html
 
     <div data-gn-map-field="searchObj.searchMap"
          data-gn-map-field-geom="searchObj.params.geometry"
@@ -86,7 +87,7 @@ So you can reuse all these components in your templates to build the view you wa
 
 
 Styles
----------
+------
 
 .. important:: You should import default style and add custom CSS rules instead of creating your own from scratch.
 
@@ -94,23 +95,24 @@ In ``gn_search_geoportal.less``, import default less files.
 
 - Import common search styles (if you start a new view from scratch)
 
-  ::
+.. code-block:: less
 
-  @import "../../../style/gn_search.less";
+    @import "../../../style/gn_search.less";
+
 
 - Import default view search styles (if you base your view on top of default one)
 
-  ::
+.. code-block:: less
 
-  @import "../../default/less/gn_search_default.less";
+    @import "../../default/less/gn_search_default.less";
 
 Then, in your less file, you can start adding new rules
 
-  ::
+.. code-block:: less
 
-  .gn-resultview .list-group-item {
-      background-color: red;
-      &:hover {
-      background-color: orange;
-      }
-  }
+    .gn-resultview .list-group-item {
+        background-color: red;
+        &:hover {
+        background-color: orange;
+        }
+    }

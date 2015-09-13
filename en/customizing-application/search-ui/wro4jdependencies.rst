@@ -16,13 +16,15 @@ Mostly, it
 Dependency Tree
 ---------------
 
-When the AngularJs entry module is ``gn_search_geoportal``, the wro4j entry point is the key ``gn_search_geoportal`` as well, that means that it is the file that declares ``goog.provide('gn_search_geoportal')``.
+When the AngularJs entry module is ``gn_search_geoportal``, the wro4j entry point
+is the key ``gn_search_geoportal`` as well, that means that it is the file that
+declares ``goog.provide('gn_search_geoportal')``.
 
 That is why you need to be sure there is a good mapping between AngularJs module dependencies and wro4j dependency tree.
 
 For example, when you have this for wro4j:
 
-  ::
+.. code-block:: js
 
     goog.provide('gn_search_default');
 
@@ -32,7 +34,7 @@ For example, when you have this for wro4j:
 
 You need to be sure you create your AngularJs module with same dependency injection:
 
-  ::
+.. code-block:: js
 
     var module = angular.module('gn_search_default',
         [
@@ -42,6 +44,8 @@ You need to be sure you create your AngularJs module with same dependency inject
         ]);
 
 
-.. important:: Whenever you change a ``good.require`` or ``goog.provide statement``, you need to relaunch wro4j dependency tree creation. This can be done with jetty or tomcat restart.
+.. important:: Whenever you change a ``goog.require`` or ``goog.provide`` statements, you need to relaunch
+   wro4j dependency tree creation. This can be done with jetty or tomcat restart.
+
 
 Following this principles, you are now free to add new modules, components, directives or services to your application.

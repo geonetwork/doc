@@ -1,7 +1,7 @@
 .. _customizing-searchui:
 
-Search UI
-#########
+Search application
+##################
 
 
 
