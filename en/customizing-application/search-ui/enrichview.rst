@@ -95,20 +95,20 @@ In ``gn_search_geoportal.less``, import default less files.
 
 - Import common search styles (if you start a new view from scratch)
 
-.. code-block:: less
+.. code-block:: css
 
     @import "../../../style/gn_search.less";
 
 
 - Import default view search styles (if you base your view on top of default one)
 
-.. code-block:: less
+.. code-block:: css
 
     @import "../../default/less/gn_search_default.less";
 
 Then, in your less file, you can start adding new rules
 
-.. code-block:: less
+.. code-block:: css
 
     .gn-resultview .list-group-item {
         background-color: red;

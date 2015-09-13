@@ -63,6 +63,13 @@ Populating fields
 .. todo:: Add details about directory / thesaurus
 
 
+Depending on the view configuration (see :ref:`creating-custom-editor`), editor can reorder elements using
+up and down control.
+
+.. figure:: img/editor-control-updown.png
+
+
+
 
 
 

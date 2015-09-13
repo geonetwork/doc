@@ -25,7 +25,7 @@ Loading the view
 
 The view is loaded from (See :code:`web/src/main/webapp/xslt/ui-search/search.xsl`):
 
-::
+.. code-block:: xml
 
     <div data-ng-include="'{$uiResourcesPath}views/{$searchView}/templates/index.html'"
         class="gn-full">
@@ -41,7 +41,7 @@ Loading the javascript
 
 To init AngularJS main module you have to use the directive `ng-app` and point on your main AngularJS module.
 
-::
+.. code-block:: xml
 
     <html ng-app="{$angularModule}" lang="{$lang}" id="ng-app">
 
