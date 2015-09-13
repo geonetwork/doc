@@ -2,12 +2,12 @@
 
 
 Create your own view
-#########################
+####################
 
 If you prefer not to edit shared default files, or if you want a really different UI, the best way is to create your own custom view.
 
 Add a new view
----------------
+--------------
 
 As presented in previous section, you will need to set up several files to load a new UI view.
 
@@ -38,9 +38,13 @@ Let's say we want to create a custom view name `geoportal`.
     (function() {
 
       goog.provide('gn_search_geoportal');
-      var module = angular.module('gn_search_geoportal', []);
+      goog.require('gn_search');
+
+      var module = angular.module('gn_search_geoportal', ['gn_search']);
+
     })();
 
+.. note:: You must include ``gn_search`` module.
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/less/gn_search_geoportal.less`` containing
 

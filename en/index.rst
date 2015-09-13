@@ -13,4 +13,5 @@ Full table of contents
    api/index.rst
    contributing/index.rst
    customizing-application/index.rst
+   tutorials/index.rst
    annexes/index.rst
