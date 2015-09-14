@@ -210,7 +210,7 @@ Attributes:
 
 - **name** (Mandatory)
 
-The key of the view name stored in {schema}/loc/{lang}/strings.xml or the element name with namespace prefix.
+The key of the view name stored in ``{schema}/loc/{lang}/strings.xml`` or the element name with namespace prefix.
 
 .. code-block:: xml
 
@@ -315,7 +315,7 @@ Attributes:
 
 - **id** (Mandatory)
 
-The tab key used in URL parameter to activate that tab. The key is also use for the tab label as defined in {schema}/loc/{lang}/strings.xml.
+The tab key used in URL parameter to activate that tab. The key is also use for the tab label as defined in ``{schema}/loc/{lang}/strings.xml``.
             
 
 - **default** (Optional) Fixed value: **true**
@@ -450,7 +450,7 @@ Attributes:
 
 - **name** (Optional)
 
-An optional name to override the default one base on field name for the section. The name must be defined in {schema}/loc/{lang}/strings.xml.
+An optional name to override the default one base on field name for the section. The name must be defined in ``{schema}/loc/{lang}/strings.xml``.
 
 - **xpath** (Optional)
 
@@ -506,7 +506,9 @@ The local name of the geonet child (ie. non existing element) to match.
 
 .. code-block:: xml
 
-    <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+    <field xpath="/gmd:MD_Metadata/gmd:language" 
+           or="language" 
+           in="/gmd:MD_Metadata"/>
     
 
 
@@ -524,13 +526,32 @@ The element to search in for the geonet child.
 Adding a field
 --------------
 
-To display a field which exist in the metadata document:
+To display a simple element use the ``xpath`` attribute to point to the element to display:
+
+.. code-block:: xml
+
+      <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:title"/>
+
+
+To override a field label use the ``name`` attribute and define that new label in ``{schema}/loc/{lang}/strings.xml``:
+
+.. code-block:: xml
+
+      <field name="myTitle" 
+             xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:title"/>
+
+
+To display a complex element which exist in the metadata document:
 
 .. code-block:: xml
 
       <field name="pointOfContact"
              xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact"/>
-             
+
+In that case all children elements are also displayed.
+
+
+
 To display a field if exist in the metadata document or providing a add button
 in case it does not exist (specify ``in`` and ``or`` attribute):
 
@@ -604,7 +625,9 @@ The local name of the geonet child (ie. non existing element) to match.
 
 .. code-block:: xml
 
-    <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+    <field xpath="/gmd:MD_Metadata/gmd:language" 
+           or="language" 
+           in="/gmd:MD_Metadata"/>
     
 
 
@@ -624,7 +647,7 @@ the remove control should remove the parent element gmd:onLine.
 
     <field name="url" 
       xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions
-      /gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"
+                /gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"
       del="../..">
       <template>
       
@@ -659,11 +682,14 @@ This mode is used to hide the complexity of the XML element to edit. eg.
 
 .. code-block:: xml
 
-     <field name="url" templateModeOnly="true"
-        xpath="/gmd:MD_Metadata/gmd:distributionInfo/g.../gmd:linkage">
+     <field name="url" 
+            templateModeOnly="true"
+            xpath="/gmd:MD_Metadata/gmd:distributionInfo/g.../gmd:linkage">
         <template> 
           <values>
-            <key label="url" xpath="gmd:URL" tooltip="gmd:linkage"/>
+            <key label="url" 
+                 xpath="gmd:URL" 
+                 tooltip="gmd:linkage"/>
           </values>
           <snippet>t
             <gmd:linkage>
@@ -745,8 +771,10 @@ Example of a button adding an extent:
 
 .. code-block:: xml
 
-        <action type="add" name="extent" or="extent"
-            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+        <action type="add" 
+                name="extent" 
+                or="extent"
+                in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
             <template>
               <snippet>
                 <gmd:extent>
@@ -780,7 +808,8 @@ with ``add-resource-id`` identifier:
 
 .. code-block:: xml
         
-          <action type="batch" process="add-resource-id"
+          <action type="batch" 
+                  process="add-resource-id"
                   if="count(gmd:MD_Metadata/gmd:identificationInfo/*/
                                 gmd:citation/*/gmd:identifier[
                                   ends-with(gmd:MD_Identifier/gmd:code/gco:CharacterString, 
@@ -838,7 +867,9 @@ The local name of the geonet child (ie. non existing element) to match.
 
 .. code-block:: xml
 
-    <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+    <field xpath="/gmd:MD_Metadata/gmd:language" 
+           or="language" 
+           in="/gmd:MD_Metadata"/>
     
 
 
