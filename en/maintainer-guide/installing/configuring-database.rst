@@ -20,3 +20,5 @@ Depending on the node (default node name is |default.node|) check the node confi
 |default.node.config.file|. Choose the database type to use.
 
 Then update the |jdbc.properties| file with connection information.
+
+The database default structure will be created by the application on startup.
