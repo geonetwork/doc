@@ -47,6 +47,10 @@ Catalog
 - **Minor version** The minor version of the catalog (readonly, version of the database)
 
 
+
+.. _system-config-server:
+
+
 Catalog Server
 ``````````````
 
@@ -73,6 +77,7 @@ Catalog Server
   will be encrypted and thus much harder for a listener to decode.
 
 - **Secure Port** The secure port number.
+
 
 - **Log level** Define the logging level of the application. After modification,
   log can be checked in the ``Statistics & status`` section under ``Activity``.

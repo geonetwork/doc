@@ -22,3 +22,26 @@ Depending on the node (default node name is |default.node|) check the node confi
 Then update the |jdbc.properties| file with connection information.
 
 The database default structure will be created by the application on startup.
+
+
+To have more details about database connection and queries, log can be switched to DEBUG level
+in :code:`web/src/main/webapp/WEB-INF/classes/log4j.xml` (or see :ref:`system-config-server` > Log level).
+
+
+.. code-block:: xml
+
+    <logger name="org.hibernate.SQL" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="fileAppender" />
+    </logger>
+    <logger name="org.hibernate.type" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="fileAppender" />
+    </logger>
+    <logger name="org.hibernate.tool.hbm2ddl" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="fileAppender" />
+    </logger>
