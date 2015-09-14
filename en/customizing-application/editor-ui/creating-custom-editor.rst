@@ -18,7 +18,26 @@ be HTML type (eg. text, date) or more advanced control build using
 
 To build such an editor configuration user needs to know the XSD of the standard 
 to properly build views, tabs and fields according to element names
-(see :code:`schemas/config-editor.xsd`).
+(see :code:`schemas/config-editor.xsd`). Create an editor root element and
+attach:
+
+- the schema and 
+
+- namespaces for the standards
+
+
+.. code-block:: xml
+
+    <editor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../../../../config-editor.xsd"
+      xmlns:gn="http://www.fao.org/geonetwork"
+      xmlns:gco="http://www.isotc211.org/2005/gco"
+      xmlns:gmd="http://www.isotc211.org/2005/gmd"
+      xmlns:gmx="http://www.isotc211.org/2005/gmx"
+      xmlns:srv="http://www.isotc211.org/2005/srv"
+      xmlns:gml="http://www.opengis.net/gml"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+
 
 An editor configuration should define first some general element description and then
 a set of views with at least one. 
@@ -56,6 +75,8 @@ An element can only have one type defined.
 
 .. code-block:: xml
 
+    <editor>
+     <fields>
        <for name="gmd:abstract" use="textarea"/>
        <for name="gco:Real" use="number"/>
        <for name="gco:Boolean" use="checkbox"/>
@@ -84,9 +105,11 @@ section and should usually be displayed as a group of information.
 
 .. code-block:: xml
 
-   <fieldsWithFieldset>
-    <name>gmd:identificationInfo</name>
-    <name>gmd:distributionInfo</name>
+    <editor>
+       <fields>...</fields>
+       <fieldsWithFieldset>
+        <name>gmd:identificationInfo</name>
+        <name>gmd:distributionInfo</name>
 
 
         
@@ -111,14 +134,18 @@ If expanded, then one field per language is displayed with no need to click on t
 
 .. code-block:: xml
 
-  <multilingualFields>
-    <expanded>
-      <name>gmd:title</name>
-      <name>gmd:abstract</name>
-    </expanded>
-    <exclude>
-      <name>gmd:identifier</name>
-      <name>gmd:metadataStandardName</name>
+
+    <editor>
+       <fields>...</fields>
+       <fieldsWithFieldset>...</fieldsWithFieldset>
+        <multilingualFields>
+          <expanded>
+            <name>gmd:title</name>
+            <name>gmd:abstract</name>
+          </expanded>
+          <exclude>
+            <name>gmd:identifier</name>
+            <name>gmd:metadataStandardName</name>
       
 
         
@@ -142,9 +169,11 @@ To create a new view, use the following:
 
 .. code-block:: xml
 
-    <views>
-      <view name="custom-view">
-      
+
+      <views>
+          <view name="viewNameInLocalizationFile">
+            ...
+          </view>
 
         
         
@@ -163,10 +192,13 @@ A view has a label and define a specific rendering of the metadata records.
 A view is composed of one or more tabs. 
 
 .. code-block:: xml
-
-    <view name="inspire" upAndDownControlHidden="true" disabled="true">
-      <tab id="inspire" default="true" mode="flat">
       
+      
+      <views>
+          <view name="custom-view">
+              ....
+          </view>
+
 
 The view could be displayed or not according to the metadata record content or 
 the current user session using the displayIfRecord and displayIfServiceInfo attribute.
@@ -185,7 +217,8 @@ The key of the view name stored in {schema}/loc/{lang}/strings.xml or the elemen
       <strings>
         <default>Simple</default>
         <inspire>INSPIRE</inspire>
-  
+        <custom-view>My view</custom-view>
+        
   
             
 
@@ -207,11 +240,11 @@ Hide those controls in a view to make it easier with less controls for the end-u
 - **displayIfRecord** (Optional)
 
 XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed.
-eg. Display MedSea view if metadata standard name contains Medsea: 
+eg. Display custom-view if metadata standard name contains Medsea: 
 
 .. code-block:: xml
     
-    <view name="medsea" 
+    <view name="custom-view" 
           displayIfRecord="contains(gmd:MD_Metadata/
                                       gmd:metadataStandardName/gco:CharacterString, 
                                     'MedSea')"
@@ -223,11 +256,11 @@ eg. Display MedSea view if metadata standard name contains Medsea:
 XPath expression returning boolean value which will be evaluate against the service 
 information tree (Jeeves /root/gui element). if true the view will be displayed.
 
-eg. Display MedSea view if user is Administrator: 
+eg. Display custom view if user is Administrator: 
             
 .. code-block:: xml
             
-    <view name="medsea" 
+    <view name="custom-view" 
           displayIfServiceInfo="count(session[profile = 'Administrator']) = 1"
             
 displayIfRecord and displayIfServiceInfo could be combined. An AND operator is used. Both condition MUST returned true for the view to be displayed.
@@ -261,6 +294,18 @@ top toolbar will be displayed to switch from one tab to another.
 
 .. figure:: ../../user-guide/describing-information/img/editor-tab-switcher.png
 
+Add custom view one default tab and a field for the title:
+
+.. code-block:: xml
+
+      <views>
+        <view name="custom-view">
+          <tab id="custom-tab" default="true">
+            <section>
+              <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:title"/>
+            </section>
+          </tab>
+        </view>
 
 
         
@@ -297,6 +342,18 @@ When a tab is in flat mode, this tab will not display element which are not in t
 document and it will display complex element as a group only if defined in the list of 
 element with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`).
 
+Example for a contact in non "flat" mode:
+
+
+.. figure:: ../../user-guide/describing-information/img/editor-contact-nonflatmode.png
+
+
+Example for a contact in "flat" mode:
+ 
+
+.. figure:: ../../user-guide/describing-information/img/editor-contact-flatmode.png
+
+
 This mode makes the layout simpler but does not provide all controls to remove 
 some of the usually boxed element. End-user can still move  to the advanced view mode 
 to access those hidden elements in flat mode.
@@ -323,6 +380,22 @@ Configuring complex element display
 Elements to apply "flat" mode exceptions. By default,
 "flat" mode does not display elements containing only children and no value.
 
+
+
+.. code-block:: xml
+
+      <views>
+        <view name="custom-view">
+          <tab id="custom-tab" default="true">
+            <section>
+              <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:title"/>
+              <field name="pointOfContact"
+                     xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact"
+                     del="."/>
+            </section>
+          </tab>
+        </view>
+        
 
 eg. To display gmd:descriptiveKeywords element even if does not exist in the metadata 
 record or if the field should be displayed to add new occurences:
@@ -396,6 +469,18 @@ When a tab is in flat mode, this tab will not display element which are not in t
 document and it will display complex element as a group only if defined in the list of 
 element with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`).
 
+Example for a contact in non "flat" mode:
+
+
+.. figure:: ../../user-guide/describing-information/img/editor-contact-nonflatmode.png
+
+
+Example for a contact in "flat" mode:
+ 
+
+.. figure:: ../../user-guide/describing-information/img/editor-contact-flatmode.png
+
+
 This mode makes the layout simpler but does not provide all controls to remove 
 some of the usually boxed element. End-user can still move  to the advanced view mode 
 to access those hidden elements in flat mode.
@@ -422,7 +507,7 @@ The local name of the geonet child (ie. non existing element) to match.
 .. code-block:: xml
 
     <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
-
+    
 
 
 - **in** (Optional)
@@ -432,6 +517,181 @@ XPath of the geonet:child element with the or name to look for. Usually points t
 - **in** (Optional)
 
 The element to search in for the geonet child.
+
+.. _creating-custom-editor-field:
+
+        
+Adding a field
+--------------
+
+To display a field which exist in the metadata document:
+
+.. code-block:: xml
+
+      <field name="pointOfContact"
+             xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact"/>
+             
+To display a field if exist in the metadata document or providing a add button
+in case it does not exist (specify ``in`` and ``or`` attribute):
+
+
+.. code-block:: xml
+
+      <field name="pointOfContact"
+             xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact"
+             or="pointOfContact"
+             in="/gmd:MD_Metadata/gmd:identificationInfo/*"
+             del="."/>
+             
+             
+Activate the "flat" mode at the tab level to make the form display only existing elements:
+
+.. code-block:: xml
+
+    <view name="custom-view">
+        <tab id="custom-tab" default="true" mode="flat">
+          <section>
+            <field
+                    xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:title"/>
+            <field name="pointOfContact"
+                   xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact"
+                   or="pointOfContact"
+                   in="/gmd:MD_Metadata/gmd:identificationInfo/*"
+                   del="."/>
+          </section>
+        </tab>
+      </view>
+      
+      
+        
+
+Attributes:
+
+- **xpath** (Mandatory)
+
+The xpath of the element to match.
+
+- **if** (Optional)
+
+An optional xpath expression to evaluate to define if the element should be displayed 
+only in some situation (eg. only for service metadata records). eg.
+                     
+.. code-block:: xml
+
+          <field
+            xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/
+            gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints"
+            if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0"/>
+            
+
+
+- **name** (Optional)
+
+A field name to override the default name.
+
+- **isMissingLabel** (Optional)
+
+The label to display if the element does not exist in the metadata record. It indicates that 
+the element is missing in the current record. It could be use for a conformity section saying 
+that the element is "not evaluated". EXPERIMENTAL
+            
+          
+
+- **or** (Optional)
+
+            
+The local name of the geonet child (ie. non existing element) to match.
+
+.. code-block:: xml
+
+    <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+    
+
+
+- **in** (Optional)
+
+The element to search in for the geonet child.
+
+- **del** (Optional)
+
+            
+Relative XPath of the element to remove when the remove button is clicked.
+
+eg. If a template field match linkage and allows editing of field URL,
+the remove control should remove the parent element gmd:onLine.
+
+.. code-block:: xml
+
+    <field name="url" 
+      xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions
+      /gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"
+      del="../..">
+      <template>
+      
+            
+          
+
+- **templateModeOnly** (Optional) Fixed value: **true**
+
+Define if the template mode should be the only mode used. In that case, the field is always 
+displayed based on the XML template snippet field configuration. Default is false.
+            
+
+- **notDisplayedIfMissing** (Optional) Fixed value: **true**
+
+If the field is found and a geonet child also, the geonet child to add a new one is not displayed.
+
+Child elements:
+
+- **template**, Optional element (see :ref:`creating-custom-editor-template`)
+
+.. _creating-custom-editor-template:
+
+        
+Adding a template based field
+-----------------------------
+
+A templace configuration for an XML snippet to edit.
+
+A template field is compose of an XML snippet corresponding to the element to edit where values to be edited are identified using {{fields}} notation. Each fields needs to be defined as values from which one input field will be created.
+
+This mode is used to hide the complexity of the XML element to edit. eg.
+
+.. code-block:: xml
+
+     <field name="url" templateModeOnly="true"
+        xpath="/gmd:MD_Metadata/gmd:distributionInfo/g.../gmd:linkage">
+        <template> 
+          <values>
+            <key label="url" xpath="gmd:URL" tooltip="gmd:linkage"/>
+          </values>
+          <snippet>t
+            <gmd:linkage>
+              <gmd:URL>{{url}}</gmd:URL>
+            </gmd:linkage>
+          </snippet>
+        </template>
+        
+        
+The template field mode will only provide editing of part of the snippet element. In some case the snippet may contains more elements than the one edited. In such case, the snippet MUST identified the list of potential elements in order to not to loose information when using this mode. Use the gn:copy element to properly combined the template with the current document.
+
+eg. The gmd:MD_Identifier may contain a gmd:authority node which needs to be preserved.
+
+.. code-block:: xml
+
+    <snippet>
+      <gmd:identifier>
+        <gmd:MD_Identifier>
+          <gn:copy select="gmd:authority"/>
+          <gmd:code>
+            <gco:CharacterString>{{code}}</gco:CharacterString>
+          </gmd:code>
+        </gmd:MD_Identifier>
+      </gmd:identifier>
+    </snippet>
+        
+        
+        
 
 .. _creating-custom-editor-text:
 
@@ -474,39 +734,102 @@ Attributes:
 
 The tag name of the element to insert in the localization file.
 
-.. _creating-custom-editor-field:
+.. _creating-custom-editor-action:
 
+Adding a button
+---------------
 
+A button which trigger an action (usually a process or a add button).
+
+Example of a button adding an extent:
+
+.. code-block:: xml
+
+        <action type="add" name="extent" or="extent"
+            in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+            <template>
+              <snippet>
+                <gmd:extent>
+                  <gmd:EX_Extent>
+                    <gmd:geographicElement>
+                      <gmd:EX_GeographicBoundingBox>
+                        <gmd:westBoundLongitude>
+                          <gco:Decimal/>
+                        </gmd:westBoundLongitude>
+                        <gmd:eastBoundLongitude>
+                          <gco:Decimal/>
+                        </gmd:eastBoundLongitude>
+                        <gmd:southBoundLatitude>
+                          <gco:Decimal/>
+                        </gmd:southBoundLatitude>
+                        <gmd:northBoundLatitude>
+                          <gco:Decimal/>
+                        </gmd:northBoundLatitude>
+                      </gmd:EX_GeographicBoundingBox>
+                    </gmd:geographicElement>
+                  </gmd:EX_Extent>
+                </gmd:extent>
+              </snippet>
+            </template>
+          </action>
+        
+     
+Example of a button displayed only if there is no resource identifier ending with
+the metadata record identifier (ie. ``if`` attribute) and running the process
+with ``add-resource-id`` identifier:
+
+.. code-block:: xml
+        
+          <action type="batch" process="add-resource-id"
+                  if="count(gmd:MD_Metadata/gmd:identificationInfo/*/
+                                gmd:citation/*/gmd:identifier[
+                                  ends-with(gmd:MD_Identifier/gmd:code/gco:CharacterString, 
+                                            //gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString)]) = 0"/>
+
+        
 
 Attributes:
 
-- **xpath** (Mandatory)
+- **name** (Optional)
 
-The xpath of the element to match.
+TODO
+
+- **type** (Optional)
+
+The type of control
+
+- **process** (Optional)
+
+The process identifier (eg. add-resource-id).
+
+- **forceLabel** (Optional)
+
+Force the label to be displayed for this action
+even if the action is not the first element of its 
+kind. Label with always be displayed.
+
+          
 
 - **if** (Optional)
 
-An optional xpath expression to evaluate to define if element should be displayed 
-only in some situation (eg. only for service metadata records). eg.
-                     
+            
+An XPath expression to evaluate. If true, the control is displayed. eg.
+
+
 .. code-block:: xml
 
-      <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
+    count(gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/
+    gmd:identifier[ends-with(gmd:MD_Identifier/gmd:code/gco:CharacterString,
+    //gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString)]) = 0
 
 
-
-
-- **name** (Optional)
-
-A field name to override the default name.
-
-- **isMissingLabel** (Optional)
-
-The label to display if the element does not exist in the metadata record. It indicates that 
-the element is missing in the current record. It could be use for a conformity section saying 
-that the element is "not evaluated". EXPERIMENTAL
-            
+will only displayed the action control if the resource identifier does not end
+with the metadata identifier.
           
+
+- **or** (Optional)
+
+Local name to match if the element does not exist.
 
 - **or** (Optional)
 
@@ -516,39 +839,22 @@ The local name of the geonet child (ie. non existing element) to match.
 .. code-block:: xml
 
     <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+    
 
 
+- **in** (Optional)
+
+XPath of the geonet:child element with the or name to look for. Usually points to the parent of last element of the XPath attribute.
 
 - **in** (Optional)
 
 The element to search in for the geonet child.
 
-- **del** (Optional)
+- **addDirective** (Optional)
 
-            
-Relative XPath of the element to remove when the remove button is clicked.
+The directive to use for the add control for this field.
 
-eg. If a template field match linkage and allows editing of field URL,
-the remove control should remove the parent element gmd:onLine.
+Child elements:
 
-.. code-block:: xml
-
-    <field name="url" 
-      xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions
-      /gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"
-      del="../..">
-      <template>
-
-            
-          
-
-- **templateModeOnly** (Optional) Fixed value: **true**
-
-Define if the template mode should be the only mode used. In that case, the field is always 
-displayed based on the XML template snippet field configuration. Default is false.
-            
-
-- **notDisplayedIfMissing** (Optional) Fixed value: **true**
-
-If the field is found and a geonet child also, the geonet child to add a new one is not displayed.
+- **template**, Optional element (see :ref:`creating-custom-editor-template`)
 
