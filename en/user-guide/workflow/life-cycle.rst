@@ -168,7 +168,7 @@ Changing the status actions
 These actions can be replaced with different behaviours by:
 
 * writing Java code in the form of a new class that implements the interface defined 
-  in org.fao.geonet.services.metadata.!StatusActions.java and placing a compiled version 
+  in ``org.fao.geonet.services.metadata.StatusActions.java`` and placing a compiled version 
   of the class in the GeoNetwork class path
 
 * defining the name of the new class in the statusActionsClass configuration 
