@@ -18,6 +18,7 @@ Members of the Project Steering Committee
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Emanuele Tajariol
+* Florent Gravin
 * Francois Prunayre
 * Jeroen Ticheler - Chair
 * Jesse Eichar

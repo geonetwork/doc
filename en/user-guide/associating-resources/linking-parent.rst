@@ -5,10 +5,9 @@ Grouping datasets in a series (ie. parent/child relation)
 
 
 In some situations, a dataset is part of a temporal or spatial collections of
-records which could share the same specification for example
-(eg. Land cover for different years). To group this set of records
-a general description of the collection may be done in a parent metadata
-which is then attached to each datasets of the serie.
+records which could share the same specification (eg. Land cover for different years). 
+In order to group this set of records, a general description of the collection may be done in the parent metadata
+which can then be attached to each dataset of the series.
 
 - Corine Land Cover
 
