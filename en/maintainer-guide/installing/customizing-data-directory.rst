@@ -196,9 +196,9 @@ Examples:
 
 .. code-block:: shell
 
-    -Dgeonetwork.dir=/data/catalogue \n
-    -Dgeonetwork.schema.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins \n
-    -geonetwork.codelist.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/codelist
+    -Dgeonetwork.dir=/data/catalogue
+    -Dgeonetwork.schema.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins
+    -Dgeonetwork.codelist.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/codelist
 
 
 
