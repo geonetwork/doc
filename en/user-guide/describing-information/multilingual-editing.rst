@@ -34,6 +34,6 @@ used if the language is defined in the current record.
 When viewing the record, if a translation exist in the user interface language,
 this translation is used, if not, the main metadata language is used.
 
-Note: This behaviour also applied to multilinhgual ISO19139 records requested
+Note: This behaviour also applied to multilingual ISO19139 records requested
 in dublin core from the CSW services.
 
