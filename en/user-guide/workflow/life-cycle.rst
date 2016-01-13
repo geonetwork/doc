@@ -117,7 +117,7 @@ on the status change taking place:
   Here is an example email sent by this action:
 
 
-.. code-block::
+.. code-block:: text
 
   Date: Tue, 13 Dec 2011 12:58:58 +1100 (EST)
   From: Metadata Workflow <feedback@localgeonetwork.org.au>
@@ -138,7 +138,7 @@ on the status change taking place:
   the following. Again, the user can log in and use the link supplied in the email to 
   access the approved/rejected records. Here is an example email sent by this action:
 
-.. code-block::
+.. code-block:: text
 
   Date: Wed, 14 Dec 2011 12:28:01 +1100 (EST)
   From: Metadata Workflow <feedback@localgeonetwork.org.au>

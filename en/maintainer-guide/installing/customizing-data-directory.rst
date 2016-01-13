@@ -77,14 +77,23 @@ For system environment variable use:
 Resolution order is:
 
  #. <webappname>.dir
+
   #. Java environment variable (ie. -D<webappname>.dir=/a/data/dir)
+
   #. Servlet context parameter (ie. web.xml)
+
   #. Config.xml appHandler parameter (ie. config.xml)
+
   #. System environment variable (ie. <webappname>_dir=/a/data/dir). "." is not supported in env variables
+
  #. geonetwork.dir
+
   #. Java environment variable (ie. -Dgeonetwork.dir=/a/data/dir)
+
   #. Servlet context parameter (ie. web.xml)
+
   #. Config.xml appHandler parameter (ie. config.xml)
+
   #. System environment variable (ie. geonetwork_dir=/a/data/dir). "." is not supported in env variables
 
 

@@ -9,4 +9,7 @@ Customize your Geonetwork UI
 
    search/index.rst
    view/index.rst
-   editor/index.rst
+
+
+
+For editor customization see :ref:`creating-custom-editor`:.

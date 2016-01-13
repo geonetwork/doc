@@ -1,4 +1,4 @@
-.. _tuto-search-loadpage:
+.. _tuto-formatter:
 
 
 Create a new formatter
