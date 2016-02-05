@@ -32,7 +32,7 @@ Parent/Child relation in ISO19139 may also be encoded using aggregates (see :ref
 When creating such relationship, users will be able to navigate between the
 records in the search and record view.
 
-.. todo:: Add screenshot
+.. figure:: img/nav-series.png
 
 
 Click on ``Link to parent`` to access the panel providing a simple

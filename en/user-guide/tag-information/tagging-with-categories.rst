@@ -11,16 +11,19 @@ If the category needs to be propagated with the metadata, use other
 harvesting protocols (eg. GeoNetwork) or use keywords (see :ref:`tagging-with-keywords`).
 
 
-To assign categories to a metadata record, 2 ways of doing it are privided:
+2 ways available to assign categories to a metadata record:
 
-- Search the metadata record, select one or more record and choose
-  the ``Ùpdate categories`` on the selection
+- Search records, select one or more record and choose
+  the ``Update categories`` on the selection. From here you can either replace
+  categories or add new ones.
 
-.. todo:: Add screenshot
+
+.. figure:: img/tag-selection-category.png
 
 
 - Search the metadata record, open the editor and click on the ``Categories`` button.
   A drop down menu will appear from which you can assign one or more categories
   using checkboxes
 
-.. todo:: Add screenshot
+
+.. figure:: img/tag-category.png

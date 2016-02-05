@@ -27,11 +27,5 @@ Different types of resources can be associated:
 .. toctree::
    :maxdepth: 2
 
-   linking-thumbnail.rst
-   linking-online-resources.rst
-   linking-parent.rst
-   linking-source.rst
-   linking-dataset-or-service.rst
-   linking-feature-catalog.rst
-   linking-others.rst
-
+   linking-documents.rst
+   linking-records.rst
