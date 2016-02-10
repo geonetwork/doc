@@ -240,5 +240,4 @@ Cf. ref:`creating-custom-editor`.
 
 
 
-.. _customizing-xslt-conversion:
 

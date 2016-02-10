@@ -4,15 +4,6 @@ Divers
 ######
 
 
-.. _batch-process-add:
-
-Ajouter un processus de mise à jour
------------------------------------
-
-.. todo:: Describe how to add process in <schema>/process/filename.xsl
-
-
-
 .. _customizing-xslt-conversion:
 
 
