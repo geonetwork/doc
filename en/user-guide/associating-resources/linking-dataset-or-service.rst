@@ -10,10 +10,9 @@ Metadata on dataset can be associated to metadata on services.
 .. todo:: Add more details on how/why/encoding
 
 In a service metadata record, click the ``Link to a dataset`` button to open the
-record selector which list all datasets in the catalog. Optionnaly, the layer
+record selector which list all datasets in the catalog. Optionally, the layer
 name may be define manually or from the list of the layers retrieved from the
 service (using the GetCapabilities).
-
 
 
 
