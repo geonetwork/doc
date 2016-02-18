@@ -86,10 +86,15 @@ Privileges for the All and Intranet groups can only be edited by Administrators 
 Setting Privileges on a selected set of metadata records
 --------------------------------------------------------
 
-Privileges can be set on a selected set of records in the search results using the "actions on selected set" menu. The following screenshot shows how to access this function:
+Privileges can be set on a selected set of records in the search results using the "actions on selected set" menu.
+
+.. figure:: img/set-selection-privileges.png
 
 
 The following rules apply:
 
-- the groups that will appear in the Privileges page will be those that the user belongs to
-- the Privileges specified will only be applied to records that the user has ownership or administration rights on - any other records will be skipped.
+- the groups are those that the user belongs to
+- the privileges specified will only be applied to records that the user has ownership or administration rights on - any other records will be skipped
+- the current records privileges will be reset and replaced by the one selected
+
+
