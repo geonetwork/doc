@@ -1,6 +1,6 @@
 .. _tuto-customui:
 
-Customize your Geonetwork UI
+Customize your GeoNetwork UI
 ############################
 
 

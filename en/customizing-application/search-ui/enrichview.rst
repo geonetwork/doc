@@ -7,9 +7,9 @@ Enrich your custom view
 
 Now we created our structure with basic content, we want to create a real catalog page.
 
-For that, you can include default view content, or build your own application on top of core geonetwork components.
+For that, you can include default view content, or build your own application on top of core GeoNetwork components.
 
-Geonetwork components
+GeoNetwork components
 ----------------------
 
 UI design is based on shared widgets, logic and components.

@@ -19,7 +19,7 @@ To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In
 
 - Place the schema-folder in /schemas
 
-- Verify and if compatible update the version of geonetwork (parent) referenced from the pom.xml file in the schema plugin.
+- Verify and if compatible update the version of GeoNetwork (parent) referenced from the pom.xml file in the schema plugin.
 
 - Add a reference in /schemas/pom.xml to the newly added schema
 

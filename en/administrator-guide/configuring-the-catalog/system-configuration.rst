@@ -400,7 +400,7 @@ Multilingual Settings
 
 Options in this group determine how GeoNetwork will search metadata in multiple languages.
 
-*Enable auto-detecting search request language:* If this option is selected, Geonetwork will analyse the search query and attempt to detect the language that is used before defaulting to the GUI language.
+*Enable auto-detecting search request language:* If this option is selected, GeoNetwork will analyse the search query and attempt to detect the language that is used before defaulting to the GUI language.
 
 *Search results in requested language sorted on top:* If this option is selected, a sort clause will be added to each query to ensure that results in the current language are always sorted on top. This is different from increasing priority of the language in that it overrides the relevance of the result.  For example, if a german result has very high relevance but the search language is french then the french results will all come before the german result.
 
