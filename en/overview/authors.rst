@@ -39,6 +39,21 @@ Committers
 Committers list is available `here for the core team <https://github.com/orgs/geonetwork/teams/committers>`_
 and `here for the documenter team <https://github.com/orgs/geonetwork/teams/documenters>`_.
 
+
+* Emanuele Tajariol
+* Craig Jones
+* Florent Gravin
+* Francois Prunayre
+* Jeroen Ticheler
+* Jesse Eichar
+* Jose Garcia
+* Maria Arias de Reyna
+* Mathieu Coudert
+* Patrizia Monteduro
+* Pierre Mauduit
+* Simon Pigot
+
+
 Contributors
 ------------
 
