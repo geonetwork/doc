@@ -19,11 +19,15 @@ Starting the catalog
 --------------------
 
 After going through the installer steps, simply go to bin folder and click
-on start.bat (on windows) or start.sh (on linux).
+on start.bat (on windows) or startup.sh (on linux).
 
+Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, this is probably at ``http://localhost:8080/geonetwork``. 
 
-Go to the home page at ``http://localhost:8880/geonetwork``. Your first view
-should look like this:
+When you use Docker, you can find our what IP and Port to connect to from the Kitematic application. Or run ``docker ps`` in a terminal (on Linux or OSX). This should give you the port the Docker is running on.
+
+.. figure:: ../../maintainer-guide/installing/img/docker.png
+
+Your opening screen should look like this:
 
 .. figure:: ../../maintainer-guide/installing/img/home-page.png
 
@@ -31,7 +35,6 @@ should look like this:
 
 Signing in and load templates
 -----------------------------
-
 
 Click the ``sign in`` to connect as administrator. The default account is
 username ``admin`` with password ``admin``.
@@ -42,11 +45,9 @@ username ``admin`` with password ``admin``.
 Once connected, the top toolbar should provide a link to the ``admin console``
 and your login details.
 
-.. figure:: img/identified-user.png
-
+.. figure:: ../../maintainer-guide/installing/img/identified-user.png
 
 Go to the ``admin console`` and click on ``metadata and templates``:
-
 
 .. figure:: ../../maintainer-guide/installing/img/metadata-and-templates.png
 
@@ -55,11 +56,9 @@ order to load examples:
 
 .. figure:: ../../maintainer-guide/installing/img/templates.png
 
-
 Go back to the search page to see examples:
 
 .. figure:: ../../maintainer-guide/installing/img/once-samples-are-loaded.png
-
 
 Searching information
 ---------------------
