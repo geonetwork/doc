@@ -1,14 +1,14 @@
 .. _loading-samples:
 
-Loading Templates and sample data
-###################################
+Loading templates and sample data
+#################################
 
 Go to the GeoNetwork homepage. If you installed it on your computer, this is probably at ``http://localhost:8080/geonetwork``. Your opening screen should look like this:
 
 .. figure:: img/home-page.png
 
 Signing in and loading templates
------------------------------
+--------------------------------
 
 
 Click the ``sign in`` to connect as administrator. The default account is

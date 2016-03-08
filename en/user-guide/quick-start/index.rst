@@ -25,7 +25,7 @@ on start.bat (on windows) or start.sh (on linux).
 Go to the home page at ``http://localhost:8880/geonetwork``. Your first view
 should look like this:
 
-.. figure:: img/home-page.png
+.. figure:: ../../maintainer-guide/installing/img/home-page.png
 
 
 
@@ -36,7 +36,7 @@ Signing in and load templates
 Click the ``sign in`` to connect as administrator. The default account is
 username ``admin`` with password ``admin``.
 
-.. figure:: img/signin.png
+.. figure:: ../../maintainer-guide/installing/img/signin.png
 
 
 Once connected, the top toolbar should provide a link to the ``admin console``
@@ -48,17 +48,17 @@ and your login details.
 Go to the ``admin console`` and click on ``metadata and templates``:
 
 
-.. figure:: ../describing-information/img/metadata-and-templates.png
+.. figure:: ../../maintainer-guide/installing/img/metadata-and-templates.png
 
 Choose all standards and click ``load samples`` and then ``load templates`` in
 order to load examples:
 
-.. figure:: ../describing-information/img/templates.png
+.. figure:: ../../maintainer-guide/installing/img/templates.png
 
 
 Go back to the search page to see examples:
 
-.. figure:: img/once-samples-are-loaded.png
+.. figure:: ../../maintainer-guide/installing/img/once-samples-are-loaded.png
 
 
 Searching information
