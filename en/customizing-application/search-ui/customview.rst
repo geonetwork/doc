@@ -23,14 +23,14 @@ Let's say we want to create a custom view name `geoportal`.
 
 - You will need to create a new folder ``web-ui/src/main/resources/catalog/views/geoportal``.
 
-- Add a new file ``web-ui/src/main/resources/catalog/views/templates/index.html`` containing
+- Add a new file ``web-ui/src/main/resources/catalog/views/geoportal/templates/index.html`` containing
 
 .. code-block:: html
 
 
     <div class="geoportal">Welcome to geoportal</div>
 
-- Add a new file ``web-ui/src/main/resources/catalog/views/search.js`` containing
+- Add a new file ``web-ui/src/main/resources/catalog/views/geoportal/search.js`` containing
 
 .. code-block:: js
 
@@ -46,7 +46,7 @@ Let's say we want to create a custom view name `geoportal`.
 
 .. note:: You must include ``gn_search`` module.
 
-- Add a new file ``web-ui/src/main/resources/catalog/views/less/gn_search_geoportal.less`` containing
+- Add a new file ``web-ui/src/main/resources/catalog/geoportal/views/geoportal/less/gn_search_geoportal.less`` containing
 
 .. code-block:: css
 
