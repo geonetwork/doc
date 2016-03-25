@@ -8,5 +8,6 @@ The guide for people who want to contribute to GeoNetwork.
    :maxdepth: 2
 
    writing-documentation.rst
+   translating.rst
    making-a-pull-request.rst
    doing-a-release.rst
