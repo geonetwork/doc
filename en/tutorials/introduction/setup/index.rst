@@ -3,11 +3,11 @@
 Setup
 #####
 
-The first step you should do after deploying GeoNetwork is login with the administrator user and change the administrator password. The default administrator user is called *admin* and the password is *admin*. Once you have logged in, you have to enter the admin.console to configure the basics.
+The first step you should do after deploying GeoNetwork is login with the administrator user and change the administrator password. The default administrator user is called *admin* and the password is *admin*. Once you have logged in, you have to enter the administration console to configure the basics.
 
 Change your admin password here:
 
-http://localhost:8080/geonetwork/srv/eng/admin.console#/organization/users
+http://localhost:8080/geonetwork/srv/eng/admin.console#/organization/users?userOrGroup=admin
 
 .. image:: img/password.png
 
@@ -29,3 +29,4 @@ http://localhost:8080/geonetwork/srv/eng/admin.console#/metadata
 
 Your catalog is now ready to be used. We can start adding data to it.
 
+See more on :ref:`configuring-the-catalog`.
