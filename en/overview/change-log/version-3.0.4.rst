@@ -1,4 +1,4 @@
-.. _version-303:
+.. _version-304:
 
 Version 3.0.4
 #############
@@ -20,5 +20,4 @@ Bug Fixes
 * Saving a metadata with an empty keyword value creates invalid metadata.
 
 and more ... see `3.0.4 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.0.4+is%3Aclosed>`_ and
-`pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.0.4+is%3Aclosed+is%3Apr>`_ for
-full details.
+`pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.0.4+is%3Aclosed+is%3Apr>`_ for full details.

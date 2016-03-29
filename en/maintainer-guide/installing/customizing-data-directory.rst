@@ -161,12 +161,12 @@ The data directory contains:
   |   |     |   |--statTmp
   |   |
   |   |--metadata_subversion: The subversion repository
+  |   |--backup: Folder containing removed metadata
   |
   |--index: All indexes used for search
   |   |--nonspatial: Lucene index
   |   |--spatialindex.*: ESRI Shapefile for the index (if not using spatial db)
-  |
-  |--removed: Folder with removed metadata (see config.xml).
+
 
 
 
@@ -222,6 +222,7 @@ The list of properties that can be set are:
 * geonetwork.resources.dir
 * geonetwork.svn.dir
 * geonetwork.upload.dir
+* geonetwork.backup.dir
 * geonetwork.formatter.dir
 * geonetwork.htmlcache.dir
 

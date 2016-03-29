@@ -164,14 +164,6 @@ This section configure the mail server to use.
 - **Password** Username password if connection is required on the SMTP server
 
 
-Removed metadata
-````````````````
-Defines the directory used to store a backup of metadata and data after a delete action. This
-directory is used as a backup directory to allow system administrators to recover metadata and possibly
-related data after erroneous deletion. By default the removed directory
-is created in the GeoNetwork data folder.
-
-
 Metadata search results
 ```````````````````````
 
