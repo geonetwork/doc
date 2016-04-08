@@ -153,8 +153,12 @@ In ``WEB-INF/classes/setup/sql/migrate``, create the SQL migration script:
       UPDATE Settings SET value='3.0.3' WHERE name='system/platform/version';
       UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
 
+12. Merge in depending branches
 
-12. Publish in sourceforge
+If needed, merge the changes into the develop branch.
+
+
+13. Publish in sourceforge
 
 
 .. code-block:: shell
