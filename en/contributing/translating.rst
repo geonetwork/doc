@@ -3,7 +3,7 @@
 Translating the application
 ###########################
 
-To translate the client interface, go on `GeoNetwork on Transifex <https://www.transifex.com/geonetwork>`_. Only the reference language (ie. en) MUST be updated
+To translate the client interface, go on `GeoNetwork on Transifex <https://www.transifex.com/geonetwork/core-geonetwork/>`_. Only the reference language (ie. en) MUST be updated
 on github. All other translations MUST be on Transifex.
 
 
