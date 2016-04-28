@@ -17,7 +17,7 @@ is defined in WEB-INF/config-lucene.xml.
 Add a search field
 ~~~~~~~~~~~~~~~~~~
 
-Indexed fields are defined on a per schema basis on the schema folder (eg. xml/schemas/iso19139) in index-fields.xsl file.
+Indexed fields are defined on a per schema basis on the schema folder (eg. WEB-INF/data/config/schema_plugins/iso19139/index-fields) in default.xsl file.
 This file define for each search criteria the corresponding element in a metadata record. For example, indexing the title
 of an ISO19139 record::
 
