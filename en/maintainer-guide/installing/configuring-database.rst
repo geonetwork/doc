@@ -7,7 +7,7 @@ Configuring the database
 This section describe how to configure the database connection.
 
 By default, an `H2 <http://www.h2database.com/html/main.html>`_ database is configured
-and created when the application first start. The H2 database nammed ``geonetwork.h2.db``
+and created when the application first start. The H2 database named ``geonetwork.h2.db``
 is created:
 
 * when using the installer, in the ``jetty`` folder
