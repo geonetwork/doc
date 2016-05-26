@@ -41,6 +41,19 @@ require to increase JVM memory configuration (~4Go for Xmx parameter).
 Configuration
 =============
 
+Trusted hosts
+-------------
+
+In |web.xml|, add the list of hosts name or IP used to access the catalog:
+
+.. code-block:: xml
+
+  <init-param>
+    <param-name>trustedHost</param-name>
+    <param-value>localhost,www.mongeosource.fr</param-value>
+  </init-param>
+
+
 Registering new node manually
 -----------------------------
 
