@@ -13,6 +13,7 @@ There is different ways to install |project_name|:
    installing-from-the-installer.rst
    installing-from-war-file.rst
    installing-from-source-code.rst
+   installing-solr.rst
 
 
 After installing the application, you can can configure the following:

@@ -12,6 +12,7 @@ User guide
    associating-resources/index.rst
    tag-information/index.rst
    publishing/index.rst
+   analyzing/index.rst
    workflow/index.rst
    harvesting/index.rst
    export/index.rst
