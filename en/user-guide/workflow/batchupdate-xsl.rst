@@ -62,7 +62,7 @@ Batch process are defined on a per schema basis. To check the list of available
 process for a standard check the ``<datadirectory>/config/schemaPlugins/<schemaId>/process`` folder.
 
 The ``process`` folder contains a set of XSLT. The name of the XSLT file without extension
-is used to trigger the process. For example, if using ``md.processing.batch?process=my-custom-process``, the process XSLT MUST be nammed
+is used to trigger the process. For example, if using ``md.processing.batch?process=my-custom-process``, the process XSLT MUST be named
 ``my-custom-process.xsl``.
 
 
