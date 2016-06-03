@@ -8,7 +8,7 @@ associated resource panel. This section describes how it works.
 
 
 In order to add or edit associated resources, open the editor.
-On the top right, manage associated resources with the wizzard panel.
+On the top right, manage associated resources with the wizard panel.
 
 .. figure:: img/onlinesrc.png
 
