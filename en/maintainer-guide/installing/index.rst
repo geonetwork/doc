@@ -3,6 +3,11 @@
 Installing the application
 ##########################
 
+.. versionadded:: 3.2
+
+GeoNetwork requires a Java 8 environment (JRE) to be installed on your system. This must be done prior to installation.
+
+
 Before using |project_name| on your own computer, you need to install it.
 There is different ways to install |project_name|:
 
