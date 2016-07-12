@@ -167,7 +167,7 @@ If needed, merge the changes into the develop branch.
     # For stable release
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
     # or for RC release
-    cd /home/frs/project/g/ge/geonetwork/cd GeoNetwork_unstable_development_versions/
+    cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
     mkdir 3.0.0
     cd 3.0.0
     put docs/changes3.0.0-0.txt
