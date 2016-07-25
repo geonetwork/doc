@@ -13,11 +13,6 @@ Main files to translate are the ``Angular UI`` ones:
 
 .. figure:: img/transifex.png
 
-For the time being, only ``Angular UI`` files are updated in the core-geonetwork
-repository. All ISO19139 files are not automatically updated. So you should
-focus first on the client application translations.
-
-
 
 
 
@@ -53,3 +48,10 @@ Once translated, the new language needs to be added to the application.
 
 To automatically retrieve & update translations files, the script
 :code:`web-ui/download-from-transifex.sh` can be used.
+
+
+
+Translating a standard
+######################
+
+To translate a standard, see the schema folder (:code:`schemas/iso19139/src/main/plugin/iso19139/loc`). Those files are used in the editor and formatters to translate standard elements, to provide help text, recommended values list, ...
