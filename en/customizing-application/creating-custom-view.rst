@@ -6,7 +6,7 @@ Customizing metadata views
 GeoNetwork facilitates developers to easily change or add a metadata view. A User can change the view to his/her needs.
 
 By default the initial view is an AngularJS view on the results returned from the search service.
-Therefor the view can only contain the fields from the Lucene Index. If you require more fields,
+Therefore the view can only contain the fields from the Lucene Index. If you require more fields,
 you can either add fields to the index or don't use the AngularJS view. This view is defined in
 :code:`web-ui/src/main/resources/catalog/views/default/templates/recordView.html`.
 
