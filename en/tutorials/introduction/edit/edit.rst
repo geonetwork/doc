@@ -23,3 +23,6 @@ If you want your metadata to be publicly available, you should also modify the p
 
 Select the metadata you want to publish and, on the top menu, select the "Publish" option. Now your metadata is publicly available on your catalog. If you access with an anonymous tab, your metadata is visible.
 
+See more on :ref:`editing-metadata`.
+
+

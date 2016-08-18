@@ -8,6 +8,9 @@ GeoNetwork is built using Maven. This means, there are several folders inside th
 
 .. image:: img/listprojects.png
 
+Create your own project
+=======================
+
 
 The best way to work with GeoNetwork and easily upgrade later is add your own Maven project(s) to the Maven build stack, so GeoNetwork code remains unaltered and your changes are decoupled.
 
@@ -63,6 +66,8 @@ Then we have to tell Maven this is a new project that can be built. So we add a 
      </profiles>
  </project>
 
+Add your project
+================
 
 Then you should add it to the list of projects maven will automatically build. On the root folder of the source code, edit the file pom.xml and add your own project:
 
