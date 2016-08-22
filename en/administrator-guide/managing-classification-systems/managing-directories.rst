@@ -59,8 +59,8 @@ Managing Directories of subtemplates
 There are some differences between the handling of subtemplates and metadata records.
 Unlike metadata records, subtemplates do not have a consistent root element,
 the metadata schema they use may not be recognizable, they do not appear
-in the main search results (unless they are part of a metadata record). Therefor, the
-editor board allows to search and manage privileges for directory entries.
+in the main search results (unless they are part of a metadata record). Therefore, the
+editor board allows you to search and manage privileges for directory entries.
 
 .. figure:: img/directories-search.png
 
@@ -70,15 +70,16 @@ From the editor board, choose ``Manage directory`` to access the editor for dire
 
 .. figure:: img/directories-manager.png
 
+If you do not see the ``Organizations and Contacts`` tab then ensure that you have created subtemplates for contacts for your metadata profile, and that you have loaded them using the ``Metadata and Templates`` section.
 
-From this page, editors can choose a type of directory using top tabs, edit/remove/import new subtemplates.
+From this page, editors can choose a type of directory using the top tabs, edit/remove/import new subtemplates.
 
 To import new entries, use the metadata import page and choose the appropriate type of record:
 
 .. figure:: img/directories-import.png
 
 
-Like metadata records, they are allocated an integer id and are stored in the catalog metadata table (with template field set to "s").
+Like metadata records, they are allocated an integer id and are stored in the catalog metadata table (with template field set to "y").
 
 Insert a directory entry in a metadata record
 `````````````````````````````````````````````
