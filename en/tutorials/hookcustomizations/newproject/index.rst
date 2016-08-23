@@ -53,7 +53,7 @@ Then we have to tell Maven this is a new project that can be built. So we add a 
    </licenses>
  
    <properties>
-     <geonetwork.build.dir>${project.build.directory}/${project.build.finalName}<geonetwork.build.dir>
+     <geonetwork.build.dir>${project.build.directory}/${project.build.finalName}</geonetwork.build.dir>
      <closure.compile.level/>
    </properties>
      <profiles>
