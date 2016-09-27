@@ -68,3 +68,8 @@ Check Solr installation
 Access Solr admin page from http://localhost:8984/solr.
 
 
+Configure Solr connection
+-------------------------
+
+Update Solr URL in ```WEB-INF/config-solr.properties``` and restart the application
+(see :code:`web/src/main/webResources/WEB-INF/config-solr.properties`).
