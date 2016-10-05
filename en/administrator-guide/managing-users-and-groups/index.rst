@@ -93,7 +93,6 @@ Rights associated with the roles are illustrated in detail in the list below:
     
     - Full rights on creating new users within the own group
     - Rights to change users profiles within the own group
-    - Full rights on creating/editing/ deleting new/old data within the own group
 
 #.  **Content Reviewer Profile**
 
