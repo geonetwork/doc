@@ -53,6 +53,7 @@ In |web.xml|, add the list of hosts name or IP used to access the catalog:
     <param-value>localhost,www.mongeosource.fr</param-value>
   </init-param>
 
+Please note that it's important to do this step, whether you register the new node manually or using the script.
 
 Registering new node manually
 -----------------------------
