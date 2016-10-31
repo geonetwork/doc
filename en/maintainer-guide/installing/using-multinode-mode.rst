@@ -41,17 +41,31 @@ require to increase JVM memory configuration (~4Go for Xmx parameter).
 Configuration
 =============
 
+.. _trusted-hosts:
+
 Trusted hosts
 -------------
 
-In |web.xml|, add the list of hosts name or IP used to access the catalog:
+In |web.xml|, add the list of hosts name or IP used to access the catalog in the ``trustedHost`` parameter for the following filter:
 
 .. code-block:: xml
 
-  <init-param>
-    <param-name>trustedHost</param-name>
-    <param-value>localhost,www.mongeosource.fr</param-value>
-  </init-param>
+  <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>jeeves.config.springutil.JeevesDelegatingFilterProxy</filter-class>
+    <init-param>
+      <param-name>loginService</param-name>
+      <param-value>signin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>trustedHost</param-name>
+      <param-value>localhost</param-value>
+    </init-param>
+  </filter>
+
+.. note::
+
+    If you change the hosts name or IP used to access a catalog node in the Web Server or the Java Container, you must update the value in the ``trustedHost`` parameter also.
 
 
 Registering new node manually
@@ -119,8 +133,8 @@ database use the following:
 Styling the node
 ----------------
 
-A custom styling could be defined for each node. Add a .css file
-in ``catalog/style`` folder.
+A custom styling could be defined for each node. Add a new css file
+in ``catalog/style`` folder. The file name should be like this (replace NODENAME with the proper value): ``NODENAME_custom_style.css``
 
 
 Creating a node using utility script
@@ -137,3 +151,8 @@ add a node with id ``geosource-1044`` connecting to ``postgres`` database
                   geosource-1044 \
                   jdbc:postgresql://localhost:5432/db_1044 \
                   postgres 2
+
+
+.. warning::
+
+    The script doesn't update the ``trustedHost`` parameter in |web.xml|. See :ref:`trusted-hosts` section for additional information.
