@@ -142,17 +142,21 @@ Creating a node using utility script
 
 
 In ``WEB-INF/node-utils``, the ``node-mgr.sh`` script helps adding new node eg. to
-add a node with id ``geosource-1044`` connecting to ``postgres`` database
+add a node with id ``geosource-1044``, in the host ``www.geosource.com`` connecting to ``postgres`` database
 ``db_1044`` with a pool size of ``2`` connections, use:
 
 .. code-block:: shell
 
     ./node-mgr.sh www-data www-data \
                   geosource-1044 \
+                  www.geosource.com \
                   jdbc:postgresql://localhost:5432/db_1044 \
                   postgres 2
 
+The script does the following tasks:
 
-.. warning::
+- Adds to |web.xml| the ``servlet-mapping`` and updates the ``trustedHost`` element for the new node.
 
-    The script doesn't update the ``trustedHost`` parameter in |web.xml|. See :ref:`trusted-hosts` section for additional information.
+- Creates the node configuration in ``WEB-INF/config-node/{{node_id}}.xml``.
+
+- Creates CSS style file for the node in the ``catalog/style`` folder.
