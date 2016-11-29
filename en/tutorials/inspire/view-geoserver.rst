@@ -31,7 +31,7 @@ When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate 
 
 In Admin > Settings activate the INSPIRE extension.
 
-.. image:: img/image_4.png
+.. image:: img/image_3.png
 
 For each dataset that you are going to publish create an iso19115 record using the INSPIRE template. Link each record to the view service as created in geoserver: eg https://{url}/geoserver/{workspace}/ows?request=getcapabilities&service=wms&version=1.3.0
 
