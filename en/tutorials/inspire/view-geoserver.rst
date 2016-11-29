@@ -12,7 +12,7 @@ GeoServer
 
 Download and install GeoServer INSPIRE extension as documented in `installing inspire extension  <http://docs.geoserver.org/latest/en/user/extensions/inspire/installing.html>`_
 
-Create a workspace from which the INSPIRE layers will be hosted. On workspace properties activate "Settings" and set the selected services (WMS/WMTS).
+Create a workspace from which the INSPIRE layers will be hosted. On workspace properties activate "Settings" and set the selected services (WMS/WMTS). Limit the number of projections to the required INSPIRE projections. Keeping all default geoserver projections will cause serious performance issues.
 
 .. image:: img/image_0.png
 
@@ -44,9 +44,9 @@ Create an OGC harvester that is able to extract a metadata for service (iso19119
 Return to GeoServer
 ===================
 
-For each layer add a metadata url to the layer configuration of type text/xml.
+For each layer add a link to the metadata of type application/vnd.ogc.csw.GetRecordByIdResponse_xml.
 
-On the WM(T)S-settings > INSPIRE workspace add the link to the service metadata
+On the WM(T)S-settings > INSPIRE workspace add a link to the service metadata
 
 Validate the implementation
 ===========================
