@@ -22,11 +22,11 @@ When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate 
 
 In Admin > Settings activate the INSPIRE extension and activate Atom harvesting (at certain interval). The settings page facilitates to set a protocol which is used in metadata to indicate an Atom link.
 
-.. image:: img/image_7.png
+.. image:: img/image_4.png
 
 For each dataset that you are going to publish create an iso19115 record using the INSPIRE template. Link each record to the related atom file (or upload an atom file)
 
-.. image:: img/image_4.png
+.. image:: img/image_7.png
 
 Make sure the metadata contains the same gmd:code as used in the Atom file.
 
