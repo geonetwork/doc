@@ -55,7 +55,7 @@ On the WM(T)S-settings > INSPIRE workspace add the link to the service metadata
 Validate the implementation
 ===========================
 
-If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <[http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework to validate the INSPIRE setup <https://github.com/Geonovum/etf-test-projects-inspire>`_ . 
+If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework to validate the INSPIRE setup <https://github.com/Geonovum/etf-test-projects-inspire>`_ . 
 
 .. image:: img/image_6.png
 
