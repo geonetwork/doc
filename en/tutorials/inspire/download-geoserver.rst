@@ -1,7 +1,7 @@
 .. _tuto-download-atom:
 
-Tutorial setting up a WFS based INSPIRE download service
-########################################################
+Tutorial setting up a WFS based INSPIRE download service with GeoServer
+#######################################################################
 
 This tutorial shows how one can set up a combination of GeoNetwork and Geoserver to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_. 
 
@@ -20,7 +20,7 @@ Create at least one workspace per datamodel. On workspace properties activate "S
 
 On WFS settings, select the new workspace and fill out the form (keep service metadata url empty for now) as described in `using inspire extension <http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html#inspire-using>`_. If the new workspace is not in the pull down, return to previous step and make sure "Settings" is activated for the workspace. If the INSPIRE fields are not visible, make sure the INSPIRE extension is correctly installed.
 
-.. image:: img/image_1.png
+.. image:: img/image_8.png
 
 Create featuretypes according to the appschema documentation.
 
@@ -31,11 +31,11 @@ When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate 
 
 In Admin > Settings activate the INSPIRE extension.
 
-.. image:: img/image_4.png
+.. image:: img/image_3.png
 
 For each dataset that you are going to publish create an iso19115 record using the INSPIRE template. Link each record to a download service as created in geoserver: eg https://{url}/geoserver/{workspace}/ows?request=getcapabilities&service=wfs&version=2.0.0
 
-.. image:: img/image_5.png
+.. image:: img/image_9.png
 
 Create an OGC harvester that is able to extract a metadata for service (iso19119) record from the WFS. Run the harvester and note down the identifier of the created service metadata.
 
