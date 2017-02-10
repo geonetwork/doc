@@ -13,3 +13,4 @@ Change log
    version-3.0.3.rst
    version-3.0.4.rst
    version-3.2.0.rst
+   version-3.2.1.rst

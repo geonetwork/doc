@@ -59,16 +59,16 @@ Feature type customisation
 
 By default, the filter panel is generated from solr Index. But you customise it for a specific WFS Feature Type.
 
-The customisation is done by a JSON config inserted in the gmd:applicationProfile section of the online resource in the metadata. 
+The customisation is done by a JSON config inserted in the gmd:applicationProfile section of the online resource in the metadata.
 
 Here the options::
 
     {
-    "fields": [{ 
+    "fields": [{
       "name": "PNT_PROF",
       // non disponible actuellement
       "type": "double",
-      "fq" : {  
+      "fq" : {
         "facet.interval": "PNT_PROF_d",
         "facet.interval.set": ["[0,10]", "(10,10000]"],
        or
@@ -76,7 +76,7 @@ Here the options::
         "facet.range.start": "0",
         "facet.range.end": "10000",
         "facet.range.gap": "300"
-       or 
+       or
         "facet.range": "PNT_PROF_d",
         "facet.range.classes": "5" // Get min, max and compute gap on 5 classes
       }
@@ -86,14 +86,14 @@ Here the options::
       "name": "LABEL",
       "label" : {"fr": "monLabel", "en": "myLabel"}
     }],
-    "tokenize": {"GRIDCODE": ",", "PARCELLE": "/"},
+    "tokenizedFields": {"GRIDCODE": ",", "PARCELLE": "/"},
     "heatmap": true
     }
 
 
 
 
-You can 
+You can
 
 * restrict the fields used for filter
 * specify your own ranges for numeric values
