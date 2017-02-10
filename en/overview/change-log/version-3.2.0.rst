@@ -13,10 +13,14 @@ New features
 
 * WFS feature indexing (see :ref:`getfeature_harvester`)
 * A new REST API (beta) is available. The documentation is available http://localhost:8080/geonetwork/doc/api
+* User feedback form
 * Editor / Associated resources can be updated without the advanced view
-* Editor / Search in contact directory with facets
-* Metadata import improved (import by URL, import multiple files at once)
+* Editor / Filter contact directory with facets
+* Editor / XML view provides code editing with syntax highlighting and more, ...
+* Directories can be populated from catalog content
+* Metadata import improved (import by URL, import multiple files at once, better error reports)
 * GeoServer updated to `version 2.9.0 <http://geoserver.org/>`_
+* Added schema.org tags for better indexing by search engine
 
 Removed features
 ----------------

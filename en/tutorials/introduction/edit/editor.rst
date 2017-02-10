@@ -62,5 +62,5 @@ If the view is too big, we can also define a set of tabs inside the editor, so n
 
 Remember that you have to restart the application container (Tomcat) every time you modify this file.
 
-See more on :ref:`editing-metadata`.
+See more on :ref:`creating-custom-editor:`.
 

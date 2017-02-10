@@ -438,3 +438,8 @@ Harvesting
 
 *Allow editing on harvested records*: Enables/Disables editing of harvested records in the catalogue. By default, harvested records cannot be edited.
 
+
+Minutes to lock metadata editing
+````````````````````````````````
+
+If this option has a value above zero, it enables the metadata editor locking. Any metadata is blocked while a user is editing it to prevent other concurrent editing with other users. This block is released either when the editor is closed or after a timeout of inactivity. The timeout is defined on this field, in minutes.

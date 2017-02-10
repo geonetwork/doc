@@ -11,5 +11,7 @@ At the end of this tutorial, you should be able to customize your own code into 
    newproject/index.rst
    events/index.rst
    ui/index.rst
+   schemaplugins/index.rst
+   searchfields/index.rst
 
 For ui customization see :ref:`tuto-customui`.
