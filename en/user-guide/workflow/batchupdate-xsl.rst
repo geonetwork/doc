@@ -158,7 +158,7 @@ A process MUST at least do:
 .. code-block:: xml
 
         <?xml version="1.0" encoding="UTF-8"?>
-        <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+        <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:geonet="http://www.fao.org/geonetwork" version="2.0"
                         exclude-result-prefixes="exslt">
 
             <!-- Do a copy of every nodes and attributes recursively -->
