@@ -3,4 +3,4 @@
 GeoNetwork API
 ##############
 
-The draft GeoNetwork API is described on the page http://localhost:8080/geonetwork/doc/api/ .
+The draft API for Geonetwork 3.2.x and later is described on the page http://localhost:8080/geonetwork/doc/api/ .
