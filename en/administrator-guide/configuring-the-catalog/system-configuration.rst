@@ -22,7 +22,7 @@ the sections and will save all settings.
 Catalog description
 ```````````````````
 
-- **Catalog came** The name of the node. Information that helps identify the
+- **Catalog name** The name of the node. Information that helps identify the
   catalogue to a human user. The name is displayed on the banner, in the CSW
   GetCapabilities.
 
