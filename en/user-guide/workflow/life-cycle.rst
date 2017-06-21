@@ -4,7 +4,7 @@ Life cycle
 ##########
 
 
-Lyfe cycle states
+Life cycle states
 -----------------
 
 
