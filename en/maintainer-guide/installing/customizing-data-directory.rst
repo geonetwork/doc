@@ -218,6 +218,7 @@ The list of properties that can be set are:
 * geonetwork.spatial.dir
 * geonetwork.config.dir
 * geonetwork.codelist.dir
+* geonetwork.schema.dir
 * geonetwork.data.dir
 * geonetwork.resources.dir
 * geonetwork.svn.dir
