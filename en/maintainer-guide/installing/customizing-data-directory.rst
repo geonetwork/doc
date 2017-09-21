@@ -207,7 +207,7 @@ Examples:
 
     -Dgeonetwork.dir=/data/catalogue
     -Dgeonetwork.schema.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-    -Dgeonetwork.codelist.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/codelist
+    -Dgeonetwork.codeList.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/codelist
 
 
 
@@ -217,7 +217,7 @@ The list of properties that can be set are:
 * geonetwork.lucene.dir
 * geonetwork.spatial.dir
 * geonetwork.config.dir
-* geonetwork.codelist.dir
+* geonetwork.codeList.dir
 * geonetwork.schema.dir
 * geonetwork.data.dir
 * geonetwork.resources.dir
