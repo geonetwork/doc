@@ -29,4 +29,5 @@ After installing the application, you can can configure the following:
    configuring-database.rst
    loading-samples.rst
    customizing-data-directory.rst
+   configuring-security.rst
    using-multinode-mode.rst
