@@ -2,5 +2,5 @@ target
 .classpath
 .project
 .settings/
-.tx
 _build
+translations
