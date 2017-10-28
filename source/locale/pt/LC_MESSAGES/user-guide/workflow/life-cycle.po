@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/user-guide/workflow/life-cycle.rst:4
+msgid "Life cycle"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:8
+msgid "Life cycle states"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:11
+msgid ""
+"Metadata records have a lifecycle that typically goes through one or more"
+" states. For example, when a record is:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:14
+msgid "created and edited by an ``Editor`` user it is in the ``Draft`` state."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:17
+msgid ""
+"reviewed by a ``Content Reviewer`` user it would typically be in a "
+"``Submitted`` state."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:20
+msgid ""
+"completed and corrected by the ``Content Reviewer`` it would be in the "
+"``Approved`` state and may be made available for casual search and "
+"harvest by assigning privileges to the catalog ``All`` group."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:24
+msgid "superseded or replaced and the state would be ``Retired``."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:27
+msgid ""
+"The catalog has (an extensible) set of states that a metadata record can "
+"have:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:29
+msgid ""
+"``Unknown`` - this is the default state - nothing is known about the "
+"status of the metadata record"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:31
+msgid "``Draft`` - the record is under construction or being edited."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:33
+msgid ""
+"``Submitted`` - the record has been submitted for approval to a content "
+"review."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:35
+msgid ""
+"``Approved`` - the content reviewer has reviewed and approved the "
+"metadata record"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:37
+msgid ""
+"``Rejected`` - the content reviewer has reviewed and rejected the "
+"metadata record"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:39
+msgid "``Retired`` - the record has been retired"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:43
+msgid ""
+"To enable workflow and change the status from ``Unknown`` to ``Draft``, "
+"click the ``enable workflow`` in the metadata view:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:50
+msgid ""
+"Draft status can also be set by default for records member of some "
+"groups. For this check the catalog administration > Settings and define "
+"the list of groups."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:55
+msgid ""
+"Once enabled, the different states can be set. Status can be assigned to "
+"metadata records individually."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:61
+msgid "Choose the new state, add an optional comment and click save:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst
+msgid "Todo"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:66
+msgid "Add support for a selected set of records."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:70
+msgid "When in ``Draft``, an editor can change states to:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:72
+msgid "``Unknown``"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:74
+msgid "``Draft``"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:76
+msgid "``Submitted``"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:78
+msgid "Other status can be managed by Reviewer or Administrator."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:83
+msgid "Status actions"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:85
+msgid ""
+"The status values shown above are held in a database table called "
+"``MetadataStatus``. Extra states can be added to this table if required."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:88
+msgid ""
+"There are two status change action hooks (in Java) that can be used by "
+"sites to provide specific behaviours:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:91
+msgid ""
+"``statusChange`` - This action is called when status is changed by a user"
+" eg. when ``Draft`` records are set to ``Submitted`` and could be used "
+"for example to send notifications to other users affected by this change."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:95
+msgid ""
+"``onEdit`` - This action is called when a record is edited and saved and "
+"could be used for example to reset records with an ``Approved`` status to"
+" ``Draft`` status."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:99
+msgid ""
+"A default set of actions is provided. These can be customized or replaced"
+" by sites that wish to provide different or more extensive behaviour."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:102
+msgid ""
+"A default pair of metadata status change actions defined in Java is "
+"provided with GeoNetwork using the class "
+"org.fao.geonet.services.metadata.DefaultStatusActions.java (see "
+":code:`core/src/main/java/org/fao/geonet/kernel/metadata/DefaultStatusActions.java`)."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:107
+msgid "When status change"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:109
+msgid ""
+"This action is called when status is changed by a user. What happens "
+"depends on the status change taking place:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:113
+msgid ""
+"when an ``Editor`` changes the state on a metadata record(s) from "
+"``Draft`` or ``Unknown`` to ``Submitted``, the Content Reviewers from the"
+" groupOwner of the record are informed of the status change via email "
+"which looks like the following. They can log in and click on the link "
+"supplied in the email to access the submitted records. Here is an example"
+" email sent by this action:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:135
+msgid ""
+"when a ``Content Reviewer`` changes the state on a metadata record(s) "
+"from ``Submitted`` to ``Accepted`` or ``Rejected``, the owner of the "
+"metadata record is informed of the status change via email. The email "
+"received by the metadata record owner looks like the following. Again, "
+"the user can log in and use the link supplied in the email to access the "
+"approved/rejected records. Here is an example email sent by this action:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:158
+msgid "When editing"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:160
+msgid ""
+"This action is called when a record is edited and saved by a user. If the"
+" user did not indicate that the edit changes were a ``Minor edit`` and "
+"the current status of the record is ``Approved``, then the default action"
+" is to set the status to ``Draft``."
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:166
+msgid "Changing the status actions"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:168
+msgid "These actions can be replaced with different behaviours by:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:170
+msgid ""
+"writing Java code in the form of a new class that implements the "
+"interface defined in "
+"``org.fao.geonet.services.metadata.StatusActions.java`` and placing a "
+"compiled version of the class in the GeoNetwork class path"
+msgstr ""
+
+#: ../../source/user-guide/workflow/life-cycle.rst:174
+msgid ""
+"defining the name of the new class in the statusActionsClass "
+"configuration parameter in ``web/geonetwork/WEB-INF/config.xml``"
+msgstr ""
+

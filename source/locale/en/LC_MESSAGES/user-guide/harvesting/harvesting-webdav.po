@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:4
+msgid "WEBDAV Harvesting"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:6
+msgid ""
+"This harvesting type uses the WebDAV (Distributed Authoring and "
+"Versioning) protocol or the WAF (web accessible folder) protocol to "
+"harvest metadata from a web server. It can be useful to users that want "
+"to publish their metadata through a web server that offers a DAV "
+"interface. The protocol permits retrieval of the contents of a web page "
+"(a list of files) along with the change date."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:9
+msgid "Adding a WebDAV harvester"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:11
+msgid "**Site** - Options about the remote site."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:13
+msgid ""
+"*Subtype* - Select WebDAV or WAF according to the type of server being "
+"harvested."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:14
+msgid ""
+"*Name* - This is a short description of the remote site. It will be shown"
+" in the harvesting main page as the name for this instance of the WebDAV "
+"harvester."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:15
+msgid ""
+"*URL* - The remote URL from which metadata will be harvested. Each file "
+"found that ends with .xml is assumed to be a metadata record."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:16
+msgid ""
+"*Icon* - An icon to assign to harvested metadata. The icon will be used "
+"when showing search results."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:17
+msgid ""
+"*Use account* - Account credentials for basic HTTP authentication on the "
+"WebDAV/WAF server."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:19
+msgid "**Options** - Scheduling options."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:23
+msgid "**Options** - Specific harvesting options for this harvester."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:25
+msgid ""
+"*Validate* - If checked, the metadata will be validated after retrieval. "
+"If the validation does not pass, the metadata will be skipped."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:26
+msgid ""
+"*Recurse* - When the harvesting engine will find folders, it will "
+"recursively descend into them."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:28
+msgid "**Privileges** - Assign privileges to harvested metadata."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:32
+msgid "**Categories**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:37
+msgid "Notes"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-webdav.rst:39
+msgid ""
+"The same metadata could be harvested several times by different instances"
+" of the WebDAV harvester. This is not good practise because copies of the"
+" same metadata record will have a different UUID."
+msgstr ""
+

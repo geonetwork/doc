@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:5
+msgid "Change default view configuration"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:8
+msgid "The Settings"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:10
+msgid ""
+"In order to make developers able to specify some configuration settings, "
+"we tried as much as possible to use settings instead of hardcoded value "
+"in core code."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:12
+msgid "Those settings are mainly stored in 2 AngularJS ``value`` objects:"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:14
+msgid "``gnViewerSettings``"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:15
+msgid "``gnSearchSettings``"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:17
+msgid ""
+"Those objects are injected via AngularJs ``$inject`` concept into all "
+"core services and directives."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:20
+msgid "Viewer settings"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:22
+msgid ""
+"The ``gnViewSettings`` object contains all settings regarding to the map "
+"viewer page."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:24
+msgid ""
+"``defaultContext`` : path to the default OWS Context. If not set, the "
+"``ol.View`` object needs to be defined for your map."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:25
+msgid ""
+"``bgLayers`` : Array of layers that will be managed by the background "
+"layer selector. This value is used only if ``defaultContext`` is not "
+"defined."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:26
+msgid ""
+"``servicesUrl`` : Config object for predefined WMS and WMTS servers "
+"entries."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:30
+msgid "Search settings"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:32
+msgid ""
+"The ``gnSearchSettings`` object contains all settings regarding to the "
+"main search page."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:34
+msgid ""
+"``olStyles`` : ``ol.style.Style`` definition for some features in the map"
+" (drawn object, measure, metadata extent bounding box etc...)."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:35
+msgid ""
+"``viewerMap`` : The ``ol.Map`` object used for the viewer. This map "
+"object may be extended if you have set the ``defaultContext`` setting."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:36
+msgid "``searchMap`` : The ``ol.Map`` object used for the search page."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:37
+msgid ""
+"``hitsperpageValues`` : An array to specify the possible values for the "
+"number of metadata by result page."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:38
+msgid ""
+"``sortbyValues`` : An array to specify the possible values for the sort "
+"by option in the result list page."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:39
+msgid ""
+"``resultViewTpls`` : The template used to render search result. By "
+"default it is a grid."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:40
+msgid "``formatter`` : Set options to the metadata view."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:41
+msgid ""
+"``linkTypes`` : Binding between resources protocol and action in metadata"
+" result list (for example open WMS in mapviewer)."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:44
+msgid "Update this settings"
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:46
+msgid ""
+"Note that some settings are set in the database (for example the "
+"``viewerSettings.mapConfig`` object comes from database settings) so you "
+"can edit them in :ref:`settings admin page <system-configuration>`."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:49
+msgid ""
+"For others, you can just edit the config file (See :code:`web-"
+"ui/src/main/resources/catalog/views/default/config.js`) and change some "
+"setting values."
+msgstr ""
+
+#: ../../source/customizing-application/search-ui/configdefault.rst:51
+msgid ""
+"If you change existing files, you expose yourself to having merge issues "
+"on new version upgrades. The best way keeps to create your own view."
+msgstr ""
+

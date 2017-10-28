@@ -1,0 +1,493 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:4
+msgid "Z3950 Harvesting"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:6
+msgid ""
+"Z3950 is a remote search and harvesting protocol that is commonly used to"
+" permit search and harvest of metadata. Although the protocol is often "
+"used for library catalogs, significant geospatial metadata catalogs can "
+"also be searched using Z3950 (eg. the metadata collections of the "
+"Australian Government agencies that participate in the Australian Spatial"
+" Data Directory - ASDD). This harvester allows the user to specify a "
+"Z3950 query and retrieve metadata records from one or more Z3950 servers."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:9
+msgid "Adding a Z3950 Harvester"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:11
+msgid "The available options are:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:13
+msgid "**Site**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:15
+msgid ""
+"*Name* - A short description of this Z3950 harvester. It will be shown in"
+" the harvesting main page using this name."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:16
+msgid ""
+"*Z3950 Server(s)* - These are the Z3950 servers that will be searched. "
+"You can select one or more of these servers."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:17
+msgid ""
+"*Z3950 Query* - Specify the Z3950 query to use when searching the "
+"selected Z3950 servers. At present this field is known to support the "
+"Prefix Query Format (also known as Prefix Query Notation) which is "
+"described at this URL: http://www.indexdata.com/yaz/doc/tools.html#PQF. "
+"See below for more information and some simple examples."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:18
+msgid ""
+"*Icon* - An icon to assign to harvested metadata. The icon will be used "
+"when showing search results."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:20
+msgid "**Options** - Scheduling options."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:24
+msgid "**Harvested Content**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:26
+msgid ""
+"*Apply this XSLT to harvested records* - Choose an XSLT here that will "
+"convert harvested records to a different format."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:27
+msgid ""
+"*Validate* - If checked, records that do not/cannot be validated will be "
+"rejected."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:29
+msgid "**Privileges**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:33
+msgid "**Categories**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:37
+msgid ""
+"this harvester automatically creates a new Category named after each of "
+"the Z3950 servers that return records. Records that are returned by a "
+"server are assigned to the category named after that server."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:40
+msgid "More about PQF Z3950 Queries"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:42
+msgid ""
+"PQF is a rather arcane query language. It is based around the idea of "
+"attributes and attribute sets. The most common attribute set used for "
+"geospatial metadata in Z3950 servers is the GEO attribute set (which is "
+"an extension of the BIB-1 and GILS attribute sets - see "
+"http://www.fgdc.gov/standards/projects/GeoProfile). So all PQF queries to"
+" geospatial metadata Z3950 servers should start off with @attrset geo."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:44
+msgid "The most useful attribute types in the GEO attribute set are as follows:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:47
+msgid "@attr number"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:47
+msgid "Meaning"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:47
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:79
+msgid "Description"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:49
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:81
+msgid "1"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:49
+msgid "Use"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:49
+msgid "What field to search"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:50
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:82
+msgid "2"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:50
+msgid "Relation"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:50
+msgid "How to compare the term specified"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:51
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:61
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:84
+msgid "4"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:51
+msgid "Structure"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:51
+msgid "What type is the term? eg. date, numeric, phrase"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:52
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:85
+msgid "5"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:52
+msgid "Truncation"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:52
+msgid "How to truncate eg. right"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:55
+msgid ""
+"In GeoNetwork the numeric values that can be specified for ``@attr 1`` "
+"map to the lucene index field names as follows:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:58
+msgid "@attr 1="
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:58
+msgid "Lucene index field"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:58
+msgid "ISO19139 element"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:60
+msgid "1016"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:60
+msgid "any"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:60
+msgid "All text from all metadata elements"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:61
+msgid "title, altTitle"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:61
+msgid "gmd:identificationInfo//gmd:citation//gmd:title/gco:CharacterString"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:62
+msgid "62"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:62
+msgid "abstract"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:62
+msgid "gmd:identificationInfo//gmd:abstract/gco:CharacterString"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:63
+msgid "1012"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:63
+msgid "_changeDate"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:63
+msgid "Not a metadata element (maintained by GeoNetwork)"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:64
+msgid "30"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:64
+msgid "createDate"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:64
+msgid "gmd:MD_Metadata/gmd:dateStamp/gco:Date"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:65
+msgid "31"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:65
+msgid "publicationDate"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:65
+msgid "gmd:identificationInfo//gmd:citation//gmd:date/gmd:CI_DateCode/@codeListValue='publication'"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:66
+msgid "2072"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:66
+msgid "tempExtentBegin"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:66
+msgid "gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:begin(Position)"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:67
+msgid "2073"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:67
+msgid "tempExtentEnd"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:67
+msgid "gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:end(Position)"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:68
+msgid "2012"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:68
+msgid "fileId"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:68
+msgid "gmd:MD_Metadata/gmd:fileIdentifier/*"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:69
+msgid "12"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:69
+msgid "identifier"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:69
+msgid "gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/*"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:70
+msgid "21,29,2002,3121,3122"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:70
+msgid "keyword"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:70
+msgid "gmd:identificationInfo//gmd:keyword/*"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:71
+msgid "2060"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:71
+msgid "northBL,eastBL,southBL,westBL"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:71
+msgid ""
+"gmd:identificationInfo//gmd:extent//gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude*/gco:Decimal"
+" (etc)"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:74
+msgid ""
+"Note that this is not a complete set of the mappings between Z3950 GEO "
+"attribute set and the GeoNetwork lucene index field names for ISO19139. "
+"Check out INSTALL_DIR/web/geonetwork/xml/search/z3950Server.xsl and "
+"INSTALL_DIR/web/geonetwork/xml/schemas/iso19139/index-fields.xsl for more"
+" details and annexe A of the GEO attribute set for Z3950 at "
+"http://www.fgdc.gov/standards/projects/GeoProfile/annex_a.html for more "
+"details."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:76
+msgid "Common values for the relation attribute (``@attr=2``):"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:79
+msgid "@attr 2="
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:81
+msgid "Less than"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:82
+msgid "Less than or equal to"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:83
+msgid "3"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:83
+msgid "Equals"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:84
+msgid "Greater than or equal to"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:85
+msgid "Greater than"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:86
+msgid "6"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:86
+msgid "Not equal to"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:87
+msgid "7"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:87
+msgid "Overlaps"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:88
+msgid "8"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:88
+msgid "Fully enclosed within"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:89
+msgid "9"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:89
+msgid "Encloses"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:90
+msgid "10"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:90
+msgid "Fully outside of"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:94
+msgid ""
+"So a simple query to get all metadata records that have the word 'the' in"
+" any field would be:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:96
+msgid "``@attrset geo @attr 1=1016 the``"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:98
+msgid ""
+"``@attr 1=1016`` means that we are doing a search on any field in the "
+"metadata record"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:100
+msgid "A more sophisticated search on a bounding box might be formulated as:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:102
+msgid ""
+"``@attrset geo @attr 1=2060 @attr 4=201 @attr 2=7 \"-36.8262 142.6465 "
+"-44.3848 151.2598``"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:104
+msgid "``@attr 1=2060`` means that we are doing a bounding box search"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:105
+msgid "``@attr 4=201`` means that the query contains coordinate strings"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:106
+msgid ""
+"``@attr 2=7`` means that we are searching for records whose bounding box "
+"overlaps the query box specified at the end of the query"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:109
+msgid "Notes"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:111
+msgid ""
+"Z3950 servers must be configured for GeoNetwork in "
+"``INSTALL_DIR/web/geonetwork/WEB-INF/classes/JZKitConfig.xml.tem``"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-z3950.rst:112
+msgid ""
+"every time the harvester runs, it will remove previously harvested "
+"records and create new ones."
+msgstr ""
+

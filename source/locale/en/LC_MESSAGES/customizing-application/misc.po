@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/customizing-application/misc.rst:4
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:7
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:9
+msgid ""
+"GeoNetwork has a security filter that prevents CSRF attacks. See more "
+"info about this type of attack on https://www.owasp.org/index.php/Cross-"
+"Site_Request_Forgery_(CSRF) . All calls to POST, DELETE and PUT endpoints"
+" without the proper token will return an error."
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:13
+msgid ""
+"By default, all AngularJS requests will take care of this token, but all "
+"third party APIs and custom user interface calls will have to manually "
+"add this token to the request. The token is stored on a cookie called "
+"XSRF-TOKEN. This cookie constains a string that has to be added to all "
+"requests either by a parameter called \"_csrf\" or by a header called X"
+"-XSRF-TOKEN."
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:18
+msgid "Example of CSRF call using curl"
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:20
+msgid "First, fo a call to a POST endpoint to get the session and the csrf"
+msgstr ""
+
+#: ../../source/customizing-application/misc.rst:44
+msgid "Then, using the cookie and the token, you can do whatever you want:"
+msgstr ""
+

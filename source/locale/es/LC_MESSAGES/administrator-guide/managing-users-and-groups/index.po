@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:4
+msgid "Managing users and groups"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:19
+msgid "Default user"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:21
+msgid ""
+"After installation a default user with name ``admin`` and password "
+"``admin`` is created. Use this credentials to start with. It is "
+"recommended to update the default password after installation."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:29
+msgid "User session"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:31
+msgid ""
+"After identification, a user session is created. This session will be "
+"closed automatically at some point by the server for security reasons. "
+"Default session timeout is set to 35 min (see :ref:`session-timeout-"
+"configuration` for details)."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:35
+msgid ""
+"When there is no activity in the browser and that the session is about to"
+" expire (3 min before), a warning is displayed next to the user details:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:40
+msgid "1 min before the end of the timeout, another message is displayed:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:44
+msgid ""
+"When the session has been probably cancelled by the catalog, a message "
+"recommend to refresh the page and sign in again if needed:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:56
+msgid "Users, Groups and Roles"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:59
+msgid "The catalog uses the concept of Users, Groups and User Profiles."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:61
+msgid "A User can be part of one or more Groups."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:63
+msgid "A User has a Role in a Group."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:65
+msgid "The Administrator Role is not related to a Group."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:67
+msgid ""
+"The combination of Role and Group defines what tasks the User can perform"
+" on the system or on specific metadata records."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:71
+msgid ""
+"Users can have different roles in different groups. A role defines what "
+"tasks the user can perform."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:74
+msgid ""
+"Roles are hierarchical and based on inheritance. This means that a user "
+"with an Editor profile can create and modify new metadata records, but "
+"can also use all functions a Registered user can use."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:76
+msgid ""
+"Rights associated with the roles are illustrated in detail in the list "
+"below:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:78
+msgid "**Administrator Profile**"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:80
+msgid ""
+"The Administrator has special privileges that give access to all "
+"available functions."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:82
+msgid "These include:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:84
+msgid "Full rights for creating new groups and new users"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:85
+msgid "Rights to change users/groups profiles"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:86
+msgid "Full rights for creating/editing/deleting new/old metadata"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:87
+msgid "Perform system administration and configuration tasks."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:89
+msgid "**User Administrator Profile**"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:91
+msgid ""
+"The User Administrator is the administrator of his/her own group with the"
+" following privileges:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:94
+msgid "Full rights on creating new users within the own group"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:95
+msgid "Rights to change users profiles within the own group"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:96
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:108
+msgid ""
+"Full rights on creating/editing/ deleting new/old data within the own "
+"group"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:98
+msgid "**Content Reviewer Profile**"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:100
+msgid ""
+"The content reviewer is the only person allowed to give final clearance "
+"on    the metadata publication on the Intranet and/or on the Internet:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:102
+msgid ""
+"Rights on reviewing metadata content within the own group and authorising"
+" its publication"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:104
+msgid "**Editor Profile**"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:106
+msgid "The editor works on metadata with following privileges:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:110
+msgid "**Registered User Profile**"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:112
+msgid ""
+"The Registered User has more access privileges than non-authenticated "
+"Guest users:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/index.rst:114
+msgid "Right to download protected data"
+msgstr ""
+

@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:5
+msgid "Configuring virtual CSW"
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:7
+msgid ""
+"This feature of CSW server adds the capability to create custom CSW entry"
+" points that apply extra criteria to the CSW requests, allowing to "
+"implement several useful cases like, for example:"
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:9
+msgid ""
+"Define an INSPIRE CSW entry point to deliver only the INSPIRE related "
+"metadata stored in the catalog."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:10
+msgid ""
+"Define CSW entry points to deliver only metadata related to specific "
+"theme/s: climate, boundaries, etc."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:13
+msgid ""
+"The ``filter`` parameter value should use the Lucene query parser syntax "
+"(see http://lucene.apache.org/java/2_9_1/queryparsersyntax.html) and is "
+"use in these CSW operations:"
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:15
+msgid ""
+"*GetRecords*: the ``filter`` is applied with the CSW query as an extra "
+"query criteria."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:16
+msgid ""
+"*GetRecordById*: the ``filter`` is applied with the metadata ``id`` "
+"requested as an extra query criteria."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:17
+msgid ""
+"*GetDomain*: the ``filter`` is applied as a query criteria to retrieve "
+"the metadata properties requested."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:18
+msgid ""
+"*GetCapabilities*: the ``filter`` is applied as a query criteria to fill "
+"the metadata keywords list in the GetCapabilities document."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:20
+msgid ""
+"The list of available Lucene index fields to use in the ``filter`` "
+"parameter can be obtained from the files ``index-fields.xsl`` in the "
+"schema folders located in ``WEB-INF/xml/schemas``."
+msgstr ""
+
+#: ../../source/administrator-guide/configuring-the-catalog/virtual-csw-configuration.rst:22
+msgid ""
+"As Harvest and Transaction operations are not affected by ``filter`` "
+"parameter, to avoid confusion is better to use this feature as readonly "
+"CSW endpoints."
+msgstr ""
+

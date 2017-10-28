@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:4
+msgid "Deleting a record"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:6
+msgid "User must have editing privileges to be able to remove a record."
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:8
+msgid "There are different ways to remove a record:"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:10
+msgid "In the record view, click the ``delete`` menu"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:11
+msgid ""
+"From the search results, select on or more records and select ``delete`` "
+"in the ``actions on selection`` menu"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:13
+msgid "In the ``contribute`` section click the ``delete`` button for a record."
+msgstr ""
+
+#: ../../source/user-guide/describing-information/deleting-metadata.rst:17
+msgid ""
+"Note, that if a metadata originates from a harvester, that metadata will "
+"automatically be removed when the metadata in the harvested system is "
+"removed or the harvester itself is removed and the record will be "
+"inserted again on the next harvester run."
+msgstr ""
+

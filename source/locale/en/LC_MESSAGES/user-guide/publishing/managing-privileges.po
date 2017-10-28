@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:4
+msgid "Managing privileges"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:7
+msgid ""
+"To manage privileges to your metadata record and any attached data you "
+"will need to identify User Groups and the privileges you want to assign "
+"to users in these groups. eg. View the metadata, download the data "
+"attached to the record, etc."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:9
+msgid ""
+"For instance, you can specify that the metadata and related services are "
+"visible to all (Internet users) or just to internal users only "
+"(Intranet). Privileges are assigned on a per group basis. Depending on "
+"the user profile (Guest, Registered User, Editor, Admin etc.) access to "
+"these functions may differ on a per user basis."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:11
+msgid "To assign privileges, follow these steps:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:13
+msgid ""
+"Find your metadata record by using the search option. Whether you have "
+"multiple or single results from the search, on top of the individual "
+"record or next to the record you will always see a row of buttons "
+"including a Privileges button."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:16
+msgid ""
+"Click on the Privileges button. A drop down menu will appear from which "
+"you can assign certain privileges to specific groups using checkboxes. "
+"Simply click on the small box next to the privilege to place or remove a "
+"checkmark. Set All and Clear All buttons allow you to place and remove "
+"the checkmarks all at once."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:18
+msgid ""
+"Below is a brief description for each privilege to help you identify "
+"which ones you should assign to which group(s)."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:20
+msgid ""
+"**Publish**: Users in the specified group/s are able to view the metadata"
+" eg. if it matches search criteria entered by such a user."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:22
+msgid ""
+"**Download**: Users in the specified group/s are able to download the "
+"data."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:24
+msgid ""
+"**Interactive Map**: Users in the specified group/s are able to get an "
+"interactive map. The interactive map has to be created separately using a"
+" Web Map Server such as GeoServer, which is distributed with GeoNetwork."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:26
+msgid ""
+"**Featured**: When randomly selected by GeoNetwork, the metadata record "
+"can appear in the `Featured` section of the GeoNetwork home page."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:28
+msgid ""
+"**Notify**: Users in the specified group receive notification if data "
+"attached to the metadata record is downloaded."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:31
+msgid ""
+"Please review and make sure that you understand :ref:`user_profiles` in "
+"the User and Group Administration section of this manual."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:33
+msgid ""
+"A public metadata record is a metadata record that has the view privilege"
+" for the group named \"All\"."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:35
+msgid ""
+"The following rules apply to Viewing and Editing permissions on a "
+"metadata record:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:38
+msgid "Viewing"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:40
+msgid "An *administrator* can view any metadata."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:42
+msgid "A *content reviewer* can view a metadata if:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:44
+msgid "The metadata is public or"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:46
+msgid "The metadata is part of a group that the user is a member of."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:48
+msgid "A *user administrator* or an *editor* can view:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:50
+#: ../../source/user-guide/publishing/managing-privileges.rst:56
+msgid ""
+"All metadata that has the view privilege selected for one of the groups "
+"she/he is member of."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:52
+msgid "All metadata created by her/him."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:54
+msgid "A *registered user* can view:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:58
+msgid "Public metadata can be viewed by any user (logged in or not)."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:61
+msgid "Editing"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:63
+msgid "An *administrator* can edit any metadata."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:65
+msgid "A *reviewer* can edit a metadata if:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:67
+msgid ""
+"The metadata owner is member of one of the groups assigned to the "
+"reviewer."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:69
+msgid "She/he is the metadata owner."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:71
+msgid ""
+"A *User Administrator* or an *Editor* can only edit metadata she/he "
+"created."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:74
+msgid "Setting Privileges on a metadata record"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:76
+msgid ""
+"A button to access the Privileges page for a metadata record will appear "
+"in the search results or when the record is being viewed for:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:78
+msgid "All Administrators"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:80
+msgid ""
+"All Reviewers that are member of one of the groups assigned to the "
+"metadata owner."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:82
+msgid "The Owner of the metadata"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:84
+msgid ""
+"Privileges for the All and Intranet groups can only be edited by "
+"Administrators and Reviewers."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:87
+msgid "Setting Privileges on a selected set of metadata records"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:89
+msgid ""
+"Privileges can be set on a selected set of records in the search results "
+"using the \"actions on selected set\" menu."
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:94
+msgid "The following rules apply:"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:96
+msgid "the groups are those that the user belongs to"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:97
+msgid ""
+"the privileges specified will only be applied to records that the user "
+"has ownership or administration rights on - any other records will be "
+"skipped"
+msgstr ""
+
+#: ../../source/user-guide/publishing/managing-privileges.rst:98
+msgid ""
+"the current records privileges will be reset and replaced by the one "
+"selected"
+msgstr ""
+

@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative
+# Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork
+# opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:4
+msgid "Tutorial setting up a WFS based INSPIRE download service with GeoServer"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:6
+msgid ""
+"This tutorial shows how one can set up a combination of GeoNetwork and "
+"Geoserver to provide download services following `technical guidelines "
+"for download services <http://inspire.ec.europa.eu/documents/technical-"
+"guidance-implementation-inspire-download-services>`_."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:8
+msgid ""
+"Note that the technical guidelines allow both Atom/OpenSearch as well as "
+"`WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial "
+"describes how to set up a download service using WFS."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:11
+msgid "GeoServer"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:13
+msgid ""
+"To support the INSPIRE data models the geoserver `\"appschema\" plugin "
+"<http://docs.geoserver.org/stable/en/user/data/app-schema/>`_ needs to be"
+" installed. Configuring appschema support in GeoServer is not the goal of"
+" this tutorial. Appschema support for INSPIRE is nicely documented by "
+"`Marcus Sen "
+"<https://data.gov.uk/sites/default/files/library/INSPIREWFSCookbook_v1.0.pdf>`_."
+" Another valuable resource is available at `geosolutions <http://www.geo-"
+"solutions.it/blog/inspire-support-in-geoserver-made-easy-with-hale/>`_. "
+"In this tutorial we'll focus on metadata aspects of a WFS download "
+"service."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:15
+msgid ""
+"Download and install GeoServer INSPIRE extension as documented in "
+"`installing inspire extension  "
+"<http://docs.geoserver.org/latest/en/user/extensions/inspire/installing.html>`_"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:17
+msgid ""
+"Create at least one workspace per datamodel. On workspace properties "
+"activate \"Settings\" and set the selected service type (WFS)."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:21
+msgid ""
+"On WFS settings, select the new workspace and fill out the form (keep "
+"service metadata url empty for now) as described in `using inspire "
+"extension "
+"<http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html"
+"#inspire-using>`_. If the new workspace is not in the pull down, return "
+"to previous step and make sure \"Settings\" is activated for the "
+"workspace. If the INSPIRE fields are not visible, make sure the INSPIRE "
+"extension is correctly installed."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:25
+msgid "Create featuretypes according to the appschema documentation."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:28
+msgid "GeoNetwork"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:30
+msgid ""
+"When deploying Geonetwork, make sure the GEMET thesauri are loaded and "
+"activate the INSPIRE editor as described in `inspire documentation <http"
+"://geonetwork-opensource.org/manuals/trunk/eng/users/administrator-guide"
+"/configuring-the-catalog/inspire-configuration.html>`_."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:32
+msgid "In Admin > Settings activate the INSPIRE extension."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:36
+msgid ""
+"For each dataset that you are going to publish create an iso19115 record "
+"using the INSPIRE template. Link each record to a download service as "
+"created in geoserver: eg "
+"https://{url}/geoserver/{workspace}/ows?request=getcapabilities&service=wfs&version=2.0.0"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:40
+msgid ""
+"Create an OGC harvester that is able to extract a metadata for service "
+"(iso19119) record from the WFS. Run the harvester and note down the "
+"identifier of the created service metadata."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:43
+msgid "Return to GeoServer"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:45
+msgid ""
+"For each layer add a metadata url to the layer configuration of type "
+"application/vnd.ogc.csw.GetRecordByIdResponse_xml."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:47
+msgid ""
+"On the WFS-settings > INSPIRE workspace add the link to the service "
+"metadata. In contradiction to WMS does WFS not link from a featuretype "
+"(layer) to metadata, in stead the links to dataset metadata have to be "
+"added as part of the extende INSPIRE capabilities."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:50
+msgid "Validate the implementation"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:52
+msgid ""
+"If you are running the above setup online, you can use the `pilot JRC "
+"INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. "
+"If the above setup is running locally, you can use `Esdin Test Framework "
+"<https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the"
+" INSPIRE setup."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-geoserver.rst:56
+msgid ""
+"Running the test frequently during development helps to identify issues "
+"in an early stage."
+msgstr ""
+
