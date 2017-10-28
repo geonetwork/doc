@@ -33,7 +33,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 .. code-block:: shell
 
     # Create it if it does not exist yet
-    git checkout -b $versionbranch origin/$versionbranch
+    git checkout -b $versionbranch origin/develop
 
     # Move into it if it exist
     git checkout $versionbranch
@@ -180,8 +180,8 @@ If needed, merge the changes into the develop branch.
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
     # or for RC release
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
-    mkdir v3.0.0
-    cd v3.0.0
+    mkdir 3.0.0
+    cd 3.0.0
     put docs/changes3.0.0-0.txt
     put geonetwork*/*.jar
     put web/target/geonetwork.war

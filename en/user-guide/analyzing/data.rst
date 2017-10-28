@@ -13,7 +13,7 @@ The catalog collect WFS features and index them.
 .. figure:: img/mechanism.png
 
 
-Solr needs to be installed and configured (See :ref:`installing-solr`).
+Elasticsearch needs to be installed and configured (See :ref:`installing-index`).
 
 
 Once collected, filtering is available in the map viewer for this layer. The filter
@@ -54,10 +54,10 @@ Spatial filters can also be applied.
 .. figure:: img/filteringlayer.png
 
 
-Feature type customisation
------------------------------
+Feature type customization
+--------------------------
 
-By default, the filter panel is generated from solr Index. But you customise it for a specific WFS Feature Type.
+By default, the filter panel is generated from Elasticsearch index. But you customise it for a specific WFS Feature Type.
 
 The customisation is done by a JSON config inserted in the gmd:applicationProfile section of the online resource in the metadata.
 
@@ -86,7 +86,7 @@ Here the options::
       "name": "LABEL",
       "label" : {"fr": "monLabel", "en": "myLabel"}
     }],
-    "tokenizedFields": {"GRIDCODE": ",", "PARCELLE": "/"},
+    "tokenize": {"GRIDCODE": ",", "PARCELLE": "/"},
     "heatmap": true
     }
 

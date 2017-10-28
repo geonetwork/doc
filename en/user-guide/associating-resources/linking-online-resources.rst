@@ -85,7 +85,7 @@ To add a WMS layer:
 
 - choose the protocol ``OGC:WMS Web Map Service``,
 - set the URL of the service,
-- then the wizard will query the service to retrieve the list of layers
+- then the wizzard query the service to retrieve the list of layers
 - choose one or more layer in the list or set it manually.
 
 
