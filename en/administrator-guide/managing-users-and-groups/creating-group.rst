@@ -20,7 +20,7 @@ To create new groups you should be logged on with an account that has Administra
 #. Fill out the details. The email address will be used to send feedback on data downloads when they occur for resources that are part of the Group.
 
     .. warning:: 
-        The Name should *NOT* contain spaces! You can use the Localization panel to provide localized names for groups.
+        The Name should *NOT* contain spaces and is limited to 32 characters! You can use the Localization panel to provide localized names for groups.
 
 
 #. Click on *Save*
