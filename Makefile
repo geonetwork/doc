@@ -62,7 +62,8 @@ html_all_languages:
 update_translations:
 	@echo "Pushing strings to transifex"
 	make gettext
-	tx push -s
+	set -e; sphinx-intl update-txconfig-resources --pot-dir _build/locale --transifex-project-name core-geonetwork;
+	set -e; tx push -s
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
