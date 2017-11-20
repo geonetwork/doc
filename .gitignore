@@ -3,4 +3,5 @@ target
 .project
 .settings/
 _build
+source/locale
 translations
