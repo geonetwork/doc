@@ -53,6 +53,16 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/*
 	rm -rf $(SRCDIR)/generated
+	@echo "Esto sí"
+
+html_all_languages:
+	@echo "Building documentation in html for all languages"
+	set -e; for lang in "en" "es" "fr" "ge" "it" "ko" "nl" "cz" "ca" "fi" "is"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang'"; done
+	
+update_translations:
+	@echo "Pushing strings to transifex"
+	make gettext
+	tx push -s
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
