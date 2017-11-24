@@ -10,14 +10,15 @@ sudo apt-get install make
 Sphinx is required to build documentation.See http://sphinx-doc.org/latest/install.html.ç
 YOu can install it with [pip](https://pip.pypa.io/en/stable/installing/):
 ```
-$ sudo easy_install pip
-$ sudo pip install sphinx
+sudo easy_install pip
+sudo pip install sphinx
 ```
 
 The theme is based on [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme) and the sphinx_bootstrap_theme.
 You can install the style with pip too:
 ```
-$ sudo pip install sphinx_boostrap_theme
+sudo pip install sphinx_boostrap_theme
+sudo pip install sphinx_rtd_theme
 ```
 
 The internationalization is build used [sphinx-intl](http://www.sphinx-doc.org/es/stable/intl.html)
@@ -28,7 +29,7 @@ https://docs.transifex.com/client/installing-the-client
 The Transifex Client is written in Python, so it runs on most systems. The easiest way to install it is with pip:
 
 ```
-$ sudo pip install transifex-client
+sudo pip install transifex-client
 ```
 And then you need to configure your transifex user:
 https://docs.transifex.com/client/client-configuration
