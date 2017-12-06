@@ -1,0 +1,609 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:4
+msgid "Customizing editor"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:10
+msgid "A metadata editor configuration is defined for a specific schema plugin standard (see :ref:`implementing-a-schema-plugin`)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:13
+msgid "The editor configuration defined the navigation menu (ie. list of views and tabs) for the editor, the list of fields and the type of control to use. Controls could be HTML type (eg. text, date) or more advanced control build using `AngularJS directive <https://docs.angularjs.org/guide/directive>`_."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:19
+msgid "To build such an editor configuration user needs to know the XSD of the standard to properly build views, tabs and fields according to element names (see :code:`schemas/config-editor.xsd`). Create an editor root element and attach:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:24
+msgid "the schema and"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:26
+msgid "namespaces for the standards"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:42
+msgid "An editor configuration should define first some general element description and then a set of views with at least one."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:48
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:181
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:278
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:371
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:667
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:888
+msgid "Child elements:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:50
+msgid "**fields**, Optional element (see :ref:`creating-custom-editor-fields`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:52
+msgid "**fieldsWithFieldset**, Optional element (see :ref:`creating-custom-editor-fieldsWithFieldset`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:54
+msgid "**multilingualFields**, Optional element (see :ref:`creating-custom-editor-multilingualFields`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:56
+msgid "**views**, Mandatory element (see :ref:`creating-custom-editor-views`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:62
+msgid "Defining field type"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:64
+msgid "Define the form fields type configuration. Default is simple text input. This list contains the list of exception which does not use a simple text input. The list of possible values are:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:68
+msgid "all HTML5 input type or"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:70
+msgid "an AngularJS directive name."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:73
+msgid "An element can only have one type defined."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:86
+msgid "The other option to define a more advanced field type is to catch the element using and XSL template. This approach is used for keywords in ISO19139 for example (see :code:`schemas/iso19139/src/main/plugin/iso19139/layout/layout-custom-fields-keywords.xsl`)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:99
+msgid "Grouping element from the standards"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:101
+msgid "List of element to be displayed in a fieldset (ie. boxed element). Those elements usually contain children elements and define major section in the standard. For example, in ISO19139, identification and distribution are major section and should usually be displayed as a group of information."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:121
+msgid "Defining multilingual fields"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:123
+msgid "Configure here the list of multilingual fields for a standard."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:125
+msgid "By default, if the standard as multilingual support like ISO19139, all fields will be displayed as multilingual fields. Define in the exclude section the exception (eg. gmd:identifier for example in ISO19139)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:128
+msgid "Then this section also allows to define how multilingual fields are displayed using the expanded elements. If expanded, then one field per language is displayed with no need to click on the language switcher."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:157
+msgid "Configuring views"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:159
+msgid "At least one view MUST be defined but more view modes can be defined depending on the needs."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:161
+msgid "By default ISO19139 define 3 views (ie. default, advanced, xml) and one disabled (ie. INSPIRE). See :code:`schemas/iso19139/src/main/plugin/iso19139/layout/config-editor.xml` for the configuration."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:166
+msgid "Another basic example is the Dublin Core view (see :code:`schemas/dublin-core/src/main/plugin/dublin-core/layout/config-editor.xml`)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:168
+msgid "To create a new view, use the following:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:183
+msgid "**view**, One or more (see :ref:`creating-custom-editor-view`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:189
+msgid "Defining a view"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:191
+msgid "A view has a label and define a specific rendering of the metadata records. A view is composed of one or more tabs."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:203
+msgid "The view could be displayed or not according to the metadata record content or the current user session using the displayIfRecord and displayIfServiceInfo attribute."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:209
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:314
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:449
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:589
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:757
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:820
+msgid "Attributes:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:211
+msgid "**name** (Mandatory)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:213
+msgid "The key of the view name stored in ``{schema}/loc/{lang}/strings.xml`` or the element name with namespace prefix."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:225
+msgid "**disabled** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:227
+msgid "Hide the view from the menu if the attribute is defined. Allows to easily disable a view."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:230
+msgid "**upAndDownControlHidden** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:232
+msgid "Define if up and down control should be displayed in that view. If not defined, controls are displayed. Hide those controls in a view to make it easier with less controls for the end-user."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:240
+msgid "**displayIfRecord** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:242
+msgid "XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed. eg. Display custom-view if metadata standard name contains Medsea:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:254
+msgid "**displayIfServiceInfo** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:256
+msgid "XPath expression returning boolean value which will be evaluate against the service information tree (Jeeves /root/gui element). if true the view will be displayed."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:259
+msgid "eg. Display custom view if user is Administrator:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:266
+msgid "displayIfRecord and displayIfServiceInfo could be combined. An AND operator is used. Both condition MUST returned true for the view to be displayed."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:270
+msgid "**hideTimeInCalendar** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:272
+msgid "Define if calendar control should allows users to set date only or datetime. If attribute is not set, then date and time can be set. This is controlled at the view level, switching to another view may allow more control over the dates."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:280
+msgid "**tab**, One or more (see :ref:`creating-custom-editor-tab`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:282
+msgid "**flatModeExceptions**, Optional element (see :ref:`creating-custom-editor-flatModeExceptions`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:284
+msgid "**thesaurusList**, Optional element (see :ref:`creating-custom-editor-thesaurusList`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:290
+msgid "Defining a tab"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:292
+msgid "A view contains at least one tab. In that case it will be the default to display and no top toolbar will be displayed to switch from one tab to another."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:297
+msgid "Add custom view one default tab and a field for the title:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:316
+msgid "**id** (Mandatory)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:318
+msgid "The tab key used in URL parameter to activate that tab. The key is also use for the tab label as defined in ``{schema}/loc/{lang}/strings.xml``."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:321
+msgid "**default** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:323
+msgid "Define if this tab is the default one for the view. Only one tab should be the default in a view."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:326
+msgid "**toggle** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:328
+msgid "Define if the tab should be displayed in a drop down menu instead of a tab. This is used for advanced section which is not used often by the end-user. More than one tab could be grouped in that drop down tab menu."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:332
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:459
+msgid "**mode** (Optional) Fixed value: **flat**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:334
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:461
+msgid "The \"flat\" mode is an important concept to understand for the editor. It controls the way:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:336
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:463
+msgid "complex elements are displayed (ie. elements having children) and"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:338
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:465
+msgid "non existing elements are displayed (ie. elements in the standard not in the current document)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:341
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:468
+msgid "When a tab is in flat mode, this tab will not display element which are not in the current metadata document and it will display complex element as a group only if defined in the list of element with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:345
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:472
+msgid "Example for a contact in non \"flat\" mode:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:351
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:478
+msgid "Example for a contact in \"flat\" mode:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:357
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:484
+msgid "This mode makes the layout simpler but does not provide all controls to remove some of the usually boxed element. End-user can still move  to the advanced view mode to access those hidden elements in flat mode."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:361
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:488
+msgid "It's recommended to preserve at least one view in non \"flat\" mode for reviewer or administrator in order to be able:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:364
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:491
+msgid "to build proper templates based on the standards"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:366
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:493
+msgid "to fix any types of errors."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:373
+msgid "**section**, Zero or more (see :ref:`creating-custom-editor-section`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:378
+msgid "Configuring complex element display"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:380
+msgid "Elements to apply \"flat\" mode exceptions. By default, \"flat\" mode does not display elements containing only children and no value."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:400
+msgid "eg. To display gmd:descriptiveKeywords element even if does not exist in the metadata record or if the field should be displayed to add new occurences:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:419
+msgid "Customizing thesaurus"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:421
+msgid "To configure the type of transformations or the number of keyword allowed for e thesaurus define a specific configuration:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:425
+msgid "eg. only 2 INSPIRE themes."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:442
+msgid "Adding a section to a tab"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:444
+msgid "A section is a group of fields."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:451
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:609
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:822
+msgid "**name** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:453
+msgid "An optional name to override the default one base on field name for the section. The name must be defined in ``{schema}/loc/{lang}/strings.xml``."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:455
+msgid "**xpath** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:457
+msgid "The xpath of the element to match. If an XPath is set for a section, it should not contains any field."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:498
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:502
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:621
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:859
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:863
+msgid "**or** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:500
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:861
+msgid "Local name to match if the element does not exist."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:505
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:624
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:866
+msgid "The local name of the geonet child (ie. non existing element) to match."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:515
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:519
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:634
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:876
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:880
+msgid "**in** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:517
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:878
+msgid "XPath of the geonet:child element with the or name to look for. Usually points to the parent of last element of the XPath attribute."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:521
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:636
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:882
+msgid "The element to search in for the geonet child."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:527
+msgid "Adding a field"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:529
+msgid "To display a simple element use the ``xpath`` attribute to point to the element to display:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:536
+msgid "To override a field label use the ``name`` attribute and define that new label in ``{schema}/loc/{lang}/strings.xml``:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:544
+msgid "To display a complex element which exist in the metadata document:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:551
+msgid "In that case all children elements are also displayed."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:555
+msgid "To display a field if exist in the metadata document or providing a add button in case it does not exist (specify ``in`` and ``or`` attribute):"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:568
+msgid "Activate the \"flat\" mode at the tab level to make the form display only existing elements:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:591
+msgid "**xpath** (Mandatory)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:593
+msgid "The xpath of the element to match."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:595
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:842
+msgid "**if** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:597
+msgid "An optional xpath expression to evaluate to define if the element should be displayed only in some situation (eg. only for service metadata records). eg."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:611
+msgid "A field name to override the default name."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:613
+msgid "**isMissingLabel** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:615
+msgid "The label to display if the element does not exist in the metadata record. It indicates that the element is missing in the current record. It could be use for a conformity section saying that the element is \"not evaluated\". EXPERIMENTAL"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:638
+msgid "**del** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:641
+msgid "Relative XPath of the element to remove when the remove button is clicked."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:643
+msgid "eg. If a template field match linkage and allows editing of field URL, the remove control should remove the parent element gmd:onLine."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:657
+msgid "**templateModeOnly** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:659
+msgid "Define if the template mode should be the only mode used. In that case, the field is always displayed based on the XML template snippet field configuration. Default is false."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:663
+msgid "**notDisplayedIfMissing** (Optional) Fixed value: **true**"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:665
+msgid "If the field is found and a geonet child also, the geonet child to add a new one is not displayed."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:669
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:890
+msgid "**template**, Optional element (see :ref:`creating-custom-editor-template`)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:675
+msgid "Adding a template based field"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:677
+msgid "A templace configuration for an XML snippet to edit."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:679
+msgid "A template field is compose of an XML snippet corresponding to the element to edit where values to be edited are identified using {{fields}} notation. Each fields needs to be defined as values from which one input field will be created."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:681
+msgid "This mode is used to hide the complexity of the XML element to edit. eg."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:702
+msgid "The template field mode will only provide editing of part of the snippet element. In some case the snippet may contains more elements than the one edited. In such case, the snippet MUST identified the list of potential elements in order to not to loose information when using this mode. Use the gn:copy element to properly combined the template with the current document."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:704
+msgid "eg. The gmd:MD_Identifier may contain a gmd:authority node which needs to be preserved."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:725
+msgid "Adding documentation or help"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:727
+msgid "Insert an HTML fragment in the editor."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:740
+msgid "The fragment is defined in localization file strings.xml:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:759
+msgid "**ref** (Mandatory)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:761
+msgid "The tag name of the element to insert in the localization file."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:766
+msgid "Adding a button"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:768
+msgid "A button which trigger an action (usually a process or a add button)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:770
+msgid "Example of a button adding an extent:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:805
+msgid "Example of a button displayed only if there is no resource identifier ending with the metadata record identifier (ie. ``if`` attribute) and running the process with ``add-resource-id`` identifier:"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:824
+msgid "TODO"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:826
+msgid "**type** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:828
+msgid "The type of control"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:830
+msgid "**process** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:832
+msgid "The process identifier (eg. add-resource-id)."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:834
+msgid "**forceLabel** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:836
+msgid "Force the label to be displayed for this action even if the action is not the first element of its kind. Label with always be displayed."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:845
+msgid "An XPath expression to evaluate. If true, the control is displayed. eg."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:855
+msgid "will only displayed the action control if the resource identifier does not end with the metadata identifier."
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:884
+msgid "**addDirective** (Optional)"
+msgstr ""
+
+#: ../../source/customizing-application/editor-ui/creating-custom-editor.rst:886
+msgid "The directive to use for the add control for this field."
+msgstr ""
+

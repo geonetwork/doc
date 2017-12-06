@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tutorials/customui/view/formatter.rst:5
+msgid "Create a new formatter"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:8
+msgid "Objectives"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:9
+msgid "oversee groovy formatter mechnism"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:10
+msgid "understand handlers, matchers concepts"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:11
+msgid "create a small formatter"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:14
+msgid "Exercices"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:16
+msgid "Add a new formatter that display all text information of the metadata in basic layout."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:17
+msgid "Update previous formatter to display labels of the text fields."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:18
+msgid "Use formatter templating system to render the handler's view"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:19
+msgid "Add styling to your formatter view."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:20
+msgid "Create a tree for rendering elements"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:21
+msgid "Use translation of iso elements"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:22
+msgid "Use default tree styling"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:23
+msgid "Use all default view formatter elements"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:24
+msgid "Customise default formatter view"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:25
+msgid "Overload handlers methods"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:28
+msgid "Corrections"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:30
+msgid "Go to https://github.com/fgravin/core-geonetwork/commits/foss4g"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:32
+msgid "1. Create a new formatter - create a new folder named 'foss4g\" in /schemas/iso19139/src/main/plugin/iso19139/formatter - create a new groovy file in this new folder - text information are stored in ``gco:CharacterString``"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:41
+msgid "Add a matcher and play with ``name`` and ``text`` properties."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:49
+msgid "Use ``handlers.fileResult`` function"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:51
+#: ../../source/tutorials/customui/view/formatter.rst:95
+#: ../../source/tutorials/customui/view/formatter.rst:113
+#: ../../source/tutorials/customui/view/formatter.rst:141
+#: ../../source/tutorials/customui/view/formatter.rst:157
+#: ../../source/tutorials/customui/view/formatter.rst:180
+#: ../../source/tutorials/customui/view/formatter.rst:194
+#: ../../source/tutorials/customui/view/formatter.rst:217
+msgid "view.groovy"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:59
+#: ../../source/tutorials/customui/view/formatter.rst:127
+msgid "elem.html"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:68
+msgid "Add a custom less file in wro4j inspected folders and link it to your formatter"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:70
+msgid "formatter.less"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:111
+msgid "Use ``fmt-repeat-only-children`` in template and ``prent()`` function."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:139
+msgid "See ``nodeLabel`` function"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:155
+msgid "Add ``gn-metadata-view`` class to your container update your handler."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:178
+msgid "See ``SummaryFactory`` class."
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:192
+msgid "Add custom option to the ``SummaryFactory``"
+msgstr ""
+
+#: ../../source/tutorials/customui/view/formatter.rst:215
+msgid "Add custom behavior to ``iso19139.Handlers`` constructor"
+msgstr ""
+

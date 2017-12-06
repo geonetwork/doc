@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/overview/change-log/version-3.0.1.rst:4
+msgid "Version 3.0.1"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:8
+msgid "New features"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:10
+msgid "`Map viewer provides now 3D mode <https://github.com/geonetwork/core-geonetwork/pull/1012>`_ using `Cesiumjs <http://cesiumjs.org/>`_"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:11
+msgid "Make your map in the visualization tools and `save your maps in the catalog <https://github.com/geonetwork/core-geonetwork/issues/1036>`_"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:12
+msgid "`Spatial filter is now available on the minimap <https://github.com/geonetwork/core-geonetwork/issues/1051>`_"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:13
+msgid "`Browse catalog by INSPIRE themes <https://github.com/geonetwork/core-geonetwork/issues/1054>`_ and use the new `INSPIRE icon set <https://github.com/titellus/INSPIRE-themes-icons>`_"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:14
+msgid "`Resource status is clearly displayed in search results <https://github.com/geonetwork/core-geonetwork/issues/1044>`_"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:15
+msgid "Record view better displays links to local file on the network and database tables"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:16
+msgid "Multiple bounding boxes are supported on bounding box map highlighter and record view"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:17
+msgid "Sitemap is paginated"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:21
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:23
+msgid "Fix map printing on Tomcat 8"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:24
+msgid "Metadata editor now properly compute extent from geographic keyword"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:25
+msgid "Properly upload thesaurus"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.0.1.rst:27
+msgid "and more ... see `3.0.1 issues <https://github.com/geonetwork/core-geonetwork/issues?page=2&q=is%3Aissue+milestone%3A3.0.1+is%3Aclosed>`_ and `pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.0.1+is%3Aclosed+is%3Apr>`_ for full details."
+msgstr ""
+

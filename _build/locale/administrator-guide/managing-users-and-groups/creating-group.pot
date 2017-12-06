@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:5
+msgid "Creating group"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:8
+msgid "The administrator can create new groups of users. User groups can correspond to logical units within an organisation. For example groups for Fisheries, Agriculture, Land and Water, Health etcetera."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:12
+msgid "To create new groups you should be logged on with an account that has Administrative privileges."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:14
+msgid "Select the *Administration* button in the menu. On the Administration page, select *Group management*."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:17
+msgid "Select *Add a new group*. You may want to remove the *Sample* group;"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:20
+msgid "Fill out the details. The email address will be used to send feedback on data downloads when they occur for resources that are part of the Group."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:23
+msgid "The Name should *NOT* contain spaces! You can use the Localization panel to provide localized names for groups."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:26
+msgid "Click on *Save*"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:28
+msgid "Access privileges can be set per metadata record. You can define privileges on a per Group basis."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:30
+msgid "Privileges that can be set relate to visibility of the Metadata (*Publish*), data *Download*, *Interactive Map* access and display of the record in the *Featured* section of the home page."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:33
+msgid "*Editing* defines the groups for which editors can edit the metadata record."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:35
+msgid "*Notify* defines what Groups are notified when a file managed by GeoNetwork is downloaded."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/creating-group.rst:37
+msgid "Below is an example of the privileges management table related to a dataset."
+msgstr ""
+

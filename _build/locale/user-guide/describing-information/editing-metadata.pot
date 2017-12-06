@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:4
+msgid "Editing metadata"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:7
+msgid "This section describes how to use the metadata editor"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:10
+msgid "Using the editor toolbar"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:12
+msgid "The top tool bar provides the main editor actions:"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:16
+msgid "From left to right:"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:18
+msgid "Set metadata categories"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:19
+msgid "Set metadata group"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:20
+msgid "Advanced features (eg. versioning)"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:21
+msgid "``Valdate`` to run metadata validation"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:22
+msgid "``Cancel`` to cancel all changes made since the beginning of the editing session"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:23
+msgid "``Save & Close`` to save and close the editor"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:24
+msgid "``Save`` to save the metadata or the template. The drowdown also allows to set if the edits are minor or not (ie. the change date of the metadata will not be updated if case of minor edits)."
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:27
+msgid "Change view mode for the editor form, enable tooltips or switch to advanced editor mode"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:32
+msgid "Navigating the form"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:34
+msgid "To describe the resource, editor can use the form which provides different views. By default the editor provides:"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:37
+msgid "a ``simple view`` displaying all fields from the metadata"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:38
+msgid "a ``full view`` based on the metadata standard and providing access to all descriptors from the standards"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:40
+msgid "an *XML view** displaying the record as an XML document"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:42
+msgid "To switch from one view to another, use the following menu:"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:47
+msgid "Once the view selected, user can browse the list of fields to populate. He can also use the scroll spy on the lower right corner to quickly access a section."
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:52
+msgid "The scroll spy highlight the visible sections, help user to return to the top of the form and can be minimized if needed."
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:59
+msgid "Populating fields"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:0
+#: ../../source/user-guide/describing-information/editing-metadata.rst:0
+msgid "Todo"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:62
+msgid "Add details about add/remove/directory controls"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:63
+msgid "Add details about directory / thesaurus"
+msgstr ""
+
+#: ../../source/user-guide/describing-information/editing-metadata.rst:66
+msgid "Depending on the view configuration (see :ref:`creating-custom-editor`), editor can reorder elements using up and down control."
+msgstr ""
+
