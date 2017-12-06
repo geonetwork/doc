@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:4
+msgid "User Self-Registration"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:6
+msgid "To enable the self-registration functions, see :ref:`system-configuration`. When self-registration is enabled, the login page shows to a user who are not connected, a ``Need an account`` link:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:13
+msgid "Click the ``Create an account`` and fill out the registration forms:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:19
+msgid "The fields in this form are self-explanatory except for the following:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:21
+msgid "**Email**: The user's email address. This is mandatory and will be used as the username."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:23
+msgid "**Profile**: By default, self-registered users are given the ``Registered User`` profile (see previous section). If any other profile is selected:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:26
+msgid "the user will still be given the ``Registered User`` profile"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:28
+msgid "an email will be sent to the Email address nominated in the Feedback section of the 'System Administration' menu, informing them of the request for a more privileged profile"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:34
+msgid "What happens when a user self-registers?"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:36
+msgid "When a user self-registration occurs, the user receives an email with the new account details that looks something like the following:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:61
+msgid "Notice that the user has requested an 'Editor' profile. As a result an email will be sent to the Email address nominated in the Feedback (see :ref:`system-config-feedback`) section of the ``System Administration`` menu which looks something like the following:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:65
+msgid "Notice also that the user has been added to the built-in user group 'GUEST'. This is a security restriction. An administrator/user-administrator can add the user to other groups if that is required later."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:69
+msgid "If you want to change the content of this email, you should modify ``xslt/service/account/registration-pwd-email.xsl``."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:97
+msgid "If you want to change the content of this email, you should modify ``xslt/service/account/registration-prof-email.xsl``."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:101
+msgid "The 'Forgot your password?' function"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:103
+msgid "This function allows users who have forgotten their password to request a new one. Go to the sign in page to access the form:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:109
+msgid "For security reasons, only users that have the ``Registered User`` profile can request a new password."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:111
+msgid "If a user takes this option they will receive an email inviting them to change their password as follows:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:125
+msgid "The catalog has generated a changeKey from the forgotten password and the current date and emailed that to the user as part of a link to a change password form."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:129
+msgid "If you want to change the content of this email, you should modify ``xslt/service/account/password-forgotten-email.xsl``."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:131
+msgid "When the user clicks on the link, a change password form is displayed in their browser and a new password can be entered. When that form is submitted, the changeKey is regenerated and checked with the changeKey supplied in the link, if they match then the password is changed to the new password supplied by the user."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:137
+msgid "The final step in this process is a verification email sent to the email address of the user confirming that a change of password has taken place:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/user-self-registration.rst:148
+msgid "If you want to change the content of this email, you should modify ``xslt/service/account/password-changed-email.xsl``."
+msgstr ""
+

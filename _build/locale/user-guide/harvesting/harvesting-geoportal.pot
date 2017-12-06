@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:4
+msgid "GeoPortal REST Harvesting"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:6
+msgid "This harvester will connect to a remote GeoPortal version 9.3.x or 10.x server and retrieve metadata records that match the query parameters specified using the GeoPortal REST API."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:9
+msgid "Adding a GeoPortal REST harvester"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:11
+msgid "The figure above shows the options available:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:13
+msgid "**Site** - Options about the remote site."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:15
+msgid "*Name* - This is a short description of the remote site. It will be shown in the harvesting main page as the name for this instance of the GeoPortal REST harvester."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:16
+msgid "*Base URL* - The base URL of the GeoPortal server to be harvested. eg. http://yourhost.com/geoportal. The harvester will add the additional path required to access the REST services on the GeoPortal server."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:17
+msgid "*Icon* - An icon to assign to harvested metadata. The icon will be used when showing harvested metadata records in the search results."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:19
+msgid "**Search criteria** - Using the Add button, you can add several search criteria. You can query any field on the GeoPortal server using the Lucene query syntax described at http://webhelp.esri.com/geoportal_extension/9.3.1/index.htm#srch_lucene.htm."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:21
+msgid "**Options** - Scheduling options."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:25
+msgid "**Harvested Content** - Options that are applied to harvested content."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:27
+msgid "*Apply this XSLT to harvested records* - Choose an XSLT here that will convert harvested records to a different format. See notes section below for typical usage."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:28
+msgid "*Validate* - If checked, the metadata will be validated after retrieval. If the validation does not pass, the metadata will be skipped."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:30
+msgid "**Privileges** - Assign privileges to harvested metadata."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:34
+msgid "**Categories**"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:39
+msgid "Notes"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:43
+msgid "this harvester uses two REST services from the GeoPortal API:"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:45
+msgid "``rest/find/document`` with searchText parameter to return an RSS listing of metadata records that meet the search criteria (maximum 100000)"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:46
+msgid "``rest/document`` with id parameter from each result returned in the RSS listing"
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:48
+msgid "this harvester has been tested with GeoPortal 9.3.x and 10.x. It can be used in preference to the CSW harvester if there are issues with the handling of the OGC standards etc."
+msgstr ""
+
+#: ../../source/user-guide/harvesting/harvesting-geoportal.rst:50
+msgid "typically ISO19115 metadata produced by the Geoportal software will not have a 'gmd' prefix for the namespace ``http://www.isotc211.org/2005/gmd``. GeoNetwork XSLTs will not have any trouble understanding this metadata but will not be able to map titles and codelists in the viewer/editor. To fix this problem, please select the `Add-gmd-prefix` XSLT for the *Apply this XSLT to harvested records* in the **Harvested Content** set of options described earlier"
+msgstr ""
+

@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user-guide/workflow/geopublication.rst:4
+msgid "Publishing GIS data in a map server"
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:6
+msgid "To publish data from the metadata editor in a remote map server, first the catalog administrator needs to configure connection to map servers in the administration interface (see :ref:`map-server-configuration`)."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:10
+msgid "Once done, editors have to reference GIS files or spatial database tables in the metadata record (see :ref:`linking-online-resources-georesource`)."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:13
+msgid "When a spatial resource is detected and one or more map servers are configured, the geopublication wizard is available in the metadata editor."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:18
+msgid "Choose a resource from the list to display the wizard. The wizard display the list of map servers available:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:23
+msgid "Choose the server you want to publish the data in. When selected, the catalog will check if the dataset is already published or not. If found, it will be added to the map."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:29
+msgid "If not, the status message indicates that the dataset is not available."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:34
+msgid "From the menu, control the publication process:"
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:38
+msgid "Click the ``check`` button to verify that the dataset is already published in the selected map server."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:40
+msgid "Click the ``publish`` button to register the data on the selected map server."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:42
+msgid "Click the ``unpublish`` button to unregister the data on the selected map server."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:44
+msgid "Click the ``link service to metadata`` button to add links to the OGC service in the current metadata record for the published layer."
+msgstr ""
+
+#: ../../source/user-guide/workflow/geopublication.rst:49
+msgid "Once a WMS layer is registered in a metadata record, remember that you can easily generate an overview using the service (see :ref:`linking-thumbnail-from-wms`)."
+msgstr ""
+

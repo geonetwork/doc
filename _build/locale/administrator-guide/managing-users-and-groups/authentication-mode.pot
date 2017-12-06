@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:5
+msgid "Authentication mode"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:7
+msgid "By default the catalog uses the internal database for user management and authentication. However there are some other authentication mechanisms available:"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:13
+msgid "Configuring LDAP"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:15
+msgid "To enable LDAP, setup authentication by including ``WEB-INF/config-security/config-security-ldap.xml`` in ``WEB-INF/config-security/config-security.xml``. You can then configure your environment in ``config-security-ldap-overrides.properties``."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:22
+msgid "Configuring CAS"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:24
+msgid "To setup CAS authentication, include ``WEB-INF/config-security/config-security-cas.xml`` in ``WEB-INF/config-security/config-security.xml``. You can then configure your environment in ``config-security-cas-overrides.properties``. CAS can use either ldap or a database for user management."
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:32
+msgid "Configuring Shibboleth"
+msgstr ""
+
+#: ../../source/administrator-guide/managing-users-and-groups/authentication-mode.rst:34
+msgid "The catalog can operate in a SAML secured federation. Shibboleth should be installed in apache as described `here <https://wiki.shibboleth.net/confluence/display/SHIB2/Installation>`_. The catalog is accessed via apache. Setup shibboleth authentication by including ``WEB-INF/config-security/config-security-shibboleth.xml`` in ``WEB-INF/config-security/config-security.xml``. You can then configure your environment in ``config-security-shibboleth-overrides.properties``."
+msgstr ""
+

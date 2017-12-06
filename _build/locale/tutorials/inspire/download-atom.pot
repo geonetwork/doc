@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tutorials/inspire/download-atom.rst:4
+msgid "Tutorial setting up an Atom/OpenSearch based INSPIRE download service"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:6
+msgid "This tutorial shows how one can set up GeoNetwork to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:8
+msgid "Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using Atom/Opensearch."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:10
+msgid "The basics of Atom/OpenSearch is that for each dataset a number of file-downloads in various flavours (language/projection/format) is available. These flavours are advertised in a \"Dataset Atom Feed\" document. A set of \"Dataset Atom Feed\" documents is grouped into a \"Service Atom Feed\" document. For each \"Service Atom Feed\" document an OpenSearchDescription document is available. A website can refer to this OpenSearchDescription document, which enables searching through the download service using the browser search bar (OpenSearch)."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:13
+msgid "GeoNetwork"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:15
+msgid "GeoNetwork implements OpenSearch on a set of Dataset- and Service Atom feeds. An OpenSearch Description document is generated for each Service Atom Feed."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:17
+msgid "GeoNetwork will soon support an internal- and external mode."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:19
+msgid "in internal mode GeoNetwork will generate Atom files dynamically from metadata content."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:21
+msgid "in external mode GeoNetwork will ingest Atom files that are linked to metadata records."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:23
+msgid "Currently only the external mode is fully supported. Atom files can be generated in any text or xml editor following the technical guidelines. To optimise the Atom support GeoNetwork uses a convention, which is currently not mandated by the technical guidelines. The convention is that any gmd:MD_Distribution having a link to an Atom file requires the protocol field to contain a defined value to indicate the distribution as being an Atom document. Default value for this protocol is INSPIRE-ATOM, but you can change it using Admin > Settings. The benefit of this approach is that GeoNetwork doesn't need to open any file-link to determine if it is an Atom File. We've seen various member states mandate this convention in localised INSPIRE Technical Guidelines."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:44
+msgid "When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate the INSPIRE editor as described in `inspire configuration <http://geonetwork-opensource.org/manuals/trunk/eng/users/administrator-guide/configuring-the-catalog/inspire-configuration.html>`_. In this file \"schemas/iso19139/src/main/plugin/iso19139/loc/eng/labels.xml \" (and the same file in other languages in use in the catalogue) in the gmd:protocol helper (around line 2000) add the \"INSPIRE-ATOM\" protocol which is used to indicate links that link to an Atom file (only links having that protocol value will be ingested)."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:46
+msgid "In Admin > Settings activate the INSPIRE extension and activate Atom harvesting (at certain interval). The settings page facilitates to set a protocol which is used in metadata to indicate an Atom link."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:50
+msgid "For each dataset that you are going to publish create an iso19115 record using the INSPIRE template. Link each record to the related atom file (or upload an atom file)"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:54
+msgid "Make sure the metadata contains the same gmd:code as used in the Atom file."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:56
+msgid "Now create a service metadata using the INSPIRE template and link it to the service Atom and the individual datasets (using srv:operatesOn)."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:58
+msgid "Before you validate the implementation, run the Atom harvester in admin > settings manually. A panel will display the number of processed Atom feeds and any errors that may have occured while processing (more details in log file)."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:61
+msgid "Validate the implementation"
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:63
+msgid "If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework <https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the INSPIRE setup."
+msgstr ""
+
+#: ../../source/tutorials/inspire/download-atom.rst:67
+msgid "Running the test frequently during development helps to identify issues in an early stage."
+msgstr ""
+

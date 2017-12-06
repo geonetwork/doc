@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/overview/index.rst:4
+msgid "Overview"
+msgstr ""
+
+#: ../../source/overview/index.rst:6
+msgid "The GeoNetwork project started out in year 2001 as a Spatial Data Catalogue System for the Food and Agriculture organisation of the United Nations (`FAO <http://www.fao.org>`_), the United Nations World Food Programme (`WFP <http://www.wfp.org>`_) and the United Nations Environmental Programme (`UNEP <http://www.unep.org>`_)."
+msgstr ""
+
+#: ../../source/overview/index.rst:11
+msgid "At present the project is widely used as the basis of Spatial Data Infrastructures all around the world."
+msgstr ""
+
+#: ../../source/overview/index.rst:14
+msgid "The project is part of the Open Source Geospatial Foundation (`OSGeo <http://www.osgeo.org>`_) and can be found at `GeoNetwork opensource <http://geonetwork-opensource.org>`_."
+msgstr ""
+
+#: ../../source/overview/index.rst:17
+msgid "These docs are organized into specific guides targeting different audience:"
+msgstr ""
+
+#: ../../source/overview/index.rst:22
+msgid ":ref:`user-guide`"
+msgstr ""
+
+#: ../../source/overview/index.rst:20
+msgid "The guide for people who will be using the catalog web interface."
+msgstr ""
+
