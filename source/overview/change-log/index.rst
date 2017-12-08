@@ -15,3 +15,4 @@ Change log
    version-3.2.0.rst
    version-3.2.1.rst
    version-3.2.2.rst
+   version-3.4.0.rst

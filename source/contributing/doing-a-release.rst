@@ -54,7 +54,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    mvn clean install -DskipTests -Pwith-doc
+    mvn clean install -DskipTests -Pwith-doc -Des.spring.profile=es -Des.url=
 
 
 5. Create the installer
@@ -102,7 +102,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git add .
     git commit -m "Update version to $newversion"
     cd ..
-    
+
     # Then commit the new version
     git add .
     git commit -m "Update version to $newversion"
@@ -123,15 +123,15 @@ Once the release branch has been thoroughly tested and is stable a release can b
 .. code-block:: shell
 
     ./update-version.sh $newversion $nextversion
-    
-    
+
+
     # Only if GeoServer version changed
     cd geoserver
     git add .
     git commit -m "Update version to $nextversion"
     cd ..
-    
-    
+
+
     git add .
     git commit -m "Update version to $nextversion"
 
@@ -141,8 +141,8 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd geoserver
     git push origin $versionbranch
     cd ..
-    
-    
+
+
     git push origin $versionbranch
 
 
