@@ -2,7 +2,7 @@
 
 The documentation use [RST format](http://sphinx-doc.org/rest.html).
 
-To build the documentation you need to have [make](https://www.gnu.org/software/make/) installed in your system:
+To build the documentation you need to have [make](hpip install transifex-clientttps://www.gnu.org/software/make/) installed in your system:
 ```
 sudo apt-get install make
 ```
@@ -17,7 +17,7 @@ sudo pip install sphinx
 The theme is based on [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme) and the sphinx_bootstrap_theme.
 You can install the style with pip too:
 ```
-sudo pip install sphinx_boostrap_theme
+sudo pip install sphinx_bootstrap_theme
 sudo pip install sphinx_rtd_theme
 ```
 
