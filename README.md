@@ -2,6 +2,20 @@
 
 The documentation use [RST format](http://sphinx-doc.org/rest.html).
 
+**All translations should be done on Transifex web interface. No properties files should be committed to this repository.**
+
+## Updating the documentation
+
+If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
+
+```
+make update_translations
+```
+
+## How to build the documentation
+
+### Installing the tools
+
 To build the documentation you need to have [make](https://www.gnu.org/software/make/) installed in your system:
 ```
 sudo apt-get install make
@@ -31,6 +45,9 @@ The Transifex Client is written in Python, so it runs on most systems. The easie
 ```
 sudo pip install transifex-client
 ```
+
+### Configuring your local
+
 And then you need to configure your transifex user:
 https://docs.transifex.com/client/client-configuration
 ~/.transifexrc stores your Transifex.com credentials. This config file is unique per user, and it's stored in your home directory.
@@ -42,6 +59,7 @@ token =
 password = p@ssw0rd/api_token
 hostname = https://www.transifex.com
 ```
+### Building the documentation
 
 To build the documentation, run:
 
@@ -57,10 +75,8 @@ If you want to get the latest translations for your build, run:
 mvn clean install -Dlatest
 ```
 
-**All translations should be done on Transifex web interface. No rst files should be committed to this repository.**
+#### Building only one language
 
-If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
+If you want to build only one language, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L60 and remove the languages you don't want to build the documentation for.
 
-```
-make update_translations
-```
+TODO: Add this as parameter too.
