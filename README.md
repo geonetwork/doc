@@ -57,6 +57,8 @@ If you want to get the latest translations for your build, run:
 mvn clean install -Dlatest
 ```
 
+**All translations should be done on Transifex web interface. No rst files should be committed to this repository.**
+
 If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
 
 ```
