@@ -7,8 +7,8 @@ To build the documentation you need to have [make](https://www.gnu.org/software/
 sudo apt-get install make
 ```
 
-Sphinx is required to build documentation.See http://sphinx-doc.org/latest/install.html.ç
-YOu can install it with [pip](https://pip.pypa.io/en/stable/installing/):
+Sphinx is required to build documentation.See http://sphinx-doc.org/latest/install.html.
+You can install it with [pip](https://pip.pypa.io/en/stable/installing/):
 ```
 sudo easy_install pip
 sudo pip install sphinx
