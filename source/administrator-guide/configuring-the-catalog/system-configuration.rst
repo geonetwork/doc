@@ -184,9 +184,6 @@ Shibboleth
 
 See :ref:`authentication-shibboleth`.
 
-.. todo:: Deprecate those useless settings.
-
-
 User self-registration
 ``````````````````````
 Enable the self registration form. See :ref:`user_self_registration`.
