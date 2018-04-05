@@ -114,6 +114,7 @@ Z39.50
 Proxy server
 ````````````
 
+The settings page offers to set the configuration of a proxy server. This configuration is used by the application to access the internet to get online resources, for example as part of a harvest proces.
 
 - **Use proxy** Enable the proxy in case the catalog is behind a proxy and need
   to use it to access remote resources.
@@ -133,6 +134,14 @@ Proxy server
 
 JVM proxy parameters may also be required to properly set the proxy for all remote
 access.
+
+There is also another context in which the concept of a proxy is used. GeoNetwork can 
+use a `Web Proxy <https://developer.yahoo.com/javascript/howto-proxy.html>`_ to prevent 
+cross site scripting errors. These days using `CORS <https://www.w3.org/TR/cors/>`_ is a 
+better approach to manage cross site scripting, however some data providers may not yet 
+support CORS yet. Use a security rule in `config-security-mapping.xml
+<https://github.com/geonetwork/core-geonetwork/blob/3.4.0/web/src/main/webapp/WEB-INF/config-security/config-security-mapping.xml#L42>`_ 
+to define which domains are allowed access by the GeoNetwork proxy.
 
 
 .. _system-config-feedback:
