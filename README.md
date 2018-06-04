@@ -35,8 +35,11 @@ sudo pip install sphinx_boostrap_theme
 sudo pip install sphinx_rtd_theme
 ```
 
-The internationalization is build used [sphinx-intl](http://www.sphinx-doc.org/es/stable/intl.html)
-You can install it by pip install sphinx-intl or easy_install sphinx-intl.
+The internationalization is build using [sphinx-intl](http://www.sphinx-doc.org/es/stable/intl.html):
+
+```
+sudo pip install sphinx-intl
+```
 
 To download the translations from Transifex, you will need the transifex command line client:
 https://docs.transifex.com/client/installing-the-client
@@ -45,6 +48,7 @@ The Transifex Client is written in Python, so it runs on most systems. The easie
 ```
 sudo pip install transifex-client
 ```
+If you don't want to use the transifex-client, either you will have to manually download the translated files or you will only be able to build the English version of the documentation.
 
 ### Configuring your local
 
@@ -81,8 +85,8 @@ If you want to get the latest translations for your build, run:
 mvn clean install -Platest,all
 ```
 
-#### Building only one language
+#### Adding a new language
 
-If you want to build only one language, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L60 and remove the languages you don't want to build the documentation for.
+If you want to add a new language to the build, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L59 and add the languages you want to build the documentation for.
 
-TODO: Add this as parameter too.
+If you want it to be publicly available on geonetwork-opensource.org webpage, make sure you make a PR with the change and ask for advice on the https://github.com/geonetwork/website project.
