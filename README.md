@@ -18,12 +18,18 @@ To build the documentation, run:
 mvn clean install
 ```
 
-This will build all documentation in several languages, based on transifex translations.
+This will build all documentation in English only.
+
+To build all documentation in several languages (right now: es,fr,ge,it,ko,nl,cz,ca,fi,is), based on transifex translations:
+
+```
+mvn clean install -Pall
+```
 
 If you want to get the latest translations for your build, run:
 
 ```
-mvn clean install -Dlatest
+mvn clean install -Platest,all
 ```
 
 If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
