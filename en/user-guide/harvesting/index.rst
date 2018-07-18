@@ -4,7 +4,7 @@ Harvesting
 ##########
 
 Data discovery gets more interesting once multiple catalogs and services
-share there resources.
+share their resources.
 
 Harvesting is the process of ingesting metadata from remote sources and
 storing it locally in the catalog for fast searching. It is a scheduled
