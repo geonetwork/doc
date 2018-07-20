@@ -21,7 +21,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     currentversion=3.0.2-SNAPSHOT
     previousversion=3.0.1
     nextversion=3.0.3-SNAPSHOT
-    modules=( "geoserver" "e2e-tests" )
+    modules=( "e2e-tests" )
     git clone --recursive https://github.com/geonetwork/core-geonetwork.git \
               geonetwork-$versionbranch
     cd geonetwork-$versionbranch
@@ -33,7 +33,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 .. code-block:: shell
 
     # Create it if it does not exist yet
-    git checkout -b $versionbranch origin/develop
+    git checkout -b $versionbranch origin/master
 
     # Move into it if it exist
     git checkout $versionbranch
@@ -47,6 +47,20 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
     ./update-version.sh $currentversion $newversion
 
+
+4. Generate list of changes
+
+
+.. code-block:: shell
+
+    cat <<EOF > docs/changes$newversion.txt
+    ================================================================================
+    ===
+    === GeoNetwork $version: List of changes
+    ===
+    ================================================================================
+    EOF
+    git log --pretty='format:- %s' $previousversion... >> docs/changes$newversion.txt
 
 
 4. Build the new release
@@ -66,8 +80,27 @@ Once the release branch has been thoroughly tested and is stable a release can b
     ant
     cd ..
 
+6. Re-build the new release
 
-6. Test the installer
+This is required as previous step creates a file ``WEB-INF/server.prop``, otherwise the old version will be added to the war file. **This should be improved.**
+
+.. code-block:: shell
+
+    mvn clean install -DskipTests -Pwith-doc -Des.spring.profile=es -Des.url=
+
+
+
+7. Commit the new version (in submodule first and then in the main module)
+
+
+.. code-block:: shell
+
+    # Then commit the new version
+    git add .
+    git commit -m "Update version to $newversion"
+
+
+8. Test the installer
 
 
 .. code-block:: shell
@@ -75,37 +108,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd geonetwork-$version
     java -jar geonetwork-$newversion/geonetwork-install-$newversion.jar
 
-
-
-7 Generate list of changes
-
-
-.. code-block:: shell
-
-    cat <<EOF > docs/changes$newversion.txt
-    ================================================================================
-    ===
-    === GeoNetwork $version: List of changes
-    ===
-    ================================================================================
-    EOF
-    git log --pretty='format:- %s' $previousversion... >> docs/changes$newversion.txt
-
-
-8. Commit the new version (in submodule first and then in the main module)
-
-
-.. code-block:: shell
-
-    # Only if GeoServer version changed
-    cd geoserver
-    git add .
-    git commit -m "Update version to $newversion"
-    cd ..
-
-    # Then commit the new version
-    git add .
-    git commit -m "Update version to $newversion"
 
 
 9. Tag the release
@@ -123,27 +125,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
 .. code-block:: shell
 
     ./update-version.sh $newversion $nextversion
-
-
-    # Only if GeoServer version changed
-    cd geoserver
-    git add .
-    git commit -m "Update version to $nextversion"
-    cd ..
-
-
-    git add .
-    git commit -m "Update version to $nextversion"
-
-
-
-    # Only if GeoServer version changed
-    cd geoserver
-    git push origin $versionbranch
-    cd ..
-
-
-    git push origin $versionbranch
 
 
 11. Add migration script for the next version.
@@ -165,12 +146,21 @@ In ``WEB-INF/classes/setup/sql/migrate``, create the SQL migration script:
       UPDATE Settings SET value='3.0.3' WHERE name='system/platform/version';
       UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
 
-12. Merge in depending branches
+12. Commit/Push the changes for the version update.
+
+.. code-block:: shell
+
+    git add .
+    git commit -m "Update version to $nextversion"
+
+    git push origin $versionbranch
+
+13. Merge in depending branches
 
 If needed, merge the changes into the develop branch.
 
 
-13. Publish in sourceforge
+14. Publish in sourceforge
 
 
 .. code-block:: shell
@@ -187,3 +177,15 @@ If needed, merge the changes into the develop branch.
     put web/target/geonetwork.war
     bye
 
+15. Add changes to the documentation https://github.com/geonetwork/website
+
+- Add the changes file for the release to https://github.com/geonetwork/doc/tree/develop/source/overview/change-log
+- List the previous file in https://github.com/geonetwork/doc/blob/develop/source/overview/change-log/index.rst
+
+16. Update the following files in the website https://github.com/geonetwork/website
+
+- Update the version: https://github.com/geonetwork/website/blob/master/docsrc/conf.py
+- Update the download link: https://github.com/geonetwork/website/blob/master/docsrc/downloads.rst
+- Add the section for the new release: https://github.com/geonetwork/website/blob/master/docsrc/news.rst
+
+17. Publish the website
