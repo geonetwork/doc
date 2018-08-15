@@ -3,7 +3,7 @@
 GeoNetwork API
 ##############
 
-The REST API documentation is available on the page http://localhost:8080/geonetwork/doc/api/.
+The REST API and documentation are available in your catalog at page http://localhost:8080/geonetwork/doc/api/ and linked from the footer on the home page.
 
 
 Building client for the API using codegen
