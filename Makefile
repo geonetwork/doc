@@ -56,7 +56,7 @@ clean:
 
 html_all_languages:
 	@echo "Building documentation in html for all languages"
-	set -e; for lang in "en" "es" "fr" "ge" "it" "ko" "nl" "cz" "ca" "fi" "is"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
+	set -e; for lang in "en" "es" "fr" "ge" "it" "ko" "nl" "cz" "ca" "fi" "is" "pt_BR" "sr"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
 
 html_eng:
 	@echo "Building documentation in html for all languages"

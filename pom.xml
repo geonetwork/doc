@@ -74,7 +74,7 @@
                   <executable>tx</executable>
                   <arguments>
                     <argument>pull</argument>
-                    <argument>--language=',es,fr,ge,it,ko,nl,cz,ca,fi,is,'</argument>
+                    <argument>--language=',es,fr,ge,it,ko,nl,cz,ca,fi,is,sr,pt_BR,'</argument>
                   </arguments>
                   <workingDirectory>${basedir}</workingDirectory>
                 </configuration>
