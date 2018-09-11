@@ -16,15 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../source/user-guide/associating-resources/linking-others.rst:4
-msgid "Other types of resources (eg. sensor, publication)"
+#: ../../source/overview/change-log/version-3.4.1.rst:4
+msgid "Version 3.4.1"
 msgstr ""
 
-#: ../../source/user-guide/associating-resources/linking-others.rst:7
-msgid "Todo"
+#: ../../source/overview/change-log/version-3.4.1.rst:7
+msgid "New features"
 msgstr ""
 
-#: ../../source/user-guide/associating-resources/linking-others.rst:7
-msgid "Add aggregates details"
+#: ../../source/overview/change-log/version-3.4.1.rst:12
+msgid "Removed features"
+msgstr ""
+
+#: ../../source/overview/change-log/version-3.4.1.rst:15
+msgid "and more ... see `3.4.1 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.4.1+is%3Aclosed>`_ and `pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.4.1+is%3Aclosed+is%3Apr>`_ for full details."
 msgstr ""
 

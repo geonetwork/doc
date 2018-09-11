@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:4
+msgid "Setup GeoNetwork"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:8
+msgid "GeoNetwork package should be build using the maven `es` profile in order to be able to configure the search/content statistics to use ElasticSearch/Kibana:"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:15
+msgid "If you're using a development environment, can use the following command from the Geonetwork sources folder:"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:23
+msgid "To setup the search/content statistics in GeoNetwork do the following steps:"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:25
+msgid "Comment the following filter in `TOMCAT_DIR/webapps/geonetwork/WEB-INF/web.xml`"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:35
+msgid ", otherwise when accessing the dashboard the following error is displayed in the js console::"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:40
+msgid "Startup GeoNetwork."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:42
+msgid "Login as an `administrator` user and load the templates (http://localhost:8080/geonetwork/srv/eng/admin.console#/metadata)."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:44
+msgid "Create some metadata records (optionally you can load the samples)."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:46
+msgid "Enable search statistics in the Settings page (http://localhost:8080/geonetwork/srv/eng/admin.console#/settings)."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:50
+msgid "Do some searches in GeoNetwork."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:52
+msgid "Go to `Statistics and status` in http://localhost:8080/geonetwork/srv/eng/admin.console#/dashboard and select Search Statistics`."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:54
+msgid "The first time you're prompted to select the Kibana default index. Select `.dashboards`:"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:58
+msgid "and set as default to get it working."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:62
+msgid "Reload the page and check the dashboards."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:68
+msgid "Content statistics/validation"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:70
+msgid "Content and validation status statistics are available also from to `Statistics and status` in http://localhost:8080/geonetwork/srv/eng/admin.console#/dashboard, but require to index manually the content in ElasticSearch. This will be improved in future versions."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:73
+msgid "To index the content and validation status in ElasticSearch, go to http://localhost:8080/geonetwork/srv/eng/admin.console#/tools and select the following option:"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/setup-geonetwork.rst:77
+msgid "Access the `Content Statistics` and `Validation` in `Statistics and status` (http://localhost:8080/geonetwork/srv/eng/admin.console#/dashboard)"
+msgstr ""
+

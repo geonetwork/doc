@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNetwork opensource 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Metadata on dataset can be associated to metadata on services."
 msgstr ""
 
-#: ../../source/user-guide/associating-resources/linking-dataset-or-service.rst:0
+#: ../../source/user-guide/associating-resources/linking-dataset-or-service.rst:10
 msgid "Todo"
 msgstr ""
 
