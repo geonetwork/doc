@@ -159,9 +159,22 @@ In ``WEB-INF/classes/setup/sql/migrate``, create the SQL migration script:
 
 If needed, merge the changes into the develop branch.
 
+14. Generate checksum files
 
-14. Publish in sourceforge
+* If using Linux:
+.. code-block:: shell
+    
+    md5sum web/target/geonetwork.war > web/target/geonetwork.war.md5
+    md5sum geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
 
+* If using Mac OS X:
+.. code-block:: shell
+
+    md5 -r web/target/geonetwork.war > web/target/geonetwork.war.md5
+    md5 -r geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
+
+
+15. Publish in sourceforge
 
 .. code-block:: shell
 
@@ -174,18 +187,20 @@ If needed, merge the changes into the develop branch.
     cd 3.0.0
     put docs/changes3.0.0-0.txt
     put geonetwork*/*.jar
+    put geonetwork*/*.md5
     put web/target/geonetwork.war
+    put web/target/geonetwork.war.md5
     bye
 
-15. Add changes to the documentation https://github.com/geonetwork/website
+16. Add changes to the documentation https://github.com/geonetwork/website
 
 - Add the changes file for the release to https://github.com/geonetwork/doc/tree/develop/source/overview/change-log
 - List the previous file in https://github.com/geonetwork/doc/blob/develop/source/overview/change-log/index.rst
 
-16. Update the following files in the website https://github.com/geonetwork/website
+17. Update the following files in the website https://github.com/geonetwork/website
 
 - Update the version: https://github.com/geonetwork/website/blob/master/docsrc/conf.py
 - Update the download link: https://github.com/geonetwork/website/blob/master/docsrc/downloads.rst
 - Add the section for the new release: https://github.com/geonetwork/website/blob/master/docsrc/news.rst
 
-17. Publish the website
+18. Publish the website
