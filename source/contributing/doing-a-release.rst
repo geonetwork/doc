@@ -163,9 +163,9 @@ If needed, merge the changes into the develop branch.
 
 * If using Linux:
 .. code-block:: shell
-    
-    md5sum web/target/geonetwork.war > web/target/geonetwork.war.md5
-    md5sum geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
+
+    cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
+    cd geonetwork-$version && md5sum geonetwork-install-$newversion.jar > geonetwork-install-$newversion.jar.md5 && cd ..
 
 * If using Mac OS X:
 .. code-block:: shell
