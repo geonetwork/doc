@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/maintainer-guide/statistics/index.rst:4
+msgid "Setting up search/content statistics"
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/index.rst:6
+msgid "Since GeoNetwork 3.4 search and content statistics are stored in `ElasticSearch <https://www.elastic.co/products/elasticsearch/>`_ using `Kibana <https://www.elastic.co/products/kibana>`_ dashboards to visualize them in the GeoNetwork administration application."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/index.rst:9
+msgid "This guide describes the configuration required to integrate ElasticSearch/Kibana in GeoNetwork to store and visualize the search and content statistics."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/index.rst:11
+msgid "GeoNetwork supports ElasticSearch/Kibana 5.6.1 version, other versions may not work properly."
+msgstr ""
+
+#: ../../source/maintainer-guide/statistics/index.rst:15
+msgid "This guide doesn't provide a production level setup for ElasticSearch/Kibana. Please refer to the ElasticSearch/Kibana documentation to do a proper setup/configuration for a production environment."
+msgstr ""
+

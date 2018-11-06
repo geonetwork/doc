@@ -8,6 +8,7 @@ Configuring the catalog
    :maxdepth: 2
 
    system-configuration.rst
+   user-interface-configuration.rst
    csw-configuration.rst
    virtual-csw-configuration.rst
    inspire-configuration.rst

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNetwork opensource 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Before running a process, it is recommended to make a backup of all metadata records to be updated in case something goes wrong with the process."
 msgstr ""
 
-#: ../../source/user-guide/workflow/batchupdate-from-admin.rst:0
+#: ../../source/user-guide/workflow/batchupdate-from-admin.rst:56
 msgid "Todo"
 msgstr ""
 

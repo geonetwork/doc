@@ -956,3 +956,48 @@ file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/tag-information/index.
 source_file = _build/locale/user-guide/tag-information/index.pot
 source_lang = en
 
+[core-geonetwork.index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = _build/locale/index.pot
+source_lang = en
+
+[core-geonetwork.administrator-guide--configuring-the-catalog--user-interface-configuration]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/configuring-the-catalog/user-interface-configuration.po
+source_file = _build/locale/administrator-guide/configuring-the-catalog/user-interface-configuration.pot
+source_lang = en
+
+[core-geonetwork.maintainer-guide--statistics--setup-elasticsearch]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-elasticsearch.po
+source_file = _build/locale/maintainer-guide/statistics/setup-elasticsearch.pot
+source_lang = en
+
+[core-geonetwork.maintainer-guide--statistics--setup-geonetwork]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-geonetwork.po
+source_file = _build/locale/maintainer-guide/statistics/setup-geonetwork.pot
+source_lang = en
+
+[core-geonetwork.maintainer-guide--statistics--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/index.po
+source_file = _build/locale/maintainer-guide/statistics/index.pot
+source_lang = en
+
+[core-geonetwork.maintainer-guide--statistics--setup-kibana]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-kibana.po
+source_file = _build/locale/maintainer-guide/statistics/setup-kibana.pot
+source_lang = en
+
+[core-geonetwork.overview--change-log--version-3_4_3]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.3.po
+source_file = _build/locale/overview/change-log/version-3.4.3.pot
+source_lang = en
+
+[core-geonetwork.overview--change-log--version-3_4_2]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.2.po
+source_file = _build/locale/overview/change-log/version-3.4.2.pot
+source_lang = en
+
+[core-geonetwork.overview--change-log--version-3_4_1]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.1.po
+source_file = _build/locale/overview/change-log/version-3.4.1.pot
+source_lang = en
+

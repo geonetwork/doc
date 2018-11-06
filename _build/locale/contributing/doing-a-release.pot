@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNetwork opensource 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,55 +40,99 @@ msgstr ""
 msgid "Update version number"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:52
+#: ../../source/contributing/doing-a-release.rst:51
+msgid "Generate list of changes"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:66
 msgid "Build the new release"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:60
+#: ../../source/contributing/doing-a-release.rst:74
 msgid "Create the installer"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:70
-msgid "Test the installer"
+#: ../../source/contributing/doing-a-release.rst:83
+msgid "Re-build the new release"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:80
-msgid "7 Generate list of changes"
+#: ../../source/contributing/doing-a-release.rst:85
+msgid "This is required as previous step creates a file ``WEB-INF/server.prop``, otherwise the old version will be added to the war file. **This should be improved.**"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:95
+#: ../../source/contributing/doing-a-release.rst:93
 msgid "Commit the new version (in submodule first and then in the main module)"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:111
+#: ../../source/contributing/doing-a-release.rst:103
+msgid "Test the installer"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:113
 msgid "Tag the release"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:120
+#: ../../source/contributing/doing-a-release.rst:122
 msgid "Set version number to SNAPSHOT"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:149
+#: ../../source/contributing/doing-a-release.rst:130
 msgid "Add migration script for the next version."
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:151
+#: ../../source/contributing/doing-a-release.rst:132
 msgid "In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version:"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:161
+#: ../../source/contributing/doing-a-release.rst:142
 msgid "In ``WEB-INF/classes/setup/sql/migrate``, create the SQL migration script:"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:168
+#: ../../source/contributing/doing-a-release.rst:149
+msgid "Commit/Push the changes for the version update."
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:158
 msgid "Merge in depending branches"
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:170
+#: ../../source/contributing/doing-a-release.rst:160
 msgid "If needed, merge the changes into the develop branch."
 msgstr ""
 
-#: ../../source/contributing/doing-a-release.rst:173
+#: ../../source/contributing/doing-a-release.rst:163
 msgid "Publish in sourceforge"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:180
+msgid "Add changes to the documentation https://github.com/geonetwork/website"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:182
+msgid "Add the changes file for the release to https://github.com/geonetwork/doc/tree/develop/source/overview/change-log"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:183
+msgid "List the previous file in https://github.com/geonetwork/doc/blob/develop/source/overview/change-log/index.rst"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:185
+msgid "Update the following files in the website https://github.com/geonetwork/website"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:187
+msgid "Update the version: https://github.com/geonetwork/website/blob/master/docsrc/conf.py"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:188
+msgid "Update the download link: https://github.com/geonetwork/website/blob/master/docsrc/downloads.rst"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:189
+msgid "Add the section for the new release: https://github.com/geonetwork/website/blob/master/docsrc/news.rst"
+msgstr ""
+
+#: ../../source/contributing/doing-a-release.rst:191
+msgid "Publish the website"
 msgstr ""
 

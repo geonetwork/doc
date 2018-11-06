@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNetwork opensource 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 11:54+0100\n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,26 @@ msgid "GeoNetwork API"
 msgstr ""
 
 #: ../../source/api/the-geonetwork-api.rst:6
-msgid "The draft API for Geonetwork 3.2.x and later is described on the page http://localhost:8080/geonetwork/doc/api/ ."
+msgid "The REST API documentation is available on the page http://localhost:8080/geonetwork/doc/api/."
+msgstr ""
+
+#: ../../source/api/the-geonetwork-api.rst:10
+msgid "Building client for the API using codegen"
+msgstr ""
+
+#: ../../source/api/the-geonetwork-api.rst:12
+msgid "The API is described using the open API specification. `Codegen <https://swagger.io/swagger-codegen/>`_ is a tool to build an API client based on the specification. To build a java client use the following procedure."
+msgstr ""
+
+#: ../../source/api/the-geonetwork-api.rst:15
+msgid "First, create a configuration file apiconfig.json for the API:"
+msgstr ""
+
+#: ../../source/api/the-geonetwork-api.rst:44
+msgid "Once compiled, the java client can be used as a dependency; eg. for maven:"
+msgstr ""
+
+#: ../../source/api/the-geonetwork-api.rst:57
+msgid "Then the client API can be used in your Java application:"
 msgstr ""
 
