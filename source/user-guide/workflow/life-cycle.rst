@@ -26,29 +26,29 @@ For example, when a record is:
 
 The catalog has (an extensible) set of states that a metadata record can have:
 
-* ``Unknown`` - this is the default state - nothing is known about the status of the metadata record
+* ``Unknown`` - this is the default state - nothing is known about the status of the metadata record.
 
 * ``Draft`` - the record is under construction or being edited.
 
 * ``Submitted`` - the record has been submitted for approval to a content review.
 
-* ``Approved`` - the content reviewer has reviewed and approved the metadata record
+* ``Approved`` - the content reviewer has reviewed and approved the metadata record.
 
-* ``Rejected`` - the content reviewer has reviewed and rejected the metadata record
+* ``Rejected`` - the content reviewer has reviewed and rejected the metadata record.
 
-* ``Retired`` - the record has been retired
+* ``Retired`` - the record has been retired.
 
 
 
-To enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow``
+To enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
 in the metadata view:
 
 
 .. figure:: img/workflow-enable.png
 
 
-Draft status can also be set by default for records member of some groups. For this
-check the catalog administration > Settings and define the list of groups.
+Draft status can also be set by default for newly created records in defined groups. For this
+check Administration > Settings > Metadata Workflow and define the list of groups.
 
 
 
@@ -75,7 +75,7 @@ When in ``Draft``, an editor can change states to:
 
 * ``Submitted``
 
-Other status can be managed by Reviewer or Administrator.
+Other states can be managed by Reviewers or Administrators.
 
 
 
