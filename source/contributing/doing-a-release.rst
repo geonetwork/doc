@@ -76,7 +76,9 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    cd installer
+    cd release
+    mvn clean install -Djetty-download
+    cd ../installer
     ant
     cd ..
 
