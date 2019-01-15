@@ -59,7 +59,7 @@ See http://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.
 
 A DOI may already be assigned for a record:
 
-.. figure:: img/doi-api-check-already-exist.png.png
+.. figure:: img/doi-api-check-already-exist.png
 
 In such case the DOI needs to be removed first.
 
