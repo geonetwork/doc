@@ -29,3 +29,4 @@ Different types of resources can be associated:
 
    linking-documents.rst
    linking-records.rst
+   doi.rst
