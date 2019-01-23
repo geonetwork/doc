@@ -56,7 +56,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 
 This will update all pom.xml, installer build file and data-db-default.sql.
-
+Check the path to the documentation in https://github.com/geonetwork/core-geonetwork/blob/master/web-ui/src/main/resources/catalog/js/CatController.js#L259 based on the website folders.
 
 
 4. Generate list of changes
