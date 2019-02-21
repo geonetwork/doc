@@ -27,4 +27,7 @@ to:
 
 .. figure:: img/keywords-exploded.png
 
+Creating a new process
+----------------------
 
+ See https://geonetwork-opensource.org/manuals/3.6.x/en/user-guide/workflow/batchupdate-xsl.html?highlight=process#adding-batch-process for information on how to add a new process. The new process must then be registered in ``suggest.xsl``
