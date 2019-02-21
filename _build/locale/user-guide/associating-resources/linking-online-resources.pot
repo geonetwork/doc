@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License
+# This file is distributed under the same license as the GeoNetwork opensource package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNetwork opensource 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 12:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:4
+msgid "Linking website, web services, ... using URL"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:6
+msgid "This section applies mainly to ISO19139 records and partially to Dublin Core (ie. only documents can be associated in Dublin Core) standards."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:13
+msgid "Linking a document"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:15
+msgid "2 approaches can be used to link documents:"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:17
+msgid "by providing a URL"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:19
+msgid "by uploading a document"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:22
+msgid "To add a new one, click on the + caret button then ``Add an online resource`` button or, if alreay one exists, just click on the title of the ``Online resources``."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:30
+msgid "To link a URL, set the following properties:"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:32
+msgid "``Protocol`` to describe the type of document attached (``Web address (URL)`` is the default)"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:33
+msgid "``Linkage`` to point to the target document. It can be any type of links like http://, ftp://, file:///, ..."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:34
+msgid "``Name`` is optional and provides a label for making an hyperlink"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:35
+msgid "``Description`` is optional and provides more details about the link"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:39
+msgid "To upload a document, switch to the ``Upload`` tab and choose a document, or drag and drop it in the pop up. In that case, the protocol is hidden and is set to ``WWW:DOWNLOAD``."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:47
+msgid "Depending on your needs, more specific links could be added and will be associated to different actions and display in the applications."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:54
+msgid "Linking a WMS layer"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:57
+msgid "To be able to view a record on the map viewer, it may be relevant to add a reference to one or more WMS services publishing the dataset. An online resource is encoded using the following in ISO19139:"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:84
+msgid "To add a WMS layer:"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:86
+msgid "choose the protocol ``OGC:WMS Web Map Service``,"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:87
+msgid "set the URL of the service,"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:88
+msgid "then the wizzard query the service to retrieve the list of layers"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:89
+msgid "choose one or more layer in the list or set it manually."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:100
+msgid "Linking a database table or a GIS file on the network"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:102
+msgid "To reference a GIS file or a database table, user can upload or link to a that resource (see :ref:`linking-online-resources-doc`). The type of protocol depends on the type of resource associated:"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:108
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:116
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:124
+msgid "Type of resource"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:108
+msgid "Vector file uploaded (eg. zipped Shapefile)"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:110
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:118
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:126
+msgid "URL"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:110
+msgid "File URL created after upload on the catalog. eg. http://localhost:8080/geonetwork/srv/eng/resources.get?id=1631&fname=CCM.zip&access=private"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:111
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:119
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:127
+msgid "Protocol"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:111
+msgid "WWW:DOWNLOAD"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:112
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:120
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:128
+msgid "Name"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:112
+msgid "File name (readonly)"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:116
+msgid "Vector file on the network"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:118
+msgid "File path. eg. file:///shared/geodata/world/hydrology/rivers.shp"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:119
+msgid "FILE:GEO or FILE:RASTER"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:120
+msgid "File description"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:124
+msgid "Vector (Table PostGIS)"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:126
+msgid "jdbc:postgresql://localhost:5432/login:password@db"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:127
+msgid "DB:POSTGIS"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:128
+msgid "Table name"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:132
+msgid "When having information about the database or file on the local network, it may be relevant to hide those informations for public users (see :ref:`restricting-information-to-metadata-sections`)."
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:137
+msgid "Todo"
+msgstr ""
+
+#: ../../source/user-guide/associating-resources/linking-online-resources.rst:137
+msgid "Add doc & link to geopublisher"
+msgstr ""
+

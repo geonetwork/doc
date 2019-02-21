@@ -14,7 +14,7 @@
   <artifactId>doc</artifactId>
   <name>Documentation module</name>
   <description></description>
-  <version>3.1.0-SNAPSHOT</version>
+  <version>3.4.0-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -22,71 +22,102 @@
       <url>http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</url>
     </license>
   </licenses>
-
   <build>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.1</version>
-        <executions>
+        <version>1.6.0</version>
+	      <executions>
           <execution>
-            <id>build-docs-en</id>
-            <phase>prepare-package</phase>
+            <id>build-docs</id>
+            <phase>package</phase>
             <goals>
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>sphinx-build</executable>
+              <executable>make</executable>
               <arguments>
-                <argument>-a</argument>
-                <argument>-b</argument>
-                <argument>html</argument>
-                <argument>en</argument>
-                <argument>target/doc/en</argument>
+                <argument>html_eng</argument>
               </arguments>
               <workingDirectory>${basedir}</workingDirectory>
             </configuration>
           </execution>
-          <execution>
-            <id>build-docs-fr</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-            <configuration>
-              <executable>sphinx-build</executable>
-              <arguments>
-                <argument>-a</argument>
-                <argument>-b</argument>
-                <argument>html</argument>
-                <argument>fr</argument>
-                <argument>target/doc/fr</argument>
-              </arguments>
-              <workingDirectory>${basedir}</workingDirectory>
-            </configuration>
-          </execution>
-          <!--<execution>
-            <id>build-docs-en-json</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-            <configuration>
-              <executable>sphinx-build</executable>
-              <arguments>
-                <argument>-a</argument>
-                <argument>-b</argument>
-                <argument>json</argument>
-                <argument>en</argument>
-                <argument>target/doc/en-json</argument>
-              </arguments>
-              <workingDirectory>${basedir}</workingDirectory>
-            </configuration>
-          </execution>-->
         </executions>
       </plugin>
     </plugins>
   </build>
+  
+  <profiles>
+    <profile> 
+    <id>latest</id>   
+    <!-- Grab latest translations from transifex -->
+      <activation>
+        <property>
+          <name>latest</name>
+        </property>
+      </activation>   
+      <build> 
+        <plugins> 
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+	          <executions>
+              <execution>
+                <id>download-transifex</id>
+                <phase>generate-resources</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>tx</executable>
+                  <arguments>
+                    <argument>pull</argument>
+                    <argument>--language=',es,fr,ge,it,ko,nl,cz,ca,fi,is,sr,pt_BR,'</argument>
+                  </arguments>
+                  <workingDirectory>${basedir}</workingDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile> 
+    <id>all</id>   
+    <!-- Grab latest translations from transifex -->
+      <activation>
+        <property>
+          <name>all</name>
+        </property>
+      </activation>  
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+	          <executions>
+              <execution>
+                <id>build-docs</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>make</executable>
+                  <arguments>
+                    <argument>html_all_languages</argument>
+                  </arguments>
+                  <workingDirectory>${basedir}</workingDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>

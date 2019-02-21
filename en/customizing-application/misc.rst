@@ -1,5 +1,0 @@
-.. _customizing-misc:
-
-Miscellaneous
-#############
-
