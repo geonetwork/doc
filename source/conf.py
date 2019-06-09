@@ -66,9 +66,9 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = '3.4'
+version = '3.6'
 # The full version, including alpha/beta/rc tags.
-release = '3.4'
+release = '3.6'
 
 language = 'en'
 
@@ -145,7 +145,7 @@ html_theme = 'theme'
 # documentation.
 html_theme_options = {
     'display_github': True,
-    'github_user': 'geosource-catalogue',
+    'github_user': 'geonetwork',
     'github_repo': 'doc',
     'github_version': 'develop',
     'source_suffix': '.rst',
