@@ -31,7 +31,7 @@ sudo pip install sphinx
 The theme is based on [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme) and the sphinx_bootstrap_theme.
 You can install the style with pip too:
 ```
-sudo pip install sphinx_boostrap_theme
+sudo pip install sphinx-bootstrap-theme
 sudo pip install sphinx_rtd_theme
 ```
 
