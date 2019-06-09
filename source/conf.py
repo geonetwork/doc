@@ -149,7 +149,7 @@ html_theme_options = {
     'github_repo': 'doc',
     'github_version': 'develop',
     'source_suffix': '.rst',
-    'doc_path': 'en',
+    'doc_path': 'source',
     # Navigation bar title. (Default: ``project`` value)
     #'navbar_title': "",
 
