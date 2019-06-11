@@ -1,6 +1,6 @@
-.. _transfering-privileges:
+.. _transferring-privileges:
 
-Transfering privileges
+Transferring privileges
 ######################
 
 Transfer Ownership
