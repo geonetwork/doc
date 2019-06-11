@@ -8,4 +8,4 @@ Publier l’information
 
    managing-privileges.rst
    restricting-information-to-metadata-sections.rst
-   transfering-privileges.rst
+   transferring-privileges.rst
