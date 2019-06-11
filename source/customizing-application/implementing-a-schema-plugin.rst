@@ -996,6 +996,41 @@ also been added to the codelists.xml file so that they can be localized,
 overridden in profiles and include an extended description to provide more
 useful information when viewing the metadata record.
 
+To use the ISO19139 codelist in a profile you can add a template to point to the codelist to use:
+
+.. code-block:: xml
+
+  <xsl:template mode="mode-iso19139.xyz" match="*[*/@codeList]">
+    <xsl:param name="schema" select="$schema" required="no"/>
+    <xsl:param name="labels" select="$labels" required="no"/>
+
+    <xsl:apply-templates mode="mode-iso19139" select=".">
+      <xsl:with-param name="schema" select="$schema"/>
+      <xsl:with-param name="labels" select="$labels"/>
+      <xsl:with-param name="codelists" select="$codelists"/><!-- Will be the profile codelist -->
+    </xsl:apply-templates>
+  </xsl:template>
+
+To override some of the ISO19139 codelist, you can check if the codelist is defined in xyz profile and if not use the ISO19139 one:
+
+
+.. code-block:: xml
+
+    <!-- check iso19139.xyz first, then fall back to iso19139 -->
+    <xsl:variable name="listOfValues" as="node()">
+      <xsl:variable name="profileCodeList" as="node()" select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
+      <xsl:choose>
+        <xsl:when test="count($profileCodeList/*) = 0"> <!-- do iso19139 -->
+          <xsl:copy-of select="gn-fn-metadata:getCodeListValues('iso19139', name(*[@codeListValue]), $iso19139codelists, .)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="$profileCodeList"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+
+
 The iso19139 schema has additional templates in its presentation xslts to
 handlese codelists because they are specific to that schema. These are
 discussed in the section on presentation XSLTs later in this manual.
