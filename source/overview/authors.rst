@@ -47,6 +47,7 @@ and `here for the documenter team <https://github.com/orgs/geonetwork/teams/docu
 * Francois Prunayre
 * Jeroen Ticheler
 * Jose Garcia
+* Maria Arias de Reyna
 * Juan Luis Rodriguez Ponce
 * Olivier Guyot
 * Pierre Mauduit
