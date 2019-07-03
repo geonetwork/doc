@@ -402,7 +402,7 @@ texinfo_documents = [
 extlinks = {
  'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #'),
  'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
- 'code': ('https://github.com/geonetwork/core-geonetwork/tree/develop/%s', 'source file '),
+ 'code': ('https://github.com/geonetwork/core-geonetwork/tree/master/%s', 'source file '),
  'repo': ('https://github.com/geonetwork/%s', 'code repository '),
  'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page ')
 }
