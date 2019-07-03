@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'GeoNetwork opensource'
-copyright = u'2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'
+copyright = u'2001-2019, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'
 author = u''
 
 # The version info for the project you're documenting, acts as replacement for
