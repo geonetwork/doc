@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'GeoNetwork opensource'
-copyright = u'2001-2016, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'
+copyright = u'2001-2019, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'
 author = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -149,7 +149,7 @@ html_theme_options = {
     'github_repo': 'doc',
     'github_version': 'develop',
     'source_suffix': '.rst',
-    'doc_path': 'en',
+    'doc_path': 'source',
     # Navigation bar title. (Default: ``project`` value)
     #'navbar_title': "",
 
@@ -402,7 +402,7 @@ texinfo_documents = [
 extlinks = {
  'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #'),
  'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
- 'code': ('https://github.com/geonetwork/core-geonetwork/tree/develop/%s', 'source file '),
+ 'code': ('https://github.com/geonetwork/core-geonetwork/tree/master/%s', 'source file '),
  'repo': ('https://github.com/geonetwork/%s', 'code repository '),
  'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page ')
 }
