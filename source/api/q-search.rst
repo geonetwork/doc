@@ -56,9 +56,9 @@ The following parameters can be appended to your request to format the results:
 
 - ``resultType``: type of summary to return. Summaries are configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L132-L249
 
-- ``hits`` (default value if not provided), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L185
+  - ``hits`` (default value if not provided), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L185
 
-- ``details`` (recommended value to send), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
+  - ``details`` (recommended value to send), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
 
 - Other values in the summaries section are allowed
 
@@ -66,9 +66,8 @@ The following parameters can be appended to your request to format the results:
 Query filter parameters
 =======================
 
-To complete a search, send any field(s) indexed in Lucene. For a complete reference see
-https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/
-plugin/iso19139/index-fields/index.xsl
+You can search on any field(s) indexed in Lucene. For a complete reference see
+https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/index-fields/index.xsl
 
 Most relevant fields:
 
@@ -97,12 +96,12 @@ If the query was executed as ``topicCat=biota&topicCat=farming`` then only the m
 Query examples
 ==============
 
-Query with any field for metadata containing the value infrastructure, returning json, using the fast index to return results, and returning the fields configured in ``config-summary.xml``:
+Query with any field for metadata containing the string 'infrastructure', returning json, using the fast index to return results, and returning the fields configured in ``config-summary.xml``:
 
 http://localhost:8080/geonetwork/srv/eng/q?any=infraestructure&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
 
 
-Query datasets with title containing infrastructure, returning json, using the fast index to return results, returning the fields configured in ``config-summary.xml`` and returning only the first 20 results (ordered by relevance):
+Query datasets with title containing the string 'infrastructure', returning json, using the fast index to return results, returning the fields configured in ``config-summary.xml`` and returning only the first 20 results (ordered by relevance):
 
-http://localhost:8080/geonetwork/srv/eng/q?title=infraestructure&type=dataset&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
+http://localhost:8080/geonetwork/srv/eng/q?title=infrastructure&type=dataset&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
 
