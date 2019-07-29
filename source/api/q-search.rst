@@ -3,7 +3,7 @@
 Q Search
 ##############
 
-The Q Search endpoint allows you to query the catalog programatically. It is available in your catalog at http://localhost:8080/geonetwork/srv/eng/q
+The Q Search endpoint allows you to query the catalog programatically. It is available in the local catalog at http://localhost:8080/geonetwork/srv/eng/q (otherwise substute your catalog URL).
 
 
 Query results parameters
@@ -30,15 +30,15 @@ The following parameters can be appended to your request to format the results:
 
   - ``denominatorAsc``
 
-- ``sortOrder=reverse``: Used to sort alphabetically, for example when sorting by title
+- ``sortOrder=reverse``: Used to sort alphabetically. Note this will sort in **ASCENDING** order (eg A - Z)
 
 - ``from``, ``to``: Used to return a subset of the results, usually for pagination (example: ``from=1&to=20``)
 
-- ``fast``: Used to indicate the information to return. Values:
+- ``fast``: Used to indicate the information to return. Possible values:
 
   - ``index``: returns the metadata information from the Lucene index (a subset of the information). In most cases this is the best option as the retrieval of information from the Lucene index is very fast.
 
-    The fields returned are configured in configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-lucene.xml#L107
+    The fields returned are configured in the ``dumpFields`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-lucene.xml#L107
 
   - ``false``: returns the raw (full) metadata. This is slower as it will retrieve every metadata attribute from the database. If this parameter is not provided, it returns a minimal set of information for each record: uuid, internal id, metadata schema, create/change dates
 
@@ -52,13 +52,13 @@ The following parameters can be appended to your request to format the results:
 
   - ``0`` (default, if the parameter is not provided). 
 
-  - Any other value: returns the summary only.
+  - Any other value returns the summary only.
 
-- ``resultType``: type of summary to return. Summaries are configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L132-L249
+- ``resultType``: type of summary to return. Summaries are configured in the ``summaryTypes`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L132-L249
 
-  - ``hits`` (default value if not provided), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L185
+  - ``hits`` (default value if not provided), returns the fields configured in the ``hits`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L185
 
-  - ``details`` (recommended value to send), returns the fields configured in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
+  - ``details`` (recommended value to send), returns the fields configured in the ``details`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
 
 - Other values in the summaries section are allowed
 
@@ -67,12 +67,17 @@ Query filter parameters
 =======================
 
 You can search on any field(s) indexed in Lucene. For a complete reference see
-https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/index-fields/index.xsl
+https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/index-fields/default.xsl
+
+Note you can query the Lucene index graphically,using a java-based graphical tool such as `Luke <https://github.com/DmitryKey/luke>`_. Version `4.10.4 <https://github.com/DmitryKey/luke/releases/tag/luke-4.10.4.1/>`_ is required to work with the version of Lucene bundled with GeoNetwork. Download the jar file where you can access the GeoNetwork index files, then execute with:
+
+``java -jar luke-with-deps.jar`` 
+
+Then follow the instructions in the tool.
 
 Most relevant fields:
 
-- ``any``: A special Lucene field that indexes all the text content in
-the metadata. Example: http://localhost/geonetwork/srv/eng/q?any=water&from=1&to=20&resultType=details&fast=index&_content_type=json
+- ``any``: A special Lucene field that indexes all the text content in the metadata. Example: http://localhost:8080/geonetwork/srv/eng/q?any=water&from=1&to=20&resultType=details&fast=index&_content_type=json
 
 There are some additional query fields, that use the content from the Lucene
 field ``any``.
@@ -86,9 +91,9 @@ field ``any``.
 - ``keyword``: metadata keywords.
 - ``type``: hierarchyLevel (dataset, service, etc.)
 
-If several tokens are included in the query, an AND query with all the tokens is executed, for example ``title=roads&topicCat=biota``, the query will return the results that contain roads in the title AND have the topic category biota.
+If several tokens are included in the query, an AND query with all the tokens is executed. For example, ``title=roads&topicCat=biota``. This query will return the results that contain roads in the title AND have the topic category biota.
 
-An OR query of several fields can be executed using the format: ``field1_OR_field2_OR_... =value``. For example ``title_OR_abstract=roads`` returns the metadata that contain roads in the title or the abstract.
+An OR query of several fields can be executed using the format: ``field1_OR_field2_OR_... =value``. For example, ``title_OR_abstract=roads`` returns the metadata that contain roads in the title OR the abstract.
 
 Additionally an OR query of several values for a single field can be executed, if the Lucene configuration for that field allows it, with the following format: ``field=value1 or value2 or ...``  For example ``topicCat=biota or farming``, returns the metadata where the topic category is either biota OR farming. 
 If the query was executed as ``topicCat=biota&topicCat=farming`` then only the metadata with BOTH topic categories would be returned.
@@ -98,7 +103,7 @@ Query examples
 
 Query with any field for metadata containing the string 'infrastructure', returning json, using the fast index to return results, and returning the fields configured in ``config-summary.xml``:
 
-http://localhost:8080/geonetwork/srv/eng/q?any=infraestructure&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
+http://localhost:8080/geonetwork/srv/eng/q?any=infrastructure&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
 
 
 Query datasets with title containing the string 'infrastructure', returning json, using the fast index to return results, returning the fields configured in ``config-summary.xml`` and returning only the first 20 results (ordered by relevance):
