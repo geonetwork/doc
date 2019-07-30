@@ -15,3 +15,4 @@ The API guide explains how to write code that interacts with the catalog.
    z39-50.rst
    rdf-dcat.rst
    the-geonetwork-api.rst
+   q-search.rst
