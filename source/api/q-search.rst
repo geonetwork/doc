@@ -60,7 +60,7 @@ The following parameters can be appended to your request to format the results:
 
   - ``details`` (recommended value to send), returns the fields configured in the ``details`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
     
-- ``extraDumpFields``: a comma-separated list of additional fields that you wish to return alongside the fields returned according to the resultType you have chosen
+- ``extraDumpFields``: a comma-separated list of additional fields that you wish to return alongside the fields returned according to the resultType you have chosen. The wildcard character ``*`` can be used to match multiple fields. For example ``extraDumpFields=mycustomfield*`` would match mycustomfield1 and mycustomfield2.
 
 - Other values in the summaries section are allowed
 
