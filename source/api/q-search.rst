@@ -59,6 +59,8 @@ The following parameters can be appended to your request to format the results:
   - ``hits`` (default value if not provided), returns the fields configured in the ``hits`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L185
 
   - ``details`` (recommended value to send), returns the fields configured in the ``details`` section in https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L133
+    
+- ``extraDumpFields``: a comma-separated list of additional fields that you wish to return alongside the fields returned according to the resultType you have chosen
 
 - Other values in the summaries section are allowed
 
