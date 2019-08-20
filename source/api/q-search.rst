@@ -100,6 +100,15 @@ An OR query of several fields can be executed using the format: ``field1_OR_fiel
 Additionally an OR query of several values for a single field can be executed, if the Lucene configuration for that field allows it, with the following format: ``field=value1 or value2 or ...``  For example ``topicCat=biota or farming``, returns the metadata where the topic category is either biota OR farming. 
 If the query was executed as ``topicCat=biota&topicCat=farming`` then only the metadata with BOTH topic categories would be returned.
 
+Date Searches
+=============
+
+There are a number of ways that you can search by date. Date searches should be of the form YYYY-MM-DD
+
+- dateFrom/dateTo: uses the changeDate parameter in the index.
+- creationDateFrom/To: uses the creation date.
+- revisionDateFrom/To: uses the revision date.
+
 Query examples
 ==============
 
@@ -111,4 +120,8 @@ http://localhost:8080/geonetwork/srv/eng/q?any=infrastructure&_content_type=json
 Query datasets with title containing the string 'infrastructure', returning json, using the fast index to return results, returning the fields configured in ``config-summary.xml`` and returning only the first 20 results (ordered by relevance):
 
 http://localhost:8080/geonetwork/srv/eng/q?title=infrastructure&type=dataset&_content_type=json&fast=index&from=1&resultType=details&sortBy=relevance&to=20
+
+Query datasets with a revision date in June 2019 using the fast index to return results, returning the fields configured in ``config-summary.xml`` and returning only the first 20 results (ordered by relevance):
+
+http://localhost:8080/geonetwork/srv/eng/q?_content_type=json&revisionDateFrom=2019-06-01&revisionDateTo=2019-06-30&fast=index&from=1&resultType=details&sortBy=relevance&to=20
 
