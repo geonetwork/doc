@@ -22,6 +22,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     currentversion=3.7.0-SNAPSHOT
     previousversion=3.6.0
     nextversion=3.8.1-SNAPSHOT
+    nextMajorVersion=3.9.0-SNAPSHOT
     modules=( "schemas/iso19115-3.2018" )
 
 
@@ -134,6 +135,20 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 4. Publishing
 
+Generate checksum files
+
+* If using Linux:
+.. code-block:: shell
+
+    cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
+    cd geonetwork-$version && md5sum geonetwork-install-$newversion.jar > geonetwork-install-$newversion.jar.md5 && cd ..
+
+* If using Mac OS X:
+.. code-block:: shell
+
+    md5 -r web/target/geonetwork.war > web/target/geonetwork.war.md5
+    md5 -r geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
+
 On sourceforge first:
 
 .. code-block:: shell
@@ -159,10 +174,55 @@ Publish the release on github https://github.com/geonetwork/core-geonetwork/rele
 
 Update the website links https://github.com/geonetwork/website
 
+- Add the changes file for the release to https://github.com/geonetwork/doc/tree/develop/source/overview/change-log
+- List the previous file in https://github.com/geonetwork/doc/blob/develop/source/overview/change-log/index.rst
+- Update the version: https://github.com/geonetwork/website/blob/master/docsrc/conf.py
+- Update the download link: https://github.com/geonetwork/website/blob/master/docsrc/downloads.rst
+- Add the section for the new release: https://github.com/geonetwork/website/blob/master/docsrc/news.rst
+
 Send an email to the mailing lists.
 
 
 5. Merge in depending branches
 
 If a major version, then master version has to be updated to the next one (eg. if 3.8.0, then 3.7.x is 3.9.x).
+
+.. code-block:: shell
+
+    # Create it if it does not exist yet
+    git checkout master
+    ./update-version.sh $currentversion $nextMajorVersion
+
+
+In the following folder ``web/src/main/webapp/WEB-INF/classes/setup/sql/migrate`` create ``v370`` folder.
+
+In this folder create a ``migrate-default.sql`` with the following content:
+
+.. code-block:: sql
+
+  UPDATE Settings SET value='3.7.0' WHERE name='system/platform/version';
+  UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
+
+
+
+In ``web/src/main/webResources/WEB-INF/config-db/database_migration.xml`` add the following for the migration to call the migration script:
+
+
+.. code-block:: xml
+
+    <entry key="3.7.0">
+      <list>
+        <value>WEB-INF/classes/setup/sql/migrate/v370/migrate-</value>
+      </list>
+    </entry>
+
+
+Commit the new version
+
+.. code-block:: shell
+
+    git add .
+    git commit -m "Update version to $nextMajorVersion"
+    git push origin master
+
 
