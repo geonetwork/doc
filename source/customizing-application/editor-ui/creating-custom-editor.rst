@@ -10,14 +10,14 @@ Customizing editor
 A metadata editor configuration is defined for a specific schema plugin standard
 (see :ref:`implementing-a-schema-plugin`).
 
-The editor configuration defined the navigation menu (ie. list of views and tabs) 
+The editor configuration defines the navigation menu (ie. list of views and tabs) 
 for the editor, the list of fields and the type of control to use. Controls could 
 be HTML type (eg. text, date) or more advanced control build using 
 `AngularJS directive <https://docs.angularjs.org/guide/directive>`_.
 
 
-To build such an editor configuration user needs to know the XSD of the standard 
-to properly build views, tabs and fields according to element names
+To build such an editor configuration the user needs to know the XSD of the standard 
+to properly build views, tabs and fields according to the element names
 (see :code:`schemas/config-editor.xsd`). Create an editor root element and
 attach:
 
@@ -62,7 +62,7 @@ Defining field type
 -------------------
 
 Define the form fields type configuration. Default is simple text input. 
-This list contains the list of exception which does not use a simple text input.
+This list contains the list of exceptions which do not use a simple text input.
 The list of possible values are:
 
 - all HTML5 input type or 
@@ -83,7 +83,7 @@ An element can only have one type defined.
        <for name="gco:Date" use="data-gn-date-picker"/>
 
 
-The other option to define a more advanced field type is to catch the element using 
+The other option is to define a more advanced field type to catch the element using 
 and XSL template. This approach is used for keywords in ISO19139 for example
 (see :code:`schemas/iso19139/src/main/plugin/iso19139/layout/layout-custom-fields-keywords.xsl`).
 
@@ -99,9 +99,9 @@ Grouping element from the standards
 -----------------------------------
 
 List of element to be displayed in a fieldset (ie. boxed element). Those
-elements usually contain children elements and define major section in the
+elements usually contain children elements and define major sections in the
 standard. For example, in ISO19139, identification and distribution are major
-section and should usually be displayed as a group of information.
+sections and should usually be displayed as a group of information.
 
 .. code-block:: xml
 
@@ -122,7 +122,7 @@ Defining multilingual fields
 
 Configure here the list of multilingual fields for a standard.
 
-By default, if the standard as multilingual support like ISO19139, all fields will be displayed
+By default, if the standard has multilingual support like ISO19139, all fields will be displayed
 as multilingual fields. Define in the exclude section the exception (eg. gmd:identifier for example in ISO19139).
 
 Then this section also allows to define how multilingual fields are displayed using the expanded elements.
@@ -158,7 +158,7 @@ Configuring views
 
 At least one view MUST be defined but more view modes can be defined depending on the needs.
 
-By default ISO19139 define 3 views (ie. default, advanced, xml) and one disabled (ie. INSPIRE).
+By default ISO19139 defines 3 views (ie. default, advanced, xml) and one disabled (ie. INSPIRE).
 See :code:`schemas/iso19139/src/main/plugin/iso19139/layout/config-editor.xml` for the configuration.
 
 .. figure:: ../../user-guide/describing-information/img/view-mode.png
@@ -188,7 +188,7 @@ Child elements:
 Defining a view
 ---------------
 
-A view has a label and define a specific rendering of the metadata records. 
+A view has a label and defines a specific rendering of the metadata records. 
 A view is composed of one or more tabs. 
 
 .. code-block:: xml
@@ -239,7 +239,7 @@ Hide those controls in a view to make it easier with less controls for the end-u
 
 - **displayIfRecord** (Optional)
 
-XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed.
+XPath expression returning boolean value which will be evaluated against the metadata record. If true the view will be displayed.
 eg. Display custom-view if metadata standard name contains Medsea: 
 
 .. code-block:: xml
@@ -253,8 +253,8 @@ eg. Display custom-view if metadata standard name contains Medsea:
 
 - **displayIfServiceInfo** (Optional)
 
-XPath expression returning boolean value which will be evaluate against the service 
-information tree (Jeeves /root/gui element). if true the view will be displayed.
+XPath expression returning boolean value which will be evaluated against the service 
+information tree (Jeeves /root/gui element). If true the view will be displayed.
 
 eg. Display custom view if user is Administrator: 
             
@@ -289,7 +289,7 @@ Child elements:
 Defining a tab
 --------------
 
-A view contains at least one tab. In that case it will be the default to display and no
+A view contains at least one tab. If there is only one tab no
 top toolbar will be displayed to switch from one tab to another.
 
 .. figure:: ../../user-guide/describing-information/img/editor-tab-switcher.png
@@ -315,7 +315,7 @@ Attributes:
 
 - **id** (Mandatory)
 
-The tab key used in URL parameter to activate that tab. The key is also use for the tab label as defined in ``{schema}/loc/{lang}/strings.xml``.
+The tab key used in the URL parameter to activate that tab. The key is also use for the tab label as defined in ``{schema}/loc/{lang}/strings.xml``.
             
 
 - **default** (Optional) Fixed value: **true**
@@ -338,8 +338,8 @@ The "flat" mode is an important concept to understand for the editor. It control
  - non existing elements are displayed (ie. elements in the standard not in the current document).
 
 
-When a tab is in flat mode, this tab will not display element which are not in the current metadata 
-document and it will display complex element as a group only if defined in the list of 
+When a tab is in flat mode, this tab will not display elements which are not in the current metadata 
+document and it will display complex elements as a group only if defined in the list of 
 element with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`).
 
 Example for a contact in non "flat" mode:
@@ -355,10 +355,10 @@ Example for a contact in "flat" mode:
 
 
 This mode makes the layout simpler but does not provide all controls to remove 
-some of the usually boxed element. End-user can still move  to the advanced view mode 
+some of the usually boxed elements. An end-user can still move  to the advanced view mode 
 to access those hidden elements in flat mode.
 
-It's recommended to preserve at least one view in non "flat" mode for reviewer or administrator in order
+It's recommended to preserve at least one view in non "flat" mode for reviewers or administrators in order
 to be able:
 
  - to build proper templates based on the standards
@@ -397,7 +397,7 @@ Elements to apply "flat" mode exceptions. By default,
         </view>
         
 
-eg. To display gmd:descriptiveKeywords element even if does not exist in the metadata 
+eg. To display gmd:descriptiveKeywords element even if it does not exist in the metadata 
 record or if the field should be displayed to add new occurences:
 
 .. code-block:: xml
@@ -419,7 +419,7 @@ Customizing thesaurus
 ~~~~~~~~~~~~~~~~~~~~~
 
 To configure the type of transformations
-or the number of keyword allowed for e
+or the number of keywords allowed for each
 thesaurus define a specific configuration:
 
 eg. only 2 INSPIRE themes.
@@ -450,11 +450,11 @@ Attributes:
 
 - **name** (Optional)
 
-An optional name to override the default one base on field name for the section. The name must be defined in ``{schema}/loc/{lang}/strings.xml``.
+An optional name to override the default one based on field name for the section. The name must be defined in ``{schema}/loc/{lang}/strings.xml``.
 
 - **xpath** (Optional)
 
-The xpath of the element to match. If an XPath is set for a section, it should not contains any field.
+The xpath of the element to match. If an XPath is set for a section, it should not contain any fields.
 
 - **mode** (Optional) Fixed value: **flat**
 
@@ -465,9 +465,9 @@ The "flat" mode is an important concept to understand for the editor. It control
  - non existing elements are displayed (ie. elements in the standard not in the current document).
 
 
-When a tab is in flat mode, this tab will not display element which are not in the current metadata 
+When a tab is in flat mode, this tab will not display elements which are not in the current metadata 
 document and it will display complex element as a group only if defined in the list of 
-element with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`).
+elements with fieldset (see :ref:`creating-custom-editor-fieldsWithFieldset`).
 
 Example for a contact in non "flat" mode:
 
@@ -485,7 +485,7 @@ This mode makes the layout simpler but does not provide all controls to remove
 some of the usually boxed element. End-user can still move  to the advanced view mode 
 to access those hidden elements in flat mode.
 
-It's recommended to preserve at least one view in non "flat" mode for reviewer or administrator in order
+It's recommended to preserve at least one view in non "flat" mode for reviewers or administrators in order
 to be able:
 
  - to build proper templates based on the standards
@@ -640,7 +640,7 @@ The element to search in for the geonet child.
             
 Relative XPath of the element to remove when the remove button is clicked.
 
-eg. If a template field match linkage and allows editing of field URL,
+eg. If a template field matches linkage and allows editing of the URL field,
 the remove control should remove the parent element gmd:onLine.
 
 .. code-block:: xml
@@ -676,7 +676,7 @@ Adding a template based field
 
 A templace configuration for an XML snippet to edit.
 
-A template field is compose of an XML snippet corresponding to the element to edit where values to be edited are identified using {{fields}} notation. Each fields needs to be defined as values from which one input field will be created.
+A template field is composed of an XML snippet corresponding to the element to edit where values to be edited are identified using {{fields}} notation. Each fields needs to be defined as values from which one input field will be created.
 
 This mode is used to hide the complexity of the XML element to edit. eg.
 
@@ -691,7 +691,7 @@ This mode is used to hide the complexity of the XML element to edit. eg.
                  xpath="gmd:URL" 
                  tooltip="gmd:linkage"/>
           </values>
-          <snippet>t
+          <snippet>
             <gmd:linkage>
               <gmd:URL>{{url}}</gmd:URL>
             </gmd:linkage>
@@ -699,7 +699,7 @@ This mode is used to hide the complexity of the XML element to edit. eg.
         </template>
         
         
-The template field mode will only provide editing of part of the snippet element. In some case the snippet may contains more elements than the one edited. In such case, the snippet MUST identified the list of potential elements in order to not to loose information when using this mode. Use the gn:copy element to properly combined the template with the current document.
+The template field mode will only provide editing of part of the snippet element. In some case the snippet may contain more elements than the one edited. In such case, the snippet MUST identify the list of potential elements in order to not to lose information when using this mode. Use the gn:copy element to properly combine the template with the current document.
 
 eg. The gmd:MD_Identifier may contain a gmd:authority node which needs to be preserved.
 
