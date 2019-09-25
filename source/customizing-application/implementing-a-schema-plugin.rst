@@ -597,7 +597,7 @@ A filter define:
     <!-- Filter element having withheld nilReason for user who can not edit -->
     <filter xpath="*//*[@gco:nilReason='withheld']"
             ifNotOperation="editing">
-      <keepMarkedElement gco:nilReson="withheld"/>
+      <keepMarkedElement gco:nilReason="withheld"/>
     </filter>
     <!-- Filter element having protocol download for user who can not download -->
     <filter xpath="*//gmd:onLine[*/gmd:protocol/gco:CharacterString = 'WWW:DOWNLOAD-1.0-http--download']"
