@@ -161,8 +161,8 @@ On sourceforge first:
     mkdir 3.0.0
     cd 3.0.0
     put docs/changes3.0.0-0.txt
-    put geonetwork*/*.jar
-    put web/target/geonetwork.war
+    put geonetwork*/*.jar*
+    put web/target/geonetwork.war*
     bye
 
 
