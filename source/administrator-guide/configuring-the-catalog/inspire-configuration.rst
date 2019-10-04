@@ -32,9 +32,9 @@ Loading INSPIRE codelists
 
 For metadata describing INSPIRE dataset and series, it is recommended to load the following codelist from the `INSPIRE Registry<http://inspire.ec.europa.eu/registry/>`_:
 
-* `INSPIRE Theme<http://inspire.ec.europa.eu/theme>`_
-* Metadata codelist register > `Spatial scope<http://inspire.ec.europa.eu/metadata-codelist/SpatialScope>`_
-* Metadata codelist register > `INSPIRE priority data set<http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset>`_
+* `INSPIRE Theme <http://inspire.ec.europa.eu/theme>`_
+* Metadata codelist register > `Spatial scope <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope>`_
+* Metadata codelist register > `INSPIRE priority data set <http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset>`_
 
 From ``admin console`` > ``classification systems``, user can load thesaurus from the registry:
 
@@ -52,7 +52,7 @@ By default the type of thesaurus will be ``theme`` but you can adapt it if neede
 On ``upload`` the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.
 
 
-User can also use the well known `GEMET thesaurus<https://www.eionet.europa.eu/gemet/en/themes/>`_. Some SKOS format version of the thesaurus are available `here<https://github.com/geonetwork/util-gemet/tree/master/thesauri>`_.
+User can also use the well known `GEMET thesaurus <https://www.eionet.europa.eu/gemet/en/themes/>`_. Some SKOS format version of the thesaurus are available `here <https://github.com/geonetwork/util-gemet/tree/master/thesauri>`_.
 
 
 Once loaded, the thesaurus can be used in metadata records:
@@ -70,7 +70,7 @@ The type of encoding of keywords can be defined using the gear icon (See validat
 INSPIRE validation
 ------------------
 
-Since September 2019, INSPIRE validation is available from `the INSPIRE Validator <http://inspire.ec.europa.eu/validator/about/>`_. It is using `ETF which is an open source testing framework for spatial data and services<https://github.com/etf-validator/etf-webapp>`_. To configure the validator, go to ``admin console`` > ``settings`` and set the URL of the validator. The default one is ``http://inspire.ec.europa.eu/validator/``.
+Since September 2019, INSPIRE validation is available from `the INSPIRE Validator <http://inspire.ec.europa.eu/validator/about/>`_. It is using `ETF which is an open source testing framework for spatial data and services <https://github.com/etf-validator/etf-webapp>`_. To configure the validator, go to ``admin console`` > ``settings`` and set the URL of the validator. The default one is ``http://inspire.ec.europa.eu/validator/``.
 
 .. image:: img/inspire-configuration.png
 
