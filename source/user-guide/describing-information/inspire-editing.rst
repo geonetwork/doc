@@ -721,10 +721,7 @@ Below is a valid template that can be used to start with:
                   <gmd:specification>
                     <gmd:CI_Citation>
                       <gmd:title>
-                        <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089/2014-12-31">COMMISSION
-REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the
-European Parliament and of the Council as regards interoperability of spatial data sets and
-services</gmx:Anchor>
+                        <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089/2014-12-31">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gmx:Anchor>
                       </gmd:title>
                       <gmd:date>
                         <gmd:CI_Date>
@@ -1227,10 +1224,7 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
                      <mdq:specification>
                         <cit:CI_Citation>
                            <cit:title>
-                              <gcx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089/2014-12-31">COMMISSION
-REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the
-European Parliament and of the Council as regards interoperability of spatial data sets and
-services</gcx:Anchor>
+                              <gcx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089/2014-12-31">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gcx:Anchor>
                            </cit:title>
                            <cit:date>
                               <cit:CI_Date>
