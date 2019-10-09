@@ -47,7 +47,7 @@ Once translated, the new language needs to be added to the application.
 
 
 To automatically retrieve & update translations files, the script
-:code:`web-ui/download-from-transifex.sh` can be used.
+:code:`web-ui/download-from-transifex.sh` can be used. To use the script you have to join the translation team on transifex. 
 
 
 
