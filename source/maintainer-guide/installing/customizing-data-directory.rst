@@ -231,7 +231,7 @@ The list of properties that can be set are:
 Check the configuration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-After startup, check the configuration in ``Administration`` > ``System Information`` page.
+After startup, check the configuration in ``Admin console`` > ``Statistics and status`` > ``Information`` page.
 
 
  .. figure:: img/datadirectory.png

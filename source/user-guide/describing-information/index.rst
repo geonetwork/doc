@@ -36,6 +36,7 @@ any other content type. It supports among other:
    editing-metadata.rst
    deleting-metadata.rst
    multilingual-editing.rst
+   inspire-editing.rst
 
 
 Based on user profiles (see :ref:`creating-user`), a dashboard provides easy access
