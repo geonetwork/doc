@@ -4,13 +4,12 @@ User Self-Registration
 ======================
 
 To enable the self-registration functions, see :ref:`system-configuration`.
-When self-registration is enabled, the login page shows to a user
-who are not connected, a ``Need an account`` link:
+When self-registration is enabled, for users that are not logged in, an additional link is shown on the login page:
 
 .. figure:: img/selfregistration-start.png
 
 
-Click the ``Create an account`` and fill out the registration forms:
+Click the ``Create an account`` button and fill out the registration form:
 
 .. figure:: img/selfregistration-form.png
 

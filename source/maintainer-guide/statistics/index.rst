@@ -8,7 +8,7 @@ using `Kibana <https://www.elastic.co/products/kibana>`_ dashboards to visualize
 
 This guide describes the configuration required to integrate ElasticSearch/Kibana in GeoNetwork to store and visualize the search and content statistics.
 
-GeoNetwork supports ElasticSearch/Kibana 5.6.1 version, other versions may not work properly.
+GeoNetwork 3.8.x supports ElasticSearch/Kibana 7.2, other versions may not work properly.
 
 .. note::
 
