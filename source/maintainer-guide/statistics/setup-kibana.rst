@@ -3,9 +3,9 @@
 Setup Kibana
 ############
 
-In this section is described how to setup Kibana to be used in GeoNetwork to visualize the search/content statistics:
+This section describes how to setup Kibana to be used in GeoNetwork to visualize the search/content statistics:
 
-- Download Kibana 5.6.1 from http://www.elastic.co/downloads/past-releases/kibana-5-6-1
+- Download Kibana from http://www.elastic.co/downloads/past-releases/. For Geonetwork 3.8.x version 7.2.x is recommended.
 
 - Unzip the file, for example to `/opt/kibana`
 
@@ -28,21 +28,15 @@ In this section is described how to setup Kibana to be used in GeoNetwork to vis
 
 .. note::
 
-    Usually you'll want to configure Kibana to run when the server is startup, this is not covered in this guide.
+    Usually you'll want to configure Kibana to start automatically when the server is startup, this is not covered in this guide.
 
 - Verify in a browser that Kibana is running: http://localhost:5601/app/kibana
 
-- Load Kibana data:
+- Kibana should also be visible in Geonetwork at http://localhost:8080/geonetwork/dashboards
 
-.. code-block:: shell
+Load Kibana data
+================
 
-    $ cd /tmp
-    $ curl -O https://raw.githubusercontent.com/geonetwork/core-geonetwork/3.4.x/es/es-dashboards/data/index-dashboards-mapping.json
-    $ elasticdump \
-          --input=index-dashboards-mapping.json \
-          --output=http://localhost:9200/.dashboards \
-          --type=mapping
-    $ curl -O https://raw.githubusercontent.com/geonetwork/core-geonetwork/3.4.x/es/es-dashboards/data/index-dashboards.json
-    $ elasticdump \
-        --input=index-dashboards.json \
-        --output=http://localhost:9200/.dashboards
+Visit Kibana in a browser using one of the above links and go to 'Saved Objects'. 
+
+Import export.json from https://github.com/geonetwork/core-geonetwork/blob/master/es/es-dashboards/data/export.json
