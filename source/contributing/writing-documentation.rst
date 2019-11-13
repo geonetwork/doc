@@ -4,7 +4,7 @@
 Writing documentation
 #####################
 
-This section gives some guidelines to write consistent documentation
+This section provides some guidelines for writing consistent documentation
 for |project_name|.
 
 
@@ -12,13 +12,20 @@ for |project_name|.
 .. seealso::
 
   The quickest and easiest way to contribute to the documentation is to sign up
-  for a `GitHub account <https://github.com/>`_ and edit the documentation pages
-  (See :repo:`doc`).
+  for a `GitHub account <https://github.com/>`_ and edit the documentation pages by clicking the 
+  "Edit on GitHub" link at the top of the page. (See :repo:`doc`).
 
 
-Build the docs
-==============
+Building the docs
+=================
 
+The following tools are required to build the documentation from source:
+
+*  Java JDK 1.8
+*  `Maven 3.1.0+ <https://maven.apache.org>`_
+*  `Sphinx <https://sphinx.pocoo.org>`_
+
+Once maven is installed it should be available in your command shell as ``mvn``.
 
 .. code-block:: shell
 
@@ -27,8 +34,8 @@ Build the docs
     mvn clean install
 
 
-Edit the reStructuredText files
-===============================
+Editing the reStructuredText files
+==================================
 
 To update the documentation, use a text editor to edit ``.rst`` files. Save
 your changes, build the documentation and open the HTML files to preview
@@ -46,8 +53,8 @@ This section gives some useful tips about using Sphinx.
 Don’t introduce any new warnings
 --------------------------------
 
-When building the doc, Sphinx prints out warnings about broken links,
-syntax errors, ... Don't introduce new ones.
+When building the docs, Sphinx prints out warnings about broken links,
+syntax errors and so on. Don't introduce new ones.
 
 
 It’s best to delete the build directory and completely rebuild the docs,
