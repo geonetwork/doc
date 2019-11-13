@@ -21,17 +21,20 @@ Building the docs
 
 The following tools are required to build the documentation from source:
 
-*  Java JDK 1.8
-*  `Maven 3.1.0+ <https://maven.apache.org>`_
-*  `Sphinx <https://sphinx.pocoo.org>`_
-
-Once maven is installed it should be available in your command shell as ``mvn``.
+*  **Java JDK 1.8**
+*  **Maven 3.1.0+**: Once installed `Maven <https://maven.apache.org>`_ should be available in your command shell as ``mvn``.
+*  **Sphinx**: See `Sphinx <https://www.sphinx-doc.org/en/master/usage/installation.html>`_  for details. Once installed confirm it's available by running ``sphinx-build --version``.
+*  **sphinx-bootstrap-theme**: Install using ``pip install sphinx-bootstrap-theme``.
+   
+Then build the documentation using the following commands:
 
 .. code-block:: shell
 
     git clone https://github.com/geonetwork/doc
     cd doc
     mvn clean install
+
+Once the documentation has built without errors, access the html files from ``doc\target\en\index.html``.
 
 
 Editing the reStructuredText files
