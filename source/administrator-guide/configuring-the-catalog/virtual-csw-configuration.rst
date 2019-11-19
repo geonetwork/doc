@@ -4,6 +4,9 @@
 Configuring virtual CSW
 #######################
 
+Warning: This feature will be deprecated in future version. Use :ref:`portal_documentation` instead.
+
+
 This feature of CSW server adds the capability to create custom CSW entry points that apply extra criteria to the CSW requests, allowing to implement several useful cases like, for example:
 
 * Define an INSPIRE CSW entry point to deliver only the INSPIRE related metadata stored in the catalog.
