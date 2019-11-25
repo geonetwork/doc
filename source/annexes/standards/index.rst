@@ -20,7 +20,7 @@ The catalogue supports the following standards:
    dublin-core/index.rst
 
 
-ISO19110 can be use to encode feature catalogue (but ISO19115-3 is recommended).
+ISO19110 can be used to encode feature catalogue (but ISO19115-3 is recommended).
 
 Dublin core (for CSW only) is only used to test OGC CSW testsuites.
 
