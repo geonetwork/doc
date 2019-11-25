@@ -4,7 +4,7 @@
 Configuring virtual CSW
 #######################
 
-Warning: This feature will be deprecated in future version (4.x). Use :ref:`portal_documentation` instead.
+Warning: This feature will be deprecated in future version (4.x). Use :ref:`portal-configuration` instead.
 
 
 This feature adds the capability to create custom CSW entry points that apply extra criteria to the CSW requests, allowing to implement several useful cases like, for example:
