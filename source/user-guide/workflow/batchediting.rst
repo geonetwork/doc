@@ -4,7 +4,7 @@ Updating a set of records
 #########################
 
 
-From the editor board, editors can do batch editing.
+From the editor board, editors can do batch editing on multiple records.
 
 .. figure:: img/batch-editing-menu.png
 
@@ -20,28 +20,27 @@ Batch editing consists of 3 steps:
 Defining edits
 --------------
 
-Warning: You can break things here. When defining xpath and using delete or replace mode be sure to test first on a record
-before applying changes to a lot of records. If needed, backup your record first.
+**Warning: You can break things here. When defining xpath and using delete or replace mode, be sure to test on a single record before applying changes to a lot of records. If needed, back up your record first.**
 
 
-Changes are defined on a per standard basis. A set of default field to edit is available (and can be extended in the ``config-editor.xml`` file of the standard).
+Changes are defined on a per standard basis. A set of default fields to edit is available (and can be extended in the ``config-editor.xml`` file of the standard).
 
 .. figure:: img/batch-editing-iso19139fields.png
 
 
-An advanced mode is also available to define custom edits. The advanced mode consist of:
+An advanced mode is also available to define custom edits. The advanced mode consists of:
 
 * an optional title
-* a type of update (gn_add, gn_create, gn_replace, gn_delete)
-* a mandatory XPath to point to the element(s) to update. XPath may contain a filter expression.
-* a value which could be an XML snippet or a text string if the mode is not delete
+* a type of update (``gn_add``, ``gn_create``, ``gn_replace``, ``gn_delete``)
+* a mandatory XPath to point to the element(s) to update. The XPath may contain a filter expression.
+* a value, which could be an XML snippet or a text string if the mode is not ``delete``.
 
 
 .. figure:: img/batch-editing-advancedmode.png
 
 
 
-To add an element, eg. add a new keyword section in first position
+To add an element, eg. add a new keyword section in first position:
 
 .. code-block:: json
 
@@ -52,7 +51,7 @@ To add an element, eg. add a new keyword section in first position
 
 
 
-To remove an element, eg. remove all online resource having a protocol ``OGC:WMS``
+To remove an element, eg. remove all online resource having a protocol ``OGC:WMS``:
 
 .. code-block:: json
 
@@ -63,7 +62,7 @@ To remove an element, eg. remove all online resource having a protocol ``OGC:WMS
 
 
 
-To replace an element, eg. replacing a keyword value
+To replace an element, eg. replacing a keyword value:
 
 .. code-block:: json
 
@@ -79,9 +78,9 @@ To replace an element, eg. replacing a keyword value
 Applying changes
 ----------------
 
-When applying changes, user privileges applies. It means that if user can not edit a record selected, batch edits will not be applied to that record.
+When applying changes, user privileges apply, so if the user cannot edit a selected record, batch edits will not be applied to that record.
 
-The batch edit report explain how many records were processed:
+The batch edit report explains how many records were processed:
 
 
 .. figure:: img/batch-editing-report.png
