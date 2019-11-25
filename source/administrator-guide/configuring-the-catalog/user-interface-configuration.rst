@@ -18,12 +18,12 @@ using the web interface in ``Admin console`` > ``Settings`` > ``User Interface``
 Since the settings form is a long form, the 'save' button may be repeated between
 the sections and will save all settings. 
 
-Via `choose UI configuration` and `Add new UI configuration` it is possible to create mulitple UI configurations.
-Those configurations can be used in 2 contexts:
+Via `choose UI configuration` and `Add new UI configuration` it is possible to create multiple UI configurations.
+These configurations can be used in 2 contexts:
 
-- when creating a sub-portal (see :ref:`portal-configuration`). A UI configuration can be attached to one or more sub-portal.
+- when creating a sub-portal (see :ref:`portal-configuration`), a UI configuration can be attached to one or more sub-portals.
 
-- when building external JS applications which loads a specific configuration.
+- when building an external JS application, which is able to load a specific configuration.
 
 
 The main catalog is using the default UI configuration which should be named 'srv'.
