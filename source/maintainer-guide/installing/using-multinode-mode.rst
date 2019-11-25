@@ -3,6 +3,10 @@
 Using multinode mode
 ####################
 
+
+.. deprecated:: 3.8.0
+     Use :ref:`portal-configuration` instead.
+
 Overview
 ========
 

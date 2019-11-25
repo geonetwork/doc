@@ -10,8 +10,9 @@ Configuring the catalog
    system-configuration.rst
    user-interface-configuration.rst
    csw-configuration.rst
+   portal-configuration.rst
    virtual-csw-configuration.rst
    inspire-configuration.rst
    map-server-configuration.rst
 
-   
+
