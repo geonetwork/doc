@@ -7,7 +7,7 @@ User Interface Configuration
 Most of the configuration parameters for the user interface can be changed by administrator users
 using the web interface in ``Admin console`` > ``Settings`` > ``User Interface``.
 
-.. important:: Configuration of these parameters is critically important 
+.. important:: Configuration of these parameters is critically important
    for the catalog in an operational context. Misunderstanding
    some settings may result in a system that does not function as
    expected. For example, the map can become unusable.
@@ -22,9 +22,9 @@ the sections and will save all settings.
 
 
 Top Toolbar
-``````````````
+```````````
 
-On this section, the administrator user can define some parameters to configure the top toolbar of the user interface. 
+On this section, the administrator user can define some parameters to configure the top toolbar of the user interface.
 
 .. figure:: img/ui-settings-toptoolbar.png
 
@@ -33,7 +33,7 @@ On this section, the administrator user can define some parameters to configure 
 
 
 Home Page
-``````````````
+`````````
 On this section, the administrator user can define the URL of the home page. If the checkbox is disabled, there will be no Home tab.
 
 .. figure:: img/ui-settings-homepage.png
@@ -43,7 +43,7 @@ On this section, the administrator user can define the URL of the home page. If 
 
 
 Search Page
-``````````````
+```````````
 
 On this section, the administrator user can define some parameters to configure the user interface of the search page. If the checkbox is disabled, there will be no Search tab.
 
@@ -53,7 +53,7 @@ On this section, the administrator user can define some parameters to configure 
 
 
 Map Application
-``````````````
+```````````````
 
 On this section, the administrator user can define some parameters to configure the different maps of the user interface (mini map on search, main map tab and editor). If the checkbox is disabled, there will be no Map tab.
 
@@ -77,9 +77,8 @@ For projections defined on Proj4 by default, only label and code are needed. For
 
 - **Optional Map Viewer Tools** On the following list we can choose which tools to display on the right toolbar of the map.
 
-.. figure:: img/ui-settings-viewermapconfiguration.png
 
-Viewer Map Configuration 
+Viewer Map Configuration
 ........................
 
 .. figure:: img/ui-settings-mapviewer.png
@@ -101,24 +100,24 @@ All this layers can have also some optional extra properties:
 
  * **title** The title/label of the layer
  * **projectionList**  Projection array to restrict this layer only to certain projections on the map
- 
+
  Examples of layers:
- 
+
  `{"type":"stamen","projectionList":["EPSG:3857"]}`
- 
+
  This layer will use OpenStreetMap Stamen style, but only when the map is on ``EPSG:3857``.
- 
+
  `{"type":"wms","title":"OI.OrthoimageCoverage","name":"OI.OrthoimageCoverage","url":"http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS","projectionList":["EPSG:4326"]}`
- 
+
  This WMS layer will be shown but only when the map is on ``EPSG:4326``.
 
-Search Map Configuration 
+Search Map Configuration
 ........................
 
 Same configuration as in Viewer Settings apply, but only for the mini map on the search page.
- 
 
-Editor Map Configuration 
+
+Editor Map Configuration
 ........................
 
 Same configuration as in Viewer Settings apply, but only for the map on the editor page.

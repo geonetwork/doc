@@ -290,8 +290,7 @@ MCP is as follows:
 
   <?xml version="1.0" encoding="UTF-8"?>
   <schema xmlns="http://geonetwork-opensource.org/schemas/schema-ident"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          .....>
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <name>iso19139.mcp</name>
     <id>19c9a2b2-dddb-11df-9df4-001c2346de4c</id>
     <version>1.5</version>
@@ -346,9 +345,9 @@ Each of the elements is as follows:
 - **filters** - (Optional) contains custom filter to be applied based on user privileges
 
 
-After creating this file you can validate it manually using the XML schema 
-definition (XSD) in ``INSTALL_DIR/web/geonetwork/xml/validation/schemaPlugins/schema-ident.xsd``. 
-This XSD is also used to validate this file when the schema is loaded. 
+After creating this file you can validate it manually using the XML schema
+definition (XSD) in ``INSTALL_DIR/web/geonetwork/xml/validation/schemaPlugins/schema-ident.xsd``.
+This XSD is also used to validate this file when the schema is loaded.
 If schema-ident.xml failes validation, the schema will not be loaded.
 
 
@@ -356,15 +355,15 @@ If schema-ident.xml failes validation, the schema will not be loaded.
 More on autodetect
 ~~~~~~~~~~~~~~~~~~
 
-The autodetect section of schema-ident.xml is used when GeoNetwork needs to 
+The autodetect section of schema-ident.xml is used when GeoNetwork needs to
 identify which metadata schema a record belongs to.
 
 The five rules that can be used in this section in order of evaluation are:
 
-**1. Attributes** - Find one or more attributes and/or namespaces in the document. 
-An example use case is a profile of ISO19115/19139 that adds optional elements 
-under a new namespace to gmd:identificationInfo/gmd:MD_DataIdentification. 
-To detect records that belong to this profile the autodetect section in the 
+**1. Attributes** - Find one or more attributes and/or namespaces in the document.
+An example use case is a profile of ISO19115/19139 that adds optional elements
+under a new namespace to gmd:identificationInfo/gmd:MD_DataIdentification.
+To detect records that belong to this profile the autodetect section in the
 schema-ident.xml file could look something like the following:
 
 .. code-block:: xml
