@@ -82,7 +82,7 @@ Some organizations are opening the catalogue to a set of partners. In such case,
 and create their records in dedicated groups usually. A good example is https://www.geocat.ch/
 providing a main search filter ``catalogue``.
 
-.. figure:: imp/portal-geocatch.png
+.. figure:: img/portal-geocatch.png
 
 The concept of sub portal adds the possibility to create dedicated URL for each partner. The header can contain
 the partner identification with name and logo and optionnaly the user interface can also be customized
@@ -119,7 +119,7 @@ If you make this type of configuration ie. one partner = one group = one portal 
 
 Remember that a record is visible in the ``oca`` portal because it is published in the group ``oca``:
 
-.. figure:: portal-oca-privileges.png
+.. figure:: img/portal-oca-privileges.png
 
 If the ``publish`` operation is removed from ``oca`` group, then record will not be visible anymore in that portal.
 

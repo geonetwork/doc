@@ -55,6 +55,7 @@ To add an element, eg. add a new keyword section in first position
 To remove an element, eg. remove all online resource having a protocol ``OGC:WMS``
 
 .. code-block:: json
+
   [{
     "xpath": ".//gmd:onLine[*/gmd:protocol/*/text() = 'OGC:WMS']",
     "value":"<gn_delete></gn_delete>"
@@ -65,6 +66,7 @@ To remove an element, eg. remove all online resource having a protocol ``OGC:WMS
 To replace an element, eg. replacing a keyword value
 
 .. code-block:: json
+
   [{
     "xpath":".//gmd:keyword/gco:CharacterString[text() = 'wastewater']",
     "value":"<gn_replace>Waste water</gn_replace>"
