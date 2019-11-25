@@ -3,6 +3,8 @@
 Standards
 #########
 
+The catalogue supports the following standards:
+
 .. toctree::
    :maxdepth: 2
 
