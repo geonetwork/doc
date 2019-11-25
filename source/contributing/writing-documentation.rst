@@ -40,7 +40,8 @@ Once the documentation has built without errors, access the html files from ``do
 Editing the reStructuredText files
 ==================================
 
-To update the documentation, use a text editor to edit ``.rst`` files. Save
+To update the documentation, use a text editor to edit ``.rst`` files. Ensure you are using the correct terminology by
+checking :ref:`style-guide`. Save
 your changes, build the documentation and open the HTML files to preview
 the changes. When your changes are ready to be submitted to the project, follow
 the steps in :ref:`making-a-pull-request`.
