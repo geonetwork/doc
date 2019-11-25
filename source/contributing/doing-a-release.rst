@@ -97,9 +97,9 @@ Once the release branch has been thoroughly tested and is stable a release can b
     ./update-version.sh $newversion $nextversion
 
     # Add SQL migration step for the next version
-    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v381
-    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v381/migrate-default.sql
-    UPDATE Settings SET value='3.8.1' WHERE name='system/platform/version';
+    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383
+    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383/migrate-default.sql
+    UPDATE Settings SET value='3.8.3' WHERE name='system/platform/version';
     UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
     EOF
     vi web/src/main/webResources/WEB-INF/config-db/database_migration.xml
@@ -124,7 +124,7 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
     git add .
     git commit -m "Update version to $nextversion"
 
-    
+
     # Push the branch
     git push origin $versionbranch
 
@@ -158,8 +158,8 @@ On sourceforge first:
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
     # or for RC release
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
-    mkdir 3.0.0
-    cd 3.0.0
+    mkdir v3.0.0
+    cd v3.0.0
     put docs/changes3.0.0-0.txt
     put geonetwork*/*.jar*
     put web/target/geonetwork.war*

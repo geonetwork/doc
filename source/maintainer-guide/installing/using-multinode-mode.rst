@@ -3,6 +3,10 @@
 Using multinode mode
 ####################
 
+
+.. deprecated:: 3.8.0
+     Use :ref:`portal-configuration` instead.
+
 Overview
 ========
 
@@ -17,15 +21,15 @@ The node named is "srv". Each nodes have their own:
 The main data directory contains one data folder per node.
 
 
-This simplify catalog updates for users maintaining a set of catalogs. It
-also save resources by sharing some part of the application eg. all catalogs
+This simplifies catalog updates for users maintaining a set of catalogs. It
+also saves resources by sharing some part of the application eg. all catalogs
 share the same schemas and thesaurus
 (to save memory).
 
 
 User can only login in one node at a time in the same browser (only one
-session allowed). When identified, if user tries to switch to another
-node, the catalog propose:
+session is allowed). When identified, if user tries to switch to another
+node, the catalog proposes:
 
 * to log out and continue to the requested node
 * to return to previous node
@@ -35,7 +39,7 @@ node, the catalog propose:
 
 
 Installations running 200 nodes / servers have been setup. Such configuration
-require to increase JVM memory configuration (~4Go for Xmx parameter).
+require to increase JVM memory configuration (~4Gb for Xmx parameter).
 
 
 Configuration
@@ -159,4 +163,4 @@ The script does the following tasks:
 
 - Creates the node configuration in ``WEB-INF/config-node/{{node_id}}.xml``.
 
-- Creates CSS style file for the node in the ``catalog/style`` folder.
+- Creates the CSS style file for the node in the ``catalog/style`` folder.

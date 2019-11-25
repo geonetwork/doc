@@ -9,6 +9,8 @@ The catalogue support the following standards:
 
 
 The main ones are:
+=======
+The catalogue supports the following standards:
 
 .. toctree::
    :maxdepth: 2

@@ -15,8 +15,8 @@ To add a new user to the GeoNetwork system you do the following:
 #. Provide the *information* required for the new user;
 
 
-#. Assign the correct *profile*;
+#. Assign the correct *profile* (see :ref:`user_profiles`);
 
-#. Assign the user to a *group*;
+#. Assign the user to a *group* (see :ref:`creating-group`);
 
 #. Click on *Save*.
