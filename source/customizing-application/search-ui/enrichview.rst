@@ -108,7 +108,8 @@ In ``gn_search_geoportal.less``, import default less files.
 
 Then, in your less file, you can start adding new rules
 
-.. code-block:: css
+
+.. code-block:: none
 
     .gn-resultview .list-group-item {
         background-color: red;

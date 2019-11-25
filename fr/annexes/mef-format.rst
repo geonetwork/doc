@@ -1,3 +1,0 @@
-Metadata Exchange Format (MEF)
-##############################
-
