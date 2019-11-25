@@ -18,9 +18,16 @@ using the web interface in ``Admin console`` > ``Settings`` > ``User Interface``
 Since the settings form is a long form, the 'save' button may be repeated between
 the sections and will save all settings. 
 
-Via `choose UI configuration` and `Add new UI configuration` it is possible to create mulitple UI configurations 
-and link them to the relevant node. This is relevant if you're geonetwork in a multinode configuration. 
-UI configuration should be named equally to the node name (default node is 'srv').
+Via `choose UI configuration` and `Add new UI configuration` it is possible to create mulitple UI configurations.
+Those configurations can be used in 2 contexts:
+
+- when creating a sub-portal (see :ref:`portal-configuration`). A UI configuration can be attached to one or more sub-portal.
+
+- when building external JS applications which loads a specific configuration.
+
+
+The main catalog is using the default UI configuration which should be named 'srv'.
+
 If no UI configuration is available, a default set of parameters will be used. 
 
 .. _user-interface-config-toptoolbar:
