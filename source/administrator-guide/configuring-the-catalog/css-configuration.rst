@@ -8,8 +8,8 @@ Open 'Settings' from the Administration page and select `CCS & Style` configurat
 
 .. figure:: img/css-screen.png
 
-This page facilitates to change various colors of screen elements. Mind that 'background' refers to the background color of 
-elements and 'color' to the font color used in the element. Above configuration will result in below vizualisation:
+This page allows you to change various colors of page elements. Note that 'background' refers to the background color of
+elements, and 'color' to the font color used in the element. The above configuration will result in the vizualisation below:
 
 .. figure:: img/css-result.png
 
@@ -18,6 +18,6 @@ an image from a https source if you're running Geonetwork in https. Placing the 
 is the best option to prevent potential browser blocks.
 
 Note that you can save a configuration locally for reuse later or on alternative servers. Saving a configuration will take a long time, 
-because all scripts and styles will be rebuild from sources. Temporary files are stored on the server in an application folder, you may need 
-to revisit this page after an upgrade the system (or redeploy of a docker container)
+because all scripts and styles will be rebuilt from sources. Temporary files are stored on the server in an application folder, you may need 
+to revisit this page after an upgrade the system (or redeploy of a docker container).
 
