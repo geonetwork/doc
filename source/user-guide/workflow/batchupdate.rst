@@ -12,6 +12,7 @@ provides 2 options for that:
    :maxdepth: 2
 
 
+   batchediting.rst
    batchupdate-from-admin.rst
    batchupdate-xsl.rst
 
