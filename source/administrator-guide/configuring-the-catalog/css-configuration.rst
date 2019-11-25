@@ -1,4 +1,4 @@
-.. _csw-configuration:
+.. _css-configuration:
 
 Configuring CSS & Style
 #######################
