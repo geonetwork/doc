@@ -21,12 +21,13 @@ There is different ways to install |project_name|:
    installing-index.rst
 
 
-After installing the application, you can can configure the following:
+After installing the application, you can configure the following:
 
 .. toctree::
    :maxdepth: 2
 
    configuring-database.rst
-   loading-samples.rst
    customizing-data-directory.rst
    using-multinode-mode.rst
+   map-print-setup.rst
+   loading-samples.rst
