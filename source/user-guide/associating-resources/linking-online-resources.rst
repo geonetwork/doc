@@ -141,10 +141,10 @@ be relevant to hide those informations for public users
 
 .. _linking-data-using-atom-feed:
 
-Linking data using ATOM feed
-----------------------------
+Linking data using ATOM feeds
+-----------------------------
 
-If your organisation is providing ATOM feed for accessing the data, it make sense to reference them in metadata records. User can either link an ATOM feed in a service or in a dataset.
+If your organisation provides ATOM feeds to facilitate access to the data, metadate records can link to these feeds. Users can link to a service feed in a service record and to a dataset feed in a dataset record.
 
 
 .. code-block:: xml
@@ -170,7 +170,7 @@ Once registered in the metadata, the ATOM feed will be displayed on the record v
 
 .. figure:: img/atom-choose-feed.png
 
-User can choose a service, the list of datasets available are retrieved and the download links displayed to the user. A feed can have one or more downloads:
+Users can choose a service, the list of datasets available are retrieved and the download links displayed to the user. A dataset feed can have one or more downloads:
 
 .. figure:: img/atom-choose-dataset.png
 
@@ -181,9 +181,8 @@ Examples:
 
 
 
-
-The catalog also provides the capability to produce ATOM feed for services and datasets.
-For this, check the ATOM API (see :ref:`opensearch-and-atom`_). A GML dataset can be exposed using the following encoding in order to be published in the dataset ATOM feed:
+The catalog also provides the capability to produce ATOM feeds for services and datasets from metadata records.
+To enable this, check the ATOM API (see :ref:`opensearch-and-atom`_). A GML dataset can be exposed using the following encoding in order to be published in a dataset ATOM feed:
 
 .. code-block:: xml
 
