@@ -108,18 +108,10 @@ Clicking the record will provide more in depth details about the resources:
 To get more information, switch the advanced view mode.
 To update the record, click the edit button.
 
-
-
 From the results or the record view, you can easily add WMS layers referenced in
 a metadata record on the map. With the map, you can visualize your data, choose
 your background maps, query objects, display on a 3D globe and more ...
 
-
 .. figure:: img/map-africa-basin.png
 
-
-
-For more information
---------------------
-
-Continue reading the documentation.
+Read more about use of the :ref:`map-viewer-as-user`
