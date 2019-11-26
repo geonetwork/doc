@@ -114,12 +114,6 @@ From the results or the record view, you can easily add WMS layers referenced in
 a metadata record on the map. With the map, you can visualize your data, choose
 your background maps, query objects, display on a 3D globe and more ...
 
-
 .. figure:: img/map-africa-basin.png
 
-
-
-For more information
---------------------
-
-Continue reading the documentation.
+Read more about use of the :ref:`map-viewer-as-user`
