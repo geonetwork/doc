@@ -3,8 +3,8 @@
 Configuring validation levels
 #############################
 
-Each standards define validation levels (using schematron - see :ref:`implementing-a-schema-plugin`).
-By default, ISO19139 propose validation using:
+Each standard defines validation levels (using schematron - see :ref:`implementing-a-schema-plugin`).
+By default, ISO19139 proposes validation using:
 
 - ISO rules
 
@@ -15,7 +15,7 @@ By default, ISO19139 propose validation using:
 - URL checker
 
 
-All levels will be applied by default during validation and the admin interface allows to customize if a rule:
+All levels will be applied by default during validation and the admin interface allows customization if a rule:
 
 - is required to be valid (will be reported in green/red depending on the status)
 
