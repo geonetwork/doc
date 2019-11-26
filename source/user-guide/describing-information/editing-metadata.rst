@@ -31,25 +31,25 @@ From left to right:
 Navigating the form
 -------------------
 
-To describe the resource, editor can use the form which provides different views.
+To describe the resource, an editor can use the form, which provides different views.
 By default the editor provides:
 
 - a ``simple view`` displaying all fields from the metadata
 - a ``full view`` based on the metadata standard and providing access to all
   descriptors from the standards
-- an *XML view** displaying the record as an XML document
+- an ``XML view`` displaying the record as an XML document
 
 To switch from one view to another, use the following menu:
 
 .. figure:: img/view-mode.png
 
 
-Once the view selected, user can browse the list of fields to populate. He can
-also use the scroll spy on the lower right corner to quickly access a section.
+Once the view is selected, the editor can browse the list of fields to populate. He can
+also use the scroll-spy on the lower right corner to quickly access a section.
 
 .. figure:: img/scoll-spy.png
 
-The scroll spy highlight the visible sections, help user to return to the top
+The scroll-spy highlights the visible sections, helps user to return to the top
 of the form and can be minimized if needed.
 
 
@@ -63,8 +63,8 @@ Populating fields
 .. todo:: Add details about directory / thesaurus
 
 
-Depending on the view configuration (see :ref:`creating-custom-editor`), editor can reorder elements using
-up and down control.
+Depending on the view configuration (see :ref:`creating-custom-editor`), editors can reorder elements using
+up and down controls.
 
 .. figure:: img/editor-control-updown.png
 
