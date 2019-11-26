@@ -138,3 +138,101 @@ be relevant to hide those informations for public users
 
 
 
+
+.. _linking-data-using-atom-feed:
+
+Linking data using ATOM feed
+----------------------------
+
+If your organisation is providing ATOM feed for accessing the data, it make sense to reference them in metadata records. User can either link an ATOM feed in a service or in a dataset.
+
+
+.. code-block:: xml
+
+ <gmd:MD_DigitalTransferOptions>
+  <gmd:onLine>
+   <gmd:CI_OnlineResource>
+    <gmd:linkage>
+     <gmd:URL>http://www.broinspireservices.nl/atom/awp.atom</gmd:URL>
+    </gmd:linkage>
+    <gmd:protocol>
+     <gco:CharacterString>INSPIRE Atom</gco:CharacterString>
+    </gmd:protocol>
+    <gmd:name>
+     <gco:CharacterString>gdn.Aardwarmtepotentie</gco:CharacterString>
+    </gmd:name>
+   </gmd:CI_OnlineResource>
+  </gmd:onLine>
+ </gmd:MD_DigitalTransferOptions>
+
+
+Once registered in the metadata, the ATOM feed will be displayed on the record view:
+
+.. figure:: img/atom-choose-feed.png
+
+User can choose a service, the list of datasets available are retrieved and the download links displayed to the user. A feed can have one or more downloads:
+
+.. figure:: img/atom-choose-dataset.png
+
+
+Examples:
+
+- `NGR National Georegister  <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/search?any=atom&fast=index>`_, ` Statistics Netherlands Land Use 2015 ATOM <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/a657f732-e1b3-4638-9933-67cab10d9081>`_
+
+
+
+
+The catalog also provides the capability to produce ATOM feed for services and datasets.
+For this, check the ATOM API (see :ref:`opensearch-and-atom`_). A GML dataset can be exposed using the following encoding in order to be published in the dataset ATOM feed:
+
+.. code-block:: xml
+
+         <gmd:transferOptions>
+            <gmd:MD_DigitalTransferOptions>
+               <gmd:unitsOfDistribution>
+                  <gco:CharacterString>B</gco:CharacterString>
+               </gmd:unitsOfDistribution>
+               <gmd:transferSize>
+                  <gco:Real>428973180</gco:Real>
+               </gmd:transferSize>
+               <gmd:onLine>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>https://download.data.public.lu/resources/inspire-annex-i-theme-addresses-addresses/20191118-115245/ad.address.gml</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
+                     </gmd:protocol>
+                     <gmd:applicationProfile>
+                        <gco:CharacterString>INSPIRE-Download-Atom</gco:CharacterString>
+                     </gmd:applicationProfile>
+                     <gmd:name>
+                        <gmx:MimeFileType type="application/octet-stream">AD.Address.gml</gmx:MimeFileType>
+                     </gmd:name>
+                     <gmd:description>
+                        <gco:CharacterString></gco:CharacterString>
+                     </gmd:description>
+                     <gmd:function>
+                        <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="download">download</gmd:CI_OnLineFunctionCode>
+                     </gmd:function>
+                  </gmd:CI_OnlineResource>
+               </gmd:onLine>
+            </gmd:MD_DigitalTransferOptions>
+         </gmd:transferOptions>
+
+
+
+Examples:
+
+
+- INSPIRE Portal of the Grand-Duchy of Luxembourg / `INSPIRE - Annex I Theme Addresses - Addresses <https://catalog.inspire.geoportail.lu/geonetwork/srv/fre/catalog.search#/metadata/F22B07FC-E961-4985-BB75-6A1548319C8A>`_
+
+
+
+Reference documents:
+
+- `INSPIRE technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
+
+
+
