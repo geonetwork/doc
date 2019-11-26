@@ -5,16 +5,16 @@ Validating records
 
 In the metadata editor, click the Validate button to trigger the validation.
 
-The right panel display all validation results by levels:
+The right panel displays all validation results by levels:
 
 .. figure:: img/validation.png
 
-Click thumbs up or down icon to display errors. Errors reported in blue are for information only and will not affect the global validation of the record:
+Click the thumbs up or down icons to display errors. Errors reported in blue are for information only and will not affect the global validation of the record:
 
 .. figure:: img/validation-details.png
 
 
-The editor reports also report error messages:
+The editor also reports error messages where applicable (since not all error messages can be shown in the editor):
 
 .. figure:: img/validation-inline.png
 
@@ -23,7 +23,8 @@ Once a record is validated, the validation status is saved and is displayed in t
 
 .. figure:: img/validation-status.png
 
-A facet allows to filter on it. Catalogue administrator can force validation every time and editor leave the metadata editor (see :ref:`system-configuration`).
+Validation status can be filtered using a facet in the editor board.
+Catalog administrators can force validation every time an editor leaves the metadata editing interface (see :ref:`system-configuration`).
 
 
 To configure validation levels (see :ref:`configure-validation`).
