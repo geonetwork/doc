@@ -7,7 +7,7 @@ Managing metadata standards
 
 Metadata records in GeoNetwork are described by a schema. The schema sets out the structuring of the metadata record and provides all the ancillary data and functions to use the schema in GeoNetwork.
 
-A metadata schema plugin capability has been introduced in GeoNetwork 2.8.0. In 3.0.0 the plugin capability has been expanded to facilitate the fact that plugins can contain java-code.
+A metadata schema plugin capability was introduced in GeoNetwork 2.8.0. In 3.0.0 the plugin capability was expanded to facilitate the fact that plugins can contain java-code.
 
 .. note:: Adding a metadata schema to GeoNetwork that is incorrect or invalid can thoroughly break your GeoNetwork instance. This section is for catalogue administrators who are confident about metadata schemas and understand the different technologies involved with a GeoNetwork metadata schema.
 
@@ -17,7 +17,7 @@ A detailed description of what constitutes a metadata schema for GeoNetwork can 
 
 Adding a schema
 ```````````````
-To add a metadata schema to GeoNetwork, a rebuild of the sources is required. In a source-code tree there are 4 actions to be done in the settings (database) 1.
+To add a metadata schema to the catalog, a rebuild of the sources is required. In a source-code tree there are 4 actions to be done in the settings (database).
 
 - Place the schema-folder in /schemas
 
