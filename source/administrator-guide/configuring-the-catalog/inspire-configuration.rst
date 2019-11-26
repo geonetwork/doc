@@ -65,7 +65,7 @@ The type of encoding of keywords can be defined using the gear icon (See validat
 .. image:: img/inspire-keyword-encoding-type.png
 
 
-
+.. _inspire-validation:
 
 INSPIRE validation
 ------------------
