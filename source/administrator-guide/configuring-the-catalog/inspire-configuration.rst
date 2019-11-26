@@ -46,9 +46,7 @@ the following codelists are relevant in the scope of metadata guidelines v2.0:
 * Metadata codelist register > `Quality of Service Criteria <https://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria>`_
  
 
-From ``admin console`` > ``classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry. 
-It is important to verify the thesaurus date, because in some case INSPIRE requires a specific date of the thesaurus. After import you can download the thesaurus, change it
-and upload the updated version. Mind that there is no auto synchronisation between the registry and GeoNetwork, so if a thesaurus on the INSPIRE registry has changed, you have to import it again.
+From ``admin console`` > ``classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
 
 .. image:: img/inspire-from-registry.png
 
