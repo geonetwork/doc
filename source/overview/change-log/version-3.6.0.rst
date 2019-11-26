@@ -21,7 +21,7 @@ New features/fixes
 * `Digital Object Identifier creation <https://github.com/geonetwork/core-geonetwork/pull/3281>`_
 * `ISO19139 / DataCite output format <https://github.com/geonetwork/core-geonetwork/pull/3212>`_
 * `Editor board / Permalink <https://github.com/geonetwork/core-geonetwork/pull/3197>`_
-* `Editor / Inline validation <https://github.com/geonetwork/core-geonetwork/pull/2419>`_
+* `Editor / Inline validation <https://github.com/geonetwork/core-geonetwork/pull/3298>`_
 * `Editor / Use thesaurus for any fields <https://github.com/geonetwork/core-geonetwork/pull/3078>`_
 * `Thesaurus / Better Registry support <https://github.com/geonetwork/core-geonetwork/pulls?q=is%3Apr+Registry+is%3Aclosed+milestone%3A3.6.0>`_ and `GEMET update to version 4.1.2 <https://github.com/geonetwork/util-gemet/pull/4>`_
 * `Standard / Add API to reload configuration <https://github.com/geonetwork/core-geonetwork/pull/3081>`_

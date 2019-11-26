@@ -16,7 +16,7 @@ New features/fixes
 
  * `Harvester / CSW / Bbox filter <https://github.com/geonetwork/core-geonetwork/pull/4076>`_
 
- * `Harvester / CSW / XPath filter <https://github.com/geonetwork/core-geonetwork/pull/40-6>`_
+ * `Harvester / CSW / XPath filter <https://github.com/geonetwork/core-geonetwork/pull/4066>`_
 
 
 and more ... see `3.8.2 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.8.2+is%3Aclosed>`_ and

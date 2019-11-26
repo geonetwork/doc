@@ -4,7 +4,7 @@ User Interface Configuration
 ############################
 
 
-Most of the configuration parameters for the user interface can be changed by administrator users
+Most of the configuration parameters for the user interface can be changed by an administrator 
 using the web interface in ``Admin console`` > ``Settings`` > ``User Interface``.
 
 .. important:: Configuration of these parameters is critically important
@@ -16,15 +16,26 @@ using the web interface in ``Admin console`` > ``Settings`` > ``User Interface``
 
 
 Since the settings form is a long form, the 'save' button may be repeated between
-the sections and will save all settings.
+the sections and will save all settings. 
+
+Via `choose UI configuration` and `Add new UI configuration` it is possible to create multiple UI configurations.
+These configurations can be used in 2 contexts:
+
+- when creating a sub-portal (see :ref:`portal-configuration`), a UI configuration can be attached to one or more sub-portals.
+
+- when building an external JS application, which is able to load a specific configuration.
+
+
+The main catalog is using the default UI configuration which should be named 'srv'.
+
+If no UI configuration is available, a default set of parameters will be used. 
 
 .. _user-interface-config-toptoolbar:
-
 
 Top Toolbar
 ```````````
 
-On this section, the administrator user can define some parameters to configure the top toolbar of the user interface.
+On this section, an administrator can define some parameters to configure the top toolbar of the user interface.
 
 .. figure:: img/ui-settings-toptoolbar.png
 
@@ -55,28 +66,32 @@ On this section, the administrator user can define some parameters to configure 
 Map Application
 ```````````````
 
-On this section, the administrator user can define some parameters to configure the different maps of the user interface (mini map on search, main map tab and editor). If the checkbox is disabled, there will be no Map tab.
+This section describes how an administrator can configure the different maps of the user interface (the main map, the mini map displayed on the search result page and a map used in the editor to draw an extent). 
+The initial checkbox allows to disable the main map, there will be no map tab.
 
 .. figure:: img/ui-settings-mappage.png
 
-You can configure the map with different layers and projections.
+You can configure each map with different layers and projections.
 
-- **Map Projection** This is the default projection of the map. Make sure this projection is also defined properly on the ``Projections to display maps into`` below.
+- **Map Projection** This is the default projection of the map. Make sure the projection is defined on ``Projections used in maps`` below.
 
 .. figure:: img/ui-settings-mapprojection.png
 
-- **Projections to display maps into** This is where the different projections of the map are defined. All projections here will be shown on the ``Projection Switcher`` tool of the map.
+- **Projections used in maps** This is where the different projections of the map are defined. All projections will be shown in the ``Projection Switcher`` tool of the map.
 
 .. figure:: img/ui-settings-mapprojection2.png
 
-For projections defined on Proj4 by default, only label and code are needed. For projections that are not defined by default, the administrator has to fill at least the definition field. All fields are recommended to be filled, to make sure the map works as expected.
+In order to enable a new projection you have to collect some properties of the required projection. Most relevant is the definition of the projection, using the proj4js syntax. 
+Various projections, including their definition are listed at https://proj4js.io. Make sure to validate the configuration by opening the map.
 
 .. figure:: img/ui-settings-mapprojection3.png
 
-.. important:: All projections should have a definition to be able to display the map. If some projection is referenced here and GeoNetwork can't find a proper definition, the map may fail to load.
+.. important:: If the configuration of a projection is not complete, the map may fail to load.
 
-- **Optional Map Viewer Tools** On the following list we can choose which tools to display on the right toolbar of the map.
+If a projection is defined which is not supported by the source of the map layer, the map application will reproject map images at the client side, this may cause unexpected behaviour, such as rotated or distorted labels.
+Mind that the coords inserted are local to the projection. A list of scales is only relevant if the main map layer has a XYZ source, which does not follow the common tiling pattern.
 
+- **Optional Map Viewer Tools** This option facilitates to configure which tools are displayed on the right toolbar of the map.
 
 Viewer Map Configuration
 ........................
@@ -114,11 +129,11 @@ All this layers can have also some optional extra properties:
 Search Map Configuration
 ........................
 
-Same configuration as in Viewer Settings apply, but only for the mini map on the search page.
+Besides context and bounds, the same configuration as the main map applies, for the mini map on the search page.
 
 
 Editor Map Configuration
 ........................
 
-Same configuration as in Viewer Settings apply, but only for the map on the editor page.
+Besides context and bounds, the same configuration as the main map applies, for the map on the editor page.
 

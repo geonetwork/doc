@@ -12,7 +12,7 @@ for |project_name|.
 .. seealso::
 
   The quickest and easiest way to contribute to the documentation is to sign up
-  for a `GitHub account <https://github.com/>`_ and edit the documentation pages by clicking the 
+  for a `GitHub account <https://github.com/>`_ and edit the documentation pages by clicking the
   "Edit on GitHub" link at the top of the page. (See :repo:`doc`).
 
 
@@ -21,12 +21,25 @@ Building the docs
 
 The following tools are required to build the documentation from source:
 
-*  **Java JDK 1.8**
+*  **Java JDK 1.8**, **Python**
 *  **Maven 3.1.0+**: Once installed `Maven <https://maven.apache.org>`_ should be available in your command shell as ``mvn``.
+*  **make**: Once installed `make <https://www.gnu.org/software/make/>`_ should be available in your command shell as ``make``.
 *  **Sphinx**: See `Sphinx <https://www.sphinx-doc.org/en/master/usage/installation.html>`_  for details. Once installed confirm it's available by running ``sphinx-build --version``.
-*  **sphinx-bootstrap-theme**: Install using ``pip install sphinx-bootstrap-theme``.
-   
-Then build the documentation using the following commands:
+*  **sphinx-bootstrap-theme**.
+
+To install the build tools:
+
+.. code-block:: shell
+
+    sudo apt install make
+    sudo apt install python3-pip
+    sudo pip install sphinx
+    sudo pip install sphinx-bootstrap-theme
+    sudo pip install sphinx_rtd_theme
+
+
+
+Then build the documentation in English using the following commands:
 
 .. code-block:: shell
 
@@ -37,10 +50,27 @@ Then build the documentation using the following commands:
 Once the documentation has built without errors, access the html files from ``doc\target\en\index.html``.
 
 
+To build all documentation in several languages (right now: es,fr,ge,it,ko,nl,cz,ca,fi,is), based on transifex translations:
+
+.. code-block:: shell
+
+  mvn clean install -Pall
+
+
+If you want to get the latest translations for your build, run:
+
+.. code-block:: shell
+
+  mvn clean install -Platest,all
+
+
+
+
 Editing the reStructuredText files
 ==================================
 
-To update the documentation, use a text editor to edit ``.rst`` files. Save
+To update the documentation, use a text editor to edit ``.rst`` files. Ensure you are using the correct terminology by
+checking :ref:`style-guide`. Save
 your changes, build the documentation and open the HTML files to preview
 the changes. When your changes are ready to be submitted to the project, follow
 the steps in :ref:`making-a-pull-request`.
@@ -199,3 +229,47 @@ Many sections include a list of references to module documentation or external
 documents. These lists are created using the ``seealso`` directive
 typically placed in a section just before any subsections.
 
+
+
+Translating the doc
+===================
+
+`Github doc repository <https://github.com/geonetwork/doc>`_ contains the English version of the documentation. All translations should be done on Transifex web interface. No properties files should be committed to this repository.
+
+If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
+
+To download the translations from Transifex, you will need the transifex command line client:
+https://docs.transifex.com/client/installing-the-client. The Transifex Client is written in Python, so it runs on most systems. The easiest way to install it is with pip.
+
+
+To install the build tools:
+
+.. code-block:: shell
+
+  sudo pip install sphinx-intl
+  sudo pip install transifex-client
+
+
+Once installed, you need to configure your transifex user: https://docs.transifex.com/client/client-configuration in `~/.transifexrc`. This config file is unique per user, and it is stored in your home directory.
+
+
+.. code-block:: none
+
+  [https://www.transifex.com]
+  username = your_username/api
+  token =
+  password = p@ssw0rd/api_token
+  hostname = https://www.transifex.com
+
+
+Update translations on transifex:
+
+.. code-block:: shell
+
+  make update_translations
+
+
+
+If you want to add a new language to the build, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L59 and add the languages you want to build the documentation for.
+
+If you want it to be publicly available on https://geonetwork-opensource.org webpage, make sure you make a PR with the change and ask for advice on the https://github.com/geonetwork/website project.

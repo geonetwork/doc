@@ -26,6 +26,7 @@ When enabled, the INSPIRE support activate the following:
 .. image:: img/inspire-configuration.png
 
 
+.. _loading-inspire-codelists:
 
 Loading INSPIRE codelists
 -------------------------
@@ -72,6 +73,9 @@ The type of encoding of keywords can be defined using the gear icon (See validat
 Via the schema plugin form configuration it is an option to configure a thesaurus to be used for a specific `Anchor` element. 
 The thesaures concepts are used to populate an auto complete text field for that element.
 
+
+.. _inspire-validation:
+
 INSPIRE validation
 ------------------
 
@@ -99,6 +103,7 @@ During the validation, the record is sent to the ETF service and processed. Once
 Note, that if you are validating a private record, that record will be pushed to the validator. To secure this process we recommend to set up a local (private) installation of the validator.
 
 
+.. _inspire-access-point:
 
 INSPIRE access point
 --------------------
