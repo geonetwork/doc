@@ -18,7 +18,7 @@ From left to right:
 - Set metadata categories
 - Set metadata group
 - Advanced features (eg. versioning)
-- ``Valdate`` to run metadata validation
+- ``Validate`` to run metadata validation
 - ``Cancel`` to cancel all changes made since the beginning of the editing session
 - ``Save & Close`` to save and close the editor
 - ``Save`` to save the metadata or the template. The drowdown also allows
