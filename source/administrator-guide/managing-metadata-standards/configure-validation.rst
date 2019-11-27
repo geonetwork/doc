@@ -40,4 +40,4 @@ Also conditions can be set to only apply rules to specific records. The conditio
 
 For example, `geocat.ch <https://www.geocat.ch/>`_ defines for the GM03 ISO19139 profile rules depending on groups (ie. partners) and the type of dataset eg. a basic geodata.
 
-.. figure:: img/validation-level-exemple.png
+.. figure:: img/validation-level-example.png

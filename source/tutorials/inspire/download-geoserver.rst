@@ -1,11 +1,11 @@
-.. _tuto-download-atom:
+.. _tuto-download-geoserver:
 
 Tutorial setting up a WFS based INSPIRE download service with GeoServer
 #######################################################################
 
-This tutorial shows how one can set up a combination of GeoNetwork and Geoserver to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_. 
+This tutorial shows how one can set up a combination of GeoNetwork and Geoserver to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
 
-Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using WFS. 
+Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using WFS.
 
 GeoServer
 =========
@@ -49,7 +49,7 @@ On the WFS-settings > INSPIRE workspace add the link to the service metadata. In
 Validate the implementation
 ===========================
 
-If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework <https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the INSPIRE setup. 
+If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework <https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the INSPIRE setup.
 
 .. image:: img/image_6.png
 

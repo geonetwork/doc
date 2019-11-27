@@ -1,0 +1,2532 @@
+
+.. _iso19110:
+      
+
+Geographic information -- Methodology for feature cataloguing (iso19110)
+########################################################################
+
+
+
+
+
+More details: http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=39965
+
+
+Metadata editor
+***************
+
+
+This standard can be encoded using 3 view(s).
+
+* :ref:`iso19110-view-default`
+      
+* :ref:`iso19110-view-advanced`
+      
+* :ref:`iso19110-view-xml`
+      
+
+.. _iso19110-view-default:
+      
+
+View: Simple (default)
+======================
+
+This view is composed of1tab(s).
+
+* :ref:`iso19110-tab-default`
+      
+
+
+
+This view also allows to add the following element even if not in the current record:
+
+* Code (gfc:code)
+* Codelist (gfc:listedValue)
+
+
+.. _iso19110-tab-default:
+      
+
+Tab: Simple (default)
+---------------------
+
+
+.. figure:: img/iso19110-tab-default.png
+
+This tab display elements from the XML metadata record.
+
+Section: Feature Catalogue description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+See:ref:`iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c`
+      
+
+Name
+^^^^
+
+
+.. raw:: html
+
+
+   Feature catalogue name
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gmx:name
+
+See:ref:`iso19110-elem-gmx-name-5ec0c4442ad2b94944636103e556d401`
+      
+Name
+^^^^
+
+
+.. raw:: html
+
+
+   Feature catalogue name
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:name
+
+See:ref:`iso19110-elem-gfc-name-134285dc9b9a3268556039e2fe3f370e`
+      
+Scope
+^^^^^
+
+
+.. raw:: html
+
+
+   Scope definition
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gmx:scope
+
+See:ref:`iso19110-elem-gmx-scope-14efac6982297b09ba1324e80138092f`
+      
+Scope
+^^^^^
+
+
+.. raw:: html
+
+
+   Scope definition
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:scope
+
+See:ref:`iso19110-elem-gfc-scope-4f044fce55b8e0b6dd0d77516ad9e66d`
+      
+Field of application
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+
+   Field of application
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gmx:fieldOfApplication
+
+See:ref:`iso19110-elem-gmx-fieldOfApplication-66508d1f139317e01e1decd095915428`
+      
+Field of application
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+
+   Field of application
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:fieldOfApplication
+
+See:ref:`iso19110-elem-gfc-fieldOfApplication-548e0631e3ea92f7dd05ac533b6c14d2`
+      
+Version
+^^^^^^^
+
+
+.. raw:: html
+
+
+   Catalogue version
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gmx:versionNumber
+
+See:ref:`iso19110-elem-gmx-versionNumber-075201f18225aec432b46c75a93589a2`
+      
+Version
+^^^^^^^
+
+
+.. raw:: html
+
+
+   Catalogue version
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:versionNumber
+
+See:ref:`iso19110-elem-gfc-versionNumber-d66ec9fd5c22c70a69dd2b759d66cc4f`
+      
+Date
+^^^^
+
+
+.. raw:: html
+
+
+   Catalogue date
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gmx:versionDate
+
+See:ref:`iso19110-elem-gmx-versionDate-6c27e2ee0b2daa4ab1aea9ef374bc08f`
+      
+Catalogue producer
+^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+
+   Catalogue responsible
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:producer
+
+See:ref:`iso19110-elem-gfc-producer-5a13bfab8b07441bc9f9f71dcfdf7f6c`
+      
+Functional language
+^^^^^^^^^^^^^^^^^^^
+
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:functionalLanguage
+
+See:ref:`iso19110-elem-gfc-functionalLanguage-7a21d9c35ed9c400c40959ede97b8d76`
+      
+Property description
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+
+   Property description
+
+
+:XPath:
+    
+    /gfc:FC_FeatureCatalogue/gfc:featureType
+
+See:ref:`iso19110-elem-gfc-featureType-d6099a684b15337451388dd46048c48f`
+      
+
+:Type:
+    
+    suggest
+
+
+.. _iso19110-view-advanced:
+      
+
+View: Full (advanced)
+=====================
+
+This view is composed of1tab(s).
+
+* :ref:`iso19110-tab-advanced`
+      
+
+
+
+.. _iso19110-tab-advanced:
+      
+
+Tab: Full (advanced)
+--------------------
+
+
+This tab display elements from the XML metadata record and also provide controls to add all elements defined in the schema (XSD).
+
+
+Section: Attribute table description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+
+   Attribute table description
+
+
+See:ref:`iso19110-elem-gfc-FC_FeatureType-38ad06d5e87d9bf33d5f111e7bca0eb4`
+      
+
+
+
+Section: Feature Catalogue description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+See:ref:`iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c`
+      
+
+
+.. _iso19110-view-xml:
+      
+
+View: XML (xml)
+===============
+
+This view is composed of1tab(s).
+
+* :ref:`iso19110-tab-xml`
+      
+
+
+
+.. _iso19110-tab-xml:
+      
+
+Tab: XML (xml)
+--------------
+
+
+This tab display elements from the XML metadata record and also provide controls to add all elements defined in the schema (XSD).
+
+Schema technical details
+************************
+
+
+:Standard identifier:
+    
+    iso19110
+
+:Version:
+    
+    1.0
+
+:Schema location:
+    
+    http://www.isotc211.org/2005/gfc http://www.isotc211.org/2005/gfc/gfc.xsd
+
+:Schema namespaces:
+  
+* http://geonetwork-opensource.org/schemas/schema-ident
+
+* http://www.isotc211.org/2005/gfc
+
+* http://www.w3.org/2001/XMLSchema-instance
+
+* http://www.w3.org/XML/1998/namespace
+
+
+:Schema detection mode:
+    
+    elements (root)
+
+
+:Schema detection elements:
+  
+* gfc:FC_FeatureCatalogue
+
+* gfc:FC_FeatureType
+
+Standard elements
+*****************
+
+
+List of all elements available in the standard.
+
+
+.. _iso19110-elem-gco-CharacterString-44f4a753bad9d1df04d0611f28f05110:
+      
+
+Text
+====
+
+
+
+
+:Name:
+    
+    gco:CharacterString
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gco-lower-52bfcbb528e9aaefc2e33f4fdc55aa5f:
+      
+
+Lower cardinality
+=================
+
+
+
+
+:Name:
+    
+    gco:lower
+
+:Description:
+  
+.. raw:: html
+
+
+   Lower cardinality
+
+
+
+.. code-block:: xml
+    
+
+    <gco:lower xmlns:gfc="http://www.isotc211.org/2005/gfc"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:Integer>1</gco:Integer>
+    </gco:lower>
+
+
+
+
+
+
+.. _iso19110-elem-gco-nilReason-59d9c7937eb12ff82e61921ee335d062:
+      
+
+Nil reason
+==========
+
+
+
+
+:Name:
+    
+    gco:nilReason
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gco-range-6709132eada2bd317e3ad342849df5ef:
+      
+
+Range
+=====
+
+
+
+
+:Name:
+    
+    gco:range
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gco:range xmlns:gfc="http://www.isotc211.org/2005/gfc"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:MultiplicityRange>
+          <gco:lower>
+             <gco:Integer>1</gco:Integer>
+          </gco:lower>
+          <gco:upper>
+             <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+          </gco:upper>
+       </gco:MultiplicityRange>
+    </gco:range>
+
+
+
+
+
+
+.. _iso19110-elem-gco-upper-a58d7645455b8f20c0d2608c5bc1b6ab:
+      
+
+Upper cardinality
+=================
+
+
+
+
+:Name:
+    
+    gco:upper
+
+:Description:
+  
+.. raw:: html
+
+
+   Upper cardinality
+
+
+
+.. code-block:: xml
+    
+
+    <gco:upper xmlns:gfc="http://www.isotc211.org/2005/gfc"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+    </gco:upper>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-affectsValueOf-3cc26e7cd38219c7bb06fbe8e5438598:
+      
+
+Affects value of
+================
+
+
+
+
+:Name:
+    
+    gfc:affectsValueOf
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-aliases-7ec87797f5b619c461f2acf995b56b2e:
+      
+
+Aliases
+=======
+
+
+
+
+:Name:
+    
+    gfc:aliases
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-cardinality-36c218fd045f824ca4f9d1ceb6ffbcc2:
+      
+
+Cardinalities
+=============
+
+
+
+
+:Name:
+    
+    gfc:cardinality
+
+:Description:
+  
+.. raw:: html
+
+
+   Cardinalities
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:cardinality xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:Multiplicity>
+          <gco:range>
+             <gco:MultiplicityRange>
+                <gco:lower>
+                   <gco:Integer>1</gco:Integer>
+                </gco:lower>
+                <gco:upper>
+                   <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+                </gco:upper>
+             </gco:MultiplicityRange>
+          </gco:range>
+       </gco:Multiplicity>
+    </gfc:cardinality>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-carrierOfCharacteristics-c804ac9130fc47e8753b8d2e3776840b:
+      
+
+Elements
+========
+
+
+
+
+:Name:
+    
+    gfc:carrierOfCharacteristics
+
+:Description:
+  
+.. raw:: html
+
+
+   Association, attribute, operation, ...
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:carrierOfCharacteristics xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gfc:FC_FeatureAttribute>
+          <gfc:memberName>
+             <gco:LocalName>VALUE</gco:LocalName>
+          </gfc:memberName>
+          <gfc:definition>
+             <gco:CharacterString/>
+          </gfc:definition>
+          <gfc:cardinality>
+             <gco:Multiplicity>
+                <gco:range>
+                   <gco:MultiplicityRange>
+                      <gco:lower>
+                         <gco:Integer>1</gco:Integer>
+                      </gco:lower>
+                      <gco:upper>
+                         <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+                      </gco:upper>
+                   </gco:MultiplicityRange>
+                </gco:range>
+             </gco:Multiplicity>
+          </gfc:cardinality>
+          <gfc:featureType/>
+          <gfc:valueMeasurementUnit>
+             <gml:UnitDefinition xmlns:gml="http://www.opengis.net/gml" gml:id="unknown">
+                <gml:description/>
+                <gml:identifier codeSpace="unknown"/>
+             </gml:UnitDefinition>
+          </gfc:valueMeasurementUnit>
+          <gfc:listedValue>
+             <gfc:FC_ListedValue>
+                <gfc:label>
+                   <gco:CharacterString>Low coasts</gco:CharacterString>
+                </gfc:label>
+                <gfc:code>
+                   <gco:CharacterString>1</gco:CharacterString>
+                </gfc:code>
+                <gfc:definition>
+                   <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      below 50m.
+                    </gco:CharacterString>
+                </gfc:definition>
+             </gfc:FC_ListedValue>
+          </gfc:listedValue>
+          <gfc:listedValue>
+             <gfc:FC_ListedValue>
+                <gfc:label>
+                   <gco:CharacterString>High coasts</gco:CharacterString>
+                </gfc:label>
+                <gfc:code>
+                   <gco:CharacterString>2</gco:CharacterString>
+                </gfc:code>
+                <gfc:definition>
+                   <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      above 50m.
+                    </gco:CharacterString>
+                </gfc:definition>
+             </gfc:FC_ListedValue>
+          </gfc:listedValue>
+          <gfc:listedValue>
+             <gfc:FC_ListedValue>
+                <gfc:label>
+                   <gco:CharacterString>Inlands</gco:CharacterString>
+                </gfc:label>
+                <gfc:code>
+                   <gco:CharacterString>3</gco:CharacterString>
+                </gfc:code>
+                <gfc:definition>
+                   <gco:CharacterString>Areas between 0 and 200 m outside the coastal strip.
+                    </gco:CharacterString>
+                </gfc:definition>
+             </gfc:FC_ListedValue>
+          </gfc:listedValue>
+          <gfc:listedValue>
+             <gfc:FC_ListedValue>
+                <gfc:label>
+                   <gco:CharacterString>Uplands</gco:CharacterString>
+                </gfc:label>
+                <gfc:code>
+                   <gco:CharacterString>4</gco:CharacterString>
+                </gfc:code>
+                <gfc:definition>
+                   <gco:CharacterString>Zones between 200 and 500 m plus the flat areas between 500 and
+                      1000m.
+                    </gco:CharacterString>
+                </gfc:definition>
+             </gfc:FC_ListedValue>
+          </gfc:listedValue>
+          <gfc:listedValue>
+             <gfc:FC_ListedValue>
+                <gfc:label>
+                   <gco:CharacterString>Mountains</gco:CharacterString>
+                </gfc:label>
+                <gfc:code>
+                   <gco:CharacterString>5</gco:CharacterString>
+                </gfc:code>
+                <gfc:definition>
+                   <gco:CharacterString>Slopy areas between 500 and 1000m and all the areas over
+                      1000m.
+                    </gco:CharacterString>
+                </gfc:definition>
+             </gfc:FC_ListedValue>
+          </gfc:listedValue>
+          <gfc:valueType>
+             <gco:TypeName>
+                <gco:aName>
+                   <gco:CharacterString>INTEGER</gco:CharacterString>
+                </gco:aName>
+             </gco:TypeName>
+          </gfc:valueType>
+       </gfc:FC_FeatureAttribute>
+    </gfc:carrierOfCharacteristics>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-code-c62e74de82d004d4ec09d403e4b59c3b:
+      
+
+Code
+====
+
+
+
+
+:Name:
+    
+    gfc:code
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-constrainedBy-5e5ace57efe55c1890bec294427a780a:
+      
+
+Constrained by
+==============
+
+
+
+
+:Name:
+    
+    gfc:constrainedBy
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-definition-4bc2a8f5046951fa9e77311ef6d927f2:
+      
+
+Definition
+==========
+
+
+
+
+:Name:
+    
+    gfc:definition
+
+:Description:
+  
+.. raw:: html
+
+
+   Property definition
+
+
+
+
+
+
+.. _iso19110-elem-gfc-definitionReference-30806ed7d5bf82b19c877082a919216e:
+      
+
+Definition reference
+====================
+
+
+
+
+:Name:
+    
+    gfc:definitionReference
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-definitionSource-7f9ab04b040daf81d7d761ea83101e88:
+      
+
+Definition source
+=================
+
+
+
+
+:Name:
+    
+    gfc:definitionSource
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-description-87db9aea10cf7281b199782a15b17015:
+      
+
+Description
+===========
+
+
+
+
+:Name:
+    
+    gfc:description
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_AssociationRole-48c91ffbc9251a3377010490882da453:
+      
+
+Association role
+================
+
+
+
+
+:Name:
+    
+    gfc:FC_AssociationRole
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_Constraint-8b0503c998a5c3cfd079077286bcc18c:
+      
+
+Constraint
+==========
+
+
+
+
+:Name:
+    
+    gfc:FC_Constraint
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_FeatureAssociation-7bfc562c6ffccb3dd540692bd8c0fda7:
+      
+
+Feature association
+===================
+
+
+
+
+:Name:
+    
+    gfc:FC_FeatureAssociation
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_FeatureAttribute-f3f350a00639f88ab53dd23d5ad5724e:
+      
+
+Attribute
+=========
+
+
+
+
+:Name:
+    
+    gfc:FC_FeatureAttribute
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:FC_FeatureAttribute xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gfc:memberName>
+          <gco:LocalName>VALUE</gco:LocalName>
+       </gfc:memberName>
+       <gfc:definition>
+          <gco:CharacterString/>
+       </gfc:definition>
+       <gfc:cardinality>
+          <gco:Multiplicity>
+             <gco:range>
+                <gco:MultiplicityRange>
+                   <gco:lower>
+                      <gco:Integer>1</gco:Integer>
+                   </gco:lower>
+                   <gco:upper>
+                      <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+                   </gco:upper>
+                </gco:MultiplicityRange>
+             </gco:range>
+          </gco:Multiplicity>
+       </gfc:cardinality>
+       <gfc:featureType/>
+       <gfc:valueMeasurementUnit>
+          <gml:UnitDefinition xmlns:gml="http://www.opengis.net/gml" gml:id="unknown">
+             <gml:description/>
+             <gml:identifier codeSpace="unknown"/>
+          </gml:UnitDefinition>
+       </gfc:valueMeasurementUnit>
+       <gfc:listedValue>
+          <gfc:FC_ListedValue>
+             <gfc:label>
+                <gco:CharacterString>Low coasts</gco:CharacterString>
+             </gfc:label>
+             <gfc:code>
+                <gco:CharacterString>1</gco:CharacterString>
+             </gfc:code>
+             <gfc:definition>
+                <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      below 50m.
+                    </gco:CharacterString>
+             </gfc:definition>
+          </gfc:FC_ListedValue>
+       </gfc:listedValue>
+       <gfc:listedValue>
+          <gfc:FC_ListedValue>
+             <gfc:label>
+                <gco:CharacterString>High coasts</gco:CharacterString>
+             </gfc:label>
+             <gfc:code>
+                <gco:CharacterString>2</gco:CharacterString>
+             </gfc:code>
+             <gfc:definition>
+                <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      above 50m.
+                    </gco:CharacterString>
+             </gfc:definition>
+          </gfc:FC_ListedValue>
+       </gfc:listedValue>
+       <gfc:listedValue>
+          <gfc:FC_ListedValue>
+             <gfc:label>
+                <gco:CharacterString>Inlands</gco:CharacterString>
+             </gfc:label>
+             <gfc:code>
+                <gco:CharacterString>3</gco:CharacterString>
+             </gfc:code>
+             <gfc:definition>
+                <gco:CharacterString>Areas between 0 and 200 m outside the coastal strip.
+                    </gco:CharacterString>
+             </gfc:definition>
+          </gfc:FC_ListedValue>
+       </gfc:listedValue>
+       <gfc:listedValue>
+          <gfc:FC_ListedValue>
+             <gfc:label>
+                <gco:CharacterString>Uplands</gco:CharacterString>
+             </gfc:label>
+             <gfc:code>
+                <gco:CharacterString>4</gco:CharacterString>
+             </gfc:code>
+             <gfc:definition>
+                <gco:CharacterString>Zones between 200 and 500 m plus the flat areas between 500 and
+                      1000m.
+                    </gco:CharacterString>
+             </gfc:definition>
+          </gfc:FC_ListedValue>
+       </gfc:listedValue>
+       <gfc:listedValue>
+          <gfc:FC_ListedValue>
+             <gfc:label>
+                <gco:CharacterString>Mountains</gco:CharacterString>
+             </gfc:label>
+             <gfc:code>
+                <gco:CharacterString>5</gco:CharacterString>
+             </gfc:code>
+             <gfc:definition>
+                <gco:CharacterString>Slopy areas between 500 and 1000m and all the areas over
+                      1000m.
+                    </gco:CharacterString>
+             </gfc:definition>
+          </gfc:FC_ListedValue>
+       </gfc:listedValue>
+       <gfc:valueType>
+          <gco:TypeName>
+             <gco:aName>
+                <gco:CharacterString>INTEGER</gco:CharacterString>
+             </gco:aName>
+          </gco:TypeName>
+       </gfc:valueType>
+    </gfc:FC_FeatureAttribute>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c:
+      
+
+Feature Catalogue description
+=============================
+
+
+
+
+:Name:
+    
+    gfc:FC_FeatureCatalogue
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:FC_FeatureCatalogue xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                             uuid="411cd05b-9a79-45f2-b39f-0b344a9f35af"
+                             xsi:schemaLocation="http://www.isotc211.org/2005/gfc http://www.isotc211.org/2005/gfc/gfc.xsd">
+       <gfc:name>
+          <gco:CharacterString>Elevation breakdown feature catalogue</gco:CharacterString>
+       </gfc:name>
+       <gfc:scope>
+          <gco:CharacterString>Dataset elevation breakdown (raster 1 km)</gco:CharacterString>
+       </gfc:scope>
+       <gfc:versionNumber>
+          <gco:CharacterString>1.0</gco:CharacterString>
+       </gfc:versionNumber>
+       <gfc:versionDate>
+          <gco:DateTime>2012-11-05T10:56:11</gco:DateTime>
+       </gfc:versionDate>
+       <gfc:producer>
+          <gmd:CI_ResponsibleParty>
+             <gmd:individualName>
+                <gco:CharacterString>European Environment Agency</gco:CharacterString>
+             </gmd:individualName>
+             <gmd:organisationName>
+                <gco:CharacterString/>
+             </gmd:organisationName>
+             <gmd:positionName>
+                <gco:CharacterString/>
+             </gmd:positionName>
+             <gmd:contactInfo>
+                <gmd:CI_Contact>
+                   <gmd:address>
+                      <gmd:CI_Address>
+                         <gmd:deliveryPoint>
+                            <gco:CharacterString>Kongens Nytorv 6</gco:CharacterString>
+                         </gmd:deliveryPoint>
+                         <gmd:city>
+                            <gco:CharacterString>Copenhagen</gco:CharacterString>
+                         </gmd:city>
+                         <gmd:administrativeArea>
+                            <gco:CharacterString>K</gco:CharacterString>
+                         </gmd:administrativeArea>
+                         <gmd:postalCode>
+                            <gco:CharacterString>1050</gco:CharacterString>
+                         </gmd:postalCode>
+                         <gmd:country>
+                            <gco:CharacterString>Denmark</gco:CharacterString>
+                         </gmd:country>
+                         <gmd:electronicMailAddress>
+                            <gco:CharacterString>mauro.michielon@eea.europa.eu</gco:CharacterString>
+                         </gmd:electronicMailAddress>
+                      </gmd:CI_Address>
+                   </gmd:address>
+                </gmd:CI_Contact>
+             </gmd:contactInfo>
+             <gmd:role>
+                <gmd:CI_RoleCode codeListValue="pointOfContact" codeList="CI_RoleCode"/>
+             </gmd:role>
+          </gmd:CI_ResponsibleParty>
+       </gfc:producer>
+       <gfc:featureType>
+          <gfc:FC_FeatureType>
+             <gfc:typeName>
+                <gco:LocalName>Elevation breakdown</gco:LocalName>
+             </gfc:typeName>
+             <gfc:definition>
+                <gco:CharacterString>The Elevation breakdown is used to allocate Land cover changes into
+              homogeneous areas as function of height, slope and distance to the sea.
+            </gco:CharacterString>
+             </gfc:definition>
+             <gfc:isAbstract>
+                <gco:Boolean>false</gco:Boolean>
+             </gfc:isAbstract>
+             <gfc:featureCatalogue/>
+             <gfc:carrierOfCharacteristics>
+                <gfc:FC_FeatureAttribute>
+                   <gfc:memberName>
+                      <gco:LocalName>VALUE</gco:LocalName>
+                   </gfc:memberName>
+                   <gfc:definition>
+                      <gco:CharacterString/>
+                   </gfc:definition>
+                   <gfc:cardinality>
+                      <gco:Multiplicity>
+                         <gco:range>
+                            <gco:MultiplicityRange>
+                               <gco:lower>
+                                  <gco:Integer>1</gco:Integer>
+                               </gco:lower>
+                               <gco:upper>
+                                  <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+                               </gco:upper>
+                            </gco:MultiplicityRange>
+                         </gco:range>
+                      </gco:Multiplicity>
+                   </gfc:cardinality>
+                   <gfc:featureType/>
+                   <gfc:valueMeasurementUnit>
+                      <gml:UnitDefinition xmlns:gml="http://www.opengis.net/gml" gml:id="unknown">
+                         <gml:description/>
+                         <gml:identifier codeSpace="unknown"/>
+                      </gml:UnitDefinition>
+                   </gfc:valueMeasurementUnit>
+                   <gfc:listedValue>
+                      <gfc:FC_ListedValue>
+                         <gfc:label>
+                            <gco:CharacterString>Low coasts</gco:CharacterString>
+                         </gfc:label>
+                         <gfc:code>
+                            <gco:CharacterString>1</gco:CharacterString>
+                         </gfc:code>
+                         <gfc:definition>
+                            <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      below 50m.
+                    </gco:CharacterString>
+                         </gfc:definition>
+                      </gfc:FC_ListedValue>
+                   </gfc:listedValue>
+                   <gfc:listedValue>
+                      <gfc:FC_ListedValue>
+                         <gfc:label>
+                            <gco:CharacterString>High coasts</gco:CharacterString>
+                         </gfc:label>
+                         <gfc:code>
+                            <gco:CharacterString>2</gco:CharacterString>
+                         </gfc:code>
+                         <gfc:definition>
+                            <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      above 50m.
+                    </gco:CharacterString>
+                         </gfc:definition>
+                      </gfc:FC_ListedValue>
+                   </gfc:listedValue>
+                   <gfc:listedValue>
+                      <gfc:FC_ListedValue>
+                         <gfc:label>
+                            <gco:CharacterString>Inlands</gco:CharacterString>
+                         </gfc:label>
+                         <gfc:code>
+                            <gco:CharacterString>3</gco:CharacterString>
+                         </gfc:code>
+                         <gfc:definition>
+                            <gco:CharacterString>Areas between 0 and 200 m outside the coastal strip.
+                    </gco:CharacterString>
+                         </gfc:definition>
+                      </gfc:FC_ListedValue>
+                   </gfc:listedValue>
+                   <gfc:listedValue>
+                      <gfc:FC_ListedValue>
+                         <gfc:label>
+                            <gco:CharacterString>Uplands</gco:CharacterString>
+                         </gfc:label>
+                         <gfc:code>
+                            <gco:CharacterString>4</gco:CharacterString>
+                         </gfc:code>
+                         <gfc:definition>
+                            <gco:CharacterString>Zones between 200 and 500 m plus the flat areas between 500 and
+                      1000m.
+                    </gco:CharacterString>
+                         </gfc:definition>
+                      </gfc:FC_ListedValue>
+                   </gfc:listedValue>
+                   <gfc:listedValue>
+                      <gfc:FC_ListedValue>
+                         <gfc:label>
+                            <gco:CharacterString>Mountains</gco:CharacterString>
+                         </gfc:label>
+                         <gfc:code>
+                            <gco:CharacterString>5</gco:CharacterString>
+                         </gfc:code>
+                         <gfc:definition>
+                            <gco:CharacterString>Slopy areas between 500 and 1000m and all the areas over
+                      1000m.
+                    </gco:CharacterString>
+                         </gfc:definition>
+                      </gfc:FC_ListedValue>
+                   </gfc:listedValue>
+                   <gfc:valueType>
+                      <gco:TypeName>
+                         <gco:aName>
+                            <gco:CharacterString>INTEGER</gco:CharacterString>
+                         </gco:aName>
+                      </gco:TypeName>
+                   </gfc:valueType>
+                </gfc:FC_FeatureAttribute>
+             </gfc:carrierOfCharacteristics>
+          </gfc:FC_FeatureType>
+       </gfc:featureType>
+    </gfc:FC_FeatureCatalogue>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-FC_FeatureOperation-637b82bc0e9951563005e479a9e1d152:
+      
+
+Feature operation
+=================
+
+
+
+
+:Name:
+    
+    gfc:FC_FeatureOperation
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_FeatureType-38ad06d5e87d9bf33d5f111e7bca0eb4:
+      
+
+Attribute table description
+===========================
+
+
+
+
+:Name:
+    
+    gfc:FC_FeatureType
+
+:Description:
+  
+.. raw:: html
+
+
+   Attribute table description
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:FC_FeatureType xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gfc:typeName>
+          <gco:LocalName>Elevation breakdown</gco:LocalName>
+       </gfc:typeName>
+       <gfc:definition>
+          <gco:CharacterString>The Elevation breakdown is used to allocate Land cover changes into
+              homogeneous areas as function of height, slope and distance to the sea.
+            </gco:CharacterString>
+       </gfc:definition>
+       <gfc:isAbstract>
+          <gco:Boolean>false</gco:Boolean>
+       </gfc:isAbstract>
+       <gfc:featureCatalogue/>
+       <gfc:carrierOfCharacteristics>
+          <gfc:FC_FeatureAttribute>
+             <gfc:memberName>
+                <gco:LocalName>VALUE</gco:LocalName>
+             </gfc:memberName>
+             <gfc:definition>
+                <gco:CharacterString/>
+             </gfc:definition>
+             <gfc:cardinality>
+                <gco:Multiplicity>
+                   <gco:range>
+                      <gco:MultiplicityRange>
+                         <gco:lower>
+                            <gco:Integer>1</gco:Integer>
+                         </gco:lower>
+                         <gco:upper>
+                            <gco:UnlimitedInteger isInfinite="false" xsi:nil="false">1
+                        </gco:UnlimitedInteger>
+                         </gco:upper>
+                      </gco:MultiplicityRange>
+                   </gco:range>
+                </gco:Multiplicity>
+             </gfc:cardinality>
+             <gfc:featureType/>
+             <gfc:valueMeasurementUnit>
+                <gml:UnitDefinition xmlns:gml="http://www.opengis.net/gml" gml:id="unknown">
+                   <gml:description/>
+                   <gml:identifier codeSpace="unknown"/>
+                </gml:UnitDefinition>
+             </gfc:valueMeasurementUnit>
+             <gfc:listedValue>
+                <gfc:FC_ListedValue>
+                   <gfc:label>
+                      <gco:CharacterString>Low coasts</gco:CharacterString>
+                   </gfc:label>
+                   <gfc:code>
+                      <gco:CharacterString>1</gco:CharacterString>
+                   </gfc:code>
+                   <gfc:definition>
+                      <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      below 50m.
+                    </gco:CharacterString>
+                   </gfc:definition>
+                </gfc:FC_ListedValue>
+             </gfc:listedValue>
+             <gfc:listedValue>
+                <gfc:FC_ListedValue>
+                   <gfc:label>
+                      <gco:CharacterString>High coasts</gco:CharacterString>
+                   </gfc:label>
+                   <gfc:code>
+                      <gco:CharacterString>2</gco:CharacterString>
+                   </gfc:code>
+                   <gfc:definition>
+                      <gco:CharacterString>Areas within 10km from the coastline and with an elevation
+                      above 50m.
+                    </gco:CharacterString>
+                   </gfc:definition>
+                </gfc:FC_ListedValue>
+             </gfc:listedValue>
+             <gfc:listedValue>
+                <gfc:FC_ListedValue>
+                   <gfc:label>
+                      <gco:CharacterString>Inlands</gco:CharacterString>
+                   </gfc:label>
+                   <gfc:code>
+                      <gco:CharacterString>3</gco:CharacterString>
+                   </gfc:code>
+                   <gfc:definition>
+                      <gco:CharacterString>Areas between 0 and 200 m outside the coastal strip.
+                    </gco:CharacterString>
+                   </gfc:definition>
+                </gfc:FC_ListedValue>
+             </gfc:listedValue>
+             <gfc:listedValue>
+                <gfc:FC_ListedValue>
+                   <gfc:label>
+                      <gco:CharacterString>Uplands</gco:CharacterString>
+                   </gfc:label>
+                   <gfc:code>
+                      <gco:CharacterString>4</gco:CharacterString>
+                   </gfc:code>
+                   <gfc:definition>
+                      <gco:CharacterString>Zones between 200 and 500 m plus the flat areas between 500 and
+                      1000m.
+                    </gco:CharacterString>
+                   </gfc:definition>
+                </gfc:FC_ListedValue>
+             </gfc:listedValue>
+             <gfc:listedValue>
+                <gfc:FC_ListedValue>
+                   <gfc:label>
+                      <gco:CharacterString>Mountains</gco:CharacterString>
+                   </gfc:label>
+                   <gfc:code>
+                      <gco:CharacterString>5</gco:CharacterString>
+                   </gfc:code>
+                   <gfc:definition>
+                      <gco:CharacterString>Slopy areas between 500 and 1000m and all the areas over
+                      1000m.
+                    </gco:CharacterString>
+                   </gfc:definition>
+                </gfc:FC_ListedValue>
+             </gfc:listedValue>
+             <gfc:valueType>
+                <gco:TypeName>
+                   <gco:aName>
+                      <gco:CharacterString>INTEGER</gco:CharacterString>
+                   </gco:aName>
+                </gco:TypeName>
+             </gfc:valueType>
+          </gfc:FC_FeatureAttribute>
+       </gfc:carrierOfCharacteristics>
+    </gfc:FC_FeatureType>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-FC_InheritanceRelation-fe8bfb4f25b16151bf7dc241c0bb800c:
+      
+
+Heritance relation
+==================
+
+
+
+
+:Name:
+    
+    gfc:FC_InheritanceRelation
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_ListedValue-281cee06b2347acc7c485783eb4cf22f:
+      
+
+Codelist
+========
+
+
+
+
+:Name:
+    
+    gfc:FC_ListedValue
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-FC_RoleType-8f835d500036f8c773643298ee9a1287:
+      
+
+Role type
+=========
+
+
+
+
+:Name:
+    
+    gfc:FC_RoleType
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-featureCatalogue-747a0827bf295f6d27168cd2b274929b:
+      
+
+Feature catalogue
+=================
+
+
+
+
+:Name:
+    
+    gfc:featureCatalogue
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:featureCatalogue xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-featureType-d6099a684b15337451388dd46048c48f:
+      
+
+Property description
+====================
+
+
+
+
+:Name:
+    
+    gfc:featureType
+
+:Description:
+  
+.. raw:: html
+
+
+   Property description
+
+
+
+
+
+
+.. _iso19110-elem-gfc-fieldOfApplication-548e0631e3ea92f7dd05ac533b6c14d2:
+      
+
+Field of application
+====================
+
+
+
+
+:Name:
+    
+    gfc:fieldOfApplication
+
+:Description:
+  
+.. raw:: html
+
+
+   Field of application
+
+
+
+
+
+
+.. _iso19110-elem-gfc-formalDefinition-61fbbceaf2b0eca25754ba29528ac201:
+      
+
+Formal definition
+=================
+
+
+
+
+:Name:
+    
+    gfc:formalDefinition
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-functionalLanguage-7a21d9c35ed9c400c40959ede97b8d76:
+      
+
+Functional language
+===================
+
+
+
+
+:Name:
+    
+    gfc:functionalLanguage
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-inheritsFrom-d48c2429ef37a9f7001c4c78b3185ad8:
+      
+
+Inherits from
+=============
+
+
+
+
+:Name:
+    
+    gfc:inheritsFrom
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-inheritsTo-21e907a9a6f03374cf39958e940d6c04:
+      
+
+Inherits to
+===========
+
+
+
+
+:Name:
+    
+    gfc:inheritsTo
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-isAbstract-108adb5fd93bc80097796cf3e185145e:
+      
+
+Abstract
+========
+
+
+
+
+:Name:
+    
+    gfc:isAbstract
+
+:Description:
+  
+.. raw:: html
+
+
+   Is this element an abstract element ?
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:isAbstract xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:Boolean>false</gco:Boolean>
+    </gfc:isAbstract>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-isNavigable-ee77efa13eb047461f3d1b10eb057ad2:
+      
+
+Is navigable
+============
+
+
+
+
+:Name:
+    
+    gfc:isNavigable
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-isOrdered-99dd774d6527b2e2a6714029b3d85562:
+      
+
+Is ordered
+==========
+
+
+
+
+:Name:
+    
+    gfc:isOrdered
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-label-f039ffb9cb376d0473d7be6326b20fd7:
+      
+
+Label
+=====
+
+
+
+
+:Name:
+    
+    gfc:label
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-listedValue-10921452105d681cb7bcb8c2851416f9:
+      
+
+Codelist
+========
+
+
+
+
+:Name:
+    
+    gfc:listedValue
+
+:Description:
+  
+.. raw:: html
+
+
+   List of values for this element.
+
+
+
+
+
+
+.. _iso19110-elem-gfc-memberName-3bd14590c8d90557f5d48e886a3ebef7:
+      
+
+Member name
+===========
+
+
+
+
+:Name:
+    
+    gfc:memberName
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:memberName xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:LocalName>VALUE</gco:LocalName>
+    </gfc:memberName>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-name-134285dc9b9a3268556039e2fe3f370e:
+      
+
+Name
+====
+
+
+
+
+:Name:
+    
+    gfc:name
+
+:Description:
+  
+.. raw:: html
+
+
+   Feature catalogue name
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:name xmlns:gfc="http://www.isotc211.org/2005/gfc"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:CharacterString>Elevation breakdown feature catalogue</gco:CharacterString>
+    </gfc:name>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-observesValueOf-b236ed68892a516373f72b89b397cde4:
+      
+
+Observes value of
+=================
+
+
+
+
+:Name:
+    
+    gfc:observesValueOf
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-producer-5a13bfab8b07441bc9f9f71dcfdf7f6c:
+      
+
+Catalogue producer
+==================
+
+
+
+
+:Name:
+    
+    gfc:producer
+
+:Description:
+  
+.. raw:: html
+
+
+   Catalogue responsible
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:producer xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gmd:CI_ResponsibleParty>
+          <gmd:individualName>
+             <gco:CharacterString>European Environment Agency</gco:CharacterString>
+          </gmd:individualName>
+          <gmd:organisationName>
+             <gco:CharacterString/>
+          </gmd:organisationName>
+          <gmd:positionName>
+             <gco:CharacterString/>
+          </gmd:positionName>
+          <gmd:contactInfo>
+             <gmd:CI_Contact>
+                <gmd:address>
+                   <gmd:CI_Address>
+                      <gmd:deliveryPoint>
+                         <gco:CharacterString>Kongens Nytorv 6</gco:CharacterString>
+                      </gmd:deliveryPoint>
+                      <gmd:city>
+                         <gco:CharacterString>Copenhagen</gco:CharacterString>
+                      </gmd:city>
+                      <gmd:administrativeArea>
+                         <gco:CharacterString>K</gco:CharacterString>
+                      </gmd:administrativeArea>
+                      <gmd:postalCode>
+                         <gco:CharacterString>1050</gco:CharacterString>
+                      </gmd:postalCode>
+                      <gmd:country>
+                         <gco:CharacterString>Denmark</gco:CharacterString>
+                      </gmd:country>
+                      <gmd:electronicMailAddress>
+                         <gco:CharacterString>mauro.michielon@eea.europa.eu</gco:CharacterString>
+                      </gmd:electronicMailAddress>
+                   </gmd:CI_Address>
+                </gmd:address>
+             </gmd:CI_Contact>
+          </gmd:contactInfo>
+          <gmd:role>
+             <gmd:CI_RoleCode codeListValue="pointOfContact" codeList="CI_RoleCode"/>
+          </gmd:role>
+       </gmd:CI_ResponsibleParty>
+    </gfc:producer>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-relation-aacba568eb3b35bd7b8432488f11bf69:
+      
+
+Relation
+========
+
+
+
+
+:Name:
+    
+    gfc:relation
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-roleName-75ef0d862fac206908f78b9ecd526c65:
+      
+
+Role name
+=========
+
+
+
+
+:Name:
+    
+    gfc:roleName
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-roleType-e11e8dd83ce112d38151e4c5d41f5e57:
+      
+
+Role type
+=========
+
+
+
+
+:Name:
+    
+    gfc:roleType
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-scope-4f044fce55b8e0b6dd0d77516ad9e66d:
+      
+
+Scope
+=====
+
+
+
+
+:Name:
+    
+    gfc:scope
+
+:Description:
+  
+.. raw:: html
+
+
+   Scope definition
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:scope xmlns:gfc="http://www.isotc211.org/2005/gfc"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:CharacterString>Dataset elevation breakdown (raster 1 km)</gco:CharacterString>
+    </gfc:scope>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-signature-a322fc9fc498999771ea25d75eeadb92:
+      
+
+Signature
+=========
+
+
+
+
+:Name:
+    
+    gfc:signature
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-triggeredByValueOf-f9c78e57b38ecbf17a07eae27ddceb25:
+      
+
+Triggered by value of
+=====================
+
+
+
+
+:Name:
+    
+    gfc:triggeredByValueOf
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-type-8d417215d65176688a81728103dee9d4:
+      
+
+Type
+====
+
+
+
+
+:Name:
+    
+    gfc:type
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-typeName-5eb6a83793b5f1865c0a10bc6d3cb399:
+      
+
+Property name
+=============
+
+
+
+
+:Name:
+    
+    gfc:typeName
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:typeName xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:LocalName>Elevation breakdown</gco:LocalName>
+    </gfc:typeName>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-uniqueInstance-b0b6a49f0189dc2499564de5cdfd25a0:
+      
+
+Unique instance
+===============
+
+
+
+
+:Name:
+    
+    gfc:uniqueInstance
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gfc-valueMeasurementUnit-3722d826b1a00b71bfae6cd7eefff3cd:
+      
+
+Value measurement unit
+======================
+
+
+
+
+:Name:
+    
+    gfc:valueMeasurementUnit
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:valueMeasurementUnit xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gml:UnitDefinition xmlns:gml="http://www.opengis.net/gml" gml:id="unknown">
+          <gml:description/>
+          <gml:identifier codeSpace="unknown"/>
+       </gml:UnitDefinition>
+    </gfc:valueMeasurementUnit>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-valueType-faeb30b744a5e7aa19f43cb83bf2a9ab:
+      
+
+Value type
+==========
+
+
+
+
+:Name:
+    
+    gfc:valueType
+
+:Description:
+  
+
+.. code-block:: xml
+    
+
+    <gfc:valueType xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:TypeName>
+          <gco:aName>
+             <gco:CharacterString>INTEGER</gco:CharacterString>
+          </gco:aName>
+       </gco:TypeName>
+    </gfc:valueType>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-versionDate-536720beffcbb11d9da8bd041ad7a762:
+      
+
+Date
+====
+
+
+
+
+:Name:
+    
+    gfc:versionDate
+
+:Description:
+  
+.. raw:: html
+
+
+   Catalogue date
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:versionDate xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:DateTime>2012-11-05T10:56:11</gco:DateTime>
+    </gfc:versionDate>
+
+
+
+
+
+
+.. _iso19110-elem-gfc-versionNumber-d66ec9fd5c22c70a69dd2b759d66cc4f:
+      
+
+Version
+=======
+
+
+
+
+:Name:
+    
+    gfc:versionNumber
+
+:Description:
+  
+.. raw:: html
+
+
+   Catalogue version
+
+
+
+.. code-block:: xml
+    
+
+    <gfc:versionNumber xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gco:CharacterString>1.0</gco:CharacterString>
+    </gfc:versionNumber>
+
+
+
+
+
+
+.. _iso19110-elem-gmd-CI_ResponsibleParty-f8269ab6464cabb0bc5d4b5d8e2d410c:
+      
+
+Responsible party
+=================
+
+
+
+
+:Name:
+    
+    gmd:CI_ResponsibleParty
+
+:Description:
+  
+.. raw:: html
+
+
+   Responsible party
+
+
+
+.. code-block:: xml
+    
+
+    <gmd:CI_ResponsibleParty xmlns:gfc="http://www.isotc211.org/2005/gfc"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <gmd:individualName>
+          <gco:CharacterString>European Environment Agency</gco:CharacterString>
+       </gmd:individualName>
+       <gmd:organisationName>
+          <gco:CharacterString/>
+       </gmd:organisationName>
+       <gmd:positionName>
+          <gco:CharacterString/>
+       </gmd:positionName>
+       <gmd:contactInfo>
+          <gmd:CI_Contact>
+             <gmd:address>
+                <gmd:CI_Address>
+                   <gmd:deliveryPoint>
+                      <gco:CharacterString>Kongens Nytorv 6</gco:CharacterString>
+                   </gmd:deliveryPoint>
+                   <gmd:city>
+                      <gco:CharacterString>Copenhagen</gco:CharacterString>
+                   </gmd:city>
+                   <gmd:administrativeArea>
+                      <gco:CharacterString>K</gco:CharacterString>
+                   </gmd:administrativeArea>
+                   <gmd:postalCode>
+                      <gco:CharacterString>1050</gco:CharacterString>
+                   </gmd:postalCode>
+                   <gmd:country>
+                      <gco:CharacterString>Denmark</gco:CharacterString>
+                   </gmd:country>
+                   <gmd:electronicMailAddress>
+                      <gco:CharacterString>mauro.michielon@eea.europa.eu</gco:CharacterString>
+                   </gmd:electronicMailAddress>
+                </gmd:CI_Address>
+             </gmd:address>
+          </gmd:CI_Contact>
+       </gmd:contactInfo>
+       <gmd:role>
+          <gmd:CI_RoleCode codeListValue="pointOfContact" codeList="CI_RoleCode"/>
+       </gmd:role>
+    </gmd:CI_ResponsibleParty>
+
+
+
+
+
+
+.. _iso19110-elem-gmd-responsibleParty-7352aaa3187b52425f19d3f567e8b88a:
+      
+
+Responsible party
+=================
+
+
+
+
+:Name:
+    
+    gmd:responsibleParty
+
+:Description:
+  
+.. raw:: html
+
+
+   Responsible party
+
+
+
+
+
+
+.. _iso19110-elem-gmx-Anchor-4e506485badff59411e1cb2c1f5031e3:
+      
+
+Anchor
+======
+
+
+
+
+:Name:
+    
+    gmx:Anchor
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gmx-fieldOfApplication-66508d1f139317e01e1decd095915428:
+      
+
+Field of application
+====================
+
+
+
+
+:Name:
+    
+    gmx:fieldOfApplication
+
+:Description:
+  
+.. raw:: html
+
+
+   Field of application
+
+
+
+
+
+
+.. _iso19110-elem-gmx-FileName-2a19fe714b24f0a417598321882eef7f:
+      
+
+File name
+=========
+
+
+
+
+:Name:
+    
+    gmx:FileName
+
+:Description:
+  
+
+
+
+
+.. _iso19110-elem-gmx-name-5ec0c4442ad2b94944636103e556d401:
+      
+
+Name
+====
+
+
+
+
+:Name:
+    
+    gmx:name
+
+:Description:
+  
+.. raw:: html
+
+
+   Feature catalogue name
+
+
+
+
+
+
+.. _iso19110-elem-gmx-scope-14efac6982297b09ba1324e80138092f:
+      
+
+Scope
+=====
+
+
+
+
+:Name:
+    
+    gmx:scope
+
+:Description:
+  
+.. raw:: html
+
+
+   Scope definition
+
+
+
+
+
+
+.. _iso19110-elem-gmx-versionDate-6c27e2ee0b2daa4ab1aea9ef374bc08f:
+      
+
+Date
+====
+
+
+
+
+:Name:
+    
+    gmx:versionDate
+
+:Description:
+  
+.. raw:: html
+
+
+   Catalogue date
+
+
+
+
+
+
+.. _iso19110-elem-gmx-versionNumber-075201f18225aec432b46c75a93589a2:
+      
+
+Version
+=======
+
+
+
+
+:Name:
+    
+    gmx:versionNumber
+
+:Description:
+  
+.. raw:: html
+
+
+   Catalogue version
+
+
+
+
+
+
+Standard codelists
+******************
+
+
+List of all codelists available in the standard.
+
+No codelist defined.
