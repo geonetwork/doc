@@ -8,7 +8,7 @@ This paragraph shares some guidance around setting up GeoNetwork for production 
 Database
 --------
 
-GeoNetwork arrives with a file based H2 database. In production make sure to switch to an external database systes, such as PostGres, Oracle or SQL server. `Read more about setting up a database at :ref:`configuring-database`
+GeoNetwork arrives with a file based H2 database. In production make sure to switch to an external database system, such as PostGres, Oracle or SQL server. `Read more about setting up a database at :ref:`configuring-database`
 
 JNDI is a technology that allows GeoNetwork to delegate the configuration of the database to Tomcat. By using JNDI the database can be easily configured without the need to change config files inside the application folder.
 
@@ -17,7 +17,7 @@ GeoNetwork may run out of database connections, especcially if a catalogue is se
 Java container
 --------------
 
-GeoNetwork requires Java 8. The Oracle JRE version 8 is reaching end-of-live, we suggest to use the `openJDK <https://adoptopenjdk.net>`. 
+GeoNetwork requires Java 8. The Oracle JRE version 8 is reaching end-of-live, we suggest to use the `openJDK <https://adoptopenjdk.net>`_. 
 
 GeoNetwork arrives with a default container called Jetty. Jetty is a powerfull minimal container implementation. If you need more configuration options consider to use Tomcat. Other containers can be used, but there are not many user experiences. Read more at :ref:`installing-from-war-file`
 
@@ -41,7 +41,7 @@ Memory
 ------
 
 GeoNetwork is a memory intensive application. Consider to provide at least 2GB, but 4GB is probably better. But don't go higher then 6GB.
-Read more about memory in java applications at the `geoserver documentation <https://docs.geoserver.org/stable/en/user/production/container.html>`.
+Read more about memory in java applications at the `geoserver documentation <https://docs.geoserver.org/stable/en/user/production/container.html>`_.
 If you're setting up an instance of Elastic Search, consider to provide at least 8GB to Elastic.
 
 Scaling
@@ -49,7 +49,7 @@ Scaling
 
 GeoNetwork currently has challenges to be set up in a load balanced/fail over configuration. The search index is stored in memory and will not be aware of changes on records done in other nodes.
 An option to optimise this is introducing a master-minion model; modifications are done in master, minion harvest master at intervals. Each minion will have a local database. 
-Typical aspects stored in the database, like user feedback and search statistics will not automatically be synchronised between nodes.
+Typical aspects stored in the database, like groups, settings, user feedback and search statistics will not be synchronised between nodes.
 The data folder can be shared between nodes by using a network share. 
 
 GeoNetwork and docker
@@ -57,13 +57,14 @@ GeoNetwork and docker
 
 Docker is a popular virtualisation technology for hosting services. Conventions from Docker can also be used in other cloud environments. 
 As GeoNetwork community we maintain a `docker image on docker hub <https://hub.docker.com/_/geonetwork>`_. Note that for each version there is also a postgres tag which uses a remote postgres database.
-Best practices for Docker are to parameterise GeoNetwork using enviroment variables which are injected from docker machine/orchestration. 
+A best practices for Docker is to parameterise GeoNetwork using enviroment variables which are injected from docker machine or an orchestration. 
 
 Web Proxy
 ---------
 
-GeoNetwork contains a web proxy to bypass cross browser communication limitations of browsers. Evaluate the access policy for this proxy. If set up in an incorrect way remote users may get access to resources that should not be accessible to them, or impersonate themselves as the geonetwork server while browsing the web.
-Best practice is to whitelist a series of servers which are known to contain data services. However the best guidance here is to recommend to any data provider to enable `CORS <https://en.wikipedia.org/wiki/Cross-origin_resource_sharing>`_ on their services, and then disable the web proxy. CORS fixes the cross browser communication limitation in the proper way. 
+GeoNetwork contains a web proxy to bypass cross browser communication limitations of browsers. This proxy is used for example to retrieve WMS.getcapabilities from a remote server to prepare data vizualisation. Evaluate the access policy for this proxy. If set up in an incorrect way, remote users may get access to resources that should not be accessible to them, or impersonate themselves as the geonetwork server while browsing the web.
+
+A best practice is to whitelist a series of servers which are known to contain data services. However the best guidance here is to recommend to any data provider to enable `CORS <https://en.wikipedia.org/wiki/Cross-origin_resource_sharing>`_ on their services, and then disable the web proxy. CORS fixes the cross browser communication limitation in the proper way. 
 
 WEB
 ---
@@ -82,5 +83,5 @@ Since an important part of the catalogue behaves like a normal website. Adopting
 
 - Provide a link to the authority managing the catalogue, a disclaimer, cookie warning and/or privacy policy on the header/footer of the site.
 
-- Monitor the availability of the application using a tool like zabbix, nagios or geohealthcheck.
+- Monitor the availability of the application using a tool like zabbix, nagios or `geohealthcheck <https://geohealthcheck.org/>`_.
 
