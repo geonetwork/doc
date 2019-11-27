@@ -3,20 +3,30 @@
 Tutorial setting up an Atom/OpenSearch based INSPIRE download service
 #####################################################################
 
-This tutorial shows how one can set up GeoNetwork to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_. 
 
-Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using Atom/Opensearch. 
+This tutorial shows how one can set up GeoNetwork to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
+
+Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using Atom/Opensearch.
+
 
 The basics of Atom/OpenSearch is that for each dataset a number of file-downloads in various flavours (language/projection/format) is available. These flavours are advertised in a "Dataset Atom Feed" document. A set of "Dataset Atom Feed" documents is grouped into a "Service Atom Feed" document. For each "Service Atom Feed" document an OpenSearchDescription document is available. A website can refer to this OpenSearchDescription document, which enables searching through the download service using the browser search bar (OpenSearch).
 
-GeoNetwork
-==========
 
-GeoNetwork implements OpenSearch on a set of Dataset- and Service Atom feeds. An OpenSearch Description document is generated for each Service Atom Feed. 
+See:
 
-GeoNetwork will soon support an internal- and external mode. 
+- :ref:`linking-data-using-atom-feed`_
 
-- in internal mode GeoNetwork will generate Atom files dynamically from metadata content. 
+- :ref:`opensearch-and-atom`_
+
+
+External mode implementation
+============================
+
+GeoNetwork implements OpenSearch on a set of Dataset- and Service Atom feeds. An OpenSearch Description document is generated for each Service Atom Feed.
+
+GeoNetwork will soon support an internal- and external mode.
+
+- in internal mode GeoNetwork will generate Atom files dynamically from metadata content.
 
 - in external mode GeoNetwork will ingest Atom files that are linked to metadata records.
 
@@ -60,7 +70,7 @@ Before you validate the implementation, run the Atom harvester in admin > settin
 Validate the implementation
 ===========================
 
-If you are running the above setup online, you can use the `pilot JRC INSPIRE validator <http://inspire-geoportal.ec.europa.eu/validator2/>`_. If the above setup is running locally, you can use `Esdin Test Framework <https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the INSPIRE setup.
+If you are running the above setup online, you can use the `INSPIRE validator <http://inspire.ec.europa.eu/validator/>`_. If the above setup is running locally, you can use `Esdin Test Framework <https://github.com/Geonovum/etf-test-projects-inspire>`_ to validate the INSPIRE setup.
 
 .. image:: img/image_6.png
 
