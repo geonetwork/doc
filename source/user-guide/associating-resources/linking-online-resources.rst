@@ -177,7 +177,7 @@ Users can choose a service, the list of datasets available are retrieved and the
 
 Examples:
 
-- `NGR National Georegister  <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/search?any=atom&fast=index>`_, ` Statistics Netherlands Land Use 2015 ATOM <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/a657f732-e1b3-4638-9933-67cab10d9081>`_
+- `NGR National Georegister  <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/search?any=atom&fast=index>`_, `Statistics Netherlands Land Use 2015 ATOM <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/a657f732-e1b3-4638-9933-67cab10d9081>`_
 
 
 
