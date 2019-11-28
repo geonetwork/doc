@@ -12,3 +12,4 @@ Maintainer guide
    statistics/index.rst
    updating/index.rst
    backup/index.rst
+   production-use/index.rst
