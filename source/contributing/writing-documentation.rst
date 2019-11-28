@@ -66,7 +66,7 @@ If you want to get the latest translations for your build, run:
 Building the standards docs
 ===========================
 
-Documentation about the standards and the editor configuration is built from the GeoNetwork source code using the ``schema-doc`` plugin. So do not edit manually the following files:
+.. important:: Documentation about the standards and the editor configuration is built from the GeoNetwork source code using the ``schema-doc`` plugin. So do not manually edit the following files:
 
 * docs/manuals/source/annexes/standards/*
 * docs/manuals/source/customizing-application/editor-ui/creating-custom-editor.rst
