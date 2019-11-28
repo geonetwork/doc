@@ -63,6 +63,24 @@ If you want to get the latest translations for your build, run:
 
   mvn clean install -Platest,all
 
+Building the standards docs
+===========================
+
+.. important:: Documentation about the standards and the editor configuration is built from the GeoNetwork source code using the ``schema-doc`` plugin. So do not manually edit the following files:
+
+* docs/manuals/source/annexes/standards/*
+* docs/manuals/source/customizing-application/editor-ui/creating-custom-editor.rst
+
+Do not translate those files in transifex. Translation must be done in the plugin itself.
+To update those files, clone the GeoNetwork repository and use the following commands:
+
+
+.. code-block:: shell
+
+  cd docs/schema-doc
+  mvn clean install
+
+Check the updated files and commit to the doc repository.
 
 
 

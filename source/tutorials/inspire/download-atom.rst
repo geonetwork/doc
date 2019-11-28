@@ -14,9 +14,9 @@ The basics of Atom/OpenSearch is that for each dataset a number of file-download
 
 See:
 
-- :ref:`linking-data-using-atom-feed`_
+- :ref:`linking-data-using-atom-feed`
 
-- :ref:`opensearch-and-atom`_
+- :ref:`opensearch-and-atom`
 
 
 External mode implementation

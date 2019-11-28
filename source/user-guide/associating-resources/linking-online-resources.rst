@@ -182,7 +182,7 @@ Examples:
 
 
 The catalog also provides the capability to produce ATOM feeds for services and datasets from metadata records.
-To enable this, check the ATOM API (see :ref:`opensearch-and-atom`_). A GML dataset can be exposed using the following encoding in order to be published in a dataset ATOM feed:
+To enable this, check the ATOM API (see :ref:`opensearch-and-atom`). A GML dataset can be exposed using the following encoding in order to be published in a dataset ATOM feed:
 
 .. code-block:: xml
 

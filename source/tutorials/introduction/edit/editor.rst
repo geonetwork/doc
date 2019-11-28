@@ -1,7 +1,7 @@
 .. _tuto-introduction-editor:
 
 Customize Editor (Optional)
-###############
+###########################
 
 Each schema can configure different editor views. This configurations can be found on the file layout/config-editor.xml of each schema.
 
