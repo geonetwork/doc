@@ -4,22 +4,20 @@ Life cycle
 ##########
 
 
-Life cycle states
+Record life cycle 
 -----------------
 
 
 Metadata records have a lifecycle that typically goes through one or more states.
 For example, when a record is:
 
-* created and edited by an ``Editor`` user it is in
+* created and edited by an ``Editor`` it is in
   the ``Draft`` state.
 
-* reviewed by a ``Content Reviewer`` user it
+* review requested or being reviewed by a ``Content Reviewer`` it
   would typically be in a ``Submitted`` state.
 
-* completed and corrected by the ``Content Reviewer`` it would be in the ``Approved`` state
-  and may be made available for casual search and harvest by assigning privileges
-  to the catalog ``All`` group.
+* completed and corrected by the ``Content Reviewer`` it would be in the ``Approved`` state.
 
 * superseded or replaced and the state would be ``Retired``.
 
@@ -38,55 +36,38 @@ The catalog has (an extensible) set of states that a metadata record can have:
 
 * ``Retired`` - the record has been retired.
 
-
-
-To enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
+Workflow can be enabled for the full catalogue, certain groups or on an individual record level.
+In the last case, to enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
 in the metadata view:
-
 
 .. figure:: img/workflow-enable.png
 
+To enable workflow for the full catalogue or certain groups, check Administration > Settings > Metadata Workflow.
+In workflow mode, in case approved records are modified, you're working on a copy of the approved record. Changes on the record will not be visible to users outside your group until the modified record is approved again.
 
-Draft status can also be set by default for newly created records in defined groups. For this
-check Administration > Settings > Metadata Workflow and define the list of groups.
+When done editing you can submit a record for review by a content reviewer. The submit button is available on the `manage record` menu in the metadata view. 
+A popup will open in which you can leave a message for the content reviewer.
 
+.. figure:: img/submit-for-review.png
 
+A user with role content reviewer is able to submit a record, instantly approve a record (without submission) or approve a record which has been submitted for review.
+During the review process a content reviewer may benefit from the version history option, which shows the differences between the different versions of the record. 
+As part of the approval process, the content reviewer can also set the level of access to the record, an option is to set the access level to public (visible to all).
 
-Once enabled, the different states can be set. Status can be assigned to metadata 
-records individually.
+.. figure:: img/approve-metadata.png
 
-.. figure:: img/workflow-update-status-popup.png
+Notifications will be send to editors and content reviewers indicating the status changes on the record involved, so users can easily act when action is required.
 
+In the metadata dashboard you can see which records are currently being updated or reviewed. A label is displayed 
+indicating a 'working copy' is available for that record. You can click the label to visit the work in progress.
 
-Choose the new state, add an optional comment and click save:
-
-
-.. figure:: img/workflow-update-status.png
-
-.. todo:: Add support for a selected set of records.
-
-
-
-When in ``Draft``, an editor can change states to:
-
-* ``Unknown``
-
-* ``Draft``
-
-* ``Submitted``
-
-Other states can be managed by Reviewers or Administrators.
-
-
+.. figure:: img/working-copy.png
 
 Status actions
 --------------
 
-The status values shown above are held in a database table called ``MetadataStatus``. 
-Extra states can be added to this table if required.
-
 There are two status change action hooks (in Java) that can be used by sites to 
-provide specific behaviours:
+provide specific behaviour:
 
 * ``statusChange`` - This action is called when status is changed by a user 
   eg. when ``Draft`` records are set to ``Submitted`` and could be used for 
@@ -102,9 +83,8 @@ that wish to provide different or more extensive behaviour.
 A default pair of metadata status change actions defined in Java is provided with GeoNetwork using
 the class org.fao.geonet.services.metadata.DefaultStatusActions.java (see :code:`core/src/main/java/org/fao/geonet/kernel/metadata/DefaultStatusActions.java`).
 
-
-When status change
-~~~~~~~~~~~~~~~~~~
+When a status changes
+~~~~~~~~~~~~~~~~~~~~~
 
 This action is called when status is changed by a user. What happens depends 
 on the status change taking place:
