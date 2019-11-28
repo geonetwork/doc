@@ -107,3 +107,9 @@ The DOI is added to the metadata record using the following encoding:
 .. figure:: img/doi-in-xml.png
 
 
+
+Examples
+--------
+
+- `Comment créer un DOI à partir de l’outil de catalogage Geonetwork, Annick Battais <https://sist19.sciencesconf.org/data/pages/SIST19_A_BATTAIS.pdf>`_
+
