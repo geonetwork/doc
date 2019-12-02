@@ -8,6 +8,7 @@ User guide
    :maxdepth: 2
 
    quick-start/index.rst
+   map/index.rst
    describing-information/index.rst
    associating-resources/index.rst
    tag-information/index.rst
