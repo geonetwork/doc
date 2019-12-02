@@ -11,15 +11,13 @@ Record life cycle
 Metadata records have a lifecycle that typically goes through one or more states.
 For example, when a record is:
 
-* created and edited by an ``Editor`` it is in
-  the ``Draft`` state.
+* created and edited by an ``Editor`` it is in the ``Draft`` state.
 
-* review requested or being reviewed by a ``Content Reviewer`` it
-  would typically be in a ``Submitted`` state.
+* being reviewed by a ``content reviewer``, or a review is requested brings the record to ``Submitted`` state.
 
-* completed and corrected by the ``Content Reviewer`` it would be in the ``Approved`` state.
+* completed and corrected by the ``Content Reviewer`` it is in the ``Approved`` state.
 
-* superseded or replaced and the state would be ``Retired``.
+* superseded or replaced the state is ``Retired``.
 
 
 The catalog has (an extensible) set of states that a metadata record can have:
@@ -56,7 +54,7 @@ As part of the approval process, the content reviewer can also set the level of 
 
 .. figure:: img/approve-metadata.png
 
-Notifications will be send to editors and content reviewers indicating the status changes on the record involved, so users can easily act when action is required.
+Notifications will be sent to editors and content reviewers indicating the status changes on the record involved, so users can easily act when action is required.
 
 In the metadata dashboard you can see which records are currently being updated or reviewed. A label is displayed 
 indicating a 'working copy' is available for that record. You can click the label to visit the work in progress.
