@@ -137,6 +137,46 @@ GeonetworkDataDirectory bean in :code:`core/src/main/resources/config-spring-geo
     </bean>
 
 
+Using a S3 object storage
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your infrastructure doesn't have a persistent storage available, you can configure
+GeoNetwork to use an Amazon S3 (or compatible) object storage to store the images and data.
+
+In order to do that, you must use a custom bean configuration. Replace the
+:code:`filesystemStore`, :code:`resourceStore` and :code:`resources` beans in
+:code:`core/src/main/resources/config-spring-geonetwork.xml` with something like that:
+
+
+.. code-block:: xml
+
+    <bean id="s3credentials" class="org.fao.geonet.resources.S3Credentials">
+      <property name="region" value="eu-west-1"/>
+      <property name="bucket" value="geonetwork-test"/>
+      <property name="keyPrefix" value="geonetwork"/>
+      <!-- Only needed if you don't have a ~/.aws/credentials -->
+      <property name="accessKey" value="MyAccessKey"/>
+      <property name="secretKey" value="MySecretKey"/>
+      <!-- Only needed when not using Amazon S3-->
+      <property name="endpoint" value="sos-ch-dk-2.exo.io"/>
+    </bean>
+    <bean id="filesystemStore" class="org.fao.geonet.api.records.attachments.S3Store" />
+    <bean id="resourceStore"
+          class="org.fao.geonet.api.records.attachments.ResourceLoggerStore">
+      <constructor-arg index="0" ref="filesystemStore"/>
+    </bean>
+    <bean id="resources" class="org.fao.geonet.resources.S3Resources"/>
+
+The :code:`s3credentials` bean can be left empty and the following system environment variables
+can be used to configure it (convenient in a container environment):
+
+ - AWS_S3_PREFIX
+ - AWS_S3_BUCKET
+ - AWS_DEFAULT_REGION
+ - AWS_S3_ENDPOINT
+ - AWS_ACCESS_KEY_ID
+ - AWS_SECRET_ACCESS_KEY
+
 
 Structure of the data directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
