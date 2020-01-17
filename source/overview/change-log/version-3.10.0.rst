@@ -10,7 +10,7 @@ New features/fixes
 
  * `Openlayers update <https://github.com/geonetwork/core-geonetwork/pull/4236>`_
 
- * `Reorganize map panel<https://github.com/geonetwork/core-geonetwork/pull/4338>`_
+ * `Reorganize map panel <https://github.com/geonetwork/core-geonetwork/pull/4338>`_
 
  * ESRI Rest layer can be added to the map
 
