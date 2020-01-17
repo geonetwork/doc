@@ -24,3 +24,4 @@ Change log
    version-3.8.0.rst
    version-3.8.1.rst
    version-3.8.2.rst
+   version-3.10.0.rst
