@@ -14,16 +14,10 @@ When enabled, the INSPIRE support activate the following:
 - Enable indexing of INSPIRE themes and annexes (INSPIRE themes thesaurus MUST be
   added to the list of thesaurus from the INSPIRE Registry - see :ref:`managing-thesaurus`).
 
-- CSW GetCapabilities includes the INSPIRE section (ie. ExtendedCapabilities)
-  that administrator can customize in ``xml/csw/capabilities_inspire.xml``
-  and response support language extensions. The language provided defines:
-
-  - Natural language fields are returned in the language requested (see :ref:`csw-configuration`)
-
-  - The end-points are returned for the language requested
-
-
 .. image:: img/inspire-configuration.png
+
+
+To configure the discovery service, a dedicated service metadata record MUST be created in order to provide a complete GetCapabilities document (:ref:`csw-configuration_inspire`).
 
 
 .. _loading-inspire-codelists:
@@ -31,7 +25,7 @@ When enabled, the INSPIRE support activate the following:
 Loading INSPIRE codelists
 -------------------------
 
-To describe INSPIRE datasets and series, it is recommended to load relevant codelists from the `INSPIRE Registry <http://inspire.ec.europa.eu/registry/>`_, 
+To describe INSPIRE datasets and series, it is recommended to load relevant codelists from the `INSPIRE Registry <http://inspire.ec.europa.eu/registry/>`_,
 the following codelists are relevant in the scope of metadata guidelines v2.0:
 
 * `INSPIRE Theme <https://inspire.ec.europa.eu/theme>`_
@@ -45,7 +39,7 @@ the following codelists are relevant in the scope of metadata guidelines v2.0:
 * Metadata codelist register > `Limitations on Public Access <https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess>`_
 * Metadata codelist register > `OnLine Description Code <https://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode>`_
 * Metadata codelist register > `Quality of Service Criteria <https://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria>`_
- 
+
 
 From ``admin console`` > ``classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
 
@@ -70,7 +64,7 @@ The type of encoding of keywords can be defined using the gear icon (See validat
 
 .. image:: img/inspire-keyword-encoding-type.png
 
-Via the schema plugin form configuration it is an option to configure a thesaurus to be used for a specific `Anchor` element. 
+Via the schema plugin form configuration it is an option to configure a thesaurus to be used for a specific `Anchor` element.
 The thesaures concepts are used to populate an auto complete text field for that element.
 
 
@@ -79,9 +73,9 @@ The thesaures concepts are used to populate an auto complete text field for that
 INSPIRE validation
 ------------------
 
-INSPIRE validation of metadata records is available at `the INSPIRE Validator <https://inspire.ec.europa.eu/validator/about/>`_. 
-It is using `ETF which is an open source testing framework for spatial data and services <https://github.com/etf-validator/etf-webapp>`_. 
-GeoNetwork is able to `remote validate` any record using a service provided by an instance of ETF. 
+INSPIRE validation of metadata records is available at `the INSPIRE Validator <https://inspire.ec.europa.eu/validator/about/>`_.
+It is using `ETF which is an open source testing framework for spatial data and services <https://github.com/etf-validator/etf-webapp>`_.
+GeoNetwork is able to `remote validate` any record using a service provided by an instance of ETF.
 To configure remote validation, go to ``admin console`` > ``settings`` and set the URL of the validator. The url of the main INSPIRE validator is ``http://inspire.ec.europa.eu/validator/``.
 
 .. image:: img/inspire-configuration.png
