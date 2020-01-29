@@ -119,7 +119,7 @@ Once you checked out the code from Github repository, go inside the GeoNetworkâ€
 
     mvn clean install
 
-If the build is successful you'll get an output like::
+If the build is successful you'll get an output like:
 
 .. code-block:: shell
 
