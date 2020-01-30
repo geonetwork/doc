@@ -16,19 +16,19 @@ import sys
 import os
 import shlex
 import sphinx_bootstrap_theme
+import datetime, string
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+now = datetime.datetime.now()
+
 # -- General configuration ------------------------------------------------
 
 # General substitutions.
-project = u'GeoNetwork Documentation'
 manual = u'GeoNetwork Documentation'
-copyright = u'GeoNetwork'
-
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'GeoNetwork opensource'
-copyright = u'2001-2020, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'
+copyright = u'2001-{}, GeoNetwork opensource. Licensed under Creative Commons Attribution ShareAlike (Unported) v3.0 License'.format(now.year)
 author = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -404,7 +404,8 @@ extlinks = {
  'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
  'code': ('https://github.com/geonetwork/core-geonetwork/tree/master/%s', 'source file '),
  'repo': ('https://github.com/geonetwork/%s', 'code repository '),
- 'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page ')
+ 'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page '),
+ 'website': ('http://geonetwork-opensource.org/%s','web page')
 }
 
 rst_epilog = """
