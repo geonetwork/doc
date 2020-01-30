@@ -4,27 +4,61 @@
 Configuring the database
 ########################
 
-This section describe how to configure the database connection.
+
+Introduction
+------------
+
+GeoNetwork uses a database to persist aspects such as metadata records, privileges and configurations.
+The database default structure is created by the application on initial startup. Subsequent releases of GeoNetwork 
+will update the database structure automatically. For this reason the database user initially needs create privileges on the database. 
+A number of database dialects are supported; PostGreSQL, Oracle, SQL server, H2.
+This section describes various options to configure the database connection.
+
+H2 database
+-----------
 
 By default, an `H2 <http://www.h2database.com/html/main.html>`_ database is configured
-and created when the application first start. The H2 database named ``geonetwork.h2.db``
+and created when the application first starts. The H2 database file named ``gn.h2.db``
 is created:
 
 * when using the installer, in the ``jetty`` folder
-
 * when deploying the WAR on Tomcat and using ``startup.sh``, in the ``bin`` folder of Tomcat
 
+Configuring a database via config files
+---------------------------------------
 
-To modify the database configuration, first check which type of database is used.
-Depending on the node (default node name is |default.node|) check the node configuration file
-|default.node.config.file|. Choose the database type to use.
+The database dialect to use is configured in ``/WEB-INF/config-node/srv.xml``. Comment H2 and uncomment the dialect to use. 
+Verify that a jdbc driver is available for the selected database dialect. If not, a jdbc library can be placed in ``/WEB-INF/lib`` or in the tomcat lib folder.
 
-Then update the |jdbc.properties| file with connection information.
+To update the connection details, update the |jdbc.properties| file with relevant connection information. 
 
-The database default structure will be created by the application on startup.
+GeoNetwork assumes data is stored in the default schema for a user. If this is not the case, you need to activate a setting ``hibernate.default_schema`` in ``/WEB-INF/config-spring-geonetwork.xml``. 
+There are some scripts that run directly on the database at initialisation and can't use the ``hibernate.default-schema`` parameter. For these scripts you need to set the default-schema manually. 
+In PostGreSQL this is possible by appending ``?currentSchema=example`` to the database connection. 
 
 
-To have more details about database connection and queries, log can be switched to DEBUG level
+Configuring a database via JNDI
+-------------------------------
+
+The Java Naming and Directory Interface (JNDI) is a technology which allows to configure the database in tomcat and reference the JNDI connection by name.
+To activate JNDI, you need to activate the JNDI database type in ``/WEB-INF/config-node/srv.xml``.
+
+Configure a JNDI connection in Tomcat by adding a new resource to ``TOMCAT/conf/context.xml``
+
+.. code-block:: xml
+
+ <Resource name="geonetwork"
+      type="javax.sql.DataSource"
+      driverClassName="org.postgresql.Driver"
+      url="jdbc:postgresql://localhost:5432/geonetwork"
+      username="xxxxx" password="xxxxxx"
+      maxActive="20"
+    />
+
+Database logging
+----------------
+
+To have more details about database connections and queries, the log can be switched to DEBUG level
 in :code:`web/src/main/webapp/WEB-INF/classes/log4j.xml` (or see :ref:`system-config-server` > Log level).
 
 
@@ -45,3 +79,8 @@ in :code:`web/src/main/webapp/WEB-INF/classes/log4j.xml` (or see :ref:`system-co
         <appender-ref ref="consoleAppender" />
         <appender-ref ref="fileAppender" />
     </logger>
+
+Summary
+-------
+
+There are various ways to configure a database in GeoNetwork. JNDI is favourable, because when updating to a new version, or changing a database, you don't need to touch any application files.
