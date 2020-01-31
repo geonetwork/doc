@@ -55,6 +55,30 @@ Configure a JNDI connection in Tomcat by adding a new resource to ``TOMCAT/conf/
       maxActive="20"
     />
 
+Configuring a database via environment
+--------------------------------------
+
+In container environments like Docker it's optimal to configure the database from environment variables. 
+Many of the connection parameters to be substituted contain a dot. 
+Which is a challenge for the typical environment variable substitution case.
+
+Setting an environment variable ``jdbc_database`` does not function.
+
+However we noticed that in Docker these approaches work:
+
+- Set an exact environment variable including '.' from docker run.
+
+.. code-block:: xml
+
+  docker run --rm --name gn -p 8080:8080 -e jdbc.database=test2 geonetwork:3.10.0
+
+- Add the parameters to the Java environment by substituting JAVA_OPTS
+
+.. code-block:: xml
+
+  docker run --rm --name gn -p 8080:8080 -e JAVA_OPTS="... -Djdbc.database=myDatabaseName" geonetwork:latest
+
+
 Database logging
 ----------------
 
