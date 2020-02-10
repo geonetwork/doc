@@ -59,7 +59,7 @@ The quick way
 
 Get GeoNetwork running - the short path:
 
-.. codeblocl:: shell
+.. codeblock:: shell
 
     git clone --depth 3 --recursive https://github.com/geonetwork/core-geonetwork.git
     cd core-geonetwork
@@ -189,18 +189,18 @@ Run embedded Jetty server
 Maven comes with built-in support for Jetty via a [plug-in](http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin)
 
 To run GeoNetwork with the embedded Jetty server you have to change directory to the root of the **web** module,
-and then execute the following maven command::
+and then execute the following maven command:
 
 .. code-block:: shell
 
-  mvn jetty:run -Penv-dev
+   mvn jetty:run -Penv-dev
 
 
 After a moment, GeoNetwork should be accessible at: http://localhost:8080/geonetwork
 
-For changes related to the user interface in the `web-ui` module or the metadata schemas in the `schemas` module, can be deployed in jetty executing the following maven command in the **web** module::
+For changes related to the user interface in the `web-ui` module or the metadata schemas in the `schemas` module, can be deployed in jetty executing the following maven command in the **web** module:
 
 
 .. code-block:: shell
 
-  mvn process-resources
+   mvn process-resources
