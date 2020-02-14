@@ -8,14 +8,15 @@ An editor can import metadata in the catalog file in different formats: XML, MEF
 .. index:: pair: MEF; import
 .. index:: pair: XML; import
 
+Before you begin
+-----------------
+The user should have an ``editor`` profile to access metadata. 
 
-The user needs to have an ``editor`` profile to access it. After login, go to the
-contribute page and select the ``Import new records`` button.
+1. Go to the contribute page and select ``Import new records``.
 
 .. figure:: img/import-record-button.png
 
-
-The import new records page allows you to import records in three ways:
+Using the import new records page, you can:
 
 * choose ``Upload a file from your computer`` and choose one XML or MEF file to load
 * choose ``Copy/Paste`` and copy the XML document in the textarea
@@ -24,7 +25,7 @@ The import new records page allows you to import records in three ways:
 
 To import multiple file at a time, use the MEF format or the import from server options.
 
-After defining the type of import, configure the other import settings:
+2. After you have defined the type of import, configure the other import settings:
 
 .. figure:: img/import-form.png
 
@@ -34,8 +35,8 @@ After defining the type of import, configure the other import settings:
 
 - ``Type of record``:
 
- - ``Metadata`` should be used when loading a normal metadata record
- - ``Template`` should be used when the loaded metadata record will be used as a template.
+ - Use ``Metadata`` when loading a normal metadata record
+ - Use ``Template`` when the loaded metadata record will be used as a template.
 
 
 - ``Record identifier processing`` determines how to handle potential clashes
@@ -68,7 +69,7 @@ After defining the type of import, configure the other import settings:
 - ``Assign to Category`` define a local category to assign to the loaded record.
 
 
-Click ``import`` to trigger the import. After processing, a summary is provided with
+3. Click ``import`` to trigger the import. After processing, a summary is provided with
 the following details:
 
 - the total count of imported metadata
