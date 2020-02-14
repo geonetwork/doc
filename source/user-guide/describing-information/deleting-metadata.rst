@@ -13,8 +13,7 @@ There are different ways to remove a record:
 - In the ``contribute`` section click the ``delete`` button for a record.
 
 
-
-Note, that if a metadata originates from a harvester, that metadata
+Note, if a metadata originates from a harvester, that metadata
 will automatically be removed when the metadata in the harvested
 system is removed or the harvester itself is removed and the record will
 be inserted again on the next harvester run.

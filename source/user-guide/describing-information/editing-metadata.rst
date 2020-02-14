@@ -3,8 +3,7 @@
 Editing metadata
 ################
 
-
-This section describes how to use the metadata editor
+This topic describes how to use the metadata editor.
 
 Using the editor toolbar
 ------------------------
