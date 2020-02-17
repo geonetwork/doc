@@ -3,25 +3,22 @@
 Associating resources
 #####################
 
-A record can be associated with different types of resources using the
-associated resource panel. This section describes how it works.
+You can associate a record with different types of resources using the **Associated resources** panel. 
+This topic describes how to associate resources.
 
 
-In order to add or edit associated resources, open the editor.
-On the top right, manage associated resources with the wizard panel.
+- To add or edit associated resources, open the editor, and click Associate Resources to view the wizard panel.
 
 .. figure:: img/onlinesrc.png
 
+Use the wizard panel to create or delete associated resources. 
+A list of currently attached resources grouped by types is also provided.
 
-This wizard provides access to easily create or delete associated resources. A
-list of currently attached resources grouped by types is also provided.
-
-To add a new online resource, click on the top + caret.
+- To add a new online resource, click on the top + caret.
 
 .. figure:: img/addresources.png
 
-
-Different types of resources can be associated:
+You can associate different types of resources:
 
 
 .. toctree::
