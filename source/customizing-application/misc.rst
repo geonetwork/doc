@@ -95,3 +95,60 @@ Then, using the cookie and the token, you can do whatever you want:
 
  * Curl_http_done: called premature == 0
    * Connection #0 to host localhost left intact
+
+.. _using-h2-database:
+
+Using the H2 database
+---------------------
+
+.. important:: The instructions below should only be used to examine the database for trouble-shooting purposes as it is possible to corrupt it using this method. Always take a backup first before making any changes!
+
+If you are using the default embedded H2 database and you need to examine the tables, you can do so using a Graphical UI. Two that have been tested are:
+
+ - dbeaver (dbeaver.io)
+ - h2's own tool (http://www.h2database.com/html/download.html)
+
+The following approach uses the h2 tool.
+
+Find the Geonetwork database
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is called ``gn.h2.db``. The location is dependent on which web server you are using, and where your data directory is. See :ref:`configuring-database` for more information. Note that on windows you will need to use a path of the form ``driveletter/path/to/gn.h2.db``.
+
+Using the H2 tool
+^^^^^^^^^^^^^^^^^
+
+Download the platform independent zip file from http://www.h2database.com/html/download.html and unblock/extract it. At a command prompt change to the following directory:
+
+``h2/bin``
+
+Note that using the included bat or shell scripts to access the database seem to show errors, so the command prompt approach is recommended.
+
+Make a note of the URL to your database. This will be of the form:
+
+``jdbc:h2:path/to/gn``
+
+Note do not include ``.h2.db`` at the end of the path.
+
+Type the following command to access the tool:
+
+``java -cp h2*.jar org.h2.tools.shell``
+
+You will be asked for the URL, which you made a note of above. The default credentials are:
+
+- username: www-data
+- password: www-data
+
+You may need to do one or other of the following:
+
+- Shut down GeoNetwork
+- Remove the lock file ``gn.lock.db``
+- Give write permissions on ``gn.h2.db``
+  
+When you have successfully connected you will see a prompt as below, where you can enter SQL commands. These should end with a semi-colon.
+
+``sql>``
+
+A useful command reference can be found at http://www.h2database.com/html/commands.html
+
+To leave the tool, type ``quit`` and press enter.
