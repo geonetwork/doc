@@ -105,7 +105,7 @@ Using the H2 database
 
 If you are using the default embedded H2 database and you need to examine the tables, you can do so using a Graphical UI. Two that have been tested are:
 
- - dbeaver (dbeaver.io)
+ - dbeaver (http://dbeaver.io)
  - h2's own tool (http://www.h2database.com/html/download.html)
 
 The following approach uses the h2 tool.
