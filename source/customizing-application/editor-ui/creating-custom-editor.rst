@@ -1,4 +1,11 @@
-.. _creating-custom-editor:Customizing editor##################.. _creating-custom-editor-editor:
+.. _creating-custom-editor:
+
+Customizing editor
+##################
+
+
+.. _creating-custom-editor-editor:
+
         
 A metadata editor configuration is defined for a specific schema plugin standard
 (see :ref:`implementing-a-schema-plugin`).
@@ -36,13 +43,26 @@ An editor configuration should define first some general element description and
 a set of views with at least one.
 
 
-        Child elements:- **fields**, Optional element (see :ref:`creating-custom-editor-fields`)- **fieldsWithFieldset**, Optional element (see :ref:`creating-custom-editor-fieldsWithFieldset`)- **multilingualFields**, Optional element (see :ref:`creating-custom-editor-multilingualFields`)- **views**, Mandatory element (see :ref:`creating-custom-editor-views`).. _creating-custom-editor-fields:
+        
+
+Child elements:
+
+- **fields**, Optional element (see :ref:`creating-custom-editor-fields`)
+
+- **fieldsWithFieldset**, Optional element (see :ref:`creating-custom-editor-fieldsWithFieldset`)
+
+- **multilingualFields**, Optional element (see :ref:`creating-custom-editor-multilingualFields`)
+
+- **views**, Mandatory element (see :ref:`creating-custom-editor-views`)
+
+.. _creating-custom-editor-fields:
+
         
 Defining field type
 -------------------
 
 Define the form fields type configuration. Default is simple text input.
-This list contains the list of exception which does not use a simple text input.
+This list contains the list of exception which do not use a simple text input.
 The list of possible values are:
 
 - all HTML5 input type or
@@ -67,21 +87,24 @@ An element can only have one type defined.
 
 
 The other option to define a more advanced field type is to catch the element using
-and XSL template. This approach is used for keywords in ISO19139 for example
+an XSL template. This approach is used for keywords in ISO19139 for example
 (see :code:`schemas/iso19139/src/main/plugin/iso19139/layout/layout-custom-fields-keywords.xsl`).
 
 
         
-      .. _creating-custom-editor-fieldsWithFieldset:
+      
+
+.. _creating-custom-editor-fieldsWithFieldset:
+
         
 
 Grouping element from the standards
 -----------------------------------
 
 List of element to be displayed in a fieldset (ie. boxed element). Those
-elements usually contain children elements and define major section in the
+elements usually contain children elements and define major sections in the
 standard. For example, in ISO19139, identification and distribution are major
-section and should usually be displayed as a group of information.
+sections and should usually be displayed as a group of information.
 
 .. code-block:: xml
 
@@ -92,15 +115,18 @@ section and should usually be displayed as a group of information.
         <name>gmd:distributionInfo</name>
 
 
-        .. _creating-custom-editor-multilingualFields:
+        
+
+.. _creating-custom-editor-multilingualFields:
+
         
 Defining multilingual fields
 ----------------------------
 
 Configure here the list of multilingual fields for a standard.
 
-By default, if the standard as multilingual support like ISO19139, all fields will be displayed
-as multilingual fields. Define in the exclude section the exception (eg. gmd:identifier for example in ISO19139).
+By default, if the standard has multilingual support like ISO19139, all fields will be displayed
+as multilingual fields. Define in the exclude section the exceptions (eg. gmd:identifier for example in ISO19139).
 
 Then this section also allows to define how multilingual fields are displayed using the expanded elements.
 If expanded, then one field per language is displayed with no need to click on the language switcher.
@@ -125,7 +151,10 @@ If expanded, then one field per language is displayed with no need to click on t
             <name>gmd:metadataStandardName</name>
 
 
-        .. _creating-custom-editor-views:
+        
+
+.. _creating-custom-editor-views:
+
         
 Configuring views
 -----------------
@@ -150,12 +179,19 @@ To create a new view, use the following:
           </view>
 
         
-      Child elements:- **view**, One or more (see :ref:`creating-custom-editor-view`).. _creating-custom-editor-view:
+      
+
+Child elements:
+
+- **view**, One or more (see :ref:`creating-custom-editor-view`)
+
+.. _creating-custom-editor-view:
+
         
 Defining a view
 ---------------
 
-A view has a label and define a specific rendering of the metadata records.
+A view has a label and defines a specific rendering of the metadata records.
 A view is composed of one or more tabs.
 
 .. code-block:: xml
@@ -171,7 +207,12 @@ The view could be displayed or not according to the metadata record content or
 the current user session using the displayIfRecord and displayIfServiceInfo attribute.
 
         
-      Attributes:- **name** (Mandatory)
+      
+
+Attributes:
+
+- **name** (Mandatory)
+
 The key of the view name stored in ``{schema}/loc/{lang}/strings.xml`` or the element name with namespace prefix.
 
 .. code-block:: xml
@@ -182,9 +223,15 @@ The key of the view name stored in ``{schema}/loc/{lang}/strings.xml`` or the el
         <custom-view>My view</custom-view>
 
 
-            - **disabled** (Optional) Fixed value: **true**
+            
+
+- **disabled** (Optional) Fixed value: **true**
+
 Hide the view from the menu if the attribute is defined. Allows to easily disable a view.
-            - **class** (Optional)
+            
+
+- **class** (Optional)
+
 Define custom CSS class to be set on the form element. This is mainly used
 to set the type of indent:
 
@@ -193,25 +240,43 @@ to set the type of indent:
  * gn-indent-bluescale: blue scale colored left border on each fieldset
 
 See catalog/views/default/less/gn_editor_default.less to add your custom editor styles.
-            - **upAndDownControlHidden** (Optional) Fixed value: **true**
+            
+
+- **upAndDownControlHidden** (Optional) Fixed value: **true**
+
 Define if up and down control should be displayed in that view. If not defined, controls are displayed.
 Hide those controls in a view to make it easier with less controls for the end-user.
 
 .. figure:: ../../user-guide/describing-information/img/editor-control-updown.png
 
 
-            - **displayAttributes** (Optional) Fixed value: **true**
+            
+
+- **displayAttributes** (Optional) Fixed value: **true**
+
 Display attributes by default when loading the view.
-- **displayTooltips** (Optional) Fixed value: **true**
+
+
+- **displayTooltips** (Optional) Fixed value: **true**
+
 Display help documentation for all elements by default when loading the view.
-- **displayTooltipsMode** (Optional)
+
+
+- **displayTooltipsMode** (Optional)
+
 Display help documentation onhover elements (default) or by clicking on an icon.
-- **hideTimeInCalendar** (Optional) Fixed value: **true**
+
+
+- **hideTimeInCalendar** (Optional) Fixed value: **true**
+
 Define if calendar control should allows users to set date only or
 datetime. If attribute is not set, then date and time can be set. This is controlled at the view level,
 switching to another view may allow more control over the dates.
 
-- **displayIfRecord** (Optional)
+
+
+- **displayIfRecord** (Optional)
+
 XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed.
 eg. Display custom-view if metadata standard name contains Medsea:
 
@@ -222,7 +287,10 @@ eg. Display custom-view if metadata standard name contains Medsea:
                                       gmd:metadataStandardName/gco:CharacterString,
                                     'MedSea')"
 
-- **displayIfServiceInfo** (Optional)
+
+
+- **displayIfServiceInfo** (Optional)
+
 XPath expression returning boolean value which will be evaluate against the service
 information tree (Jeeves /root/gui element). if true the view will be displayed.
 
@@ -235,7 +303,18 @@ eg. Display custom view if user is Administrator:
 
 displayIfRecord and displayIfServiceInfo could be combined. An AND operator is used. Both condition MUST returned true for the view to be displayed.
 
-Child elements:- **tab**, One or more (see :ref:`creating-custom-editor-tab`)- **flatModeExceptions**, Optional element (see :ref:`creating-custom-editor-flatModeExceptions`)- **thesaurusList**, Optional element (see :ref:`creating-custom-editor-thesaurusList`).. _creating-custom-editor-tab:
+
+
+Child elements:
+
+- **tab**, One or more (see :ref:`creating-custom-editor-tab`)
+
+- **flatModeExceptions**, Optional element (see :ref:`creating-custom-editor-flatModeExceptions`)
+
+- **thesaurusList**, Optional element (see :ref:`creating-custom-editor-thesaurusList`)
+
+.. _creating-custom-editor-tab:
+
 
 Defining a tab
 --------------
@@ -260,16 +339,33 @@ Add custom view one default tab and a field for the title:
 
 
 
-        Attributes:- **id** (Mandatory)
+        
+
+Attributes:
+
+- **id** (Mandatory)
+
 The tab key used in URL parameter to activate that tab. The key is also use for the tab label as defined in ``{schema}/loc/{lang}/strings.xml``.
-            - **default** (Optional) Fixed value: **true**
+            
+
+- **default** (Optional) Fixed value: **true**
+
 Define if this tab is the default one for the view. Only one tab should be the default in a view.
-            - **toggle** (Optional) Fixed value: **true**
+            
+
+- **toggle** (Optional) Fixed value: **true**
+
 Define if the tab should be displayed in a drop down menu instead of a tab. This is used for advanced
 section which is not used often by the end-user. More than one tab could be grouped in that drop down tab menu.
-            - **formatter-order** (Optional)
+            
+
+- **formatter-order** (Optional)
+
 Define the ordering index of this tab in the XSLT formatter (Note used for editor).
-            - **mode** (Optional) Fixed value: **flat**
+            
+
+- **mode** (Optional) Fixed value: **flat**
+
 The "flat" mode is an important concept to understand for the editor. It controls the way:
 
  - complex elements are displayed (ie. elements having children) and
@@ -305,7 +401,14 @@ to be able:
  - to fix any types of errors.
 
 
-        - **mode** (Mandatory)- **displayIfRecord** (Optional)
+        
+
+- **mode** (Mandatory)
+
+
+
+- **displayIfRecord** (Optional)
+
 XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed.
 eg. Display custom-view if metadata standard name contains Medsea:
 
@@ -316,7 +419,10 @@ eg. Display custom-view if metadata standard name contains Medsea:
                                       gmd:metadataStandardName/gco:CharacterString,
                                     'MedSea')"
 
-- **displayIfServiceInfo** (Optional)
+
+
+- **displayIfServiceInfo** (Optional)
+
 XPath expression returning boolean value which will be evaluate against the service
 information tree (Jeeves /root/gui element). if true the view will be displayed.
 
@@ -329,7 +435,10 @@ eg. Display custom view if user is Administrator:
 
 displayIfRecord and displayIfServiceInfo could be combined. An AND operator is used. Both condition MUST returned true for the view to be displayed.
 
-.. _creating-custom-editor-flatModeExceptions:
+
+
+.. _creating-custom-editor-flatModeExceptions:
+
 Configuring complex element display
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -355,13 +464,16 @@ record or if the field should be displayed to add new occurrences:
  </view>
 
 
-.. _creating-custom-editor-thesaurusList:
+
+
+.. _creating-custom-editor-thesaurusList:
+
 Customizing thesaurus
 ~~~~~~~~~~~~~~~~~~~~~
 
 To configure the type of transformations
-or the number of keyword allowed or if the widget
-has to be displayed in a fieldset or as simple field for e
+or the number of keyword allowed, or if the widget
+has to be displayed in a fieldset or as simple field for a
 thesaurus define a specific configuration:
 
 eg. only 2 INSPIRE themes.
@@ -377,7 +489,10 @@ eg. only 2 INSPIRE themes.
       </thesaurusList>
 
 
-      .. _creating-custom-editor-section:
+      
+
+.. _creating-custom-editor-section:
+
 Adding a section to a tab
 -------------------------
 
@@ -388,11 +503,24 @@ For example, if you need a tab without a root fieldset, juste create
 the mandatory section with no name and then the inner elements.
 
 
-        Attributes:- **name** (Optional)An optional name to override the default one base on field name for the
+        
+
+Attributes:
+
+- **name** (Optional)
+
+An optional name to override the default one base on field name for the
             section. The name must be defined in ``{schema}/loc/{lang}/strings.xml``.
-          - **xpath** (Optional)The xpath of the element to match. If an XPath is set for a section, it
+          
+
+- **xpath** (Optional)
+
+The xpath of the element to match. If an XPath is set for a section, it
             should not contains any field.
-          - **mode** (Optional) Fixed value: **flat**
+          
+
+- **mode** (Optional) Fixed value: **flat**
+
 The "flat" mode is an important concept to understand for the editor. It controls the way:
 
  - complex elements are displayed (ie. elements having children) and
@@ -428,7 +556,18 @@ to be able:
  - to fix any types of errors.
 
 
-        - **mode** (Mandatory)- **or** (Optional)Local name to match if the element does not exist.- **or** (Optional)
+        
+
+- **mode** (Mandatory)
+
+
+
+- **or** (Optional)
+
+Local name to match if the element does not exist.
+
+- **or** (Optional)
+
             
 The local name of the geonet child (ie. non existing element) to match.
 
@@ -438,9 +577,24 @@ The local name of the geonet child (ie. non existing element) to match.
            or="language"
            in="/gmd:MD_Metadata"/>
 
-- **or** (Optional)- **in** (Optional)XPath of the geonet:child element with the or name to look for. Usually
+
+
+- **or** (Optional)
+
+
+
+- **in** (Optional)
+
+XPath of the geonet:child element with the or name to look for. Usually
         points to the parent of last element of the XPath attribute.
-      - **in** (Optional)The element to search in for the geonet child.- **displayIfRecord** (Optional)
+      
+
+- **in** (Optional)
+
+The element to search in for the geonet child.
+
+- **displayIfRecord** (Optional)
+
 XPath expression returning boolean value which will be evaluated against the metadata record. if true the view will be displayed.
 eg. Display custom-view if metadata standard name contains Medsea:
 
@@ -451,7 +605,10 @@ eg. Display custom-view if metadata standard name contains Medsea:
                                       gmd:metadataStandardName/gco:CharacterString,
                                     'MedSea')"
 
-.. _creating-custom-editor-field:
+
+
+.. _creating-custom-editor-field:
+
 
 Adding a field
 --------------
@@ -514,7 +671,16 @@ Activate the "flat" mode at the tab level to make the form display only existing
       </view>
 
 
-        Attributes:- **xpath** (Mandatory)The xpath of the element to match.- **if** (Optional)
+        
+
+Attributes:
+
+- **xpath** (Mandatory)
+
+The xpath of the element to match.
+
+- **if** (Optional)
+
 An optional xpath expression to evaluate to define if the element should be displayed
 only in some situation (eg. only for service metadata records). eg.
 
@@ -525,12 +691,22 @@ only in some situation (eg. only for service metadata records). eg.
             gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints"
             if="count(gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification) > 0"/>
 
-- **name** (Optional)A field name to override the default name.- **isMissingLabel** (Optional)
+
+
+- **name** (Optional)
+
+A field name to override the default name.
+
+- **isMissingLabel** (Optional)
+
 The label to display if the element does not exist in the metadata record. It indicates that
 the element is missing in the current record. It could be use for a conformity section saying
 that the element is "not evaluated". EXPERIMENTAL
             
-          - **or** (Optional)
+          
+
+- **or** (Optional)
+
             
 The local name of the geonet child (ie. non existing element) to match.
 
@@ -540,7 +716,14 @@ The local name of the geonet child (ie. non existing element) to match.
            or="language"
            in="/gmd:MD_Metadata"/>
 
-- **in** (Optional)The element to search in for the geonet child.- **del** (Optional)
+
+
+- **in** (Optional)
+
+The element to search in for the geonet child.
+
+- **del** (Optional)
+
             
 Relative XPath of the element to remove when the remove button is clicked.
 
@@ -576,23 +759,43 @@ remove the spatialResolution element.
            del="../../../.."/>
 
             
-          - **templateModeOnly** (Optional) Fixed value: **true**
+          
+
+- **templateModeOnly** (Optional) Fixed value: **true**
+
 Define if the template mode should be the only mode used. In that case, the field is always
 displayed based on the XML template snippet field configuration. Default is false.
-            - **notDisplayedIfMissing** (Optional) Fixed value: **true**If the field is found and a geonet child also, the geonet child to add a
+            
+
+- **notDisplayedIfMissing** (Optional) Fixed value: **true**
+
+If the field is found and a geonet child also, the geonet child to add a
             new one is not displayed.
-          - **use** (Optional)
+          
+
+- **use** (Optional)
+
 The form field type to use (one of the HTML5 type) or an AngularJS directive to use.
 This list is defined as an open enumeration. For directive, the value will be set in a simple
 text input by default. If the directive needs to deal with cariage return character, the
 directive name MUST contains "-textarea" in order to set the value in a textarea
 instead of the text input.
-         - **use** (Optional)
+         
+
+- **use** (Optional)
+
                         
 Field type. Register here any Angular directive to be used
 on the client side. Default is simple text field.
                         
-                      Child elements:- **template**, Optional element (see :ref:`creating-custom-editor-template`).. _creating-custom-editor-template:
+                      
+
+Child elements:
+
+- **template**, Optional element (see :ref:`creating-custom-editor-template`)
+
+.. _creating-custom-editor-template:
+
 
 Adding a template based field
 -----------------------------
@@ -642,7 +845,10 @@ eg. The gmd:MD_Identifier may contain a gmd:authority node which needs to be pre
 Warning: Template based field does not support multilingual editing for ISO standards (ie. only the main language is edited - therefore, multilingual elements will be preserved).
 
 
-        .. _creating-custom-editor-text:
+        
+
+.. _creating-custom-editor-text:
+
 Adding documentation or help
 ----------------------------
 
@@ -674,11 +880,23 @@ The fragment is defined in localization file strings.xml:
        </edmerp-help>
 
 
-        Attributes:- **ref** (Mandatory)The tag name of the element to insert in the localization file.
-          - **if** (Optional)
+        
+
+Attributes:
+
+- **ref** (Mandatory)
+
+The tag name of the element to insert in the localization file.
+          
+
+- **if** (Optional)
+
             
 An XPath expression to evaluate. If true, the text is displayed.
-          .. _creating-custom-editor-action:
+          
+
+.. _creating-custom-editor-action:
+
 Adding a button
 ---------------
 
@@ -749,7 +967,7 @@ XPath:
           </action>
 
 
-Example of a drowdown button with 3 coordinates system to choose from:
+Example of a dropdown button with 3 coordinate systems to choose from:
 
 .. code-block:: xml
 
@@ -827,16 +1045,36 @@ Example of a button to display a suggestion form:
                   process="add-columns-from-csv"/>
 
 
-        Attributes:- **name** (Optional)TODO- **type** (Optional)The type of control- **process** (Optional)The process identifier (eg. add-resource-id) or the associated resource
+        
+
+Attributes:
+
+- **name** (Optional)
+
+TODO
+
+- **type** (Optional)
+
+The type of control
+
+- **process** (Optional)
+
+The process identifier (eg. add-resource-id) or the associated resource
             type to open
             (eg. onlinesrc, fcats, parent, source, sibling, service, dataset, thumbnail) See
             onlinesrc directive.
-          - **forceLabel** (Optional)
+          
+
+- **forceLabel** (Optional)
+
 Force the label to be displayed for this action
 even if the action is not the first element of its
 kind. Label with always be displayed.
 
-          - **if** (Optional)
+          
+
+- **if** (Optional)
+
             
 An XPath expression to evaluate. If true, the control is displayed. eg.
 
@@ -850,7 +1088,26 @@ An XPath expression to evaluate. If true, the control is displayed. eg.
 
 will only displayed the action control if the resource identifier does not end
 with the metadata identifier.
-          - **class** (Optional)Optional CSS class to add to the parent div element. eg. gn-required to show a *.- **btnLabel** (Optional)Optional label to be addded to the button.- **btnClass** (Optional)Optional CSS class to be added to the button.- **or** (Optional)Local name to match if the element does not exist.- **or** (Optional)
+          
+
+- **class** (Optional)
+
+Optional CSS class to add to the parent div element. eg. gn-required to show a *.
+
+- **btnLabel** (Optional)
+
+Optional label to be addded to the button.
+
+- **btnClass** (Optional)
+
+Optional CSS class to be added to the button.
+
+- **or** (Optional)
+
+Local name to match if the element does not exist.
+
+- **or** (Optional)
+
             
 The local name of the geonet child (ie. non existing element) to match.
 
@@ -860,52 +1117,110 @@ The local name of the geonet child (ie. non existing element) to match.
            or="language"
            in="/gmd:MD_Metadata"/>
 
-- **or** (Optional)- **in** (Optional)XPath of the geonet:child element with the or name to look for. Usually
+
+
+- **or** (Optional)
+
+
+
+- **in** (Optional)
+
+XPath of the geonet:child element with the or name to look for. Usually
         points to the parent of last element of the XPath attribute.
-      - **in** (Optional)The element to search in for the geonet child.- **addDirective** (Optional)The directive to use for the add control for this field.Child elements:- **template**, Optional element (see :ref:`creating-custom-editor-template`).. _creating-custom-editor-section:
+      
+
+- **in** (Optional)
+
+The element to search in for the geonet child.
+
+- **addDirective** (Optional)
+
+The directive to use for the add control for this field.
+
+Child elements:
+
+- **template**, Optional element (see :ref:`creating-custom-editor-template`)
+
+.. _creating-custom-editor-section:
+
 A group of field
-Attributes:- **name** (Mandatory)
+
+
+Attributes:
+
+- **name** (Mandatory)
+
                   
 Section identifier.
 Translations are set on client side.
                     
-                .. _creating-custom-editor-field:
+                
+
+.. _creating-custom-editor-field:
+
 A field on which user can do batch editing.
 
-                  Attributes:- **name** (Mandatory)
+                  
+
+Attributes:
+
+- **name** (Mandatory)
+
                         
 Field identifier.
 Translations are set on client side.
                         
-                      - **xpath** (Mandatory)
+                      
+
+- **xpath** (Mandatory)
+
                         
 XPath of the element to edit.
                         
-                      - **indexField** (Optional)
+                      
+
+- **indexField** (Optional)
+
                         
 Lucene index field name (as defined in dumpfields).
 The field will be used to preview current record values (TODO).
                         
-                      - **use** (Optional)
+                      
+
+- **use** (Optional)
+
                         
 Field type. Register here any Angular directive to be used
 on the client side. Default is simple text field.
                         
-                      - **removable** (Optional) Fixed value: **true**
+                      
+
+- **removable** (Optional) Fixed value: **true**
+
                         
 Define if the field could be marked as deleted.
                         
-                      - **insertMode** (Optional)
+                      
+
+- **insertMode** (Optional)
+
                         
 Define if the field should be insert or replace.
 Do not set this property for mandatory field (eg. title).
                         
-                      - **codelist** (Optional)
+                      
+
+- **codelist** (Optional)
+
                         
 The codelist identifier. eg. gmd:MD_TopicCategoryCode for topic category.
                         
-                      .. _creating-custom-editor-template:
+                      
+
+.. _creating-custom-editor-template:
+
                           
 Define an XML template to use for the value to insert.
                         
-                        
+                        
+
