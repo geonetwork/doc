@@ -1262,3 +1262,28 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
         </mrl:LI_Lineage>
     </mdb:resourceLineage>
   </mdb:MD_Metadata>
+  
+  
+  
+Migrating from Technical guidance version 1.3 to version 2.0
+############################################################
+
+`Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007 (INSPIRE TG2) <https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139>`_ is the latest version that Member States should follow for all resources in the scope of the INSPIRE directive.
+
+To facilitate migration from previous technical guideline version 1.3, an XSLT conversion process can be applied to metadata records (see https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/process/inspire-tg13-to-tg20.xsl). The process is provided as an example and can be adapted based on your encoding rules.
+
+Below is a list of examples for ISO19139, ISO19115-3 or ISO19139 national profiles conversion, that can also be used as examples:
+
+* EEA https://github.com/eea/geonetwork-eea/blob/eea-3.10.x/schemas/iso19139/src/main/plugin/iso19139/process/eea-migrate-201908.xsl
+
+* BRGM https://github.com/BRGM/core-geonetwork/blob/mongeosource-3.10.x/schemas/iso19139/src/main/plugin/iso19139/process/inspire-tg2-improve-conformity.xsl
+
+* Metawal https://github.com/SPW-DIG/iso19115-3.2018/blob/5db7c2e4d597c53ac25e5bf20331a70653fc44d2/src/main/plugin/iso19115-3.2018/process/inspire-tg2.xsl
+
+* Netherland https://github.com/metadata101/iso19139.nl.geografie.1.3.1/blob/3.6/src/main/plugin/iso19139.nl.geografie.1.3.1/process/upgrade200-schemaupgrade.xsl
+
+* Sweden https://github.com/sdi-sweden/se-core-geonetwork/blob/develop/schemas/iso19139/src/main/plugin/iso19139/present/csw/gmd-csw-postprocessing.xsl
+
+
+See :ref:`batchupdate_xsl` to preview or apply the process.
+
