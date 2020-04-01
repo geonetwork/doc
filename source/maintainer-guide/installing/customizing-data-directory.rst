@@ -209,7 +209,7 @@ AWS S3 sample
 .. code-block:: xml
 
     <bean id="jcloudcredentials" class="org.fao.geonet.resources.JCloudCredentials">
-      <property name="provider" value="eu-west-1"/>
+      <property name="provider" value="aws-s3"/>
       <property name="containerName" value="geonetwork-test"/>
       <property name="baseFolder" value="geonetwork"/>
       <property name="storageAccountName" value="MyAccessKey"/>
