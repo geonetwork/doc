@@ -38,7 +38,8 @@
             <configuration>
               <executable>make</executable>
               <arguments>
-                <argument>html_eng</argument>
+                <argument>html_languages</argument>
+                <argument>LANGS=${langs}</argument>
               </arguments>
               <workingDirectory>${basedir}</workingDirectory>
             </configuration>
@@ -120,4 +121,7 @@
     </profile>
   </profiles>
 
+  <properties>
+    <langs>'en' 'fr'</langs>
+  </properties>
 </project>
