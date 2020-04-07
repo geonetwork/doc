@@ -58,10 +58,14 @@ html_all_languages:
 	@echo "Building documentation in html for all languages"
 	set -e; for lang in "en" "es" "fr" "ge" "it" "ko" "nl" "cz" "ca" "fi" "is" "pt_BR" "sr"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
 
+html_languages:
+	@echo "Building documentation in html for $(LANGS)"
+	set -e; for lang in $(LANGS); do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
+
 html_eng:
 	@echo "Building documentation in html for all languages"
 	set -e; for lang in "en"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
-	
+
 update_translations:
 	@echo "Pushing strings to transifex"
 	make gettext
