@@ -20,24 +20,9 @@ Setup GeoNetwork
         $ mvn jetty:run -Penv-dev,es
 
 
-To setup the search/content statistics in GeoNetwork do the following steps:
+To setup the search/content statistics in GeoNetwork, do the following steps:
 
-- Comment the following filter in `TOMCAT_DIR/webapps/geonetwork/WEB-INF/web.xml`
-
-.. code-block:: xml
-
-    <!--<filter-mapping>
-      <filter-name>XFrameOptionsFilter</filter-name>
-      <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-
-
-, otherwise when accessing the dashboard the following error is displayed in the js console::
-
-   Refused to display 'http://localhost:8080/geonetwork/dashboards/app/kibana#/dashboard/5b407790-4fa1-11e7-a577-3197d1592a1d?embed=true&_g=()' in a frame because an ancestor violates the following Content Security Policy directive: "frame-ancestors 'none'".
-
-
-- Startup GeoNetwork.
+- Start GeoNetwork.
 
 - Login as an `administrator` user and load the templates (http://localhost:8080/geonetwork/srv/eng/admin.console#/metadata).
 
