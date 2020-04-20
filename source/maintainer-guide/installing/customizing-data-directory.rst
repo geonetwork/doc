@@ -13,8 +13,7 @@ This configuration defines such things as:
 The data directory also contains a number of support files used by the catalog
 for various purposes:
 
-* Lucene index
-* spatial index
+* index configuration
 * logos
 * uploaded document attached to metadata records
 * thumbnails
@@ -189,6 +188,7 @@ The data directory contains:
   |--config: Extra configuration (eg. could contain overrides)
   |   |--schemaplugin-uri-catalog.xml
   |   |--codelist: The thesauri in SKOS format
+  |   |--index: Index configuration
   |   |--schemaPlugins: The directory used to store new metadata standards
   |
   |--data
@@ -202,11 +202,6 @@ The data directory contains:
   |   |
   |   |--metadata_subversion: The subversion repository
   |   |--backup: Folder containing removed metadata
-  |
-  |--index: All indexes used for search
-  |   |--nonspatial: Lucene index
-  |   |--spatialindex.*: ESRI Shapefile for the index (if not using spatial db)
-
 
 
 
@@ -214,11 +209,6 @@ Advanced data directory configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All sub-directories could be configured separately using java system property.
-For example, to put index directory in a custom location use:
-
- - <webappName>.lucene.dir and if not set using:
- - geonetwork.lucene.dir
-
 
 Examples:
 
@@ -227,7 +217,7 @@ Examples:
 
 .. code-block:: shell
 
-    java -Xms1g -Xmx1g -Xss2M -XX:MaxPermSize=128m -Dgeonetwork.dir=/app/geonetwork_data_dir -Dgeonetwork.lucene.dir=/ssd/geonetwork_lucene_dir
+    java -Xms1g -Xmx1g -Xss2M -XX:MaxPermSize=128m -Dgeonetwork.dir=/app/geonetwork_data_dir
 
 
 
@@ -236,7 +226,6 @@ Examples:
 .. code-block:: shell
 
     export geonetwork_dir=/app/geonetwork_data_dir
-    export geonetwork_lucene_dir=/ssd/geonetwork_lucene_dir
 
 
 * If no changes are made to thesaurus or schema, it could be relevant to use the version
@@ -247,6 +236,7 @@ Examples:
 
     -Dgeonetwork.dir=/data/catalogue
     -Dgeonetwork.schema.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/schema_plugins
+    -Dgeonetwork.indexConfig.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/index
     -Dgeonetwork.codeList.dir=/app/tomcat/webapps/geonetwork/WEB-INF/data/config/codelist
 
 
@@ -254,8 +244,7 @@ Examples:
 The list of properties that can be set are:
 
 * geonetwork.dir
-* geonetwork.lucene.dir
-* geonetwork.spatial.dir
+* geonetwork.indexConfig.dir
 * geonetwork.config.dir
 * geonetwork.codeList.dir
 * geonetwork.schema.dir

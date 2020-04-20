@@ -7,10 +7,10 @@ System configuration
 Most of the system configuration parameters can be changed by administrator users
 using the web interface in ``Admin console`` > ``Settings``.
 
-.. important:: Configuration of these parameters is critically important 
+.. important:: Configuration of these parameters is critically important
    for the catalog in an operational context. Misunderstanding
    some settings may result in a system that does not function as
-   expected. For example, downloads may fail to be correctly processed, or 
+   expected. For example, downloads may fail to be correctly processed, or
    metadata harvesting from other servers may not work.
 
 .. figure:: img/settings.png
@@ -135,12 +135,12 @@ The settings page offers to set the configuration of a proxy server. This config
 JVM proxy parameters may also be required to properly set the proxy for all remote
 access.
 
-There is also another context in which the concept of a proxy is used. GeoNetwork can 
-use a `Web Proxy <https://developer.yahoo.com/javascript/howto-proxy.html>`_ to prevent 
-cross site scripting errors. These days using `CORS <https://www.w3.org/TR/cors/>`_ is a 
-better approach to manage cross site scripting, however some data providers may not yet 
+There is also another context in which the concept of a proxy is used. GeoNetwork can
+use a `Web Proxy <https://developer.yahoo.com/javascript/howto-proxy.html>`_ to prevent
+cross site scripting errors. These days using `CORS <https://www.w3.org/TR/cors/>`_ is a
+better approach to manage cross site scripting, however some data providers may not yet
 support CORS yet. Use a security rule in `config-security-mapping.xml
-<https://github.com/geonetwork/core-geonetwork/blob/3.4.0/web/src/main/webapp/WEB-INF/config-security/config-security-mapping.xml#L42>`_ 
+<https://github.com/geonetwork/core-geonetwork/blob/3.4.0/web/src/main/webapp/WEB-INF/config-security/config-security-mapping.xml#L42>`_
 to define which domains are allowed access by the GeoNetwork proxy.
 
 
@@ -289,15 +289,6 @@ There is very little compute overhead involved in storing search statistics as t
 are written to the database in a background thread. However database storage for a very busy site must be carefully planned.
 
 
-Index optimization
-``````````````````
-
-Configuration settings in this group determine when the Lucene Index Optimizer is run.
-By default, this takes place at midnight each day. With recent upgrades to Lucene,
-particularly Lucene 3.6.1, the optimizer is becoming less useful, so this
-configuration group will very likely be removed in future versions.
-
-
 Open Archive Initiative (OAI-PMH) Provider
 ``````````````````````````````````````````
 
@@ -388,32 +379,9 @@ Multi-Threaded Indexing
 
 Configuration settings in this group determine how many processor threads are allocated to indexing tasks in GeoNetwork. If your machine has many processor cores, you can now determine how many to allocate to GeoNetwork indexing tasks. This can bring dramatic speed improvements on large indexing tasks (eg. changing the privileges on 20,000 records) because GeoNetwork can split the indexing task into a number of pieces and assign them to different processor cores.
 
-*Number of processing threads* The maximum number of processing threads that can be allocated to an indexing task. 
+*Number of processing threads* The maximum number of processing threads that can be allocated to an indexing task.
 
 Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See the advanced configuration for more details of how to configure the number of connections in the database connection pool.
-
-
-Multilingual Settings
-`````````````````````
-
-Options in this group determine how GeoNetwork will search metadata in multiple languages.
-
-*Enable auto-detecting search request language:* If this option is selected, GeoNetwork will analyse the search query and attempt to detect the language that is used before defaulting to the GUI language.
-
-*Search results in requested language sorted on top:* If this option is selected, a sort clause will be added to each query to ensure that results in the current language are always sorted on top. This is different from increasing priority of the language in that it overrides the relevance of the result.  For example, if a german result has very high relevance but the search language is french then the french results will all come before the german result.
-
-*Search only in requested language* The options in this section determines how documents are sorted/prioritised relative to the language in the document compared to the search language.
-
-- *All documents in all languages (No preferences)* - The search language is ignored and will have no effect on the ordering of the results
-
-- *Prefer documents with translations requested language* - Documents with a translation in the search language (anywhere in the document) will be prioritized over documents without any elements in the search language
-
-- *Prefer documents whose language is the requested language* - Documents that are the same language as the search language (ie. the documents that are specified as being in the same language as the search language) are prioritized over documents that are not.
-
-- *Translations in requested language* - The search results will only contain documents that have some translations in the search language.  
-
-- *Document language is the requested language* - The search results will contain documents whose metadata language is specified as being the in search language
-
 
 
 Metadata Views

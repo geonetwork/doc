@@ -64,6 +64,11 @@ Get GeoNetwork running - the short path:
     git clone --depth 3 --recursive https://github.com/geonetwork/core-geonetwork.git
     cd core-geonetwork
     mvn clean install -DskipTests
+
+    cd es
+    mvn install -Pes-download
+    mvn exec:exec -Des-start
+
     cd web
     mvn jetty:run
 
@@ -186,7 +191,7 @@ Some components (eg. WFS feature indexing) of the application rely on an Elastic
 Run embedded Jetty server
 -------------------------
 
-Maven comes with built-in support for Jetty via a [plug-in](http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin)
+Maven comes with built-in support for Jetty via a [plug-in](https://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html)
 
 To run GeoNetwork with the embedded Jetty server you have to change directory to the root of the **web** module,
 and then execute the following maven command:
