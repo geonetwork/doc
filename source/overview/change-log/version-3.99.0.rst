@@ -46,6 +46,9 @@ This version provides support of GeoNetwork main functionalities and user can se
 
 * Build your own dashboards in Kibana
 
+* Summary of indexing errors
+
+.. figure:: img/3990-es-indexing-errors.png
 
 Regarding search protocols, only CSW has been migrated for now (ie. OAI-PMH, RDF, Z39.50/SRU, OpenSearch, ... are not available in this version). This means that a GeoNetwork 3.x can only harvest GeoNetwork 3.99 using CSW.
 
@@ -60,6 +63,7 @@ Features removed
 
 * CSW / Virtual CSW is replaced by sub-portal
 * CSW / results_with_summary custom GeoNetwork output schema is removed. To retrieve facets use the main search API.
+* Deprecated Jeeves services removed (ie. services not used by Angular application like harvester config). Use the swagger API instead.
 
 
 Existing features not implemented
@@ -90,6 +94,7 @@ New features to develop
 * Search / Synonyms supports
 * Associated records / Use of multiple search API for better performance or Join query.
 * Harvester / GN4 protocol
+* Clustering
 * Large catalogs / Better support of batch operations (eg. privileges, new owner, validation) and large selection
 
 .. code-block:: json

@@ -12,7 +12,6 @@ Configuring the catalog
    css-configuration.rst
    csw-configuration.rst
    portal-configuration.rst
-   virtual-csw-configuration.rst
    inspire-configuration.rst
    map-server-configuration.rst
 
