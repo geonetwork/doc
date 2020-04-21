@@ -175,18 +175,6 @@ Many Maven build options are available, for instance, you might like to use foll
 
 Please refer to the maven documentation for any other options, [Maven: The Complete Reference](http://www.sonatype.com/books/mvnref-book/reference/public-book.html)
 
-Maven Profiles
---------------
-
-
-Maven profiles are used to enable additional build configuration.
-
-Some components (eg. WFS feature indexing) of the application rely on an Elasticsearch instance. To enable those options, build the application with the ```es``` profile.
-
-.. code-block:: shell
-
-  mvn clean install -Pes
-
 
 Run embedded Jetty server
 -------------------------

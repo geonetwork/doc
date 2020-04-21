@@ -101,6 +101,7 @@ New features to develop
 
   ":{"type":"too_many_clauses","reason":"maxClauseCount is set to 1024"}}}}]},"status":400}
 
+* Large catalogs / Define strategy to speed up search and not use track_total_hits
 * Security / Elasticsearch and Kibana configuration (for now, do not expose Elasticsearch to the internet)
 * Java 11 support
 
