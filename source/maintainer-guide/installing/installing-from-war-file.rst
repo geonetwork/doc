@@ -63,7 +63,7 @@ Download Elasticsearch for your platform https://www.elastic.co/downloads/elasti
 
 Open http://localhost:9200 in your web browser to check that Elasticsearch is running.
 
-
+To use an existing instance check `Configure connection` in :ref:`installing-index`.
 
 5. Up and running?
 

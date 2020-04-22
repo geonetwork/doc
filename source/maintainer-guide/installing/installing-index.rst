@@ -71,5 +71,15 @@ Access Elasticsearch admin page from http://localhost:9200/.
 Configure connection
 --------------------
 
-Update Elasticsearch URL in ```WEB-INF/config.properties``` and restart the application
-(see :code:`web/src/main/webResources/WEB-INF/config.properties`).
+Update Elasticsearch connection details in ```WEB-INF/config.properties``` and restart the application
+(see :code:`web/src/main/webResources/WEB-INF/config.properties`):
+
+.. code-block:: shell
+
+    es.protocol=http
+    es.port=9200
+    es.host=localhost
+    es.url=${es.protocol}://${es.host}:${es.port}
+    es.username=
+    es.password=
+
