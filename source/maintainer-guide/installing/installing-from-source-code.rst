@@ -57,9 +57,9 @@ The quick way
 =============
 
 
-Get GeoNetwork running - the short path:
+Get GeoNetwork running - the short path
 
-.. codeblock:: shell
+.. code-block:: shell
 
     git clone --depth 3 --recursive https://github.com/geonetwork/core-geonetwork.git
     cd core-geonetwork
