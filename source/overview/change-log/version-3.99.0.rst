@@ -3,7 +3,7 @@
 Version 3.99.0
 ##############
 
-GeoNetwork 3.99.0 release is a beta version of GeoNetwork using Elasticsearch as search engine (instead of the previous home made search based on Lucene). This version is made available for users who would like to test it.
+GeoNetwork 3.99.0 release is a beta version of GeoNetwork using Elasticsearch as search engine (instead of the previous home made search based on Lucene). This version is a beta release made available for users who would like to test it.
 
 This version provides support of GeoNetwork main functionalities and user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the search engine change and the user search experience has been improved with the following:
 
@@ -66,8 +66,13 @@ Features removed
 * Deprecated Jeeves services removed (ie. services not used by Angular application like harvester config). Use the swagger API instead.
 
 
+
+
+Roadmap for version 4
+---------------------
+
 Existing features not implemented
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Multilingual metadata / Records are indexed and displayed but no logic to display depending on user interface language or search on specific language
 
@@ -88,7 +93,7 @@ Existing features not implemented
 
 
 New features to develop
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * Search on records and WFS features
 * Search / Synonyms supports

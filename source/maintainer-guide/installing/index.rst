@@ -15,9 +15,10 @@ There is different ways to install |project_name|:
 .. toctree::
    :maxdepth: 2
 
-   installing-from-the-installer.rst
    installing-from-war-file.rst
+   installing-with-docker.rst
    installing-from-source-code.rst
+   installing-from-the-installer.rst
    installing-index.rst
 
 

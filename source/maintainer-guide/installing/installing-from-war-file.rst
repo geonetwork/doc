@@ -47,7 +47,7 @@ If started, Tomcat will automatically deploy the application. If not, start the 
 
 Open http://localhost:8080/geonetwork in your web browser. You should see the |project_name| home page indicating that the search is not yet available.
 
-..figure:: img/es-down.png
+..  figure:: img/es-down.png
 
 You need to install Elasticsearch or to configure |project_name| to use an existing instance.
 
@@ -69,7 +69,7 @@ Open http://localhost:9200 in your web browser to check that Elasticsearch is ru
 
 Open or refresh http://localhost:8080/geonetwork in your web browser. You should see the |project_name| home page:
 
-..figure:: img/es-empty.png
+..  figure:: img/es-empty.png
 
 
 You have now a default |project_name| up and running.
