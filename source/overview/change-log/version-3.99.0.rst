@@ -3,9 +3,27 @@
 Version 3.99.0
 ##############
 
+
+Why 3.99.0?
+-----------
+
 GeoNetwork 3.99.0 release is a beta version of GeoNetwork using Elasticsearch as search engine (instead of the previous home made search based on Lucene). This version is a beta release made available for users who would like to test it.
 
 This version provides support of GeoNetwork main functionalities and user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the search engine change and the user search experience has been improved with the following:
+
+Some of the main goals of moving from Lucene to Elasticsearch are:
+
+* Be able to share index across catalogs (clustering)
+* Improve search experience (see below)
+* Improve performances for searches and indexing
+* Add dashboards with Kibana
+* Simplify code base
+
+
+What's new?
+-----------
+
+This release is all about user search experience:
 
 * Autocomplete support phrase query, does not return private terms, takes current search into account
 
@@ -56,24 +74,27 @@ More details can be found in https://github.com/geonetwork/core-geonetwork/pull/
 
 For the installation check :ref:`installing`.
 
-For reporting any issue go to https://github.com/geonetwork/core-geonetwork/issues.
+For reporting any issues go to https://github.com/geonetwork/core-geonetwork/issues.
 
-Features removed
-----------------
 
-* CSW / Virtual CSW is replaced by sub-portal
+Some features now removed
+-------------------------
+
+* CSW / Virtual CSW is replaced by sub-portal (see :ref:`portal-configuration`)
 * CSW / results_with_summary custom GeoNetwork output schema is removed. To retrieve facets use the main search API.
-* Deprecated Jeeves services removed (ie. services not used by Angular application like harvester config). Use the swagger API instead.
+* Deprecated Jeeves services removed (ie. services not used by Angular application like harvester config). Use the swagger API instead (see :ref:`geonetwork-api`).
 
 
+What is next?
+-------------
 
-
-Roadmap for version 4
----------------------
+This version is a beta version and needs testing and feedback from the community.
+As a roadmap for version 4, we have to find resources to move forward on the following topics:
 
 Existing features not implemented
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+* Transifex / Support multiple branches translation
 * Multilingual metadata / Records are indexed and displayed but no logic to display depending on user interface language or search on specific language
 
 .. figure:: img/3990-es-index-multilingual.png
