@@ -63,7 +63,7 @@ This release is all about user search experience:
 
 * Performances improved for search and indexing
 
-* Build your own dashboards in Kibana
+* Build your own dashboards to analyze content, improve quality, create data visualization in Kibana
 
 .. figure:: img/3990-kb-dq.png
 
