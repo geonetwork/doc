@@ -1,13 +1,12 @@
-.. _version-3990:
+.. _version-400-alpha1:
 
-Version 3.99.0
-##############
+Version 4.0.0-alpha.1
+#####################
 
+Why 4.0.0-alpha.1?
+------------------
 
-Why 3.99.0?
------------
-
-GeoNetwork 3.99.0 release is a beta version of GeoNetwork using Elasticsearch as search engine (instead of the previous home made search based on Lucene). This version is a beta release made available for users who would like to test it.
+GeoNetwork 4.0.0-alpha.1 release is an alpha version of GeoNetwork using Elasticsearch as search engine (instead of the previous home made search based on Lucene). This version is a beta release made available for users who would like to test it.
 
 This version provides support of GeoNetwork main functionalities and user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the search engine change and the user search experience has been improved with the following:
 
