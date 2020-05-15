@@ -198,7 +198,7 @@ Remove a keyword
 
 .. code-block:: xpath
 
-  (.//gmd:keyword[*/text() = 'IDP_reference']
+  .//gmd:keyword[*/text() = 'IDP_reference']
 
 * XML (N/A)
 
