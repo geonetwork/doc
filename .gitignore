@@ -7,3 +7,5 @@ _build/locale/.doctrees
 _build/html
 source/locale
 translations
+.DS_Store
+.vscode
