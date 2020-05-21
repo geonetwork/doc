@@ -66,9 +66,9 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = '3.10'
+version = '4.0'
 # The full version, including alpha/beta/rc tags.
-release = '3.10'
+release = '4.0.0-alpha.2'
 
 language = 'en'
 
