@@ -80,6 +80,11 @@ language = 'en'
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
+# Generates uuid information for version tracking in message catalogs
+# Calculate similarity between new msgids and previously saved old msgids.
+# recommend: pip3 install python-levenshtein
+gettext_uuid = True
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''

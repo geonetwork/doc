@@ -8,6 +8,7 @@ SPHINXOPTS    = # used by html_languages to specify $$lang
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = target
+PUBLISH       = _build
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -17,7 +18,7 @@ endif
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR) -j auto --no-color -q
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -j auto $(SRCDIR) --no-color -q
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR)
 
@@ -30,7 +31,7 @@ help:
 	@echo "  html_all_languages  build html documentation for all languages "
 	@echo "  html_languages      build html docs for LANGS environmental variable"
 	@echo "  html_eng            build html documentation for english"
-	@echo "  update_translations Pushing strings to transifex"
+	@echo "  update_translations Pushing strings to transifex (via _build folder)"
 	@echo "Along with traditional sphinx targets:"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -72,10 +73,12 @@ html_eng:
 	@echo "Building documentation in html for all languages"
 	set -e; for lang in "en"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
 
-update_translations:
+update_translations: 
 	@echo "Pushing strings to transifex"
-	make gettext
-	set -e; sphinx-intl update-txconfig-resources --pot-dir $(BUILDDIR)/locale --transifex-project-name core-geonetwork;
+	@echo "Step 1: Obtain tanslations using gettext builder"
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(PUBLISH)/locale
+	@echo "Step 2: Publish to ${PUBLISH}/local folder"
+	set -e; sphinx-intl update-txconfig-resources --pot-dir $(PUBLISH)/locale --transifex-project-name core-geonetwork;
 	set -e; tx push -s
 
 html:

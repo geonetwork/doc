@@ -835,16 +835,19 @@ type = PO
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-ogcwxs.po
 source_file = _build/locale/user-guide/harvesting/harvesting-ogcwxs.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/index.po
 source_file = _build/locale/user-guide/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--publishing--restricting-information-to-metadata-sections]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/publishing/restricting-information-to-metadata-sections.po
 source_file = _build/locale/user-guide/publishing/restricting-information-to-metadata-sections.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--publishing--transfering-privileges]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/publishing/transfering-privileges.po
@@ -855,149 +858,341 @@ source_lang = en
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/publishing/index.po
 source_file = _build/locale/user-guide/publishing/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--publishing--managing-privileges]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/publishing/managing-privileges.po
 source_file = _build/locale/user-guide/publishing/managing-privileges.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--validation]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/validation.po
 source_file = _build/locale/user-guide/workflow/validation.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--geopublication]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/geopublication.po
 source_file = _build/locale/user-guide/workflow/geopublication.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--batchupdate-xsl]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/batchupdate-xsl.po
 source_file = _build/locale/user-guide/workflow/batchupdate-xsl.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--life-cycle]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/life-cycle.po
 source_file = _build/locale/user-guide/workflow/life-cycle.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--suggestion]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/suggestion.po
 source_file = _build/locale/user-guide/workflow/suggestion.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/index.po
 source_file = _build/locale/user-guide/workflow/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--versioning]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/versioning.po
 source_file = _build/locale/user-guide/workflow/versioning.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--batchupdate-from-admin]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/batchupdate-from-admin.po
 source_file = _build/locale/user-guide/workflow/batchupdate-from-admin.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--workflow--batchupdate]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/batchupdate.po
 source_file = _build/locale/user-guide/workflow/batchupdate.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--harvesting-wfs-features]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-wfs-features.po
 source_file = _build/locale/user-guide/harvesting/harvesting-wfs-features.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--harvesting-sde]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-sde.po
 source_file = _build/locale/user-guide/harvesting/harvesting-sde.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--harvesting-z3950]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-z3950.po
 source_file = _build/locale/user-guide/harvesting/harvesting-z3950.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--harvesting-thredds]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-thredds.po
 source_file = _build/locale/user-guide/harvesting/harvesting-thredds.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--harvesting-webdav]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/harvesting-webdav.po
 source_file = _build/locale/user-guide/harvesting/harvesting-webdav.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--harvesting--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/harvesting/index.po
 source_file = _build/locale/user-guide/harvesting/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--quick-start--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/quick-start/index.po
 source_file = _build/locale/user-guide/quick-start/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--tag-information--tagging-with-categories]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/tag-information/tagging-with-categories.po
 source_file = _build/locale/user-guide/tag-information/tagging-with-categories.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--tag-information--tagging-with-keywords]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/tag-information/tagging-with-keywords.po
 source_file = _build/locale/user-guide/tag-information/tagging-with-keywords.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.user-guide--tag-information--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/tag-information/index.po
 source_file = _build/locale/user-guide/tag-information/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.index]
 file_filter = source/locale/<lang>/LC_MESSAGES/index.po
 source_file = _build/locale/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.administrator-guide--configuring-the-catalog--user-interface-configuration]
 file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/configuring-the-catalog/user-interface-configuration.po
 source_file = _build/locale/administrator-guide/configuring-the-catalog/user-interface-configuration.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.maintainer-guide--statistics--setup-elasticsearch]
 file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-elasticsearch.po
 source_file = _build/locale/maintainer-guide/statistics/setup-elasticsearch.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.maintainer-guide--statistics--setup-geonetwork]
 file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-geonetwork.po
 source_file = _build/locale/maintainer-guide/statistics/setup-geonetwork.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.maintainer-guide--statistics--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/index.po
 source_file = _build/locale/maintainer-guide/statistics/index.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.maintainer-guide--statistics--setup-kibana]
 file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/statistics/setup-kibana.po
 source_file = _build/locale/maintainer-guide/statistics/setup-kibana.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.overview--change-log--version-3_4_3]
 file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.3.po
 source_file = _build/locale/overview/change-log/version-3.4.3.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.overview--change-log--version-3_4_2]
 file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.2.po
 source_file = _build/locale/overview/change-log/version-3.4.2.pot
 source_lang = en
+type = PO
 
 [core-geonetwork.overview--change-log--version-3_4_1]
 file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.1.po
 source_file = _build/locale/overview/change-log/version-3.4.1.pot
 source_lang = en
+type = PO
+
+[core-geonetwork.administrator-guide--configuring-the-catalog--css-configuration]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/configuring-the-catalog/css-configuration.po
+source_file = _build/locale/administrator-guide/configuring-the-catalog/css-configuration.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.administrator-guide--configuring-the-catalog--portal-configuration]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/configuring-the-catalog/portal-configuration.po
+source_file = _build/locale/administrator-guide/configuring-the-catalog/portal-configuration.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.administrator-guide--managing-metadata-standards--configure-validation]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/managing-metadata-standards/configure-validation.po
+source_file = _build/locale/administrator-guide/managing-metadata-standards/configure-validation.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.administrator-guide--managing-metadata-standards--metadata-identifier]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/managing-metadata-standards/metadata-identifier.po
+source_file = _build/locale/administrator-guide/managing-metadata-standards/metadata-identifier.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.administrator-guide--managing-metadata-standards--standards]
+file_filter = source/locale/<lang>/LC_MESSAGES/administrator-guide/managing-metadata-standards/standards.po
+source_file = _build/locale/administrator-guide/managing-metadata-standards/standards.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.annexes--standards--dublin-core]
+file_filter = source/locale/<lang>/LC_MESSAGES/annexes/standards/dublin-core.po
+source_file = _build/locale/annexes/standards/dublin-core.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.annexes--standards--iso19110]
+file_filter = source/locale/<lang>/LC_MESSAGES/annexes/standards/iso19110.po
+source_file = _build/locale/annexes/standards/iso19110.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.annexes--standards--iso19115-3_2018]
+file_filter = source/locale/<lang>/LC_MESSAGES/annexes/standards/iso19115-3.2018.po
+source_file = _build/locale/annexes/standards/iso19115-3.2018.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.annexes--standards--iso19139]
+file_filter = source/locale/<lang>/LC_MESSAGES/annexes/standards/iso19139.po
+source_file = _build/locale/annexes/standards/iso19139.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.api--q-search]
+file_filter = source/locale/<lang>/LC_MESSAGES/api/q-search.po
+source_file = _build/locale/api/q-search.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.contributing--style-guide]
+file_filter = source/locale/<lang>/LC_MESSAGES/contributing/style-guide.po
+source_file = _build/locale/contributing/style-guide.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.maintainer-guide--installing--map-print-setup]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/installing/map-print-setup.po
+source_file = _build/locale/maintainer-guide/installing/map-print-setup.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.maintainer-guide--production-use--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintainer-guide/production-use/index.po
+source_file = _build/locale/maintainer-guide/production-use/index.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_10_0]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.10.0.po
+source_file = _build/locale/overview/change-log/version-3.10.0.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_10_1]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.10.1.po
+source_file = _build/locale/overview/change-log/version-3.10.1.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_10_2]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.10.2.po
+source_file = _build/locale/overview/change-log/version-3.10.2.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_4_4]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.4.4.po
+source_file = _build/locale/overview/change-log/version-3.4.4.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_6_0]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.6.0.po
+source_file = _build/locale/overview/change-log/version-3.6.0.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_8_0]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.8.0.po
+source_file = _build/locale/overview/change-log/version-3.8.0.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_8_1]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.8.1.po
+source_file = _build/locale/overview/change-log/version-3.8.1.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_8_2]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.8.2.po
+source_file = _build/locale/overview/change-log/version-3.8.2.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.overview--change-log--version-3_8_3]
+file_filter = source/locale/<lang>/LC_MESSAGES/overview/change-log/version-3.8.3.po
+source_file = _build/locale/overview/change-log/version-3.8.3.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.user-guide--associating-resources--doi]
+file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/associating-resources/doi.po
+source_file = _build/locale/user-guide/associating-resources/doi.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.user-guide--describing-information--inspire-editing]
+file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/describing-information/inspire-editing.po
+source_file = _build/locale/user-guide/describing-information/inspire-editing.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.user-guide--map--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/map/index.po
+source_file = _build/locale/user-guide/map/index.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.user-guide--publishing--transferring-privileges]
+file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/publishing/transferring-privileges.po
+source_file = _build/locale/user-guide/publishing/transferring-privileges.pot
+source_lang = en
+type = PO
+
+[core-geonetwork.user-guide--workflow--batchediting]
+file_filter = source/locale/<lang>/LC_MESSAGES/user-guide/workflow/batchediting.po
+source_file = _build/locale/user-guide/workflow/batchediting.pot
+source_lang = en
+type = PO
 
