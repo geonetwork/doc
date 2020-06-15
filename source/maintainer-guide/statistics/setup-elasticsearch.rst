@@ -10,9 +10,7 @@ Installation
 
 ElasticSearch can be installed manually, or for some operating systems packages are available. 
 
-.. note::
-
-....If installed manually, ElasticSearch must be configured as a service to ensure it starts automatically when the server is started. This is beyond the scope of this guide.
+.. note::  If installed manually, ElasticSearch must be configured as a service to ensure it starts automatically when the server is started. This is beyond the scope of this guide.
 
 To install manually:
 

@@ -6,21 +6,36 @@ Installing from source code
 System Requirements
 ===================
 
+Java 8
+------
 
 GeoNetwork is a Java 8 application that runs as a servlet so the Java Development Kit
 (JDK) must be installed in order to build and run it.
-You can get a Java 8 JDK from your Linux distribution, [Oracle OpenJDK](http://openjdk.java.net/) or [AdoptOpenJDK](https://adoptopenjdk.net). Please keep in mind that [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads) Java 8 is no longer distributed for development, only testing purposes.
+You can get a Java 8 JDK from your Linux distribution, `Oracle OpenJDK <http://openjdk.java.net/>`__ or `AdoptOpenJDK <https://adoptopenjdk.net>`__. Please keep in mind that `Oracle JDK <http://www.oracle.com/technetwork/java/javase/downloads>`__ Java 8 is no longer distributed for development, only testing purposes.
 
-GeoNetwork is developed with Java 8. GeoNetwork should not be developed with newer versions, and won’t run at all with Java 7, 1.6 or earlier releases.
+GeoNetwork is developed with Java 8 (LTS):
 
-Being written in Java, GeoNetwork can run on any platform that supports Java, so it can run on Windows, Linux and Mac OSX.
+* GeoNetwork should not be developed with newer versions of Java
+* Java 11 (LTS) is not supported at this time
+* GeoNetwork won’t run at all with Java 7, 1.6 or earlier releases.
 
-Next, you need a servlet container. GeoNetwork comes with an embedded container ([Eclipse Jetty](https://www.eclipse.org/jetty/))
-which is fast and well suited for most applications. If you need a stronger one, you
-can install Tomcat from the Apache Software Foundation (http://tomcat.apache.org).
-It provides load balancing, fault tolerance and other production features. If you
-work for an organisation, it is probable that you already use Tomcat.
-The tested version is 8.x.
+Application Sever
+-----------------
+
+Next, you need a servlet container. GeoNetwork comes with an embedded container `Eclipse Jetty <https://www.eclipse.org/jetty/>`__
+which is fast and well suited for most applications.
+
+If you need a stronger one, we recommend `Apache Tomact <http://tomcat.apache.org>`__.
+Tomcat provides load balancing, fault tolerance and other production features. Apache Tomcat
+is widely used with many organizations standardizing on Tomcat for all their Java Web Applications.
+
+We recommend the stable releases of tomcat:
+
+* Apache Tomcat 8.5
+* Apache Tomcat 9.0
+
+Database
+--------
 
 Regarding storage, you need a Database Management System (DBMS) like Oracle,
 MySQL, Postgresql etc. GeoNetwork comes with an embedded DBMS (H2) which is
@@ -29,16 +44,26 @@ installations of no more than a few thousand metadata records with one or
 two users. If you have heavier demands then you should use a professional, stand
 alone DBMS.
 
+Environment
+-----------
+
+Being written in Java, GeoNetwork can run on any platform that supports Java: primarily Linux, Windows and macOS.
+
 GeoNetwork is not resource intensive and will not require a powerful machine. Good performance can be
-obtained with 1GB of RAM. The suggested amount is 2GB of RAM. For hard disk
-space, you have to consider the space required for the application itself
+obtained with 1GB of RAM. The suggested amount is 2GB of RAM.
+
+For hard disk space, you have to consider the space required for the application itself
 (about 350 MB) and the space required for data, which can require 50 GB or
 more. A simple disk of 250 GB should be OK.  You also need some disk space
-for the search index which is located in ``GEONETWORK_DATA_DIR/index`` (by default GEONETWORK_DATA_DIR is ``INSTALL_DIR/web/geonetwork/WEB_INF/data``. However, even with a few thousand metadata records, the index is small so usually 500 MB of space is more than enough.
+for the search index which is located in ``GEONETWORK_DATA_DIR/index``
+(by default GEONETWORK_DATA_DIR is ``INSTALL_DIR/web/geonetwork/WEB_INF/data``).
+However, even with a few thousand metadata records, the index is small so usually
+500 MB of space is more than enough.
 
 The software is run in different ways depending on the servlet container you are using:
 
 * *Tomcat* - GeoNetwork is available as a WAR file which you can put into the Tomcat webapps directory. Tomcat will deploy the WAR file when it is started. You can then use the Tomcat manager web application to stop/start GeoNetwork. You can also use the startup.* and shutdown.* scripts located in the Tomcat bin directory (.* means .sh or .bat depending on your OS) but if you have other web applications in the tomcat container, then they will also be affected.
+
 * *Jetty* - If you use the provided container you can use the scripts in GeoNetwork’s bin directory. The scripts are startup.* and shutdown.* and you must be inside the bin directory to run them. You can use these scripts just after installation.
 
 Tools
@@ -46,7 +71,7 @@ Tools
 
 The following tools are required to be installed to setup a development environment for GeoNetwork:
 
-* **Java** - Developing with GeoNetwork requires Java Development Kit (JDK) 1.8.
+* **Java 8** - Developing with GeoNetwork requires Java Development Kit (JDK) 1.8.
 * **Maven** 3.1.0+ - GeoNetwork uses [Maven](http://maven.apache.org/) to manage the build process and the dependencies. Once is installed, you should have the mvn command in your path (on Windows systems, you have to open a shell to check).
 * **Git** - GeoNetwork source code is stored and versioned in [a Git repository on Github](https://github.com/geonetwork/core-geonetwork). Depending on your operating system a variety of git clients are avalaible. Check in http://git-scm.com/downloads/guis for some alternatives.  Good documentation can be found on the git website: http://git-scm.com/documentation and on the Github website https://help.github.com/.
 * **Ant** - GeoNetwork uses [Ant](http://ant.apache.org/) to build the installer.  Version 1.6.5 works but any other recent version should be OK. Once installed, you should have the ant command in your path (on Windows systems, you have to open a shell to check).
@@ -55,7 +80,6 @@ The following tools are required to be installed to setup a development environm
 
 The quick way
 =============
-
 
 Get GeoNetwork running - the short path
 
