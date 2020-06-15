@@ -6,16 +6,14 @@ Configuring for the INSPIRE Directive
 Enabling INSPIRE
 ----------------
 
-From the ``admin console`` > ``settings`` user can configure INSPIRE directive support.
-
+From the :menuselection:`admin console --> settings` user can configure INSPIRE directive support.
 
 When enabled, the INSPIRE support activate the following:
 
 - Enable indexing of INSPIRE themes and annexes (INSPIRE themes thesaurus MUST be
   added to the list of thesaurus from the INSPIRE Registry - see :ref:`managing-thesaurus`).
 
-.. image:: img/inspire-configuration.png
-
+  .. image:: img/inspire-configuration.png
 
 To configure the discovery service, a dedicated service metadata record MUST be created in order to provide a complete GetCapabilities document (:ref:`csw-configuration_inspire`).
 

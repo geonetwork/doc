@@ -35,7 +35,7 @@ A common challenge in production use is the fact that java only has a limited se
 Data folder
 -----------
 
-GeoNetwork requires a data folder to store objects uploaded by administrators and managers and some configuration options. By default this folder is located in :file:`/geonetwork/WEB-INF/data`. In production situation configure the location of this folder outside the application and make sure the folder is backed up. You can use an environment variable to configure the location of the data folder. Read more at :ref:`customizing-the-data-directory`
+GeoNetwork requires a data folder to store objects uploaded by administrators and managers and some configuration options. By default this folder is located in :file:`/geonetwork/WEB-INF/data`. In production situation configure the location of this folder outside the application and make sure the folder is backed up. You can use an environment variable to configure the location of the data folder. Read more at :ref:`customizing-data-directory`
 
 Memory
 ------

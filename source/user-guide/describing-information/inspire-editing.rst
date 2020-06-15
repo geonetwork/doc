@@ -108,6 +108,7 @@ It can be forced globally in the editor by setting the ``transformations`` param
 Keywords can also be encoded in multilingual mode:
 
 .. code-block:: xml
+
         <gmd:descriptiveKeywords>
             <gmd:MD_Keywords>
                <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
@@ -188,6 +189,7 @@ On the coordinate of the bounding box, the INSPIRE validator may report errors d
 
 
 .. code-block:: xml
+
                   <gmd:EX_GeographicBoundingBox>
                      <gmd:northBoundLatitude>
                         <gco:Decimal>50.80</gco:Decimal>
@@ -200,6 +202,7 @@ Coordinate system
 Coordinate system using URI like http://www.opengis.net/def/crs/EPSG/0/3035. For example:
 
 .. code-block:: xml
+
        <gmd:referenceSystemInfo>
           <gmd:MD_ReferenceSystem>
              <gmd:referenceSystemIdentifier>
