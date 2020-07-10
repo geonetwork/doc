@@ -64,7 +64,10 @@ User information
 ````````````````
 
 The user information could be retrieved from the LDAP configuring for each user attribute in the catalog database which LDAP attributes match.
-If the attribute is empty or not defined, a default value could be defined. The configuration is the following:
+If the attribute is empty or not defined, a default value could be defined. The property value is compose by two parts separated by ``,`` character.
+The first part is the attribute name and the second part is the default value in case the attribute name is not define or the attribute value in LDAP is empty.
+
+The configuration is the following:
 
 .. code-block:: text
 
@@ -84,7 +87,7 @@ If the attribute is empty or not defined, a default value could be defined. The 
 Privileges configuration
 ````````````````````````
 User groups and user profiles could be set optionally from LDAP information or not. By default user privileges are managed from the local database.
-If LDAP information should be used to define user privileges, set the `ldap.privilege.import`` property ``true``:
+If LDAP information should be used to define user privileges, set the ``ldap.privilege.import`` property ``true``:
 
 .. code-block:: text
 
