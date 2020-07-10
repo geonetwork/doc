@@ -16,7 +16,6 @@ and unzip the file.
 
 .. code-block:: shell
 
-    cd es/config
     wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2.tar.gz
     tar xvfz elasticsearch-7.6.2.tar.gz
 
@@ -28,15 +27,15 @@ Manually start and stop Elasticsearch using:
     elasticsearch-7.6.2/bin/elasticsearch
 
 
-Then create the default index:
+(Optional) Then create the default index (the application will create them automatically once the index is up and running and if no indices are found):
 
 
 .. code-block:: shell
 
-    cd es/config
-    curl -X PUT http://localhost:9200/features -d @config/features.json
-    curl -X PUT http://localhost:9200/records -d @config/records.json
-    curl -X PUT http://localhost:9200/searchlogs -d @config/searchlogs.json
+    cd $GN_DATA_DIRECTORY/config/index
+    curl -X PUT http://localhost:9200/features -d @features.json
+    curl -X PUT http://localhost:9200/records -d @records.json
+    curl -X PUT http://localhost:9200/searchlogs -d @searchlogs.json
 
 
 Stop Elasticsearch using
