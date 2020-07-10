@@ -288,9 +288,33 @@ Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporary:
 Configuring CAS
 ---------------
 
-To setup CAS authentication, include ``WEB-INF/config-security/config-security-cas.xml`` in
-``WEB-INF/config-security/config-security.xml``. You can then configure your environment
-in ``config-security-cas-overrides.properties``. CAS can use either ldap or a database for user management.
+To enable CAS, setup authentication by including ``WEB-INF/config-security/config-security-cas.xml``
+in ``WEB-INF/config-security/config-security.xml``, uncommenting the following lines:
+
+.. code-block:: xml
+
+    <import resource="config-security-cas.xml"/>
+    <import resource="config-security-cas-ldap.xml"/>
+
+CAS can use either ldap or a database for user management, to use a database uncomment the following lines instead:
+
+.. code-block:: xml
+
+    <import resource="config-security-cas.xml"/>
+    <import resource="config-security-cas-database.xml"/>
+
+
+The CAS configuration is defined in ``WEB-INF/config-security/config-security.properties``, you can then configure
+your environment updating the previous file or overriding the properties in the file
+``WEB-INF/config-security/config-security-overrides.properties``.
+
+.. code-block:: text
+
+    cas.baseURL=https://localhost:8443/cas
+    cas.ticket.validator.url=${cas.baseURL}
+    cas.login.url=${cas.baseURL}/login
+    cas.logout.url=${cas.baseURL}/logout?url=${geonetwork.https.url}/
+
 
 
 .. _authentication-shibboleth:
