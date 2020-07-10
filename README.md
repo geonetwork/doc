@@ -13,9 +13,12 @@ Check the ["Writing documentation" guide](https://geonetwork-opensource.org/manu
 
 # Build
 
+GeoNetwork documentation is based on [Maven](https://maven.apache.org), [Sphinx](https://www.sphinx-doc.org) and [Pip](https://pypi.org/project/pip/).
+
 To quickly build the english docs:
 
 ```
+pip install sphinx_bootstrap_theme
 make html_eng
 ```
 
