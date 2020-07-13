@@ -16,16 +16,16 @@ and unzip the file.
 
 .. code-block:: shell
 
-    cd es/es-config
-    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz
-    tar xvfz elasticsearch-5.6.0.tar.gz
+    cd es/config
+    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2.tar.gz
+    tar xvfz elasticsearch-7.4.2.tar.gz
 
 
 Manually start and stop Elasticsearch using:
 
 .. code-block:: shell
 
-    elasticsearch-5.6.0/bin/elasticsearch
+    elasticsearch-7.4.2/bin/elasticsearch
 
 
 Then create the default index:
@@ -33,7 +33,7 @@ Then create the default index:
 
 .. code-block:: shell
 
-    cd es/es-config
+    cd es/config
     curl -X PUT http://localhost:9200/features -d @config/features.json
     curl -X PUT http://localhost:9200/records -d @config/records.json
     curl -X PUT http://localhost:9200/searchlogs -d @config/searchlogs.json
@@ -43,7 +43,7 @@ Stop Elasticsearch using
 
 .. code-block:: shell
 
-    elasticsearch-5.6.0/bin/elasticsearch stop
+    elasticsearch-7.4.2/bin/elasticsearch stop
 
 
 

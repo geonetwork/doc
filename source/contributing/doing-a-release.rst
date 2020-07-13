@@ -93,6 +93,10 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git add .
     git commit -m "Update version to $newversion"
 
+    # Push the release tag
+    git tag -a $version -m "Tag for $version release"
+    git push origin $version
+    
     # Set version number to SNAPSHOT
     ./update-version.sh $newversion $nextversion
 
@@ -128,9 +132,6 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
     # Push the branch
     git push origin $versionbranch
 
-    # Push the release tag
-    git tag -a $version -m "Tag for $version release"
-    git push origin $version
 
 
 4. Publishing

@@ -23,6 +23,7 @@ Members of the Project Steering Committee
 * Jeroen Ticheler - Chair
 * Jesse Eichar
 * Jose Garcia
+* Paul van Genuchten
 * Simon Pigot
 * Jo Cook
 

@@ -4,5 +4,8 @@ target
 .settings/
 _build/doctrees
 _build/locale/.doctrees
+_build/html
 source/locale
 translations
+.DS_Store
+.vscode
