@@ -14,6 +14,8 @@ By default, all AngularJS requests will take care of this token, but all third p
 
        .. figure:: img/csrf1.png
 
+.. _example-csrf-curl:
+
 Example of CSRF call using curl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
