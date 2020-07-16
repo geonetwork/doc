@@ -26,13 +26,13 @@ is created:
 Configuring a database via config files
 ---------------------------------------
 
-The database dialect to use is configured in ``/WEB-INF/config-node/srv.xml``. Comment H2 and uncomment the dialect to use. 
+The database dialect to use is configured in :file:`/WEB-INF/config-node/srv.xml`. Comment H2 and uncomment the dialect to use. 
 A jdbc driver is included for PostGreSQL and H2. Other dialects require a jdbc driver to be installed.
 Download the jdbc library for the dialect and place it in ``/WEB-INF/lib`` or in the tomcat lib folder.
 
 To update the connection details, update the |jdbc.properties| file with relevant connection information.
 
-GeoNetwork assumes data is stored in the default schema for a user. If this is not the case, you need to activate a setting ``hibernate.default_schema`` in ``/WEB-INF/config-spring-geonetwork.xml``. 
+GeoNetwork assumes data is stored in the default schema for a user. If this is not the case, you need to activate a setting ``hibernate.default_schema`` in :file:`/WEB-INF/config-spring-geonetwork.xml`. 
 There are some scripts that run directly on the database at initialisation and can't use the ``hibernate.default-schema`` parameter. For these scripts you need to set the default-schema manually. 
 In PostGreSQL this is possible by appending ``?currentSchema=example`` to the database connection. 
 
@@ -41,9 +41,9 @@ Configuring a database via JNDI
 -------------------------------
 
 The Java Naming and Directory Interface (JNDI) is a technology which allows to configure the database in tomcat and reference the JNDI connection by name.
-To activate JNDI, you need to activate the JNDI database type in ``/WEB-INF/config-node/srv.xml``.
+To activate JNDI, you need to activate the JNDI database type in :file:`/WEB-INF/config-node/srv.xml`.
 
-Configure a JNDI connection in Tomcat by adding a new resource to ``TOMCAT/conf/context.xml``
+Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`
 
 .. code-block:: xml
 
@@ -94,7 +94,7 @@ Database logging
 ----------------
 
 To have more details about database connections and queries, the log can be switched to DEBUG level
-in :code:`web/src/main/webapp/WEB-INF/classes/log4j.xml` (or see :ref:`system-config-server` > Log level).
+in :file:`web/src/main/webapp/WEB-INF/classes/log4j.xml` (or see :ref:`system-config-server` > Log level).
 
 
 .. code-block:: xml
