@@ -74,7 +74,7 @@ INSPIRE validation
 INSPIRE validation of metadata records is available at `the INSPIRE Validator <https://inspire.ec.europa.eu/validator/about/>`_.
 It is using `ETF which is an open source testing framework for spatial data and services <https://github.com/etf-validator/etf-webapp>`_.
 GeoNetwork is able to `remote validate` any record using a service provided by an instance of ETF.
-To configure remote validation, go to ``admin console`` > ``settings`` and set the URL of the validator. The url of the main INSPIRE validator is ``http://inspire.ec.europa.eu/validator/``.
+To configure remote validation, go to ``Admin console`` > ``Settings`` and set the URL of the validator. The url of the main INSPIRE validator is ``http://inspire.ec.europa.eu/validator/``.
 
 .. image:: img/inspire-configuration.png
 
@@ -93,6 +93,82 @@ During the validation, the record is sent to the ETF service and processed. Once
 .. image:: img/inspire-validation-report.png
 
 Note, that if you are validating a private record, that record will be pushed to the validator. To secure this process we recommend to set up a local (private) installation of the validator.
+
+
+Configure validation test suites
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The set of test that runs for each schema can be configured using the file `WEB-INF/config-etf-validator.xml <https://github.com/geonetwork/core-geonetwork/blob/5156bae32d549e6d09cd6a86065791265eb09027/web/src/main/webapp/WEB-INF/config-etf-validator.xml>`_.
+
+The list of available test suites are defined in the :code:`inspireEtfValidatorTestsuites` bean. It is a map with an entry for each test suite. The :code:`key` attribute is the name of the test suite. Each map entry is an :code:`array` with the tests to execute in the test suite. The value of each array item (:code:`<value>`)is the test's title written exactly as defined in the remote INSPIRE validator service. For example:
+
+.. code-block:: xml
+
+   <util:map id="inspireEtfValidatorTestsuites" key-type="java.lang.String" value-type="java.lang.String[]">
+    <entry key="TG version 1.3">
+      <array value-type="java.lang.String">
+        <value>Conformance class: INSPIRE Profile based on EN ISO 19115 and EN ISO 19119</value>
+        <value>Conformance class: XML encoding of ISO 19115/19119 metadata</value>
+        <value>Conformance class: Conformance class: Metadata for interoperability</value>
+      </array>
+    </entry>
+    <entry key="TG version 2.0 - Data sets and series">
+      <array value-type="java.lang.String">
+        <value>Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records.</value>
+        <value>Conformance Class 1: INSPIRE data sets and data set series baseline metadata.</value>
+        <value>Conformance Class 2: INSPIRE data sets and data set series interoperability metadata.</value>
+      </array>
+    </entry>
+    <entry key="TG version 2.0 - Network services">
+      <array value-type="java.lang.String">
+        <value>Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records.</value>
+        <!--<value>Conformance Class 1: INSPIRE data sets and data set series baseline metadata.</value>
+        <value>Conformance Class 2: INSPIRE data sets and data set series interoperability metadata.</value>-->
+        <value>Conformance Class 3: INSPIRE Spatial Data Service baseline metadata.</value>
+        <value>Conformance Class 4: INSPIRE Network Services metadata.</value>
+        <!--<value>Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata.</value>
+        <value>Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata.</value>
+        <value>Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata.</value>-->
+      </array>
+    </entry>
+  </util:map>
+
+Array's :code:`value-type` attribute must be defined as Java strings: :code:`<array value-type="java.lang.String">`.
+
+To define which test suites will be executed when using the editor dashboard's INSPIRE validation option you can modify the :code:`inspireEtfValidatorTestsuitesConditions` bean. It's a map with an entry for each schema and test suite to execute. The map entry key attribute must be in the format :code:`SCHEMA_ID::TEST_SUITE_NAME`, where :code:`TEST_SUITE_NAME` is one of the  :code:`inspireEtfValidatorTestsuites` map entry key. For each entry you can define a XPath condition that the metadata must pass to be sent to the validator.
+
+.. note::
+  
+  If a metadata schema doesn't match, the schema dependency hierarchy is checked to verify if any parent schema matches any rules.
+
+.. warning::
+
+  The Xpath must return a node-set or a node to work. XPaths returning a boolean :code:`true` or :code:`false` value will be interpreted as always matching by GeoNetwork.
+
+.. code-block:: xml
+
+  <util:map id="inspireEtfValidatorTestsuitesConditions">
+    <!--
+       key format:
+       SCHEMAID::TG_RULE_NAME
+       If a metadata schema doesn't match, the schema dependency hierarchy
+       is checked to verify if any parent schema matches any rules.
+      -->
+    <entry key="iso19139::TG version 2.0 - Data sets and series"
+           value="gmd:hierarchyLevel[*/@codeListValue = 'dataset' or */@codeListValue = 'series']"/>
+    <entry key="iso19139::TG version 2.0 - Network services" value=".//srv:SV_ServiceIdentification"/>
+    <entry key="iso19115-3.2018::TG version 2.0 - Data sets and series"
+           value="mdb:metadataScope[*/mdb:resourceScope/*/@codeListValue = 'dataset' or */mdb:resourceScope/*/@codeListValue = 'series']"/>
+    <entry key="iso19115-3.2018::TG version 2.0 - Network services" value=".//srv:SV_ServiceIdentification"/>
+  </util:map>
+
+
+
+
+
+
+
+
 
 
 .. _inspire-access-point:
