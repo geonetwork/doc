@@ -6,7 +6,7 @@ Configuring for the INSPIRE Directive
 Enabling INSPIRE
 ----------------
 
-From the :menuselection:`admin console --> settings` user can configure INSPIRE directive support.
+From the :menuselection:`Admin console --> Settings` user can configure INSPIRE directive support.
 
 When enabled, the INSPIRE support activate the following:
 
@@ -39,7 +39,7 @@ the following codelists are relevant in the scope of metadata guidelines v2.0:
 * Metadata codelist register > `Quality of Service Criteria <https://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria>`_
 
 
-From ``admin console`` > ``classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
+From ``Admin console`` > ``Classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
 
 .. image:: img/inspire-from-registry.png
 
@@ -48,9 +48,9 @@ Click ``Use INSPIRE registry`` to use the default INSPIRE registry but any insta
 .. image:: img/inspire-from-registry-config.png
 
 Select one or more languages depending on your needs. Choose a category or directly a thesaurus, depending on the thesurus.
-By default the type of thesaurus will be ``theme`` but you can adapt it if needed.
+By default the type of thesaurus will be ``Theme`` but you can adapt it if needed.
 
-By clicking the ``upload`` button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.
+By clicking the ``Upload`` button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.
 
 User can also use the well known `GEMET thesaurus <https://www.eionet.europa.eu/gemet/en/themes/>`_. Some SKOS format version of the thesaurus are available `here <https://github.com/geonetwork/util-gemet/tree/master/thesauri>`_.
 
@@ -100,7 +100,7 @@ Configure validation test suites
 
 The set of test that runs for each schema can be configured using the file `WEB-INF/config-etf-validator.xml <https://github.com/geonetwork/core-geonetwork/blob/5156bae32d549e6d09cd6a86065791265eb09027/web/src/main/webapp/WEB-INF/config-etf-validator.xml>`_.
 
-The list of available test suites are defined in the :code:`inspireEtfValidatorTestsuites` bean. It is a map with an entry for each test suite. The :code:`key` attribute is the name of the test suite. Each map entry is an :code:`array` with the tests to execute in the test suite. The value of each array item (:code:`<value>`)is the test's title written exactly as defined in the remote INSPIRE validator service. For example:
+The list of available test suites are defined in the ``inspireEtfValidatorTestsuites`` bean. It is a map with an entry for each test suite. The ``key`` attribute is the name of the test suite. Each map entry is an ``array`` with the tests to execute in the test suite. The value of each array item (``<value>``)is the test's title written exactly as defined in the remote INSPIRE validator service. For example:
 
 .. code-block:: xml
 
@@ -133,9 +133,9 @@ The list of available test suites are defined in the :code:`inspireEtfValidatorT
     </entry>
   </util:map>
 
-Array's :code:`value-type` attribute must be defined as Java strings: :code:`<array value-type="java.lang.String">`.
+Array's ``value-type`` attribute must be defined as Java strings: ``<array value-type="java.lang.String">``.
 
-To define which test suites will be executed when using the editor dashboard's INSPIRE validation option you can modify the :code:`inspireEtfValidatorTestsuitesConditions` bean. It's a map with an entry for each schema and test suite to execute. The map entry key attribute must be in the format :code:`SCHEMA_ID::TEST_SUITE_NAME`, where :code:`TEST_SUITE_NAME` is one of the  :code:`inspireEtfValidatorTestsuites` map entry key. For each entry you can define a XPath condition that the metadata must pass to be sent to the validator.
+To define which test suites will be executed when using the editor dashboard's INSPIRE validation option you can modify the ``inspireEtfValidatorTestsuitesConditions`` bean. It's a map with an entry for each schema and test suite to execute. The map entry key attribute must be in the format ``SCHEMA_ID::TEST_SUITE_NAME``, where ``TEST_SUITE_NAME`` is one of the  ``inspireEtfValidatorTestsuites`` map entry key. For each entry you can define a XPath condition that the metadata must pass to be sent to the validator.
 
 .. note::
   
@@ -143,7 +143,7 @@ To define which test suites will be executed when using the editor dashboard's I
 
 .. warning::
 
-  The Xpath must return a node-set or a node to work. XPaths returning a boolean :code:`true` or :code:`false` value will be interpreted as always matching by GeoNetwork.
+  The Xpath must return a node-set or a node to work. XPaths returning a boolean ``true`` or ``false`` value will be interpreted as always matching by GeoNetwork.
 
 .. code-block:: xml
 
@@ -189,7 +189,7 @@ First define a filtering mechanism to identify the records in the scope of the d
 
 - Filter based on the conformance quality report having a reference to the EU directive.
 
-From the ``admin console`` > ``settings`` > ``sources``,  an administrator can create a sub portal.
+From the ``Admin console`` > ``Settings`` > ``Sources``,  an administrator can create a sub portal.
 Create a portal ``inspire`` and set the filter to select only records related to INSPIRE (eg. ``+_groupPublished:INSPIRE`` to select all records published in group INSPIRE).
 
 .. image:: img/inspire-portal.png
