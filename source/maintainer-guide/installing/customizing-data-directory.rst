@@ -177,6 +177,60 @@ can be used to configure it (convenient in a container environment):
  - AWS_ACCESS_KEY_ID
  - AWS_SECRET_ACCESS_KEY
 
+Using a generic cloud object storage (JCLoud)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your infrastructure doesn't have a persistent storage available, you can configure
+GeoNetwork to use a cloud object storage to store the images and data.
+The JCloud implementation supports the following `providers <https://jclouds.apache.org/reference/providers/>`
+
+In order to do that, you must use a custom bean configuration. Replace the
+:code:`filesystemStore`, :code:`resourceStore` and :code:`resources` beans in
+:code:`core/src/main/resources/config-spring-geonetwork.xml` with something like this:
+
+Azure Blob sample
+.. code-block:: xml
+
+    <bean id="jcloudcredentials" class="org.fao.geonet.resources.JCloudCredentials">
+      <property name="provider" value="eu-west-1"/>
+      <property name="containerName" value="geonetwork-test"/>
+      <property name="baseFolder" value="geonetwork"/>
+      <property name="storageAccountName" value="MyAccessKey"/>
+      <property name="storageAccountKey" value="MySecretKey"/>
+    </bean>
+    <bean id="filesystemStore" class="org.fao.geonet.api.records.attachments.JCloudStore" />
+    <bean id="resourceStore"
+          class="org.fao.geonet.api.records.attachments.ResourceLoggerStore">
+      <constructor-arg index="0" ref="filesystemStore"/>
+    </bean>
+    <bean id="resources" class="org.fao.geonet.resources.JCloudResources"/>
+
+AWS S3 sample
+.. code-block:: xml
+
+    <bean id="jcloudcredentials" class="org.fao.geonet.resources.JCloudCredentials">
+      <property name="provider" value="aws-s3"/>
+      <property name="containerName" value="geonetwork-test"/>
+      <property name="baseFolder" value="geonetwork"/>
+      <property name="storageAccountName" value="MyAccessKey"/>
+      <property name="storageAccountKey" value="MySecretKey"/>
+    </bean>
+    <bean id="filesystemStore" class="org.fao.geonet.api.records.attachments.JCloudStore" />
+    <bean id="resourceStore"
+          class="org.fao.geonet.api.records.attachments.ResourceLoggerStore">
+      <constructor-arg index="0" ref="filesystemStore"/>
+    </bean>
+    <bean id="resources" class="org.fao.geonet.resources.JCloudResources"/>
+
+The :code:`jcloudcredentials` bean can be left empty and the following system environment variables
+can be used to configure it (convenient in a container environment):
+
+ - JCLOUD_PROVIDER
+ - JCLOUD_CONTAINERNAME
+ - JCLOUD_BASEFOLDER
+ - JCLOUD_STORAGEACCOUNTNAME
+ - JCLOUD_STORAGEACCOUNTKEY
+
 
 Structure of the data directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
