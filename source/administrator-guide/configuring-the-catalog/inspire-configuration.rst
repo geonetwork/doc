@@ -6,16 +6,14 @@ Configuring for the INSPIRE Directive
 Enabling INSPIRE
 ----------------
 
-From the ``admin console`` > ``settings`` user can configure INSPIRE directive support.
-
+From the :menuselection:`Admin console --> Settings` user can configure INSPIRE directive support.
 
 When enabled, the INSPIRE support activate the following:
 
 - Enable indexing of INSPIRE themes and annexes (INSPIRE themes thesaurus MUST be
   added to the list of thesaurus from the INSPIRE Registry - see :ref:`managing-thesaurus`).
 
-.. image:: img/inspire-configuration.png
-
+  .. image:: img/inspire-configuration.png
 
 To configure the discovery service, a dedicated service metadata record MUST be created in order to provide a complete GetCapabilities document (:ref:`csw-configuration_inspire`).
 
@@ -41,7 +39,7 @@ the following codelists are relevant in the scope of metadata guidelines v2.0:
 * Metadata codelist register > `Quality of Service Criteria <https://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria>`_
 
 
-From ``admin console`` > ``classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
+From ``Admin console`` > ``Classification systems`` > ``Thesaurus``, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.
 
 .. image:: img/inspire-from-registry.png
 
@@ -50,9 +48,9 @@ Click ``Use INSPIRE registry`` to use the default INSPIRE registry but any insta
 .. image:: img/inspire-from-registry-config.png
 
 Select one or more languages depending on your needs. Choose a category or directly a thesaurus, depending on the thesurus.
-By default the type of thesaurus will be ``theme`` but you can adapt it if needed.
+By default the type of thesaurus will be ``Theme`` but you can adapt it if needed.
 
-By clicking the ``upload`` button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.
+By clicking the ``Upload`` button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.
 
 User can also use the well known `GEMET thesaurus <https://www.eionet.europa.eu/gemet/en/themes/>`_. Some SKOS format version of the thesaurus are available `here <https://github.com/geonetwork/util-gemet/tree/master/thesauri>`_.
 
@@ -76,7 +74,7 @@ INSPIRE validation
 INSPIRE validation of metadata records is available at `the INSPIRE Validator <https://inspire.ec.europa.eu/validator/about/>`_.
 It is using `ETF which is an open source testing framework for spatial data and services <https://github.com/etf-validator/etf-webapp>`_.
 GeoNetwork is able to `remote validate` any record using a service provided by an instance of ETF.
-To configure remote validation, go to ``admin console`` > ``settings`` and set the URL of the validator. The url of the main INSPIRE validator is ``http://inspire.ec.europa.eu/validator/``.
+To configure remote validation, go to ``Admin console`` > ``Settings`` and set the URL of the validator. The url of the main INSPIRE validator is ``http://inspire.ec.europa.eu/validator/``.
 
 .. image:: img/inspire-configuration.png
 
@@ -97,6 +95,82 @@ During the validation, the record is sent to the ETF service and processed. Once
 Note, that if you are validating a private record, that record will be pushed to the validator. To secure this process we recommend to set up a local (private) installation of the validator.
 
 
+Configure validation test suites
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The set of test that runs for each schema can be configured using the file `WEB-INF/config-etf-validator.xml <https://github.com/geonetwork/core-geonetwork/blob/5156bae32d549e6d09cd6a86065791265eb09027/web/src/main/webapp/WEB-INF/config-etf-validator.xml>`_.
+
+The list of available test suites are defined in the ``inspireEtfValidatorTestsuites`` bean. It is a map with an entry for each test suite. The ``key`` attribute is the name of the test suite. Each map entry is an ``array`` with the tests to execute in the test suite. The value of each array item (``<value>``)is the test's title written exactly as defined in the remote INSPIRE validator service. For example:
+
+.. code-block:: xml
+
+   <util:map id="inspireEtfValidatorTestsuites" key-type="java.lang.String" value-type="java.lang.String[]">
+    <entry key="TG version 1.3">
+      <array value-type="java.lang.String">
+        <value>Conformance class: INSPIRE Profile based on EN ISO 19115 and EN ISO 19119</value>
+        <value>Conformance class: XML encoding of ISO 19115/19119 metadata</value>
+        <value>Conformance class: Conformance class: Metadata for interoperability</value>
+      </array>
+    </entry>
+    <entry key="TG version 2.0 - Data sets and series">
+      <array value-type="java.lang.String">
+        <value>Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records.</value>
+        <value>Conformance Class 1: INSPIRE data sets and data set series baseline metadata.</value>
+        <value>Conformance Class 2: INSPIRE data sets and data set series interoperability metadata.</value>
+      </array>
+    </entry>
+    <entry key="TG version 2.0 - Network services">
+      <array value-type="java.lang.String">
+        <value>Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records.</value>
+        <!--<value>Conformance Class 1: INSPIRE data sets and data set series baseline metadata.</value>
+        <value>Conformance Class 2: INSPIRE data sets and data set series interoperability metadata.</value>-->
+        <value>Conformance Class 3: INSPIRE Spatial Data Service baseline metadata.</value>
+        <value>Conformance Class 4: INSPIRE Network Services metadata.</value>
+        <!--<value>Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata.</value>
+        <value>Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata.</value>
+        <value>Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata.</value>-->
+      </array>
+    </entry>
+  </util:map>
+
+Array's ``value-type`` attribute must be defined as Java strings: ``<array value-type="java.lang.String">``.
+
+To define which test suites will be executed when using the editor dashboard's INSPIRE validation option you can modify the ``inspireEtfValidatorTestsuitesConditions`` bean. It's a map with an entry for each schema and test suite to execute. The map entry key attribute must be in the format ``SCHEMA_ID::TEST_SUITE_NAME``, where ``TEST_SUITE_NAME`` is one of the  ``inspireEtfValidatorTestsuites`` map entry key. For each entry you can define a XPath condition that the metadata must pass to be sent to the validator.
+
+.. note::
+  
+  If a metadata schema doesn't match, the schema dependency hierarchy is checked to verify if any parent schema matches any rules.
+
+.. warning::
+
+  The Xpath must return a node-set or a node to work. XPaths returning a boolean ``true`` or ``false`` value will be interpreted as always matching by GeoNetwork.
+
+.. code-block:: xml
+
+  <util:map id="inspireEtfValidatorTestsuitesConditions">
+    <!--
+       key format:
+       SCHEMAID::TG_RULE_NAME
+       If a metadata schema doesn't match, the schema dependency hierarchy
+       is checked to verify if any parent schema matches any rules.
+      -->
+    <entry key="iso19139::TG version 2.0 - Data sets and series"
+           value="gmd:hierarchyLevel[*/@codeListValue = 'dataset' or */@codeListValue = 'series']"/>
+    <entry key="iso19139::TG version 2.0 - Network services" value=".//srv:SV_ServiceIdentification"/>
+    <entry key="iso19115-3.2018::TG version 2.0 - Data sets and series"
+           value="mdb:metadataScope[*/mdb:resourceScope/*/@codeListValue = 'dataset' or */mdb:resourceScope/*/@codeListValue = 'series']"/>
+    <entry key="iso19115-3.2018::TG version 2.0 - Network services" value=".//srv:SV_ServiceIdentification"/>
+  </util:map>
+
+
+
+
+
+
+
+
+
+
 .. _inspire-access-point:
 
 INSPIRE access point
@@ -115,7 +189,7 @@ First define a filtering mechanism to identify the records in the scope of the d
 
 - Filter based on the conformance quality report having a reference to the EU directive.
 
-From the ``admin console`` > ``settings`` > ``sources``,  an administrator can create a sub portal.
+From the ``Admin console`` > ``Settings`` > ``Sources``,  an administrator can create a sub portal.
 Create a portal ``inspire`` and set the filter to select only records related to INSPIRE (eg. ``+_groupPublished:INSPIRE`` to select all records published in group INSPIRE).
 
 .. image:: img/inspire-portal.png

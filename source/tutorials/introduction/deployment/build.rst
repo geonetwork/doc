@@ -1,4 +1,4 @@
-.. _tuto-introduction-deployment-build
+.. _tuto-introduction-deployment-build:
 
 (Optional) Build
 ################
