@@ -9,7 +9,7 @@ the United Nations World Food Programme (`WFP <http://www.wfp.org>`_) and the
 United Nations Environmental Programme (`UNEP <http://www.unep.org>`_).
 
 At present the project is widely used as the basis of Spatial Data Infrastructures
-all around the world.
+all around the world (See :ref:`gallery`).
 
 The project is part of the Open Source Geospatial Foundation (`OSGeo <http://www.osgeo.org>`_) and
 can be found at `GeoNetwork opensource <http://geonetwork-opensource.org>`_.

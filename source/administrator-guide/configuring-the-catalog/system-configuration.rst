@@ -375,32 +375,7 @@ Configuration settings in this group determine how many processor threads are al
 Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See the advanced configuration for more details of how to configure the number of connections in the database connection pool.
 
 
-<<<<<<< HEAD
-=======
-Multilingual Settings
-`````````````````````
 
-Options in this group determine how GeoNetwork will search metadata in multiple languages.
-
-*Enable auto-detecting search request language:* If this option is selected, GeoNetwork will analyse the search query and attempt to detect the language that is used before defaulting to the GUI language.
-
-*Search results in requested language sorted on top:* If this option is selected, a sort clause will be added to each query to ensure that results in the current language are always sorted on top. This is different from increasing priority of the language in that it overrides the relevance of the result.  For example, if a german result has very high relevance but the search language is french then the french results will all come before the german result.
-
-*Search only in requested language* The options in this section determines how documents are sorted/prioritised relative to the language in the document compared to the search language.
-
-- *All documents in all languages (No preferences)* - The search language is ignored and will have no effect on the ordering of the results
-
-- *Prefer documents with translations requested language* - Documents with a translation in the search language (anywhere in the document) will be prioritized over documents without any elements in the search language
-
-- *Prefer documents whose language is the requested language* - Documents that are the same language as the search language (ie. the documents that are specified as being in the same language as the search language) are prioritized over documents that are not.
-
-- *Translations in requested language* - The search results will only contain documents that have some translations in the search language.
-
-- *Document language is the requested language* - The search results will contain documents whose metadata language is specified as being the in search language
-
-
-
->>>>>>> origin/develop
 Metadata Views
 ``````````````
 

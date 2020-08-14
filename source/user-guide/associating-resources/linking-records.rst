@@ -12,4 +12,5 @@ Associating another record
    linking-dataset-or-service.rst
    linking-feature-catalog.rst
    linking-others.rst
+   linking-remote-records.rst
 
