@@ -1,9 +1,9 @@
 .. _tuto-view-mapserver:
 
-Tutorial setting up INSPIRE view service with GeoNetwork and Mapserver
-######################################################################
+Tutorial setting up INSPIRE view service with |project_name| and Mapserver
+##########################################################################
 
-This tutorial shows how one can set up a combination of `MapServer <http://mapserver.org>`_ and GeoNetwork to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_. 
+This tutorial shows how one can set up a combination of `MapServer <http://mapserver.org>`_ and |project_name| to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_.
 
 MapServer
 =========
@@ -18,8 +18,8 @@ How to set up an INSPIRE view service in Mapserver is documented in `mapserver d
     END
    END
 
-GeoNetwork
-==========
+|project_name|
+==============
 
 When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate the INSPIRE editor as described in :ref:`Geonetwork documentation <inspire-configuration>`.
 

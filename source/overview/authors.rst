@@ -6,8 +6,8 @@ Author
 Project Steering Committee (PSC)
 --------------------------------
 
-The GeoNetwork Project Steering Committee (PSC) makes decisions on
-GeoNetwork opensource project issues.
+The |project_name| Project Steering Committee (PSC) makes decisions on
+|project_name| opensource project issues.
 
 In brief the committee votes on proposals on the  geonetwork-dev mailinglist.
 Proposals are available for review for at least two days, and a single veto
@@ -66,5 +66,5 @@ Contributors list is available `here <https://github.com/geonetwork/core-geonetw
 The documentation
 -----------------
 
-The documentation was written by the GeoNetwork opensource developers and
+The documentation was written by the |project_name| opensource developers and
 other community members.

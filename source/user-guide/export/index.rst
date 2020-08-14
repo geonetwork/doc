@@ -3,14 +3,14 @@
 Exporting records
 =================
 
-GeoNetwork has three different export options to export metadata. They operate on selected sets of metadata from the search results. As such they are accessible from the "actions on selection" menu as shown in the following example:
+|project_name| has three different export options to export metadata. They operate on selected sets of metadata from the search results. As such they are accessible from the "actions on selection" menu as shown in the following example:
 
 .. figure:: img/export.png
 
 Export as a ZIP archive
 ```````````````````````
 
-When a selected set of metadata records is exported as a ZIP archive, each metadata record is inserted in the ZIP archive as a directory containing the metadata, any data uploaded with the metadata record and the thumbnails. This type of ZIP archive is the MEF (Metadata Exchange Format) Version 2.0. You can find more details of MEF V2 in the GeoNetwork Developers Manual.
+When a selected set of metadata records is exported as a ZIP archive, each metadata record is inserted in the ZIP archive as a directory containing the metadata, any data uploaded with the metadata record and the thumbnails. This type of ZIP archive is the MEF (Metadata Exchange Format) Version 2.0. You can find more details of MEF V2 in the |project_name| Developers Manual.
 
 Export as a CSV file
 ````````````````````

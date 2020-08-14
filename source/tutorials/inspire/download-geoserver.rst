@@ -3,7 +3,7 @@
 Tutorial setting up a WFS based INSPIRE download service with GeoServer
 #######################################################################
 
-This tutorial shows how one can set up a combination of GeoNetwork and Geoserver to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
+This tutorial shows how one can set up a combination of |project_name| and GeoServer to provide download services following `technical guidelines for download services <http://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
 
 Note that the technical guidelines allow both Atom/OpenSearch as well as `WFS <http://www.opengeospatial.org/standards/wfs>`_. This tutorial describes how to set up a download service using WFS.
 
@@ -14,7 +14,7 @@ To support the INSPIRE data models the geoserver `"appschema" plugin <http://doc
 
 Download and install GeoServer INSPIRE extension as documented in `installing inspire extension  <http://docs.geoserver.org/latest/en/user/extensions/inspire/installing.html>`_
 
-Create at least one workspace per datamodel. On workspace properties activate "Settings" and set the selected service type (WFS).
+Create at least one workspace per data model. On workspace properties activate "Settings" and set the selected service type (WFS).
 
 .. image:: img/image_0.png
 
@@ -24,10 +24,10 @@ On WFS settings, select the new workspace and fill out the form (keep service me
 
 Create featuretypes according to the appschema documentation.
 
-GeoNetwork
-==========
+|project_name|
+==============
 
-When deploying Geonetwork, make sure the GEMET thesauri are loaded and activate the INSPIRE editor as described in `inspire documentation <http://geonetwork-opensource.org/manuals/trunk/eng/users/administrator-guide/configuring-the-catalog/inspire-configuration.html>`_.
+When deploying |project_name|, make sure the GEMET thesauri are loaded and activate the INSPIRE editor as described in `inspire documentation <http://geonetwork-opensource.org/manuals/trunk/eng/users/administrator-guide/configuring-the-catalog/inspire-configuration.html>`_.
 
 In Admin > Settings activate the INSPIRE extension.
 

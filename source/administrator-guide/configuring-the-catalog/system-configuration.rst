@@ -29,14 +29,14 @@ Catalog description
 - **Catalog identifier** A universally unique identifier (uuid) that
   distinguishes your catalog from any other catalog. This a unique
   identifier for your catalogue and its best to leave it as a uuid. It will
-  be used by harvester using GeoNetwork protocol to identify the source catalog.
+  be used by harvester using |project_name| protocol to identify the source catalog.
 
 - **Organization** The organization the node belongs to. Again, this is
   information that helps identify the catalogue to a human user.
 
 - **SVN UUID** Subversion repository attached to the node. This identifier is
   created and/or checked on startup to verify that the database match the SVN repository.
-  The repository is used for metadata versionning.
+  The repository is used for metadata versioning.
 
 
 Catalog
@@ -114,7 +114,7 @@ Z39.50
 Proxy server
 ````````````
 
-The settings page offers to set the configuration of a proxy server. This configuration is used by the application to access the internet to get online resources, for example as part of a harvest proces.
+The settings page offers to set the configuration of a proxy server. This configuration is used by the application to access the internet to get online resources, for example as part of a harvest process.
 
 - **Use proxy** Enable the proxy in case the catalog is behind a proxy and need
   to use it to access remote resources.
@@ -204,8 +204,8 @@ Metadata rating
 ```````````````
 
 If enabled, the catalog will calculate user ratings for metadata from this node
-only (not distributed among other GeoNetwork nodes). This only applies to records
-harvested using the GeoNetwork protocol.
+only (not distributed among other |project_name| nodes). This only applies to records
+harvested using the |project_name| protocol.
 
 
 Download Service
@@ -216,10 +216,10 @@ the metadata record. When such a record is displayed in the search results,
 a 'Download' button is provided which will allow the user to select which file
 they want to download. This option group determines how that download will occur.
 
-- **Use GeoNetwork simple file download service** Clicking on any file stored
+- **Use |project_name| simple file download service** Clicking on any file stored
   with the metadata record will deliver that file directly to the user via the browser.
 
-- **Use GeoNetwork disclaimer and constraints service** Clicking on any file
+- **Use |project_name| disclaimer and constraints service** Clicking on any file
   stored with the metadata record will deliver a zip archive to the user
   (via the browser) that contains the data file, the metadata record itself and
   a summary of the resource constraint metadata as an html document. In addition,
@@ -295,19 +295,19 @@ Open Archive Initiative (OAI-PMH) Provider
 Options in this group control the way in which the OAI Server responds to
 OAIPMH harvest requests from remote sites.
 
-- **Datesearch**: OAI Harvesters may request records from GeoNetwork in a date range.
-  GeoNetwork can use one of two date fields from the metadata to check for a match
+- **Datesearch**: OAI Harvesters may request records from |project_name| in a date range.
+  |project_name| can use one of two date fields from the metadata to check for a match
   with this date range. The default choice is *Temporal extent*, which is the temporal extent
   from the metadata record. The other option, *Modification date*, uses the modification
-  date of the metadata record in the GeoNetwork database. The modification date is
-  the last time the metadata record was updated in or harvested by GeoNetwork.
+  date of the metadata record in the |project_name| database. The modification date is
+  the last time the metadata record was updated in or harvested by |project_name|.
 
 - **Resumption Token Timeout**: Metadata records that match an OAI harvest search request
   are usually returned to the harvester in groups with a fixed size (eg. in groups of 10 records).
   With each group a resumption token is included so that the harvester can request
   the next group of records. The resumption token timeout is the time (in seconds)
-  that GeoNetwork OAI server will wait for a resumption token to be used.
-  If the timeout is exceeded GeoNetwork OAI server will drop the search results and
+  that |project_name| OAI server will wait for a resumption token to be used.
+  If the timeout is exceeded |project_name| OAI server will drop the search results and
   refuse to recognize the resumption token. The aim of this feature is to ensure
   that resources in the GeoNetwork OAI server are released.
 
@@ -360,7 +360,7 @@ The following services are available:
 - http://SERVER/geonetwork/opensearch/eng/UUID/describe?queryParams
 - http://SERVER/geonetwork/opensearch/eng/describe?queryParams
 
-In above url's {UUID} is the fileidentifier of the download service metadata.
+In above URLs {UUID} is the fileidentifier of the download service metadata.
 
 In the  service feed of your download service make sure to add the GeoNetwork OpenSearch endpoint as the OpenSearchDescription for the service::
 

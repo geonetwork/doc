@@ -3,9 +3,9 @@
 Making a pull request
 #####################
 
-GeoNetwork uses a pull-request workflow allowing changes to be managed and reviewed. All work is done on branches and merged back. When developing start with the branch you want changed, create a new feature branch from there, make your changes on the feature branch, publish your feature branch to your GitHub repo, make a Pull Request asking your changes to be reviewed and merged.
+|project_name| uses a pull-request workflow allowing changes to be managed and reviewed. All work is done on branches and merged back. When developing start with the branch you want changed, create a new feature branch from there, make your changes on the feature branch, publish your feature branch to your GitHub repo, make a Pull Request asking your changes to be reviewed and merged.
 
-Occasionally core GeoNetwork developers will setup a feature branch on upstream to explore a specific topic. These shared feature-branch are subject to review when submited as a pull-request against ``master``.
+Occasionally core |project_name| developers will setup a feature branch on upstream to explore a specific topic. These shared feature-branch are subject to review when submitted as a pull-request against ``master``.
 
 There are many great guides (See the links above) but here is a quick sequence illustrating how to make a change and commit the change.
 
@@ -38,7 +38,7 @@ There are many great guides (See the links above) but here is a quick sequence i
      $ git push origin myfeature
 
         # this pushed your new branch to Github
-        # now you are ready to make a Pull Request to get the new feature added to GeoNetwork
+        # now you are ready to make a Pull Request to get the new feature added to |project_name|
 
      # revise pull request based on review feedback
      # another commit

@@ -37,7 +37,7 @@ More information:
 
 
 This standard is maintained on https://github.com/metadata101/iso19115-3.2018
-and is available by default in GeoNetwork 3.8+. The TC211 is maintaining the XSD for this standard on https://github.com/ISO-TC211/XML.
+and is available by default in |project_name| 3.8+. The TC211 is maintaining the XSD for this standard on https://github.com/ISO-TC211/XML.
 
 
 Example of catalogues using this standard:

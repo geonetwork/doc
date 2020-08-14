@@ -51,7 +51,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cat <<EOF > docs/changes$newversion.txt
     ================================================================================
     ===
-    === GeoNetwork $version: List of changes
+    === |project_name| $version: List of changes
     ===
     ================================================================================
     EOF
@@ -160,9 +160,9 @@ On sourceforge first:
 
     sftp $sourceforge_username,geonetwork@frs.sourceforge.net
     # For stable release
-    cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
+    cd /home/frs/project/g/ge/geonetwork/|project_name|_opensource
     # or for RC release
-    cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
+    cd /home/frs/project/g/ge/geonetwork/|project_name|_unstable_development_versions/
     mkdir v3.0.0
     cd v3.0.0
     put docs/changes3.0.0-0.txt

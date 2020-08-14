@@ -10,7 +10,7 @@ The RDF DCAT end point provides a way of getting information about the catalog, 
 URLS
 ====
 
-The following URLs are available (substitute your geonetwork URL):
+The following URLs are available (substitute your |project_name| URL):
 
 - http://localhost:8080/geonetwork/srv/eng/rdf.metadata.get?uuid= : returns an RDF record for the given UUID
 - http://localhost:8080/geonetwork/srv/eng/rdf.search?: returns a dcat:Catalog record. By default this will describe all the records in the catalog, but query filters are available (see below)

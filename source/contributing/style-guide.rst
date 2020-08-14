@@ -12,7 +12,7 @@ Preferred Terminology
 ---------------------
 
  - Catalog Home Page
- - GeoNetwork (check capitalisation, or preferrably use the ``|project_name|`` variable)
+ - |project_name| (check capitalisation, or preferably use the ``|project_name|`` variable)
  - Metadata Catalog
  - Sub-Portal
 

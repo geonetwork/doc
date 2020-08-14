@@ -27,10 +27,10 @@ The harvester identifies the ESRI metadata format: ESRI ISO, ESRI FGDC to apply 
     - *Connection type*.
         - *ArcSde service* - Uses the ArcSde service to retrieve the metadata.
 
-        .. note :: Additional installation steps are required to use the ArcSDE harvester because it needs proprietary ESRI java api jars to be installed.
+        .. note :: Additional installation steps are required to use the ArcSDE harvester because it needs proprietary ESRI Java api jars to be installed.
 
-            ArcSDE java API libraries need to be installed by the user in GeoNetwork (folder INSTALL_DIR_GEONETWORK/WEB-INF/lib), as these are proprietary libraries
-            not distributed with GeoNetwork.
+            ArcSDE Java API libraries need to be installed by the user in |project_name| (folder INSTALL_DIR_GEONETWORK/WEB-INF/lib), as these are proprietary libraries
+            not distributed with |project_name|.
 
             The following jars are required:
 
@@ -43,7 +43,7 @@ The harvester identifies the ESRI metadata format: ESRI ISO, ESRI FGDC to apply 
 
         .. note :: Database direct connection requires to copy JDBC drivers in INSTALL_DIR_GEONETWORK/WEB-INF/lib.
 
-            Postgres JDBC drivers are distributed with GeoNetwork, but not for Oracle or SqlServer.
+            Postgres JDBC drivers are distributed with |project_name|, but not for Oracle or SqlServer.
 
     - *Database type* - ArcSde database type: Oracle, Postgres, SqlServer. Only available if connection type is configured to *Database direct connection*.
     - *Username* - Username to connect to ArcSDE server.

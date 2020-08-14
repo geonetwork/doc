@@ -3,13 +3,13 @@
 Setup Kibana
 ############
 
-This section describes how to setup Kibana to be used in GeoNetwork to visualize the search/content statistics:
+This section describes how to setup Kibana to be used in |project_name| to visualize the search/content statistics:
 
 - Download Kibana from http://www.elastic.co/downloads/past-releases/. For Geonetwork 3.8.x version 7.2.x is recommended.
 
 - Unzip the file, for example to `/opt/kibana`
 
-- Configure Kibana to use it in GeoNetwork:
+- Configure Kibana to use it in |project_name|:
 
 .. code-block:: shell
 

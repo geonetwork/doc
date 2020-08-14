@@ -218,7 +218,7 @@ This section is for configuring the map shown when viewing a record.
 
 .. figure:: img/ui-settings-mapviewer.png
 
-- **Layer obejcts in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
+- **Layer objects in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
 
   - **wms**: generic WMS layer, required properties: ``name, url``.
   - **wmts**: generic WMTS layer, required properties: ``name, url``.
@@ -285,7 +285,7 @@ Editor Application
 - **Editor application**: If enabled the editor page, or contribute tab is available to users with the appropriate privileges. If not enabled the contribute tab is not shown in the top toolbar.
 - **Application URL**: This is the URL to the editor application and can generally be left as the default.
 - **Only my records**: If this checkbox is enabled then the "Only my records" checkbox in the editor dashboard will be checked by default.
-- **Display fitlers in dashboard**: If enabled, the currently selected facets will be shown above the search results in both the editor dashboard the batch editor page.
+- **Display filters in dashboard**: If enabled, the currently selected facets will be shown above the search results in both the editor dashboard the batch editor page.
 - **Fluid container for the Editor**: If enabled, the editor application will have a full width container. If disabled it will have a fixed width and centered container.
 - **New metadata page layout**: Choose from the options for the layout of the ``add new metadata`` page. The default is ``Horizontal`` but a vertical layout can be chosen, or a custom layout based on a supplied template.
 - **Editor page indent type**: Choose from the options for the indent style when editing a record. The default is for minimal indents, select ``Colored indents`` to use the style shown below:

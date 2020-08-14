@@ -12,7 +12,7 @@ Here is a typical example of a fragment. This is a responsible party and it coul
 
  <gmd:CI_ResponsibleParty xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" >
    <gmd:individualName>
-     <gco:CharacterString>John D'ath</gco:CharacterString>
+     <gco:CharacterString>John D'Ath</gco:CharacterString>
    </gmd:individualName>
    <gmd:organisationName>
      <gco:CharacterString>Mulligan &amp; Sons, Funeral Directors</gco:CharacterString>
@@ -205,9 +205,9 @@ with directory entries. For this, use the API testing page.
 
 The synchronize process use the same parameters as the collecting process with 2 optionals arguments:
 
-- propertiesToCopy to preserve some element which may be defined in the fragment in the metadata (eg. contact role)
+- ``propertiesToCopy`` to preserve some element which may be defined in the fragment in the metadata (eg. contact role)
 
-- substitueAsXLink to indicate if copy/paste mode or XLink mode should be used.
+- ``substituteAsXLink`` to indicate if copy/paste mode or XLink mode should be used.
 
 
 
@@ -232,7 +232,7 @@ JCS handles large caches intelligently by:
 - providing cache persistence: the cache is saved to disk when the web application is shutdown and restores the cache from disk when restarting
 
 
-You can configure JCS parameters in GeoNetwork using the JCS configuration file in **INSTALL_DIR/web/geonetwork/WEB-INF/classes/cache.ccf**. 
+You can configure JCS parameters in |project_name| using the JCS configuration file in **INSTALL_DIR/web/geonetwork/WEB-INF/classes/cache.ccf**.
 
 Some operations in the catalog (such as harvesting) that generate metadata fragments,
 will automatically refresh the XLink cache when a new fragment is generated.

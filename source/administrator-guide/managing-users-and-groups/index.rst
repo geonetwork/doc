@@ -18,9 +18,8 @@ Managing users and groups
 Default user
 ------------
 
-After installation a default user with name ``admin`` and password ``admin``
-is created. Use this credentials to start with. It is recommended to update
-the default password after installation.
+Upon installation a default user with name ``admin`` and password ``admin``
+is created. It is recommended to log in with these credentials directly after the installation has completed and to change the default password.
 
 
 .. _user-session:
@@ -28,20 +27,20 @@ the default password after installation.
 User session
 ------------
 
-After identification, a user session is created. This session will be closed
-automatically at some point by the server for security reasons. Default session
+After the authentication process, a user session is created. This session will be closed
+automatically at some point by the server for security reasons. The default session
 timeout is set to 35 min (see :ref:`session-timeout-configuration` for details).
 
-When there is no activity in the browser and that the session is about
-to expire (3 min before), a warning is displayed next to the user details:
+When there is no activity in the browser and the session is about
+to expire, a warning is displayed next to the user details 3 minutes before before the timeout takes place:
 
 .. figure:: img/session-will-expire-soon.png
 
-1 min before the end of the timeout, another message is displayed:
+One (1) minute before the timeout, another message is displayed:
 
 .. figure:: img/session-about-to-be-cancelled.png
 
-When the session has been probably cancelled by the catalog, a message recommend
+When the session seems to have been destroyed by the catalog, a message recommends
 to refresh the page and sign in again if needed:
 
 .. figure:: img/session-has-expired.png

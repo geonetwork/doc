@@ -27,9 +27,9 @@ your environment updating the previous file or overriding the properties in the 
 
     - ``ldap.base.provider.url``: This tells the portal where the LDAP server is located. Make sure that the computer with the catalog can hit the computer with the LDAP server. Check to make sure that the appropriate ports are opened, etc.
 
-    - ``ldap.base.dn``: this will usually look something like: “dc=organizationnamehere,dc=org”
+    - ``ldap.base.dn``: this will usually look something like: "dc=[organizationnamehere],dc=org"
 
-    - ``ldap.security.principal`` & ``ldap.security.credentials``: Define LDAP administrator user to use to bind to LDAP. If not define, an anonymous bind is made. Principal is the username and credentials property the password.
+    - ``ldap.security.principal`` / ``ldap.security.credentials``: Define LDAP administrator user to use to bind to LDAP. If not define, an anonymous bind is made. Principal is the username and credentials property the password.
 
     .. code-block:: text
 
@@ -58,7 +58,7 @@ your environment updating the previous file or overriding the properties in the 
 Authorization Settings
 ======================
 
-When using LDAP, the user information and privileges for GeoNetwork could be defined from the LDAP attributes.
+When using LDAP, the user information and privileges for |project_name| could be defined from the LDAP attributes.
 
 User information
 ````````````````
@@ -127,9 +127,9 @@ If LDAP attribute containing profiles does not match the catalog profile list, a
 .. code-block:: text
 
     # Map LDAP custom profiles to catalog profiles. Not used if ldap.privilege.pattern is defined.
-    ldapUserContextMapper.profilMapping[Admin]=Administrator
-    ldapUserContextMapper.profilMapping[Editeur]=Reviewer
-    ldapUserContextMapper.profilMapping[Public]=RegisteredUser
+    ldapUserContextMapper.profileMapping[Admin]=Administrator
+    ldapUserContextMapper.profileMapping[Editor]=Reviewer
+    ldapUserContextMapper.profileMapping[Public]=RegisteredUser
 
 For example, in the previous configuration, the attribute value ``Admin`` will be mapped to ``Administrator`` (which is a valid profile for the catalog).
 
@@ -227,7 +227,7 @@ The LDAP attribute can contains the following configuration to define the differ
     -- Define a reviewer for the group GRANULAT and editor for MIMEL and RegisteredUser for NATURA2000
     cat_privileges=CAT_GRANULAT_Reviewer
     cat_privileges=CAT_MIMEL_Reviewer
-    cat_privileges=CAT_NATURA2000_RegisterdUser
+    cat_privileges=CAT_NATURA2000_RegisteredUser
 
     -- Only a registered user for GRANULAT
     cat_privileges=CAT_GRANULAT_RegisteredUser
@@ -238,19 +238,19 @@ The LDAP attribute can contains the following configuration to define the differ
 Synchronization
 ```````````````
 
-A synchronization task is taking care of removing LDAP user which may be deleted. For example:
+A synchronization task is taking care of removing LDAP users that may be deleted. For example:
 
-- T0: a user A sign in the catalog. A local user A is created in the user database
+- T0: User A signs in to the catalog. A local user A is created in the user database.
 
-- T1: A is deleted from the LDAP (A could not sign in in the catalog anymore)
+- T1: User A is deleted from the LDAP (User A cannot sign in to the catalog anymore).
 
-- T2: the synchronization task will check that all local LDAP users exist in LDAP:
+- T2: The synchronization task will check that all local LDAP users exist in LDAP:
 
-    - if user is not owner of any records, it will be deleted
+    - If the user does not own any records, it will be deleted.
 
-    - if user is owner of metadata records, warning message is avaialable on the catalog logging system. record’s owner should be changed to another user before the task could remove the user.
+    - If the user owns metadata records, a warning message will be written to the catalog logging system. The owner of the record should be changed to another user before the task can remove the current owner.
 
-By default the task is runned once every day. Configuration could be changed in the following property:
+By default the task runs once every day. This can be changed in the following property:
 
 .. code-block:: text
 
@@ -273,7 +273,7 @@ The following properties allow advanced configuration of the synchronisation pro
 
 Debugging
 `````````
-If connection fails, try to increase logging for LDAP in ``WEB-INF/classes/log4j.xml``:
+If the connection fails, try to increase the logging level for LDAP in ``WEB-INF/classes/log4j.xml``:
 
 .. code-block:: xml
 
@@ -282,7 +282,7 @@ If connection fails, try to increase logging for LDAP in ``WEB-INF/classes/log4j
     </logger>
 
 
-Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporary:
+Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporarily:
 
 .. figure:: img/setting-log-level.png
 
@@ -291,7 +291,7 @@ Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporary:
 Configuring CAS
 ---------------
 
-To enable CAS, setup authentication by including ``WEB-INF/config-security/config-security-cas.xml``
+To enable CAS, set up authentication by including ``WEB-INF/config-security/config-security-cas.xml``
 in ``WEB-INF/config-security/config-security.xml``, uncommenting the following lines:
 
 .. code-block:: xml
@@ -299,7 +299,7 @@ in ``WEB-INF/config-security/config-security.xml``, uncommenting the following l
     <import resource="config-security-cas.xml"/>
     <import resource="config-security-cas-ldap.xml"/>
 
-CAS can use either ldap or a database for user management, to use a database uncomment the following lines instead:
+CAS can use either LDAP or a database for user management. To use a database uncomment the following lines instead:
 
 .. code-block:: xml
 
@@ -307,9 +307,9 @@ CAS can use either ldap or a database for user management, to use a database unc
     <import resource="config-security-cas-database.xml"/>
 
 
-The CAS configuration is defined in ``WEB-INF/config-security/config-security.properties``, you can then configure
-your environment updating the previous file or overriding the properties in the file
-``WEB-INF/config-security/config-security-overrides.properties``.
+The CAS configuration is defined in ``WEB-INF/config-security/config-security.properties``.
+You can configure your environment by updating the previous file or by defining property overrides in the file
+``WEB-INF/config-security/config-security-overrides.properties``:
 
 .. code-block:: text
 
@@ -326,6 +326,6 @@ Configuring Shibboleth
 ----------------------
 
 The catalog can operate in a SAML secured federation. Shibboleth should be installed
-in apache as described `here <https://wiki.shibboleth.net/confluence/display/SHIB2/Installation>`_.
-The catalog is accessed via apache. Setup shibboleth authentication by including ``WEB-INF/config-security/config-security-shibboleth.xml``
+in Apache as described `here <https://wiki.shibboleth.net/confluence/display/SHIB2/Installation>`_.
+The catalog is accessed via Apache. Setup Shibboleth authentication by including ``WEB-INF/config-security/config-security-shibboleth.xml``
 in ``WEB-INF/config-security/config-security.xml``. You can then configure your environment in ``config-security-shibboleth-overrides.properties``.

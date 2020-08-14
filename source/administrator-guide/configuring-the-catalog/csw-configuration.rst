@@ -21,7 +21,7 @@ Configuration options:
 
 * *Record to use for GetCapabilities*: The capabilities document is created using the record selected here.
 
-* *Inserted metadata is public*: By default, metadata inserted with the CSW Harvest and CSW Transaction operations is not publicly viewable. A user with the appropriate access rights could do this after the CSW Harvest and CSW Transaction operations, but this is not always convenient. If this option is checked all metatada inserted using the CSW Harvest and CSW Transaction operations will be publicly viewable.
+* *Inserted metadata is public*: By default, metadata inserted with the CSW Harvest and CSW Transaction operations is not publicly viewable. A user with the appropriate access rights could do this after the CSW Harvest and CSW Transaction operations, but this is not always convenient. If this option is checked all metadata inserted using the CSW Harvest and CSW Transaction operations will be publicly viewable.
 
 * *Create element if it does not exist when using XPath in CSW transaction.*: If not checked, only existing elements can be updated.
 

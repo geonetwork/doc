@@ -8,7 +8,7 @@ Metadata can be present in the tables of a relational databases, which are commo
 Adding an OGC WFS GetFeature Harvester
 ``````````````````````````````````````
 
-An OGC web feature service (WFS) implements a GetFeature query operation that returns data in the form of features (usually rows from related tables in a relational database). GeoNetwork, acting as a client, can read the GetFeature response and apply a user-supplied XSLT stylesheet to produce metadata fragments that can be linked or copied into a user-supplied template to build metadata records.
+An OGC web feature service (WFS) implements a GetFeature query operation that returns data in the form of features (usually rows from related tables in a relational database). |project_name|, acting as a client, can read the GetFeature response and apply a user-supplied XSLT stylesheet to produce metadata fragments that can be linked or copied into a user-supplied template to build metadata records.
 
 The available options are:
 
@@ -23,9 +23,9 @@ The available options are:
  		- *Stylesheet to create fragments* - User-supplied stylesheet that transforms the GetFeature response to a metadata fragments document (see below for the format of that document). Stylesheets exist in the WFSToFragments directory which is in the convert directory of the selected output schema. eg. for the iso19139 schema, this directory is ``GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments``.
  		- *Save large response to disk* - Check this box if you expect the WFS GetFeature response to be large (eg. greater than 10MB). If checked, the GetFeature response will be saved to disk in a temporary file. Each feature will then be extracted from the temporary file and used to create the fragments and metadata records. If not checked, the response will be held in RAM.
  		- *Create subtemplates* - Check this box if you want the harvested metadata fragments to be saved as subtemplates in the metadata catalog and xlink'd into the metadata template (see next option). If not checked, the fragments will be copied into the metadata template.
- 		- *Template to use to build metadata using fragments* - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard GeoNetwork metadata template record.
+ 		- *Template to use to build metadata using fragments* - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard |project_name| metadata template record.
 
- - *Category for records built with linked fragments* - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard GeoNetwork metadata template record.
+ - *Category for records built with linked fragments* - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard |project_name| metadata template record.
 
 - **Options**
 
@@ -35,7 +35,7 @@ The available options are:
 
 
 
-- **Category for subtemplates** - When fragments are saved to GeoNetwork as subtemplates they will be assigned to the category selected here.
+- **Category for subtemplates** - When fragments are saved to |project_name| as subtemplates they will be assigned to the category selected here.
 
 More about turning the GetFeature Response into metadata fragments
 ``````````````````````````````````````````````````````````````````
@@ -44,7 +44,7 @@ Within the root <record> element there can be zero to many <record> elements.  W
 
 Within a <record> element there can be zero to many <fragment> elements and zero to many <replacementGroup> elements.  A <replacementGroup> element can itself contain zero to many <fragment> elements.  Ordering of <fragment> elements and <replacementGroup> elements within a <record> or <replacementGroup> element is not important.
 
-<fragment> elements contain individual xml fragments.  The content of the <fragment> can be any xml element from a supported GeoNetwork schema with the proviso that the element must contain enough relevant metadata to allow the target schema to be identified (i.e. distinguishing namespaces).
+<fragment> elements contain individual xml fragments.  The content of the <fragment> can be any xml element from a supported |project_name| schema with the proviso that the element must contain enough relevant metadata to allow the target schema to be identified (i.e. distinguishing namespaces).
 
 <replacementGroup> elements have significance during metadata generation only.  They are used to group zero or more fragments for insertion into or creation of links in a copy of the metadata template used to generate the metadata.   Where the <replacementGroup> element contains no <fragment> elements, the referenced element in the template copy will be removed, otherwise it will be replaced with the contents of the fragment.
 
@@ -67,12 +67,12 @@ ReplacementGroup                Id                              Id of element in
                                                                 replace or link from to contained fragments
 ==============================  ==============================  ==============================
 
-Finally, two examples of how to harvest metadata from the Features of an OGC WFS harvester can be given using stylesheets and templates supplied with GeoNetwork.
+Finally, two examples of how to harvest metadata from the Features of an OGC WFS harvester can be given using stylesheets and templates supplied with |project_name|.
 
 Bundled GeoServer Boundaries Harvest example
 ````````````````````````````````````````````
 
-This example assumes that you have installed the bundled GeoServer that comes with GeoNetwork. The end result of this example will be 251 ISO19139 metadata records that link in 1506 fragments (6 per record) created from a GetFeature response on the boundaries shapefile in the GeoServer instance supplied with GeoNetwork. The records created contain metadata about the countries of the world.
+This example assumes that you have installed the bundled GeoServer that comes with |project_name|. The end result of this example will be 251 ISO19139 metadata records that link in 1506 fragments (6 per record) created from a GetFeature response on the boundaries shapefile in the GeoServer instance supplied with |project_name|. The records created contain metadata about the countries of the world.
 
 The procedure to follow is:
 
@@ -100,7 +100,7 @@ The procedure to follow is:
 - *Save* the harvester entry form. 
 - You will be returned to the harvester operations menu where you can *Activate* the harvester and then *Run* it.
 
-The results page shows that there were 1506 fragments of metadata harvested from the WFS GetFeature response. They were saved to the GeoNetwork database as subtemplates and linked into the metadata template to form 251 new metadata records.
+The results page shows that there were 1506 fragments of metadata harvested from the WFS GetFeature response. They were saved to the |project_name| database as subtemplates and linked into the metadata template to form 251 new metadata records.
 
 
 Deegree Version 2.x Philosopher Database example
@@ -137,5 +137,5 @@ The procedure to follow is:
 
 After the harvester has been run you should see a results screen that looks something like the following screenshot.
 
-The results page shows that there were 42 fragments of metadata harvested from the WFS GetFeature response. They were saved to the GeoNetwork database as subtemplates and linked into the metadata template to form 7 new metadata records.
+The results page shows that there were 42 fragments of metadata harvested from the WFS GetFeature response. They were saved to the |project_name| database as subtemplates and linked into the metadata template to form 7 new metadata records.
 

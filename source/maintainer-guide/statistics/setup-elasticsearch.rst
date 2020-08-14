@@ -3,7 +3,7 @@
 Setup ElasticSearch
 ###################
 
-This section describes how to setup ElasticSearch to be used in GeoNetwork to store the search/content statistics. Note that Geonetwork must have been built with the `es` profile for ElasticSearch to be used. See https://github.com/geonetwork/core-geonetwork/tree/master/software_development for details.
+This section describes how to setup ElasticSearch to be used in |project_name| to store the search/content statistics. Note that Geonetwork must have been built with the `es` profile for ElasticSearch to be used. See https://github.com/geonetwork/core-geonetwork/tree/master/software_development for details.
 
 Installation
 ============

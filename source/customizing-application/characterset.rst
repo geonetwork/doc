@@ -10,7 +10,7 @@ the default.
 
 To change it within GeoNetwork simply start the application with the system property geonetwork.file.encoding set to the desired character set name.
 
-For example if you are running tomcat you can set 
+For example if you are running Tomcat you can set
 
 JAVA_OPTS="-Dgeonetwork.file.encoding=UTF-16"
 

@@ -30,7 +30,7 @@ New features/fixes
 
  * `Add Portuguesa <https://github.com/geonetwork/core-geonetwork/pull/4024>`_.
 
- * `Fix GeoNetwork 2.x harvester <https://github.com/geonetwork/core-geonetwork/pull/4047>`_.
+ * `Fix |project_name| 2.x harvester <https://github.com/geonetwork/core-geonetwork/pull/4047>`_.
 
  * `Add portal home page <https://github.com/geonetwork/core-geonetwork/pull/4042>`_.
 

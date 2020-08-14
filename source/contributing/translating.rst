@@ -3,7 +3,7 @@
 Translating the application
 ###########################
 
-To translate the client interface, go on `GeoNetwork on Transifex <https://www.transifex.com/geonetwork/core-geonetwork/>`_. Only the reference language (ie. en) MUST be updated
+To translate the client interface, go on `|project_name| on Transifex <https://www.transifex.com/geonetwork/core-geonetwork/>`_. Only the reference language (ie. en) MUST be updated
 on github. All other translations MUST be on Transifex.
 
 
@@ -47,7 +47,7 @@ Once translated, the new language needs to be added to the application.
 
 
 To automatically retrieve & update translations files, the script
-:code:`web-ui/download-from-transifex.sh` can be used. To use the script you have to join the translation team on transifex. 
+:code:`web-ui/download-from-transifex.sh` can be used. To use the script you have to join the translation team on Transifex.
 
 
 
