@@ -7,8 +7,8 @@ The data directory is the location on the file system where
 the catalog stores much of its custom configuration and uploaded files.
 This configuration defines such things as:
 
-* What thesaurus is used by GeoNetwork?
-* What schema is plugged in GeoNetwork?
+* What thesaurus is used by |project_name|?
+* What schema is plugged in |project_name|?
 
 The data directory also contains a number of support files used by the catalog
 for various purposes:
@@ -65,7 +65,7 @@ The data directory variable can be set using:
  - Bean configuration (added in version 3.0.4)
 
 
-For java environment variable and servlet context parameter use:
+For Java environment variable and servlet context parameter use:
 
  - <webappName>.dir and if not set using geonetwork.dir
 
@@ -141,7 +141,7 @@ Using a S3 object storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your infrastructure doesn't have a persistent storage available, you can configure
-GeoNetwork to use an Amazon S3 (or compatible) object storage to store the images and data.
+|project_name| to use an Amazon S3 (or compatible) object storage to store the images and data.
 
 In order to do that, you must use a custom bean configuration. Replace the
 :code:`filesystemStore`, :code:`resourceStore` and :code:`resources` beans in
@@ -213,7 +213,7 @@ The data directory contains:
 Advanced data directory configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All sub-directories could be configured separately using java system property.
+All sub-directories could be configured separately using Java system property.
 For example, to put index directory in a custom location use:
 
  - <webappName>.lucene.dir and if not set using:
@@ -222,7 +222,7 @@ For example, to put index directory in a custom location use:
 
 Examples:
 
-* Add the following java properties to start-geonetwork.sh script:
+* Add the following Java properties to start-geonetwork.sh script:
 
 
 .. code-block:: shell
