@@ -1,4 +1,4 @@
-.. _geonetwork-api:
+.. _q-search:
 
 Q Search
 ########

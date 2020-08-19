@@ -10,3 +10,4 @@ Tutorials
    introduction/index.rst
    customui/index.rst
    hookcustomizations/index.rst
+   inspire/index

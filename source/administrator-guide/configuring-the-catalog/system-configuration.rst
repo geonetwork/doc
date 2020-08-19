@@ -135,15 +135,6 @@ The settings page offers to set the configuration of a proxy server. This config
 JVM proxy parameters may also be required to properly set the proxy for all remote
 access.
 
-There is also another context in which the concept of a proxy is used. GeoNetwork can
-use a `Web Proxy <https://developer.yahoo.com/javascript/howto-proxy.html>`_ to prevent
-cross site scripting errors. These days using `CORS <https://www.w3.org/TR/cors/>`_ is a
-better approach to manage cross site scripting, however some data providers may not yet
-support CORS yet. Use a security rule in `config-security-mapping.xml
-<https://github.com/geonetwork/core-geonetwork/blob/3.4.0/web/src/main/webapp/WEB-INF/config-security/config-security-mapping.xml#L42>`_
-to define which domains are allowed access by the GeoNetwork proxy.
-
-
 .. _system-config-feedback:
 
 Feedback
@@ -382,6 +373,7 @@ Configuration settings in this group determine how many processor threads are al
 *Number of processing threads* The maximum number of processing threads that can be allocated to an indexing task.
 
 Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See the advanced configuration for more details of how to configure the number of connections in the database connection pool.
+
 
 
 Metadata Views

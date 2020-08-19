@@ -34,8 +34,8 @@ To install the build tools:
     sudo apt install make
     sudo apt install python3-pip
     sudo pip install sphinx
-    sudo pip install sphinx-bootstrap-theme
-    sudo pip install sphinx_rtd_theme
+    sudo pip3 install sphinx-bootstrap-theme
+    sudo pip3 install sphinx_rtd_theme
 
 
 

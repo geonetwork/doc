@@ -15,21 +15,21 @@ Geographic information -- Metadata (iso19139:2007) (iso19139)
     ISO 19115 is applicable to:
 
     - the cataloguing of all types of resources, clearinghouse activities, and the full description
-    of datasets and services;
+      of datasets and services;
 
     - geographic services, geographic datasets, dataset series, and individual geographic features
-    and feature properties.
+      and feature properties.
 
     ISO 19115 defines:
 
     - mandatory and conditional metadata sections, metadata entities, and metadata elements;
 
     - the minimum set of metadata required to serve most metadata applications (data discovery,
-    determining data fitness for use, data access, data transfer, and use of digital data and
-    services);
+      determining data fitness for use, data access, data transfer, and use of digital data and
+      services);
 
     - optional metadata elements to allow for a more extensive standard description of resources, if
-    required;
+      required;
 
     - a method for extending metadata to fit specialized needs.
 

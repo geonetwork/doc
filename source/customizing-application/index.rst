@@ -15,6 +15,7 @@ Customizing guide
    configuring-search-fields.rst
    configuring-facetted-search.rst
    advanced-configuration.rst
+   adding-static-pages.rst
    implementing-a-schema-plugin.rst
    characterset.rst
    misc.rst

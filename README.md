@@ -64,3 +64,13 @@ If you have never used `tx` before you will need to run it once interactively to
 tx pull --language='fr'
 [?] Enter your api token:
 ```
+
+Another option is to generate manually the file `~/.transifexrc` including your API token:
+```
+[https://www.transifex.com]
+api_hostname = https://api.transifex.com
+hostname = https://www.transifex.com
+password = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+username = api
+
+```

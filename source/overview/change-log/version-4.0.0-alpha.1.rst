@@ -130,7 +130,7 @@ New features to develop
 * Clustering
 * Large catalogs / Better support of batch operations (eg. privileges, new owner, validation) and large selection
 
-.. code-block:: json
+.. code-block::
 
   ":{"type":"too_many_clauses","reason":"maxClauseCount is set to 1024"}}}}]},"status":400}
 
