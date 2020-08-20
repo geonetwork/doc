@@ -9,27 +9,27 @@ Introduction
 
 A thesaurus is a list of concepts from a specialized field of knowledge. In a metadata catalog, concepts from a thesaurus can be assigned to a metadata record (as keywords) as a way of associating it with one or more concepts from a field of knowledge. For example, a record may be assigned a keyword 'AGRICULTURE - Crops' meaning that the record describes a resource or activity relating to crops in the field of Agriculture. It's a good practice to look for existing thesauri before creating your own thesaurus.
 
-In |project_name|, the process of assigning keywords to a metadata record takes place in the metadata editor. The user can choose concepts from one or more thesauri to associate the record with the concepts described by those concepts. This process is supported for both ISO19115/19139 and dublin core metadata records using an thesaurus picker.
+In GeoNetwork, the process of assigning keywords to a metadata record takes place in the metadata editor. The user can choose concepts from one or more thesauri to associate the record with the concepts described by those concepts. This process is supported for both ISO19115/19139 and dublin core metadata records using an thesaurus picker.
 
 Concepts within a field of knowledge or in different fields of knowledge may be related or even be equivalent. For example, in a thesaurus describing geographic regions, the Australian state of 'Tasmania' is a specialization of the country of Australia. As an example of overlapping concepts in different fields, a thesaurus describing science activities in the field of global change may have concepts relating to agricultural activities that will be equivalent to terms from a thesaurus that describes the themes used in a map series. 
 
-In |project_name|, thesauri are represented as SKOS (http://www.w3.org/TR/skos-reference) and stored in an application/xml+rdf encoding. SKOS captures concepts and relationships between concepts. SKOS thesauri can be imported from standalone files or they can be generated from ISO19135 register records in a |project_name| catalog. ISO19135 (more on this below) not only captures the concepts and relationships between the concepts, but (amongst other things) how the concepts have evolved and most importantly, who has contributed to and managed the evolution of the concepts and the thesauri itself.
+In GeoNetwork, thesauri are represented as SKOS (http://www.w3.org/TR/skos-reference) and stored in an application/xml+rdf encoding. SKOS captures concepts and relationships between concepts. SKOS thesauri can be imported from standalone files or they can be generated from ISO19135 register records in a GeoNetwork catalog. ISO19135 (more on this below) not only captures the concepts and relationships between the concepts, but (amongst other things) how the concepts have evolved and most importantly, who has contributed to and managed the evolution of the concepts and the thesauri itself.
 
 External, Local and Register Thesauri
 -------------------------------------
 
-There are three types of thesaurus in |project_name|. The different types are based on where the thesaurus comes from:
+There are three types of thesaurus in GeoNetwork. The different types are based on where the thesaurus comes from:
 
 - *External*: A thesaurus managed by an external organisation and imported as a SKOS file. It is flagged to ``external`` which means that users are not allowed to edit the thesaurus.
 
-- *Local*: A thesaurus built in the |project_name| thesaurus editor and stored as a SKOS file. It is flagged as ``local`` which means that users are allowed to edit the thesaurus.
+- *Local*: A thesaurus built in the GeoNetwork thesaurus editor and stored as a SKOS file. It is flagged as ``local`` which means that users are allowed to edit the thesaurus.
 
-- *Register*: A SKOS thesaurus created from an ISO19135 register record. Users can edit the thesaurus by changing the content of the ISO19135 register record in the |project_name| metadata editor and then regenerating the thesaurus. Users cannot edit the thesaurus in thesaurus manager.
+- *Register*: A SKOS thesaurus created from an ISO19135 register record. Users can edit the thesaurus by changing the content of the ISO19135 register record in the GeoNetwork metadata editor and then regenerating the thesaurus. Users cannot edit the thesaurus in thesaurus manager.
 
 ISO19115/19139 Thesaurus Categories
 -----------------------------------
 
-All thesauri in |project_name| are categorized using the code list values for the gmd:MD_KeywordTypeCode element from ISO19115/19139. The categories and their meanings are given below but can also be found in http://www.isotc211.org/2005/resources/gmxCodelist.xml:
+All thesauri in GeoNetwork are categorized using the code list values for the gmd:MD_KeywordTypeCode element from ISO19115/19139. The categories and their meanings are given below but can also be found in http://www.isotc211.org/2005/resources/gmxCodelist.xml:
 
 =========================== ==================================================================================
 ISO Thesaurus Category      Description
@@ -44,7 +44,7 @@ discipline                  Thesaurus has concepts identifying a branch of instr
 SKOS format
 -----------
 
-The Simple Knowledge Organisation Systems (SKOS) http://www.w3.org/2004/02/skos/ is an area of work developing specifications and standards to support the use of knowledge organisation systems (KOS) such as thesauri, classification schemes. This format is used by |project_name| to store thesaurus information.
+The Simple Knowledge Organisation Systems (SKOS) http://www.w3.org/2004/02/skos/ is an area of work developing specifications and standards to support the use of knowledge organisation systems (KOS) such as thesauri, classification schemes. This format is used by GeoNetwork to store thesaurus information.
 
 A concept is defined by an identifier, a preferred label, a definition and links with other concepts. Labels and definitions could be stored in multiple languages (using the xml:lang attributes). Three type of links between concepts have been defined in the SKOS format:
 
@@ -60,7 +60,7 @@ For example, a concept ``ABLETTE`` could be defined as follow with a label in Fr
         <skos:broader rdf:resource="http://www.oieau.org/concept#9f25ece36d04776e09492c66627cccb9"/>
     </skos:Concept>
 
-|project_name| supports multilingual thesauri (e.g. Agrovoc). Search and editing takes place in the current user interface language (i.e. if the interface is in English, when editing metadata, |project_name| will only search for concept in English).
+GeoNetwork supports multilingual thesauri (e.g. Agrovoc). Search and editing takes place in the current user interface language (i.e. if the interface is in English, when editing metadata, GeoNetwork will only search for concept in English).
 
 We use SKOS to represent thesauri in GeoNetwork because:
 

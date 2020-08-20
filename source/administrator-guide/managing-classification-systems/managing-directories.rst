@@ -232,7 +232,7 @@ JCS handles large caches intelligently by:
 - providing cache persistence: the cache is saved to disk when the web application is shutdown and restores the cache from disk when restarting
 
 
-You can configure JCS parameters in |project_name| using the JCS configuration file in **INSTALL_DIR/web/geonetwork/WEB-INF/classes/cache.ccf**.
+You can configure JCS parameters in GeoNetwork using the JCS configuration file in **INSTALL_DIR/web/geonetwork/WEB-INF/classes/cache.ccf**.
 
 Some operations in the catalog (such as harvesting) that generate metadata fragments,
 will automatically refresh the XLink cache when a new fragment is generated.

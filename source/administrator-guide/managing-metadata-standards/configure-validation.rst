@@ -10,7 +10,7 @@ By default, ISO19139 proposes validation using:
 
 - INSPIRE rules (TG v1.3)
 
-- |project_name| rules (only related to multilingual records)
+- GeoNetwork rules (only related to multilingual records)
 
 - URL checker
 

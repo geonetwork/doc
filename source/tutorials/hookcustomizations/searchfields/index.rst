@@ -3,7 +3,7 @@
 Search Fields
 #############
 
-Lucene is the search engine used by |project_name|. All Lucene configuration is defined in WEB-INF/config-lucene.xml.
+Lucene is the search engine used by GeoNetwork. All Lucene configuration is defined in WEB-INF/config-lucene.xml.
 
 In some cases it’s relevant to modify or extend the search fields of the metadata index. For example to add a field (which is then searchable or can be used in a default view) or change the content of the field is created from the metadata (indexation).
 

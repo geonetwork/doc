@@ -3,7 +3,7 @@
 Using Events
 ############
 
-From |project_name| 3.0.x on, there are a number of events you can listen to on your Java code.
+From GeoNetwork 3.0.x on, there are a number of events you can listen to on your Java code.
 
 Enabling Event Listeners
 ========================
@@ -46,7 +46,7 @@ Then create the file custom/src/main/resources/config-spring-geonetwork.xml to t
        <bean class="org.fao.geonet.events.listeners.MyCustomListener" ></bean>
      </beans>
 
-This file should contain a list of all the classes that listen to events inside |project_name| scope.
+This file should contain a list of all the classes that listen to events inside GeoNetwork scope.
 
 Simple Example
 ==============
@@ -77,7 +77,7 @@ We can add a simple example listener like this one, which will print a string ev
 For example, we can call an external REST API that gets triggered every time a Metadata gets removed or updated.
 
 
-|project_name| API
-==================
+GeoNetwork API
+==============
 
-There is also a new API you can use to interact with |project_name| from an external script. See more on :ref:`api-guide`.
+There is also a new API you can use to interact with GeoNetwork from an external script. See more on :ref:`api-guide`.

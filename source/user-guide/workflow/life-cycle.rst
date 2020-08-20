@@ -78,7 +78,7 @@ provide specific behaviour:
 A default set of actions is provided. These can be customized or replaced by sites 
 that wish to provide different or more extensive behaviour.
 
-A default pair of metadata status change actions defined in Java is provided with |project_name| using
+A default pair of metadata status change actions defined in Java is provided with GeoNetwork using
 the class org.fao.geonet.services.metadata.DefaultStatusActions.java (see :code:`core/src/main/java/org/fao/geonet/kernel/metadata/DefaultStatusActions.java`).
 
 When a status changes
@@ -147,7 +147,7 @@ These actions can be replaced with different behaviours by:
 
 * writing Java code in the form of a new class that implements the interface defined 
   in ``org.fao.geonet.services.metadata.StatusActions.java`` and placing a compiled version 
-  of the class in the |project_name| class path
+  of the class in the GeoNetwork class path
 
 * defining the name of the new class in the statusActionsClass configuration 
   parameter in ``web/geonetwork/WEB-INF/config.xml``

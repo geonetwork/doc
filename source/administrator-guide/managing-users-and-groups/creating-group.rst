@@ -31,6 +31,6 @@ data *Download*, *Interactive Map* access and display of the record in the *Feat
 
 *Editing* defines the groups for which editors can edit the metadata record.
 
-*Notify* defines what Groups are notified when a file managed by |project_name| is downloaded.
+*Notify* defines what Groups are notified when a file managed by GeoNetwork is downloaded.
 
 Below is an example of the privileges management table related to a dataset.

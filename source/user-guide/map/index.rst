@@ -3,16 +3,16 @@
 Maps and dataset visualisation
 ==============================
 
-The map component in |project_name| serves two goals:
+The map component in GeoNetwork serves two goals:
 
 - The map viewer provides a way for users to interactively assess the relevance of a resource discovered in the catalog.
 
-- |project_name| can be used as a mapping application to create maps that can be printed or shared with others. The maps itself can even be registered in the catalogue as assets.
+- GeoNetwork can be used as a mapping application to create maps that can be printed or shared with others. The maps itself can even be registered in the catalogue as assets.
 
 .. Note::
 
-    Instead of using the embedded map viewer, |project_name| offers functionality to use an external map viewer (for example an existing WebGIS framework in your organisation).
-    An administrator can configure |project_name| in such a way that it is connected to an external web map application. In such a configuration all map interaction is delegated
+    Instead of using the embedded map viewer, GeoNetwork offers functionality to use an external map viewer (for example an existing WebGIS framework in your organisation).
+    An administrator can configure GeoNetwork in such a way that it is connected to an external web map application. In such a configuration all map interaction is delegated
     to the external application. See :ref:`user-interface-config-mappage`.
 
 Map viewer
@@ -55,9 +55,9 @@ The map viewer supports *Featureinfo*, to retrieve information by clicking on a 
 Store and share maps
 --------------------
 
-A map consists of a background layer and a number of thematic overlays. A format to combine layers, projection and bounds (area of interest) has been adopted by OGC as the OWS Context standard. Besides |project_name| there are a number of other applications supporting this standard.
+A map consists of a background layer and a number of thematic overlays. A format to combine layers, projection and bounds (area of interest) has been adopted by OGC as the OWS Context standard. Besides GeoNetwork there are a number of other applications supporting this standard.
 
-|project_name| uses OWSContext to store, share and load maps:
+GeoNetwork uses OWSContext to store, share and load maps:
 
 - Export a context to a local file, to restore the map later or share by email.
 

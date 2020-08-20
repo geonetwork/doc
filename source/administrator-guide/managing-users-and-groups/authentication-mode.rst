@@ -58,7 +58,7 @@ your environment updating the previous file or overriding the properties in the 
 Authorization Settings
 ======================
 
-When using LDAP, the user information and privileges for |project_name| could be defined from the LDAP attributes.
+When using LDAP, the user information and privileges for GeoNetwork could be defined from the LDAP attributes.
 
 User information
 ````````````````

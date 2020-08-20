@@ -1,6 +1,6 @@
 .. _gallery:
 
-Some |project_name| nodes
+Some GeoNetwork nodes
 #########################
 
 * http://catalogue.geo-ide.developpement-durable.gouv.fr/

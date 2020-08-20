@@ -94,9 +94,9 @@ When a harvester is removed, all metadata records associated with that harvester
 Multiple harvesting and hierarchies
 -----------------------------------
 
-Catalogues that use UUIDs to identify metadata records (eg. |project_name|) can be harvested several times without having to take care about metadata overlap.
+Catalogues that use UUIDs to identify metadata records (eg. GeoNetwork) can be harvested several times without having to take care about metadata overlap.
 
-As an example, consider the |project_name| harvesting type which allows one |project_name| node to harvest metadata records from another |project_name| node and the following scenario:
+As an example, consider the GeoNetwork harvesting type which allows one GeoNetwork node to harvest metadata records from another GeoNetwork node and the following scenario:
 
 #. Node (A) has created metadata (a)
 #. Node (B) harvests (a) from (A)
@@ -120,17 +120,17 @@ All the harvesters except for the THREDDS and OGC WFS GetFeature harvester creat
 
 For example, you may only be interested in harvesting the geographic extent and/or contact information from an external source and manually entering or maintaining the remainder of the content in the metadata record. You may also be interested in re-using the contact information for a person or organisation in more than one metadata record.
 
-To support this capability, both the WFS GetFeature Harvester and the THREDDS harvester, allow fragments of metadata to be harvested and linked or copied into a template record to create metadata records. Fragments that are saved into the |project_name| database are called subtemplates and can be used in more than one metadata record.
+To support this capability, both the WFS GetFeature Harvester and the THREDDS harvester, allow fragments of metadata to be harvested and linked or copied into a template record to create metadata records. Fragments that are saved into the GeoNetwork database are called subtemplates and can be used in more than one metadata record.
 
-As shown above, an example of a metadata fragment is the gmd:contactInfo element of an iso19139 document.  This element contains contact details for an individual or an organisation.  If a fragment is stored in the |project_name| database as a subtemplate for a given person or organisation, then this fragment can be referenced in metadata records where this organisation or individual is specified using an XML linking mechanism called XLink.
+As shown above, an example of a metadata fragment is the gmd:contactInfo element of an iso19139 document.  This element contains contact details for an individual or an organisation.  If a fragment is stored in the GeoNetwork database as a subtemplate for a given person or organisation, then this fragment can be referenced in metadata records where this organisation or individual is specified using an XML linking mechanism called XLink.
 
 
 HTTPS support
 -------------
 
-Harvesting between |project_name| nodes may require the HTTPS protocol. If harvesting from an https |project_name| URL, the server will need to have a trusted certificate available in a JVM keystore accessible to the |project_name| node running the harvest.
+Harvesting between GeoNetwork nodes may require the HTTPS protocol. If harvesting from an https GeoNetwork URL, the server will need to have a trusted certificate available in a JVM keystore accessible to the GeoNetwork node running the harvest.
 
-If you don't have a trusted certificate in the JVM keystore being used by |project_name|, the harvester may issue an exception like this when you try to harvest from the https |project_name|::
+If you don't have a trusted certificate in the JVM keystore being used by GeoNetwork, the harvester may issue an exception like this when you try to harvest from the https GeoNetwork::
 
     javax.net.ssl.SSLHandshakeException: 
        sun.security.validator.ValidatorException: PKIX path building failed: 
@@ -144,7 +144,7 @@ If you don't have a trusted certificate in the JVM keystore being used by |proje
     Caused by: sun.security.provider.certpath.SunCertPathBuilderException: 
        unable to find valid certification path to requested target
 
-The server certificate for the |project_name| server being harvested needs to be added to the JVM keystore with `keytool <http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html>`_ in order to be trusted.
+The server certificate for the GeoNetwork server being harvested needs to be added to the JVM keystore with `keytool <http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html>`_ in order to be trusted.
 
 An alternative way to add the certificate is to use a script like::
 
@@ -174,7 +174,7 @@ The script will add the certificate to the JVM keystore, if you run it as follow
 
 .. note :: Use this script at your own risk! Before installing a certificate in the JVM keystore as trusted, make sure you understand the security implications. 
 
-.. note :: After adding the certificate you will need to restart |project_name|.
+.. note :: After adding the certificate you will need to restart GeoNetwork.
 
 
 
@@ -189,7 +189,7 @@ The page shows a list of the currently defined harvesters and a set of buttons f
 
 #. *Select* Check box to select one or more harvesters. The selected harvesters will be affected by the first row of buttons (activate, deactivate, run, remove). For example, if you select three harvesters and press the Remove button, they will all be removed.
 #. *Name* This is the harvester name provided by the administrator.
-#. *Type* The harvester type (eg. |project_name|, WebDAV etc...).
+#. *Type* The harvester type (eg. GeoNetwork, WebDAV etc...).
 #. *Status* An icon showing current status. See :ref:`admin_harvesting_status` for the different icons and status descriptions.
 #. *Errors* An icon showing the result of the last harvesting run, which could have succeeded or not. See :ref:`admin_harvesting_status` for the different icons and error descriptions. Hovering the cursor over the icon will show detailed information about the last harvesting run.
 #. *Run at* and *Every*: Scheduling of harvester runs. Essentially the time of the day + how many hours between repeats and on which days the harvester will run.
@@ -247,7 +247,7 @@ a table, with some rows labelled as follows:
 - **Removed** - Number of metadata that have been removed locally because they are not present in the remote server anymore.
 - **Updated** - Number of metadata that are present locally but that needed to be updated because their last change date was different from the remote one.
 - **Unchanged** - Local metadata left unchanged. Their remote last change date did not change. 
-- **Unknown schema** - Number of skipped metadata because their format was not recognised by |project_name|.
+- **Unknown schema** - Number of skipped metadata because their format was not recognised by GeoNetwork.
 - **Unretrievable** - Number of metadata that were ready to be retrieved from the remote server but for some reason there was an exception during the data transfer process. 
 - **Bad Format** - Number of skipped metadata because they did not have a valid XML representation. 
 - **Does not validate** - Number of metadata which did not validate against their schema. These metadata were harvested with success but skipped due to the validation process. Usually, there is an option to force validation: if you want to harvest these metadata anyway, simply turn/leave it off.
@@ -278,7 +278,7 @@ You can choose the type of harvest you intend to perform and press *Add* to begi
 Harvest History
 ---------------
 
-Each time a harvester is run, it generates a status report of what was harvested and/or what went wrong (eg. exception report). These reports are stored in a table in the database used by |project_name|. The entire harvesting history for all harvesters can be recalled using the History button on the Harvesting Management page. The harvest history for an individual harvester can also be recalled using the History link in the Operations for that harvester.
+Each time a harvester is run, it generates a status report of what was harvested and/or what went wrong (eg. exception report). These reports are stored in a table in the database used by GeoNetwork. The entire harvesting history for all harvesters can be recalled using the History button on the Harvesting Management page. The harvest history for an individual harvester can also be recalled using the History link in the Operations for that harvester.
 
 Once the harvest history has been displayed it is possible to:
 

@@ -71,7 +71,7 @@ Query filter parameters
 You can search on any field(s) indexed in Lucene. For a complete reference see
 https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/index-fields/default.xsl
 
-Note you can query the Lucene index graphically,using a Java-based graphical tool such as `Luke <https://github.com/DmitryKey/luke>`_. Version `4.10.4 <https://github.com/DmitryKey/luke/releases/tag/luke-4.10.4.1/>`_ is required to work with the version of Lucene bundled with |project_name|. Download the jar file where you can access the |project_name| index files, then execute with:
+Note you can query the Lucene index graphically,using a Java-based graphical tool such as `Luke <https://github.com/DmitryKey/luke>`_. Version `4.10.4 <https://github.com/DmitryKey/luke/releases/tag/luke-4.10.4.1/>`_ is required to work with the version of Lucene bundled with GeoNetwork. Download the jar file where you can access the GeoNetwork index files, then execute with:
 
 ``java -jar luke-with-deps.jar`` 
 

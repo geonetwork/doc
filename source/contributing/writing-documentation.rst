@@ -5,7 +5,7 @@ Writing documentation
 #####################
 
 This section provides some guidelines for writing consistent documentation
-for |project_name|.
+for GeoNetwork.
 
 
 
@@ -66,13 +66,13 @@ If you want to get the latest translations for your build, run:
 Building the standards docs
 ===========================
 
-.. important:: Documentation about the standards and the editor configuration is built from the |project_name| source code using the ``schema-doc`` plugin. So do not manually edit the following files:
+.. important:: Documentation about the standards and the editor configuration is built from the GeoNetwork source code using the ``schema-doc`` plugin. So do not manually edit the following files:
 
 * docs/manuals/source/annexes/standards/*
 * docs/manuals/source/customizing-application/editor-ui/creating-custom-editor.rst
 
 Do not translate those files in Transifex. Translation must be done in the plugin itself.
-To update those files, clone the |project_name| repository and use the following commands:
+To update those files, clone the GeoNetwork repository and use the following commands:
 
 
 .. code-block:: shell

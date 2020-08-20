@@ -8,7 +8,7 @@ Some organisations require the definition of metadata identifiers using `URN <ht
 
 From the ``admin console`` > ``metadata and template`` > ``Metadata identifier templates`` users can customise the behaviour of the catalog when creating new metadata:
 
-- Create a random UUID. This is the "standard" behaviour of |project_name| and it's set as default.
+- Create a random UUID. This is the "standard" behaviour of GeoNetwork and it's set as default.
 
 - Use metadata URN templates to define the metadata identifiers. This option allows the user to enter a metadata identifier from the metadata URN templates defined by an administrator user.
 

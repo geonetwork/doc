@@ -1,6 +1,6 @@
 .. _geonetwork-api:
 
-|project_name| API
+GeoNetwork API
 ##############
 
 The REST API and documentation are available in your catalog at page http://localhost:8080/geonetwork/doc/api/ and linked from the footer on the home page.

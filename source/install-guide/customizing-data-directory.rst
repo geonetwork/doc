@@ -7,8 +7,8 @@ The data directory is the location on the file system where
 the catalog stores much of its custom configuration and uploaded files.
 This configuration defines such things as:
 
-* What thesaurus is used by |project_name|?
-* What schema is plugged in |project_name|?
+* What thesaurus is used by GeoNetwork?
+* What schema is plugged in GeoNetwork?
 
 The data directory also contains a number of support files used by the catalog
 for various purposes:
@@ -141,7 +141,7 @@ Using a S3 object storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your infrastructure doesn't have a persistent storage available, you can configure
-|project_name| to use an Amazon S3 (or compatible) object storage to store the images and data.
+GeoNetwork to use an Amazon S3 (or compatible) object storage to store the images and data.
 
 In order to do that, you must use a custom bean configuration. Replace the
 :code:`filesystemStore`, :code:`resourceStore` and :code:`resources` beans in

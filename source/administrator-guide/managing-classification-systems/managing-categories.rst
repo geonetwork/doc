@@ -3,7 +3,7 @@
 Managing categories
 ###################
 
-|project_name| has a concept of categories that can be assigned to metadata documents, but these are not represented in the metadata. So when the metadata is exported, the category will be lost. You can use these categories to separate documents into groups, without changing the actual content of the metadata. Categories can be used to filter a search result, or limit the output of a custom csw endpoint.
+GeoNetwork has a concept of categories that can be assigned to metadata documents, but these are not represented in the metadata. So when the metadata is exported, the category will be lost. You can use these categories to separate documents into groups, without changing the actual content of the metadata. Categories can be used to filter a search result, or limit the output of a custom csw endpoint.
 
 To assign a category to a metadata document. Go to the metadata modification form and select the requested category from the pull down in the menu. Then save your metadata.
 

@@ -3,7 +3,7 @@
 Separate your code
 ##################
 
-|project_name| is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separatedly.
+GeoNetwork is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separatedly.
 
 
 .. image:: img/listprojects.png
@@ -12,7 +12,7 @@ Create your own project
 =======================
 
 
-The best way to work with |project_name| and easily upgrade later is add your own Maven project(s) to the Maven build stack, so |project_name| code remains unaltered and your changes are decoupled.
+The best way to work with GeoNetwork and easily upgrade later is add your own Maven project(s) to the Maven build stack, so GeoNetwork code remains unaltered and your changes are decoupled.
 
 To do this, go to the root folder of the source code and create a new folder. This can be done on a GNU/Linux terminal using the following command:
 
@@ -109,4 +109,4 @@ And on the same file, we should also add our resources folder to the build (if w
    ${build.webapp.resources}
    </resourcesAsCSV>
 
-Now, if we build |project_name|, it will also build and add our project.
+Now, if we build GeoNetwork, it will also build and add our project.

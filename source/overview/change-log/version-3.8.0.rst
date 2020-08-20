@@ -54,7 +54,7 @@ New features/fixes
 
 * Harvester
 
-  * `|project_name| / Add paging for better support of large catalogues <https://github.com/geonetwork/core-geonetwork/pull/3916>`_
+  * `GeoNetwork / Add paging for better support of large catalogues <https://github.com/geonetwork/core-geonetwork/pull/3916>`_
 
   * `THREDDS / Modernise and simplify harvester <https://github.com/geonetwork/core-geonetwork/pull/3936>`_
 

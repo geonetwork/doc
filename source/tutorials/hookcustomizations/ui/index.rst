@@ -5,7 +5,7 @@ Adding new User Interface
 
 To completely understand this part of the tutorial, it would be good to be familiarized with the :ref:`tuto-customui` tutorial first.
 
-In |project_name| you can have more than one style installed on the same deployment. You can select which style to use on the Settings manager. Also, you can use the parameter "?view=$name" to force a specific style on a page request.
+In GeoNetwork you can have more than one style installed on the same deployment. You can select which style to use on the Settings manager. Also, you can use the parameter "?view=$name" to force a specific style on a page request.
 
 Create an empty style
 ========================
@@ -28,7 +28,7 @@ Next we create a new file on custom/src/main/resources/catalog/views/custom/temp
 
 .. code:: html
 
-   <div>This is my custom |project_name|</div>
+   <div>This is my custom GeoNetwork</div>
 
 Finally we have to tell the wro4j library where our files will be. Edit the file web-ui/src/main/resources/WEB-INF/classes/web-ui-wro-sources.xml and add our folders:
 
@@ -45,7 +45,7 @@ Finally we have to tell the wro4j library where our files will be. Edit the file
      <cssSource webappPath="/catalog/lib/bootstrap-table/dist" />
    </require>
 
-Now, if we build, deploy and enter |project_name|, we can use this new style called "custom": http://localhost:8080/geonetwork/srv/eng/catalog.search?view=custom
+Now, if we build, deploy and enter GeoNetwork, we can use this new style called "custom": http://localhost:8080/geonetwork/srv/eng/catalog.search?view=custom
 
 Import default style
 ====================
@@ -73,12 +73,12 @@ Finally, replace the file custom/src/main/resources/catalog/views/custom/templat
 
 You hace now a duplicate of the default style you can improve with your own customizations.
 
-One of the main advantages of having your code decoupled is that you can override some of the files that comes by default on the |project_name| user interface and this overriding will not collide with future upgrades of the code.
+One of the main advantages of having your code decoupled is that you can override some of the files that comes by default on the GeoNetwork user interface and this overriding will not collide with future upgrades of the code.
 
 Modify Search Results
 =====================
 
-One of the most common customizations on the styling of |project_name| is to modify the appearance of the search result list. We can point to a different template on the config.js file. Edit the file custom/src/main/resources/catalog/views/custom/config.js and modify the property searchSettings.resultViewTpls.
+One of the most common customizations on the styling of GeoNetwork is to modify the appearance of the search result list. We can point to a different template on the config.js file. Edit the file custom/src/main/resources/catalog/views/custom/config.js and modify the property searchSettings.resultViewTpls.
 
 .. code:: javascript
 

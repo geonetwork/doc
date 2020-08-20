@@ -11,7 +11,7 @@ Next in each schema-plugin you can define how the new field is filled from the m
 
 
 
-`Lucene <http://lucene.apache.org/java/docs/index.html>`_ is the search engine used by |project_name|. All Lucene configuration
+`Lucene <http://lucene.apache.org/java/docs/index.html>`_ is the search engine used by GeoNetwork. All Lucene configuration
 is defined in WEB-INF/config-lucene.xml.
 
 Add a search field

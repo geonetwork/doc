@@ -5,7 +5,7 @@ Creating user
 #############
 
 
-To add a new user to the |project_name| system, please do the following:
+To add a new user to the GeoNetwork system, please do the following:
 
 #. Select the *Administration* button in the menu. On the Administration page, select *User management*.
 
