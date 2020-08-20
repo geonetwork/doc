@@ -4,7 +4,7 @@ rm img/*.png
 cat <<EOT >> gallery.rst
 .. _gallery:
 
-Some |project_name| nodes
+Some GeoNetwork nodes
 #####################
 EOT
 
