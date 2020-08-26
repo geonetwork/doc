@@ -54,7 +54,7 @@ Java Runtime Environment
 
 After you have clicked through the first steps (introduction and license agreement), you will be asked
 to specify the desired Java Runtime Environment (JRE).
-GeoNetwork requires a `64-bit <Running GeoNetwork in 32-bit mode>`_ Java 8 (1.8) Runtime Environment.
+GeoNetwork requires a `64-bit <#running-geonetwork-in-32-bit-mode>`_ Java 8 (1.8) Runtime Environment.
 
 .. image:: img/win-setup-java.png
 
@@ -67,7 +67,7 @@ If the installer cannot find a JRE 8, the setup process will abort.
 Install location
 ----------------
 
-The Windows installer will setup GeoNetwork as a `64-bit <Running GeoNetwork in 32-bit mode>`_ application. This means, that GeoNetwork will
+The Windows installer will setup GeoNetwork as a `64-bit <#running-geonetwork-in-32-bit-mode>`_ application. This means, that GeoNetwork will
 be installed in the Windows 64-bit Program Files directory by default.
 On most systems, this will be ``C:\Program Files\GeoNetwork``.
 However, if required, you can change this directory to some other location, provided that you have write access to that directory.
