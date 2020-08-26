@@ -7,7 +7,7 @@ If you are a Windows user and you want to quickly install GeoNetwork on your mac
 the easiest way to do so is by running the Windows Setup. The installation wizard will guide you
 through the setup process.
 
-Please download an installer for the desired GeoNetwork version `here <https://my.geocat.net/dl.php?type=d&id=xx>`__
+Please download an installer for the desired GeoNetwork version `here <https://my.geocat.net/download/category/6/GeoNetwork.html>`__
 and double-click the GeoNetwork-install-<version>.exe file to start the installation process.
 
 .. note::
