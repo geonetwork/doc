@@ -36,15 +36,13 @@ The installer will guide you through the following steps:
 
 5. `Start Menu folder`_
 
-6. `Installation components`_
+6. `Webserver port`_
 
-7. `Webserver port`_
+7. `Installation type`_
 
-8. `Installation type`_
+8. Summary
 
-9. Summary
-
-10. Installation
+9. Installation
 
 Most steps are pretty self-explanatory, but others might require some background information.
 
@@ -97,21 +95,6 @@ The following shortcuts will be created:
 - **Start GeoNetwork**: Starts the application.
 
 - **Stop GeoNetwork**: Stops the application.
-
-
-Installation components
------------------------
-
-The GeoNetwork core must always be installed and cannot be deselected.
-If you wish to install the European Union INSPIRE thesauri and schematrons, please also select the ``INSPIRE Configuration``
-component.
-
-.. image:: img/win-setup-options.png
-
-.. note::
-    At the moment, the installer cannot be used to add or remove components after the installation has been completed.
-    This means that if you wish to add or remove the ``INSPIRE Configuration`` component later, you need to do this
-    manually, or you will have to uninstall and re-install GeoNetwork.
 
 
 Webserver port
