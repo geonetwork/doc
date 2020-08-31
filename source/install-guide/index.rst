@@ -15,10 +15,10 @@ There are several different ways to install GeoNetwork:
 .. toctree::
    :maxdepth: 2
 
-   installing-from-the-installer.rst
    installing-from-zip.rst
    installing-from-war-file.rst
    installing-from-source-code.rst
+   Installing a third-party distribution <https://geonetwork-opensource.org/downloads.html#third-party-distributions>
    installing-index.rst
 
 

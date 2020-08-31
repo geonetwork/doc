@@ -10,8 +10,6 @@ By default, an `H2 <http://www.h2database.com/html/main.html>`_ database is conf
 and created when the application first starts. The H2 database named ``gn.h2.db``
 is created:
 
-* In the ``C:\ProgramData\GeoNetwork\`` directory when using the :ref:`Windows installer <installing-from-the-installer>`;
-
 * In the ``jetty`` folder of the GeoNetwork application folder when using the :ref:`ZIP distribution <installing-from-zip>`;
 
 * In the ``bin`` folder of Tomcat when deploying the :ref:`WAR <installing-from-war-file>` on Tomcat (started using ``startup.sh``).

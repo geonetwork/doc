@@ -1,10 +1,9 @@
 .. _installing-from-zip:
 
-Installing using a ZIP file (Linux/macOS)
-#########################################
+Installing using a ZIP file
+###########################
 
-For Linux or macOS users (or advanced Windows users), a zipped GeoNetwork distribution is available,
-that includes the following:
+For Linux, macOS and Windows users, a zipped GeoNetwork distribution is available that includes the following:
 
 - GeoNetwork application
 
