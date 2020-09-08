@@ -79,24 +79,27 @@ However the best guidance here is to recommend to any data provider to enable
 and then disable the web proxy. CORS fixes the cross browser communication limitation
 in the proper way.
 
-2 modes are available:
-
-* NONE: allow all (default before 3.10.3)
-* DB_LINK_CHECK (default since 3.10.3):
-
-  * allow all for authenticated user
-  * allow only host registered in metadata link table
-
-
 If set up in an incorrect way, remote users may get access to resources
 that should not be accessible to them, or impersonate themselves as the geonetwork server
 while browsing the web.
 
-It is recommended to use the DB_LINK_CHECK mode and the following rules will apply:
+GeoNetwork has 2 modes to limit the access via the proxy. The configuration of this mode is defined in `WEB-INF/web.xml`.
 
-* Authenticated user can use the proxy.
+.. code-block:: xml
 
-* For anonymous user, if the host of the URL requested is not used in any
+    <init-param>
+      <param-name>securityMode</param-name>
+      <param-value>NONE</param-value>
+    </init-param>
+
+* NONE: (dis)allow certain domains via security configuration (default before 3.10.3)
+* DB_LINK_CHECK (default since 3.10.3)
+
+It is recommended to use the DB_LINK_CHECK mode. The following rules apply:
+
+* Authenticated users can use the proxy to all domains.
+
+* For anonymous users, if the host of the URL requested is not used in any
   metadata record links, then a NotAllowedException is returned. If a WMS URL is registered, all GetCapabilities, GetFeatureInfo will be
   accepted. That's why only a host check is done.
 
@@ -105,14 +108,15 @@ It is recommended to use the DB_LINK_CHECK mode and the following rules will app
   catalog session.
 
 * Catalog reviewers have to use the metadata link analysis
-  tools to register links allowed for the proxy. In the future we may
-  trigger that as a background task to have an up to date list of links.
-  For now, if the table is empty the exception highlight the fact that the
-  link analysis tools should be used to populate the list.
+  tool to register links allowed for the proxy. The tool is available at 'Record and link analysis' 
+  in the `Admin > Statistics & status` menu. In the future we may
+  trigger link analysis as a background task to have an up to date list of links.
+  For now, if the table is empty, the exception highlights the fact that the
+  link analysis tool should be used to populate the list.
 
-One issue that anonymous user can encountered is if using the map viewer and the user
-adds a WMS/WFS service URL which is not registered in any metadata records and that has
-not CORS enable. User will not be able to any layers from those services.
+One issue that anonymous users can encounter is if using the map viewer and the user
+adds a WMS/WFS service URL which is not registered in any metadata records and which has
+no CORS enabled. The user will not be able to add any layers from those services.
 
 
 
