@@ -286,7 +286,177 @@ Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporary:
 
 .. figure:: img/setting-log-level.png
 
+Configuring LDAP - Hierarchy
+============================
 
+A slightly different method for LDAP configuration was introduced in mid-2020.
+
+This extends the original configuration infrastructure (original configurations still work without any changes).
+
+Before you start configuring, you will need to know;
+
+#. URL to your LDAP Server
+#. Username/password to login to the LDAP Server (to execute queries)
+#. LDAP query to find a user (given what they type in on the login screen)
+#. Details of how to convert the LDAP user's attributes to GeoNetwork user attributes
+#. LDAP query to find groups a user is a member of
+#. How to convert a LDAP group to a GeoNetwork Group/Profile
+
+.. note:: There is a `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ that goes into details for how to configure LDAP including setting up a pre-configured LDAP server (using Apache Directory Studio) for testing/debugging/learning.
+
+Configuring LDAP Beans (Hierarchy)
+``````````````````````````````````
+
+GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see the `README.md <https://github.com/geonetwork/core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md>`_ or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
+
+1. Configure the `contextSource` bean with a reference to your LDAP server and a user that can execute LDAP queries.
+
+   .. code-block:: xml
+
+    <bean id="contextSource"   class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+        <constructor-arg value=“ldap://localhost:3333/dc=example,dc=com"/>
+
+        <property name="userDn" value="cn=admin,ou=GIS Department,ou=Corporate Users,dc=example,dc=com"/>
+        <property name="password" value="admin1"/>
+    </bean>
+
+2. Configure the `ldapUserSearch` bean with the query used to find the user (given what was typed in the login page).
+
+   NOTE: Set `searchSubtree` to `true` to do a recursive search of the LDAP.  Use `searchBase` to control which directory the search starts in ("" means start from the root).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserSearch" class="…">
+       <constructor-arg name="searchBase" value=""/>
+       <constructor-arg name="searchFilter" value="(sAMAccountName={0})"/>
+       <constructor-arg name="contextSource" ref="contextSource"/>
+
+       <property name="searchSubtree" value="true"/>
+    </bean>
+
+3. Configure the `ldapUserContextMapper` bean with how to convert the LDAP user's attributes to GeoNetwork user attributes (see the original configuration documentation, above).
+
+   NOTE: The `value` portion has two parts.  The first part is the name of LDAP attribute (can be blank).  The second part is the default value if the LDAP attribute is missing or empty (see the original configuration documentation, above).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class=“LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+        <property name="mapping">
+          <map>
+            <entry key="name" value="cn,"/>
+            <entry key="surname" value="sn,"/>
+            <entry key="mail" value="mail,"/>
+            <entry key="organisation" value=","/>
+            <entry key="address" value=","/>
+            <entry key="zip" value=","/>
+            <entry key="state" value=","/>
+            <entry key="city" value=","/>
+            <entry key="country" value=","/>
+
+            <entry key="profile" value=",RegisteredUser"/>
+            <entry key="privilege" value=",none"/>
+          </map>
+        </property>
+
+    </bean>
+
+4. Continue configuring the `ldapUserContextMapper` bean so the LDAP can also provide group/profile roles for the user.
+
+   NOTE: The `ldapMembershipQuery` is the LDAP directory where the membership query will be start ("" means start at the root of the LDAP).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class="LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+        <property name="importPrivilegesFromLdap" value=“true"/>
+
+        <!-- typically, don't want GN to modify the LDAP server! -->
+        <property name="createNonExistingLdapGroup" value="false" />
+        <property name="createNonExistingLdapUser" value="false" />
+        <property name="ldapManager" ref="ldapUserDetailsService" />
+
+        <property name="membershipSearchStartObject" value=""/>
+        <property name="ldapMembershipQuery" value="(&amp;(objectClass=*)(member=cn={2})(cn=GCAT_*))"/>
+
+    </bean>
+
+5. Continue configuring the `ldapUserContextMapper` bean so the LDAP roles can be converted to GeoNetwork Groups/Profiles.
+
+   NOTE: You can use multiple `ldapRoleConverters`.
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class="LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+       <property name="ldapRoleConverters">
+         <util:list>
+           <ref bean="ldapRoleConverterGroupNameParser"/>
+         </util:list>
+       </property>
+
+    </bean>
+
+There are currently two ways to convert an LDAP group to GeoNetwork Groups/Profiles.
+
+
+* The `LDAPRoleConverterGroupNameParser`, which works the same as the original LDAP configuration.  It uses a regular expression to parse the LDAP group name into a GeoNetwork Group/Profile.  This will convert the LDAP role `GCAT_GENERAL_EDITOR` into the GeoNetwork group `GENERAL` with Profile `Editor.`
+
+  .. code-block:: xml
+
+    <bean id="ldapRoleConverterGroupNameParser"  class="LDAPRoleConverterGroupNameParser">
+
+        <property name="ldapMembershipQueryParser" value="GCAT_(.*)_(.*)"/>
+        <property name="groupIndexInPattern" value="1"/>
+        <property name="profileIndexInPattern" value=“2"/>
+
+        <property name="profileMapping">
+          <map>
+            <entry key="ADMIN" value="Administrator"/>
+            <entry key="EDITOR" value="Editor"/>
+          </map>
+        </property>
+
+    </bean>
+
+* There is also a more direct way using `LDAPRoleConverterGroupNameConverter`.  This directly converts the LDAP group name into a list of GeoNetwork Groups/Profiles.
+
+  .. code-block:: xml
+
+    <bean id=“ldapRoleConverterGroupNameParser" class="LDAPRoleConverterGroupNameConverter">
+
+        <property name="convertMap">
+          <map>
+
+            <entry>
+                <key>
+                    <value>HGIS_GeoNetwork_Admin</value>
+                </key>
+                <list>
+
+                    <bean class="org.fao.geonet.kernel.security.ldap.LDAPRole">
+                      <constructor-arg name="groupName" type="java.lang.String" value="myGroup"/>
+                      <constructor-arg name="profileName" type="java.lang.String" value="Administrator"/>
+                    </bean>
+
+                </list>
+            </entry>
+            <entry>
+              <key>
+                    <value>HGIS_GeoNetwork_Editor</value>
+              </key>
+              <list>
+
+                <bean class="org.fao.geonet.kernel.security.ldap.LDAPRole">
+                  <constructor-arg name="groupName" type="java.lang.String" value=“myGroup"/>
+                  <constructor-arg name="profileName" type="java.lang.String" value="Editor"/>
+                </bean>
+
+              </list>
+            </entry>
+          </map>
+        </property>
+    </bean>
 
 Configuring CAS
 ---------------
