@@ -304,10 +304,19 @@ Before you start configuring, you will need to know;
 
 .. note:: There is a `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ that goes into details for how to configure LDAP including setting up a pre-configured LDAP server (using Apache Directory Studio) for testing/debugging/learning.
 
+.. note::
+   Should I use the Hierarchy or Original configuration?
+
+   If you already have an existing (Original) configuration, there's no need to move to the new one.  Most of the code between the two is the same.
+
+   If you are starting a new configuration, I would recommend the Hierarchy configuration.  It's a little simpler and supported by test cases and test infrastructure.  It also supports LDAPs where users/groups are in multiple directories.
+
 Configuring LDAP Beans (Hierarchy)
 ``````````````````````````````````
 
 GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see the `README.md <https://github.com/geonetwork/core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md>`_ or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
+
+.. note:: To use this configuration, uncomment the "<import resource="config-security-ldap-recursive.xml"/>" line in `web/src/main/webapp/WEB-INF/config-security/config-security.xml`
 
 1. Configure the `contextSource` bean with a reference to your LDAP server and a user that can execute LDAP queries.
 
