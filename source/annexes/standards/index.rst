@@ -3,7 +3,7 @@
 Standards
 #########
 
-The catalogue support the following standards:
+The catalog support the following standards:
 
 .. figure:: img/standardlist.png
 

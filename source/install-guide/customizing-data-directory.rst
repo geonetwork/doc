@@ -65,7 +65,7 @@ The data directory variable can be set using:
  - Bean configuration (added in version 3.0.4)
 
 
-For java environment variable and servlet context parameter use:
+For Java environment variable and servlet context parameter use:
 
  - <webappName>.dir and if not set using geonetwork.dir
 
@@ -213,7 +213,7 @@ The data directory contains:
 Advanced data directory configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All sub-directories could be configured separately using java system property.
+All sub-directories could be configured separately using Java system property.
 For example, to put index directory in a custom location use:
 
  - <webappName>.lucene.dir and if not set using:
@@ -222,7 +222,7 @@ For example, to put index directory in a custom location use:
 
 Examples:
 
-* Add the following java properties to start-geonetwork.sh script:
+* Add the following Java properties to start-geonetwork.sh script:
 
 
 .. code-block:: shell

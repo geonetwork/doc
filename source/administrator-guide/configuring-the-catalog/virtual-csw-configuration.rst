@@ -13,7 +13,7 @@ This feature adds the capability to create custom CSW entry points that apply ex
 * Define CSW entry points to deliver only metadata related to specific theme/s: climate, boundaries, etc.
 
 
-The ``filter`` parameter value should use the Lucene query parser syntax (see http://lucene.apache.org/java/2_9_1/queryparsersyntax.html) and is use in these CSW operations:
+The ``filter`` parameter value should use the `Lucene query parser syntax <http://lucene.apache.org/java/2_9_1/queryparsersyntax.html>`__, which is applied to these CSW operations:
 
 * *GetRecords*: the ``filter`` is applied with the CSW query as an extra query criteria.
 * *GetRecordById*: the ``filter`` is applied with the metadata ``id`` requested as an extra query criteria.

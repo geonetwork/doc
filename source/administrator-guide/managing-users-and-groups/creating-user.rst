@@ -5,7 +5,7 @@ Creating user
 #############
 
 
-To add a new user to the GeoNetwork system you do the following:
+To add a new user to the GeoNetwork system, please do the following:
 
 #. Select the *Administration* button in the menu. On the Administration page, select *User management*.
 
@@ -19,4 +19,4 @@ To add a new user to the GeoNetwork system you do the following:
 
 #. Assign the user to a *group* (see :ref:`creating-group`);
 
-#. Click on *Save*.
+#. Click *Save*.

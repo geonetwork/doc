@@ -13,7 +13,7 @@ Check the ["Writing documentation" guide](https://geonetwork-opensource.org/manu
 
 # Build
 
-To quickly build the english docs:
+To quickly build the English docs:
 
 ```
 make html_eng
@@ -25,7 +25,7 @@ A build of the documentation (defaulting to English and French):
 mvn package
 ```
 
-The `latest` maven profile updates the translations from Transifex (this will take some time).
+The `latest` Maven profile updates the translations from Transifex (this will take some time).
 
 ```
 mvn generate-resources -Platest
@@ -50,7 +50,7 @@ mvn package -Platest -Dlangs='"en" "fr" "es"' -Dtranslations='en,fr,es'
 
 # Before you start
 
-The maven build above makes use of the transifex command line client `tx`: 
+The Maven build above makes use of the Transifex command line client `tx`: 
 
 * https://docs.transifex.com/client/introduction
 

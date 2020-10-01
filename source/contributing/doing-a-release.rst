@@ -1,8 +1,8 @@
 .. _doing-a-release:
 
 
-Doing a |project_name| release
-##############################
+Doing a GeoNetwork release
+##########################
 
 This section documents the steps followed by the development team to do a new release.
 

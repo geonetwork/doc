@@ -25,11 +25,11 @@ Open a web browser and go to the GeoNetwork homepage. If you installed it on you
 
 When you use Docker, you can find our what IP and Port to connect to from the Kitematic application. Or run ``docker ps`` in a terminal (on Linux or OSX). This should give you the port the Docker is running on.
 
-.. figure:: ../../maintainer-guide/installing/img/docker.png
+.. figure:: ../../install-guide/img/docker.png
 
 Your opening screen should look like this:
 
-.. figure:: ../../maintainer-guide/installing/img/home-page.png
+.. figure:: ../../install-guide/img/home-page.png
 
 
 
@@ -39,26 +39,26 @@ Signing in and load templates
 Click the ``sign in`` to connect as administrator. The default account is
 username ``admin`` with password ``admin``.
 
-.. figure:: ../../maintainer-guide/installing/img/signin.png
+.. figure:: ../../install-guide/img/signin.png
 
 
 Once connected, the top toolbar should provide a link to the ``admin console``
 and your login details.
 
-.. figure:: ../../maintainer-guide/installing/img/identified-user.png
+.. figure:: ../../install-guide/img/identified-user.png
 
 Go to the ``admin console`` and click on ``metadata and templates``:
 
-.. figure:: ../../maintainer-guide/installing/img/metadata-and-templates.png
+.. figure:: ../../install-guide/img/metadata-and-templates.png
 
 Choose all standards and click ``load samples`` and then ``load templates`` in
 order to load examples:
 
-.. figure:: ../../maintainer-guide/installing/img/templates.png
+.. figure:: ../../install-guide/img/templates.png
 
 Go back to the search page to see examples:
 
-.. figure:: ../../maintainer-guide/installing/img/once-samples-are-loaded.png
+.. figure:: ../../install-guide/img/once-samples-are-loaded.png
 
 Searching information
 ---------------------

@@ -20,7 +20,7 @@ This feature allows to store the HTML content for static pages and show the link
 
     .. figure:: img/pages-api.png
 
-Some restricctions:
+Some restrictions:
 
 - It is not possible to apply custom CSS to the page.
 - Any external image must be loaded externally.

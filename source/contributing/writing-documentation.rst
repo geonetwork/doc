@@ -5,7 +5,7 @@ Writing documentation
 #####################
 
 This section provides some guidelines for writing consistent documentation
-for |project_name|.
+for GeoNetwork.
 
 
 
@@ -50,7 +50,7 @@ Then build the documentation in English using the following commands:
 Once the documentation has built without errors, access the html files from ``doc\target\en\index.html``.
 
 
-To build all documentation in several languages (right now: es,fr,ge,it,ko,nl,cz,ca,fi,is), based on transifex translations:
+To build all documentation in several languages (right now: es,fr,ge,it,ko,nl,cz,ca,fi,is), based on Transifex translations:
 
 .. code-block:: shell
 
@@ -71,7 +71,7 @@ Building the standards docs
 * docs/manuals/source/annexes/standards/*
 * docs/manuals/source/customizing-application/editor-ui/creating-custom-editor.rst
 
-Do not translate those files in transifex. Translation must be done in the plugin itself.
+Do not translate those files in Transifex. Translation must be done in the plugin itself.
 To update those files, clone the GeoNetwork repository and use the following commands:
 
 
@@ -254,9 +254,9 @@ Translating the doc
 
 `Github doc repository <https://github.com/geonetwork/doc>`_ contains the English version of the documentation. All translations should be done on Transifex web interface. No properties files should be committed to this repository.
 
-If you add some new section or update the text on an existing section, you have to update the transifex fields to make sure this change is spread to all languages. To achieve this, execute:
+If you add some new section or update the text on an existing section, you have to update the Transifex fields to make sure this change is spread to all languages. To achieve this, execute:
 
-To download the translations from Transifex, you will need the transifex command line client:
+To download the translations from Transifex, you will need the Transifex command line client:
 https://docs.transifex.com/client/installing-the-client. The Transifex Client is written in Python, so it runs on most systems. The easiest way to install it is with pip.
 
 
@@ -268,7 +268,7 @@ To install the build tools:
   sudo pip install transifex-client
 
 
-Once installed, you need to configure your transifex user: https://docs.transifex.com/client/client-configuration in `~/.transifexrc`. This config file is unique per user, and it is stored in your home directory.
+Once installed, you need to configure your Transifex user: https://docs.transifex.com/client/client-configuration in `~/.transifexrc`. This config file is unique per user, and it is stored in your home directory.
 
 
 .. code-block:: none
@@ -280,7 +280,7 @@ Once installed, you need to configure your transifex user: https://docs.transife
   hostname = https://www.transifex.com
 
 
-Update translations on transifex:
+Update translations on Transifex:
 
 .. code-block:: shell
 

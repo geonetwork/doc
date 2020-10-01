@@ -30,7 +30,7 @@ Loading default templates
 The ``Metadata and Templates`` page in the Administration page allows to see
 available standards.
 
-.. figure:: ../../maintainer-guide/installing/img/metadata-and-templates.png
+.. figure:: ../../install-guide/img/metadata-and-templates.png
 
 
 From that page, user can for each standards:
@@ -44,7 +44,7 @@ From that page, user can for each standards:
 
 You have to be logged in as an administrator to access this page and function. 
 
-.. figure:: ../../maintainer-guide/installing/img/templates.png
+.. figure:: ../../install-guide/img/templates.png
 
 Importing templates
 -------------------

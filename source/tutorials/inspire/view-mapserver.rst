@@ -3,7 +3,7 @@
 Tutorial setting up INSPIRE view service with GeoNetwork and Mapserver
 ######################################################################
 
-This tutorial shows how one can set up a combination of `MapServer <http://mapserver.org>`_ and GeoNetwork to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_. 
+This tutorial shows how one can set up a combination of `MapServer <http://mapserver.org>`_ and GeoNetwork to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_.
 
 MapServer
 =========

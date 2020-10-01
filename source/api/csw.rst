@@ -18,7 +18,7 @@ See :ref:`csw-configuration` for details of how to configure the CSW end point.
 URL
 ====
 
-The following URL is the standard end point for the catalog (substitute your |project_name| URL):
+The following URL is the standard end point for the catalog (substitute your GeoNetwork URL):
 
  - http://localhost:8080/geonetwork/srv/eng/csw?
 
@@ -29,6 +29,6 @@ Generally, the ``VERSION`` and ``SERVICE`` parameter are also added, along with 
 Requests
 ========
 
-The full set of requests supported by |project_name| can be found in ``CSW test``, in the ``Settings`` section of the Admin Dashboard. 
+The full set of requests supported by GeoNetwork can be found in ``CSW test``, in the ``Settings`` section of the Admin Dashboard.
 
 See :ref:`csw-configuration` for more details of this function.
