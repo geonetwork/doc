@@ -36,7 +36,7 @@ Catalog description
 
 - **SVN UUID** Subversion repository attached to the node. This identifier is
   created and/or checked on startup to verify that the database match the SVN repository.
-  The repository is used for metadata versionning.
+  The repository is used for metadata versioning.
 
 
 Catalog
@@ -114,7 +114,7 @@ Z39.50
 Proxy server
 ````````````
 
-The settings page offers to set the configuration of a proxy server. This configuration is used by the application to access the internet to get online resources, for example as part of a harvest proces.
+The settings page offers to set the configuration of a proxy server. This configuration is used by the application to access the internet to get online resources, for example as part of a harvest process.
 
 - **Use proxy** Enable the proxy in case the catalog is behind a proxy and need
   to use it to access remote resources.
@@ -351,7 +351,7 @@ The following services are available:
 - http://SERVER/geonetwork/opensearch/eng/UUID/describe?queryParams
 - http://SERVER/geonetwork/opensearch/eng/describe?queryParams
 
-In above url's {UUID} is the fileidentifier of the download service metadata.
+In above URLs {UUID} is the fileidentifier of the download service metadata.
 
 In the  service feed of your download service make sure to add the GeoNetwork OpenSearch endpoint as the OpenSearchDescription for the service::
 

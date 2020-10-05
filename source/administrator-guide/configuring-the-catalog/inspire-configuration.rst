@@ -47,7 +47,7 @@ Click ``Use INSPIRE registry`` to use the default INSPIRE registry but any insta
 
 .. image:: img/inspire-from-registry-config.png
 
-Select one or more languages depending on your needs. Choose a category or directly a thesaurus, depending on the thesurus.
+Select one or more languages depending on your needs. Choose a category or directly a thesaurus, depending on the thesaurus.
 By default the type of thesaurus will be ``Theme`` but you can adapt it if needed.
 
 By clicking the ``Upload`` button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.

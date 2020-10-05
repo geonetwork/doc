@@ -46,10 +46,10 @@ Stop Elasticsearch using
 
 
 
-Install using maven
+Install using Maven
 -------------------
 
-Running from the source code, use maven to download.
+Running from the source code, use Maven to download.
 
 .. code-block:: shell
 
@@ -57,7 +57,7 @@ Running from the source code, use maven to download.
     mvn install -Pes-download
     mvn exec:exec -Des-start
 
-To stop Elasticsearch when using maven, simply stop the process as Elasticsearch is started in
+To stop Elasticsearch when using Maven, simply stop the process as Elasticsearch is started in
 foreground mode.
 
 

@@ -3,7 +3,7 @@
 Using Events
 ############
 
-From GeoNetwork 3.0.x on, there are a number of events you can listen to on your Java code. 
+From GeoNetwork 3.0.x on, there are a number of events you can listen to on your Java code.
 
 Enabling Event Listeners
 ========================

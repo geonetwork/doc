@@ -5,7 +5,7 @@ Create your own view
 ######################
 
 
-The search page is served by `catalog.search` service.
+The search page is served by the `catalog.search` service.
 
 This service ends up into ``base-layout-cssjs-loader.xsl`` (See :code:`web/src/main/webapp/xslt/base-layout-cssjs-loader.xsl`)
 which contains the logic to load the right html page.

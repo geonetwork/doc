@@ -50,7 +50,7 @@ Building client for the API using codegen
 =========================================
 
 The API is described using the open API specification. `Codegen <https://swagger.io/swagger-codegen/>`_
-is a tool to build an API client based on the specification. To build a java client use the following procedure.
+is a tool to build an API client based on the specification. To build a Java client use the following procedure.
 
 First, create a configuration file apiconfig.json for the API:
 
@@ -81,7 +81,7 @@ First, create a configuration file apiconfig.json for the API:
     mvn clean install
 
 
-Once compiled, the java client can be used as a dependency; eg. for maven:
+Once compiled, the Java client can be used as a dependency; eg. for Maven:
 
 
 .. code-block:: xml

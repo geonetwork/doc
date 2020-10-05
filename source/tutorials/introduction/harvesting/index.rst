@@ -14,7 +14,7 @@ To add a new harvester, we have to enter the administration console: http://loca
 
 .. image:: img/harvest1.png
 
-We select the **GeoNetwork** option on the *Harvest from* dropdown. This will open a harvester editor at the right. We enter a *Node name* and the *Catalog URL* and we can already save it. 
+We select the **GeoNetwork** option on the *Harvest from* dropdown. This will open a harvester editor at the right. We enter a *Node name* and the *Catalog URL* and we can already save it.
 
 All harvesters can be run manually at will with the *Harvest* button. This means, it will run just once every time an authorized user runs it.
 

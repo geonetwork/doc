@@ -29,7 +29,7 @@ There are many ways in which a metadata schema or profile can be implemented.
 This section will describe the way in which metadata schemas are implemented
 on https://github.com/geonetwork/schema-plugins or https://github.com/metadata101.
 
-Each metadata schema is a maven module implemented as a filesystem tree.
+Each metadata schema is a Maven module implemented as a filesystem tree.
 The root of the tree is the name of the metadata schema in abbreviated form.
 The essential components of a metadata schema in the
 ``src/main/plugin/<schema_id>`` folder and are laid out as follows:
@@ -221,7 +221,7 @@ Then you could check out the schema plugin repository containing examples:
 
 
 To work with the example shown here, you should create your new schema plugin
-in a subdirectory of the schemas maven module (see :code:`schemas`). The
+in a subdirectory of the schemas Maven module (see :code:`schemas`). The
 ``iso19139.xyz`` plugin from the schema plugin repository could be a good start.
 
 

@@ -1,7 +1,7 @@
 .. _gallery:
 
 Some GeoNetwork nodes
-#####################
+#########################
 
 * http://catalogue.geo-ide.developpement-durable.gouv.fr/
 

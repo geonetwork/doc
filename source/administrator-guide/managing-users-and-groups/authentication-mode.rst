@@ -27,9 +27,9 @@ your environment updating the previous file or overriding the properties in the 
 
     - ``ldap.base.provider.url``: This tells the portal where the LDAP server is located. Make sure that the computer with the catalog can hit the computer with the LDAP server. Check to make sure that the appropriate ports are opened, etc.
 
-    - ``ldap.base.dn``: this will usually look something like: “dc=organizationnamehere,dc=org”
+    - ``ldap.base.dn``: this will usually look something like: "dc=[organizationnamehere],dc=org"
 
-    - ``ldap.security.principal`` & ``ldap.security.credentials``: Define LDAP administrator user to use to bind to LDAP. If not define, an anonymous bind is made. Principal is the username and credentials property the password.
+    - ``ldap.security.principal`` / ``ldap.security.credentials``: Define LDAP administrator user to use to bind to LDAP. If not define, an anonymous bind is made. Principal is the username and credentials property the password.
 
     .. code-block:: text
 
@@ -127,9 +127,9 @@ If LDAP attribute containing profiles does not match the catalog profile list, a
 .. code-block:: text
 
     # Map LDAP custom profiles to catalog profiles. Not used if ldap.privilege.pattern is defined.
-    ldapUserContextMapper.profilMapping[Admin]=Administrator
-    ldapUserContextMapper.profilMapping[Editeur]=Reviewer
-    ldapUserContextMapper.profilMapping[Public]=RegisteredUser
+    ldapUserContextMapper.profileMapping[Admin]=Administrator
+    ldapUserContextMapper.profileMapping[Editor]=Reviewer
+    ldapUserContextMapper.profileMapping[Public]=RegisteredUser
 
 For example, in the previous configuration, the attribute value ``Admin`` will be mapped to ``Administrator`` (which is a valid profile for the catalog).
 
@@ -227,7 +227,7 @@ The LDAP attribute can contains the following configuration to define the differ
     -- Define a reviewer for the group GRANULAT and editor for MIMEL and RegisteredUser for NATURA2000
     cat_privileges=CAT_GRANULAT_Reviewer
     cat_privileges=CAT_MIMEL_Reviewer
-    cat_privileges=CAT_NATURA2000_RegisterdUser
+    cat_privileges=CAT_NATURA2000_RegisteredUser
 
     -- Only a registered user for GRANULAT
     cat_privileges=CAT_GRANULAT_RegisteredUser
@@ -238,19 +238,19 @@ The LDAP attribute can contains the following configuration to define the differ
 Synchronization
 ```````````````
 
-A synchronization task is taking care of removing LDAP user which may be deleted. For example:
+A synchronization task is taking care of removing LDAP users that may be deleted. For example:
 
-- T0: a user A sign in the catalog. A local user A is created in the user database
+- T0: User A signs in to the catalog. A local user A is created in the user database.
 
-- T1: A is deleted from the LDAP (A could not sign in in the catalog anymore)
+- T1: User A is deleted from the LDAP (User A cannot sign in to the catalog anymore).
 
-- T2: the synchronization task will check that all local LDAP users exist in LDAP:
+- T2: The synchronization task will check that all local LDAP users exist in LDAP:
 
-    - if user is not owner of any records, it will be deleted
+    - If the user does not own any records, it will be deleted.
 
-    - if user is owner of metadata records, warning message is avaialable on the catalog logging system. record’s owner should be changed to another user before the task could remove the user.
+    - If the user owns metadata records, a warning message will be written to the catalog logging system. The owner of the record should be changed to another user before the task can remove the current owner.
 
-By default the task is runned once every day. Configuration could be changed in the following property:
+By default the task runs once every day. This can be changed in the following property:
 
 .. code-block:: text
 
@@ -273,7 +273,7 @@ The following properties allow advanced configuration of the synchronisation pro
 
 Debugging
 `````````
-If connection fails, try to increase logging for LDAP in ``WEB-INF/classes/log4j.xml``:
+If the connection fails, try to increase the logging level for LDAP in ``WEB-INF/classes/log4j.xml``:
 
 .. code-block:: xml
 
@@ -282,16 +282,195 @@ If connection fails, try to increase logging for LDAP in ``WEB-INF/classes/log4j
     </logger>
 
 
-Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporary:
+Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporarily:
 
 .. figure:: img/setting-log-level.png
 
+Configuring LDAP - Hierarchy
+============================
 
+A slightly different method for LDAP configuration was introduced in mid-2020.
+
+This extends the original configuration infrastructure (original configurations still work without any changes).
+
+Before you start configuring, you will need to know;
+
+#. URL to your LDAP Server
+#. Username/password to login to the LDAP Server (to execute queries)
+#. LDAP query to find a user (given what they type in on the login screen)
+#. Details of how to convert the LDAP user's attributes to GeoNetwork user attributes
+#. LDAP query to find groups a user is a member of
+#. How to convert a LDAP group to a GeoNetwork Group/Profile
+
+.. note:: There is a `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ that goes into details for how to configure LDAP including setting up a pre-configured LDAP server (using Apache Directory Studio) for testing/debugging/learning.
+
+.. note::
+   Should I use the Hierarchy or Original configuration?
+
+   If you already have an existing (Original) configuration, there's no need to move to the new one.  Most of the code between the two is the same.
+
+   If you are starting a new configuration, I would recommend the Hierarchy configuration.  It's a little simpler and supported by test cases and test infrastructure.  It also supports LDAPs where users/groups are in multiple directories.
+
+Configuring LDAP Beans (Hierarchy)
+``````````````````````````````````
+
+GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see the `README.md <https://github.com/geonetwork/core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md>`_ or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
+
+.. note:: To use this configuration, uncomment the "<import resource="config-security-ldap-recursive.xml"/>" line in `web/src/main/webapp/WEB-INF/config-security/config-security.xml`
+
+1. Configure the `contextSource` bean with a reference to your LDAP server and a user that can execute LDAP queries.
+
+   .. code-block:: xml
+
+    <bean id="contextSource"   class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+        <constructor-arg value=“ldap://localhost:3333/dc=example,dc=com"/>
+
+        <property name="userDn" value="cn=admin,ou=GIS Department,ou=Corporate Users,dc=example,dc=com"/>
+        <property name="password" value="admin1"/>
+    </bean>
+
+2. Configure the `ldapUserSearch` bean with the query used to find the user (given what was typed in the login page).
+
+   NOTE: Set `searchSubtree` to `true` to do a recursive search of the LDAP.  Use `searchBase` to control which directory the search starts in ("" means start from the root).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserSearch" class="…">
+       <constructor-arg name="searchBase" value=""/>
+       <constructor-arg name="searchFilter" value="(sAMAccountName={0})"/>
+       <constructor-arg name="contextSource" ref="contextSource"/>
+
+       <property name="searchSubtree" value="true"/>
+    </bean>
+
+3. Configure the `ldapUserContextMapper` bean with how to convert the LDAP user's attributes to GeoNetwork user attributes (see the original configuration documentation, above).
+
+   NOTE: The `value` portion has two parts.  The first part is the name of LDAP attribute (can be blank).  The second part is the default value if the LDAP attribute is missing or empty (see the original configuration documentation, above).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class=“LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+        <property name="mapping">
+          <map>
+            <entry key="name" value="cn,"/>
+            <entry key="surname" value="sn,"/>
+            <entry key="mail" value="mail,"/>
+            <entry key="organisation" value=","/>
+            <entry key="address" value=","/>
+            <entry key="zip" value=","/>
+            <entry key="state" value=","/>
+            <entry key="city" value=","/>
+            <entry key="country" value=","/>
+
+            <entry key="profile" value=",RegisteredUser"/>
+            <entry key="privilege" value=",none"/>
+          </map>
+        </property>
+
+    </bean>
+
+4. Continue configuring the `ldapUserContextMapper` bean so the LDAP can also provide group/profile roles for the user.
+
+   NOTE: The `ldapMembershipQuery` is the LDAP directory where the membership query will be start ("" means start at the root of the LDAP).
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class="LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+        <property name="importPrivilegesFromLdap" value=“true"/>
+
+        <!-- typically, don't want GN to modify the LDAP server! -->
+        <property name="createNonExistingLdapGroup" value="false" />
+        <property name="createNonExistingLdapUser" value="false" />
+        <property name="ldapManager" ref="ldapUserDetailsService" />
+
+        <property name="membershipSearchStartObject" value=""/>
+        <property name="ldapMembershipQuery" value="(&amp;(objectClass=*)(member=cn={2})(cn=GCAT_*))"/>
+
+    </bean>
+
+5. Continue configuring the `ldapUserContextMapper` bean so the LDAP roles can be converted to GeoNetwork Groups/Profiles.
+
+   NOTE: You can use multiple `ldapRoleConverters`.
+
+   .. code-block:: xml
+
+    <bean id="ldapUserContextMapper" class="LDAPUserDetailsContextMapperWithProfileSearchEnhanced">
+
+       <property name="ldapRoleConverters">
+         <util:list>
+           <ref bean="ldapRoleConverterGroupNameParser"/>
+         </util:list>
+       </property>
+
+    </bean>
+
+There are currently two ways to convert an LDAP group to GeoNetwork Groups/Profiles.
+
+
+* The `LDAPRoleConverterGroupNameParser`, which works the same as the original LDAP configuration.  It uses a regular expression to parse the LDAP group name into a GeoNetwork Group/Profile.  This will convert the LDAP role `GCAT_GENERAL_EDITOR` into the GeoNetwork group `GENERAL` with Profile `Editor.`
+
+  .. code-block:: xml
+
+    <bean id="ldapRoleConverterGroupNameParser"  class="LDAPRoleConverterGroupNameParser">
+
+        <property name="ldapMembershipQueryParser" value="GCAT_(.*)_(.*)"/>
+        <property name="groupIndexInPattern" value="1"/>
+        <property name="profileIndexInPattern" value=“2"/>
+
+        <property name="profileMapping">
+          <map>
+            <entry key="ADMIN" value="Administrator"/>
+            <entry key="EDITOR" value="Editor"/>
+          </map>
+        </property>
+
+    </bean>
+
+* There is also a more direct way using `LDAPRoleConverterGroupNameConverter`.  This directly converts the LDAP group name into a list of GeoNetwork Groups/Profiles.
+
+  .. code-block:: xml
+
+    <bean id=“ldapRoleConverterGroupNameParser" class="LDAPRoleConverterGroupNameConverter">
+
+        <property name="convertMap">
+          <map>
+
+            <entry>
+                <key>
+                    <value>HGIS_GeoNetwork_Admin</value>
+                </key>
+                <list>
+
+                    <bean class="org.fao.geonet.kernel.security.ldap.LDAPRole">
+                      <constructor-arg name="groupName" type="java.lang.String" value="myGroup"/>
+                      <constructor-arg name="profileName" type="java.lang.String" value="Administrator"/>
+                    </bean>
+
+                </list>
+            </entry>
+            <entry>
+              <key>
+                    <value>HGIS_GeoNetwork_Editor</value>
+              </key>
+              <list>
+
+                <bean class="org.fao.geonet.kernel.security.ldap.LDAPRole">
+                  <constructor-arg name="groupName" type="java.lang.String" value=“myGroup"/>
+                  <constructor-arg name="profileName" type="java.lang.String" value="Editor"/>
+                </bean>
+
+              </list>
+            </entry>
+          </map>
+        </property>
+    </bean>
 
 Configuring CAS
 ---------------
 
-To enable CAS, setup authentication by including ``WEB-INF/config-security/config-security-cas.xml``
+To enable CAS, set up authentication by including ``WEB-INF/config-security/config-security-cas.xml``
 in ``WEB-INF/config-security/config-security.xml``, uncommenting the following lines:
 
 .. code-block:: xml
@@ -299,7 +478,7 @@ in ``WEB-INF/config-security/config-security.xml``, uncommenting the following l
     <import resource="config-security-cas.xml"/>
     <import resource="config-security-cas-ldap.xml"/>
 
-CAS can use either ldap or a database for user management, to use a database uncomment the following lines instead:
+CAS can use either LDAP or a database for user management. To use a database uncomment the following lines instead:
 
 .. code-block:: xml
 
@@ -307,9 +486,9 @@ CAS can use either ldap or a database for user management, to use a database unc
     <import resource="config-security-cas-database.xml"/>
 
 
-The CAS configuration is defined in ``WEB-INF/config-security/config-security.properties``, you can then configure
-your environment updating the previous file or overriding the properties in the file
-``WEB-INF/config-security/config-security-overrides.properties``.
+The CAS configuration is defined in ``WEB-INF/config-security/config-security.properties``.
+You can configure your environment by updating the previous file or by defining property overrides in the file
+``WEB-INF/config-security/config-security-overrides.properties``:
 
 .. code-block:: text
 
@@ -326,6 +505,6 @@ Configuring Shibboleth
 ----------------------
 
 The catalog can operate in a SAML secured federation. Shibboleth should be installed
-in apache as described `here <https://wiki.shibboleth.net/confluence/display/SHIB2/Installation>`_.
-The catalog is accessed via apache. Setup shibboleth authentication by including ``WEB-INF/config-security/config-security-shibboleth.xml``
+in Apache as described `here <https://wiki.shibboleth.net/confluence/display/SHIB2/Installation>`_.
+The catalog is accessed via Apache. Setup Shibboleth authentication by including ``WEB-INF/config-security/config-security-shibboleth.xml``
 in ``WEB-INF/config-security/config-security.xml``. You can then configure your environment in ``config-security-shibboleth-overrides.properties``.
