@@ -1,6 +1,6 @@
-.. _configuring-facetted-search:
+.. _configuring-faceted-search:
 
-Configuring facetted search
+Configuring faceted search
 ###########################
 
 Facet principle
@@ -159,7 +159,7 @@ returned and how they should be formatted as follows:
 * (optional) depth: the depth to which hierarchical facets should be summarised. Defaults to 1.
 
 * (optional) translator: Define a DB translator to retrieve label from description
-  tables (eg. categoriesdes) or codelist translator to retrieve label from schema
+  tables (e.g. categories) or codelist translator to retrieve label from schema
   codelists files.
 
 eg. for category

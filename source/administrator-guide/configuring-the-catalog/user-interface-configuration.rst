@@ -36,7 +36,7 @@ General options
 Footer
 ------
 
-- **Footer**: Select this checkbox to determine whether the |project_name| footer is shown. If not set, no footer will be visible.
+- **Footer**: Select this checkbox to determine whether the GeoNetwork footer is shown. If not set, no footer will be visible.
 - **Social bar**: Select this check box to show the social bar (links to twitter, facebook, linkedin etc) in the footer.
 
 .. figure:: img/ui-settings-footer.png
@@ -46,7 +46,7 @@ Footer
 Top Toolbar
 -----------
 
-- **Top toolbar**: Select this check box to determine whether the |project_name| top toolbar will be shown. If not set, no toolbar will be visible.
+- **Top toolbar**: Select this check box to determine whether the GeoNetwork top toolbar will be shown. If not set, no toolbar will be visible.
 - **List of languages**: Choose the languages from the list that should be available for translating the interface strings (available from the dropdown list in the top toolbar). If only one language remains, then no dropdown will be shown. Note that additional languages can be added, if translations are available, by selecting the ``+`` button below the list and adding the appropriate ISO codes.
 
 .. figure:: img/ui-settings-toptoolbar.png
@@ -156,7 +156,7 @@ This section describes how an administrator can configure the different maps in 
 External viewer
 ~~~~~~~~~~~~~~~
 
-- **Use an external viewer**: This option allows a third party mapping application to be used in place of the default |project_name| map. In this case, most of the settings below will no longer be used.
+- **Use an external viewer**: This option allows a third party mapping application to be used in place of the default GeoNetwork map. In this case, most of the settings below will no longer be used.
 - **Allow 3D mode**:  If enabled, the user has the option to switch to 3D mode in the main map (see :ref:`quick_start`).
 - **Allow users to save maps as metadata record**: This option enables users to save layers and base maps configuration as a record in the catalog. Optionally users can add a title and an abstract.
 - **Export map as image**:  If enabled, users can export the map as an image but requires CORS to be enabled on any external WMS services displayed on the map. This option is disabled by default to avoid issues with WMS layers.
@@ -218,7 +218,7 @@ This section is for configuring the map shown when viewing a record.
 
 .. figure:: img/ui-settings-mapviewer.png
 
-- **Layer obejcts in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
+- **Layer objects in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
 
   - **wms**: generic WMS layer, required properties: ``name, url``.
   - **wmts**: generic WMTS layer, required properties: ``name, url``.
@@ -285,7 +285,7 @@ Editor Application
 - **Editor application**: If enabled the editor page, or contribute tab is available to users with the appropriate privileges. If not enabled the contribute tab is not shown in the top toolbar.
 - **Application URL**: This is the URL to the editor application and can generally be left as the default.
 - **Only my records**: If this checkbox is enabled then the "Only my records" checkbox in the editor dashboard will be checked by default.
-- **Display fitlers in dashboard**: If enabled, the currently selected facets will be shown above the search results in both the editor dashboard the batch editor page.
+- **Display filters in dashboard**: If enabled, the currently selected facets will be shown above the search results in both the editor dashboard the batch editor page.
 - **Fluid container for the Editor**: If enabled, the editor application will have a full width container. If disabled it will have a fixed width and centered container.
 - **New metadata page layout**: Choose from the options for the layout of the ``add new metadata`` page. The default is ``Horizontal`` but a vertical layout can be chosen, or a custom layout based on a supplied template.
 - **Editor page indent type**: Choose from the options for the indent style when editing a record. The default is for minimal indents, select ``Colored indents`` to use the style shown below:

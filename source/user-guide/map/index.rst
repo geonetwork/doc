@@ -11,8 +11,8 @@ The map component in GeoNetwork serves two goals:
 
 .. Note::
 
-    Instead of using the embedded map viewer, GeoNetwork offers functionality to use an external map viewer (for example an existing WebGIS framework in your organisation). 
-    An administrator can configure GeoNetwork in such a way that it is connected to an external web map application. In such a configuration all map interaction is delegated 
+    Instead of using the embedded map viewer, GeoNetwork offers functionality to use an external map viewer (for example an existing WebGIS framework in your organisation).
+    An administrator can configure GeoNetwork in such a way that it is connected to an external web map application. In such a configuration all map interaction is delegated
     to the external application. See :ref:`user-interface-config-mappage`.
 
 Map viewer

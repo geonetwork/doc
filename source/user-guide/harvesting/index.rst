@@ -94,7 +94,7 @@ When a harvester is removed, all metadata records associated with that harvester
 Multiple harvesting and hierarchies
 -----------------------------------
 
-Catalogues that use UUIDs to identify metadata records (eg. GeoNetwork) can be harvested several times without having to take care about metadata overlap. 
+Catalogues that use UUIDs to identify metadata records (eg. GeoNetwork) can be harvested several times without having to take care about metadata overlap.
 
 As an example, consider the GeoNetwork harvesting type which allows one GeoNetwork node to harvest metadata records from another GeoNetwork node and the following scenario:
 
@@ -120,9 +120,9 @@ All the harvesters except for the THREDDS and OGC WFS GetFeature harvester creat
 
 For example, you may only be interested in harvesting the geographic extent and/or contact information from an external source and manually entering or maintaining the remainder of the content in the metadata record. You may also be interested in re-using the contact information for a person or organisation in more than one metadata record.
 
-To support this capability, both the WFS GetFeature Harvester and the THREDDS harvester, allow fragments of metadata to be harvested and linked or copied into a template record to create metadata records. Fragments that are saved into the GeoNetwork database are called subtemplates and can be used in more than one metadata record. 
+To support this capability, both the WFS GetFeature Harvester and the THREDDS harvester, allow fragments of metadata to be harvested and linked or copied into a template record to create metadata records. Fragments that are saved into the GeoNetwork database are called subtemplates and can be used in more than one metadata record.
 
-As shown above, an example of a metadata fragment is the gmd:contactInfo element of an iso19139 document.  This element contains contact details for an individual or an organisation.  If a fragment is stored in the GeoNetwork database as a subtemplate for a given person or organisation, then this fragment can be referenced in metadata records where this organisation or individual is specified using an XML linking mechanism called XLink. 
+As shown above, an example of a metadata fragment is the gmd:contactInfo element of an iso19139 document.  This element contains contact details for an individual or an organisation.  If a fragment is stored in the GeoNetwork database as a subtemplate for a given person or organisation, then this fragment can be referenced in metadata records where this organisation or individual is specified using an XML linking mechanism called XLink.
 
 
 HTTPS support
@@ -247,7 +247,7 @@ a table, with some rows labelled as follows:
 - **Removed** - Number of metadata that have been removed locally because they are not present in the remote server anymore.
 - **Updated** - Number of metadata that are present locally but that needed to be updated because their last change date was different from the remote one.
 - **Unchanged** - Local metadata left unchanged. Their remote last change date did not change. 
-- **Unknown schema** - Number of skipped metadata because their format was not recognised by GeoNetwork. 
+- **Unknown schema** - Number of skipped metadata because their format was not recognised by GeoNetwork.
 - **Unretrievable** - Number of metadata that were ready to be retrieved from the remote server but for some reason there was an exception during the data transfer process. 
 - **Bad Format** - Number of skipped metadata because they did not have a valid XML representation. 
 - **Does not validate** - Number of metadata which did not validate against their schema. These metadata were harvested with success but skipped due to the validation process. Usually, there is an option to force validation: if you want to harvest these metadata anyway, simply turn/leave it off.

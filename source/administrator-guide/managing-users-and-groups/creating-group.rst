@@ -5,11 +5,10 @@ Creating group
 ##############
 
 
-The administrator can create new groups of users. User groups can correspond
-to logical units within an organisation. For example groups for Fisheries, Agriculture, Land
-and Water, Health etcetera.
+The administrator can create new groups of users. User groups could correspond
+to logical units within an organisation, for example `Fisheries`, `Agriculture`, `Land`, `Water`, `Health` and so on.
 
-To create new groups you should be logged on with an account that has Administrative privileges.
+To create new groups you should be logged on with an account that has administrative privileges.
 
 #. Select the *Administration* button in the menu. On the Administration page, select *Group management*.
 
@@ -23,7 +22,7 @@ To create new groups you should be logged on with an account that has Administra
         The Name should *NOT* contain spaces! You can use the Localization panel to provide localized names for groups.
 
 
-#. Click on *Save*
+#. Click *Save*
 
 Access privileges can be set per metadata record. You can define privileges on a per Group basis.
 

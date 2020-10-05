@@ -3,7 +3,7 @@
 Separate your code
 ##################
 
-GeoNetwork is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separatedly. 
+GeoNetwork is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separatedly.
 
 
 .. image:: img/listprojects.png
@@ -69,7 +69,7 @@ Then we have to tell Maven this is a new project that can be built. So we add a 
 Add your project
 ================
 
-Then you should add it to the list of projects maven will automatically build. On the root folder of the source code, edit the file pom.xml and add your own project:
+Then you should add it to the list of projects Maven will automatically build. On the root folder of the source code, edit the file pom.xml and add your own project:
 
 .. code:: xml
 

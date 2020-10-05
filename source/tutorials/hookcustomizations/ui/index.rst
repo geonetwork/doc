@@ -10,7 +10,7 @@ In GeoNetwork you can have more than one style installed on the same deployment.
 Create an empty style
 ========================
 
-Now, we are going to create our custom style on the separated maven project we created before. First we define the minimal user interface customization so we can test that our style is being generated and used.
+Now, we are going to create our custom style on the separated Maven project we created before. First we define the minimal user interface customization so we can test that our style is being generated and used.
 
 We  need an empty file on the custom/src/main/resources/catalog/views/custom/less/gn_search_custom.less path
 

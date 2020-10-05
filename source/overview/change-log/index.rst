@@ -29,6 +29,7 @@ Change log
    version-3.10.1.rst
    version-3.10.2.rst
    version-3.10.3.rst
+   version-3.10.4.rst
    version-4.0.0-alpha.1.rst
    version-4.0.0-alpha.2.rst
    version-4.0.0-alpha.3.rst

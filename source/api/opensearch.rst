@@ -14,7 +14,7 @@ The catalog provides an opensearch entry point at http://localhost:8080/geonetwo
 Browsers detect the availability of opensearch by checking the index page at the root of the (sub)domain. If you install geonetwork in a subfolder, 
 consider to set up a rewrite rule forwarding the index request to the subfolder.
 
-An example of such a rewrite rule in apache:
+An example of such a rewrite rule in Apache:
 
 .. code-block:: text
 

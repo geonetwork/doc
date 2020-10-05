@@ -7,7 +7,7 @@ Change default view configuration
 The Settings
 --------------
 
-In order to make developers able to specify some configuration settings, we tried as much as possible to use settings instead of hardcoded value in core code.
+In order to enable developers to specify some configuration settings, we tried as much as possible to use settings instead of hardcoded value in core code.
 
 Those settings are mainly stored in 2 AngularJS ``value`` objects:
 

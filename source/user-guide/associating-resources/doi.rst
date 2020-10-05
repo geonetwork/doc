@@ -38,6 +38,7 @@ For DOI creation, the task is a 2 steps actions:
 
 The DataCite format requires some mandatory fields:
 
+
  * Identifier (with mandatory type sub-property)
 
  * Creator (with optional given name, family name, name identifier and affiliation sub-properties)
@@ -49,6 +50,27 @@ The DataCite format requires some mandatory fields:
  * PublicationYear
 
  * ResourceType (with mandatory general type description subproperty)
+
+
+The mapping with ISO standards is the following:
+
+.. csv-table::
+   :header: "Property", "ISO 19139", "ISO 19115-3"
+   :widths: 10, 40, 40
+
+   "Identifier", "gmd:MD_Metadata/gmd:fileIdentifier/\*/text()", "mdb:MD_Metadata/mdb:metadataIdentifier/\*/mcc:code/\*/text()"
+   "Creator", "gmd:identificationInfo/\*/gmd:pointOfContact with role 'pointOfContact' or 'custodian'", "mdb:identificationInfo/\*/mri:pointOfContact with role 'pointOfContact' or 'custodian'"
+   "Title", "gmd:identificationInfo/\*/gmd:citation/\*/gmd:title", "mdb:identificationInfo/\*/mri:citation/\*/cit:title"
+   "Publisher", "gmd:distributorContact[1]/\*/gmd:organisationName/gco:CharacterString", "mrd:distributorContact[1]/\*/cit:party/\*/cit:organisationName/gco:CharacterString"
+   "PublicationYear", "gmd:identificationInfo/\*/gmd:citation/\*/gmd:date/\*[gmd:dateType/\*/\@codeListValue = 'publication']", "mdb:identificationInfo/\*/mri:citation/\*/cit:date/\*[cit:dateType/\*/\@codeListValue = 'publication']"
+   "ResourceType", "gmd:hierarchyLevel/\*/\@codeListValue", "mdb:metadataScope/\*/mdb:resourceScope/\*/\@codeListValue"
+
+
+The mapping can be customized in:
+
+* ISO19139 :code:`schemas/iso19139/src/main/plugin/iso19139/formatter/datacite/view.xsl`
+
+* ISO19115-3.2018 :code:`schemas/iso19139/src/main/plugin/iso19139/formatter/datacite/view.xsl`
 
 
 See http://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf for more details on the format.
