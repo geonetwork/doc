@@ -77,7 +77,7 @@ Regarding search protocols, only CSW has been migrated for now (ie. OAI-PMH, RDF
 
 More details can be found in https://github.com/geonetwork/core-geonetwork/pull/2830.
 
-For the installation check :ref:`installing`.
+For the installation check :ref:`installation`.
 
 For reporting any issues go to https://github.com/geonetwork/core-geonetwork/issues.
 
