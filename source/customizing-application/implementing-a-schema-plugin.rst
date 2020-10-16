@@ -190,9 +190,7 @@ The following configuration files can be present:
 
 In the ``index-fields`` folder, the following files are required:
 
-- **default.xsl**: (*Mandatory*) Index the metadata record content in
-  Lucene. Creates the Lucene document used by GeoNetwork to index the metadata record content.
-- **language-default.xsl**: (*Optional*) Required to index multilingual metadata
+- **index.xsl**: (*Mandatory*) Index the metadata record content. The output produce a list of field and values to index.
 
 
 
