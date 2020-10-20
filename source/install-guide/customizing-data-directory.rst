@@ -210,10 +210,10 @@ Advanced data directory configuration
 
 
 All sub-directories could be configured separately using Java system property.
-For example, to put index directory in a custom location use:
+For example, to put the index config directory in a custom location use:
 
- - <webappName>.lucene.dir and if not set using:
- - geonetwork.lucene.dir
+ - <webappName>.indexConfig.dir and if not set using:
+ - geonetwork.indexConfig.dir
 
 
 Examples:

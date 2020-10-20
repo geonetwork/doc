@@ -18,3 +18,5 @@ Please double-click on the ``startup.sh`` file to start the server.
 
 In the application root folder, you will find a ``readme.html`` file that includes some
 details on how to get started with GeoNetwork. Double-click it to view it in your browser.
+
+Then install the Elasticsearch instance (see :ref:`installing-index`).

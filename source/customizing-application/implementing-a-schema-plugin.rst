@@ -1586,61 +1586,44 @@ for MCP contains:
    schema
 
 
-Creating the index-fields.xsl to index content from the metadata record
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating the index.xsl to index content from the metadata record
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This XSLT indexes the content of elements in the metadata record.
 The essence of this XSLT is to select elements from the metadata record and
-map them to lucene index field names. The lucene index field names used in
-GeoNetwork are as follows:
+map them to index field names. Using Kibana user can browse the index and check all fields available. The number of fields depends on the catalog as some fields are dynamic eg. codelist, thesaurus.
 
-===========================  ===========================================================================
-Lucene Index Field Name      Description
-===========================  ===========================================================================
-abstract                     Metadata abstract
-any                          Content from all metadata elements (for free text)
-changeDate                   Date that the metadata record was modified
-createDate                   Date that the metadata record was created
-denominator                  Scale denominator in data resolution
-download                     Does the metadata record have a downloadable resource attached?  (0 or 1)
-digital                      Is the metadata record distributed/available in a digital format?  (0 or 1)
-eastBL                       East bounding box longitude
-keyword                      Metadata keywords
-metadataStandardName         Metadata standard name
-northBL                      North bounding box latitude
-operatesOn                   Uuid of metadata record describing dataset that is operated on by a service
-orgName                      Name of organisation listed in point-of-contact information
-parentUuid                   Uuid of parent metadata record
-paper                        Is the metadata record distributed/available in a paper format?  (0 or 1)
-protocol                     On line resource access protocol
-publicationDate              Date resource was published
-southBL                      South bounding box latitude
-spatialRepresentationType    vector, raster, etc
-tempExtentBegin              Beginning of temporal extent range
-tempExtentEnd                End of temporal extent range
-title                        Metadata title
-topicCat                     Metadata topic category
-type                         Metadata hierarchy level (should be dataset if unknown)
-westBL                       West bounding box longitude
-===========================  ===========================================================================
+In Kibana, navigate to `Stack Management > Index pattern`
+
+.. figure:: img/kb-index-pattern.png
+
+Select `gn-records` to retrieve the list of fields:
+
+
+.. figure:: img/kb-index-fields.png
+
+
+If Elasticsearch instance is accessible, user can get the details about a record using http://localhost:9200/gn-records/_doc/7c7923b1-c387-49ac-b6c7-391ca187b7fa (`Kibana > dev tools` can also be used to get the document details):
+
+
+.. figure:: img/es-get-doc.png
 
 For example, here is the mapping created between the metadata element
-mcp:revisionDate and the lucene index field changeDate:
-
+mcp:revisionDate and the index field changeDate:
 
 .. code-block:: xml
 
    <xsl:for-each select="mcp:revisionDate/*">
-     <Field name="changeDate" string="{string(.)}" store="true" index="true"/>
+     <changeDate><xsl:value-of select="string(.)"/></changeDate>
    </xsl:for-each>
 
 
 Notice that we are creating a new XML document. The Field elements in this
-document are read by GeoNetwork to create a Lucene document object for indexing
+document are read by GeoNetwork to create a document object for indexing
 (see the SearchManager class in the GeoNetwork source).
 
 Once again, because the MCP is a profile of ISO19115/19139, it is probably best
-to modify ``index-fields.xsl`` from the schema iso19139 to handle the namespaces
+to modify ``index.xsl`` from the schema iso19139 to handle the namespaces
 and additional elements of the MCP.
 
 At this stage, our new GeoNetwork plugin schema for MCP contains:
@@ -1648,7 +1631,7 @@ At this stage, our new GeoNetwork plugin schema for MCP contains:
 ::
 
    extract-date-modified.xsl  extract-gml.xsd  extract-uuid.xsl
-   index-fields.xsl  loc  present  schema-conversions.xml  schema-ident.xml
+   index.xsl  loc  present  schema-conversions.xml  schema-ident.xml
    schema.xsd  schema
 
 
@@ -1767,89 +1750,9 @@ Creating set-uuid.xsl
   different namespace on the root element, this XSLT needs to be modified.
 
 
-Creating the extract, set and unset thumbnail XSLTs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If your metadata record can have a thumbnail or browse graphic link, then
-you will want to add XSLTs that extract, set and unset this information
-so that you can use the GeoNetwork thumbnail editing interface.
-
-The three XSLTs that support this interface are:
-
-- **extract-thumbnails.xsl** - this XSLT extracts the thumbnails/browse graphics
-  from the metadata record, turning it into generic XML that is the same for all
-  metadata schemas. The elements need to have content that GeoNetwork understands.
-  The following is an example of what the thumbnail interface for iso19139 expects
-  (we'll duplicate this requirement for MCP):
-
-.. code-block:: xml
-
-  <gmd:graphicOverview>
-    <gmd:MD_BrowseGraphic>
-      <gmd:fileName>
-        <gco:CharacterString>bluenet_s.png</gco:CharacterString>
-      </gmd:fileName>
-      <gmd:fileDescription>
-        <gco:CharacterString>thumbnail</gco:CharacterString>
-      </gmd:fileDescription>
-      <gmd:fileType>
-        <gco:CharacterString>png</gco:CharacterString>
-      </gmd:fileType>
-    </gmd:MD_BrowseGraphic>
-  </gmd:graphicOverview>
-  <gmd:graphicOverview>
-    <gmd:MD_BrowseGraphic>
-      <gmd:fileName>
-        <gco:CharacterString>bluenet.png</gco:CharacterString>
-      </gmd:fileName>
-      <gmd:fileDescription>
-        <gco:CharacterString>large_thumbnail</gco:CharacterString>
-      </gmd:fileDescription>
-      <gmd:fileType>
-        <gco:CharacterString>png</gco:CharacterString>
-      </gmd:fileType>
-    </gmd:MD_BrowseGraphic>
-  </gmd:graphicOverview>
-
-
-When ``extract-thumbnails.xsl`` is run, it creates a small XML hierarchy
-from this information which looks something like the following:
-
-.. code-block:: xml
-
-   <thumbnail>
-     <large>
-       bluenet.png
-     </large>
-     <small>
-       bluenet_s.png
-     </small>
-   </thumbnail>
-
-- **set-thumbnail.xsl** - this XSLT does the opposite of extract-thumbnails.xsl.
-  It takes the simplified, common XML structure used by GeoNetwork to describe
-  the large and small thumbnails and creates the elements of the metadata
-  record that are needed to represent them. This is a slightly more
-  complex XSLT than extract-thumbnails.xsl because the existing elements
-  in the metadata record need to be retained and the new elements need to
-  be created in their correct places.
-- **unset-thumbnail.xsl** - this XSLT targets and removes elements of the
-  metadata record that describe a particular thumbnail. The remaining elements
-  of the metadata record are retained.
-
-Because the MCP is a profile of ISO19115/19139, the easiest path to creating
-these XSLTs is to copy them from the iso19139 schema and modify them for the
-changes in namespace required by the MCP.
-
 Creating the update-... XSLTs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **update-child-from-parent-info.xsl** - this XSLT is run when a child
-  record needs to have content copied into it from a parent record.
-  It is an XSLT that changes the content of a few elements and leaves the
-  remaining elements untouched. The behaviour of this XSLT would depend
-  on which elements of the parent record will be used to update elements
-  of the child record.
 - **update-fixed-info.xsl** - this XSLT is run after editing to fix
   certain elements and content in the metadata record. For the MCP there
   are a number of actions we would like to take to 'hard-wire' certain
