@@ -11,7 +11,7 @@ A thesaurus is a list of concepts from a specialized field of knowledge. In a me
 
 In GeoNetwork, the process of assigning keywords to a metadata record takes place in the metadata editor. The user can choose concepts from one or more thesauri to associate the record with the concepts described by those concepts. This process is supported for both ISO19115/19139 and dublin core metadata records using an thesaurus picker.
 
-Concepts within a field of knowledge or in different fields of knowledge may be related or even be equivalent. For example, in a thesaurus describing geographic regions, the Australian state of 'Tasmania' is a specialization of the country of Australia. As an example of overlapping concepts in different fields, a thesaurus describing science activities in the field of global change may have concepts relating to agricultural activities that will be equivalent to terms from a thesaurus that describes the themes used in a map series. 
+Concepts within a field of knowledge or in different fields of knowledge may be related or even be equivalent. For example, in a thesaurus describing geographic regions, the Australian state of 'Tasmania' is a specialization of the country of Australia. As an example of overlapping concepts in different fields, a thesaurus describing science activities in the field of global change may have concepts relating to agricultural activities that will be equivalent to terms from a thesaurus that describes the themes used in a map series.
 
 In GeoNetwork, thesauri are represented as SKOS (http://www.w3.org/TR/skos-reference) and stored in an application/xml+rdf encoding. SKOS captures concepts and relationships between concepts. SKOS thesauri can be imported from standalone files or they can be generated from ISO19135 register records in a GeoNetwork catalog. ISO19135 (more on this below) not only captures the concepts and relationships between the concepts, but (amongst other things) how the concepts have evolved and most importantly, who has contributed to and managed the evolution of the concepts and the thesauri itself.
 
@@ -34,10 +34,10 @@ All thesauri in GeoNetwork are categorized using the code list values for the gm
 =========================== ==================================================================================
 ISO Thesaurus Category      Description
 =========================== ==================================================================================
-place                       Thesaurus has concepts identifying a location                                     
-stratum                     Thesaurus has concepts identifying layers of any deposited substance               
-temporal                    Thesaurus has concepts identifying a time period                                  
-theme                       Thesaurus has concepts identifying a particular subject or topic                  
+place                       Thesaurus has concepts identifying a location
+stratum                     Thesaurus has concepts identifying layers of any deposited substance
+temporal                    Thesaurus has concepts identifying a time period
+theme                       Thesaurus has concepts identifying a particular subject or topic
 discipline                  Thesaurus has concepts identifying a branch of instruction or specialized learning
 =========================== ==================================================================================
 
@@ -121,9 +121,9 @@ An example of a register item from register of the NASA GCMD (Global Change Mast
 
 As mentioned earlier, to use a thesaurus described by an ISO19135 register record, GeoNetwork uses an XSLT called xml_iso19135ToSKOS.xsl (from the convert subdirectory in the iso19135 plugin schema) to extract the following from the ISO19135 register record:
 
-- valid concepts (grg:itemIdentifier, grg:name, grg:status) 
-- relationships to other concepts (grg:specificationLineage) 
-- title, version and other management info 
+- valid concepts (grg:itemIdentifier, grg:name, grg:status)
+- relationships to other concepts (grg:specificationLineage)
+- title, version and other management info
 
 This information is used build a SKOS file. The SKOS file is then available for query and management by the sesame/openRDF software used in GeoNetwork.
 
@@ -133,7 +133,7 @@ Creating or Importing a Thesaurus
 
 External and local thesauri are created or imported using the thesaurus manager. You can use the thesaurus manager by:
 
-- logging in as an administrator 
+- logging in as an administrator
 - navigating to the 'Administration' page and clicking on the link ``Manage thesauri``
 
 The thesaurus manager page will show a list of thesauri that have been created or imported. The upper part of the page provides the user with functions to edit, add, modify or search a thesaurus. The lower part provides a function to upload an external thesaurus in SKOS format.
@@ -145,7 +145,7 @@ To create a local thesaurus, click the ``+`` sign on the category you want your
 thesaurus to be in. Once created, the thesaurus can be updated through the
 edit interface. The meaning of each column is as follows:
 
-- **Type** - This is an identifier assigned to the thesaurus in GeoNetwork. It is composed of the ISO category to which the thesaurus has been assigned (see the codelist for the gmd:MD_KeywordTypeCode element in http://www.isotc211.org/2005/resources/gmxCodelist.xml), whether the thesaurus is a local, external or register thesaurus and the filename of the SKOS file that holds the thesaurus. (Note: the name of the file used to hold a register thesaurus is the uuid of the ISO19135 register record that describes the thesaurus). 
+- **Type** - This is an identifier assigned to the thesaurus in GeoNetwork. It is composed of the ISO category to which the thesaurus has been assigned (see the codelist for the gmd:MD_KeywordTypeCode element in http://www.isotc211.org/2005/resources/gmxCodelist.xml), whether the thesaurus is a local, external or register thesaurus and the filename of the SKOS file that holds the thesaurus. (Note: the name of the file used to hold a register thesaurus is the uuid of the ISO19135 register record that describes the thesaurus).
 - **Name** - This is the name of the thesaurus which is the administrator on creation or the filename if the thesaurus is ting a thesaurus, the name of the thesaurus will be the filename of the thesaurus.
 
 For each thesaurus the following buttons are available:
@@ -195,7 +195,7 @@ Use the textbox and the type of search in order to search for keywords.
 Editing a register thesaurus
 ----------------------------
 
-A register thesaurus is created from an ISO19135 metadata record as described above, so a register thesaurus is updated by editing the ISO19135 metadata record and then regenerating the register thesaurus. The ISO19135 metadata record can be created and edited in the GeoNetwork editor. 
+A register thesaurus is created from an ISO19135 metadata record as described above, so a register thesaurus is updated by editing the ISO19135 metadata record and then regenerating the register thesaurus. The ISO19135 metadata record can be created and edited in the GeoNetwork editor.
 
 .. _xlinks_thesaurus:
 
@@ -245,14 +245,4 @@ Notice that a URL pointing to the source thesaurus is included in the Thesaurus 
 Search criteria: keywords
 -------------------------
 
-You can search on keywords in the advanced search interface. To help select a keyword you can click in the keyword search field to bring up a list of all the keywords that have been used in the metadata records in this catalog. These keywords are indexed by Lucene on creation/update of metadata. 
-Each keyword in the list has the number of records that use the keyword displayed next to it.
-
-
-If an XML element named keyword-select-panel is present as a child of the search element in the *config-gui.xml* file (in the WEB-INF directory), then search for keyword using the keyword selection panel is available as in the metadata editor::
-  
- <search>
-  <!-- Display or not keyword selection panel in advanced search panel 
-   <keyword-selection-panel/> 
-  -->
- </search>
+You can search on keywords using the facet panel. All keywords are stored in the index field ```tag``` and are also available in field depending on thesaurus name eg. ```thesaurus_geonetworkthesaurusexternalthemehttpinspireeceuropaeuthemetheme``` for INSPIRE themes. The field name is based on the thesaurus type and filename.

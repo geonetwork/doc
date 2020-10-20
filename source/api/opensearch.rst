@@ -3,6 +3,7 @@
 OpenSearch and INSPIRE ATOM
 ###########################
 
+**Not yet available in version 4.**
 
 OpenSearch
 ----------
@@ -11,7 +12,7 @@ The catalog provides an opensearch entry point at http://localhost:8080/geonetwo
 
 .. figure:: img/opensearch.png
 
-Browsers detect the availability of opensearch by checking the index page at the root of the (sub)domain. If you install geonetwork in a subfolder, 
+Browsers detect the availability of opensearch by checking the index page at the root of the (sub)domain. If you install geonetwork in a subfolder,
 consider to set up a rewrite rule forwarding the index request to the subfolder.
 
 An example of such a rewrite rule in Apache:

@@ -1,7 +1,7 @@
 .. _q-search:
 
-Q Search
-########
+Main search service
+###################
 
 The Q Search endpoint is replaced by the `/srv/api/search/records/_search` endpoint.
 

@@ -3,182 +3,143 @@
 Configuring faceted search
 ###########################
 
-Facet principle
----------------
 
+Facets also known as aggregation in Elasticsearch are used to provide simple search entries. |project_name| is using facet in different places:
 
-Faceted search provides a way to easily filter search.
+- Home page categories
 
+
+.. figure:: img/agg-home.png
+
+
+- Search results
+
+.. figure:: img/agg-search.png
+
+
+All facet configurations are stored in the user interface configuration (see :ref:`user-interface-configuration`). The configuration are defined using JSON following Elasticsearch API (See https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket.html).
+
+
+By default, the facet configurations are defined as (see :code:`web-ui/src/main/resources/catalog/js/CatController.js`). The home page display on the left side `inspireThemeUri` and `topic_text` and on the right side, the last facet defined `codelist_hierarchyLevel_text`.
+
 
-.. figure:: img/facet.png
+.. code-block::
 
-
-2 types of facets exist:
-
-- simple facet (only a list of value)
-
-- hierarchical facet (a category tree of value) requiring a thesaurus with relations.
-
-
-
-Facet response when searching
------------------------------
-
-When running a search a ``resultType`` parameter define a set of facet to return.
-
-A facet response looks like the following:
-
-.. code-block:: xml
-
-    <response from="1" to="20" selected="0">
-      <summary count="134" type="local">
-        <dimension name="type" label="types">
-          <category value="dataset" label="Dataset" count="86"/>
-          <category value="series" label="Series" count="41"/>
-          <category value="service" label="Service" count="7"/>
-        </dimension>
-        <dimension name="denominator" label="denominators">
-          <category value="200000" label="200000" count="1"/>
-          <category value="50000" label="50000" count="1"/>
-          <category value="25000" label="25000" count="1"/>
-          <category value="15000" label="15000" count="4"/>
-          <category value="10000" label="10000" count="1"/>
-          <category value="5000" label="5000" count="3"/>
-          <category value="2000" label="2000" count="12"/>
-        </dimension>
-        <dimension name="resolution" label="resolutions">
-          <category value="5 m" label="5 m" count="10"/>
-          <category value="1 m" label="1 m" count="3"/>
-          <category value="0.20 m" label="0.20 m" count="1"/>
-        </dimension>
-      </summary>
-
-
-User can retrieve a JSON response by adding ``_content_type=json`` in the parameter list.
-
-
-
-Configuration
--------------
-
-
-The facet configuration is done manually in ``WEB-INF/config-summary.xml``. After change,
-stop the application, drop the index and start the application to fully rebuild the index.
-
-
-A facet is based on a field in the index (see :ref:`configuring-search-fields`).
-
-Each facet to be indexed is defined in the ``facets`` element. The facets element
-lists the facets to index and how they should be indexed using attributes
-on facet elements as follows:
-
-* name: the name of the facet
-
-* indexKey: the name of the indexing field to be used for the facet
-
-* label: the label to use for the facet in returned summaries
-
-* (optional) classifier: a reference to a spring bean that should be used to
-  determine facet values for the indexing field. Used for hierarchical facets.
-  The bean must implement the org.fao.kernel.search.classifier.Classifier interface
-  Defaults to a classifier which uses the value of the field to be indexed
-
-* localized: todo documentation
-
-
-eg. for a simple facet
-
-.. code-block:: xml
-
-        <facet name="denominator"
-               indexKey="denominator"
-               label="denominators"/>
-
-
-eg. for a hierarchical facet based on a thesaurus.
-
-#. Define the facet
-
-.. code-block:: xml
-
-        <facet name="gemetKeyword"
-               label="gemetKeywords"
-               indexKey="keyword"
-               classifier="gemetKeywordClassifier"/>
-
-
-#. Register the classifier in ``WEB-INF/config-spring-geonetwork.xml``
-
-.. code-block:: xml
-
-
-  <bean id="gemetKeywordClassifier"
-        class="org.fao.geonet.kernel.search.classifier.TermLabel" lazy-init="true">
-    <constructor-arg name="finder" ref="ThesaurusManager"/>
-    <constructor-arg name="conceptScheme" value="http://geonetwork-opensource.org/gemet"/>
-    <constructor-arg name="langCode" value="eng"/>
-  </bean>
-
-#. Add the facet to a summary type (see below)
-
-
-
-
-How facet summaries should be built and formatted for each summary type is defined
-in the ``summaryTypes`` element. Create a new facet sets using:
-
-.. code-block:: xml
-
-      <summaryTypes>
-        <summaryType name="details" format="DIMENSION">
-
-
-The format attribute set to ``DIMENSION`` is the preferred format with a top level
-dimension tag and category tags for sub-categories which is more suitable for hierarchical facets.
-It also support one level facets.
-
-
-.. deprecated:: the format ``FACET_NAME`` (still the default) was used for
-     generating facet summary elements using one level only. This mode is not recommended.
-
-
-
-The ``summaryTypes`` element contains a number of ``summaryType`` elements each
-of which define a facet summary that can be configured for a service.
-Each ``summaryType`` element contains a list of facets (``item``) to be
-returned and how they should be formatted as follows:
-
-* facet: the name of a facet defined above
-
-* (optional) sortBy: the ordering for the facet. Defaults to by count.
-
-* (optional) sortOrder: asc or desc. Defaults is descendant.
-
-* (optional) max: the number of values to be returned for the facet. Defaults to 10.
-
-* (optional) depth: the depth to which hierarchical facets should be summarised. Defaults to 1.
-
-* (optional) translator: Define a DB translator to retrieve label from description
-  tables (e.g. categories) or codelist translator to retrieve label from schema
-  codelists files.
-
-eg. for category
-
-.. code-block:: xml
-
-       <item dimension="category"
-             plural="categories"
-             indexKey="_cat"
-             max="45"
-             translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
-
-or for group
-
-.. code-block:: xml
-
-        <item dimension="groupOwner"
-              plural="groupOwners"
-              indexKey="_groupOwner"
-              max="99"
-              sortBy="value"
-              translator="db:org.fao.geonet.repository.GroupRepository:findOne:int"/>
+      'home': {
+          ...
+          'facetConfig': {
+            'inspireThemeUri': {
+              'terms': {
+                'field': 'inspireThemeUri',
+                'size': 34
+                // "order" : { "_key" : "asc" }
+              }
+            },
+            'topic_text': {
+              'terms': {
+                'field': 'topic_text',
+                'size': 20
+              }
+            },
+            'codelist_hierarchyLevel_text': {
+              'terms': {
+                'field': 'codelist_hierarchyLevel_text',
+                'size': 10
+              }
+            }
+          },
+
+
+The search results facets configuration is defined in the search section and contains various examples of what you can do using facets:
+
+- Nested facets
+
+- Facet based on filter
+
+- Use `order` to sort facets
+
+- Use `include` to limit values
+
+- Use `collapsed` to collapse the item on load
+
+- Use `'userHasRole': 'isReviewerOrMore',` to display facet depending on user roles
+
+- Use field ending with `_tree` to hierarchy mode
+
+
+.. code-block::
+
+         'facetConfig': {
+            'codelist_hierarchyLevel_text': {
+              'terms': {
+                'field': 'codelist_hierarchyLevel_text'
+              },
+              'aggs': {
+                'format': {
+                  'terms': {
+                    'field': 'format'
+                  }
+                }
+              }
+            },
+            'codelist_spatialRepresentationType': {
+              'terms': {
+                'field': 'codelist_spatialRepresentationType',
+                'size': 10
+              }
+            },
+            'availableInServices': {
+              'filters': {
+                //"other_bucket_key": "others",
+                // But does not support to click on it
+                'filters': {
+                  'availableInViewService': {
+                    'query_string': {
+                      'query': '+linkProtocol:/OGC:WMS.*/'
+                    }
+                  },
+                  'availableInDownloadService': {
+                    'query_string': {
+                      'query': '+linkProtocol:/OGC:WFS.*/'
+                    }
+                  }
+                }
+              }
+            },
+            'thesaurus_geonetworkthesaurusexternalthemegemet_tree': {
+              'terms': {
+                'field': 'thesaurus_geonetworkthesaurusexternalthemegemet_tree',
+                'size': 100,
+                "order" : { "_key" : "asc" },
+                "include": "[^\^]+^?[^\^]+"
+                // Limit to 2 levels
+              }
+            },
+
+Currently supported aggregations are:
+
+- `terms <https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html>`_
+
+- `filters <https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filters-aggregation.html>`_
+
+- `histogram <https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-histogram-aggregation.html>`_
+
+
+.. code-block::
+
+            "resolutionScaleDenominator": {
+              "histogram": {
+                "field": "resolutionScaleDenominator",
+                "interval": 10000,
+                "keyed" : true,
+                "min_doc_count": 1
+              }
+            },
+            "creationYearForResource": {
+              "histogram": {
+                "field": "creationYearForResource",
+                "interval": 5,
+                "keyed" : true,
+                "min_doc_count": 1
+              }
+            },
