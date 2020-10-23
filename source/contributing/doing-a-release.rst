@@ -72,9 +72,10 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    cd geonetwork-$version
-    java -jar geonetwork-$newversion/geonetwork-install-$newversion.jar
-
+    cd GeoNetwork-$version
+    unzip GeoNetwork-$newversion.zip
+    cd bin
+    ./startup.sh -f
 
 
 3. Commit & tag the new version (in submodule first and then in the main module)
@@ -82,12 +83,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    # Then create the new branch for the plugin (ie.19115-3.2018)
-    cd schemas/iso19115-3.2018/
-    git checkout -b $versionbranch $frombranch
-    git push origin $versionbranch
-    # TODO: Check if plugin version needs an update or not and when ?
-    cd ../..
 
     # Then commit the new version
     git add .
@@ -136,24 +131,6 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 4. Publishing
 
-Generate checksum files
-
-* If using Linux:
-
-
-.. code-block:: shell
-
-    cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
-    cd geonetwork-$version && md5sum geonetwork-install-$newversion.jar > geonetwork-install-$newversion.jar.md5 && cd ..
-
-* If using Mac OS X:
-
-
-.. code-block:: shell
-
-    md5 -r web/target/geonetwork.war > web/target/geonetwork.war.md5
-    md5 -r geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
-
 On sourceforge first:
 
 .. code-block:: shell
@@ -166,8 +143,7 @@ On sourceforge first:
     mkdir v3.0.0
     cd v3.0.0
     put docs/changes3.0.0-0.txt
-    put geonetwork*/*.jar*
-    put web/target/geonetwork.war*
+    put GeoNetwork*/*
     bye
 
 
