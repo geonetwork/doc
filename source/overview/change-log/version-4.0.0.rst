@@ -15,7 +15,7 @@ By moving from Lucene to Elasticsearch GeoNetwork 4.0.0 offers:
 
 The Elasticsearch engine supports GeoNetwork core functionality: user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the change to Elasicsearch. The editor and admin application remains the same.
 
-There remains oppertunities to help:
+There remains opportunities to help:
 
 * **A number of features that you enjoy in GeoNetwork 3 may not yet be available**.
 * Multilingual editing is the same, but multilingual search is not yet fully operational.
