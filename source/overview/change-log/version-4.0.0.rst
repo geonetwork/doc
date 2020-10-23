@@ -13,7 +13,7 @@ By moving from Lucene to Elasticsearch GeoNetwork 4.0.0 offers:
 * Opportunity to add dashboards with Kibana
 * Simplify the geonetwork codebase
 
-The Elasticsearch engine supports GeoNetwork core functionality: user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the change to Elasicsearch. The editor and admin application remains the same.
+The Elasticsearch engine supports GeoNetwork core functionality: user can search, edit records and manage the catalogue as usual. Only the searches (and all related protocols) are affected by the change to Elasticsearch. The editor and admin application remains the same.
 
 There remains opportunities to help:
 
