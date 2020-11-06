@@ -129,24 +129,6 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 4. Publishing
 
-Generate checksum files
-
-* If using Linux:
-
-
-.. code-block:: shell
-
-    cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
-    cd geonetwork-$version && md5sum geonetwork-install-$newversion.jar > geonetwork-install-$newversion.jar.md5 && cd ..
-
-* If using Mac OS X:
-
-
-.. code-block:: shell
-
-    md5 -r web/target/geonetwork.war > web/target/geonetwork.war.md5
-    md5 -r geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
-
 On sourceforge first:
 
 .. code-block:: shell
@@ -159,8 +141,7 @@ On sourceforge first:
     mkdir v3.0.0
     cd v3.0.0
     put docs/changes3.0.0-0.txt
-    put geonetwork*/*.jar*
-    put web/target/geonetwork.war*
+    put GeoNetwork*/*
     bye
 
 
