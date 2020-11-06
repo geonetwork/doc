@@ -18,13 +18,11 @@ GeoNetwork 4.0.1 release is a minor release aligned with GeoNetwork 3.10.5 (see 
 
 * `DOI / Stored as resource identifier instead of online resource <https://github.com/geonetwork/core-geonetwork/pull/5124>`_
 
-* `DOI / Stored as resource identifier instead of online resource <https://github.com/geonetwork/core-geonetwork/pull/5124>`_
-
 * `Map / Improvements <https://github.com/geonetwork/core-geonetwork/pull/5140>`_
 
 * `WFS feature harvester scheduler and QGIS server support <https://github.com/geonetwork/core-geonetwork/pull/5140>`_
 
-.. figure:: 401-wfs-scheduler.png
+.. figure:: img/401-wfs-scheduler.png
 
 * `Indexing / Fix usage of custom indexing name <https://github.com/geonetwork/core-geonetwork/pull/5151>`_
 
