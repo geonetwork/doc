@@ -82,13 +82,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    # Then create the new branch for the plugin (ie.19115-3.2018)
-    cd schemas/iso19115-3.2018/
-    git checkout -b $versionbranch $frombranch
-    git push origin $versionbranch
-    # TODO: Check if plugin version needs an update or not and when ?
-    cd ../..
-
     # Then commit the new version
     git add .
     git commit -m "Update version to $newversion"
