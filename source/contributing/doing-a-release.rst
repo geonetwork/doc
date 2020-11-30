@@ -72,9 +72,10 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    cd geonetwork-$version
-    java -jar geonetwork-$newversion/geonetwork-install-$newversion.jar
-
+    cd GeoNetwork-$version
+    unzip GeoNetwork-$newversion.zip
+    cd bin
+    ./startup.sh -f
 
 
 3. Commit & tag the new version (in submodule first and then in the main module)
