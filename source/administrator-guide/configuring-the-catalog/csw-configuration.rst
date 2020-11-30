@@ -73,3 +73,70 @@ If your catalogue also focus on INSPIRE (see :ref:`inspire-configuration`), it m
 With this information the CSW can be validated using the INSPIRE validator.
 
 
+
+CSW post processing
+-------------------
+
+In some situation, user may want to modify XML encoding of records when retrieved using CSW. For example:
+
+* to make record more consistent
+
+* to adapt encoding in order to validate records with INSPIRE rules (eg. as a workaround for workaround for https://github.com/inspire-eu-validation/community/issues/95)
+
+
+For this, user can add extra conversion step during output of GetRecords and GetRecordById operation:
+
+* Adding post process to srv/eng/csw by creating for each output schema a file eg. for gmd, present/csw/gmd-csw-postprocessing.xsl
+
+* Adding post process to a portal inspire/eng/csw by creating for each output schema a file eg. for gmd, present/csw/gmd-inspire-postprocessing.xsl
+
+
+For a portal INSPIRE, create an "inspire" portal in the admin > settings > sources.
+User can then setup a post processing phase for the INSPIRE CSW of the portal.
+Create a post processing file gmd-inspire-postprocessing.xsl in yourschema/present/csw folder.
+The following example, remove contact with no email and link not starting with HTTP to conform to INSPIRE validator rules.
+
+.. code-block:: xml
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                    xmlns:gn="http://www.fao.org/geonetwork"
+                    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                    xmlns:gco="http://www.isotc211.org/2005/gco"
+                    xmlns:srv="http://www.isotc211.org/2005/srv"
+                    exclude-result-prefixes="#all">
+
+      <!-- Remove all contact not having an email -->
+      <xsl:template match="*[gmd:CI_ResponsibleParty
+                             and count(gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress[*/text() != '']) = 0]"
+                    priority="2"/>
+
+      <!-- Remove all online source not using HTTP to conform with
+      https://github.com/inspire-eu-validation/community/issues/95
+      -->
+      <xsl:template match="*[gmd:CI_OnlineResource
+                             and count(gmd:CI_OnlineResource/gmd:linkage/gmd:URL[not(starts-with(text(), 'http'))]) > 0]"
+                    priority="2"/>
+
+
+      <!-- Remove geonet:* elements. -->
+      <xsl:template match="gn:*" priority="2"/>
+
+      <!-- Copy everything. -->
+      <xsl:template match="@*|node()">
+        <xsl:copy>
+          <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
+
+
+The service can be tested with:
+
+.. code-block:: shell
+
+    curl 'http://localhost:8080/geonetwork/inspire/eng/csw' \
+      -H 'Content-type: application/xml' \
+      --data-binary $'<csw:GetRecordById xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2"                   outputSchema="http://www.isotc211.org/2005/gmd"><csw:ElementSetName>full</csw:ElementSetName><csw:Id>3de9790e-529f-431f-ac4f-e86d827bde8e</csw:Id>\n</csw:GetRecordById>'
+
