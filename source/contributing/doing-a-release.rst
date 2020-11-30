@@ -83,7 +83,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-
     # Then commit the new version
     git add .
     git commit -m "Update version to $newversion"
