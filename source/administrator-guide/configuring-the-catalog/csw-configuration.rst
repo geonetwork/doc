@@ -128,8 +128,8 @@ The following example, remove contact with no email and link not starting with H
         <xsl:copy>
           <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
-  </xsl:template>
-</xsl:stylesheet>
+      </xsl:template>
+    </xsl:stylesheet>
 
 
 The service can be tested with:
