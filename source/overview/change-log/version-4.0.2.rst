@@ -5,10 +5,19 @@ Version 4.0.2
 
 GeoNetwork 4.0.2 release is a minor release but adds a better multilingual support which may require some changes in your installations:
 
-Migration
-=========
+Database migration
+==================
 
-Migration is only required if you created custom facets configuration or custom Kibana dashboards. Changes are related to name or structure changes in index fields. The changes affect the following type of fields:
+With the possibility to `restore deleted record <https://github.com/geonetwork/core-geonetwork/pull/4817>`_, 
+catalog maintainer has to update the database with the `following migration SQL script <https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3110/migrate-default.sql#L10-L27>`_.
+
+
+Index migration
+===============
+
+Index migration is only required if you created custom facets configuration in the admin or created custom Kibana dashboards. 
+Changes are related to name or structure changes in index fields due to the improvement made for multilingual record support.
+The changes affect the following type of fields:
 
 Codelist
 --------
@@ -81,6 +90,13 @@ Topic category
 --------------
 
 `topic` is renamed to `cl_topic` and has the same structure as a codelist.
+
+
+GeoTag
+------
+
+
+`geotag` is now stored in the `template field for keyword types <https://github.com/geonetwork/core-geonetwork/pull/5243>`_ ie. `keywordType-place`
 
 
 
