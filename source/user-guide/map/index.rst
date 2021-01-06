@@ -24,18 +24,20 @@ The tools that are available are configured by the administrator, see :ref:`user
 
 Tools for using the Map are arranged in two groups in the right-hand side of the map. The top group looks like this:
 
-| **Tool Icon**              | **Description**                               |
-| -----------------------------| ---------------------------------------------- | 
-| .. figure:: img/Icon_AddNewLayer.png            | Add new layers - You can search the catalog, add layers from web services, or kml. It is possible to add directly WMS, WFS or WMTS layers by entering the endpoint and selecting the layer from the capabilities response.|
-| .. figure:: img/Icon_ManageLayer.png               | Manage layers or Change the background map.|
-| Projection switcher               | Allows you to set alternative projections.|
-| Filter layers               | Used to filter features shown on the map on various attributes. As an administrator make sure the filtering is correctly set up before adding this tool to the map..|
-| Web Processing Service               | You can enter a WPS link and see what processes the service offers.|
-| Manage the Map               | Setting the map back to default settings, loading a new map definition, downloading the current map, or saving the map configuration as a record in the catalog..|
-| Print               | A pdf of the current map will be generated, to be downloaded and send to a printer.|
-| Synchronise               | Layers with the small map on the Search tab. Changes on the map are duplicated on the small map and vice versa.|
-| Measure distances               | Measure distances and surfaces in the map.|
-| Draw annotations               | Annotations can be printed or exported as GeoJSON.|
+===================================== =============================================================================================================================================================================================================================================
+**Tool**                              **Description**                               
+===================================== =============================================================================================================================================================================================================================================
+Add Layer                             You can search the catalog, add layers from web services, or kml. It is possible to add directly WMS, WFS or WMTS layers by entering the endpoint and selecting the layer from the capabilities response.
+Manage Layer                          Manage layers or Change the background map.
+Projection switcher                   Allows you to set alternative projections.
+Filter layers                         Used to filter features shown on the map on various attributes. As an administrator make sure the filtering is correctly set up before adding this tool to the map..
+Web Processing Service                You can enter a WPS link and see what processes the service offers.
+Manage the Map                        Setting the map back to default settings, loading a new map definition, downloading the current map, or saving the map configuration as a record in the catalog..
+Print                                 A pdf of the current map will be generated, to be downloaded and send to a printer.
+Synchronise                           Layers with the small map on the Search tab. Changes on the map are duplicated on the small map and vice versa.
+Measure distances                     Measure distances and surfaces in the map.
+Draw annotations                      Annotations can be printed or exported as GeoJSON.
+===================================== =============================================================================================================================================================================================================================================
 
 Additionally there is a *geographic search* tool in the top left.
 
@@ -46,7 +48,7 @@ The map viewer supports *Featureinfo*, to retrieve information by clicking on a 
 
 
 Storing and sharing maps
---------------------
+------------------------
 
 A map consists of a background layer and a number of thematic overlays. A format to combine layers, projection and bounds (area of interest) has been adopted by OGC as the OWS Context standard. Besides GeoNetwork there are a number of other applications supporting this standard.
 
@@ -64,5 +66,5 @@ GeoNetwork uses OWSContext to store, share and load maps:
 
 
 .. figure:: img/OWSContext.png
-    :width: 400px
+    :width: 300px
 
