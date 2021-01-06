@@ -7,6 +7,7 @@ Full table of contents
    :maxdepth: 3
 
    overview/index.rst
+   install-guide/index.rst
    user-guide/index.rst
    administrator-guide/index.rst
    maintainer-guide/index.rst

@@ -45,7 +45,7 @@ You need to be sure you create your AngularJs module with same dependency inject
 
 
 .. important:: Whenever you change a ``goog.require`` or ``goog.provide`` statements, you need to relaunch
-   wro4j dependency tree creation. This can be done with jetty or tomcat restart.
+   wro4j dependency tree creation. This can be done with Jetty or Tomcat restart.
 
 
 Following this principles, you are now free to add new modules, components, directives or services to your application.

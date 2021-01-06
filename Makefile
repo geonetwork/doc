@@ -4,10 +4,10 @@
 # You can set these variables from the command line.
 SPHINXBINS    = .tox/docs/bin
 SRCDIR        = source
-SPHINXOPTS    = #-W
+SPHINXOPTS    = # used by html_languages to specify $$lang
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = _build
+BUILDDIR      = target
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -17,7 +17,7 @@ endif
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR)
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR) -W --keep-going -j auto --no-color -q
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR)
 
@@ -25,7 +25,13 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SRCDIR)
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
+	@echo "  clean"
+	@echo "  html                to make standalone HTML files"
+	@echo "  html_all_languages  build html documentation for all languages "
+	@echo "  html_languages      build html docs for LANGS environmental variable"
+	@echo "  html_eng            build html documentation for english"
+	@echo "  update_translations Pushing strings to transifex"
+	@echo "Along with traditional sphinx targets:"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -58,10 +64,14 @@ html_all_languages:
 	@echo "Building documentation in html for all languages"
 	set -e; for lang in "en" "es" "fr" "ge" "it" "ko" "nl" "cz" "ca" "fi" "is" "pt_BR" "sr"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
 
+html_languages:
+	@echo "Building documentation in html for $(LANGS)"
+	set -e; for lang in $(LANGS); do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
+
 html_eng:
 	@echo "Building documentation in html for all languages"
 	set -e; for lang in "en"; do echo "Building language $$lang"  && make html -e SPHINXOPTS="-D language='$$lang'" -e "BUILDDIR='target/doc/$$lang' -d $(BUILDDIR)/doctrees"; done
-	
+
 update_translations:
 	@echo "Pushing strings to transifex"
 	make gettext

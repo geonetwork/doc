@@ -1,11 +1,11 @@
-.. _tuto-introduction-deployment-build
+.. _tuto-introduction-deployment-build:
 
 (Optional) Build
 ################
 
 The source code of GeoNetwork is available on a public repository on `Github <https://github.com/geonetwork/core-geonetwork>`_. This means that you can clone, fork and propose pushes of your custom changes. If you are not familiar with repositories of code or git, you should check `this quick manual <https://try.github.io/levels/1/challenges/1>`_.
 
-GeoNetwork is built using `Maven version 3+ <https://maven.apache.org/>`_. It is written on **Java 7+**. It works both with OpenJDK or the Oracle version. There are several ways to install this on your local machine; for example if you have a Debian based OS (like Ubuntu), you can install them with just this command:
+GeoNetwork is built using `Maven version 3+ <https://Maven.apache.org/>`_. It is written on **Java 7+**. It works both with OpenJDK or the Oracle version. There are several ways to install this on your local machine; for example if you have a Debian based OS (like Ubuntu), you can install them with just this command:
 
   ::
 
@@ -19,7 +19,7 @@ Make sure you installed maven version 3!!
     Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T18:37:52+01:00)
     Maven home: ....
 
-Remember that this will also install java on your system. You can check that the version is the right one with the following command:
+Remember that this will also install Java on your system. You can check that the version is the right one with the following command:
 
   ::
 
@@ -37,9 +37,9 @@ So, the very first step once you have your environment set up is clone the GeoNe
 
 As you can see, all the source code shown on github is also available on your local machine now.
 
-The source code of GeoNetwork is split on several smaller maven projects. To run GeoNetwork, you have to build all of them and run the project named **"web"**. 
+The source code of GeoNetwork is split on several smaller Maven projects. To run GeoNetwork, you have to build all of them and run the project named **"web"**.
 
-If you are familiar to maven, you will probably have guessed that you have to run a package install command on the root folder of GeoNetwork source code. But if you try that, maven will warn you that for building GeoNetwork you need more memory than the default memory provided to maven. This means, you will have to export the maven options to increase the memory like this:
+If you are familiar to Maven, you will probably have guessed that you have to run a package install command on the root folder of GeoNetwork source code. But if you try that, Maven will warn you that for building GeoNetwork you need more memory than the default memory provided to Maven. This means, you will have to export the Maven options to increase the memory like this:
 
   ::
 
@@ -95,10 +95,10 @@ At the end of this build (which can take long, depending on your network connect
   
 This will generate a war file, which you can use in any Java Application Container (server) like Tomcat, on web/target/geonetwork.war
 
-Congratulations! You are ready to run GeoNetwork. To do this, just go to the web folder and run jetty in there:
+Congratulations! You are ready to run GeoNetwork. To do this, just go to the web folder and run Jetty in there:
 
   ::
 
   $ cd web; mvn jetty:run
   
-After jetty starts, you can see your running GeoNetwork by opening a browser and enter to http://localhost:8080/geonetwork
+After Jetty starts, you can see your running GeoNetwork by opening a browser and enter to http://localhost:8080/geonetwork

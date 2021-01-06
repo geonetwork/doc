@@ -27,9 +27,9 @@ The harvester identifies the ESRI metadata format: ESRI ISO, ESRI FGDC to apply 
     - *Connection type*.
         - *ArcSde service* - Uses the ArcSde service to retrieve the metadata.
 
-        .. note :: Additional installation steps are required to use the ArcSDE harvester because it needs proprietary ESRI java api jars to be installed.
+        .. note :: Additional installation steps are required to use the ArcSDE harvester because it needs proprietary ESRI Java api jars to be installed.
 
-            ArcSDE java API libraries need to be installed by the user in GeoNetwork (folder INSTALL_DIR_GEONETWORK/WEB-INF/lib), as these are proprietary libraries
+            ArcSDE Java API libraries need to be installed by the user in GeoNetwork (folder INSTALL_DIR_GEONETWORK/WEB-INF/lib), as these are proprietary libraries
             not distributed with GeoNetwork.
 
             The following jars are required:

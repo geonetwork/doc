@@ -5,7 +5,7 @@ Setup GeoNetwork
 
 .. note::
 
-    GeoNetwork package should be build using the maven `es` profile in order to be able to configure the search/content statistics to use ElasticSearch/Kibana:
+    GeoNetwork package should be build using the Maven `es` profile in order to be able to configure the search/content statistics to use ElasticSearch/Kibana:
 
     .. code-block:: shell
 

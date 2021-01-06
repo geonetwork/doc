@@ -31,11 +31,11 @@ Tip: If you are using the command line, you can view the log messages for starti
 #. Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, use this link `http://localhost:8080/geonetwork``. 
 For Docker, you can find the IP and Port to connect to, from the Kitematic application. Alternatively, run docker ps in a terminal (on Linux or OSX), to find out the port Docker is running on.
 
-.. figure:: ../../maintainer-guide/installing/img/docker.png
+.. figure:: ../../install-guide/img/docker.png
 
 The GeoNetwork catalog page is displayed.
 
-.. figure:: ../../maintainer-guide/installing/img/home-page.png
+.. figure:: ../../install-guide/img/home-page.png
 
 Once you have started the catalog, you can sign in to view additional options, search for specific resources or drill down to view detailed information about the resource.
 
@@ -46,26 +46,26 @@ This topic describes how to sign in using your admin login details and load temp
 
 #. On the GeoNetwork home page, from the top menu, click ``Sign in`` to connect as administrator. The Sign in page displays.
 
-.. figure:: ../../maintainer-guide/installing/img/signin.png
+.. figure:: ../../install-guide/img/signin.png
 
 #. Enter the username and password and click Sign in. The default admin account details are: username ``admin`` with password ``admin``.
 After you sign in, the top toolbar displays an ``admin console`` and your login details.
 
-.. figure:: ../../maintainer-guide/installing/img/identified-user.png
+.. figure:: ../../install-guide/img/identified-user.png
 
 #. Navigate to ``admin console`` and click on ``metadata and templates``:
 
-.. figure:: ../../maintainer-guide/installing/img/metadata-and-templates.png
+.. figure:: ../../install-guide/img/metadata-and-templates.png
 
 #. On the Metadata  & templates page, select all standards from the Standards available list, and:
 a. Click ``load samples``, and 
 b. Click ``load templates`` to load examples. 
 
-.. figure:: ../../maintainer-guide/installing/img/templates.png
+.. figure:: ../../install-guide/img/templates.png
 
 #. From the top menu, click Search to view the examples:
 
-.. figure:: ../../maintainer-guide/installing/img/once-samples-are-loaded.png
+.. figure:: ../../install-guide/img/once-samples-are-loaded.png
 
 
 Searching information

@@ -1,9 +1,9 @@
-.. _geonetwork-api:
+.. _q-search:
 
 Q Search
 ##############
 
-The Q Search endpoint allows you to query the catalog programatically. It is available in the local catalog at http://localhost:8080/geonetwork/srv/eng/q (otherwise substute your catalog URL).
+The Q Search endpoint allows you to query the catalog programmatically. It is available in the local catalog at http://localhost:8080/geonetwork/srv/eng/q (otherwise substitute your catalog URL).
 
 
 Query results parameters
@@ -46,9 +46,9 @@ The following parameters can be appended to your request to format the results:
 
   - ``true`` (default, if the parameter is not provided). 
 
-  - ``false``: doesn’t return the summary.
+  - ``false``: does not return the summary.
 
-- ``summaryOnly``: Returns the summary (depending on the value ofthe parameter buildSummary) and results. Values:
+- ``summaryOnly``: Returns the summary (depending on the value of the parameter ``buildSummary``) and results. Values:
 
   - ``0`` (default, if the parameter is not provided). 
 
@@ -71,7 +71,7 @@ Query filter parameters
 You can search on any field(s) indexed in Lucene. For a complete reference see
 https://github.com/geonetwork/core-geonetwork/blob/master/schemas/iso19139/src/main/plugin/iso19139/index-fields/default.xsl
 
-Note you can query the Lucene index graphically,using a java-based graphical tool such as `Luke <https://github.com/DmitryKey/luke>`_. Version `4.10.4 <https://github.com/DmitryKey/luke/releases/tag/luke-4.10.4.1/>`_ is required to work with the version of Lucene bundled with GeoNetwork. Download the jar file where you can access the GeoNetwork index files, then execute with:
+Note you can query the Lucene index graphically,using a Java-based graphical tool such as `Luke <https://github.com/DmitryKey/luke>`_. Version `4.10.4 <https://github.com/DmitryKey/luke/releases/tag/luke-4.10.4.1/>`_ is required to work with the version of Lucene bundled with GeoNetwork. Download the jar file where you can access the GeoNetwork index files, then execute with:
 
 ``java -jar luke-with-deps.jar`` 
 

@@ -13,8 +13,9 @@ Customizing guide
    editor-ui/creating-custom-editor.rst
    changing-layout.rst
    configuring-search-fields.rst
-   configuring-facetted-search.rst
+   configuring-faceted-search.rst
    advanced-configuration.rst
+   adding-static-pages.rst
    implementing-a-schema-plugin.rst
    characterset.rst
    misc.rst

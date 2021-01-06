@@ -11,10 +11,27 @@ The catalog provides an opensearch entry point at http://localhost:8080/geonetwo
 
 .. figure:: img/opensearch.png
 
+Browsers detect the availability of opensearch by checking the index page at the root of the (sub)domain. If you install geonetwork in a subfolder, 
+consider to set up a rewrite rule forwarding the index request to the subfolder.
+
+An example of such a rewrite rule in Apache:
+
+.. code-block:: text
+
+  RewriteEngine on
+  RewriteRule   "^/$"  "/geonetwork/"  [R]
+
+Verify in a browser if opensearch is detected by typing the url and then a space. The url bar should then give an indication that you're searching within the site.
+
+.. figure:: img/opensearch-in-browser.png
+    :width: 300px
+
 
 INSPIRE ATOM
 ------------
 
+The INSPIRE technical guideline for download services facilitates an option to set up a download service based on OpenSearch and Atom.
+A separate OpenSearch endpoint is created for every Atom-based download service.
 
 .. note::
 

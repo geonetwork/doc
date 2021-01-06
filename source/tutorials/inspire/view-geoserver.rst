@@ -3,7 +3,7 @@
 Tutorial setting up INSPIRE view service with GeoNetwork and GeoServer
 ######################################################################
 
-This tutorial shows how one can set up a combination of GeoServer and GeoNetwork to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_. 
+This tutorial shows how one can set up a combination of GeoServer and GeoNetwork to provide view services following `technical guidelines for view services <http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.1.pdf>`_.
 
 Note that the technical guidelines allow both `WMS <http://www.opengeospatial.org/standards/wms>`_ as well as `WMTS <http://www.opengeospatial.org/standards/wmts>`_. Select the service type which matches your use case or both. WMTS is generally the preferred choice for bigger datasets (facilitates to meet the quality of service requirements). WMS is generally the better choice for datasets with a high update frequency. GeoServer has improved its WMTS support in recent versions (2.10+). Older versions can not be used for providing WMTS according to INSPIRE technical guidelines. 
 
