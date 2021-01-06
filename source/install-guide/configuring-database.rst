@@ -20,7 +20,7 @@ By default, an `H2 <http://www.h2database.com/html/main.html>`_ database is conf
 and created when the application first starts. The H2 database named ``gn.h2.db``
 is created:
 
-* In the ``jetty`` folder of the GeoNetwork application folder when using the :ref:`ZIP distribution <installing-from-zip>`;
+* In the ``jetty`` folder of the GeoNetwork application folder when using the :ref:`ZIP distribution <installing-from-zip>`.
 
 * In the ``bin`` folder of Tomcat when deploying the :ref:`WAR <installing-from-war-file>` on Tomcat (started using ``startup.sh``).
 
@@ -50,10 +50,10 @@ The Java Naming and Directory Interface (JNDI) is a technology which allows to c
 
 #. To activate JNDI, you need to activate the JNDI database type in :file:`/WEB-INF/config-node/srv.xml`.
 
-#. When deploying the WAR on Tomcat and using ``startup.sh``, in the ``bin`` folder of Tomcat, Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`
+#. When deploying the WAR on Tomcat and using ``startup.sh``, in the ``bin`` folder of Tomcat, Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`.
 
 #. Then update the |jdbc.properties| file with connection information.
-   Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`
+   Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`.
 
    .. code-block:: xml
 
@@ -71,23 +71,23 @@ Configuring a database via environment
 Setting configuration properties via environment variables is common in container environments such as Docker.
 2 options exist:
 
-#. Add the parameters directly to the Java environment by substituting JAVA_OPTS
+#. Add the parameters directly to the Java environment by substituting JAVA_OPTS.
 
    .. code-block:: text
 
-    docker run --rm --name gn -p 8080:8080 -e JAVA_OPTS=" 
-        -Dgeonetwork.db.type=postgres 
-        -Djdbc.database=example 
-        -Djdbc.database=example
-        -Djdbc.username=example
-        -Djdbc.password=xxx
-        -Djdbc.host=localhost
-        -Djdbc.port=5432" geonetwork:latest
+        docker run --rm --name gn -p 8080:8080 -e JAVA_OPTS=" 
+            -Dgeonetwork.db.type=postgres 
+            -Djdbc.database=example 
+            -Djdbc.database=example
+            -Djdbc.username=example
+            -Djdbc.password=xxx
+            -Djdbc.host=localhost
+            -Djdbc.port=5432" geonetwork:latest
 
-    Many of the GeoNetwork configuration parameters contain a dot, which is a challenge for substitution via environment variables. 
-    Docker is an exception here, it provides a mechanism to allow dots in environment parameters.
-
-#. Set an exact environment variable including '.' (possible in docker only).
+   
+#. Set an exact environment variable including '.'.
+   Many of the GeoNetwork configuration parameters contain a dot, which is a challenge for substitution via environment variables. 
+   Docker is an exception here, it provides a mechanism to allow dots in environment variables.
 
    .. code-block:: text
 
