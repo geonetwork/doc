@@ -9,7 +9,7 @@ It provides powerful metadata editing and search functions as well as
 an interactive web map viewer. It is currently used in numerous
 Spatial Data Infrastructure initiatives across the world.
 
-Apart from how to start the catalog, this Quick Start describes:
+This Quick Start also describes:
 
 * some of the different ways you can search for spatial data
 * how to download and display data from the search results
@@ -18,84 +18,86 @@ Apart from how to start the catalog, this Quick Start describes:
 Starting the catalog
 --------------------
 
-After going through the installer steps, simply go to bin folder and click
-on start.bat (on windows) or startup.sh (on linux).
+This topic describes how to start GeoNetwork after installation on your machine. 
 
-Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, this is probably at ``http://localhost:8080/geonetwork``. 
+**Before you start:**
 
-When you use Docker, you can find our what IP and Port to connect to from the Kitematic application. Or run ``docker ps`` in a terminal (on Linux or OSX). This should give you the port the Docker is running on.
+Ensure you have successfully installed GeoNetwork using the steps described in ``Installing the application``.
 
-.. figure:: ../../install-guide/img/docker.png
+To start the catalog:
 
-Your opening screen should look like this:
+#. From your GeoNetwork folder location, open the bin folder and double-click start.bat (on windows) or startup.sh (on linux). This initiates a web service for GeoNetwork, which you can use to view the catalog. Tip: If you are using the command line, you can view the log messages directly in the console.
 
-.. figure:: ../../install-guide/img/home-page.png
+#. Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, use this link `http://localhost:8080/geonetwork`. 
 
+#. The GeoNetwork catalog page is displayed.
 
+   .. figure:: ../../install-guide/img/home-page.png
+
+#. Once you have started the catalog, you can sign in to view additional options, search for specific resources or drill down to view detailed information about the resource.
 
 Signing in and load templates
 -----------------------------
 
-Click the ``sign in`` to connect as administrator. The default account is
-username ``admin`` with password ``admin``.
+This topic describes how to sign in using your admin login details and load templates to view examples of resources in the GeoNetwork catalog.
 
-.. figure:: ../../install-guide/img/signin.png
+#. On the GeoNetwork home page, from the top menu, click ``Sign in`` to connect as administrator. The Sign in page displays.
 
+   .. figure:: ../../install-guide/img/signin.png
 
-Once connected, the top toolbar should provide a link to the ``admin console``
-and your login details.
+#. Enter the username and password and click Sign in. The default admin account details are: username ``admin`` with password ``admin``.
+   After you sign in, the top toolbar displays an ``admin console`` and your login details.
 
-.. figure:: ../../install-guide/img/identified-user.png
+   .. figure:: ../../install-guide/img/identified-user.png
 
-Go to the ``admin console`` and click on ``metadata and templates``:
+#. Navigate to ``admin console`` and click on ``metadata and templates``:
 
-.. figure:: ../../install-guide/img/metadata-and-templates.png
+   .. figure:: ../../install-guide/img/metadata-and-templates.png
 
-Choose all standards and click ``load samples`` and then ``load templates`` in
-order to load examples:
+#. On the Metadata  & templates page, select all standards from the Standards available list, and:
 
-.. figure:: ../../install-guide/img/templates.png
+   a. Click ``load samples``, and 
+   b. Click ``load templates`` to load examples. 
 
-Go back to the search page to see examples:
+   .. figure:: ../../install-guide/img/templates.png
 
-.. figure:: ../../install-guide/img/once-samples-are-loaded.png
+#. From the top menu, click Search to view the examples:
+
+  .. figure:: ../../install-guide/img/once-samples-are-loaded.png
 
 Searching information
 ---------------------
 
-The search form provides different ways for search:
+You can use the Search form to search information using the GeoNetwork catalog. The Search form allows you to search using:
 
 * a full text search box providing suggestions
 
-.. figure:: img/full-text.png
+  .. figure:: img/full-text.png
 
+* facets which defines groups that you can click to browse the content of the catalog
 
-* facets which defines groups that you can easily click on to browse the content of the catalog
-
-.. figure:: img/facets.png
-
+  .. figure:: img/facets.png
 
 * spatial filtering to choose information in specific areas
 
-.. figure:: img/spatial-filter.png
-
+  .. figure:: img/spatial-filter.png
 
 * advanced search
 
-.. figure:: img/advanced.png
+  .. figure:: img/advanced.png
 
 
 
 Discovering information
 -----------------------
 
-Search results present main information about each resources: title, abstract,
+Search results display main information about each resources: title, abstract,
 categories, status, overview and links.
 
 .. figure:: img/a-result.png
 
 
-Clicking the record will provide more in depth details about the resources:
+To view detailed information about the resources, click the record. These details include:
 
 * Download and links
 * About the resource
@@ -104,15 +106,18 @@ Clicking the record will provide more in depth details about the resources:
 
 .. figure:: img/a-record.png
 
-
-To get more information, switch the advanced view mode.
-To update the record, click the edit button.
+* To get more information, switch the advanced view mode.
+* To update the record, click Edit.
 
 .. _quick_start-3D:
 
-From the results or the record view, you can easily add WMS layers referenced in
-a metadata record on the map. With the map, you can visualize your data, choose
-your background maps, query objects, display on a 3D globe and more ...
+From the results or the record view, you can add WMS layers referenced in
+a metadata record on the map. Using the map, you can:
+
+* Visualize your data, 
+* Choose your background maps, 
+* Query objects, 
+* Display on a 3D globe
 
 
 .. figure:: img/map-africa-basin.png
