@@ -17,7 +17,7 @@ Contact your administrator if you don't have the correct profile.
 
 .. figure:: img/add-new-record.png
 
-2. From the metadata template list, select a template (see :ref:`creating-templates`), choose a group from the In dropdiwn and click *Create*.
+2. From the metadata template list, select a template (see :ref:`creating-templates`), choose a group from the dropdown and click *Create*.
 
 .. figure:: img/creating-metadata.png
 
