@@ -50,10 +50,7 @@ The Java Naming and Directory Interface (JNDI) is a technology which allows to c
 
 #. To activate JNDI, you need to activate the JNDI database type in :file:`/WEB-INF/config-node/srv.xml`.
 
-#. When deploying the WAR on Tomcat and using ``startup.sh``, in the ``bin`` folder of Tomcat, Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`.
-
-#. Then update the |jdbc.properties| file with connection information.
-   Configure a JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`.
+#. Configure the JNDI connection in Tomcat by adding a new resource to :file:`TOMCAT/conf/context.xml`. For jetty in :file:`WEB-INF/jetty-env.xml`.
 
    .. code-block:: xml
 
