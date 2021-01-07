@@ -26,6 +26,11 @@ Uncomment the relevant line in :file:`WEB-INF/config-security/config-security.xm
 Configuring LDAP
 ----------------
 
+`Lightweight Directory Access Protocol (LDAP) <https://en.wikipedia.org/wiki/Ldap>`_ enables GeoNetwork to verify usernames and passwords to a remote identity store.
+LDAP implementation uses the default GeoNetwork Login User Interface elements.  
+
+GeoNetwork currently has 2 approaches to configure LDAP. Verify also the alternative approach in :ref:`authentication-ldap-hierarchy`.
+
 The LDAP configuration is defined in ``WEB-INF/config-security/config-security.properties``, you can then configure
 your environment updating the previous file or overriding the properties in the file
 ``WEB-INF/config-security/config-security-overrides.properties``.
@@ -529,7 +534,7 @@ Keycloak details are defined via environment variables
 You can setup more advance keycloak settings by editing the file
 :file:`WEB-INF/config-security/keycloak.json`
 
-Geonetowk client URL configurations
+Geonetwork client URL configuration
 ===================================
 
 Ensure that when you configure your client that you setup the valid redirect uris to your geonetwork installation.
