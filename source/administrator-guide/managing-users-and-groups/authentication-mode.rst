@@ -7,17 +7,24 @@ Authentication mode
 By default the catalog uses the internal database for user management and authentication.
 However there are some other authentication mechanisms available:
 
+- :ref:`authentication-ldap`
+- :ref:`authentication-ldap-hierarchy`
+- :ref:`authentication-cas`
+- :ref:`authentication-keycloak`
+- :ref:`authentication-shibboleth`
+
+Which mode to use is configured in :file:`WEB-INF/config-security/config-security.xml` or via an environment variable ``config.security.type``.
+
+Uncomment the relevant line in :file:`WEB-INF/config-security/config-security.xml`:
+
+.. code-block:: xml
+
+    <import resource="config-security-{mode}.xml"/>
+
 .. _authentication-ldap:
 
 Configuring LDAP
 ----------------
-
-To enable LDAP, setup authentication by including ``WEB-INF/config-security/config-security-ldap.xml``
-in ``WEB-INF/config-security/config-security.xml``, uncommenting the following line:
-
-.. code-block:: xml
-
-    <import resource="config-security-ldap.xml"/>
 
 The LDAP configuration is defined in ``WEB-INF/config-security/config-security.properties``, you can then configure
 your environment updating the previous file or overriding the properties in the file
@@ -232,9 +239,6 @@ The LDAP attribute can contains the following configuration to define the differ
     -- Only a registered user for GRANULAT
     cat_privileges=CAT_GRANULAT_RegisteredUser
 
-.. _authentication-cas:
-
-
 Synchronization
 ```````````````
 
@@ -286,8 +290,10 @@ Or from the Configuration Settings set the ``Log level`` to ``DEV`` temporarily:
 
 .. figure:: img/setting-log-level.png
 
+.. _authentication-ldap-hierarchy:
+
 Configuring LDAP - Hierarchy
-============================
+----------------------------
 
 A slightly different method for LDAP configuration was introduced in mid-2020.
 
@@ -312,7 +318,7 @@ Before you start configuring, you will need to know;
    If you are starting a new configuration, I would recommend the Hierarchy configuration.  It's a little simpler and supported by test cases and test infrastructure.  It also supports LDAPs where users/groups are in multiple directories.
 
 Configuring LDAP Beans (Hierarchy)
-``````````````````````````````````
+==================================
 
 GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see the `README.md <https://github.com/geonetwork/core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md>`_ or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
 
@@ -467,6 +473,8 @@ There are currently two ways to convert an LDAP group to GeoNetwork Groups/Profi
         </property>
     </bean>
 
+.. _authentication-cas:
+
 Configuring CAS
 ---------------
 
@@ -497,7 +505,82 @@ You can configure your environment by updating the previous file or by defining 
     cas.login.url=${cas.baseURL}/login
     cas.logout.url=${cas.baseURL}/logout?url=${geonetwork.https.url}/
 
+.. _authentication-keycloak:
 
+Configuring Keycloak
+----------------------
+
+`Keycloak <https://keycloak.org>`_ is a software solution to facilitate storage of authentication details, user federation, identity brokering and social login.
+GeoNetwork can be set up to use a keycloak instance for authentication. 
+
+Install keycloak from its instructions or use this example setup in docker
+https://www.keycloak.org/getting-started/getting-started-docker
+
+Keycloak details are defined via environment variables
+
+    .. code-block:: text
+
+        KEYCLOAK_AUTH_SERVER_URL={keycloak url}
+        KEYCLOAK_REALM={realm name}
+        KEYCLOAK_RESOURCE={client name}
+        KEYCLOAK_SECRET={client secret}
+        KEYCLOAK_DISABLE_TRUST_MANAGER={true|false}
+
+You can setup more advance keycloak settings by editing the file
+:file:`WEB-INF/config-security/keycloak.json`
+
+Geonetowk client URL configurations
+===================================
+
+Ensure that when you configure your client that you setup the valid redirect uris to your geonetwork installation.
+i.e. https://localhost:8443/geonetwork/\*. If this is not setup correctly you may get and error indicating that a wrong redirect uri was supplied.
+Also if wanting to test the client backchannel logout then ensure that the admin URL is also set to the geonetwork installation.
+
+Sample user/role/group setup
+============================
+
+Sample Role setup
+`````````````````
+
+In your client role settings (clients -> myclient -> roles). Add the following roles
+
+    .. code-block:: text
+
+        Administrator
+        RegisteredUser
+        Guest
+        sample:UserAdmin
+        sample:Reviewer
+        sample:Editor
+        sample:RegisteredUser
+
+Sample Group configuration
+``````````````````````````
+
+#. Go to keycloak groups (left menu).
+#. Create a new group called "Administrator"
+#. Edit the group. Go to Role Mappings -> Client Roles (myclient) -> select the administrator roles and click on "Add selected"
+   Any user part of the Administrator group will not be an administrator for the myclient applicaton.
+
+Sample User configuration
+`````````````````````````
+
+#. Go to keycloak users (left menu)
+#. Add user if not already done so. Then go to that user.
+#. Go to role Mappings -> Client Roles (myclient) -> select the available roles to be applied and click on "Add selected"
+   or go to Groups -> Available Groups -> Click on the Administrator Group and then click on "Join"
+
+Single Signout
+``````````````
+
+If setting up Single Signout, you may need to ensure that you have proper certificates for keycloak and the geonetwork application.
+And ensure the truststore has been setup https://www.keycloak.org/docs/4.8/server_installation/index.html#_truststore
+You will need to ensure that the Admin URL is configured as identified in the URL Configurations above.
+
+Identity provider (IDP) issues
+``````````````````````````````
+
+If setting up with an IDP that does not support BackChannel logout you may want to use the parameter ``KEYCLOAK_IDPLOGOUTURL``. In this case you may want to add the parameter ``KEYCLOAK_IDPLOGOUTURL``. It has to be in the format similar to https://idp.example.com/logout?redirect={RedirecUrl}. {RedirecUrl} is required in the url.
 
 .. _authentication-shibboleth:
 
