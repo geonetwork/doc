@@ -26,7 +26,9 @@ Ensure you have successfully installed GeoNetwork using the steps described in `
 
 To start the catalog:
 
-#. From your GeoNetwork folder location, open the bin folder and double-click start.bat (on windows) or startup.sh (on linux). This initiates a web service for GeoNetwork, which you can use to view the catalog. Tip: If you are using the command line, you can view the log messages directly in the console.
+#. From your GeoNetwork folder location, open the bin folder and double-click start.bat (on windows) or startup.sh (on linux). This initiates a web service for GeoNetwork, which you can use to view the catalog. 
+
+   Tip: If you are using the command line, you can view the log messages directly in the console.
 
 #. Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, use this link `http://localhost:8080/geonetwork`. 
 
