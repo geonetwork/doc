@@ -565,27 +565,17 @@ Sample Group configuration
 #. Go to keycloak groups (left menu).
 #. Create a new group called "Administrator"
 #. Edit the group. Go to Role Mappings -> Client Roles (myclient) -> select the administrator roles and click on "Add selected"
-   Any user part of the Administrator group will not be an administrator for the myclient applicaton.
+   Any user joined to the Administrator group will be a geonetwork administrator.
 
 Sample User configuration
 `````````````````````````
 
 #. Go to keycloak users (left menu)
-#. Add user if not already done so. Then go to that user.
+#. Add or select existing user. Then go to that user.
 #. Go to role Mappings -> Client Roles (myclient) -> select the available roles to be applied and click on "Add selected"
    or go to Groups -> Available Groups -> Click on the Administrator Group and then click on "Join"
 
-Single Signout
-``````````````
-
-If setting up Single Signout, you may need to ensure that you have proper certificates for keycloak and the geonetwork application.
-And ensure the truststore has been setup https://www.keycloak.org/docs/4.8/server_installation/index.html#_truststore
-You will need to ensure that the Admin URL is configured as identified in the URL Configurations above.
-
-Identity provider (IDP) issues
-``````````````````````````````
-
-If setting up with an IDP that does not support BackChannel logout you may want to use the parameter ``KEYCLOAK_IDPLOGOUTURL``. In this case you may want to add the parameter ``KEYCLOAK_IDPLOGOUTURL``. It has to be in the format similar to https://idp.example.com/logout?redirect={RedirecUrl}. {RedirecUrl} is required in the url.
+A similar setup is described for geoserver in the `geoserver documentation <https://docs.geoserver.org/latest/en/user/community/keycloak/index.html>`_.
 
 .. _authentication-shibboleth:
 
