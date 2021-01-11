@@ -10,19 +10,19 @@ Introduction
 GeoNetwork uses a database to persist aspects such as metadata records, privileges and configurations.
 The database default structure is created by the application on initial startup. Subsequent releases of GeoNetwork 
 will update the database structure automatically. For this reason the database user initially needs create privileges on the database. 
-A number of database dialects are supported; :command:`PostGreSQL`, :command:`Oracle`, :command:`SQL Server`, :command:`H2`.
+A number of database dialects are supported; :command:`H2`, :command:`PostgreSQL`, :command:`PostGIS`, :command:`Oracle`, :command:`SQL Server`.
 This section describes various options to configure the database connection.
 
 H2 database
 -----------
 
-By default, an `H2 <http://www.h2database.com/html/main.html>`_ database is configured
+By default, a `H2 <http://www.h2database.com/html/main.html>`_ database is configured
 and created when the application first starts. The H2 database named ``gn.h2.db``
 is created:
 
-* In the ``jetty`` folder of the GeoNetwork application folder when using the :ref:`ZIP distribution <installing-from-zip>`.
+* In the :file:`jetty` folder of the GeoNetwork application folder when using the :ref:`ZIP distribution <installing-from-zip>`.
 
-* In the ``bin`` folder of Tomcat when deploying the :ref:`WAR <installing-from-war-file>` on Tomcat (started using ``startup.sh``).
+* In the :file:`bin` folder of Tomcat when deploying the :ref:`WAR <installing-from-war-file>` on Tomcat (started using ``startup.sh``).
 
 .. note::
     You don't **need** to configure the database if you are happy with the local H2 database.
@@ -33,14 +33,14 @@ Configuring a database via config files
 
 The database dialect is configured in :file:`/WEB-INF/config-node/srv.xml`. Uncomment the dialect to use. 
 
-A jdbc driver is included for PostGreSQL and H2. Other dialects require a jdbc driver to be installed.
-Download the jdbc library for the dialect and place it in ``/WEB-INF/lib`` or in the tomcat lib folder.
+A jdbc driver is included for PostgreSQL, Oracle and H2. Other dialects require a jdbc driver to be installed.
+Download the jdbc library for the dialect and place it in ``/WEB-INF/lib`` or in the tomcat or GeoNetwork lib folder.
 
 To update the connection details, update the |jdbc.properties| file with relevant connection information.
 
 GeoNetwork assumes data is stored in the default schema for a user. If this is not the case, you need to activate a setting ``hibernate.default_schema`` in :file:`/WEB-INF/config-spring-geonetwork.xml`. 
 There are some scripts that run directly on the database at initialisation and can't use the ``hibernate.default-schema`` parameter. For these scripts you need to set the default-schema manually. 
-In PostGreSQL this is possible by appending ``?currentSchema=example`` to the database connection. 
+In PostgreSQL this is possible by appending ``?currentSchema=example`` to the database connection. 
 
 
 Configuring a database via JNDI
@@ -96,6 +96,9 @@ Setting configuration properties via environment variables is common in containe
             -e jdbc.password=xxx
             -e jdbc.host=localhost
             -e jdbc.port=5432 geonetwork:latest
+
+Within PostgreSQL it is possible to configure `postgres` or `postgis`. In the latter case GeoNetwork will use spatial capabilities of PostGIS to filter metadata. 
+In the first case (and for other database dialects) a Shapefile is created for storage of metadata coverage.
 
 Logging
 -------
