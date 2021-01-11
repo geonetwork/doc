@@ -23,7 +23,6 @@ Once the release branch has been thoroughly tested and is stable a release can b
     previousversion=3.6.0
     nextversion=3.8.1-SNAPSHOT
     nextMajorVersion=3.9.0-SNAPSHOT
-    modules=( "schemas/iso19115-3.2018" )
 
 
     # Get the branch
@@ -60,10 +59,8 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
     # Download Jetty and create the installer
     cd release
-    mvn clean install -Djetty-download
-    cd ../installer
-    ant
-    cd ..
+    mvn process-resources -Djetty-download
+    mvn package
 
 
 
@@ -72,22 +69,17 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 .. code-block:: shell
 
-    cd geonetwork-$version
-    java -jar geonetwork-$newversion/geonetwork-install-$newversion.jar
+    cd target/GeoNetwork-$newversion
+    unzip geonetwork-bundle-$newversion.zip -d geonetwork-bundle-$newversion
+    cd geonetwork-bundle-$newversion/bin
+    ./startup.sh
 
 
 
-3. Commit & tag the new version (in submodule first and then in the main module)
+3. Commit & tag the new version
 
 
 .. code-block:: shell
-
-    # Then create the new branch for the plugin (ie.19115-3.2018)
-    cd schemas/iso19115-3.2018/
-    git checkout -b $versionbranch $frombranch
-    git push origin $versionbranch
-    # TODO: Check if plugin version needs an update or not and when ?
-    cd ../..
 
     # Then commit the new version
     git add .
@@ -144,7 +136,7 @@ Generate checksum files
 .. code-block:: shell
 
     cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
-    cd geonetwork-$version && md5sum geonetwork-install-$newversion.jar > geonetwork-install-$newversion.jar.md5 && cd ..
+    cd release/target/GeoNetwork-$version && md5sum geonetwork-bundle-$newversion.zip >  geonetwork-bundle-$newversion.zip.md5 && cd ../..
 
 * If using Mac OS X:
 
@@ -152,7 +144,7 @@ Generate checksum files
 .. code-block:: shell
 
     md5 -r web/target/geonetwork.war > web/target/geonetwork.war.md5
-    md5 -r geonetwork-$newversion/geonetwork-install-$newversion.jar > geonetwork-$newversion/geonetwork-install-$newversion.jar.md5
+    md5 -r release/target/GeoNetwork-$newversion/geonetwork-bundle-$newversion.zip > release/target/GeoNetwork-$newversion/geonetwork-bundle-$newversion.zip.md5
 
 On sourceforge first:
 
@@ -166,7 +158,7 @@ On sourceforge first:
     mkdir v3.0.0
     cd v3.0.0
     put docs/changes3.0.0-0.txt
-    put geonetwork*/*.jar*
+    put release/target/GeoNetwork*/geonetwork-bundle*.zip*
     put web/target/geonetwork.war*
     bye
 
