@@ -1,4 +1,4 @@
-.. _installing-index:
+.. _logging:
 
 Logging
 #######################
@@ -10,10 +10,10 @@ Customising the log file location
 
 Log files are written to the generic log location of the container. It is possible to change the 
 location of the logfiles with an environment parameter `-Dlog_dir=/var/tomcat/`. 
-The path should end with `/` and the log files will be created in /var/tomcat/logs/geonetwork.log.
+The path should end with :file:`/` and the log files will be created in :file:`/var/tomcat/logs/geonetwork.log`.
 
 Details of some errors, such as xsl transformation errors, are not written to geonetwork.log. 
-They are written to a file called `catalina.out`.
+They are written to a file called :file:`catalina.out`.
 
 Setting the Loglevel
 --------------------
@@ -25,14 +25,14 @@ GeoNetwork by default has 4 log levels: PROD, INDEX, SEARCH, DEV.
 - Search is similar to PROD, but with extended logging around the search process.
 - DEV is the most extended level, all debug messages will be logged.
 
-You can set the log level from the admin > settings page.
+You can set the log level from the Admin > Settings page.
 
  .. figure:: img/log-setting.png
 
 Log4j
 ----------------------
 
-GeoNetwork uses `log4j <https://logging.apache.org/log4j>` for logging. 
-The log4j configuration file is located at `/WEB-INF/classes/log4j.xml`.
+GeoNetwork uses `log4j <https://logging.apache.org/log4j>`__ for logging. 
+The log4j configuration file is located at :file:`/WEB-INF/classes/log4j.xml`.
 The configuration file configures for each debug level at what severity messages will be logged.
 
