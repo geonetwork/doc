@@ -11,19 +11,19 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 1. Build the release
 
+In the following example, the branch is in `3.10-SNAPSHOT` and we are going to release version `3.10.2`.
+
 .. code-block:: shell
 
     # Setup properties
-    frombranch=origin/master
-    versionbranch=3.8.x
-    version=3.8.0
+    frombranch=origin/3.10.x
+    versionbranch=3.10.x
+    newversion=3.10.2
     minorversion=0
-    newversion=$version-$minorversion
-    currentversion=3.7.0-SNAPSHOT
-    previousversion=3.6.0
-    nextversion=3.8.1-SNAPSHOT
-    nextMajorVersion=3.9.0-SNAPSHOT
-
+    newversionwithminor=$newversion-$minorversion
+    currentversion=3.10-SNAPSHOT
+    previousversion=3.10.1
+    nextversion=3.10-SNAPSHOT
 
     # Get the branch
     git clone --recursive https://github.com/geonetwork/core-geonetwork.git \
@@ -37,6 +37,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     # or move into it if it exist
     # git checkout $versionbranch
 
+    git submodule update --init
 
     # Update version number (in pom.xml, installer config and SQL)
     ./update-version.sh $currentversion $newversion
@@ -47,14 +48,14 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 
     # Generate list of changes
-    cat <<EOF > docs/changes$newversion.txt
+    cat <<EOF > docs/changes$newversionwithminor.txt
     ================================================================================
     ===
-    === GeoNetwork $version: List of changes
+    === GeoNetwork $newversion: List of changes
     ===
     ================================================================================
     EOF
-    git log --pretty='format:- %s' $previousversion... >> docs/changes$newversion.txt
+    git log --pretty='format:- %s' $previousversion... >> docs/changes$newversionwithminor.txt
 
 
     # Download Jetty and create the installer
@@ -83,19 +84,19 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
     # Then commit the new version
     git add .
-    git commit -m "Update version to $newversion"
+    git commit -m "Update version to $newversionwithminor"
 
     # Push the release tag
-    git tag -a $version -m "Tag for $version release"
-    git push origin $version
+    git tag -a $newversion -m "Tag for $newversion release"
+    git push origin $newversion
     
     # Set version number to SNAPSHOT
     ./update-version.sh $newversion $nextversion
 
     # Add SQL migration step for the next version
-    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383
-    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383/migrate-default.sql
-    UPDATE Settings SET value='3.8.3' WHERE name='system/platform/version';
+    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3103
+    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3103/migrate-default.sql
+    UPDATE Settings SET value='3.10.3' WHERE name='system/platform/version';
     UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
     EOF
     vi web/src/main/webResources/WEB-INF/config-db/database_migration.xml
@@ -105,9 +106,9 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 .. code-block:: xml
 
-    <entry key="3.8.1">
+    <entry key="3.10.3">
       <list>
-        <value>WEB-INF/classes/setup/sql/migrate/v381/migrate-</value>
+        <value>WEB-INF/classes/setup/sql/migrate/v3103/migrate-</value>
       </list>
     </entry>
 
@@ -136,7 +137,7 @@ Generate checksum files
 .. code-block:: shell
 
     cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
-    cd release/target/GeoNetwork-$version && md5sum geonetwork-bundle-$newversion.zip >  geonetwork-bundle-$newversion.zip.md5 && cd ../..
+    cd release/target/GeoNetwork-$newversion && md5sum geonetwork-bundle-$newversion.zip >  geonetwork-bundle-$newversion.zip.md5 && cd ../..
 
 * If using Mac OS X:
 
@@ -155,9 +156,9 @@ On sourceforge first:
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
     # or for RC release
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
-    mkdir v3.0.0
-    cd v3.0.0
-    put docs/changes3.0.0-0.txt
+    mkdir v3.10.2
+    cd v3.10.2
+    put docs/changes3.10.2-0.txt
     put release/target/GeoNetwork*/geonetwork-bundle*.zip*
     put web/target/geonetwork.war*
     bye
@@ -182,22 +183,24 @@ Send an email to the mailing lists.
 
 5. Merge in depending branches
 
-If a major version, then master version has to be updated to the next one (eg. if 3.8.0, then 3.7.x is 3.9.x).
+If a major version, then master version has to be updated to the next one (eg. if stable branch it's created from master for 3.10.0, then master 3.9-SNAPSHOT should be updated to 3.11-SNAPSHOT).
 
 .. code-block:: shell
+
+    nextMajorVersion=3.11-SNAPSHOT
 
     # Create it if it does not exist yet
     git checkout master
     ./update-version.sh $currentversion $nextMajorVersion
 
 
-In the following folder ``web/src/main/webapp/WEB-INF/classes/setup/sql/migrate`` create ``v370`` folder.
+In the following folder ``web/src/main/webapp/WEB-INF/classes/setup/sql/migrate`` create ``v3110`` folder.
 
 In this folder create a ``migrate-default.sql`` with the following content:
 
 .. code-block:: sql
 
-  UPDATE Settings SET value='3.7.0' WHERE name='system/platform/version';
+  UPDATE Settings SET value='3.11.0' WHERE name='system/platform/version';
   UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
 
 
@@ -207,9 +210,9 @@ In ``web/src/main/webResources/WEB-INF/config-db/database_migration.xml`` add th
 
 .. code-block:: xml
 
-    <entry key="3.7.0">
+    <entry key="3.11.0">
       <list>
-        <value>WEB-INF/classes/setup/sql/migrate/v370/migrate-</value>
+        <value>WEB-INF/classes/setup/sql/migrate/v3110/migrate-</value>
       </list>
     </entry>
 
