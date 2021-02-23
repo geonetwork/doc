@@ -141,10 +141,14 @@ To enable filtering in a facet, add an include property:
       "field": "tag.default",
       "include": ".*",
       "size": 10
+    },
+    "meta": {
+      "caseInsensitiveInclude": true
     }
   }
 
-include and exclude properties can be used to filter values too.
+include and exclude properties can be used to filter values too. A meta caseInsensitiveInclude can be added as Elasticsearch facet filter is case sensitive by default.
+
 
 Aggregations can be collapsed by default and visible to users depending on roles:
 
@@ -152,12 +156,18 @@ Aggregations can be collapsed by default and visible to users depending on roles
 .. code-block:: js
 
    "dateStamp" : {
-      "userHasRole": "isReviewerOrMore",
-      "collapsed": true,
       "auto_date_histogram" : {
         "field" : "dateStamp",
         "buckets": 50
+      },
+      "meta": {
+        "userHasRole": "isReviewerOrMore",
+        "collapsed": true,
+        "caseInsensitiveInclude": true
       }
+
+
+
 
 
 (Experimental) A tree field which contains a URI
