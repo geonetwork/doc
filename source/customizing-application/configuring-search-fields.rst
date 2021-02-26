@@ -136,6 +136,71 @@ Each thesaurus are described by the following fields:
       }
     }
 
+
+.. _configuring-facet-graphics:
+
+Interactive graphics
+--------------------
+
+Use `Vega <https://vega.github.io/vega-lite/examples/>`_ to render date histogram facet values or render term facets to display facet as simple pie. Vega is also used in Kibana so it can make dataviz converging in dashboards and in the app.
+
+Facet widget based on vega allow selection of a range for dates and/or click on bar/pie.
+
+
+.. figure:: img/vaga.png
+
+
+To use Vega based facet, enable mods.search.isVegaEnabled in the user interface configuration. This trigger the load of the Vega library.
+
+
+
+A simple date field:
+
+.. code-block::
+
+      "dateStamp" : {
+        "auto_date_histogram" : {
+          "field" : "dateStamp",
+          "buckets": 50
+        },
+
+
+A date range field:
+
+.. code-block::
+
+      "resourceTemporalDateRange": {
+         "gnBuildFilterForRange": {
+            "field": "resourceTemporalDateRange",
+            "buckets": "2021 - 1970",
+            "dateFormat": "YYYY",
+            "vegaDateFormat": "%Y",
+            "from": "1970",
+            "to": "2021",
+            "mark": "area"
+          },
+          "meta": {
+            "vega": "timeline"
+          }
+
+A term as pie or bar chart:
+
+
+.. code-block::
+
+      "cl_status.key": {
+          "terms": {
+            "field": "cl_status.key",
+            "size": 10
+          },
+          "meta": {
+            //"vega": "bar"
+            "vega": "arc"
+          }
+        },
+
+
+
 Other types
 -----------
 
@@ -146,7 +211,7 @@ Index document also contains other types of object for field like:
 * contact stored as simple fields and as object:
 
 
-.. code-block:: 
+.. code-block::
 
     {
       "Org": "Direction Asset Management (SPW - Mobilité et Infrastructure)",
