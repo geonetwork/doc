@@ -17,6 +17,8 @@ GeoNetwork 4.0.3 release is a minor release with some changes:
 
 .. figure:: img/403-monitoring.png
 
+* Translation pack builder for faster initialization of the client application.
+
 
 and more ... see `4.0.3 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A4.0.3+is%3Aclosed>`_ and
 `pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=is%3Apr+milestone%3A4.0.3+is%3Aclosed>`_ for full details.
