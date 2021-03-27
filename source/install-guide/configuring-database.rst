@@ -75,7 +75,6 @@ Setting configuration properties via environment variables is common in containe
         docker run --rm --name gn -p 8080:8080 -e JAVA_OPTS=" 
             -Dgeonetwork.db.type=postgres 
             -Djdbc.database=example 
-            -Djdbc.database=example
             -Djdbc.username=example
             -Djdbc.password=xxx
             -Djdbc.host=localhost
@@ -91,7 +90,6 @@ Setting configuration properties via environment variables is common in containe
         docker run --rm --name gn -p 8080:8080
             -e geonetwork.db.type=postgres 
             -e jdbc.database=example 
-            -e jdbc.database=example
             -e jdbc.username=example
             -e jdbc.password=xxx
             -e jdbc.host=localhost
