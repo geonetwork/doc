@@ -33,10 +33,10 @@ Then create the default index:
 
 .. code-block:: shell
 
-    cd es/config
-    curl -X PUT http://localhost:9200/features -d @config/features.json
-    curl -X PUT http://localhost:9200/records -d @config/records.json
-    curl -X PUT http://localhost:9200/searchlogs -d @config/searchlogs.json
+    cd es
+    curl -X PUT http://localhost:9200/features -H "Content-Type: application/json" -d @config/features.json
+    curl -X PUT http://localhost:9200/records -H "Content-Type: application/json" -d @config/records.json
+    curl -X PUT http://localhost:9200/searchlogs -H "Content-Type: application/json" -d @config/searchlogs.json
 
 
 Stop Elasticsearch using
@@ -57,9 +57,9 @@ Running from the source code, use Maven to download.
     cd es
     mvn install -Pes-download
     mvn exec:exec -Des-start
-    curl -X PUT http://localhost:9200/features -d @config/features.json
-    curl -X PUT http://localhost:9200/records -d @config/records.json
-    curl -X PUT http://localhost:9200/searchlogs -d @config/searchlogs.json
+    curl -X PUT http://localhost:9200/features -H "Content-Type: application/json" -d @config/features.json
+    curl -X PUT http://localhost:9200/records -H "Content-Type: application/json" -d @config/records.json
+    curl -X PUT http://localhost:9200/searchlogs -H "Content-Type: application/json" -d @config/searchlogs.json
 
 
 To stop Elasticsearch when using Maven, simply stop the process as Elasticsearch is started in
@@ -75,5 +75,5 @@ Access Elasticsearch admin page from http://localhost:9200/.
 Configure connection
 --------------------
 
-Update Elasticsearch URL in ```WEB-INF/config.properties``` and restart the application
+Update Elasticsearch URL in ```WEB-INF/config.properties```, add 'es' to the 'spring.profiles.active' in ```WEB-INF/web.xml``` to activate it and restart the application
 (see :code:`web/src/main/webResources/WEB-INF/config.properties`).
