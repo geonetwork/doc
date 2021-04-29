@@ -498,6 +498,30 @@ You can configure your environment by updating the previous file or by defining 
     cas.logout.url=${cas.baseURL}/logout?url=${geonetwork.https.url}/
 
 
+.. _authentication-ecas:
+
+Configuring EU Login
+---------------
+
+EU Login is the central login mechanism of the European Commission. You can enable login
+against that central service in case your intended users have ar can acquire a EU Login.
+
+To enable EU Login, set up authentication by including ``WEB-INF/config-security/config-security-ecas.xml``
+in ``WEB-INF/config-security/config-security.xml``, uncommenting the following line:
+
+.. code-block:: xml
+
+    <import resource="config-security-ecas.xml"/>
+
+The EU Login configuration is defined in ``WEB-INF/config-security/config-security.properties``.
+You can configure your environment by updating the previous file or by defining property overrides in the file
+``WEB-INF/config-security/config-security-overrides.properties``:
+
+.. code-block:: text
+
+    cas.baseURL=https://webgate.ec.europa.eu/cas
+
+Restart the service and check the authentication menchanism.
 
 .. _authentication-shibboleth:
 
