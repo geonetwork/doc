@@ -498,6 +498,39 @@ You can configure your environment by updating the previous file or by defining 
     cas.logout.url=${cas.baseURL}/logout?url=${geonetwork.https.url}/
 
 
+.. _authentication-ecas:
+
+Configuring EU Login
+---------------
+
+EU Login is the central login mechanism of the European Commission. You can enable login
+against that central service in case your intended users have ar can acquire a EU Login.
+
+To enable EU Login, set up authentication by including ``WEB-INF/config-security/config-security-ecas.xml``
+in ``WEB-INF/config-security/config-security.xml``, uncommenting the following line:
+
+.. code-block:: xml
+
+    <import resource="config-security-ecas.xml"/>
+
+EU-login requires an ecas-plugin provided by the European Union. The ecas plugin is available via
+`CITnet <https://citnet.tech.ec.europa.eu/CITnet/nexus>`_ for various java containers, such as Tomcat and JBoss.
+
+For tomcat, add two files to the tomcat lib folder: ecas-tomcat-x.y.z.jar and log4j-x.y.z.jar. Inside the lib folder 
+copy two folders from `eulogin-tomcat-x.y.z-config.zip`: `org/apache/catalina/authenticator` and `org/apache/catalina/startup`. 
+The mbeans folder contains a file `mbeans-descriptors.xml`. The startup folder contains a file `Authenticators.properties`. Verify 
+that the JDK trusts the `ECAS certificates <https://webgate.ec.europa.eu/CITnet/confluence/display/IAM/Downloads-Certificates>`_ 
+else import them on the keystore of the JVM.
+
+The EU Login configuration is defined in ``WEB-INF/config-security/config-security.properties``.
+You can configure your environment by updating the previous file or by defining property overrides in the file
+``WEB-INF/config-security/config-security-overrides.properties``:
+
+.. code-block:: text
+
+    cas.baseURL=https://webgate.ec.europa.eu/cas
+
+Restart the service and check the authentication menchanism.
 
 .. _authentication-shibboleth:
 
