@@ -42,7 +42,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     # Update version number (in pom.xml, installer config and SQL)
     ./update-version.sh $currentversion $newversion
 
-   
+
     # Generate list of changes
     cat <<EOF > docs/changes$newversion.txt
     ================================================================================
@@ -57,12 +57,12 @@ Once the release branch has been thoroughly tested and is stable a release can b
     # Then commit the new version
     git add .
     git commit -m "Update version to $newversion"
-    
-    
+
+
      # Build the new release
     mvn clean install -DskipTests -Pwith-doc
 
-    
+
     # Download Jetty and create the installer
     cd release
     mvn clean install -Djetty-download
@@ -92,7 +92,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     # Push the release tag
     git tag -a $version -m "Tag for $version release"
     git push origin $version
-    
+
     # Set version number to SNAPSHOT
     ./update-version.sh $newversion $nextversion
 
@@ -206,5 +206,4 @@ Commit the new version
     git add .
     git commit -m "Update version to $nextMajorVersion"
     git push origin master
-
 
