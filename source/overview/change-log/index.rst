@@ -37,3 +37,4 @@ Change log
    version-4.0.1.rst
    version-4.0.2.rst
    version-4.0.3.rst
+   version-4.0.4.rst
