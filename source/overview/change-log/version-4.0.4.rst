@@ -13,7 +13,7 @@ GeoNetwork 4.0.4 release is a minor release with some changes:
 
 * `Filestore / Jcloud implementation <https://github.com/geonetwork/core-geonetwork/pull/4570>`_
 
-* `INSPIRE / Validation / Remove internal schematron <https://github.com/geonetwork/core-geonetwork/pull/5513>`_. Use ` INSPIRE validator instead<https://inspire.ec.europa.eu/validator/about/>`_.
+* `INSPIRE / Validation / Remove internal schematron <https://github.com/geonetwork/core-geonetwork/pull/5513>`_. Use `INSPIRE validator instead <https://inspire.ec.europa.eu/validator/about/>`_.
 
 * `DOI / Improve Datacite conversion <https://github.com/geonetwork/core-geonetwork/pull/5500>`_
 
