@@ -32,3 +32,4 @@ Change log
    version-3.10.4.rst
    version-3.10.5.rst
    version-3.10.6.rst
+   version-3.12.0.rst
