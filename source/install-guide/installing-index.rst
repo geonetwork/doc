@@ -53,9 +53,9 @@ User may want to customize the index settings for example to change language con
     curl -X DELETE http://localhost:9200/records
     curl -X DELETE http://localhost:9200/searchlogs
 
-    curl -X PUT http://localhost:9200/features -d @features.json
-    curl -X PUT http://localhost:9200/records -d @records.json
-    curl -X PUT http://localhost:9200/searchlogs -d @searchlogs.json
+    curl -X PUT http://localhost:9200/features -H 'Content-Type: application/json' -d @features.json
+    curl -X PUT http://localhost:9200/records -H 'Content-Type: application/json' -d @records.json
+    curl -X PUT http://localhost:9200/searchlogs -H 'Content-Type: application/json' -d @searchlogs.json
 
 
 Install using Maven
