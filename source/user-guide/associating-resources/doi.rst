@@ -22,7 +22,7 @@ Creating the DOI
 
 Once configured, DOI can be created using the interface. DOI is created on demand. It means
 that a user must ask for creation of a DOI. When created, the task is notified by email to the
-reviewer of the group (by default, can be configured for administrator only).
+reviewer of the group (by default, can be configured for administrator only using the notification level of the task).
 
 .. figure:: img/doi-request-menu.png
 
@@ -32,9 +32,14 @@ The task is assigned to a specific user. An optional due date and comment can be
 
 After submission of the task, the task owner is notified by email (if the mail server is configured, see admin console > settings). The task can then be resolved in the admin console > information > versionning section.
 
+If the configuration is missing or wrong, the error is reported:
+
+.. figure:: img/doi-config-wrong.png
+
+
 For DOI creation, the task is a 2 steps actions:
 
- * First check if all prerequisite are covered (below the record is not valid in DataCite format)
+ * First check if all prerequisite are covered (below the record is not valid in DataCite format).
 
 The DataCite format requires some mandatory fields:
 
@@ -75,21 +80,33 @@ The mapping can be customized in:
 
 See http://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf for more details on the format.
 
+DataCite API return XSD validation error.
 
 .. figure:: img/doi-request-check.png
+
+The catalogue also allow to apply DataCite validation in the editor:
+
+.. figure:: img/doi-validation.png
+
 
 
 A DOI may already be assigned for a record:
 
-.. figure:: img/doi-api-check-already-exist.png
+.. figure:: img/doi-exists.png
 
-In such case the DOI needs to be removed first.
+In such case the DOI can be updated. If the DOI is already assigned in a metadata record, editors can also update the DOI from the editor:
 
+.. figure:: img/doi-update-in-editor.png
 
 
  * After validation, create the DOI
 
 .. figure:: img/doi-request-check-ok.png
+
+
+ * Once created, a link to the DOI and to the DataCite document is available:
+
+.. figure:: img/doi-created.png
 
 The DOI is then added to the metadata record:
 
