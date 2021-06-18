@@ -84,6 +84,7 @@ DataCite API return XSD validation error.
 
 .. figure:: img/doi-request-check.png
 
+
 The catalogue also allow to apply DataCite validation in the editor:
 
 .. figure:: img/doi-validation.png
@@ -96,19 +97,24 @@ A DOI may already be assigned for a record:
 
 In such case the DOI can be updated. If the DOI is already assigned in a metadata record, editors can also update the DOI from the editor:
 
+
 .. figure:: img/doi-update-in-editor.png
 
 
- * After validation, create the DOI
+After validation, create the DOI
+
 
 .. figure:: img/doi-request-check-ok.png
 
 
- * Once created, a link to the DOI and to the DataCite document is available:
+Once created, a link to the DOI and to the DataCite document is available:
+
 
 .. figure:: img/doi-created.png
 
+
 The DOI is then added to the metadata record:
+
 
 .. figure:: img/doi-in-xml.png
 
