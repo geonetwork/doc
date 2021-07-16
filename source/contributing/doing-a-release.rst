@@ -62,7 +62,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     mvn process-resources -Djetty-download
     mvn package
     
-    # Deploy to osgeo repository (requires credentials in ~/.m2/settings.xml
+    # Deploy to osgeo repository (requires credentials in ~/.m2/settings.xml)
     mvn deploy
 
 2. Test the installer
