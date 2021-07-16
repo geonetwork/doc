@@ -15,14 +15,14 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
     # Setup properties
     frombranch=origin/master
-    versionbranch=3.8.x
-    version=3.8.0
+    versionbranch=3.12.x
+    version=3.12.1
     minorversion=0
     newversion=$version-$minorversion
-    currentversion=3.7.0-SNAPSHOT
-    previousversion=3.6.0
-    nextversion=3.8.1-SNAPSHOT
-    nextMajorVersion=3.9.0-SNAPSHOT
+    currentversion=3.12-SNAPSHOT
+    previousversion=3.12.0
+    nextversion=3.12-SNAPSHOT
+    nextMajorVersion=4.0.0-SNAPSHOT
 
 
     # Get the branch
@@ -61,8 +61,9 @@ Once the release branch has been thoroughly tested and is stable a release can b
     cd release
     mvn process-resources -Djetty-download
     mvn package
-
-
+    
+    # Deploy to osgeo repositor (requires credentials in ~/.m2/settings.xml
+    mvn deploy
 
 2. Test the installer
 
@@ -93,9 +94,9 @@ Once the release branch has been thoroughly tested and is stable a release can b
     ./update-version.sh $newversion $nextversion
 
     # Add SQL migration step for the next version
-    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383
-    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v383/migrate-default.sql
-    UPDATE Settings SET value='3.8.3' WHERE name='system/platform/version';
+    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3122
+    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3122/migrate-default.sql
+    UPDATE Settings SET value='3.12.2' WHERE name='system/platform/version';
     UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
     EOF
     vi web/src/main/webResources/WEB-INF/config-db/database_migration.xml
@@ -105,9 +106,9 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 .. code-block:: xml
 
-    <entry key="3.8.1">
+    <entry key="3.12.2">
       <list>
-        <value>WEB-INF/classes/setup/sql/migrate/v381/migrate-</value>
+        <value>WEB-INF/classes/setup/sql/migrate/v3122/migrate-</value>
       </list>
     </entry>
 
@@ -155,21 +156,21 @@ On sourceforge first:
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_opensource
     # or for RC release
     cd /home/frs/project/g/ge/geonetwork/GeoNetwork_unstable_development_versions/
-    mkdir v3.0.0
-    cd v3.0.0
-    put docs/changes3.0.0-0.txt
+    mkdir v3.12.1
+    cd v3.12.1
+    put docs/changes3.12.1-0.txt
     put release/target/GeoNetwork*/geonetwork-bundle*.zip*
     put web/target/geonetwork.war*
     bye
 
 
-Update or add the changelog in the documentation https://github.com/geonetwork/doc.
+Update or add the changelog in the documentation https://github.com/geonetwork/doc .
 
 Close the milestone on github https://github.com/geonetwork/core-geonetwork/milestones?state=closed with link to sourceforge download.
 
-Publish the release on github https://github.com/geonetwork/core-geonetwork/releases.
+Publish the release on github https://github.com/geonetwork/core-geonetwork/releases .
 
-Update the website links https://github.com/geonetwork/website
+Update the website links https://github.com/geonetwork/website .
 
 - Add the changes file for the release to https://github.com/geonetwork/doc/tree/develop/source/overview/change-log
 - List the previous file in https://github.com/geonetwork/doc/blob/develop/source/overview/change-log/index.rst
