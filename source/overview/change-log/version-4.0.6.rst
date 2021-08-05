@@ -8,7 +8,7 @@ GeoNetwork 4.0.6 release is a minor release with some changes:
 
 * `Home / Restyle topics on the Home page <https://github.com/geonetwork/core-geonetwork/pull/5837>`_
 
-  .. figure:: img/406-406-homefacet.png
+  .. figure:: img/406-homefacet.png
 
 * `Search options improvements <https://github.com/geonetwork/core-geonetwork/pull/5877>`_
 
