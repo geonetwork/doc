@@ -1,35 +1,48 @@
 .. _tuto-introduction-deployment-deploy:
 
-Deployment using a war file
+Local deployment
 ###########################
 
-To deploy **GeoNetwork** you just have to place the war file provided or generated on the last optional step on a proper Java container like Tomcat.
+Before deploying **GeoNetwork** you first need to set up an Elasticsearch instance. 
+https://www.elastic.co/downloads/elasticsearch lists various option for deployment. 
+Via the installer, a package manager such as yum, apt, brew or docker. Verify to use a 
+version of Elasticsearch compatible with the version of GeoNetwork. 
+For GeoNetwork 4.0.5 this is Elasticsearch 7.11.1.
 
-To install Tomcat on a debian-based operative system, you can use the apt-get tool like:
+GeoNetwork itself can be downloaded from `sourceforge <https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource>`_.
+The zip distribution includes a jetty container ready to run GeoNetwork.
+
+Verify that a java 1.8 run time (JRE/JDK) is available and active. Else download and install from https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot. 
+Or activate via the $JAVA_HOME environment variable.
+
+  ::
+
+  $ java --version
+
+The war distribution can be deployed on a container such as Tomcat.
+
+To install Tomcat on a debian-based operation system, you can use the apt-get tool like:
 
   ::
 
   $ sudo apt-get install tomcat7
 
-Once you have Tomcat installed on your system, locate the webapps folder and place the geonetwork.war file there. This will deploy GeoNetwork on your system.
+For windows, download the installer from https://tomcat.apache.org/download-80.cgi. 
 
-.. note:: You need to ensure Tomcat is configured with enough memory for GeoNetwork to launch. This can be be configured via the ``setenv`` script in tomcat with the appropriate memory for the JAVA_OPTS property)
+Once you have Tomcat installed on your system, locate the webapps folder and place the 
+geonetwork.war file there. This will deploy GeoNetwork on your system.
 
-Another recommended step on deployment is changing the data directory. The data directory is where GeoNetwork stores all the data files like thumbnails or uploaded documents attached to metadata records. You can start with an empty GeoNetwork directory, it will be automatically populated.
+.. note:: You need to ensure Tomcat is configured with enough memory for GeoNetwork to launch. 
+          This can be be configured via the ``setenv`` script in tomcat with the appropriate memory 
+          for the JAVA_OPTS property)
 
-The easiest way to setup the data directory is to update the file **config-spring-geonetwork.xml** available inside the core project:
+Open the file /geonetwork/WEB-INF/config.properties and alter the elasticsearch connection
 
   ::
 
-  <bean id="GeonetworkDataDirectory" class="org.fao.geonet.kernel.GeonetworkDataDirectory" lazy-init="true">
-  <property name="systemDataDir" ref="GNSystemDataDir"/>
-  </bean>
-  <bean id="GNSystemDataDir" class="java.nio.file.Paths" factory-method="get">
-  <constructor-arg index="0" value="/path/to/gn/dir"/>
-  <constructor-arg index="1"><array /></constructor-arg>
-  </bean>
+  $ es.url=http://localhost:9200
 
-See more on :ref:`customizing-data-directory`.
+Then (re)start Jetty/Tomcat.
 
-You can make sure GeoNetwork is deployed on the following url: http://localhost:8080/geonetwork
+You can make sure GeoNetwork is deployed via the following url: http://localhost:8080/geonetwork
 

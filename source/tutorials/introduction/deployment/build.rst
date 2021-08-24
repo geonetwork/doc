@@ -1,11 +1,17 @@
 .. _tuto-introduction-deployment-build:
 
-(Optional) Build
-################
+Build from sources
+##################
 
-The source code of GeoNetwork is available on a public repository on `Github <https://github.com/geonetwork/core-geonetwork>`_. This means that you can clone, fork and propose pushes of your custom changes. If you are not familiar with repositories of code or git, you should check `this quick manual <https://try.github.io/levels/1/challenges/1>`_.
+In this paragraph some guidance will be provided to build GeoNetwork from sources. 
+This is relevant in case you want to extend the application to your needs.
 
-GeoNetwork is built using `Maven version 3+ <https://Maven.apache.org/>`_. It is written on **Java 7+**. It works both with OpenJDK or the Oracle version. There are several ways to install this on your local machine; for example if you have a Debian based OS (like Ubuntu), you can install them with just this command:
+The source code of GeoNetwork is available at `Github <https://github.com/geonetwork/core-geonetwork>`_. 
+This means that you can clone, fork and propose pushes of your custom changes. If you are not familiar 
+with repositories of code or git, you should check `this quick manual <https://try.github.io/levels/1/challenges/1>`_.
+
+GeoNetwork is a java project using `Maven version 3+ <https://Maven.apache.org/>`_. It is written on **Java 8**. It works both with OpenJDK or the Oracle version. 
+There are several ways to install this on your local machine; for example if you have a Debian based OS (like Ubuntu), you can install them with just this command:
 
   ::
 
@@ -25,7 +31,8 @@ Remember that this will also install Java on your system. You can check that the
 
   $ java -version
 
-So, the very first step once you have your environment set up is clone the GeoNetwork repository on your local machine. That can be done on the command line using the following command inside an empty folder where the source code will be populated:
+So, the very first step once you have your environment set up is clone the GeoNetwork repository on your local machine. 
+That can be done on the command line using the following command inside an empty folder where the source code will be populated:
 
   ::
   
