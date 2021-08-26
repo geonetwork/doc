@@ -3,7 +3,7 @@
 GeoNetwork Orientation
 ##########################
 
-In this workshop you are introduced to the main functionalities of the GeoNetwork system 
+In this workshop you are introduced to the main features of the GeoNetwork system 
 from a usage and data curation perspective. The tutorial contains information and hands-on 
 exercises explaining how to use the GeoNetwork system.
 
@@ -32,7 +32,7 @@ information, organised and documented in a standardised and consistent way.
 The tutorial starts with an introduction on cataloguing concepts and then continues with 
 installation, configuration and usage of the GeoNetwork software.
 
-At various locations references are made to the product documentation to find more details 
+At various points references are made to the product documentation to find more details 
 on a certain topic.
 
 Tutorial contents

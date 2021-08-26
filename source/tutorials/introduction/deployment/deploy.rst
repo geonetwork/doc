@@ -4,8 +4,8 @@ Local deployment
 ###########################
 
 Before deploying **GeoNetwork** you first need to set up an Elasticsearch instance. 
-https://www.elastic.co/downloads/elasticsearch lists various option for deployment. 
-Via the installer, a package manager such as yum, apt, brew or docker. Verify to use a 
+https://www.elastic.co/downloads/elasticsearch lists the various options for deployment, 
+such as via the installer, a package manager such as yum, apt, brew or docker. Ensure you use a 
 version of Elasticsearch compatible with the version of GeoNetwork. 
 For GeoNetwork 4.0.5 this is Elasticsearch 7.11.1.
 
@@ -19,7 +19,7 @@ Or activate via the $JAVA_HOME environment variable.
 
   $ java --version
 
-The war distribution can be deployed on a container such as Tomcat.
+The war distribution can be deployed in a container such as Tomcat.
 
 To install Tomcat on a debian-based operation system, you can use the apt-get tool like:
 

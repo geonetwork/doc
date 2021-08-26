@@ -1,10 +1,13 @@
 .. _tuto-docker:
 
-Deployment with docker
+Pull from  docker hub
 ######################
 
-Verify that the system on which you will install the software has a recent Docker engine installed. 
-`Docker Desktop <https://www.docker.com/products/docker-desktop>`_ is a good option for local installation.
+This paragraph describes how you can deploy **GeoNetwork** and its dependencies as a docker orchestration using prepared images from `Docker hub <https://hub.docker.com/_/geonetwork>`_.
+
+Ensure the system on which you will install the software has a recent 
+`Docker engine <https://docs.docker.com/engine/install>`_ and `Docker Compose <https://docs.docker.com/compose/install/>`_ installed. 
+`Docker Desktop <https://www.docker.com/products/docker-desktop>`_, including both, is a good option for local installation.
 
 Open a command-line panel verify that docker engine is running:
 

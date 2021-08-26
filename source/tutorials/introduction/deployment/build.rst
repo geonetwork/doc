@@ -1,9 +1,9 @@
 .. _tuto-introduction-deployment-build:
 
-Build from sources
-##################
+Build from source code
+######################
 
-In this paragraph some guidance will be provided to build GeoNetwork from sources. 
+In this paragraph some guidance will be provided to build GeoNetwork from source code. 
 This is relevant in case you want to extend the application to your needs.
 
 The source code of GeoNetwork is available at `Github <https://github.com/geonetwork/core-geonetwork>`_. 

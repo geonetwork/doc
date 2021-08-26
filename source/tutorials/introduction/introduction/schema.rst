@@ -3,19 +3,19 @@
 Multi schema support
 ===============================
 
-This paragraph explains how GeoNetwork leverages metadata records formatted in various schema's (metadata models). 
+This paragraph explains how GeoNetwork leverages metadata records formatted in various schemas (metadata models). 
 Over time various communities adopted a number of metadata standards and profiles for metadata records. 
 
-Metadata models defines which properties can be registered for an asset, such as title, author, 
+Metadata models define which properties can be registered for an asset, such as title, author, 
 creation date. In the spatial domain TC211 together with OGC are the standardisation bodies which define the standards. 
 In 2005 TC211 released ISO19139, a standard for metadata to describe spatial assets which is still widely used. 
 In 2014 TC211 released a big update to this standard, named ISO19115-1. GeoNetwork is able to manage records in either 
-schema (and other schema's, such as Dublin Core, DCAT). 
+schema (and other schemas, such as Dublin Core, DCAT). 
 
 Indexing records 
 -------------------------------
 
-In GeoNetwork records in various schema's are stored as XML-documents in the database. To manage records that follow 
+In GeoNetwork records in various schemas are stored as XML-documents in the database. To manage records that follow 
 a certain schema a series of "schema-plugins" is available, which define rules how to manage records formatted according 
 to that schema. One aspect of a schema-plugin is that it defines which parts of the xml document 
 contain relevant information for the search mechanism. The process of extracting this information and storing it in a 
