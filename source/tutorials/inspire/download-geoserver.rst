@@ -44,7 +44,7 @@ Return to GeoServer
 
 For each layer add a metadata url to the layer configuration of type application/vnd.ogc.csw.GetRecordByIdResponse_xml.
 
-On the WFS-settings > INSPIRE workspace add the link to the service metadata. In contradiction to WMS does WFS not link from a featuretype (layer) to metadata, in stead the links to dataset metadata have to be added as part of the extende INSPIRE capabilities.
+On the WFS-settings > INSPIRE workspace add the link to the service metadata. In contradiction to WMS does WFS not link from a featuretype (layer) to metadata, instead the links to dataset metadata have to be added as part of the extende INSPIRE capabilities.
 
 Validate the implementation
 ===========================

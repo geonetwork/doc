@@ -31,9 +31,14 @@ Catalogue purposes
 
 Metadata serves three main purposes; discovery, identification and assessment. 
 
-- Catalogues are able to let users query through large amounts of records, created locally or imported from other catalogues, so users are able to **discover** resources that may be of interest to them. 
-- When you're looking at a map or dataset you want to verify what it is you're looking at. Metadata supports the **identification** of the asset.
-- Users are enabled to assess if a dataset is relevant for their use case by checking its metadata. Important attributes for **assessment** are location, scale, legal constraints (data license), date of modification, accuracy and lineage information. 
+- Catalogues are able to let users query through large amounts of records, created locally or 
+  imported from other catalogues, so users are able to **discover** resources that may be of 
+  interest to them. 
+- When you're looking at a map or dataset you want to verify what it is you're looking at. 
+  Metadata supports the **identification** of the asset.
+- Users are enabled to assess if a dataset is relevant for their use case by checking its 
+  metadata. Important attributes for **assessment** are location, scale, legal constraints 
+  (data license), date of modification, accuracy and lineage information. 
 
 Populating a catalogue
 ----------------------------
