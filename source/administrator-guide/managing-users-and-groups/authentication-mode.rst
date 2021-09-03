@@ -501,7 +501,7 @@ You can configure your environment by updating the previous file or by defining 
 .. _authentication-ecas:
 
 Configuring EU Login
----------------
+--------------------
 
 EU Login is the central login mechanism of the European Commission. You can enable login
 against that central service in case your intended users have ar can acquire a EU Login.
