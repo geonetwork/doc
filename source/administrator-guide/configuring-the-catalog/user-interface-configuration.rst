@@ -37,7 +37,7 @@ Footer
 ------
 
 - **Footer**: Select this checkbox to determine whether the GeoNetwork footer is shown. If not set, no footer will be visible.
-- **Social bar**: Select this check box to show the social bar (links to twitter, facebook, linkedin etc) in the footer.
+- **Social bar**: Select this check box to show the social bar (links to Twitter, Facebook, LinkedIn etc.) in the footer.
 
 .. figure:: img/ui-settings-footer.png
 
@@ -181,7 +181,7 @@ You can configure each map with different layers and projections.
 
 .. figure:: img/ui-settings-mapprojection.png
 
-- **List of map projections to display bounding box coordinates in**  This is used in the map when editing a record and defining the bounding box extent. Note that the coordinates will be stored in WGS84 regardless of the projection used to draw them.
+- **List of map projections to display bounding box coordinates in**  This is used in the map when editing a record and defining the bounding box extent. Make sure the projection is defined in **Projections to display maps into** below. Note that the coordinates will be stored in WGS84 regardless of the projection used to draw them.
   
 .. figure:: img/ui-settings-mapprojectionslist.png
 
@@ -190,7 +190,7 @@ You can configure each map with different layers and projections.
 .. figure:: img/ui-settings-mapprojection2.png
 
 
-In order to enable a new projection it must be defined here using the **proj4js** syntax, which can be found at https://proj4js.io. Additionally the default bounding box extent, maximim bounding box extent, and allowed resolutions (if required) can be defined. 
+In order to enable a new projection it must be defined here using the regular **proj4** syntax, which can be found for many EPSG-listed projections at, for example, https://epsg.io. Additionally the default bounding box extent, maximum bounding box extent, and allowed resolutions (if required) can be defined. 
 
 Ensure that the coordinates inserted are in the correct units for and are local to the projection. A list of resolutions is only relevant if the main map layer has a XYZ source, which does not follow the common tiling pattern.
 
@@ -215,8 +215,8 @@ This section is for configuring the map shown when viewing a record.
 
 - **Path to the context file (XML)**: An optional path to an XML file defining base layers and other configuration options. See :code:`web/src/main/webapp/WEB-INF/data/data/resources/map/config-viewer.xml` for an example.
 - **Extent, expressed in current projection**: Use this option to override the extent defined in the context file.
-
-.. figure:: img/ui-settings-mapviewer.png
+  
+  .. figure:: img/ui-settings-mapviewer.png
 
 - **Layer objects in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
 
@@ -227,32 +227,30 @@ This section is for configuring the map shown when viewing a record.
   - **stamen**: Stamen layers, required property: ``name``.
   - **bing_aerial**: Bing Aerial background, required property: ``key`` containing the license key.
 
-.. figure:: img/ui-settings-mapviewerlayers.png
+  All layers can also have some optional extra properties:
+
+  - ``title``: The title/label of the layer.
+  - ``projectionList``: Projection array to restrict this layer to certain projections on the map.
+
+  Examples of layers:
+
+  This layer will use OpenStreetMap Stamen style, but only when the map is in ``EPSG:3857``:
+
+  .. code-block:: json
 
 
-All layers can also have some optional extra properties:
+      {"type":"stamen","projectionList":["EPSG:3857"]}
 
-- **title** The title/label of the layer.
-- **projectionList**  Projection array to restrict this layer to certain projections on the map.
+  This WMS layer will be shown but only when the map is on ``EPSG:4326``:
 
-Examples of layers:
-
-This layer will use OpenStreetMap Stamen style, but only when the map is in ``EPSG:3857``:
-
-.. code-block:: json
+  .. code-block:: json
 
 
-    {"type":"stamen","projectionList":["EPSG:3857"]}
+      {"type":"wms","title":"OI.OrthoimageCoverage","name":"OI.OrthoimageCoverage",
+      "url":"http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS",
+      "projectionList":["EPSG:4326"]}
 
-This WMS layer will be shown but only when the map is on ``EPSG:4326``:
-
-.. code-block:: json
-
-
-    {"type":"wms","title":"OI.OrthoimageCoverage","name":"OI.OrthoimageCoverage",
-    "url":"http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS",
-    "projectionList":["EPSG:4326"]}
-
+  .. figure:: img/ui-settings-mapviewerlayers.png
 
 Search Map Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -277,7 +275,7 @@ Record View
 -----------
 
 - **Record view**: 
-- **Show Social bar**: If enabled the social bar (links to facebook, twitter etc) are enabled in record view.
+- **Show Social bar**: If enabled, the social bar (links to Twitter, Facebook, LinkedIn etc.) is enabled in record view.
 
 Editor Application
 ------------------
@@ -318,7 +316,7 @@ Search application
 JSON Configuration
 ------------------
 
-This section shows the JSON configuration for the currently applied User Interface settings. From here, the json can be saved to a file (by copying and pasting).
+This section shows the JSON configuration for the currently applied User Interface settings. From here, the JSON can be saved to a file (by copying and pasting).
 
 - **Test client configuration**: Click this button to test the configuration in a new browser tab.
 - **Reset configuration**: Click this button to reset the configuration back to the default. Note that this will revert any changes you have made in the above page.
