@@ -18,7 +18,7 @@ connect to the node using CSW protocol.
 
 *Inserted metadata is public*: By default, metadata inserted with the CSW Harvest and CSW Transaction operations is not 
 publicly viewable. A user with the appropriate access rights could do this after the CSW Harvest and CSW Transaction operations, but this is not always convenient. 
-If this option is checked all metatada inserted using the CSW Harvest and CSW Transaction operations will be publicly viewable.
+If this option is checked all metadata inserted using the CSW Harvest and CSW Transaction operations will be publicly viewable.
 
 *Contact*: The drop down select list shows the current
 users in the local GeoNetwork catalog. The contact details of the user chosen 
