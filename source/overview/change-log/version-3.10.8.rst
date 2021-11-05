@@ -4,7 +4,7 @@ Version 3.10.8
 ##############
 
 New features/fixes
------------------
+------------------
 
 * Administration
 
