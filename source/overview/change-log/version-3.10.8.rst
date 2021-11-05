@@ -7,10 +7,12 @@ New features/fixes
 -----------------
 
 * Administration
+
  * [BP] Admin / Users / `Fix the users that a UserAdmin can manage <https://github.com/geonetwork/core-geonetwork/pull/5886>`_
 
 
 * Editor
+
  * Dublin core / Editor / `Fix autocomplete for subtemplates <https://github.com/geonetwork/core-geonetwork/pull/5965>`_
  * [BP] `Fix for indenting the 'multientry combiner' <https://github.com/geonetwork/core-geonetwork/pull/5764>`_
  * [BP] `Add a new directive for combining add online resource fields <https://github.com/geonetwork/core-geonetwork/pull/5559>`_
@@ -20,6 +22,7 @@ New features/fixes
 
 
 * Metadata
+
  * [BP] `Fix rdf export for iso19139 metadata with multilingual online resources name element <https://github.com/geonetwork/core-geonetwork/pull/5956>`_
  * [BP] `Update iso19139 template for uuidref attribute to apply only for srv:operatesOn element <https://github.com/geonetwork/core-geonetwork/pull/5924>`_
  * [BP] `Process data feed download links with multiple download files/links per datafeed entry <https://github.com/geonetwork/core-geonetwork/pull/5985>`_
@@ -28,9 +31,11 @@ New features/fixes
  * [BP] `Fix duplicate string in normalize-space, if record both has a title as well as identifier has a citation with title <https://github.com/geonetwork/core-geonetwork/pull/5830>`_
 
 * User interface
+
  * [BP] `Configure how to extract the WMS layer name from metadata online resources to add them to the map viewer <https://github.com/geonetwork/core-geonetwork/pull/5998>`_
 
 * Other
+
  * [BP] `Updated default language so that is comes from common java location. <https://github.com/geonetwork/core-geonetwork/pull/5981>`_
  * [BP] `Fix a bug when the url doesn't contain the ? sign <https://github.com/geonetwork/core-geonetwork/pull/5994>`_
  * [BP] `Formatter / Datacite / Avoid empty elements. <https://github.com/geonetwork/core-geonetwork/pull/5500>`_
