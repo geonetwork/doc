@@ -16,7 +16,7 @@ New features/fixes
 
  * [BP] `DOI improvements <https://github.com/geonetwork/core-geonetwork/pull/6034>`_
  * [BP] `Reset search parameter after metadata status change to "approved" <https://github.com/geonetwork/core-geonetwork/pull/5970>`_
- - [BP] `INSPIRE / Validation / Add API Key <https://github.com/geonetwork/core-geonetwork/pull/5978>`_
+ * [BP] `INSPIRE / Validation / Add API Key <https://github.com/geonetwork/core-geonetwork/pull/5978>`_
 
 * Map viewer
 
@@ -25,7 +25,7 @@ New features/fixes
 
 * User interface
 
- * [BP] `Remove the htmlEncode part for the label, this htmlEncode puts 'url safe' characters in the label. Fir instance 'Maps & graphics' turns into 'Maps &amp; graphics'<https://github.com/geonetwork/core-geonetwork/pull/6038>`_
+ * [BP] `Remove the htmlEncode part for the label, this htmlEncode puts 'url safe' characters in the label. Fir instance 'Maps & graphics' turns into 'Maps &amp; graphics' <https://github.com/geonetwork/core-geonetwork/pull/6038>`_
 
 * Other
 
