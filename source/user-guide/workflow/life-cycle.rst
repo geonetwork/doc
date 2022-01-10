@@ -35,10 +35,15 @@ The catalog has (an extensible) set of states that a metadata record can have:
 * ``Retired`` - the record has been retired.
 
 Workflow can be enabled for the full catalogue, certain groups or on an individual record level.
+
 In the last case, to enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
 in the metadata view:
 
 .. figure:: img/workflow-enable.png
+
+.. note::
+    To use the workflow for metadata records created before enabling it, you must use the above option.
+
 
 To enable workflow for the full catalogue or certain groups, check Administration > Settings > Metadata Workflow.
 In workflow mode, in case approved records are modified, you're working on a copy of the approved record. Changes on the record will not be visible to users outside your group until the modified record is approved again.
