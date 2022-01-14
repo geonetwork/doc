@@ -37,7 +37,7 @@ Footer
 ------
 
 - **Footer**: Select this checkbox to determine whether the GeoNetwork footer is shown. If not set, no footer will be visible.
-- **Social bar**: Select this check box to show the social bar (links to twitter, facebook, linkedin etc) in the footer.
+- **Social bar**: Select this check box to show the social bar (links to Twitter, Facebook, LinkedIn etc.) in the footer.
 
 .. figure:: img/ui-settings-footer.png
 
@@ -49,13 +49,13 @@ Top Toolbar
 - **Top toolbar**: Select this check box to determine whether the GeoNetwork top toolbar will be shown. If not set, no toolbar will be visible.
 - **List of languages**: Choose the languages from the list that should be available for translating the interface strings (available from the dropdown list in the top toolbar). If only one language remains, then no dropdown will be shown. Note that additional languages can be added, if translations are available, by selecting the ``+`` button below the list and adding the appropriate ISO codes.
 
-.. figure:: img/ui-settings-toptoolbar.png
+  .. figure:: img/ui-settings-toptoolbar.png
 
 
 - **Show the logo in the header**: This determines where the catalog logo should be positioned. If selected, the logo will be positioned in the header, above the top toolbar and the toolbar logo (default) removed. If unset, the logo will appear in the top toolbar.
 - **Position of logo**: These options determine where on the header the logo will be positioned.
 
-.. figure:: img/ui-settings-toptoolbarlogo.png
+  .. figure:: img/ui-settings-toptoolbarlogo.png
 
 .. _user-interface-config-homepage:
 
@@ -80,26 +80,26 @@ Search application
 - **Type of facet**: Define the set of search facets should be visible in the search page. The default is ``details`` but ``manager`` can be used to show the facets more normally used on the editor page.
 - **Default search**: Define a default filter for the search.
 
-.. figure:: img/ui-settings-searchpage.png
+  .. figure:: img/ui-settings-searchpage.png
 
 
 - **Facet field to display using tabs**: This option creates a tab for each configured facet above the search results. This can be used to further narrow down the search results. The list of facet names can be found at https://github.com/geonetwork/core-geonetwork/blob/master/web/src/main/webapp/WEB-INF/config-summary.xml#L82. For example, to include the Topic Category filter above the search results, the administrator would add ``topicCat`` as the facet field to display.
 - **List of facets**: This can be used to restrict the facets available for searching. For example, adding ``topicCat`` to this list would restrict the search options to ``Topic Category`` only. This can be useful for restricting the search options in a sub-portal or external web application. To add additional facets to the list, select the blue ``+`` button.
 - **Filters**: Define additional search criteria added to all searches and again are used primarily for external applications and sub-portals.
 
-.. figure:: img/ui-settings-searchpage2.png
+  .. figure:: img/ui-settings-searchpage2.png
 
 
 - **Type of sort options**: Define the different ways by which a user can sort a set of search results. The **default sort by option** is shown below. Note that to search for example on ``title`` in alphabetical order it is necessary to set the order to ``reverse``.
 - **List of templates for search results**: This section allows the administrator to configure templates for the layout of the search results. The default is ``grid`` whereas ``list`` is the default for the editor board.
 
-.. figure:: img/ui-settings-searchpage3.png
+  .. figure:: img/ui-settings-searchpage3.png
 
 
 - **Default template used for search results**: Define the template page for the search. Generally this can be left as the default. 
 - **List of formatter for record view**: Determine the formatter used to display the search results. See :ref:`creating-custom-view` for information on creating a new formatter. To add an additional view, click the blue ``+`` button below the list and provide a name and a URL.
 
-.. figure:: img/ui-settings-searchpage3.png
+  .. figure:: img/ui-settings-searchpage3.png
 
 
 .. _user-interface-config-searchresults:
@@ -120,7 +120,7 @@ List of link types
 
 - **Links**: This section determines the types of links displayed when showing search results in the grid format. They are separated into ``links``, ``downloads``, ``layers`` and ``maps`` and for each type, a new entry can be added by clicking the blue ``+`` button below the list.
 
-.. figure:: img/ui-settings-searchresults2.png
+  .. figure:: img/ui-settings-searchresults2.png
 
 
 - **Display filter tags in the search results**: When checked, the filter tags are visible above the search results. The default is to not show them.
@@ -161,13 +161,13 @@ External viewer
 - **Allow users to save maps as metadata record**: This option enables users to save layers and base maps configuration as a record in the catalog. Optionally users can add a title and an abstract.
 - **Export map as image**:  If enabled, users can export the map as an image but requires CORS to be enabled on any external WMS services displayed on the map. This option is disabled by default to avoid issues with WMS layers.
 
-.. figure:: img/ui-settings-mappage.png
+  .. figure:: img/ui-settings-mappage.png
 
 
 - **User preference persistence**: This option determines the behaviour of cookies related to the map. The various options are listed below.
 - **Bing Map Key**: If this option is filled in, then it is possible to use Bing Maps as base layers within the map application. You must get your own key for this to work.
 
-.. figure:: img/ui-settings-mappage2.png
+  .. figure:: img/ui-settings-mappage2.png
 
 
 List of preferred OGC services
@@ -179,29 +179,27 @@ You can configure each map with different layers and projections.
 
 - **Map Projection** This is the default projection of the map. Make sure the projection is defined in **Projections to display maps into** below.
 
-.. figure:: img/ui-settings-mapprojection.png
+  .. figure:: img/ui-settings-mapprojection.png
 
-- **List of map projections to display bounding box coordinates in**  This is used in the map when editing a record and defining the bounding box extent. Note that the coordinates will be stored in WGS84 regardless of the projection used to draw them.
+- **List of map projections to display bounding box coordinates in**  This is used in the map when editing a record and defining the bounding box extent. Make sure the projection is defined in **Projections to display maps into** below. Note that the coordinates will be stored in WGS84 regardless of the projection used to draw them.
   
-.. figure:: img/ui-settings-mapprojectionslist.png
+  .. figure:: img/ui-settings-mapprojectionslist.png
 
 - **Projections to display maps into** This is where the different projections available to the map are defined. All projections will be shown in the ``Projection Switcher`` tool of the map.
 
-.. figure:: img/ui-settings-mapprojection2.png
+  .. figure:: img/ui-settings-mapprojection2.png
 
+  In order to enable a new projection it must be defined here using the regular **proj4** syntax, which can be found for many EPSG-listed projections at, for example, https://epsg.io. Additionally the default bounding box extent, maximum bounding box extent, and allowed resolutions (if required) can be defined. 
 
-In order to enable a new projection it must be defined here using the **proj4js** syntax, which can be found at https://proj4js.io. Additionally the default bounding box extent, maximim bounding box extent, and allowed resolutions (if required) can be defined. 
+  Ensure that the coordinates inserted are in the correct units for and are local to the projection. A list of resolutions is only relevant if the main map layer has a XYZ source, which does not follow the common tiling pattern.
 
-Ensure that the coordinates inserted are in the correct units for and are local to the projection. A list of resolutions is only relevant if the main map layer has a XYZ source, which does not follow the common tiling pattern.
+  Check that this configuration is valid by opening the map.
 
-Check that this configuration is valid by opening the map.
+  .. figure:: img/ui-settings-mapprojection3.png
 
-.. figure:: img/ui-settings-mapprojection3.png
+  .. important:: If the configuration of a projection is incomplete or invalid, the map may fail to load.
 
-.. important:: If the configuration of a projection is incomplete or invalid, the map may fail to load.
-
-
-If a projection is defined which is not supported by the source of the map layer, the map application will reproject map images at the client side. This may cause unexpected behaviour, such as rotated or distorted labels.
+  If a projection is defined which is not supported by the source of the map layer, the map application will reproject map images at the client side. This may cause unexpected behaviour, such as rotated or distorted labels.
 
 - **Optional Map Viewer Tools** The checkboxes in this section define the tools available to the user in the right toolbar of the main map. Elements that are not checked are not visible.
 - **OGC Service to use as a graticule**: This is optional and allows the use of an external service to display the graticule on the map.
@@ -215,8 +213,8 @@ This section is for configuring the map shown when viewing a record.
 
 - **Path to the context file (XML)**: An optional path to an XML file defining base layers and other configuration options. See :code:`web/src/main/webapp/WEB-INF/data/data/resources/map/config-viewer.xml` for an example.
 - **Extent, expressed in current projection**: Use this option to override the extent defined in the context file.
-
-.. figure:: img/ui-settings-mapviewer.png
+  
+  .. figure:: img/ui-settings-mapviewer.png
 
 - **Layer objects in JSON**: Define additional layers to be shown on the map using JSON syntax. The supported types are:
 
@@ -227,32 +225,30 @@ This section is for configuring the map shown when viewing a record.
   - **stamen**: Stamen layers, required property: ``name``.
   - **bing_aerial**: Bing Aerial background, required property: ``key`` containing the license key.
 
-.. figure:: img/ui-settings-mapviewerlayers.png
+  All layers can also have some optional extra properties:
+
+  - ``title``: The title/label of the layer.
+  - ``projectionList``: Projection array to restrict this layer to certain projections on the map.
+
+  Examples of layers:
+
+  This layer will use OpenStreetMap Stamen style, but only when the map is in ``EPSG:3857``:
+
+  .. code-block:: json
 
 
-All layers can also have some optional extra properties:
+      {"type":"stamen","projectionList":["EPSG:3857"]}
 
-- **title** The title/label of the layer.
-- **projectionList**  Projection array to restrict this layer to certain projections on the map.
+  This WMS layer will be shown but only when the map is on ``EPSG:4326``:
 
-Examples of layers:
-
-This layer will use OpenStreetMap Stamen style, but only when the map is in ``EPSG:3857``:
-
-.. code-block:: json
+  .. code-block:: json
 
 
-    {"type":"stamen","projectionList":["EPSG:3857"]}
+      {"type":"wms","title":"OI.OrthoimageCoverage","name":"OI.OrthoimageCoverage",
+      "url":"http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS",
+      "projectionList":["EPSG:4326"]}
 
-This WMS layer will be shown but only when the map is on ``EPSG:4326``:
-
-.. code-block:: json
-
-
-    {"type":"wms","title":"OI.OrthoimageCoverage","name":"OI.OrthoimageCoverage",
-    "url":"http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS",
-    "projectionList":["EPSG:4326"]}
-
+  .. figure:: img/ui-settings-mapviewerlayers.png
 
 Search Map Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -277,7 +273,7 @@ Record View
 -----------
 
 - **Record view**: 
-- **Show Social bar**: If enabled the social bar (links to facebook, twitter etc) are enabled in record view.
+- **Show Social bar**: If enabled, the social bar (links to Twitter, Facebook, LinkedIn etc.) is enabled in record view.
 
 Editor Application
 ------------------
@@ -318,7 +314,7 @@ Search application
 JSON Configuration
 ------------------
 
-This section shows the JSON configuration for the currently applied User Interface settings. From here, the json can be saved to a file (by copying and pasting).
+This section shows the JSON configuration for the currently applied User Interface settings. From here, the JSON can be saved to a file (by copying and pasting).
 
 - **Test client configuration**: Click this button to test the configuration in a new browser tab.
 - **Reset configuration**: Click this button to reset the configuration back to the default. Note that this will revert any changes you have made in the above page.
