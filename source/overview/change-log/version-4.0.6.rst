@@ -67,7 +67,7 @@ Features and improvements
 -  Add a confirm popup when deleting a logo (`#6067 <https://github.com/geonetwork/core-geonetwork/pull/6067>`_)
 -  Misc. updates to Dutch translations
 -  Upgrade jsoup library (`#6057 <https://github.com/geonetwork/core-geonetwork/pull/6057>`_)
--  Update label texts for workflow dialog / actions. Fixes `#4992 <https://github.com/geonetwork/core-geonetwork/issue/4992>`_ (`#5840 <https://github.com/geonetwork/core-geonetwork/pull/5840>`_)
+-  Update label texts for workflow dialog / actions. Fixes `#4992 <https://github.com/geonetwork/core-geonetwork/issues/4992>`_ (`#5840 <https://github.com/geonetwork/core-geonetwork/pull/5840>`_)
 -  Opendata harvesting / add a resource for the landing page (`#6062 <https://github.com/geonetwork/core-geonetwork/pull/6062>`_)
 -  Configuration option to restrict the usage of non-predefined map
    services in the Regions API. Related to #5166 (`#6045 <https://github.com/geonetwork/core-geonetwork/pull/6045>`_)
@@ -277,7 +277,7 @@ Fixes
 -  Editor / Avoid hiding part of the Add Resource dropdown in sidebar.
    (`#5916 <https://github.com/geonetwork/core-geonetwork/pull/5916>`_)
 -  External viewer / Fix error when adding layer (`#5959 <https://github.com/geonetwork/core-geonetwork/pull/5959>`_)
--  Rollback exceptions handled in GlobalExceptionController. Fixes `#5944 <https://github.com/geonetwork/core-geonetwork/issue/5944>`_
+-  Rollback exceptions handled in GlobalExceptionController. Fixes `#5944 <https://github.com/geonetwork/core-geonetwork/issues/5944>`_
    (`#5948 <https://github.com/geonetwork/core-geonetwork/pull/5948>`_)
 -  Remove online resource - fix resource name comparison (`#5934 <https://github.com/geonetwork/core-geonetwork/pull/5934>`_)
 -  Fix CSW ES mapping for sortBy and bbox (`#5927 <https://github.com/geonetwork/core-geonetwork/pull/5927>`_)
@@ -298,7 +298,7 @@ Fixes
 -  Fix ops for public metadata inserted with CSW-T (`#5202 <https://github.com/geonetwork/core-geonetwork/pull/5202>`_)
 -  Record view / Fix display of CRS label. (`#5883 <https://github.com/geonetwork/core-geonetwork/pull/5883>`_)
 -  Record view / Group not set in prod mode (`#5851 <https://github.com/geonetwork/core-geonetwork/pull/5851>`_)
--  Fix empty metadata list with -1 count in user profile. Fixes `#5871 <https://github.com/geonetwork/core-geonetwork/issue/5871>`_.
+-  Fix empty metadata list with -1 count in user profile. Fixes `#5871 <https://github.com/geonetwork/core-geonetwork/issues/5871>`_.
    (`#5872 <https://github.com/geonetwork/core-geonetwork/pull/5872>`_)
 -  Encryption / Application fails to start if encryption error on
    harvester passwords (`#5859 <https://github.com/geonetwork/core-geonetwork/pull/5859>`_)
@@ -309,7 +309,7 @@ Fixes
 -  User $translateProvider.useSanitizeValueStrategy(‘escapeParameters’)
    for encoding sanitizing (`#5461 <https://github.com/geonetwork/core-geonetwork/pull/5461>`_)
 -  Fix for validation result gets lost when approving record and copy
-   validation results when creating a draft. Fixes `#5209 <https://github.com/geonetwork/core-geonetwork/issue/5209>`_ (`#5418 <https://github.com/geonetwork/core-geonetwork/pull/5418>`_)
+   validation results when creating a draft. Fixes `#5209 <https://github.com/geonetwork/core-geonetwork/issues/5209>`_ (`#5418 <https://github.com/geonetwork/core-geonetwork/pull/5418>`_)
 -  Overview / Removal / Do not delete attachment from other records
    (`#5821 <https://github.com/geonetwork/core-geonetwork/pull/5821>`_)
 -  INSPIRE Atom feed xslt fix for resource constraints with multiple
@@ -324,14 +324,14 @@ Fixes
    (`#5710 <https://github.com/geonetwork/core-geonetwork/pull/5710>`_)
 -  Search results - metadata with a working copy display a label
    ‘Working copy’ if the metadata has a draft copy, even for public
-   users. Fixes `#5580 <https://github.com/geonetwork/core-geonetwork/issue/5580>`_ (`#5805 <https://github.com/geonetwork/core-geonetwork/pull/5805>`_)
+   users. Fixes `#5580 <https://github.com/geonetwork/core-geonetwork/issues/5580>`_ (`#5805 <https://github.com/geonetwork/core-geonetwork/pull/5805>`_)
 -  Create user form issues 2 requests to userselection api that return
-   status code 400. Fixes `#4545 <https://github.com/geonetwork/core-geonetwork/issue/4545>`_ (`#5804 <https://github.com/geonetwork/core-geonetwork/pull/5804>`_)
+   status code 400. Fixes `#4545 <https://github.com/geonetwork/core-geonetwork/issues/4545>`_ (`#5804 <https://github.com/geonetwork/core-geonetwork/pull/5804>`_)
 -  Users without groups assigned are listed in the users lists for any
    UserAdmin (`#5798 <https://github.com/geonetwork/core-geonetwork/pull/5798>`_)
 -  Selection / PDF / Fix errors due to index schema changes (`#5787 <https://github.com/geonetwork/core-geonetwork/pull/5787>`_)
--  Fix editor overview manager. Fixes `#5806 <https://github.com/geonetwork/core-geonetwork/issue/5806>`_ (`#5807 <https://github.com/geonetwork/core-geonetwork/pull/5807>`_)
--  Self-register option doesn’t work. Fixes `#5778 <https://github.com/geonetwork/core-geonetwork/issue/5778>`_ (`#5779 <https://github.com/geonetwork/core-geonetwork/pull/5779>`_)
+-  Fix editor overview manager. Fixes `#5806 <https://github.com/geonetwork/core-geonetwork/issues/5806>`_ (`#5807 <https://github.com/geonetwork/core-geonetwork/pull/5807>`_)
+-  Self-register option doesn’t work. Fixes `#5778 <https://github.com/geonetwork/core-geonetwork/issues/5778>`_ (`#5779 <https://github.com/geonetwork/core-geonetwork/pull/5779>`_)
 -  Updated the index fieldname to match the es index names. (`#5772 <https://github.com/geonetwork/core-geonetwork/pull/5772>`_)
 -  Fix bug in signin link - regression cause by #5518 which used older
    variable. (`#5782 <https://github.com/geonetwork/core-geonetwork/pull/5782>`_)
