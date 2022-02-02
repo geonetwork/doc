@@ -48,3 +48,4 @@ Change log
    version-4.0.3.rst
    version-4.0.4.rst
    version-4.0.5.rst
+   version-4.0.6.rst
