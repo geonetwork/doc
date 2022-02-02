@@ -32,5 +32,6 @@ After installing the application, you can configure the following:
 
    configuring-database.rst
    customizing-data-directory.rst
+   logging.rst
    map-print-setup.rst
    loading-samples.rst

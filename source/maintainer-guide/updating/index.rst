@@ -13,9 +13,3 @@ Read more at :ref:`customizing-data-directory`.
 
 The file with the encryption settings **must be copied** to the new installation when upgrading the application;
 otherwise, it will not be possible to decrypt the existing passwords stored in the database.
-
-.. toctree::
-   :maxdepth: 2
-
-   automatic-update.rst
-   manual-update.rst

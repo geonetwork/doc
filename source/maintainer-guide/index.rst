@@ -10,5 +10,4 @@ For installation instructions, please refer to the :ref:`installation`.
 
    statistics/index.rst
    updating/index.rst
-   backup/index.rst
    production-use/index.rst

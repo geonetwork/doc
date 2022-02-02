@@ -33,5 +33,5 @@ New features/fixes
  * `Fixes in sitemap document <https://github.com/geonetwork/core-geonetwork/pull/5148>`_
  * `API / Language / Delete / Add missing source translation table <https://github.com/geonetwork/core-geonetwork/pull/5111>`_
 
-and more ... see `3.10.5 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.10.4+is%3Aclosed>`_ and
+and more ... see `3.10.5 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.10.5+is%3Aclosed>`_ and
 `pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.10.5+is%3Aclosed+is%3Apr>`_ for full details.

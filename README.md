@@ -1,9 +1,9 @@
 # Project documentation module
 
-Documentation for GeoNetwork Opensource available via https://geonetwork-opensource.org.
+Documentation for GeoNetwork opensource is available via https://geonetwork-opensource.org.
 This manual is included in each build in the `docs` folder as a git submodule.
 
-This documentation is supports open access using a [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
+This documentation is written under the creative commons license [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
 
 ![GeoNetwork Logo](source/_static/GN3.png "GeoNetwork")
 
