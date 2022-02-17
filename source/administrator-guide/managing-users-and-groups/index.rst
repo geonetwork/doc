@@ -80,35 +80,34 @@ Rights associated with the roles are illustrated in detail in the list below:
     
     These include:
     
-    - Full rights for creating new groups and new users
-    - Rights to change users/groups profiles
-    - Full rights for creating/editing/deleting new/old metadata
+    - Full rights for creating new groups and new users.
+    - Rights to change users/groups profiles.
+    - Full rights for creating/editing/deleting new/old metadata.
     - Perform system administration and configuration tasks.
 
 #.  **User Administrator Profile**
 
-    The User Administrator is the administrator of his/her own group with the
+    The user administrator is the administrator of his/her own group(s) with the
     following privileges:
     
-    - Full rights on creating new users within the own group
-    - Rights to change users profiles within the own group
-    - Full rights on creating/editing/ deleting new/old data within the own group
+    - Full rights on creating new users within their own groups.
+    - Rights to change users profiles within their own groups.
 
 #.  **Content Reviewer Profile**
 
-    The content reviewer is the only person allowed to give final clearance on    the metadata publication on the Intranet and/or on the Internet:
+    The content reviewer is the only person allowed to give final clearance on the metadata publication on the Intranet and/or on the Internet:
     
-    - Rights on reviewing metadata content within the own group and authorising its publication
+    - Rights on reviewing metadata content within their own groups and authorising its approval and publication.
 
 #.  **Editor Profile**
 
     The editor works on metadata with following privileges:
     
-    - Full rights on creating/editing/ deleting new/old data within the own group
+    - Full rights on creating/editing/ deleting new/old data within their own groups.
 
 #.  **Registered User Profile**
 
     The Registered User has more access privileges than non-authenticated Guest users:
     
-    - Right to download protected data
+    - Right to download protected data.
 
