@@ -15,7 +15,7 @@ do
     echo "Adding $url to gallery page..."
     if curl --output /dev/null --silent --head --fail "$url"
     then
-      echo " * Building thumbnail ..."
+      echo " * Building thumbnail for  ..."
       cd img
       pageres $url 1366x768 --filename='<%= url %>'
       THUMBNAIL_FILE=$(ls -t | head -n 1)

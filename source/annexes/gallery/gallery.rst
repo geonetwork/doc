@@ -1,12 +1,12 @@
 .. _gallery:
 
 Some GeoNetwork nodes
-#########################
+#####################
 
-* http://catalogue.geo-ide.developpement-durable.gouv.fr/
+* http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue
 
-.. figure:: img/catalogue.geo-ide.developpement-durable.gouv.fr.png
-   :target: http://catalogue.geo-ide.developpement-durable.gouv.fr/
+.. figure:: img/catalogue.geo-ide.developpement-durable.gouv.fr!catalogue.png
+   :target: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue
 
 
 * http://geocatalog.webservice-energy.org/geonetwork
@@ -27,16 +27,40 @@ Some GeoNetwork nodes
    :target: http://geoportal.kscnet.ru/geonetwork/
 
 
+* http://geoportal.nipp.hr/geonetwork
+
+.. figure:: img/geoportal.nipp.hr!geonetwork.png
+   :target: http://geoportal.nipp.hr/geonetwork
+
+
+* http://inspire.gov.hu/geonetwork
+
+.. figure:: img/inspire.gov.hu!geonetwork.png
+   :target: http://inspire.gov.hu/geonetwork
+
+
+* http://meta.data-za.org/catalogue/
+
+.. figure:: img/meta.data-za.org!catalogue.png
+   :target: http://meta.data-za.org/catalogue/
+
+
+* http://metadata.geopunt.be/zoekdienst
+
+.. figure:: img/metadata.geopunt.be!zoekdienst.png
+   :target: http://metadata.geopunt.be/zoekdienst
+
+
 * http://metawal.wallonie.be
 
 .. figure:: img/metawal.wallonie.be.png
    :target: http://metawal.wallonie.be
 
 
-* http://salbgeonetwork.grid.unep.ch/geonetwork
+* http://services.data.shom.fr/geonetwork/
 
-.. figure:: img/salbgeonetwork.grid.unep.ch!geonetwork.png
-   :target: http://salbgeonetwork.grid.unep.ch/geonetwork
+.. figure:: img/services.data.shom.fr!geonetwork.png
+   :target: http://services.data.shom.fr/geonetwork/
 
 
 * http://www.fao.org/geonetwork/
@@ -63,15 +87,21 @@ Some GeoNetwork nodes
    :target: http://www.geopal.org/accueil
 
 
+* http://www.idee.es/csw-codsi-idee
+
+.. figure:: img/idee.es!csw-codsi-idee.png
+   :target: http://www.idee.es/csw-codsi-idee
+
+
 * http://www.metadados.geo.ibge.gov.br/geonetwork_ibge/
 
-.. figure:: img/metadados.geo.ibge.gov.br!geonetwork_ibge.png
+.. figure:: img/www.metadados.geo.ibge.gov.br!geonetwork_ibge.png
    :target: http://www.metadados.geo.ibge.gov.br/geonetwork_ibge/
 
 
 * http://www.metadados.idesp.sp.gov.br/catalogo/
 
-.. figure:: img/metadados.idesp.sp.gov.br!catalogo.png
+.. figure:: img/www.metadados.idesp.sp.gov.br!catalogo.png
    :target: http://www.metadados.idesp.sp.gov.br/catalogo/
 
 
@@ -81,15 +111,9 @@ Some GeoNetwork nodes
    :target: http://www.nationaalgeoregister.nl/geonetwork
 
 
-* http://www.sadc.int/geonetwork
-
-.. figure:: img/sadc.int!geonetwork.png
-   :target: http://www.sadc.int/geonetwork
-
-
 * http://www.sandre.eaufrance.fr/atlas/
 
-.. figure:: img/sandre.eaufrance.fr!atlas.png
+.. figure:: img/www.sandre.eaufrance.fr!atlas.png
    :target: http://www.sandre.eaufrance.fr/atlas/
 
 
@@ -101,8 +125,14 @@ Some GeoNetwork nodes
 
 * http://www.wodgik.katowice.pl:8080/geonetwork
 
-.. figure:: img/wodgik.katowice.pl!8080!geonetwork.png
+.. figure:: img/www.wodgik.katowice.pl!8080!geonetwork.png
    :target: http://www.wodgik.katowice.pl:8080/geonetwork
+
+
+* https://agroenvgeo.data.inra.fr/geonetwork/
+
+.. figure:: img/agroenvgeo.data.inra.fr!geonetwork.png
+   :target: https://agroenvgeo.data.inra.fr/geonetwork/
 
 
 * https://catalogue-imos.aodn.org.au/geonetwork
@@ -111,16 +141,34 @@ Some GeoNetwork nodes
    :target: https://catalogue-imos.aodn.org.au/geonetwork
 
 
-* https://catalogue.grand-chatellerault.fr/
+* https://catalogue.ec.gc.ca/geonetwork/
 
-.. figure:: img/catalogue.grand-chatellerault.fr.png
-   :target: https://catalogue.grand-chatellerault.fr/
+.. figure:: img/catalogue.ec.gc.ca!geonetwork.png
+   :target: https://catalogue.ec.gc.ca/geonetwork/
+
+
+* https://cdgp.u-strasbg.fr/geonetwork
+
+.. figure:: img/cdgp.u-strasbg.fr!geonetwork.png
+   :target: https://cdgp.u-strasbg.fr/geonetwork
 
 
 * https://download.data.grandlyon.com/catalogue
 
 .. figure:: img/download.data.grandlyon.com!catalogue.png
    :target: https://download.data.grandlyon.com/catalogue
+
+
+* https://ecat.ga.gov.au/geonetwork/
+
+.. figure:: img/ecat.ga.gov.au!geonetwork.png
+   :target: https://ecat.ga.gov.au/geonetwork/
+
+
+* https://gatt.lmi.is/geonetwork
+
+.. figure:: img/gatt.lmi.is!geonetwork.png
+   :target: https://gatt.lmi.is/geonetwork
 
 
 * https://gdk.gdi-de.org/gdi-de/
@@ -135,22 +183,22 @@ Some GeoNetwork nodes
    :target: https://geocatalogue.apur.org/catalogue
 
 
-* https://geo.aims.gov.au/geonetwork/
-
-.. figure:: img/geo.aims.gov.au!geonetwork.png
-   :target: https://geo.aims.gov.au/geonetwork/
-
-
 * https://geocatalogue.geoportail.lu/
 
 .. figure:: img/geocatalogue.geoportail.lu.png
    :target: https://geocatalogue.geoportail.lu/
 
 
-* https://geoportal.geodaten.niedersachsen.de/harvest/
+* https://geodata.nz/geonetwork
 
-.. figure:: img/geoportal.geodaten.niedersachsen.de!harvest.png
-   :target: https://geoportal.geodaten.niedersachsen.de/harvest/
+.. figure:: img/geodata.nz!geonetwork.png
+   :target: https://geodata.nz/geonetwork
+
+
+* https://geoportail.lepuyenvelay.fr/geonetwork/
+
+.. figure:: img/geoportail.lepuyenvelay.fr!geonetwork.png
+   :target: https://geoportail.lepuyenvelay.fr/geonetwork/
 
 
 * https://georep.nc/
@@ -159,10 +207,16 @@ Some GeoNetwork nodes
    :target: https://georep.nc/
 
 
-* https://geoservice.pbl.nl/geonetwork
+* https://gis.ices.dk/geonetwork
 
-.. figure:: img/geoservice.pbl.nl!geonetwork.png
-   :target: https://geoservice.pbl.nl/geonetwork
+.. figure:: img/gis.ices.dk!geonetwork.png
+   :target: https://gis.ices.dk/geonetwork
+
+
+* https://iandc.pnra.aq/
+
+.. figure:: img/iandc.pnra.aq.png
+   :target: https://iandc.pnra.aq/
 
 
 * https://ide.cat/en/catalogue/
@@ -177,6 +231,30 @@ Some GeoNetwork nodes
    :target: https://ids.craig.fr/geocat/
 
 
+* https://metadados.snirh.gov.br/geonetwork/
+
+.. figure:: img/metadados.snirh.gov.br!geonetwork.png
+   :target: https://metadados.snirh.gov.br/geonetwork/
+
+
+* https://metadata.vlaanderen.be/
+
+.. figure:: img/metadata.vlaanderen.be.png
+   :target: https://metadata.vlaanderen.be/
+
+
+* https://metadata.vlaanderen.be/metadatacenter
+
+.. figure:: img/metadata.vlaanderen.be!metadatacenter.png
+   :target: https://metadata.vlaanderen.be/metadatacenter
+
+
+* https://msdi.data.gov.mt/geonetwork
+
+.. figure:: img/msdi.data.gov.mt!geonetwork.png
+   :target: https://msdi.data.gov.mt/geonetwork
+
+
 * https://opendata.zuid-holland.nl/geonetwork/
 
 .. figure:: img/opendata.zuid-holland.nl!geonetwork.png
@@ -189,10 +267,22 @@ Some GeoNetwork nodes
    :target: https://prodige.cerema.fr/
 
 
+* https://santegraphie.fr/geonetwork
+
+.. figure:: img/santegraphie.fr!geonetwork.png
+   :target: https://santegraphie.fr/geonetwork
+
+
 * https://sextant.ifremer.fr/eng
 
 .. figure:: img/sextant.ifremer.fr!eng.png
    :target: https://sextant.ifremer.fr/eng
+
+
+* https://www.cdata.cerema.fr/geonetwork
+
+.. figure:: img/www.cdata.cerema.fr!geonetwork.png
+   :target: https://www.cdata.cerema.fr/geonetwork
 
 
 * https://www.doterr.fr/accueil
@@ -203,7 +293,7 @@ Some GeoNetwork nodes
 
 * https://www.geo.be/#!/catalogs/1/resources?l=en
 
-.. figure:: img/geo.be#!catalogs!1!resources!l=en.png
+.. figure:: img/geo.be!#!catalogs!1!resources!l=en#!catalogs!1!resources!l=en.png
    :target: https://www.geo.be/#!/catalogs/1/resources?l=en
 
 
@@ -237,10 +327,10 @@ Some GeoNetwork nodes
    :target: https://www.geonormandie.fr/accueil
 
 
-* https://www.geopicardie.fr/geonetwork/
+* https://www.indores.fr/geonetwork/
 
-.. figure:: img/geopicardie.fr!geonetwork.png
-   :target: https://www.geopicardie.fr/geonetwork/
+.. figure:: img/indores.fr!geonetwork.png
+   :target: https://www.indores.fr/geonetwork/
 
 
 * https://www.karugeo.fr/accueil
@@ -271,36 +361,6 @@ Some GeoNetwork nodes
 
 .. figure:: img/pigma.org!geonetwork.png
    :target: https://www.pigma.org/geonetwork
-
-
-* https://msdi.data.gov.mt/geonetwork
-
-.. figure:: img/msdi.data.gov.mt!geonetwork.png
-   :target: https://msdi.data.gov.mt/geonetwork
-
-
-* http://metadata.geopunt.be/zoekdienst
-
-.. figure:: img/metadata.geopunt.be!zoekdienst.png
-   :target: http://metadata.geopunt.be/zoekdienst
-
-
-* http://inspire.gov.hu/geonetwork
-
-.. figure:: img/inspire.gov.hu!geonetwork.png
-   :target: http://inspire.gov.hu/geonetwork
-
-
-* https://gatt.lmi.is/geonetwork
-
-.. figure:: img/gatt.lmi.is!geonetwork.png
-   :target: https://gatt.lmi.is/geonetwork
-
-
-* http://www.idee.es/csw-codsi-idee
-
-.. figure:: img/idee.es!csw-codsi-idee.png
-   :target: http://www.idee.es/csw-codsi-idee
 
 To add your catalog to this list, add it to `this list <https://github.com/geonetwork/doc/tree/develop/source/annexes/gallery/gallery-urls.csv>`_.
 
