@@ -40,3 +40,4 @@ Change log
    version-3.12.1.rst
    version-3.12.2.rst
    version-3.12.3.rst
+   version-3.12.4.rst
