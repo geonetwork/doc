@@ -209,7 +209,7 @@ Remove associatedResource with a type partOfSeamlessDatabase only if it is a ser
 
   .. code-block:: xslt
 
-  .[mdb:metadataScope/*/mdb:resourceScope/*/@codeListValue = 'series']//mri:associatedResource[*/mri:associationType/*/@codeListValue = "partOfSeamlessDatabase"]
- 
+    .[mdb:metadataScope/*/mdb:resourceScope/*/@codeListValue = 'series']//mri:associatedResource[*/mri:associationType/*/@codeListValue = "partOfSeamlessDatabase"]
+
 * XML (N/A)
 
