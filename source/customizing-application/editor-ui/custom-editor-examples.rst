@@ -17,7 +17,7 @@ It illustrates:
 * Each fields have a clear description with links to EEA metadata profile documentation
 * Right panel link to helpdesk team
 
-`See configuration file <https://github.com/eea/geonetwork-eea/blob/eea-4.1.0/schemas/iso19139/src/main/plugin/iso19139/layout/config-editor.xml#L512>`_.
+`See configuration file <https://github.com/eea/geonetwork-eea/blob/eea-4.1.0/schemas/iso19139/src/main/plugin/iso19139/layout/config-editor.xml#L512>`__.
 
 
 Ifremer editors
@@ -61,6 +61,8 @@ Checkpoint projects
 It illustrates:
 
 * Heavy use of keywords for classification and description
+* Use project terminology
+
 
 EMODNET projects
 ~~~~~~~~~~~~~~~~
@@ -73,20 +75,23 @@ Metawal - SPW editor
 
 .. figure:: img/example-metawal.png
 
-`See configuration file <https://github.com/SPW-DIG/metawal-core-geonetwork/blob/metawal-4.1.0/schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/layout/config-editor.xml#L414>`_.
+`See configuration file <https://github.com/SPW-DIG/metawal-core-geonetwork/blob/metawal-4.1.0/schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/layout/config-editor.xml#L414>`__.
 
+It illustrates:
 
-DCAT - SPW editor
-~~~~~~~~~~~~~~~~~~~~
+* Using custom buttons to add associated resources
+
+DCAT-AP plugin - Informatie Vlaanderen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: img/example-dcatnl.png
 
 .. figure:: img/example-dcatnl-tag.png
 
-`See schema plugin <https://github.com/metadata101/dcat-ap1.1>`_.
+`See DCAT-AP Schema Plugin <https://github.com/metadata101/dcat-ap1.1>`_.
 
 
 Other plugins
 -------------
 
-Check also the `plugin repository<https://github.com/metadata101/>`_ which contains number of examples.
+Check also the `plugin repository <https://github.com/metadata101/>`_ which contains other examples.
