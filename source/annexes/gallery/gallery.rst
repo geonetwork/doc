@@ -27,12 +27,6 @@ Some GeoNetwork nodes
    :target: http://geoportal.kscnet.ru/geonetwork/
 
 
-* http://geoportal.nipp.hr/geonetwork
-
-.. figure:: img/geoportal.nipp.hr!geonetwork.png
-   :target: http://geoportal.nipp.hr/geonetwork
-
-
 * http://inspire.gov.hu/geonetwork
 
 .. figure:: img/inspire.gov.hu!geonetwork.png
@@ -175,6 +169,12 @@ Some GeoNetwork nodes
 
 .. figure:: img/gdk.gdi-de.org!gdi-de.png
    :target: https://gdk.gdi-de.org/gdi-de/
+
+
+* https://geo.gob.bo/geonetwork/
+
+.. figure:: img/geo.gob.bo!geonetwork.png
+   :target: https://geo.gob.bo/geonetwork/
 
 
 * https://geocatalogue.apur.org/catalogue
