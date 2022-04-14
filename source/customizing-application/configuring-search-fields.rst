@@ -298,4 +298,3 @@ Language analyzer
 
 By default a `standard` analyzer is used. If the catalog content is english, it may make sense to change the analyzer to `english`. To customize the analyzer see :code:`web/src/main/webResources/WEB-INF/data/config/index/records.json`
 
-For French, see :code:`web/src/main/webResources/WEB-INF/data/config/index/records_french.json`.
