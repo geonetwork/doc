@@ -3,7 +3,7 @@
 Catalog Service for the Web (CSW)
 #################################
 
-The CSW end point exposes the metadata records in your catalog in XML format using the OGC CSW protocol (version 2.0.2). 
+The CSW end point exposes the metadata records in your catalog in XML format using the OGC CSW protocol (version 2.0.2).
 
 Two protocols are available:
 
@@ -13,7 +13,7 @@ Two protocols are available:
 Configuration
 =============
 
-See :ref:`csw-configuration` for details of how to configure the CSW end point. 
+See :ref:`csw-configuration` for details of how to configure the CSW end point.
 
 URL
 ====
@@ -32,3 +32,49 @@ Requests
 The full set of requests supported by GeoNetwork can be found in ``CSW test``, in the ``Settings`` section of the Admin Dashboard.
 
 See :ref:`csw-configuration` for more details of this function.
+
+
+When using the GetRecords operation for searching, 2 types of parameter can be use for searching:
+
+* The list of queryable listed in the GetCapabilities document
+* The fields in the index
+
+Example of a request using a standard queryable:
+
+.. code-block:: xml
+
+  <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
+                  service="CSW" version="2.0.2">
+    <csw:Query typeNames="csw:Record">
+      <csw:Constraint version="1.1.0">
+        <Filter xmlns="http://www.opengis.net/ogc">
+          <PropertyIsEqualTo>
+            <PropertyName>OnlineResourceType</PropertyName>
+            <Literal>OGC:WFS-1.1.0-http-get-feature</Literal>
+          </PropertyIsEqualTo>
+        </Filter>
+      </csw:Constraint>
+    </csw:Query>
+  </csw:GetRecords>
+
+
+Example of a request using an index field name:
+
+.. code-block:: xml
+
+  <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
+                  service="CSW" version="2.0.2">
+    <csw:Query typeNames="csw:Record">
+      <csw:Constraint version="1.1.0">
+        <Filter xmlns="http://www.opengis.net/ogc">
+          <PropertyIsEqualTo>
+            <PropertyName>linkProtocol</PropertyName>
+            <Literal>OGC:WMS</Literal>
+          </PropertyIsEqualTo>
+        </Filter>
+      </csw:Constraint>
+    </csw:Query>
+  </csw:GetRecords>
+
+
+The mapping between CSW standard queryable and the index fields are defined in :code:`web/src/main/webapp/WEB-INF/config-csw.xml`:.

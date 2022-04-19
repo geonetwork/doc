@@ -11,6 +11,7 @@ Customizing guide
    search-ui/index.rst
    creating-custom-view.rst
    editor-ui/creating-custom-editor.rst
+   editor-ui/custom-editor-examples.rst
    changing-layout.rst
    configuring-search-fields.rst
    configuring-faceted-search.rst
