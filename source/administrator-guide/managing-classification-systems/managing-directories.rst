@@ -10,7 +10,7 @@ Here is a typical example of a fragment. This is a responsible party and it coul
 
 .. code-block:: xml
 
- <gmd:CI_ResponsibleParty xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" >
+ <gmd:CI_ResponsibleParty xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco">
    <gmd:individualName>
      <gco:CharacterString>John D'Ath</gco:CharacterString>
    </gmd:individualName>
@@ -111,7 +111,7 @@ To use this function the following set of steps should be followed:
 
 .. code-block:: xml
 
-      <gmd:CI_ResponsibleParty>
+      <gmd:CI_ResponsibleParty xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco">
          <gmd:individualName>
             <gco:CharacterString>Jippe Hoogeveen</gco:CharacterString>
          </gmd:individualName>
@@ -193,6 +193,41 @@ Subtemplate indexing is based on the schema (see index-fields folder for details
 - gmd:CI_OnlineResource
 
 - gmd:EX_Extent
+
+In ISO19115-3
+
+- cit:CI_Responsibility
+
+- *[mdq:result]
+
+- gex:EX_Extent
+
+
+Other configuration examples to collect:
+
+- Parties in ISO19115-3
+
+  - ``xpath``: ``.//cit:CI_Responsibility``
+
+  - ``identifierXpath``: ``.//cit:electronicMailAddress/*/text()``
+
+- Quality specifications in ISO19115-3
+
+  - ``xpath``: ``.//*[mdq:result]``
+
+  - ``identifierXpath``: ``.//cit:title/*/text()``
+
+- Extent in ISO19115-3
+
+  - ``xpath``: ``.//gex:EX_Extent``
+
+  - ``identifierXpath``: ``concat(.//gex:westBoundLongitude/*/text(), ', ', .//gex:eastBoundLongitude/*/text(), ', ', .//gex:southBoundLatitude/*/text(), ', ',.//gex:northBoundLatitude/*/text())`` or ``gex:description/*/text()``
+
+- Constraints in ISO19115-3
+
+  - ``xpath``: ``.//mri:resourceConstraints/*``
+
+
 
 
 
