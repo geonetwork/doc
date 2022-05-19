@@ -14,7 +14,7 @@ Due to H2 database major update, when migrating from a previous version drop the
 
 * Formatter cache database in $DATA_DIR/data/resources/htmlcache/formatter-cache/info-store.mv.db
 
-If using H2 as the main database consider migrating to an external database (see :ref:`configuring-database`) or read `H2 migration guide <http://www.h2database.com/html/migration-to-v2.html>`_.
+If using H2 as the main database consider migrating to an external database (see :ref:`configuring-database`) or read `H2 migration guide <http://www.h2database.com/html/migration-to-v2.html>`_ and migrate the database to version 2 format.
 
 Then start the application.
 
