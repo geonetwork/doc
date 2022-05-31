@@ -3,10 +3,10 @@
 Managing privileges
 ###################
 
-To manage privileges to your metadata record and any attached data, you will need to identify User Groups and the privileges you want to assign to users in these groups. 
+To manage privileges to your metadata record and any attached data, you will need to identify User Groups and the privileges you want to assign to users in these groups.
 eg. Viewing the metadata, downloading the data attached to the record, etc.
 
-For exmaple, you can specify that the metadata and related services are visible to all (Internet users) or just to internal users only (Intranet). 
+For exmaple, you can specify that the metadata and related services are visible to all (Internet users) or just to internal users only (Intranet).
 Privileges are assigned on a per group basis. Depending on the user profile (Guest, Registered User, Editor, Admin etc.) access to these functions may differ on a per user basis.
 
 
@@ -68,13 +68,27 @@ Editing
 
 An *administrator* can edit any metadata.
 
-A *reviewer* can edit a metadata if:
+A *reviewer* or an *Editor* can edit a metadata if:
 
-* The metadata owner is member of one of the groups assigned to the reviewer.
+* All metadata that has the edit privilege selected for one of the groups they are a member of.
 
 * They are the metadata owner.
 
-A *User Administrator* or an *Editor* can only edit metadata they created.
+
+A *User Administrator* can't edit metadata.
+
+
+Publishing
+----------
+
+An *administrator* can publish any metadata.
+
+A *user* can publish a metadata if:
+
+* the user is reviewer of the metadata group
+
+* or (if configured in admin > settings > Publication by users reviewer in record group only) the user is reviewer of one of the group with editing rights for that record
+
 
 
 Setting Privileges
