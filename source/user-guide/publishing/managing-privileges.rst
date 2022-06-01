@@ -68,14 +68,14 @@ Editing
 
 An *administrator* can edit any metadata.
 
-A *reviewer* or an *Editor* can edit a metadata if:
+A *reviewer* or an *editor* can edit a metadata if:
 
-* All metadata that has the edit privilege selected for one of the groups they are a member of.
+* The metadata has 'edit' privilege for one of the groups they are a member of
 
 * They are the metadata owner.
 
 
-A *User Administrator* can't edit metadata.
+A *user administrator* can't edit metadata.
 
 
 Publishing
