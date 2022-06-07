@@ -10,6 +10,7 @@ However there are some other authentication mechanisms available:
 - :ref:`authentication-ldap`
 - :ref:`authentication-ldap-hierarchy`
 - :ref:`authentication-cas`
+- :ref:`authentication-openid`
 - :ref:`authentication-keycloak`
 - :ref:`authentication-shibboleth`
 
@@ -509,6 +510,239 @@ You can configure your environment by updating the previous file or by defining 
     cas.ticket.validator.url=${cas.baseURL}
     cas.login.url=${cas.baseURL}/login
     cas.logout.url=${cas.baseURL}/logout?url=${geonetwork.https.url}/
+
+
+.. _authentication-openid:
+
+Configuring OAUTH2 OpenID Connect
+---------------------------------
+
+`OAUTH2 OpenID Connect <https://openid.net/connect/>`_ is an authentication and authorization system based on OAUTH2.  Geonetwork's OpenID Connect plugin has been tested with `Keycloak <https://keycloak.org>`_ and `Azure AD <https://azure.microsoft.com/en-ca/services/active-directory/>`_, but should work with any provider.
+
+Basic Setup Steps;
+
+#. Configure your IDP Server (i.e. Keycloak or Azure AD)
+
+    #. Ensure that the ID Token provides role/group information
+    #. Authorize your Geonetwork URLs for redirects (i.e. `http://localhost:8080/geonetwork/login/oauth2/code/geonetwork-oicd`) 
+    #. Record the Client ID 
+    #. Record the Client Secret
+    #. Get the Server's JSON metadata document
+
+#. Configure Geonetwork via environment variables
+    
+        #. `GEONETWORK_SECURITY_TYPE=openidconnect`
+        #. `OPENIDCONNECT_CLIENTSECRET=...`   (from your IDP server)
+        #. `OPENIDCONNECT_CLIENTID=...`  (from your IDP server)
+        #. `OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...'` (the text of your Server's JSON metadata document)
+        #. `OPENIDCONNECT_IDTOKENROLELOCATION=...` (location of the user's roles in the ID Token)
+
+
+
+Geonetwork's Open ID Connect plugin has a lot of configuration options - please see the `config-security-openidconnect.xml` and `config-security-openidconnect-overrides.properties` files.
+
+
+Environment Variable and Meaning
+================================
+
+**GEONETWORK_SECURITY_TYPE**
+
+    Should be `openidconnect`.
+
+**OPENIDCONNECT_CLIENTID**
+
+    The name of the client/application you configured on your OpenID server.    
+
+**OPENIDCONNECT_CLIENTSECRET**
+
+    The `client secret` you configured on your OpenID server.  
+
+**OPENIDCONNECT_SERVERMETADATA_JSON_TEXT**
+
+    Should be the text of your OpenID server's metadata configuration (JSON).
+
+**OPENIDCONNECT_SERVERMETADATA_FNAME**
+
+    Instead of putting the OpenID server's metadata configuration as text in a variable (`OPENIDCONNECT_SERVERMETADATA_JSON_TEXT`), you can put the JSON contents in a file and reference it with this variable (ie. `/WEB-INF/config-security/openid-configuration.json`)
+
+**OPENIDCONNECT_IDTOKENROLELOCATION**
+
+    Where, in the ID Token, are the users roles/groups stored (i.e. "groups", "roles", or "resource_access.gn-key.roles")  
+
+**OPENIDCONNECT_ROLECONVERTER**
+
+    This provides simple role conversion from the OpenID server to Geonetwork roles.
+
+    ie. `"GeonetworkAdmin:Administrator,GeonetworkEditor:Editor"`
+
+    This will convert "GeonetworkAdmin" (from the OpenID Server) to the Geonetwork "Administrator" role.
+
+    NOTE: Like the keycloak plugin, you can use role/group names of the form "group:role" to assign a user to Geonetwork group and permission level.
+
+**OPENIDCONNECT_MINIMUMPROFILE**
+
+    Every user who authenticates against the OpenID server will be given this role.
+
+    Default is `"RegisteredUser"`.  
+
+**OPENIDCONNECT_USERPROFILEUPDATEENABLED**
+
+    When a user logs on, update their Geotwork profile from the OpenID server's ID Token.
+
+    Default is `"true"`.  
+
+**OPENIDCONNECT_USERGROUPUPDATEENABLED**
+
+    When a user logs on, update their Geotwork group/role permissions. 
+
+    Default is `"true"`.  
+
+**OPENIDCONNECT_SCOPES**
+
+    Limit the requested scope access to the OpenID server.
+
+    Default is all scopes the server supports. 
+
+Configuration for a Keycloak Server
+===================================
+
+
+Its outside the scope of this document to fully describe the steps to configure keycloak, but this should serve as a guide.
+
+This will configure keycloak backed by **another OpenID IDP** (for example, by an Azure AD).  In keycloak;
+
+#. Create a realm (i.e. `myrealm`)
+#. Create an openid client (i.e. `myclient`).  This is your ClientID.
+
+    #. Root URL:  `http://localhost:7777/geonetwork`  (this is the GN root URL)
+    #. Valid Redirect URIs: `http://localhost:7777/geonetwork/*`
+    #. Access Type: Confidential
+    #. On the `Credentials` tab, get the secret (this is your Client Secret)
+    #. On the `Roles` tab, create some roles: Administrator, Editor, Reviewer, RegisteredGuest
+
+#. Create your backing Identity Provider (i.e. to another OpenID server).  Or you can configure users directly in keycloak.
+
+    #. At the bottom of the page, choose "import from URL" and import the backing server's configuration location.
+    #. Add the Client Secret (from the backing service)
+    #. Add the Client ID (from the backing service)
+    #. set "Client Authentication" to "Client secret sent as post"
+
+#. Configure role translation
+
+    #. Edit the "Identity Provider" you just created, and go to the "Mappers" tab.
+    #. Press "Create" and and add a "Claim to Role".  
+    #. Set Sync Mode Override to "Force"
+    #. Claim: `roles`
+    #. Claim Value: `name of the administrator role in the backing IDP`
+    #. Role: choose the "Administrator" role from the `myclient` client.
+    #. Repeat the above for Administrator, Editor, Reviewer, and RegisteredGuest
+
+#. Configure details for your backing IDP
+
+    #. Edit the "Identity Provider" you just configured
+    #. On the Mappers tab, "Add Builtin" and tick "client roles (User Client Role)" then "Add selected"
+    #. Edit the "client roles" mapper and make sure "Add to ID token" and "Add to userinfo" are on
+   
+
+
+You should have Keycloak's Client id ("myclient") and the client secret.  The configuration JSON is available at `https://YOUR_KEYCLOAK_HOST/realms/{YOUR REALM NAME}/.well-known/openid-configuration```
+
+Your environment variables will looks like this;
+
+.. code-block:: properties
+
+    GEONETWORK_SECURITY_TYPE=openidconnect
+    OPENIDCONNECT_CLIENTSECRET='...'
+    OPENIDCONNECT_CLIENTID='...'   
+    OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...big json text...' 
+    OPENIDCONNECT_IDTOKENROLELOCATION='resource_access.{your client id}.roles'
+
+
+Azure AD Configuration
+======================
+
+There are two ways to setup Azure AD.  The first is with user and groups (a more traditional LDAP method) or with Application Roles.
+
+With Users and Groups
+``````````````````````
+
+Setup the Azure Application;
+
+#. Create a new `App Registration`
+#. use "http://localhost:8080/geonetwork/login/oauth2/code/geonetwork-oicd" as a redirect URIs
+#. On the "Certificates & Secrets" add a new secret and record it (make sure you get the secret value and NOT the object id)
+#. Make sure the groups are in the ID token - on the "Manifest" tab, edit the JSON so that  "groupMembershipClaims": "SecurityGroup" is set
+#. On the summary page, get the Application (client) ID
+#. On the summary page, choose "Endpoints" (at the top) and get the JSON text from the "OpenID Connect metadata document" Endpoints
+
+Setup users and groups;
+
+#. In Azure AD, go to groups
+#. Add new Groups - "geonetworkAdmin", "geonetworkReviewer", etc...  Record the name and the group's **Object ID**
+#. Edit a User, and choose Groups, and add them to appropriate group.
+
+
+Your environment variables will looks like this;
+
+.. code-block:: properties
+
+    GEONETWORK_SECURITY_TYPE=openidconnect
+    OPENIDCONNECT_CLIENTSECRET='...'
+    OPENIDCONNECT_CLIENTID='...'   
+    OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...big json text...' 
+    OPENIDCONNECT_IDTOKENROLELOCATION='groups'
+    OPENIDCONNECT_ROLECONVERTER='3a94275f-7d53-4205-8d78-11f39e9ffa5a:Administrator,d93c6444-feee-4b67-8c0f-15d6796370cb:Reviewer'
+
+
+NOTE: The roles are in the "roles" part of the ID Token.
+
+
+NOTE: The OPENIDCONNECT_ROLECONVERTER converts the Azure AD Group's Object ID to a Geonetwork Role.
+
+ 
+With Application Roles  
+``````````````````````
+
+Setup the Azure Application;
+
+#. Create a new Enterprise application
+#. use "http://localhost:8080/geonetwork/login/oauth2/code/geonetwork-oicd" as a redirect URIs
+#. On the "Certificates & Secrets" add a new secret and record it (make sure you get the secret value and NOT the object id)
+#. Make sure the groups are in the ID token - on the "Manifest" tab, edit the JSON so that "groupMembershipClaims": "ApplicationGroup" is set
+#. On the summary page, get the Application (client) ID
+#. On the summary page, choose "Endpoints" (at the top) and get the JSON text from the "OpenID Connect metadata document" Endpoints
+
+Setup Application Roles;
+
+#. In Application you created, go to "App Roles".
+#. Add new Groups - "Editor", "Reviewer", etc...
+
+Assign Users:
+
+#. Go to Azure AD, Enterprise Application, then the application you created
+#. Choose "Assign users and groups"
+#. Press the "Add user/group" (top)
+#. Press "None Selected" (under Users) and choose some users
+#. Press "None Selected" (Under Select a Role) and choose some roles
+#. Configure all your users with roles
+
+
+Your environment variables will looks like this;
+
+.. code-block:: properties
+
+    GEONETWORK_SECURITY_TYPE=openidconnect
+    OPENIDCONNECT_CLIENTSECRET='...'
+    OPENIDCONNECT_CLIENTID='...'   
+    OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...big json text...' 
+    OPENIDCONNECT_IDTOKENROLELOCATION='roles'
+
+NOTE: The roles are in the "roles" part of the ID Token.
+
+
+NOTE: You don't typically have to do any role conversion since the role name will be used in the ID Token.
+
+
 
 .. _authentication-keycloak:
 
