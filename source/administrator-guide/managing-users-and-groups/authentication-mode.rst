@@ -573,7 +573,7 @@ Environment Variable and Meaning
 
     This provides simple role conversion from the OpenID server to Geonetwork roles.
 
-    ie. `"GeonetworkAdmin:Administrator,GeonetworkEditor:Editor"`
+    ie. `"GeonetworkAdmin=Administrator,GeonetworkEditor=Editor"`
 
     This will convert "GeonetworkAdmin" (from the OpenID Server) to the Geonetwork "Administrator" role.
 
@@ -691,7 +691,7 @@ Your environment variables will looks like this;
     OPENIDCONNECT_CLIENTID='...'   
     OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...big json text...' 
     OPENIDCONNECT_IDTOKENROLELOCATION='groups'
-    OPENIDCONNECT_ROLECONVERTER='3a94275f-7d53-4205-8d78-11f39e9ffa5a:Administrator,d93c6444-feee-4b67-8c0f-15d6796370cb:Reviewer'
+    OPENIDCONNECT_ROLECONVERTER='3a94275f-7d53-4205-8d78-11f39e9ffa5a=Administrator,d93c6444-feee-4b67-8c0f-15d6796370cb=Reviewer'
 
 
 NOTE: The roles are in the "roles" part of the ID Token.
