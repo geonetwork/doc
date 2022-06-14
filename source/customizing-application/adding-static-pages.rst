@@ -37,43 +37,70 @@ In this example we're going to upload a file `contactus.html` and link it in the
 
 1. Load the content by using the method POST ``/api/pages/``, the mandatory fields are:
 
-    - language (3 letters like 'eng', 'ita', 'fra' ...)
-    - pageId (the identifier/link description of the page)
-    - format (must be LINK if a link is associated to the page)
-    - the content: data (a file with the page content) or a link (URL to another page). Define both is not possible.
+    - ``language`` (3 letters like 'eng', 'ita', 'fra' ...)
+    - ``pageId`` (the identifier/link description of the page): this value should be encoded.
+    - ``format`` (must be LINK if a link is associated to the page)
+    - ``content``
+
+        - data (a file with the page content) or
+        - a link (URL to another page). The link should be encoded.
+
+      Define both is not possible.
 
 
 .. code-block:: bash
 
-    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=contactus&format=LINK" -H "accept: */*" -H "Content-Type: multipart/form-data" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" -d contactus.html
+    $ rm -f /tmp/cookie; curl -c /tmp/cookie http://localhost:8080//srv/eng/info\?type\=me -X POST; cat /tmp/cookie
+
+    # Grab the XSRF token from the previous file, in the following example: e934f557-17a3-47f2-8e6b-bdf1a3c90a97
+    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=Contact%20us&format=LINK" -H "accept: */*" -H "Content-Type: multipart/form-data" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" -d contactus.html --user admin:admin -b /tmp/cookie
 
 
-At this point the page is created but not visible because is in status HIDDEN and is not loaded explicitly in any section of the page, except DRAFT that is not visible (in the future could be added to a page with an editor interface). Similar requests should be done for each UI language supported.
-
+At this point the page is created but not visible because is in status HIDDEN and is not loaded explicitly in any section of the page, except DRAFT that is not visible (in the future could be added to a page with an editor interface).
 
 2. To associate the link to the top bar is necessary to use the method POST ``/api/pages/{language}/{pageId}/{section}`` with the ``TOP`` value for the section.
 
 .. code-block:: bash
 
-    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/eng/contactus/TOP" -H "accept: */*" -H "X-XSRF-TOKEN: 7cfa1a0d-3335-4846-8061-a5bf176687b5"  --user admin:admin -b /tmp/cookie
+    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/eng/Contact%20us/TOP" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" --user admin:admin -b /tmp/cookie
+
+3. By default, the link to display the page is created as PRIVATE, visible only to logged users, to make it visible to all users is necessary to use the method PUT ``/api/pages/{language}/{pageId}/{status}`` with the ``PUBLIC`` value for the status.
+
+.. code-block:: bash
+
+    $ curl -X PUT "http://localhost:8080/geonetwork/srv/api/pages/eng/Contact%20us/PUBLIC" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" --user admin:admin -b /tmp/cookie
+
+
+Similar requests should be done for each UI language supported.
 
 Load a link in the footer bar
 `````````````````````````````
 
 In this example we're going to add a link to an external resource http://myorganisation/contactus.html and link it in the footer:
 
-1. Add the link by using the method POST ``/api/pages/`` with the ``link`` parameter in the request:
+1. Add the link by using the method POST ``/api/pages/`` with the ``link`` parameter in the request.
+
 
 .. code-block:: bash
 
-    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=contactus&format=LINK&link=http://myorganisation/contactus.html" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97"
+    $ rm -f /tmp/cookie; curl -c /tmp/cookie http://localhost:8080//srv/eng/info\?type\=me -X POST; cat /tmp/cookie
+
+    # Grab the XSRF token from the previous file, in the following example: e934f557-17a3-47f2-8e6b-bdf1a3c90a97
+    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=Contact%20us&format=LINK&link=http://myorganisation/contactus.html" -H "accept: */*" -H "accept: */*" -H "X-XSRF-TOKEN:  e934f557-17a3-47f2-8e6b-bdf1a3c90a97" --user admin:admin -b /tmp/cookie
 
 2. To associate the link to the footer is necessary to use the method POST ``/api/pages/{language}/{pageId}/{section}`` with the ``FOOTER`` value for the section.
 
 .. code-block:: bash
 
-    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/eng/contactus/FOOTER" -H "accept: */*" -H "X-XSRF-TOKEN: 7cfa1a0d-3335-4846-8061-a5bf176687b5"  --user admin:admin -b /tmp/cookie
+    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/eng/Contact%20us/FOOTER" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" --user admin:admin -b /tmp/cookie
 
+3. By default, the link is created as PRIVATE, visible only to logged users, to make it visible to all users is necessary to use the method PUT ``/api/pages/{language}/{pageId}/{status}`` with the ``PUBLIC`` value for the status.
+
+.. code-block:: bash
+
+    $ curl -X PUT "http://localhost:8080/geonetwork/srv/api/pages/eng/Contact%20us/PUBLIC" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" --user admin:admin -b /tmp/cookie
+
+Similar requests should be done for each UI language supported.
 
 Remove a page from a section
 ````````````````````````````
@@ -82,7 +109,7 @@ To remove a page from a section DELETE ``/api/pages/{language}/{pageId}/{section
 
 .. code-block:: bash
 
-    curl -X DELETE "http://localhost:8080/geonetwork/srv/api/pages/eng/contactus?format=LINK" -H "accept: */*" -H "X-XSRF-TOKEN: 7cfa1a0d-3335-4846-8061-a5bf176687b5"  --user admin:admin -b /tmp/cookie
+    $ curl -X DELETE "http://localhost:8080/geonetwork/srv/api/pages/eng/contactus?format=LINK" -H "accept: */*" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97"  --user admin:admin -b /tmp/cookie
 
 
 Change the page status
