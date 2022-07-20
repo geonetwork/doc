@@ -742,6 +742,58 @@ NOTE: The roles are in the "roles" part of the ID Token.
 
 NOTE: You don't typically have to do any role conversion since the role name will be used in the ID Token.
 
+OIDC Bearer Tokens
+==================
+
+Bearer Tokens are also supported - you can attach the JWT Bearer token to any request by setting the HTTP header like this;
+
+.. code-block:: properties
+    
+     Authorization: Bearer:  <JWT token>
+
+Bearer Tokens are mostly used for automated (desktop or application) API calls - real users should just login normally using OIDC.
+
+#. Setup your OIDC configuration (see above)
+#. Setup the OIDC Bearer token configuration (see below)
+#. Obtain a Bearer token from the OIDC server.  This is the hard part and there are several ways to do this.  One way that is used is via the OAuth 2.0 Device Authorization Grant ("Device Flow") workflow.
+#. Attach it to your request headers (see above)
+#. Make protected requests to the Geonetwork API
+
+This has been tested with Keycloak and with Azure AD.  It should work with other JWT-based OIDC services.
+
+Validation   
+``````````
+
+The token is validated in three major ways;
+
+#. The bearer token will be used to access the `userinfo` ("token validation") endpoint specified in the OIDC configuration.  This means the IDP validates the token (at the very least its signature and expiry).
+#. The bearer token (JWT) will be checked that the audience for it is the same as our configurated OIDC configuration.  This will ensure that someone isn't getting a token from a different service and attempting to use it here.  See `AudienceAccessTokenValidator.java`
+#. The bearer token (JWT) will be checked that the subject of the JWT and the `userinfo` (returned from the IDP) are the same.  This shouldnt be a problem in our use-case, but the OAUTH2 specification recommends this check.  See `SubjectAccessTokenValidator.java`
+
+
+Configuration 
+`````````````
+
+Configure OIDC as above - ensure this is working.
+
+Instead of using `GEONETWORK_SECURITY_TYPE=openidconnect`, use `GEONETWORK_SECURITY_TYPE=openidconnectbearer`.
+
+Inside `config-security-openidconnectbearer.xml`;
+
+#. If you are using keycloak (configured with Groups in the `userinfo` response), then uncomment the `UserInfoAccessTokenRolesResolver` bean and comment out the `MSGraphUserRolesResolver` bean.
+#. If you are using Azure AD (MS Graph API for the user's groups), then then uncomment the `MSGraphUserRolesResolver` bean and comment out the `UserInfoAccessTokenRolesResolver` bean.
+
+The easiest way to test is to obtain a Bearer Token, and then use a browser plugin to add the `Authorization: Bearer <token>` header to all requests.  When you visit the Geonetwork website, you should see yourself logged in with the appropriate permissions.
+
+Other Providers 
+```````````````
+
+This has been tested with Azure AD (groups in the MS Graph API) and KeyCloak (groups in the `userinfo`).
+
+For other IDP, you might have to make some modifications.
+
+#. Make sure the `AudienceAccessTokenValidator` and `SubjectAccessTokenValidator` work correctly for your JWT bearer tokens.
+#. Make sure that the user's groups are available - see the `UserRolesResolver` interface and its two implementations - `UserInfoAccessTokenRolesResolver` and `MSGraphUserRolesResolver`.
 
 
 .. _authentication-keycloak:
