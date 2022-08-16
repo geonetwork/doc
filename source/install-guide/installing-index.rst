@@ -10,30 +10,27 @@ If users want to analyze WFS data (See :ref:`analyzing_data`), an
 Manual installation
 -------------------
 
-Download Elasticsearch from https://www.elastic.co/downloads/elasticsearch
+Download Elasticsearch from https://www.elastic.co/downloads/past-releases/elasticsearch-7-4-2
 and unzip the file.
 
 
 .. code-block:: shell
+    
+    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2-linux-x86_64.tar.gz
+    tar xvfz elasticsearch-7.4.2-linux-x86_64.tar.gz
 
-    cd es/config
-    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2.tar.gz
-    tar xvfz elasticsearch-7.4.2.tar.gz
 
-
-Manually start and stop Elasticsearch using:
+Manually start Elasticsearch using:
 
 .. code-block:: shell
 
     elasticsearch-7.4.2/bin/elasticsearch
 
-
-Then create the default index:
-
+The elasticsearch startup will block the current terminal. From another terminal create the default index:
 
 .. code-block:: shell
 
-    cd es
+    cd elasticsearch-7.4.2
     curl -X PUT http://localhost:9200/features -H "Content-Type: application/json" -d @config/features.json
     curl -X PUT http://localhost:9200/records -H "Content-Type: application/json" -d @config/records.json
     curl -X PUT http://localhost:9200/searchlogs -H "Content-Type: application/json" -d @config/searchlogs.json
