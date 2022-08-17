@@ -453,7 +453,7 @@ Below is a valid template that can be used to start with:
           <gmd:descriptiveKeywords>
             <gmd:MD_Keywords>
               <gmd:keyword>
-                <gco:CharacterString>Protected site</gco:CharacterString>
+                <gco:CharacterString>Protected sites</gco:CharacterString>
               </gmd:keyword>
               <gmd:type>
                 <gmd:MD_KeywordTypeCode
@@ -1018,7 +1018,7 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
            <mri:descriptiveKeywords>
               <mri:MD_Keywords>
                  <mri:keyword>
-                    <gco:CharacterString>Protected site</gco:CharacterString>
+                    <gco:CharacterString>Protected sites</gco:CharacterString>
                  </mri:keyword>
                  <mri:type>
                     <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode"
