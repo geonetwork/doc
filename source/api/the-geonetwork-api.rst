@@ -56,6 +56,35 @@ This is an example to trigger an XSL process on a set of records. It illustrates
 
 
 
+Using the search API in Google sheet
+====================================
+
+In Extensions > App script create a new function. Here we create a function which run a search and return a list of
+matching UUIDs:
+
+.. figure:: img/googlesheets-script.png
+
+.. code-block:: js
+
+    function getUuidForSearch(query) {
+      var options = {
+        'method' : 'post',
+        'contentType': 'application/json',
+        'payload' : "{\"query\":{\"query_string\":{\"query\":\"" + query + "\"}}}"
+      };
+      var response = UrlFetchApp.fetch('http://localhost:8080/catalogue/srv/api/search/records/_search', options);
+      var hits = JSON.parse(response).hits;
+      Logger.log(hits.hits);
+      return hits.hits.length > 0 ? hits.hits.map(function(v) {return v._id}).join('###') : null;
+    }
+
+
+Then use the function in formula. Here we search for records matching particular keywords:
+
+.. figure:: img/googlesheets-fn.png
+
+
+
 
 Building client for the API using codegen
 =========================================
