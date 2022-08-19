@@ -76,7 +76,7 @@ For codelist, use ``.default`` for catalogue with no multilingual content and on
 
 
 
-Use ``.key`` for codelist for multilingual catalogue. The codelist translation needs to be loaded in the client app. See GnSearchModule.js.
+Use ``.key`` for codelist for multilingual catalogue. The codelist translation needs to be loaded in the client app. See :code:`web-ui/src/main/resources/catalog/js/GnSearchModule.js`.
 
 .. code-block:: js
 
@@ -198,7 +198,7 @@ This is using `Elasticsearch filters aggregations <https://www.elastic.co/guide/
   }
 
 
-Key like ``availableInViewService`` may not be available in the translations. Use the translation API to add your custom translation in the database (see the admin console > Settings > Languages).
+Key like ``availableInViewService`` may not be available in the translations. Use the translation API to add your custom translation in the database (see the Admin console > Settings > Languages).
 
 
 Filtering aggregation values
@@ -234,7 +234,7 @@ Example adding only 4 specific values:
       }
     }
 
-See https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#_filtering_values_4 for more details.
+See `Elasticsearch terms aggregations filtering <https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#_filtering_values_4>`_ for more details.
 
 
 Collapse aggregation on load
