@@ -198,7 +198,7 @@ In ISO19115-3
 
 - cit:CI_Responsibility
 
-- *[mdq:result]
+- \*[mdq:result]
 
 - gex:EX_Extent
 
