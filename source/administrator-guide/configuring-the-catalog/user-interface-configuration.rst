@@ -108,7 +108,7 @@ Search application
 Search results configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Related metadata types to query**: Use this section to define the metadata types displayed when showing showing search results in the grid. format To add additional types, click the blue ``+`` button. The possible types are shown below the form.
+- **Related metadata types to query**: Use this section to define the metadata types displayed when showing search results in the grid. format To add additional types, click the blue ``+`` button. The possible types are shown below the form.
 
 .. figure:: img/ui-settings-searchresults.png
 
@@ -190,7 +190,7 @@ You can configure each map with different layers and projections.
 .. figure:: img/ui-settings-mapprojection2.png
 
 
-In order to enable a new projection it must be defined here using the **proj4js** syntax, which can be found at https://proj4js.io. Additionally the default bounding box extent, maximim bounding box extent, and allowed resolutions (if required) can be defined. 
+In order to enable a new projection it must be defined here using the **proj4js** syntax, which can be found at https://proj4js.io. Additionally the default bounding box extent, maximum bounding box extent, and allowed resolutions (if required) can be defined.
 
 Ensure that the coordinates inserted are in the correct units for and are local to the projection. A list of resolutions is only relevant if the main map layer has a XYZ source, which does not follow the common tiling pattern.
 

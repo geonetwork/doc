@@ -10,7 +10,7 @@ GeoNetwork has a security filter that prevents CSRF attacks. See more info about
 
      .. figure:: img/csrf2.png
 
-By default, all AngularJS requests will take care of this token, but all third party APIs and custom user interface calls will have to manually add this token to the request. The token is stored on a cookie called XSRF-TOKEN. This cookie constains a string that has to be added to all requests either by a parameter called "_csrf" or by a header called X-XSRF-TOKEN.
+By default, all AngularJS requests will take care of this token, but all third party APIs and custom user interface calls will have to manually add this token to the request. The token is stored on a cookie called XSRF-TOKEN. This cookie contains a string that has to be added to all requests either by a parameter called "_csrf" or by a header called X-XSRF-TOKEN.
 
        .. figure:: img/csrf1.png
 
@@ -19,7 +19,7 @@ By default, all AngularJS requests will take care of this token, but all third p
 Example of CSRF call using curl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First, fo a call to a POST endpoint to get the session and the csrf 
+First, do a call to a POST endpoint to get the session and the csrf
 
 .. code-block:: bash
 
@@ -147,7 +147,7 @@ You may need to do one or other of the following:
 - Remove the lock file ``gn.lock.db``
 - Give write permissions on ``gn.h2.db``
   
-When you have successfully connected you will see a prompt as below, where you can enter SQL commands. These should end with a semi-colon.
+When you have successfully connected you will see a prompt as below, where you can enter SQL commands. These should end with a semicolon.
 
 ``sql>``
 

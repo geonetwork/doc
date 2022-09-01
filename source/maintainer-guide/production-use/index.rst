@@ -12,14 +12,14 @@ GeoNetwork arrives with a file based H2 database. In production make sure to swi
 
 JNDI is a technology that allows GeoNetwork to delegate the configuration of the database to Tomcat. By using JNDI the database can be easily configured without the need to change config files inside the application folder.
 
-GeoNetwork may run out of database connections, especcially if a catalogue is set up with many harvesters. You can increase the number of allowed connections (if the database allows it). But also consider to set up some periodical monitoring to evaluate if GeoNetwork is running out of connections. The catalogue will throw random errors if running low on connections.
+GeoNetwork may run out of database connections, especially if a catalogue is set up with many harvesters. You can increase the number of allowed connections (if the database allows it). But also consider to set up some periodical monitoring to evaluate if GeoNetwork is running out of connections. The catalogue will throw random errors if running low on connections.
 
 Java container
 --------------
 
 GeoNetwork requires Java 8. The Oracle JRE version 8 is reaching end-of-live, we suggest to use the `openJDK <https://adoptopenjdk.net>`_.
 
-GeoNetwork arrives with a default container called Jetty. Jetty is a powerfull minimal container implementation. If you need more configuration options consider to use Tomcat. Other containers can be used, but there are not many user experiences. Read more at :ref:`installing-from-war-file`
+GeoNetwork arrives with a default container called Jetty. Jetty is a powerful minimal container implementation. If you need more configuration options consider to use Tomcat. Other containers can be used, but there are not many user experiences. Read more at :ref:`installing-from-war-file`
 
 If you run Apache in front of Tomcat, make sure to enable `AJP <https://tomcat.apache.org/tomcat-4.0-doc/config/ajp.html>`_, else you may run into page not found errors around login. On Apache 2, enable ``mod_proxy_ajp`` and set the ``ProxyPass`` and ``ProxyPassReverse`` on apache2.conf to use the AJP protocol on Tomcat URL and port 8009:
 
@@ -30,7 +30,7 @@ If you run Apache in front of Tomcat, make sure to enable `AJP <https://tomcat.a
 
 On Tomcat 9, define an AJP Connector on port 8009 in server.xml.
 
-A common challenge in production use is the fact that Java only has a limited set of root certificates that it trusts natively. This causes problems if GeoNetwork tries to access a secure server which has a certificate not trusted by Java. An administrator has to explicitely `load the certificate in to the Java keystore <https://stackoverflow.com/questions/4325263/how-to-import-a-cer-certificate-into-a-java-keystore>`_.
+A common challenge in production use is the fact that Java only has a limited set of root certificates that it trusts natively. This causes problems if GeoNetwork tries to access a secure server which has a certificate not trusted by Java. An administrator has to explicitly `load the certificate in to the Java keystore <https://stackoverflow.com/questions/4325263/how-to-import-a-cer-certificate-into-a-java-keystore>`_.
 
 Data folder
 -----------
@@ -40,7 +40,7 @@ GeoNetwork requires a data folder to store objects uploaded by administrators an
 Memory
 ------
 
-GeoNetwork is a memory intensive application. Consider to provide at least 2GB, but 4GB is probably better. But don't go higher then 6GB.
+GeoNetwork is a memory intensive application. Consider to provide at least 2GB, but 4GB is probably better. But don't go higher than 6GB.
 Read more about memory in Java applications at the `geoserver documentation <https://docs.geoserver.org/stable/en/user/production/container.html>`_.
 If you're setting up an instance of Elastic Search, consider to provide at least 8GB to Elastic.
 
@@ -57,7 +57,7 @@ GeoNetwork and Docker
 
 Docker is a popular virtualisation technology for hosting services. Conventions from Docker can also be used in other cloud environments.
 As GeoNetwork community we maintain a `docker image on docker hub <https://hub.docker.com/_/geonetwork>`_. Note that for each version there is also a postgres tag which uses a remote postgres database.
-A best practices for Docker is to parameterise GeoNetwork using enviroment variables which are injected from docker machine or an orchestration.
+A best practices for Docker is to parameterise GeoNetwork using environment variables which are injected from docker machine or an orchestration.
 
 Web Proxy
 ---------

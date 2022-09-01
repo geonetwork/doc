@@ -14,7 +14,7 @@ Exercices
 2. Make your new view looks like the default one
 3. Create your own result list template
 4. Make main templates url customizable.
-5. Put the search map uppon facets
+5. Put the search map upon facets
 6. Let's build a new search page quickly
 
 Corrections

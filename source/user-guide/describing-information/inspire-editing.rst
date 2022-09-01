@@ -303,7 +303,7 @@ Editors must set:
 Validating
 ----------
 
-During editing, user can trigger validation using the `commonly agreed validator <http://inspire.ec.europa.eu/validator/>`_. The catalogue will send the record the the validator and display a link to the report once done:
+During editing, user can trigger validation using the `commonly agreed validator <http://inspire.ec.europa.eu/validator/>`_. The catalogue will send the record the validator and display a link to the report once done:
 
 .. image:: img/inspire-validation-pass.png
 

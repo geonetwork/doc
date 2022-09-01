@@ -32,7 +32,7 @@ automatically at some point by the server for security reasons. The default sess
 timeout is set to 35 min (see :ref:`session-timeout-configuration` for details).
 
 When there is no activity in the browser and the session is about
-to expire, a warning is displayed next to the user details 3 minutes before before the timeout takes place:
+to expire, a warning is displayed next to the user details 3 minutes before the timeout takes place:
 
 .. figure:: img/session-will-expire-soon.png
 
