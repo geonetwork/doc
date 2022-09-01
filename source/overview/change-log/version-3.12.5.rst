@@ -21,7 +21,7 @@ New features/fixes
 
 * Other
 
- * [BP] `Ensure that keycloak login redirects only go the the current server <https://github.com/geonetwork/core-geonetwork/pull/6270>`_
+ * [BP] `Ensure that keycloak login redirects only go the current server <https://github.com/geonetwork/core-geonetwork/pull/6270>`_
 
 
 and more ... see `3.12.5 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.12.5+is%3Aclosed>`_ and

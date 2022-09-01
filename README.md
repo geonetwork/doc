@@ -31,7 +31,7 @@ The `latest` Maven profile updates the translations from Transifex (this will ta
 mvn generate-resources -Platest
 ```
 
-These can be be used together:
+These can be used together:
 ```
 mvn package -Platest
 ```

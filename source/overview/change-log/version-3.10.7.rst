@@ -27,7 +27,7 @@ New features/fixes
  * `Fix xpath to match only the main citation title, not other titles <https://github.com/geonetwork/core-geonetwork/pull/5391>`_
  * ISO19115-3 / `Add option for PNG images to mcc:fileType Recommended values <https://github.com/geonetwork/core-geonetwork/pull/5456>`_
  * ISO19139 / `Fix Conformity checks in INSPIRE strict rules <https://github.com/geonetwork/core-geonetwork/pull/5335>`_
- * `Option to disable OGC Capabilites layer processing in the online resource panel <https://github.com/geonetwork/core-geonetwork/pull/5763>`_
+ * `Option to disable OGC Capabilities layer processing in the online resource panel <https://github.com/geonetwork/core-geonetwork/pull/5763>`_
  * `Remove non required data-translate directive usage in gnMetadataGroupUpdater directive <https://github.com/geonetwork/core-geonetwork/pull/5490>`_
  * `Updated schematron name on error messages so that it does not overlap <https://github.com/geonetwork/core-geonetwork/pull/5521>`_
 

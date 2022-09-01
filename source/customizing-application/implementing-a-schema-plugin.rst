@@ -348,7 +348,7 @@ Each of the elements is as follows:
 After creating this file you can validate it manually using the XML schema
 definition (XSD) in ``INSTALL_DIR/web/geonetwork/xml/validation/schemaPlugins/schema-ident.xsd``.
 This XSD is also used to validate this file when the schema is loaded.
-If schema-ident.xml failes validation, the schema will not be loaded.
+If schema-ident.xml fails validation, the schema will not be loaded.
 
 
 
@@ -1101,7 +1101,7 @@ Creating the presentations XSLTs in the present directory
 Each metadata schema should contain XSLTs that display and possibly edit metadata
 records that belong to the schema. These XSLTs are held in the ``present`` directory.
 
-To be be used in the XSLT include/import hierarchy these XSLTs must follow a
+To be used in the XSLT include/import hierarchy these XSLTs must follow a
 naming convention: metadata-<schema-name>.xsl. So for example, the presentation
 xslt for the iso19139 schema is ``metadata-iso19139.xsl``. For the MCP, since
 our schema name is iso19139.mcp, the presentation XSLT would be called
@@ -1281,7 +1281,7 @@ Analyzing this template:
    found by a search.
 
 Once again, for profiles of an existing schema, it makes sense to use a
-slighlty different approach so that the profile need not duplicate templates.
+slightly different approach so that the profile need not duplicate templates.
 Here is an example from metadata-iso19139.mcp.xsl:
 
 .. code-block:: xml
@@ -1733,7 +1733,7 @@ languages. The corresponding localized strings are:
 
 Procedure for adding schematron rules, working within the schematrons directory:
 
-#. Place your schematron rules in 'rules'. Naming convetion is
+#. Place your schematron rules in 'rules'. Naming convention is
    'schematron-rules-<suffix>.sch' eg. ``schematron-rules-iso-mcp.sch``.
    Place localized strings for the rule assertions into 'rules/loc/<language_prefix>'.
 

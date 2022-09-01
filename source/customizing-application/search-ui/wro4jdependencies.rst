@@ -9,7 +9,7 @@ Mostly, it
 
 - builds dependency tree between js source files
 - minifies javascript
-- compiles lesse file
+- compiles less files
 - manages live update in development mode
 - manages caching in production mode
 

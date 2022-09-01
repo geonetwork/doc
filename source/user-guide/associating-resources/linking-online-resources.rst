@@ -20,7 +20,7 @@ Linking a document
 
 
 To add a new one, click on the + caret button then ``Add an online resource``
-button or, if alreay one exists, just click on the title of the ``Online resources``.
+button or, if already one exists, just click on the title of the ``Online resources``.
 
 
 
@@ -85,7 +85,7 @@ To add a WMS layer:
 
 - choose the protocol ``OGC:WMS Web Map Service``,
 - set the URL of the service,
-- then the wizzard query the service to retrieve the list of layers
+- then the wizard query the service to retrieve the list of layers
 - choose one or more layer in the list or set it manually.
 
 
@@ -144,7 +144,7 @@ be relevant to hide those informations for public users
 Linking data using ATOM feeds
 -----------------------------
 
-If your organisation provides ATOM feeds to facilitate access to the data, metadate records can link to these feeds. Users can link to a service feed in a service record and to a dataset feed in a dataset record.
+If your organisation provides ATOM feeds to facilitate access to the data, metadata records can link to these feeds. Users can link to a service feed in a service record and to a dataset feed in a dataset record.
 
 
 .. code-block:: xml

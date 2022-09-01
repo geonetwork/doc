@@ -60,7 +60,7 @@ GeoNetwork uses OWSContext to store, share and load maps:
 
 - Open a local context file by dragging it on to the map viewer (or open from context menu).
 
-- Register a context as asset in the catalogue, the context itself will be added as attachement.
+- Register a context as asset in the catalogue, the context itself will be added as attachment.
 
 - Records that have an OWS context file attached will display a button to open the context file.
 

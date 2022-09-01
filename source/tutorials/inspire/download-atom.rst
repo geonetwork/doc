@@ -65,7 +65,7 @@ Make sure the metadata contains the same gmd:code as used in the Atom file.
 
 Now create a service metadata using the INSPIRE template and link it to the service Atom and the individual datasets (using srv:operatesOn).
 
-Before you validate the implementation, run the Atom harvester in admin > settings manually. A panel will display the number of processed Atom feeds and any errors that may have occured while processing (more details in log file).
+Before you validate the implementation, run the Atom harvester in admin > settings manually. A panel will display the number of processed Atom feeds and any errors that may have occurred while processing (more details in log file).
 
 Validate the implementation
 ===========================
