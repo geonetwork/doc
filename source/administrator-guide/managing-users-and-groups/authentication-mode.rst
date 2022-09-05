@@ -13,7 +13,7 @@ However there are some other authentication mechanisms available:
 - :ref:`authentication-keycloak`
 - :ref:`authentication-shibboleth`
 
-Which mode to use is configured in :file:`WEB-INF/config-security/config-security.xml` or via an environment variable ``config.security.type``.
+Which mode to use is configured in :file:`WEB-INF/config-security/config-security.xml` or via an environment variable ``geonetwork.security.type``.
 
 Uncomment the relevant line in :file:`WEB-INF/config-security/config-security.xml`:
 
