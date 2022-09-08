@@ -45,7 +45,7 @@ In this example we're going to upload a file `contactus.html` and link it in the
 
 .. code-block:: bash
 
-    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=contactus&format=LINK" -H "accept: */*" -H "Content-Type: multipart/form-data" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" -d contactus.html
+    $ curl -X POST "http://localhost:8080/geonetwork/srv/api/pages/?language=eng&pageId=contactus&format=HTML" -H "accept: */*" -H "Content-Type: multipart/form-data" -H "X-XSRF-TOKEN: e934f557-17a3-47f2-8e6b-bdf1a3c90a97" -d contactus.html
 
 
 At this point the page is created but not visible because is in status HIDDEN and is not loaded explicitly in any section of the page, except DRAFT that is not visible (in the future could be added to a page with an editor interface). Similar requests should be done for each UI language supported.
