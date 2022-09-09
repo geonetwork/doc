@@ -326,7 +326,7 @@ Before you start configuring, you will need to know;
 Configuring LDAP Beans (Hierarchy)
 ==================================
 
-GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see the `README.md <https://github.com/geonetwork/core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md>`_ or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
+GeoNetwork comes with a sample LDAP configuration that you can use in Apache Directory Studio to create the same LDAP server used in the test cases.  There is also a sample GeoNetwork configuration that connects to this LDAP server.  Please see :repo:`core-geonetwork/blob/master/core/src/test/resources/org/fao/geonet/kernel/security/ldap/README.md` or the `video developer chat <https://www.youtube.com/watch?v=f8rvbEdnE-g>`_ for instructions.
 
 .. note:: To use this configuration, uncomment the "<import resource="config-security-ldap-recursive.xml"/>" line in `web/src/main/webapp/WEB-INF/config-security/config-security.xml`
 
@@ -519,7 +519,7 @@ Configuring OAUTH2 OpenID Connect
 
 `OAUTH2 OpenID Connect <https://openid.net/connect/>`_ is an authentication and authorization system based on OAUTH2.  Geonetwork's OpenID Connect plugin has been tested with `Keycloak <https://keycloak.org>`_ and `Azure AD <https://azure.microsoft.com/en-ca/services/active-directory/>`_, but should work with any provider.
 
-Basic Setup Steps;
+Basic Setup Steps:
 
 #. Configure your IDP Server (i.e. Keycloak or Azure AD)
 
@@ -539,7 +539,7 @@ Basic Setup Steps;
 
 
 
-Geonetwork's Open ID Connect plugin has a lot of configuration options - please see the `config-security-openidconnect.xml` and `config-security-openidconnect-overrides.properties` files.
+Geonetwork's Open ID Connect plugin has a lot of configuration options - please see the ``WEB-INF/config-security/config-security-openidconnect.xml`` and ``WEB-INF/config-security/config-security-openidconnect-overrides.properties`` files.
 
 
 Environment Variable and Meaning
@@ -563,7 +563,7 @@ Environment Variable and Meaning
 
 **OPENIDCONNECT_SERVERMETADATA_FNAME**
 
-    Instead of putting the OpenID server's metadata configuration as text in a variable (`OPENIDCONNECT_SERVERMETADATA_JSON_TEXT`), you can put the JSON contents in a file and reference it with this variable (ie. `/WEB-INF/config-security/openid-configuration.json`)
+    Instead of putting the OpenID server's metadata configuration as text in a variable (`OPENIDCONNECT_SERVERMETADATA_JSON_TEXT`), you can put the JSON contents in a file and reference it with this variable (ie. ``/WEB-INF/config-security/openid-configuration.json``)
 
 **OPENIDCONNECT_IDTOKENROLELOCATION**
 
@@ -577,7 +577,7 @@ Environment Variable and Meaning
 
     This will convert "GeonetworkAdmin" (from the OpenID Server) to the Geonetwork "Administrator" role.
 
-    NOTE: Like the keycloak plugin, you can use role/group names of the form "group:role" to assign a user to Geonetwork group and permission level.
+    .. note:: Like the keycloak plugin, you can use role/group names of the form "group:role" to assign a user to Geonetwork group and permission level.
 
 **OPENIDCONNECT_MINIMUMPROFILE**
 
@@ -607,9 +607,9 @@ Configuration for a Keycloak Server
 ===================================
 
 
-Its outside the scope of this document to fully describe the steps to configure keycloak, but this should serve as a guide.
+It's outside the scope of this document to fully describe the steps to configure keycloak, but this should serve as a guide.
 
-This will configure keycloak backed by **another OpenID IDP** (for example, by an Azure AD).  In keycloak;
+This will configure keycloak backed by **another OpenID IDP** (for example, by an Azure AD).  In keycloak:
 
 #. Create a realm (i.e. `myrealm`)
 #. Create an openid client (i.e. `myclient`).  This is your ClientID.
@@ -647,7 +647,7 @@ This will configure keycloak backed by **another OpenID IDP** (for example, by a
 
 You should have Keycloak's Client id ("myclient") and the client secret.  The configuration JSON is available at `https://YOUR_KEYCLOAK_HOST/realms/{YOUR REALM NAME}/.well-known/openid-configuration```
 
-Your environment variables will looks like this;
+Your environment variables will looks like this:
 
 .. code-block:: properties
 
@@ -666,7 +666,7 @@ There are two ways to setup Azure AD.  The first is with user and groups (a more
 With Users and Groups
 ``````````````````````
 
-Setup the Azure Application;
+Setup the Azure Application:
 
 #. Create a new `App Registration`
 #. use "http://localhost:8080/geonetwork/login/oauth2/code/geonetwork-oicd" as a redirect URIs
@@ -675,14 +675,14 @@ Setup the Azure Application;
 #. On the summary page, get the Application (client) ID
 #. On the summary page, choose "Endpoints" (at the top) and get the JSON text from the "OpenID Connect metadata document" Endpoints
 
-Setup users and groups;
+Setup users and groups:
 
 #. In Azure AD, go to groups
 #. Add new Groups - "geonetworkAdmin", "geonetworkReviewer", etc...  Record the name and the group's **Object ID**
 #. Edit a User, and choose Groups, and add them to appropriate group.
 
 
-Your environment variables will looks like this;
+Your environment variables will looks like this:
 
 .. code-block:: properties
 
@@ -694,16 +694,16 @@ Your environment variables will looks like this;
     OPENIDCONNECT_ROLECONVERTER='3a94275f-7d53-4205-8d78-11f39e9ffa5a=Administrator,d93c6444-feee-4b67-8c0f-15d6796370cb=Reviewer'
 
 
-NOTE: The roles are in the "roles" part of the ID Token.
+.. note:: The roles are in the "roles" part of the ID Token.
 
 
-NOTE: The OPENIDCONNECT_ROLECONVERTER converts the Azure AD Group's Object ID to a Geonetwork Role.
+.. note:: The OPENIDCONNECT_ROLECONVERTER converts the Azure AD Group's Object ID to a Geonetwork Role.
 
  
 With Application Roles  
 ``````````````````````
 
-Setup the Azure Application;
+Setup the Azure Application:
 
 #. Create a new Enterprise application
 #. use "http://localhost:8080/geonetwork/login/oauth2/code/geonetwork-oicd" as a redirect URIs
@@ -712,7 +712,7 @@ Setup the Azure Application;
 #. On the summary page, get the Application (client) ID
 #. On the summary page, choose "Endpoints" (at the top) and get the JSON text from the "OpenID Connect metadata document" Endpoints
 
-Setup Application Roles;
+Setup Application Roles:
 
 #. In Application you created, go to "App Roles".
 #. Add new Groups - "Editor", "Reviewer", etc...
@@ -727,7 +727,7 @@ Assign Users:
 #. Configure all your users with roles
 
 
-Your environment variables will looks like this;
+Your environment variables will looks like this:
 
 .. code-block:: properties
 
@@ -737,15 +737,17 @@ Your environment variables will looks like this;
     OPENIDCONNECT_SERVERMETADATA_JSON_TEXT='...big json text...' 
     OPENIDCONNECT_IDTOKENROLELOCATION='roles'
 
-NOTE: The roles are in the "roles" part of the ID Token.
+.. note::  The roles are in the "roles" part of the ID Token.
 
 
-NOTE: You don't typically have to do any role conversion since the role name will be used in the ID Token.
+.. note::  You don't typically have to do any role conversion since the role name will be used in the ID Token.
+
+.. _OIDC Bearer Tokens:
 
 OIDC Bearer Tokens
 ==================
 
-Bearer Tokens are also supported - you can attach the JWT Bearer token to any request by setting the HTTP header like this;
+Bearer Tokens are also supported - you can attach the JWT Bearer token to any request by setting the HTTP header like this:
 
 .. code-block:: properties
     
@@ -753,10 +755,10 @@ Bearer Tokens are also supported - you can attach the JWT Bearer token to any re
 
 Bearer Tokens are mostly used for automated (desktop or application) API calls - real users should just login normally using OIDC.
 
-#. Setup your OIDC configuration (see above)
-#. Setup the OIDC Bearer token configuration (see below)
+#. Setup your OIDC configuration (see :ref:`authentication-openid`)
+#. Setup the OIDC Bearer token configuration (see :ref:`Bearer Token Configuration`)
 #. Obtain a Bearer token from the OIDC server.  This is the hard part and there are several ways to do this.  One way that is used is via the OAuth 2.0 Device Authorization Grant ("Device Flow") workflow.
-#. Attach it to your request headers (see above)
+#. Attach it to your request headers (see :ref:`OIDC Bearer Tokens`)
 #. Make protected requests to the Geonetwork API
 
 This has been tested with Keycloak and with Azure AD.  It should work with other JWT-based OIDC services.
@@ -764,21 +766,22 @@ This has been tested with Keycloak and with Azure AD.  It should work with other
 Validation   
 ``````````
 
-The token is validated in three major ways;
+The token is validated in three major ways:
 
 #. The bearer token will be used to access the `userinfo` ("token validation") endpoint specified in the OIDC configuration.  This means the IDP validates the token (at the very least its signature and expiry).
 #. The bearer token (JWT) will be checked that the audience for it is the same as our configurated OIDC configuration.  This will ensure that someone isn't getting a token from a different service and attempting to use it here.  See `AudienceAccessTokenValidator.java`
 #. The bearer token (JWT) will be checked that the subject of the JWT and the `userinfo` (returned from the IDP) are the same.  This shouldnt be a problem in our use-case, but the OAUTH2 specification recommends this check.  See `SubjectAccessTokenValidator.java`
 
+.. _Bearer Token Configuration:
 
 Configuration 
 `````````````
 
 Configure OIDC as above - ensure this is working.
 
-Instead of using `GEONETWORK_SECURITY_TYPE=openidconnect`, use `GEONETWORK_SECURITY_TYPE=openidconnectbearer`.
+Instead of using ``GEONETWORK_SECURITY_TYPE=openidconnect``, use ``GEONETWORK_SECURITY_TYPE=openidconnectbearer``.
 
-Inside `config-security-openidconnectbearer.xml`;
+Inside ``WEB-INF/config-security/config-security-openidconnectbearer.xml``:
 
 #. If you are using keycloak (configured with Groups in the `userinfo` response), then uncomment the `UserInfoAccessTokenRolesResolver` bean and comment out the `MSGraphUserRolesResolver` bean.
 #. If you are using Azure AD (MS Graph API for the user's groups), then then uncomment the `MSGraphUserRolesResolver` bean and comment out the `UserInfoAccessTokenRolesResolver` bean.
