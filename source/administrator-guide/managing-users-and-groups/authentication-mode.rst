@@ -603,6 +603,14 @@ Environment Variable and Meaning
 
     Default is all scopes the server supports. 
 
+**OPENIDCONNECT_LOGINTYPE**   
+
+    How Geonetwork deals with users who are not logged on.
+
+    Default is "LINK" - users can click on the "login" link on the main page.  
+    
+    "AUTOLOGIN" - No login form provided which will automatically login the user when possible.
+
 Configuration for a Keycloak Server
 ===================================
 
