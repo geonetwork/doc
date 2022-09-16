@@ -43,7 +43,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
 
 
     # Build the new release
-    mvn clean install -DskipTests -Pwith-doc
+    mvn clean install -DskipTests -Pwith-doc -Pwar
 
 
     # Generate list of changes
