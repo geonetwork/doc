@@ -557,6 +557,12 @@ Environment Variable and Meaning
 
     The `client secret` you configured on your OpenID server.  
 
+**OPENIDCONNECT_SERVERMETADATA_CONFIG_URL**
+
+    URL to the external OIDC server's JSON metadata document.  This is typically at `/.well-known/openid-configuration` on the IDP server.
+
+     .. note:: This will download the server's configuration everytime GeoNetwork starts up, which could be a security concern.  For security, use a `https` URL.
+
 **OPENIDCONNECT_SERVERMETADATA_JSON_TEXT**
 
     Should be the text of your OpenID server's metadata configuration (JSON).
