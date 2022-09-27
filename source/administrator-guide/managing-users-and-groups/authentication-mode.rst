@@ -607,7 +607,7 @@ Environment Variable and Meaning
 
     Limit the requested scope access to the OpenID server.
 
-    Default is all scopes the server supports. 
+    Default "openid email profile", and "openid email profile offline_access" (for bearer tokens). 
 
 **OPENIDCONNECT_LOGINTYPE**   
 
