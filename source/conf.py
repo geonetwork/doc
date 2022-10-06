@@ -17,6 +17,7 @@ import os
 
 import sphinx_bootstrap_theme
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -66,9 +67,9 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = '3.10'
+version = '3.12'
 # The full version, including alpha/beta/rc tags.
-release = '3.10'
+release = '3.12'
 
 language = 'en'
 
@@ -123,7 +124,7 @@ pygments_style = 'sphinx'
 
 # Options for HTML output
 # -----------------------
-html_theme = 'bootstrap'
+#html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 if os.environ.get('HTML_THEME_PATH'):
@@ -142,12 +143,7 @@ html_theme = 'theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'display_github': True,
-    'github_user': 'geosource-catalogue',
-    'github_repo': 'doc',
-    'github_version': 'develop',
-    'source_suffix': '.rst',
-    'doc_path': 'source',
+    'sticky_navigation': True
     # Navigation bar title. (Default: ``project`` value)
     # 'navbar_title': "",
 
@@ -417,3 +413,13 @@ rst_epilog = """
 .. |install.homepage| replace:: your installation
 .. _install.homepage: http://localhost:8080/geonetwork
 """
+
+html_context = {
+    'source_suffix': '.rst',
+    'doc_path': 'source',
+    'conf_py_path': '/source/',
+    'display_github': True,
+    'github_user': 'geonetwork',
+    'github_repo': 'doc',
+    'github_version': 'develop'
+}
