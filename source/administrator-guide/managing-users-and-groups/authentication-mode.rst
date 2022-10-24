@@ -617,6 +617,20 @@ Environment Variable and Meaning
     
     "AUTOLOGIN" - No login form provided which will automatically login the user when possible.
 
+**OPENIDCONNECT_LOGSENSITIVE_INFO**   
+
+    "true" or "false" (default)
+
+    Logs: CODE, ACCESS TOKEN, ID TOKEN, userinfo endpoint result, and calculated GeoNetwork authorities.
+
+    LOGGING THIS INFORMATION IS PROBABLY A SECURITY AND PERSONAL INFORMATION RISK.
+    DO NOT TURN THIS ON IN A SYSTEM THAT IS ACTUALLY BEING USED.
+    
+    We try not to log very sensitive information - we don't log the full access or id token (just the claims part).
+    We log the single-use CODE, but it should have already been deactivated by the server before we log it.
+
+    The access token, userinfo, and id token contain sensitive information (i.e. real names, email address, etc...)
+
 Configuration for a Keycloak Server
 ===================================
 
