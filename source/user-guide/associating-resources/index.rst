@@ -3,7 +3,7 @@
 Associating resources
 #####################
 
-You can associate a record with different types of resources using the **Associated resources** panel. 
+You can associate a record with different types of resources using the **Associated resources** panel.
 This topic describes how to associate resources.
 
 
@@ -11,7 +11,7 @@ This topic describes how to associate resources.
 
 .. figure:: img/onlinesrc.png
 
-Use the wizard panel to create or delete associated resources. 
+Use the wizard panel to create or delete associated resources.
 A list of currently attached resources grouped by types is also provided.
 
 - To add a new online resource, click on the top + caret.
@@ -27,3 +27,4 @@ You can associate different types of resources:
    linking-documents.rst
    linking-records.rst
    doi.rst
+   cite.rst
