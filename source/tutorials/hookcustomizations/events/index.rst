@@ -53,7 +53,7 @@ Simple Example
 
 We can add a simple example listener like this one, which will print a string every time a metadata gets removed.
 
-.. code::java
+.. code:: java
 
    package org.fao.geonet.events.listeners;
 
