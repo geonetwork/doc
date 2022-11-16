@@ -26,6 +26,11 @@ Those information are the one required to create DOI (see :ref:`doi`).
 
 Customization of the citation can be done in :code:`schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/formatter/citation/common.xsl`.
 
+An additional text may be stored in an online resource description with protocol ``WWW:LINK-1.0-http--publication-URL``.
+
+.. figure:: img/citation-with-addition.png
+
+Example: https://sextant.ifremer.fr/Donnees/Catalogue#/metadata/3f8eaace-9f9b-4b1b-a7a4-9c55270e205a
 
 Configuration
 -------------
