@@ -24,7 +24,7 @@ To do this, go to the root folder of the source code and create a new folder. Th
 Then we have to tell Maven this is a new project that can be built. So we add a new file called pom.xml on this "custom" folder and add the following:
 
 
-.. code::xml
+.. code:: xml
 
    <project xmlns="http://maven.apache.org/POM/4.0.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
