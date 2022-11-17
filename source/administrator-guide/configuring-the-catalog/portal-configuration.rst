@@ -49,7 +49,7 @@ matching the filter defined for this sub-portal. The ``search filter`` parameter
 User privileges apply as in the main instance.
 
 
-The logo and name of the sub-portal will be displayed instead of the main instance information:
+The logo and name of the sub-portal will be displayed instead of the main instance information in case the option ``Display in the portal switcher`` is selected:
 
 .. figure:: img/portal-header.png
 
