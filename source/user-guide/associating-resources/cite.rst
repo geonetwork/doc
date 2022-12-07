@@ -22,7 +22,7 @@ The default is:
 * list of publisher
 * DOI URL or landing page URL.
 
-Those information are the one required to create DOI (see :ref:`doi`).
+These are the data needed to create DOI (see :ref:`doi`).
 
 Customization of the citation can be done in :code:`schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/formatter/citation/common.xsl`.
 
