@@ -30,7 +30,7 @@ An additional text may be stored in an online resource description with protocol
 
 .. figure:: img/citation-with-addition.png
 
-Example: https://sextant.ifremer.fr/Donnees/Catalogue#/metadata/3f8eaace-9f9b-4b1b-a7a4-9c55270e205a
+Example: https://doi.org/10.12770/ad07a55f-5de7-4abc-ba89-8899b16c4b59
 
 Configuration
 -------------
