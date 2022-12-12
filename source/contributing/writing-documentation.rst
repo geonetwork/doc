@@ -288,6 +288,6 @@ Update translations on Transifex:
 
 
 
-If you want to add a new language to the build, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L59 and add the languages you want to build the documentation for.
+If you want to add a new language to the build, you will have to edit the file https://github.com/geonetwork/doc/blob/develop/Makefile#L65 and add the languages you want to build the documentation for.
 
 If you want it to be publicly available on https://geonetwork-opensource.org webpage, make sure you make a PR with the change and ask for advice on the https://github.com/geonetwork/website project.
