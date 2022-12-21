@@ -3,7 +3,7 @@
 Building a custom form step by step
 ###################################
 
-First of all, create a good template with all the default values required which are common to your ogranization
+First of all, create a good template with all the default values required which are common to your organization
 (eg. default contact for the record, for the resources, coordinate system, type of resource).
 See :ref:`creating-templates`.
 
