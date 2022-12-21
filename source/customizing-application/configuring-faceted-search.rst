@@ -430,7 +430,7 @@ Decorator types are described below.
 Decorate with icons
 ~~~~~~~~~~~~~~~~~~~
 
-Fixed icon. eg. adding a tag icon to all values
+* Fixed icon. eg. adding a tag icon to all values
 
 
 .. code-block:: js
