@@ -456,7 +456,7 @@ Decorate with icons
 .. figure:: img/agg-decorator-icon.png
 
 
-Icon defined in a css class name which is using only a portion of the value. eg. used for INSPIRE themes. The expression allows to extract the value
+* Icon defined in a css class name which is using only a portion of the value. eg. used for INSPIRE themes. The expression allows to extract the value
 
 .. code-block:: js
 
