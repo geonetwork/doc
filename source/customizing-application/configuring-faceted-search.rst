@@ -479,7 +479,7 @@ Icon defined in a css class name which is using only a portion of the value. eg.
     "prefix": "fa fa-fw ",
     "map": {
       "availableInViewService": "fa-globe",
-      "availableInDownloadService": 'fa-download"
+      "availableInDownloadService": "fa-download"
     }
   }
 
