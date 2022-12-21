@@ -443,7 +443,7 @@ Decorate with icons
 .. figure:: img/agg-decorator-icon-fixed.png
 
 
-Icon defined in a CSS class name using the value. eg. used for resource types ``gn-icon-dataset``
+* Icon defined in a CSS class name using the value. eg. used for resource types ``gn-icon-dataset``
 
 .. code-block:: js
 
