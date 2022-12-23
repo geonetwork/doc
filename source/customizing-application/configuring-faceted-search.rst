@@ -395,6 +395,122 @@ When using a generic field like ``tag.default`` and including only a subset of k
 
 
 
+
+
+.. _configuring-facet-decorator:
+
+Decorate aggregations
+---------------------
+
+All aggregations can be decorated by an icon or an image in the home page or in other pages.
+The decorator is configured in the ``meta`` properties of the facet:
+
+.. code-block:: js
+
+  "resourceType": {
+    "terms": {
+      "field": "resourceType",
+      "size": 10
+    },
+    "meta": {
+      "decorator": {
+        "type": "icon",
+        "prefix": "fa fa-2x pull-left gn-icon-"
+      }
+  }
+
+
+.. figure:: img/agg-decorator-home.png
+
+
+
+Decorator types are described below.
+
+
+Decorate with icons
+~~~~~~~~~~~~~~~~~~~
+
+* Fixed icon. eg. adding a tag icon to all values
+
+
+.. code-block:: js
+
+  "decorator": {
+    "type": "icon",
+    "prefix": "fa fa-fw fa-tag "
+  }
+
+.. figure:: img/agg-decorator-icon-fixed.png
+
+
+* Icon defined in a CSS class name using the value. eg. used for resource types ``gn-icon-dataset``
+
+.. code-block:: js
+
+  "decorator": {
+    "type": "icon",
+    "prefix": "fa fa-fw gn-icon-"
+  }
+
+
+.. figure:: img/agg-decorator-icon.png
+
+
+* Icon defined in a css class name which is using only a portion of the value. eg. used for INSPIRE themes. The expression allows to extract the value
+
+.. code-block:: js
+
+  "decorator": {
+    "type": "icon",
+    "prefix": "fa fa-fw gn-icon iti-",
+    "expression": "http://inspire.ec.europa.eu/theme/(.*)"
+  }
+
+
+.. figure:: img/agg-decorator-icon-inspire.png
+
+
+* Icon defined with a map of values for the class name to use.
+
+.. code-block:: js
+
+  "decorator": {
+    "type": "icon",
+    "prefix": "fa fa-fw ",
+    "map": {
+      "availableInViewService": "fa-globe",
+      "availableInDownloadService": "fa-download"
+    }
+  }
+
+.. figure:: img/agg-decorator-icon-map.png
+
+
+Decorate with images
+~~~~~~~~~~~~~~~~~~~~
+
+Define the image to use for each values:
+
+.. code-block:: js
+
+  "decorator": {
+    "type": "img",
+    "map": {
+      "EEA": "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/EEA_agency_logo.svg/220px-EEA_agency_logo.svg.png"
+    }
+  }
+
+.. figure:: img/agg-decorator-img-logo.png
+
+
+Image decorator in the home page are rendered as background images:
+
+
+.. figure:: img/agg-decorator-img.png
+
+
+
+
 .. _configuring-facet-graphics:
 
 Interactive graphics
@@ -405,7 +521,7 @@ Use `Vega <https://vega.github.io/vega-lite/examples/>`_ to render date histogra
 Facet widget based on vega allow selection of a range for dates and/or click on bar/pie.
 
 
-.. figure:: img/vaga.png
+.. figure:: img/vega.png
 
 
 To use Vega based facet, enable mods.search.isVegaEnabled in the user interface configuration. This trigger the load of the Vega library.
