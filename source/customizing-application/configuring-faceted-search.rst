@@ -510,6 +510,20 @@ Image decorator in the home page are rendered as background images:
 
 
 
+Aggregation as tab
+------------------
+
+One aggregation from the facet configuration can be selected to be displayed above search results as tabs using the following:
+
+
+.. code-block:: js
+
+  "mods": {
+    "search": {
+      "facetTabField": "resourceType"
+    }
+    
+    
 
 .. _configuring-facet-graphics:
 
