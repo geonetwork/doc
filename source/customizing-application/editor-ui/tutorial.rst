@@ -206,7 +206,7 @@ Adding guidelines in the editor is as simple as the following:
             <div>
               The dataset identifier shall be unique and ideally meaningful, following
               <a href="https://taskman.eionet.europa.eu/projects/public-docs/wiki/Naming_conventions" target="_blank">this convention</a>.
-            </div
+            </div>
           </text>
 
 .. figure:: img/tutorial-5-text.png
