@@ -244,3 +244,64 @@ Then the client API can be used in your Java application:
         }
     }
 
+Connecting to the API with python
+=====================================
+
+This is an example of how to use requests in python to authenticate to the API and generate an XRSF token. 
+
+.. code-block:: python
+
+    import requests
+    
+    # Set up your username and password:
+    username = 'username'
+    password = 'password'
+
+    # Set up your server and the authentication URL:
+    server = "http://localhost:8080"
+    authenticate_url = server + '/geonetwork/srv/eng/info?type=me'
+
+    # To generate the XRSF token, send a post request to the following URL: http://localhost:8080/geonetwork/srv/eng/info?type=me
+    session = requests.Session()
+    response = session.post(authenticate_url)
+
+    # Extract XRSF token
+    xsrf_token = response.cookies.get("XSRF-TOKEN")
+    if xsrf_token:
+        print ("The XSRF Token is:", xsrf_token)
+    else:
+        print("Unable to find the XSRF token")
+        
+    # You can now use the username and password, along with the XRSF token to send requests to the API.
+    
+    # This example will add an online resource to a specified UUID using the http://localhost:8080/geonetwork/srv/api/0.1/records/batchediting endpoint
+    
+    # Set header for connection
+    headers = {'Accept': 'application/json',
+    'X-XSRF-TOKEN': xsrf_token
+    }
+    
+    # Set the parameters
+    params = {'uuids': 'the uuid to be updated',
+    'bucket': 'bucketname',
+    'updateDateStamp': 'true',
+    }
+    
+    # Set the JSON data: note that the value must have one of <gn_add>, <gn_create>, <gn_replace> or <gn_delete>
+    json_data = [{'condition': '',
+    'value': '<gn_add><gmd:onLine xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco"><gmd:CI_OnlineResource><gmd:linkage><gmd:URL>https://localhost</gmd:URL></gmd:linkage><gmd:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></gmd:protocol><gmd:name><gco:CharacterString>The Title of the URL</gco:CharacterString></gmd:name><gmd:description><gco:CharacterString>The description of the resource</gco:CharacterString></gmd:description><gmd:function></gmd:function></gmd:CI_OnlineResource></gmd:onLine></gn_add>',
+    'xpath': '/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions',
+    },
+    ]
+    
+    # Send a put request to the endpoint
+    response = session.put(server + 'geonetwork/srv/api/0.1/records/batchediting',
+    params=params,
+    auth = (username, password),
+    headers=headers,
+    json=json_data,
+    )
+    
+    print(response.text) 
+
+
