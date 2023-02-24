@@ -21,7 +21,6 @@ Members of the Project Steering Committee
 * Florent Gravin
 * Francois Prunayre
 * Jeroen Ticheler - Chair
-* Jesse Eichar
 * Jose Garcia
 * Paul van Genuchten
 * Simon Pigot
@@ -33,7 +32,7 @@ Former members of the PSC
 * Andrea Carboni
 * Archie Warnock
 * Patrizia Monteduro
-
+* Jesse Eichar
 
 Committers
 ----------
@@ -55,6 +54,7 @@ and `here for the documenter team <https://github.com/orgs/geonetwork/teams/docu
 * Simon Pigot
 * Paul van Genuchten
 * Antonio Cerciello
+* Michel Gabriel
 
 
 Contributors
