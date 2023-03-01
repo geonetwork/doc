@@ -17,17 +17,17 @@ This is an example to trigger an XSL process on a set of records. It illustrates
 
 .. code-block:: shell
 
-  export CATALOG=http://localhost:8080/geonetwork
-  export CATALOGUSER=admin
-  export CATALOGPASS=admin
-  export PROCESS=migrate-201904
+  CATALOG=http://localhost:8080/geonetwork
+  CATALOGUSER=admin
+  CATALOGPASS=admin
+  PROCESS=migrate-201904
 
   rm -f /tmp/cookie;
   curl -s -c /tmp/cookie -o /dev/null \
     -X GET \
     -H "Accept: application/json" \
     "$CATALOG/srv/api/me";
-  export TOKEN=`grep XSRF-TOKEN /tmp/cookie | cut -f 7`;
+  TOKEN=`grep XSRF-TOKEN /tmp/cookie | cut -f 7`;
   curl \
     -X GET \
     -H "Accept: application/json" \
@@ -53,6 +53,92 @@ This is an example to trigger an XSL process on a set of records. It illustrates
 
   curl -X POST "$CATALOG/srv/api/processes/$PROCESS?bucket=111&index=false" \
     -H "accept: application/json" -H "X-XSRF-TOKEN: $TOKEN" -c /tmp/cookie -b /tmp/cookie --user $CATALOGUSER:$CATALOGPASS
+
+
+
+
+
+Loop on search results and apply changes (processing and batch editing)
+=======================================================================
+
+This is an example to highlight how to loop over specific search results (here only series) and apply various changes:
+
+
+.. code-block:: shell
+
+    SERVER=http://localhost:8080/geonetwork
+    CATALOGUSER=admin
+    CATALOGPASS=admin
+
+    type=series
+    from=0
+    size=1000
+
+    rm results.json
+    rm -f /tmp/cookie;
+
+    curl -s -c /tmp/cookie -o /dev/null \
+      -X GET \
+      --user $CATALOGUSER:$CATALOGPASS \
+      -H "Accept: application/json" \
+      "$SERVER/srv/api/me";
+
+    TOKEN=`grep XSRF-TOKEN /tmp/cookie | cut -f 7`;
+    JSESSIONID=`grep JSESSIONID /tmp/cookie | cut -f 7`;
+
+    curl "$SERVER/srv/api/search/records/_search" \
+        -X 'POST' \
+        -H 'Accept: application/json, text/plain, */*' \
+        -H 'Content-Type: application/json;charset=UTF-8' \
+        --data-raw "{\"query\":{\"query_string\":{\"query\": \"+isHarvested:false +resourceType: $type\"}},\"from\":$from, \"size\":$size, \"_source\": {\"include\": [\"resourceTitleObject.default\"]}, \"sort\": [{\"resourceTitleObject.default.keyword\": \"asc\"}]}" \
+        -H "X-XSRF-TOKEN: $TOKEN" -H "Cookie: XSRF-TOKEN=$TOKEN; JSESSIONID=$JSESSIONID" \
+        --compressed \
+        -o results.json
+
+    for hit in $(jq -r '.hits.hits[] | @base64' results.json); do
+       _jq() {
+         echo "${hit}" | base64 --decode | jq -r "${1}"
+        }
+
+      title=$(_jq '._source.resourceTitleObject.default')
+      uuid=$(_jq '._id')
+      echo "__________"
+      echo "### $uuid"
+
+      # Update series from its members using XSL process
+      curl $AUTH "$SERVER/srv/api/records/$uuid/processes/collection-updater" \
+        -X 'POST' \
+        -H 'Accept: application/json, text/plain, */*' \
+        -H "X-XSRF-TOKEN: $TOKEN" \
+        -H "Cookie: XSRF-TOKEN=$TOKEN; JSESSIONID=$JSESSIONID" \
+        --compressed
+
+      curl $AUTH "$SERVER/srv/api/selections/s101" \
+        -X 'DELETE' \
+        -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+        -H "X-XSRF-TOKEN: $TOKEN" \
+        -H "Cookie: XSRF-TOKEN=$TOKEN; JSESSIONID=$JSESSIONID" \
+        --compressed
+
+      curl $AUTH "$SERVER/srv/api/selections/s101?uuid=$uuid" \
+        -X 'PUT' \
+        -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+        -H "X-XSRF-TOKEN: $TOKEN" \
+        -H "Cookie: XSRF-TOKEN=$TOKEN; JSESSIONID=$JSESSIONID" \
+        --compressed
+
+      # Keep only the first 2 resource identifiers using batch editing
+      curl $AUTH "$SERVER/srv/api/records/batchediting?bucket=s101" \
+        -X 'PUT' \
+        -H 'Accept: application/json, text/plain, */*' \
+        -H 'Content-Type: application/json;charset=UTF-8' \
+        -H "X-XSRF-TOKEN: $TOKEN" \
+        -H "Cookie: XSRF-TOKEN=$TOKEN; JSESSIONID=$JSESSIONID" \
+        --data-raw "[{\"xpath\":\"/gmd:identificationInfo/*/gmd:citation/*/gmd:identifier[position() > 2]\",\"value\":\"<gn_delete/>\"}]" \
+        --compressed
+    done;
+
+
 
 
 
