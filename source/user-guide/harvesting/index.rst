@@ -20,6 +20,7 @@ The following sources can be harvested:
    harvesting-geonetwork.rst
    harvesting-csw.rst
    harvesting-ogcwxs.rst
+   harvesting-simpleurl.rst
    harvesting-filesystem.rst
    harvesting-webdav.rst
    harvesting-oaipmh.rst
