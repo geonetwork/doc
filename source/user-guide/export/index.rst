@@ -42,7 +42,7 @@ For example, to export the following elements:
 
 ``"uuid","title","cloud_coverage_percentage","category","date-creation"``
 
-in the first file, it is necessary to proceed as in the follwoing:
+in the first file, it is necessary to proceed as in the following:
 
 - to comment the elements ``id, title, abstract`` except
 

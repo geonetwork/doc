@@ -27,7 +27,7 @@ Configuration options:
     - *Type of import* - By default, the harvester produces one service metadata record. Check boxes in this group determine the other metadata that will be produced.
 		
       - *Create metadata for layer elements using GetCapabilities information*: Checking this option means that the harvester will loop over datasets served by the service as described in the GetCapabilities document.
-      - *Create metadata for layer elements using MetadataURL attributes*: Checkthis option means that the harvester will generate metadata from an XML document referenced in the MetadataUrl attribute of the dataset in the GetCapabilities document. If the document referred to by this attribute is not valid (eg. unknown schema, bad XML format), the GetCapabilites document is used as per the previous option.
+      - *Create metadata for layer elements using MetadataURL attributes*: Checkthis option means that the harvester will generate metadata from an XML document referenced in the MetadataUrl attribute of the dataset in the GetCapabilities document. If the document referred to by this attribute is not valid (eg. unknown schema, bad XML format), the GetCapabilities document is used as per the previous option.
       - *Create thumbnails for WMS layers*: If harvesting from an OGC WMS, then checking this options means that thumbnails will be created during harvesting.
 
     - *Target schema* - The metadata schema of the dataset metadata records that will be created by this harvester.

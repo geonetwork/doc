@@ -8,7 +8,7 @@ New features/fixes
 
 * Metadata
 
- * Editor / `Metadata editor - option to disable OGC Capabilites layer processing in the online resource panel <https://github.com/geonetwork/core-geonetwork/pull/5763>`_
+ * Editor / `Metadata editor - option to disable OGC Capabilities layer processing in the online resource panel <https://github.com/geonetwork/core-geonetwork/pull/5763>`_
  * Editor / `Fix Thumbnail generator <https://github.com/geonetwork/core-geonetwork/pull/5757>`_
  * Editor / `Overview / Removal / Do not delete attachment from other records <https://github.com/geonetwork/core-geonetwork/pull/5821>`_
  * INSPIRE / `Update the filter for INSPIRE Atom dataset feed to support the remote operatesOn indexing format <https://github.com/geonetwork/core-geonetwork/pull/5816>`_

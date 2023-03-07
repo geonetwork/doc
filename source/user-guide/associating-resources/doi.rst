@@ -30,7 +30,7 @@ The task is assigned to a specific user. An optional due date and comment can be
 
 .. figure:: img/doi-request-popup.png
 
-After submission of the task, the task owner is notified by email (if the mail server is configured, see admin console > settings). The task can then be resolved in the admin console > information > versionning section.
+After submission of the task, the task owner is notified by email (if the mail server is configured, see admin console > settings). The task can then be resolved in the admin console > information > versioning section.
 
 If the configuration is missing or wrong, the error is reported:
 

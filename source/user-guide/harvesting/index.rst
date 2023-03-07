@@ -4,7 +4,7 @@ Harvesting
 ##########
 
 Data discovery gets more interesting once multiple catalogs and services
-share there resources.
+share their resources.
 
 Harvesting is the process of ingesting metadata from remote sources and
 storing it locally in the catalog for fast searching. It is a scheduled
@@ -161,7 +161,7 @@ An alternative way to add the certificate is to use a script like::
     java InstallCert $1:$2
      
     ## Copy new cert into local JAVA keystore
-    echo "Please, enter admnistrator password:"
+    echo "Please, enter administrator password:"
     sudo cp jssecacerts $JAVA_HOME/jre/lib/security/jssecacerts
     # Comment previous line and uncomment next one for MacOs
     #sudo cp jssecacerts /Library/Java/Home/lib/security/
@@ -183,7 +183,7 @@ The main page
 -------------
 
 To access the harvesting main page you have to be logged in as an administrator.
-From the administration page, select the harvest shorcut.
+From the administration page, select the harvest shortcut.
 The harvesting main page will then be displayed. 
 
 The page shows a list of the currently defined harvesters and a set of buttons for management functions. The meaning of each column in the list of harvesters is as follows:
