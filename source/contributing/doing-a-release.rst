@@ -9,20 +9,20 @@ This section documents the steps followed by the development team to do a new re
 
 Once the release branch has been thoroughly tested and is stable a release can be made.
 
-1. Build the release
+1. Prepare the release
 
 .. code-block:: shell
 
     # Setup properties
-    frombranch=origin/master
-    versionbranch=3.12.x
-    version=3.12.1
+    frombranch=origin/main
+    versionbranch=4.2.x
+    version=4.2.3
     minorversion=0
     newversion=$version-$minorversion
-    currentversion=3.12-SNAPSHOT
-    previousversion=3.12.0
-    nextversion=3.12-SNAPSHOT
-    nextMajorVersion=4.0.0-SNAPSHOT
+    currentversion=4.2.3-SNAPSHOT
+    previousversion=4.2.2
+    nextversion=4.2.4-SNAPSHOT
+    nextMajorVersion=4.4.0-SNAPSHOT
 
 
     # Get the branch
@@ -36,15 +36,11 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git checkout -b $versionbranch $frombranch
     # or move into it if it exist
     # git checkout $versionbranch
+    # or stay in main branch if the release is on main
 
 
     # Update version number (in pom.xml, installer config and SQL)
     ./update-version.sh $currentversion $newversion
-
-
-    # Build the new release
-    mvn clean install -DskipTests -Pwith-doc -Pwar -Pwro4j-prebuild-cache
-
 
     # Generate list of changes
     cat <<EOF > docs/changes$newversion.txt
@@ -57,27 +53,7 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git log --pretty='format:- %s' $previousversion... >> docs/changes$newversion.txt
 
 
-    # Download Jetty and create the installer
-    cd release
-    mvn process-resources -Djetty-download
-    mvn package
-
-    # Deploy to osgeo repository (requires credentials in ~/.m2/settings.xml)
-    mvn deploy
-
-2. Test the installer
-
-
-.. code-block:: shell
-
-    cd target/GeoNetwork-$newversion
-    unzip geonetwork-bundle-$newversion.zip -d geonetwork-bundle-$newversion
-    cd geonetwork-bundle-$newversion/bin
-    ./startup.sh
-
-
-
-3. Commit & tag the new version
+2. Commit & tag the new version
 
 
 .. code-block:: shell
@@ -86,17 +62,51 @@ Once the release branch has been thoroughly tested and is stable a release can b
     git add .
     git commit -m "Update version to $newversion"
 
-    # Push the release tag
+    # Create the release tag
     git tag -a $version -m "Tag for $version release"
-    git push origin $version
+
+
+3. Build
+
+.. code-block:: shell
+
+    # Build the new release
+    mvn clean install -DskipTests -Pwar -Pwro4j-prebuild-cache
+
+
+    # Download Jetty and create the installer
+    cd release
+    mvn clean install -Djetty-download
+    ant
+
+
+    # Deploy to osgeo repository (requires credentials in ~/.m2/settings.xml)
+    mvn deploy
+
+4. Test
+
+
+.. code-block:: shell
+
+    cd target/GeoNetwork-$newversion
+    unzip geonetwork-bundle-$newversion.zip -d geonetwork-bundle-$newversion
+    cd geonetwork-bundle-$newversion/bin
+    ./startup.sh -f
+
+
+
+5. Set the next version
+
+
+.. code-block:: shell
 
     # Set version number to SNAPSHOT
     ./update-version.sh $newversion $nextversion
 
     # Add SQL migration step for the next version
-    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3122
-    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v3122/migrate-default.sql
-    UPDATE Settings SET value='3.12.2' WHERE name='system/platform/version';
+    mkdir web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v424
+    cat <<EOF > web/src/main/webapp/WEB-INF/classes/setup/sql/migrate/v424/migrate-default.sql
+    UPDATE Settings SET value='4.2.4' WHERE name='system/platform/version';
     UPDATE Settings SET value='SNAPSHOT' WHERE name='system/platform/subVersion';
     EOF
     vi web/src/main/webResources/WEB-INF/config-db/database_migration.xml
@@ -114,20 +124,21 @@ In ``WEB-INF/config-db/database_migration.xml`` add an entry for the new version
 
 
 
-
 .. code-block:: shell
-
 
     git add .
     git commit -m "Update version to $nextversion"
 
 
-    # Push the branch
+6. Publishing
+
+
+.. code-block:: shell
+
+    # Push the branch and tag
     git push origin $versionbranch
+    git push origin $version
 
-
-
-4. Publishing
 
 Generate checksum files
 
@@ -137,7 +148,7 @@ Generate checksum files
 .. code-block:: shell
 
     cd web/target && md5sum geonetwork.war > geonetwork.war.md5 && cd ../..
-    cd release/target/GeoNetwork-$version && md5sum geonetwork-bundle-$newversion.zip >  geonetwork-bundle-$newversion.zip.md5 && cd ../..
+    cd release/target/GeoNetwork-$version && md5sum geonetwork-bundle-$newversion.zip >  geonetwork-bundle-$newversion.zip.md5 && cd ../../..
 
 * If using Mac OS X:
 
