@@ -14,13 +14,13 @@ New features/fixes
 
 * Map viewer
 
- * [BP] `When identifying on a layer from a metadata with a linked feature catalog record, use case insensitive comparison between the feature catalog column definitions and the WMS FeatureInfo response <https://github.com/geonetwork/core-geonetwork/pull/6802>`_
+  * [BP] `When identifying on a layer from a metadata with a linked feature catalog record, use case insensitive comparison between the feature catalog column definitions and the WMS FeatureInfo response <https://github.com/geonetwork/core-geonetwork/pull/6802>`_
 
 * Other
 
- * [BP] `KeyCloak / set the user profile retrieved from KeyCloak only for new users or if the configuration option KEYCLOACK_UPDATEPROFILE is enabled <https://github.com/geonetwork/core-geonetwork/pull/6871>`_
- * [BP] `Workflow / Restrict search by status to record that user can edit <https://github.com/geonetwork/core-geonetwork/pull/6889>`_
- * [BP] `Update userapi so that it will allow administrators to pre-create/update user profile information when using service provider <https://github.com/geonetwork/core-geonetwork/pull/6712>`_
+  * [BP] `KeyCloak / set the user profile retrieved from KeyCloak only for new users or if the configuration option KEYCLOACK_UPDATEPROFILE is enabled <https://github.com/geonetwork/core-geonetwork/pull/6871>`_
+  * [BP] `Workflow / Restrict search by status to record that user can edit <https://github.com/geonetwork/core-geonetwork/pull/6889>`_
+  * [BP] `Update userapi so that it will allow administrators to pre-create/update user profile information when using service provider <https://github.com/geonetwork/core-geonetwork/pull/6712>`_
 
 and more ... see `3.12.9 issues <https://github.com/geonetwork/core-geonetwork/issues?q=is%3Aissue+milestone%3A3.12.9+is%3Aclosed>`_ and
 `pull requests <https://github.com/geonetwork/core-geonetwork/pulls?q=milestone%3A3.12.9+is%3Aclosed+is%3Apr>`_ for full details.
