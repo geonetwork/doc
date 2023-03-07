@@ -17,7 +17,7 @@ In AngularJS terms, we talk about `services` and `directives`.
 
 All components are stored in the folder `components <https://github.com/geonetwork/core-geonetwork/tree/develop/web-ui/src/main/resources/catalog/components>`_
 
-- Main page usefull components
+- Main page useful components
 
 Main search input
 

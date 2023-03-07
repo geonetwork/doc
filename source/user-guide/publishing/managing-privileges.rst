@@ -6,7 +6,7 @@ Managing privileges
 To manage privileges to your metadata record and any attached data, you will need to identify User Groups and the privileges you want to assign to users in these groups. 
 eg. Viewing the metadata, downloading the data attached to the record, etc.
 
-For exmaple, you can specify that the metadata and related services are visible to all (Internet users) or just to internal users only (Intranet). 
+For example, you can specify that the metadata and related services are visible to all (Internet users) or just to internal users only (Intranet).
 Privileges are assigned on a per group basis. Depending on the user profile (Guest, Registered User, Editor, Admin etc.) access to these functions may differ on a per user basis.
 
 

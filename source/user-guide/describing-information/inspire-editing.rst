@@ -303,7 +303,7 @@ Editors must set:
 Validating
 ----------
 
-During editing, user can trigger validation using the `commonly agreed validator <http://inspire.ec.europa.eu/validator/>`_. The catalogue will send the record the the validator and display a link to the report once done:
+During editing, user can trigger validation using the `commonly agreed validator <http://inspire.ec.europa.eu/validator/>`_. The catalogue will send the record the validator and display a link to the report once done:
 
 .. image:: img/inspire-validation-pass.png
 
@@ -450,7 +450,7 @@ Below is a valid template that can be used to start with:
               </gmd:maintenanceAndUpdateFrequency>
             </gmd:MD_MaintenanceInformation>
           </gmd:resourceMaintenance>
-          <gmd:descriptiveKeywords>
+         <gmd:descriptiveKeywords>
             <gmd:MD_Keywords>
               <gmd:keyword>
                 <gco:CharacterString>Protected sites</gco:CharacterString>
@@ -480,102 +480,90 @@ Below is a valid template that can be used to start with:
                   </gmd:date>
                   <gmd:identifier>
                     <gmd:MD_Identifier>
-                      <gmd:code>
-                        <gmx:Anchor
-                          xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.httpinspireeceuropaeutheme-theme">
-                        </gmx:Anchor>
-                      </gmd:code>
+                       <gmd:code>
+                          <gmx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.httpinspireeceuropaeutheme-theme">geonetwork.thesaurus.external.theme.httpinspireeceuropaeutheme-theme</gmx:Anchor>
+                       </gmd:code>
                     </gmd:MD_Identifier>
                   </gmd:identifier>
                 </gmd:CI_Citation>
               </gmd:thesaurusName>
-            </gmd:MD_Keywords>
-          </gmd:descriptiveKeywords>
-          <gmd:descriptiveKeywords>
+           </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <gmd:descriptiveKeywords>
             <gmd:MD_Keywords>
-              <gmd:keyword>
-                <gco:CharacterString></gco:CharacterString>
-              </gmd:keyword>
-              <gmd:type>
-                <gmd:MD_KeywordTypeCode
-                  codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode"
-                  codeListValue="theme"/>
-              </gmd:type>
-              <gmd:thesaurusName>
-                <gmd:CI_Citation>
-                  <gmd:title>
-                    <gco:CharacterString>GEMET themes</gco:CharacterString>
-                  </gmd:title>
-                  <gmd:date>
-                    <gmd:CI_Date>
-                      <gmd:date>
-                        <gco:Date>2009-09-22</gco:Date>
-                      </gmd:date>
-                      <gmd:dateType>
-                        <gmd:CI_DateTypeCode
-                          codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
-                          codeListValue="publication">
-                        </gmd:CI_DateTypeCode>
-                      </gmd:dateType>
-                    </gmd:CI_Date>
-                  </gmd:date>
-                  <gmd:identifier>
-                    <gmd:MD_Identifier>
-                      <gmd:code>
-                        <gmx:Anchor
-                          xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.gemet-theme">
-                        </gmx:Anchor>
-                      </gmd:code>
-                    </gmd:MD_Identifier>
-                  </gmd:identifier>
-                </gmd:CI_Citation>
-              </gmd:thesaurusName>
+               <gmd:keyword>
+                  <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset/Agglomerations-IndustrialNoiseExposureDelineationNight-dir-2002-49">Agglomerations – industrial noise exposure delineation - night (Noise Directive)</gmx:Anchor>
+               </gmd:keyword>
+               <gmd:keyword>
+                  <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset/Agglomerations-IndustrialNoiseExposureDelineationDEN-dir-2002-49">Agglomerations - industrial noise exposure delineation day-evening-night (Noise Directive)</gmx:Anchor>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset">INSPIRE priority data set</gmx:Anchor>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2018-04-04</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                     <gmd:identifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code>
+                              <gmx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.httpinspireeceuropaeumetadatacodelistPriorityDataset-PriorityDataset">geonetwork.thesaurus.external.theme.httpinspireeceuropaeumetadatacodelistPriorityDataset-PriorityDataset</gmx:Anchor>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:identifier>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
             </gmd:MD_Keywords>
-          </gmd:descriptiveKeywords>
-          <gmd:descriptiveKeywords>
+         </gmd:descriptiveKeywords>
+         <gmd:descriptiveKeywords>
             <gmd:MD_Keywords>
-              <gmd:keyword>
-                <gmx:Anchor
-                  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset/Natura2000Sites-dir-2009-147">
-                  Natura 2000 sites (Birds Directive)
-                </gmx:Anchor>
-              </gmd:keyword>
-              <gmd:type>
-                <gmd:MD_KeywordTypeCode
-                  codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode"
-                  codeListValue="theme"/>
-              </gmd:type>
-              <gmd:thesaurusName>
-                <gmd:CI_Citation>
-                  <gmd:title>
-                    <gco:CharacterString>INSPIRE priority data set</gco:CharacterString>
-                  </gmd:title>
-                  <gmd:date>
-                    <gmd:CI_Date>
-                      <gmd:date>
-                        <gco:Date>2018-04-24</gco:Date>
-                      </gmd:date>
-                      <gmd:dateType>
-                        <gmd:CI_DateTypeCode
-                          codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
-                          codeListValue="publication">
-                        </gmd:CI_DateTypeCode>
-                      </gmd:dateType>
-                    </gmd:CI_Date>
-                  </gmd:date>
-                  <gmd:identifier>
-                    <gmd:MD_Identifier>
-                      <gmd:code>
-                        <gmx:Anchor
-                          xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.PriorityDataset.fr.iso19135_v2_trf">
-                        </gmx:Anchor>
-                      </gmd:code>
-                    </gmd:MD_Identifier>
-                  </gmd:identifier>
-                </gmd:CI_Citation>
-              </gmd:thesaurusName>
+               <gmd:keyword>
+                  <gco:CharacterString>Regional</gco:CharacterString>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>Spatial scope</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2019-05-22</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                     <gmd:identifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code>
+                              <gmx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.httpinspireeceuropaeumetadatacodelistSpatialScope-SpatialScope">geonetwork.thesaurus.external.theme.httpinspireeceuropaeumetadatacodelistSpatialScope-SpatialScope</gmx:Anchor>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:identifier>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
             </gmd:MD_Keywords>
-          </gmd:descriptiveKeywords>
+         </gmd:descriptiveKeywords>
           <gmd:resourceConstraints>
             <gmd:MD_LegalConstraints>
               <gmd:accessConstraints>
@@ -714,8 +702,6 @@ Below is a valid template that can be used to start with:
           </gmd:scope>
           <gmd:report>
             <gmd:DQ_DomainConsistency>
-              <gmd:evaluationProcedure/>
-              <gmd:dateTime/>
               <gmd:result>
                 <gmd:DQ_ConformanceResult>
                   <gmd:specification>
@@ -1043,7 +1029,7 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
                        <cit:identifier>
                           <mcc:MD_Identifier>
                              <mcc:code>
-                                <gcx:Anchor xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.httpinspireeceuropaeutheme-theme"/>
+                                <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.httpinspireeceuropaeutheme-theme"/>
                              </mcc:code>
                           </mcc:MD_Identifier>
                        </cit:identifier>
@@ -1079,7 +1065,7 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
                        <cit:identifier>
                           <mcc:MD_Identifier>
                              <mcc:code>
-                                <gcx:Anchor xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.gemet-theme"/>
+                                <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.gemet-theme"/>
                              </mcc:code>
                           </mcc:MD_Identifier>
                        </cit:identifier>
@@ -1115,7 +1101,7 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
                        <cit:identifier>
                           <mcc:MD_Identifier>
                              <mcc:code>
-                                <gcx:Anchor xlink:href="http://metawal.wallonie.be/geonetwork/srv/eng/thesaurus.download?ref=external.theme.PriorityDataset.fr.iso19135_v2_trf"/>
+                                <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/api/registries/vocabularies/external.theme.PriorityDataset.fr.iso19135_v2_trf"/>
                              </mcc:code>
                           </mcc:MD_Identifier>
                        </cit:identifier>
@@ -1265,9 +1251,9 @@ It is also possible to use the `latest ISO standard ISO19115-3:2018 <https://git
         </mrl:LI_Lineage>
     </mdb:resourceLineage>
   </mdb:MD_Metadata>
-  
-  
-  
+
+
+
 Migrating from Technical guidance version 1.3 to version 2.0
 ############################################################
 

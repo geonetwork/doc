@@ -71,7 +71,7 @@ Then make the Angular module dependant of the default Angular UI module. Edit cu
 
 Finally, replace the file custom/src/main/resources/catalog/views/custom/templates/index.html with the contents of the file web-ui/src/main/resources/catalog/views/default/templates/index.html
 
-You hace now a duplicate of the default style you can improve with your own customizations.
+You have now a duplicate of the default style you can improve with your own customizations.
 
 One of the main advantages of having your code decoupled is that you can override some of the files that comes by default on the GeoNetwork user interface and this overriding will not collide with future upgrades of the code.
 

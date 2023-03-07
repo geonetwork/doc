@@ -6,7 +6,7 @@ Transferring privileges
 Transfer Ownership
 ------------------
 
-When you need to transfer metadata ownership from one user to another for all or specific metadata records, use the the *Transfer Ownership* option.
+When you need to transfer metadata ownership from one user to another for all or specific metadata records, use the *Transfer Ownership* option.
 
 .. figure:: img/transfer.png
 

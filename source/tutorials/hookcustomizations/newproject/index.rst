@@ -3,7 +3,7 @@
 Separate your code
 ##################
 
-GeoNetwork is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separatedly.
+GeoNetwork is built using Maven. This means, there are several folders inside the source code and each of them is a different Maven project that can be built separately.
 
 
 .. image:: img/listprojects.png
