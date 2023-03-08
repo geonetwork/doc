@@ -398,12 +398,12 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 extlinks = {
-    'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #'),
-    'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
-    'code': ('https://github.com/geonetwork/core-geonetwork/tree/master/%s', 'source file '),
-    'repo': ('https://github.com/geonetwork/%s', 'code repository '),
-    'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page '),
-    'website': ('http://geonetwork-opensource.org/%s', 'web page')
+    'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #%s'),
+    'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #%s'),
+    'code': ('https://github.com/geonetwork/core-geonetwork/tree/master/%s', 'source file %s'),
+    'repo': ('https://github.com/geonetwork/%s', 'code repository %s'),
+    'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page %s'),
+    'website': ('http://geonetwork-opensource.org/%s', 'web page %s')
 }
 
 rst_epilog = """
