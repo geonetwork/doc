@@ -46,9 +46,50 @@ Once translated, the new language needs to be added to the application.
 
 
 
-To automatically retrieve & update translations files, the script
+To automatically retrieve and update translations files, the script
 :code:`web-ui/download-from-transifex.sh` can be used. To use the script you have to join the translation team on Transifex.
 
+Register the new lang in the l variable of the transifex synchronization file:
+
+.. code-block:: shell
+
+      SRC_DIR=src/main/resources/catalog/locales
+
+      l=(
+          'es::es'
+          'fr::fr'
+          'cz::cz'
+          
+and run the script
+          
+.. code-block:: shell
+
+      cd web-ui
+      ./download-from-transifex.sh
+      
+      
+
+Then on the Java application, register the new language in :code:`src/main/webResources/WEB-INF/config-spring-geonetwork.xml`:
+
+.. code-block:: xml
+
+  <util:set id="languages">
+    <value>ara</value>
+    <value>cze</value>
+
+Add a new SQL file for the database initialization in :code:`src/main/webapp/WEB-INF/classes/setup/sql/data/loc-cze-default.sql` and update translations. This file is used to register the new language for database entity translations (eg. groups, status).
+
+
+In :code:`src/main/webResources/WEB-INF/config-db/initial_data.xml`, register the new SQL file:
+
+.. code-block:: xml
+
+    <bean class="org.fao.geonet.domain.Pair" factory-method="read">
+      <constructor-arg value="WEB-INF/classes/setup/sql/data"/>
+      <constructor-arg value="loc-cze-"/>
+    </bean>
+    
+    
 
 
 Translating a standard
