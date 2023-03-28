@@ -2,8 +2,8 @@
 .. _iso19110:
       
 
-Geographic information -- Methodology for feature cataloguing (iso19110)
-########################################################################
+Geographic information -- Methodology for feature cataloguing (Deprecated - use ISO19115-3) (iso19110)
+######################################################################################################
 
 
 
@@ -55,12 +55,6 @@ Tab: Simple (default)
 
 This tab display elements from the XML metadata record.
 
-Section: Feature Catalogue description
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-See:ref:`iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c`
-      
 
 Name
 ^^^^
@@ -76,7 +70,7 @@ Name
     
     /gfc:FC_FeatureCatalogue/gmx:name
 
-See:ref:`iso19110-elem-gmx-name-5ec0c4442ad2b94944636103e556d401`
+See :ref:`iso19110-elem-gmx-name-5ec0c4442ad2b94944636103e556d401`
       
 Name
 ^^^^
@@ -92,7 +86,7 @@ Name
     
     /gfc:FC_FeatureCatalogue/gfc:name
 
-See:ref:`iso19110-elem-gfc-name-134285dc9b9a3268556039e2fe3f370e`
+See :ref:`iso19110-elem-gfc-name-134285dc9b9a3268556039e2fe3f370e`
       
 Scope
 ^^^^^
@@ -108,7 +102,7 @@ Scope
     
     /gfc:FC_FeatureCatalogue/gmx:scope
 
-See:ref:`iso19110-elem-gmx-scope-14efac6982297b09ba1324e80138092f`
+See :ref:`iso19110-elem-gmx-scope-14efac6982297b09ba1324e80138092f`
       
 Scope
 ^^^^^
@@ -124,7 +118,7 @@ Scope
     
     /gfc:FC_FeatureCatalogue/gfc:scope
 
-See:ref:`iso19110-elem-gfc-scope-4f044fce55b8e0b6dd0d77516ad9e66d`
+See :ref:`iso19110-elem-gfc-scope-4f044fce55b8e0b6dd0d77516ad9e66d`
       
 Field of application
 ^^^^^^^^^^^^^^^^^^^^
@@ -140,7 +134,7 @@ Field of application
     
     /gfc:FC_FeatureCatalogue/gmx:fieldOfApplication
 
-See:ref:`iso19110-elem-gmx-fieldOfApplication-66508d1f139317e01e1decd095915428`
+See :ref:`iso19110-elem-gmx-fieldOfApplication-66508d1f139317e01e1decd095915428`
       
 Field of application
 ^^^^^^^^^^^^^^^^^^^^
@@ -156,7 +150,7 @@ Field of application
     
     /gfc:FC_FeatureCatalogue/gfc:fieldOfApplication
 
-See:ref:`iso19110-elem-gfc-fieldOfApplication-548e0631e3ea92f7dd05ac533b6c14d2`
+See :ref:`iso19110-elem-gfc-fieldOfApplication-548e0631e3ea92f7dd05ac533b6c14d2`
       
 Version
 ^^^^^^^
@@ -172,7 +166,7 @@ Version
     
     /gfc:FC_FeatureCatalogue/gmx:versionNumber
 
-See:ref:`iso19110-elem-gmx-versionNumber-075201f18225aec432b46c75a93589a2`
+See :ref:`iso19110-elem-gmx-versionNumber-075201f18225aec432b46c75a93589a2`
       
 Version
 ^^^^^^^
@@ -188,7 +182,7 @@ Version
     
     /gfc:FC_FeatureCatalogue/gfc:versionNumber
 
-See:ref:`iso19110-elem-gfc-versionNumber-d66ec9fd5c22c70a69dd2b759d66cc4f`
+See :ref:`iso19110-elem-gfc-versionNumber-d66ec9fd5c22c70a69dd2b759d66cc4f`
       
 Date
 ^^^^
@@ -204,7 +198,7 @@ Date
     
     /gfc:FC_FeatureCatalogue/gmx:versionDate
 
-See:ref:`iso19110-elem-gmx-versionDate-6c27e2ee0b2daa4ab1aea9ef374bc08f`
+See :ref:`iso19110-elem-gmx-versionDate-6c27e2ee0b2daa4ab1aea9ef374bc08f`
       
 Catalogue producer
 ^^^^^^^^^^^^^^^^^^
@@ -220,7 +214,7 @@ Catalogue producer
     
     /gfc:FC_FeatureCatalogue/gfc:producer
 
-See:ref:`iso19110-elem-gfc-producer-5a13bfab8b07441bc9f9f71dcfdf7f6c`
+See :ref:`iso19110-elem-gfc-producer-5a13bfab8b07441bc9f9f71dcfdf7f6c`
       
 Functional language
 ^^^^^^^^^^^^^^^^^^^
@@ -231,7 +225,7 @@ Functional language
     
     /gfc:FC_FeatureCatalogue/gfc:functionalLanguage
 
-See:ref:`iso19110-elem-gfc-functionalLanguage-7a21d9c35ed9c400c40959ede97b8d76`
+See :ref:`iso19110-elem-gfc-functionalLanguage-7a21d9c35ed9c400c40959ede97b8d76`
       
 Property description
 ^^^^^^^^^^^^^^^^^^^^
@@ -247,7 +241,7 @@ Property description
     
     /gfc:FC_FeatureCatalogue/gfc:featureType
 
-See:ref:`iso19110-elem-gfc-featureType-d6099a684b15337451388dd46048c48f`
+See :ref:`iso19110-elem-gfc-featureType-d6099a684b15337451388dd46048c48f`
       
 
 :Type:
@@ -278,25 +272,11 @@ Tab: Full (advanced)
 This tab display elements from the XML metadata record and also provide controls to add all elements defined in the schema (XSD).
 
 
-Section: Attribute table description
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-
-   Attribute table description
-
-
-See:ref:`iso19110-elem-gfc-FC_FeatureType-38ad06d5e87d9bf33d5f111e7bca0eb4`
-      
-
-
-
 Section: Feature Catalogue description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-See:ref:`iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c`
+See :ref:`iso19110-elem-gfc-FC_FeatureCatalogue-a4de444fdd9a6e86e8ba63bb96be363c`
       
 
 
@@ -2529,4 +2509,31 @@ Standard codelists
 
 List of all codelists available in the standard.
 
-No codelist defined.
+
+
+
+.. _iso19110-cl-gmd-CI_RoleCode:
+      
+
+Standard codelists (gmd:CI_RoleCode)
+====================================
+
+
+
+======================================================================================================================  ===========================================================================================================================  ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+code                                                                                                                    label                                                                                                                        description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+======================================================================================================================  ===========================================================================================================================  ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+resourceProvider                                                                                                        Resource provider                                                                                                            Party that supplies the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+custodian                                                                                                               Custodian                                                                                                                    Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+owner                                                                                                                   Owner                                                                                                                        Party that owns the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+user                                                                                                                    User                                                                                                                         Party who uses the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+distributor                                                                                                             Distributor                                                                                                                  Party who distributes the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+originator                                                                                                              Originator                                                                                                                   Party who created the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+pointOfContact                                                                                                          Point of contact                                                                                                             Party who can be contacted for acquiring knowledge about or acquisition of the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+principalInvestigator                                                                                                   Principal investigator                                                                                                       Key party responsible for gathering information and conducting research                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+processor                                                                                                               Processor                                                                                                                    Party that has processed the data in a manner such that the resource has been modified                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+publisher                                                                                                               Publisher                                                                                                                    Party who published the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+author                                                                                                                  Author                                                                                                                       Party who authored the resource                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+======================================================================================================================  ===========================================================================================================================  ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
