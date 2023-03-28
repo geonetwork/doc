@@ -63,7 +63,7 @@ Section: Metadata
 ^^^^^^^^^^^^^^^^^
 
 
-See:ref:`dublin-core-elem-simpledc-8506dd4a73872a53513368db419204a3`
+See :ref:`dublin-core-elem-simpledc-8506dd4a73872a53513368db419204a3`
       
 
 
@@ -94,7 +94,7 @@ Section: Metadata
 ^^^^^^^^^^^^^^^^^
 
 
-See:ref:`dublin-core-elem-simpledc-8506dd4a73872a53513368db419204a3`
+See :ref:`dublin-core-elem-simpledc-8506dd4a73872a53513368db419204a3`
       
 
 
