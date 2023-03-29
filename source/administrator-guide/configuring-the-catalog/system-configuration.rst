@@ -16,7 +16,7 @@ using the web interface in ``Admin console`` > ``Settings``.
 .. figure:: img/settings.png
 
 
-Since the settings form is a long form, the 'save' button is repeated between
+Since the settings form is a long form, the ``save`` button is repeated between
 the sections and will save all settings.
 
 Catalog description
@@ -76,9 +76,6 @@ Catalog Server
   and passwords this is not secure. Choosing https means that all communication with the catalog
   will be encrypted and thus much harder for a listener to decode.
 
-- **Secure Port** The secure port number.
-
-
 - **Log level** Define the logging level of the application. After modification,
   log can be checked in the ``Statistics & status`` section under ``Activity``.
 
@@ -99,15 +96,7 @@ the intranet IP address and netmask.
 - **Netmask** The intranet netmask (eg. 255.255.255.0).
 
 
-- **Network*** The intranet address in IP form (eg. 147.109.100.0).
-
-
-Z39.50
-``````
-
- - **Enable Z39.50 Server** Enable Z39.50 server. Restart the catalog to make this change active.
-
- - **Port** Change the Z39.50 listening port. Restart the catalog to make this change active.
+- **Network** The intranet address in IP form (eg. 147.109.100.0).
 
 
 
@@ -127,7 +116,7 @@ The settings page offers to set the configuration of a proxy server. This config
 
 - **Proxy user password** The username password
 
-- ***Ignore host list** To bypass specific hosts enter a specific IP address or
+- **Ignore host list** To bypass specific hosts enter a specific IP address or
   host name such as www.mydomain.com or an address range using wildcards,
   such as 192.168.2.*. Use | to separate the different host values.
 
@@ -206,27 +195,6 @@ Metadata rating
 If enabled, the catalog will calculate user ratings for metadata from this node
 only (not distributed among other GeoNetwork nodes). This only applies to records
 harvested using the GeoNetwork protocol.
-
-
-Download Service
-````````````````
-
-The metadata editor supports uploading one or more files that can be stored with
-the metadata record. When such a record is displayed in the search results,
-a 'Download' button is provided which will allow the user to select which file
-they want to download. This option group determines how that download will occur.
-
-- **Use GeoNetwork simple file download service** Clicking on any file stored
-  with the metadata record will deliver that file directly to the user via the browser.
-
-- **Use GeoNetwork disclaimer and constraints service** Clicking on any file
-  stored with the metadata record will deliver a zip archive to the user
-  (via the browser) that contains the data file, the metadata record itself and
-  a summary of the resource constraint metadata as an html document. In addition,
-  the user will need to provide some details (name, organisation, email and
-  optional comment) and view the resource constraints before they can download the zip archive.
-
-
 
 .. _xlink_config:
 
@@ -362,9 +330,6 @@ In the  service feed of your download service make sure to add the GeoNetwork Op
 The INSPIRE Atom/OpenSearch implementation can be verified with the Atom tests in Esdin Test Framework (http://elfproject.eu/documentation/geotool/etf) or INSPIRE metadata validator (http://inspire-geoportal.ec.europa.eu/validator2).
 
 
-
-
-
 Multi-Threaded Indexing
 ```````````````````````
 
@@ -375,29 +340,39 @@ Configuration settings in this group determine how many processor threads are al
 Note: this option is only available for databases that have been tested. Those databases are PostGIS and Oracle. You should also carefully consider how many connections to the database you allocate in the database configuration as each thread could tie up one database connection for the duration of a long indexing session (for example). See the advanced configuration for more details of how to configure the number of connections in the database connection pool.
 
 
-
-Metadata Views
-``````````````
-
-Options in this section enable/disable metadata element groups in the metadata editor/viewer.
-
-*Enable simple view*: The simple view in the metadata editor/viewer:
-- removes much of the hierarchy from nested metadata records (such as ISO19115/19139)
-- will not let the user add metadata elements that are not already in the metadata record
-It is intended to provide a flat, simple view of the metadata record. A disadvantage of the simple view is that some of the context information supplied by the nesting in the metadata record is lost.
-*Enable ISO view*: The ISO19115/19139 metadata standard defines three groups of elements:
-- Minimum: those elements that are mandatory
-- Core: the elements that should be present in any metadata record describing a geographic dataset
-- All: all the elements
-*Enable INSPIRE view*: Enables the metadata element groups defined in the EU INSPIRE directive.
-*Enable XML view*: This is a raw text edit view of the XML record. You can disable this if (for example), you don't want inexperienced users to be confused by the XML presentation provided by this view.
-
 Metadata Privileges
 ```````````````````
 
 *Only set privileges to user's groups*: If enabled then only the groups that the user belongs to will be displayed in the metadata privileges page (unless the user is an Administrator). At the moment this option cannot be disabled and is likely to be deprecated in the next version of GeoNetwork.
 
 .. _editing_harvested_records:
+
+
+Metadata import
+```````````````
+
+- **Restrict import to schemas** List of all allowed schemas for metadata to be imported. If the metadata schema is not allowed, then the import is not done. Use an empty value to allow all schemas.
+- **Minimum user profile allowed to import metadata** Minimum user profile allowed to import metadata (``Editor``, ``Reviewer`` or ``Administrator``). The default value is ``Editor``.
+
+.. figure:: img/metadata-import.png
+
+Metadata delete
+```````````````
+Allows to configure the user profile allowed to delete published metadata.
+
+- **Minimum user profile allowed to delete published metadata** Minimum user profile allowed to delete metadata (``Editor``, ``Reviewer`` or ``Administrator``). The default value is ``Editor``.
+
+.. figure:: img/metadata-delete.png
+
+Metadata publication
+````````````````````
+Allows to configure the user profile allowed to publish and un-publish metadata.
+
+- **Minimum user profile allowed to publish metadata** Minimum user profile allowed to publish metadata (``Reviewer`` or ``Administrator``). The default value is ``Reviewer``.
+
+- **Minimum user profile allowed to un-publish metadata** Minimum user profile allowed to un-publish metadata (``Reviewer`` or ``Administrator``). The default value is ``Reviewer``.
+
+.. figure:: img/metadata-publication.png
 
 Harvesting
 ``````````
