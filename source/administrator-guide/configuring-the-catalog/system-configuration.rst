@@ -93,11 +93,13 @@ users from outside the organisation are defined by the group *All*. To automatic
 distinguish users that belong to the Intranet group you need to tell the catalog
 the intranet IP address and netmask.
 
-- **Netmask** The intranet netmask (eg. 255.255.255.0).
+
+- **Network** The intranet address in IP form (eg. 147.109.100.0). It can be a comma separated list of IP addresses.
+
+- **Netmask** The intranet netmask (eg. 255.255.255.0). Define as many netmask and IP addresses.
 
 
-- **Network** The intranet address in IP form (eg. 147.109.100.0).
-
+If intranet parameters are empty, the group *Intranet* will not be displayed in the sharing panel.
 
 
 Proxy server
