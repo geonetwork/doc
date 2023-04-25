@@ -95,10 +95,9 @@
                   <executable>tx</executable>
                   <arguments>
                     <argument>pull</argument>
-                    <argument>--no-interactive</argument>
-                    <argument>--disable-colors</argument>
-                    <argument>--language='${translations}'</argument>
-                    <argument>--parallel</argument>
+                    <argument>--silent</argument>
+                    <argument>--workers=10</argument>
+                    <argument>--languages='${translations}'</argument>
                   </arguments>
                   <workingDirectory>${basedir}</workingDirectory>
                 </configuration>
