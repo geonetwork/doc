@@ -3,7 +3,7 @@
 Suggestions for improving metadata content
 ##########################################
 
-The metadata editor can be configured to analyse metadata and make suggestions to improve it. Examples of this include exploding a list of comma-separated keywords in a single element into multiple individual elements.
+The metadata editor can be configured to analyse metadata and make suggestions to improve it. Examples of this include exploding a list of comma-separated keywords in a single element into multiple individual elements, or in the case of a feature catalogue record, automatically populating columns and codelist values from a csv. 
 
 The processes available in a given metadata schema are defined in the schema's ``suggest.xsl`` file, for example https://github.com/metadata101/iso19139.mcp/blob/master/src/main/plugin/iso19139.mcp/suggest.xsl
 
