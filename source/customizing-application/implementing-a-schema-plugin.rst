@@ -34,7 +34,7 @@ The root of the tree is the name of the metadata schema in abbreviated form.
 The essential components of a metadata schema in the
 ``src/main/plugin/<schema_id>`` folder and are laid out as follows:
 
-#. **loc** directory with subdirectories for each three letter language code
+#. **loc** directory with sub-directories for each three letter language code
    that this information is localized into, with the content in XML files
    (labels.xml, codelists.xml).  For example: ``loc/eng/codelists.xml``
    describes the english codelists for metadata elements
@@ -100,7 +100,7 @@ Contents of a GeoNetwork schema
 
 When installed, a GeoNetwork schema is a directory.
 
-The following subdirectories can be present in ``src/main/plugin/<schema_id>``:
+The following sub-directories can be present in ``src/main/plugin/<schema_id>``:
 
 - **schema**: (*Optional*) Directory containing the official XSDs of the metadata
   schema. If the schema is described by a DTD then this directory is optional.
@@ -221,7 +221,7 @@ Then you could check out the schema plugin repository containing examples:
 
 
 To work with the example shown here, you should create your new schema plugin
-in a subdirectory of the schemas Maven module (see :code:`schemas`). The
+in a sub-directory of the schemas Maven module (see :code:`schemas`). The
 ``iso19139.xyz`` plugin from the schema plugin repository could be a good start.
 
 
@@ -667,7 +667,8 @@ Each converter has the following attributes:
 
 After setting up schema-conversions.xml, our new GeoNetwork plugin schema for MCP contains:
 
-::
+.. code-block:: shell
+
   schema-conversions.xml schema-ident.xml
 
 
@@ -697,7 +698,7 @@ GeoNetwork's XML schema parsing code understands almost all of the XSD language
 with the exception of redefine, any and anyAttribute (although the last two
 can be handled under special circumstances).
 
-In the case of the Marine Commuity Profile, we are basically defining a number
+In the case of the Marine Community Profile, we are basically defining a number
 of extensions to the base standard ISO19115/19139. These extensions are defined
 using the XSD extension mechanism on the types defined in ISO19139. The
 following snippet shows how the Marine Community Profile extends the
@@ -745,7 +746,7 @@ the extensions plus the base ISO19139 schemas.
 One possible directory structure is as follows:
 
 
-::
+.. code-block:: shell
 
  extensions gco gmd gml gmx gsr gss gts resources srv xlink
 
@@ -876,7 +877,7 @@ You should use the saxon xslt processor. For example:
 
 At this stage, our new GeoNetwork plugin schema for MCP contains:
 
-::
+.. code-block:: shell
 
    extract-date-modified.xsl  extract-gml.xsd   extract-uuid.xsl
    schema-conversions.xml  schema-ident.xml  schema.xsd  schema
@@ -988,11 +989,32 @@ The XSLT metadata.xsl which contains templates used by all metadata schema
 presentation XSLTs, handles the creation of a select list/drop down menu
 in the editor and display of the code and description in the metadata viewer.
 
+Codelist entries can also contain a ``displayIf`` parameter that indicates the
+context (xpath) where the codelist should be used. This allows the definition of
+different codelists and dropdown menus for different elements in the editor.
+
+The following example restricts the use of the codelist to service records only:
+
+.. code-block:: xml
+
+  <codelist name="gmd:MD_ScopeCode"
+            displayIf="../gmd:identificationInfo/srv:SV_ServiceIdentification">
+    <entry>
+      <code>service</code>
+      <label>Service</label>
+      <description>Information applies to a capability which a service provider entity makes
+        available to a service user entity through a set of interfaces that define a behaviour,
+        such as a use case
+      </description>
+      </entry>
+    </codelist>
+
+
 The iso19139 schema has additional codelists that are managed external to
-the XSDs in catalog/vocabulary files such as
+the XSDs in catalog/vocabulary files, such as
 http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml These have
-also been added to the codelists.xml file so that they can be localized,
-overridden in profiles and include an extended description to provide more
+also been added to the codelists.xml file so that they can be localized or 
+overridden in profiles, and include an extended description to provide more
 useful information when viewing the metadata record.
 
 To use the ISO19139 codelist in a profile you can add a template to point to the codelist to use:
@@ -1031,13 +1053,13 @@ To override some of the ISO19139 codelist, you can check if the codelist is defi
 
 
 The iso19139 schema has additional templates in its presentation xslts to
-handlese codelists because they are specific to that schema. These are
+handle codelists because they are specific to that schema. These are
 discussed in the section on presentation XSLTs later in this manual.
 
 More on labels.xml
 ~~~~~~~~~~~~~~~~~~
 
-A localized copy of labels.xml is made available on an XPath to the presentation
+A localized copy of ``labels.xml`` is made available on an XPath to the presentation
 XSLTs eg. /root/gui/schemas/iso19139/labels for the iso19139 schema.
 
 The ``labels.xml`` file can also be used to provide helper values in the form of
@@ -1082,14 +1104,14 @@ Creating the presentations using formatter
 
 .. versionadded:: 3.0
 
-.. seealso:: See formatter section TODO for version 3.x
+.. seealso:: See :ref:`tuto-formatter`
 
 Customizing the editor
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.0
 
-.. seealso:: See editor configuration section TODO for version 3.x
+.. seealso:: See :ref:`creating-custom-editor`
 
 
 Creating the presentations XSLTs in the present directory
