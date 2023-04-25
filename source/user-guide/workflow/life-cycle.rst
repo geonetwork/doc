@@ -62,6 +62,8 @@ Similarly if viewing the working copy of a record it is possible to switch to it
 
 .. figure:: img/working-copy-switch-approve.png
 
+To replace an approved record with its working copy, submit it for review as below. Once approved, the working copy version will replace the approved version, and the status will change to "Approved".
+
 Submitting a record
 -------------------
 
