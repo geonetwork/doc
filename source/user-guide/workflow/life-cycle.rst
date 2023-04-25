@@ -13,7 +13,7 @@ For example, when a record is:
 
 * created and edited by an ``Editor`` it is in the ``Draft`` state.
 
-* being reviewed by a ``content reviewer``, or a review is requested brings the record to ``Submitted`` state.
+* being reviewed by a ``Content Reviewer``, or a review is requested brings the record to ``Submitted`` state.
 
 * completed and corrected by the ``Content Reviewer`` it is in the ``Approved`` state.
 
@@ -26,7 +26,7 @@ The catalog has (an extensible) set of states that a metadata record can have:
 
 * ``Draft`` - the record is under construction or being edited.
 
-* ``Submitted`` - the record has been submitted for approval to a content review.
+* ``Submitted`` - the record has been submitted for approval to a content reviewer.
 
 * ``Approved`` - the content reviewer has reviewed and approved the metadata record.
 
@@ -34,19 +34,36 @@ The catalog has (an extensible) set of states that a metadata record can have:
 
 * ``Retired`` - the record has been retired.
 
+Workflow
+--------
+
 Workflow can be enabled for the full catalogue, certain groups or on an individual record level.
 
-In the last case, to enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
+For an individual record, to enable workflow and change the status from ``Unknown`` to ``Draft``, click the ``enable workflow`` button
 in the metadata view:
 
 .. figure:: img/workflow-enable.png
 
 .. note::
-    To use the workflow for metadata records created before enabling it, you must use the above option.
+    To use the workflow for metadata records created before enabling it in ``Admin console`` > ``Settings``, you must use the above option.
 
 
-To enable workflow for the full catalogue or certain groups, check Administration > Settings > Metadata Workflow.
-In workflow mode, in case approved records are modified, you're working on a copy of the approved record. Changes on the record will not be visible to users outside your group until the modified record is approved again.
+To enable workflow for the full catalogue or certain groups, check ``Admin console`` > ``Settings`` > ``Metadata Workflow``.
+
+In workflow mode, when approved records are modified, you're working on a copy of the approved record. Changes on the record will not be visible to users outside your group until the modified record is approved again. Records in this state will be marked as "Working Copy", and their status will be "Approved with working copy". 
+
+.. figure:: img/working-copy.png
+
+When accessing a record with a working copy, it is possible to switch between the two versions: 
+
+.. figure:: img/working-copy-switch.png
+
+Similarly if viewing the working copy of a record it is possible to switch to it's approved version:
+
+.. figure:: img/working-copy-switch-approve.png
+
+Submitting a record
+-------------------
 
 When done editing you can submit a record for review by a content reviewer. The submit button is available on the `manage record` menu in the metadata view. 
 A popup will open in which you can leave a message for the content reviewer.
@@ -60,11 +77,6 @@ As part of the approval process, the content reviewer can also set the level of 
 .. figure:: img/approve-metadata.png
 
 Notifications will be sent to editors and content reviewers indicating the status changes on the record involved, so users can easily act when action is required.
-
-In the metadata dashboard you can see which records are currently being updated or reviewed. A label is displayed 
-indicating a 'working copy' is available for that record. You can click the label to visit the work in progress.
-
-.. figure:: img/working-copy.png
 
 Status actions
 --------------
@@ -95,7 +107,7 @@ on the status change taking place:
 
 * when an ``Editor`` changes the state on a metadata record(s) from ``Draft`` or ``Unknown`` 
   to ``Submitted``, the Content Reviewers from the groupOwner of the record are informed 
-  of the status change via email which looks like the following. They can log in and 
+  of the status change via email, which looks like the following. They can log in and 
   click on the link supplied in the email to access the submitted records. 
   Here is an example email sent by this action:
 
