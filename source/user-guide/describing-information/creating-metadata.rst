@@ -8,6 +8,7 @@ This topic guides you through the process of adding new metadata records with as
 Before you begin
 ----------------
 To add or edit metadata, the user:
+
 * Must have an ``editor`` profile or higher.
 * Should be a member of a group you want to add information for.
 
