@@ -22,11 +22,11 @@ Adding a simple URL harvester
     Note: GN looks for schemas by name in https://github.com/geonetwork/core-geonetwork/tree/4.0.x/web/src/main/webapp/xsl/conversion/import. These schemas might internally include schemas from other locations like https://github.com/geonetwork/core-geonetwork/tree/4.0.x/schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/convert. To indicate the ``fromJsonOpenDataSoft`` schema for example, from the latter location directly in the admin UI the following syntax can be used: ``schema:iso19115-3.2018:convert/fromJsonOpenDataSoft``.
 
 
-    **Sample configuration for opendatasoft**
+    **Sample configuration for opendatasoft v1**
 
     - *loopElement* - ``/datasets``
     - *numberOfRecordPath* : ``/nhits``
-    - *recordIdPath* : ``datasetid``
+    - *recordIdPath* : ``datasetid`` (*ODS v2* : ``dataset/dataset_id``)
     - *pageFromParam* : ``start``
     - *pageSizeParam* : ``rows``
     - *toISOConversion* : ``OPENDATASOFT-to-ISO19115-3-2018``
@@ -49,6 +49,8 @@ Adding a simple URL harvester
     - *pageFromParam* : ``start``
     - *pageSizeParam* : ``rows``
     - *toISOConversion* : ``DKAN-to-ISO19115-3-2018``
+
+    Note: In GN versions > 4.2.2 the ``recordIdPath`` property needs to start with a ``/``. Schemas bearing similar names can be selected via a dropdown here.
 
 - **Privileges** - Assign privileges to harvested metadata. 
 
