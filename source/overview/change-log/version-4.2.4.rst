@@ -49,7 +49,7 @@ Major changes:
 
 * `Map / WMS Time and elevation support <https://github.com/geonetwork/core-geonetwork/pull/6820>`_
 
-* CSW / Transactions: ` Record history of transactions <https://github.com/geonetwork/core-geonetwork/pull/7016>`_ and `consistently apply update fixed info <https://github.com/geonetwork/core-geonetwork/pull/7004>`_
+* CSW / Transactions: `Record history of transactions <https://github.com/geonetwork/core-geonetwork/pull/7016>`_ and `consistently apply update fixed info <https://github.com/geonetwork/core-geonetwork/pull/7004>`_
 
 * `Authentication / Easier extension of OpenID mode <https://github.com/geonetwork/core-geonetwork/pull/6965>`_
 
