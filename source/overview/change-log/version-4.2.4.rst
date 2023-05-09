@@ -16,9 +16,21 @@ Database changes
 API changes
 ~~~~~~~~~~~
 
-* ``POST /links`` is now ``POST /links/analyze`` to analyze all links in a set of records
-* ``POST /links/analyze`` to ``POST /links/analyzeurl`` to analyze a URL
-* ``POST /links`` allows now queries with large filter which was not supported using GET (`More information <https://github.com/geonetwork/core-geonetwork/pull/7022>`__)
+* API for link analysis
+
+  * ``POST /links`` is now ``POST /links/analyze`` to analyze all links in a set of records.
+
+  * ``POST /links/analyze`` to ``POST /links/analyzeurl`` to analyze a URL.
+
+  * ``POST /links`` allows now queries with large filter which was not supported using GET (`More information <https://github.com/geonetwork/core-geonetwork/pull/7022>`__).
+
+* API on pages is now more consistent (`More information <https://github.com/geonetwork/core-geonetwork/pull/6788>`__). Use ``GET pages`` to retrieve list of pages (instead of ``GET pages/list``). Use ``PUT`` operation to create a new page or ``POST`` to upload a file for the page. Section and status can now updated when updating the page. A page label can now be defined. Format, sections and status can now be retrieved using the API.
+
+
+.. figure:: img/424-pagesapi.png
+
+
+
 
 List of changes
 ---------------
