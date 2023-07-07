@@ -60,3 +60,4 @@ Change log
    version-4.2.2.rst
    version-4.2.3.rst
    version-4.2.4.rst
+   version-4.2.5.rst

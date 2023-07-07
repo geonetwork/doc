@@ -7,7 +7,14 @@ Digital Object Identifier (DOI)
 Configuration
 -------------
 
-`DataCite API <https://support.datacite.org/docs/mds-api-guide>`_ is used to create DOI.
+The catalogue support DOI creation using:
+
+* `DataCite API <https://support.datacite.org/docs/mds-api-guide>`_.
+
+* EU publication office API https://ra.publications.europa.eu/servlet/ws/doidata?api=medra.org
+
+
+
 Configure the API access point in the ``admin console > settings``:
 
 .. figure:: img/doi-admin-console.png

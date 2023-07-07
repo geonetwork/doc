@@ -96,3 +96,37 @@ The status of the page can be changed with the method PUT ``/api/pages/{language
     - `HIDDEN` - Hidden to anyone
 
 Other methods in the API are to change/delete a page and to GET the list of the pages or the info of a specific one.
+
+Change the menu order in the top toolbar
+````````````````````````````````````````
+
+
+Pages can be inserted in between catalogue default menu which are:
+
+
+.. code-block:: json
+
+   ["gn-site-name-menu",
+    "gn-portal-switcher",
+    "gn-search-menu",
+    "gn-map-menu",
+    "gn-contribute-menu",
+    "gn-admin-menu"]
+
+
+Insert a page as a simple menu using its id or as a submenu using an object:
+
+.. code-block:: json
+
+   ["gn-site-name-menu",
+    "gn-portal-switcher",
+    "gn-search-menu",
+    {"Quick search": [
+      "searchForAfrica",
+      "forReview"
+    ]},
+    "gn-map-menu",
+    "gn-contribute-menu",
+    "gn-admin-menu",
+    "documentation"]
+
