@@ -31,7 +31,7 @@ Stop Elasticsearch using
 
 .. code-block:: shell
 
-    elasticsearch-7.6.2/bin/elasticsearch stop
+    elasticsearch-7.9.2/bin/elasticsearch stop
 
 
 GeoNetwork will start even if Elasticsearch index is down. A warning will be displayed. Once the Elasticsearch index is up, indices are created if they do not exist.
