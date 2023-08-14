@@ -9,7 +9,7 @@ This documentation is written under the creative commons license [Attribution-Sh
 
 # Writing Guide
 
-Check the ["Writing documentation" guide](https://geonetwork-opensource.org/manuals/3.8.x/en/contributing/writing-documentation.html).
+Check the ["Writing documentation" guide](https://geonetwork-opensource.org/manuals/3.12.x/en/contributing/writing-documentation.html).
 
 # Build
 
