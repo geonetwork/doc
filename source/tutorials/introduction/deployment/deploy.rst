@@ -9,7 +9,7 @@ To install Tomcat on a debian-based operative system, you can use the apt-get to
 
   ::
 
-  $ sudo apt-get install tomcat7
+  $ sudo apt-get install tomcat8
 
 Once you have Tomcat installed on your system, locate the webapps folder and place the geonetwork.war file there. This will deploy GeoNetwork on your system.
 
