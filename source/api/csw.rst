@@ -7,8 +7,8 @@ The CSW end point exposes the metadata records in your catalog in XML format usi
 
 Two protocols are available:
 
- - CSW: Provides the ability to search and publish metadata for data, services and related information.
- - CSW-T: Provides an interface for creating, modifying and deleting catalog records via the CSW protocol.
+- CSW: Provides the ability to search and publish metadata for data, services and related information.
+- CSW-T: Provides an interface for creating, modifying and deleting catalog records via the CSW protocol.
 
 Configuration
 =============
@@ -20,11 +20,11 @@ URL
 
 The following URL is the standard end point for the catalog (substitute your GeoNetwork URL):
 
- - http://localhost:8080/geonetwork/srv/eng/csw?
+- http://localhost:8080/geonetwork/srv/eng/csw?
 
 Generally, the ``VERSION`` and ``SERVICE`` parameter are also added, along with the ``REQUEST`` parameter as detailed below:
 
- - http://localhost:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+- http://localhost:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 
 Requests
 ========
@@ -77,4 +77,4 @@ Example of a request using an index field name:
   </csw:GetRecords>
 
 
-The mapping between CSW standard queryable and the index fields are defined in :code:`web/src/main/webapp/WEB-INF/config-csw.xml`:.
+The mapping between CSW standard queryable and the index fields are defined in :file:`web/src/main/webapp/WEB-INF/config-csw.xml`.

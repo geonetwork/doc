@@ -17,12 +17,12 @@ In AngularJS terms, we talk about `services` and `directives`.
 
 All components are stored in the folder `components <https://github.com/geonetwork/core-geonetwork/tree/develop/web-ui/src/main/resources/catalog/components>`_
 
-- Main page useful components
+Main page components
+^^^^^^^^^^^^^^^^^^^^
 
 Main search input
 
 .. code-block:: html
-
 
             <input type="text"
                    class="form-control input-lg"
@@ -72,16 +72,17 @@ Geographic search
          data-gn-map-field-opt="searchObj.mapfieldOption"
          class="gn-search-map">
 
-- Main map components
+Main map components
+^^^^^^^^^^^^^^^^^^^
 
-    - wmsimport
-    - map search input
-    - draw panel
-    - measure panel
-    - print panel
-    - layer manager
-    - background layer selector
-    - etc...
+- wmsimport
+- map search input
+- draw panel
+- measure panel
+- print panel
+- layer manager
+- background layer selector
+- etc...
 
 So you can reuse all these components in your templates to build the view you want.
 
@@ -93,27 +94,25 @@ Styles
 
 In ``gn_search_geoportal.less``, import default less files.
 
-- Import common search styles (if you start a new view from scratch)
+1. Import common search styles (if you start a new view from scratch)
 
-.. code-block:: css
+   .. code-block:: css
 
-    @import "../../../style/gn_search.less";
+       @import "../../../style/gn_search.less";
 
+2. Import default view search styles (if you base your view on top of default one)
 
-- Import default view search styles (if you base your view on top of default one)
+   .. code-block:: css
 
-.. code-block:: css
+       @import "../../default/less/gn_search_default.less";
 
-    @import "../../default/less/gn_search_default.less";
+3. Then, in your less file, you can start adding new rules
 
-Then, in your less file, you can start adding new rules
+   .. code-block:: none
 
-
-.. code-block:: none
-
-    .gn-resultview .list-group-item {
-        background-color: red;
-        &:hover {
-        background-color: orange;
-        }
-    }
+       .gn-resultview .list-group-item {
+           background-color: red;
+           &:hover {
+           background-color: orange;
+           }
+       }

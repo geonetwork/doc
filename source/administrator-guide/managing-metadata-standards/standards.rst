@@ -26,28 +26,28 @@ To add a metadata schema to the catalog, a rebuild of the sources is required. I
 - Add a reference in /schemas/pom.xml to the newly added schema
 
 
-.. code-block:: xml
+  .. code-block:: xml
 
-    <module>{myschema}</module>
+      <module>{myschema}</module>
 
 - Add references to the newly added schema in /web/pom.xml
 
 
-.. code-block:: xml
+  .. code-block:: xml
 
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>{myschema}</artifactId>
-      <version>${project.version}</version>
-    </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>{myschema}</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
 - and
 
-.. code-block:: xml
+  .. code-block:: xml
 
-    <resource>
-      <directory>${project.basedir}/../schemas/{myschema}/src/main/plugin</directory>
-      <targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
-    </resource>
+      <resource>
+        <directory>${project.basedir}/../schemas/{myschema}/src/main/plugin</directory>
+        <targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
+      </resource>
 
 Then Build and deploy your instance of GeoNetwork.

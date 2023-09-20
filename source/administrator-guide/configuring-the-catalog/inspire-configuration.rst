@@ -138,7 +138,7 @@ Array's ``value-type`` attribute must be defined as Java strings: ``<array value
 To define which test suites will be executed when using the editor dashboard's INSPIRE validation option you can modify the ``inspireEtfValidatorTestsuitesConditions`` bean. It's a map with an entry for each schema and test suite to execute. The map entry key attribute must be in the format ``SCHEMA_ID::TEST_SUITE_NAME``, where ``TEST_SUITE_NAME`` is one of the  ``inspireEtfValidatorTestsuites`` map entry key. For each entry you can define a XPath condition that the metadata must pass to be sent to the validator.
 
 .. note::
-  
+
   If a metadata schema doesn't match, the schema dependency hierarchy is checked to verify if any parent schema matches any rules.
 
 .. warning::

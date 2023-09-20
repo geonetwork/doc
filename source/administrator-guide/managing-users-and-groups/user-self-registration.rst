@@ -15,18 +15,18 @@ Click the ``Create an account`` button and fill out the registration form:
 
 
 
-The fields in this form are self-explanatory except for the following: 
+The fields in this form are self-explanatory except for the following:
 
 - **Email**: The user's email address. This is mandatory and will be used as the username.
 
 - **Profile**: By default, self-registered users are given the ``Registered User``
   profile (see previous section). If any other profile is selected:
 
- - the user will still be given the ``Registered User`` profile
+  - the user will still be given the ``Registered User`` profile
 
- - an email will be sent to the Email address nominated in the Feedback section
-   of the 'System Administration' menu, informing them of the request for a more
-   privileged profile
+  - an email will be sent to the Email address nominated in the Feedback section
+    of the 'System Administration' menu, informing them of the request for a more
+    privileged profile
 
 
 What happens when a user self-registers?
@@ -78,7 +78,7 @@ If you want to change the content of this email, you should modify
         Url:          http://greenhouse.gov/geonetwork
 
         User registration details:
- 
+
         Name:         Dubya
         Surname:      Shrub
         Email:        dubya.shrub@greenhouse.gov
@@ -112,7 +112,7 @@ If a user takes this option they will receive an email inviting them to change t
 ::
 
         You have requested to change your Greenhouse GeoNetwork Site password.
-                       
+
         You can change your password using the following link:
 
         http://localhost:8080/geonetwork/srv/en/password.change.form?username=dubya.shrub@greenhouse.gov&changeKey=635d6c84ddda782a9b6ca9dda0f568b011bb7733
@@ -122,15 +122,15 @@ If a user takes this option they will receive an email inviting them to change t
         Greenhouse GeoNetwork Site
 
 The catalog has generated a changeKey from the forgotten password and the
-current date and emailed that to the user as part of a link to a 
-change password form. 
+current date and emailed that to the user as part of a link to a
+change password form.
 
 If you want to change the content of this email, you should modify ``xslt/service/account/password-forgotten-email.xsl``.
 
-When the user clicks on the link, a change password form is displayed in 
+When the user clicks on the link, a change password form is displayed in
 their browser and a new password can be entered. When that form is submitted, the
-changeKey is regenerated and checked with the changeKey supplied in the link, 
-if they match then the password is changed to the new password supplied by 
+changeKey is regenerated and checked with the changeKey supplied in the link,
+if they match then the password is changed to the new password supplied by
 the user.
 
 The final step in this process is a verification email sent to the email
@@ -139,7 +139,7 @@ address of the user confirming that a change of password has taken place:
 ::
 
     Your Greenhouse GeoNetwork Site password has been changed.
-                       
+
     If you did not change this password contact the Greenhouse GeoNetwork Site helpdesk
 
     The Greenhouse GeoNetwork Site team

@@ -11,24 +11,24 @@ This section describes how to setup Kibana to be used in GeoNetwork to visualize
 
 - Configure Kibana to use it in GeoNetwork:
 
-.. code-block:: shell
+  .. code-block:: shell
 
-    $ cd opt/kibana
-    $ vi config/kibana.yml
-        server.basePath: "/geonetwork/dashboards"
-        kibana.index: “.dashboards"
+      $ cd opt/kibana
+      $ vi config/kibana.yml
+          server.basePath: "/geonetwork/dashboards"
+          kibana.index: “.dashboards"
 
 - Execute Kibana:
 
-.. code-block:: shell
+  .. code-block:: shell
 
-    $ cd /opt/kibana/bin
-    $ ./kibana &
+      $ cd /opt/kibana/bin
+      $ ./kibana &
 
 
-.. note::
+  .. note::
 
-    Usually you'll want to configure Kibana to start automatically when the server is startup, this is not covered in this guide.
+      Usually you'll want to configure Kibana to start automatically when the server is startup, this is not covered in this guide.
 
 - Verify in a browser that Kibana is running: http://localhost:5601/app/kibana
 
@@ -37,6 +37,6 @@ This section describes how to setup Kibana to be used in GeoNetwork to visualize
 Load Kibana data
 ================
 
-Visit Kibana in a browser using one of the above links and go to 'Saved Objects'. 
+Visit Kibana in a browser using one of the above links and go to 'Saved Objects'.
 
 Import export.json from https://github.com/geonetwork/core-geonetwork/blob/master/es/es-dashboards/data/export.json

@@ -10,17 +10,13 @@ Therefore the view can only contain the fields from the Lucene Index. If you req
 you can either add fields to the index or don't use the AngularJS view. This view is defined in
 :code:`web-ui/src/main/resources/catalog/views/default/templates/recordView.html`.
 
-
 Metadata views are called 'formatters'. They are located in the schema-plugin related to the metadata
 that you are formatting. Formatters use either XSLT or Groovy to transform the XML to the required format (html, xml, pdf, json).
 
 A formatter can be updated from the web interface in the ``admin console``, ``metadata and templates``,
 tab 'formatters'. On this page you can upload, change and preview formatters.
 
-    .. figure:: img/formatter.png
-
-
-
+.. figure:: img/formatter.png
 
 After having created a new formatter you will have to update your application code, so the new formatter-output
 can be visualised from your application. If the goal of the formatter is to introduce a new html view on metadata,

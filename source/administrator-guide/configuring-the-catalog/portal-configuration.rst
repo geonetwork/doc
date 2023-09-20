@@ -11,11 +11,11 @@ Portals can be configured under the  ``sources`` section in ``admin console`` > 
 
 There are 3 types of sources:
 
- - the main catalogue,
+- the main catalogue,
 
- - sub-portal, which can be a subset of the main catalogue
+- sub-portal, which can be a subset of the main catalogue
 
- - harvesters.
+- harvesters.
 
 
 .. figure:: img/portal-types.png

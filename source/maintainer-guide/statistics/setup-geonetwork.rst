@@ -30,23 +30,23 @@ To setup the search/content statistics in GeoNetwork, do the following steps:
 
 - Enable search statistics in the Settings page (http://localhost:8080/geonetwork/srv/eng/admin.console#/settings).
 
-.. figure:: img/search-statistics.png
+  .. figure:: img/search-statistics.png
 
 - Do some searches in GeoNetwork.
 
 - Go to `Statistics and status` in http://localhost:8080/geonetwork/srv/eng/admin.console#/dashboard and select Search Statistics`.
 
-The first time you're prompted to select the Kibana default index. Select `.dashboards`:
+  The first time you're prompted to select the Kibana default index. Select `.dashboards`:
 
-.. figure:: img/kibana-index-1.png
+  .. figure:: img/kibana-index-1.png
 
-and set as default to get it working.
+  and set as default to get it working.
 
-.. figure:: img/kibana-index-2.png
+  .. figure:: img/kibana-index-2.png
 
 - Reload the page and check the dashboards.
 
-.. figure:: img/search-statistics-dashboards.png
+  .. figure:: img/search-statistics-dashboards.png
 
 
 Content statistics/validation
@@ -57,6 +57,6 @@ require to index manually the content in ElasticSearch. This will be improved in
 
 - To index the content and validation status in ElasticSearch, go to http://localhost:8080/geonetwork/srv/eng/admin.console#/tools and select the following option:
 
-.. figure:: img/content-indexing.png
+  .. figure:: img/content-indexing.png
 
 - Access the `Content Statistics` and `Validation` in `Statistics and status` (http://localhost:8080/geonetwork/srv/eng/admin.console#/dashboard)

@@ -3,8 +3,8 @@
 Installing search platform
 ##########################
 
-The |project_name| search engine is built on top of Elasticsearch. The platform is used to index record and also to analyze WFS data (See :ref:`analyzing_data`), an
-`Elasticsearch <https://www.elastic.co/products/elasticsearch>` instance must be installed next to the catalog.
+The |project_name| search engine is built on top of Elasticsearch. The platform is used to index records and also to analyze WFS data (See :ref:`analyzing_data` ), an
+`Elasticsearch <https://www.elastic.co/products/elasticsearch>`__ instance must be installed next to the catalog.
 
 
 Manual installation

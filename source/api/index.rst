@@ -5,21 +5,26 @@ API guide
 
 The API guide describes entry points that can be used to interact with the catalog.
 
-The GeoNetwork API allows to manage all the catalog (eg. users, groups, editing, formatter, processing). The CSW is the OGC standard to use to search, retrieve record in XML format and can also be used for transactions.
+*   :doc:`GeoNetwork API <the-geonetwork-api.rst>`
 
-In GeoNetwork 4,
+    The GeoNetwork API allows to manage all the catalog (eg. users, groups, editing, formatter, processing).
 
- - OpenSearch and ATOM are not yet available.
+*   :doc:`Search Service <search.rst>`
 
- - Q service is replaced by the OpenAPI endpoint `/srv/api/search/records/_search` which is the main catalogue search service based on `Elasticsearch API <https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html>`_.
+    The main GeoNetwork search service for fast and flexible record retrieval.
 
-.. toctree::
-   :maxdepth: 2
+*   :doc:`Catalog Service for the Web <csw.rst>`
 
-   the-geonetwork-api.rst
-   q-search.rst
-   csw.rst
-   opensearch.rst
-   rdf-dcat.rst
-   oai-pmh.rst
-   z39-50.rst
+    The OGC Industry standard to search, retrieve record in XML format. Can be used to manage records with transaction operation.
+
+GeoNetwork 3.12.x only:
+
+*   :doc:`OpenSearch and INSPIRE ATOM <opensearch.rst>`
+
+*   :doc:`RDF DCAT <rdf-dcat.rst>`
+
+*   :doc:`Open Archive Initiative <oai-pmh.rst>`
+
+No longer supported:
+
+*   :doc:`Z39-50 <z39-50.rst>`

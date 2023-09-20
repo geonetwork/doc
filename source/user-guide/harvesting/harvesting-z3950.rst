@@ -3,19 +3,19 @@
 Z3950 Harvesting
 ----------------
 
-Z3950 is a remote search and harvesting protocol that is commonly used to permit search and harvest of metadata. Although the protocol is often used for library catalogs, significant geospatial metadata catalogs can also be searched using Z3950 (eg. the metadata collections of the Australian Government agencies that participate in the Australian Spatial Data Directory - ASDD). This harvester allows the user to specify a Z3950 query and retrieve metadata records from one or more Z3950 servers. 
+Z3950 is a remote search and harvesting protocol that is commonly used to permit search and harvest of metadata. Although the protocol is often used for library catalogs, significant geospatial metadata catalogs can also be searched using Z3950 (eg. the metadata collections of the Australian Government agencies that participate in the Australian Spatial Data Directory - ASDD). This harvester allows the user to specify a Z3950 query and retrieve metadata records from one or more Z3950 servers.
 
-Adding a Z3950 Harvester 
+Adding a Z3950 Harvester
 ````````````````````````
 
 The available options are:
 
 - **Site**
 
-	- *Name* - A short description of this Z3950 harvester. It will be shown in the harvesting main page using this name. 
-	- *Z3950 Server(s)* - These are the Z3950 servers that will be searched. You can select one or more of these servers.
-	- *Z3950 Query* - Specify the Z3950 query to use when searching the selected Z3950 servers. At present this field is known to support the Prefix Query Format (also known as Prefix Query Notation) which is described at this URL: http://www.indexdata.com/yaz/doc/tools.html#PQF. See below for more information and some simple examples.
-	- *Icon* - An icon to assign to harvested metadata. The icon will be used when showing search results. 
+  - *Name* - A short description of this Z3950 harvester. It will be shown in the harvesting main page using this name.
+  - *Z3950 Server(s)* - These are the Z3950 servers that will be searched. You can select one or more of these servers.
+  - *Z3950 Query* - Specify the Z3950 query to use when searching the selected Z3950 servers. At present this field is known to support the Prefix Query Format (also known as Prefix Query Notation) which is described at this URL: http://www.indexdata.com/yaz/doc/tools.html#PQF. See below for more information and some simple examples.
+  - *Icon* - An icon to assign to harvested metadata. The icon will be used when showing search results.
 
 - **Options** - Scheduling options.
 
@@ -23,14 +23,14 @@ The available options are:
 
 - **Harvested Content**
 
-	- *Apply this XSLT to harvested records* - Choose an XSLT here that will convert harvested records to a different format.
-	- *Validate* - If checked, records that do not/cannot be validated will be rejected.
+  - *Apply this XSLT to harvested records* - Choose an XSLT here that will convert harvested records to a different format.
+  - *Validate* - If checked, records that do not/cannot be validated will be rejected.
 
 - **Privileges**
 
 
 
-- **Categories** 
+- **Categories**
 
 
 
@@ -48,7 +48,7 @@ The most useful attribute types in the GEO attribute set are as follows:
 ================  ==========  =================================================
 1                 Use         What field to search
 2                 Relation    How to compare the term specified
-4                 Structure   What type is the term? eg. date, numeric, phrase 
+4                 Structure   What type is the term? eg. date, numeric, phrase
 5                 Truncation  How to truncate eg. right
 ================  ==========  =================================================
 
@@ -62,9 +62,9 @@ In GeoNetwork the numeric values that can be specified for ``@attr 1`` map to th
 62                    abstract                       gmd:identificationInfo//gmd:abstract/gco:CharacterString
 1012                  _changeDate                    Not a metadata element (maintained by GeoNetwork)
 30                    createDate                     gmd:MD_Metadata/gmd:dateStamp/gco:Date
-31                    publicationDate            	   gmd:identificationInfo//gmd:citation//gmd:date/gmd:CI_DateCode/@codeListValue='publication'
-2072                  tempExtentBegin            	   gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:begin(Position)
-2073                  tempExtentEnd              	   gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:end(Position)
+31                    publicationDate                gmd:identificationInfo//gmd:citation//gmd:date/gmd:CI_DateCode/@codeListValue='publication'
+2072                  tempExtentBegin                gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:begin(Position)
+2073                  tempExtentEnd                  gmd:identificationInfo//gmd:extent//gmd:temporalElement//gml:end(Position)
 2012                  fileId                         gmd:MD_Metadata/gmd:fileIdentifier/*
 12                    identifier                     gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/*
 21,29,2002,3121,3122  keyword                        gmd:identificationInfo//gmd:keyword/*
@@ -102,7 +102,7 @@ A more sophisticated search on a bounding box might be formulated as:
 ``@attrset geo @attr 1=2060 @attr 4=201 @attr 2=7 "-36.8262 142.6465 -44.3848 151.2598``
 
 - ``@attr 1=2060`` means that we are doing a bounding box search
-- ``@attr 4=201`` means that the query contains coordinate strings 
+- ``@attr 4=201`` means that the query contains coordinate strings
 - ``@attr 2=7`` means that we are searching for records whose bounding box overlaps the query box specified at the end of the query
 
 Notes

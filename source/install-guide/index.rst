@@ -22,7 +22,10 @@ There are several different ways to install GeoNetwork:
    installing-index.rst
 
 
-Installing a third-party distribution <https://geonetwork-opensource.org/downloads.html#third-party-distributions>
+.. note::
+
+   A windows installer is also available from the GeoNetwork download page,
+   `Installing a third-party distribution <https://geonetwork-opensource.org/downloads.html#third-party-distributions>`_ .
 
 
 After installing the application, you can configure the following:

@@ -25,35 +25,35 @@ Let's say we want to create a custom view name `geoportal`.
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/geoportal/templates/index.html`` containing
 
-.. code-block:: html
+  .. code-block:: html
 
 
-    <div class="geoportal">Welcome to geoportal</div>
+      <div class="geoportal">Welcome to geoportal</div>
 
 - Add a new file ``web-ui/src/main/resources/catalog/views/geoportal/search.js`` containing
 
-.. code-block:: js
+  .. code-block:: js
 
 
-    (function() {
+      (function() {
 
-      goog.provide('gn_search_geoportal');
-      goog.require('gn_search');
+        goog.provide('gn_search_geoportal');
+        goog.require('gn_search');
 
-      var module = angular.module('gn_search_geoportal', ['gn_search']);
+        var module = angular.module('gn_search_geoportal', ['gn_search']);
 
-    })();
+      })();
 
-.. note:: You must include ``gn_search`` module.
+  .. note:: You must include ``gn_search`` module.
 
 - Add a new file ``web-ui/src/main/resources/catalog/geoportal/views/geoportal/less/gn_search_geoportal.less`` containing
 
-.. code-block:: css
+  .. code-block:: css
 
-    .geoportal {
-        font-size: 36px;
-        font-weight: bold;
-    }
+      .geoportal {
+          font-size: 36px;
+          font-weight: bold;
+      }
 
 Launch your view
 ----------------
