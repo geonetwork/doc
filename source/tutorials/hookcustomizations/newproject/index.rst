@@ -16,8 +16,8 @@ The best way to work with GeoNetwork and easily upgrade later is add your own Ma
 
 To do this, go to the root folder of the source code and create a new folder. This can be done on a GNU/Linux terminal using the following command:
 
-  ::
-   
+.. code-block:: shell
+
    cd core-geonetwork
    mkdir custom
 
@@ -29,21 +29,21 @@ Then we have to tell Maven this is a new project that can be built. So we add a 
    <project xmlns="http://maven.apache.org/POM/4.0.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
- 
+
      <modelVersion>4.0.0</modelVersion>
- 
+
      <parent>
        <groupId>org.geonetwork-opensource</groupId>
        <artifactId>geonetwork</artifactId>
        <version>3.1.0-SNAPSHOT</version>
      </parent>
- 
+
      <groupId>org.geonetwork-opensource</groupId>
      <artifactId>custom</artifactId>
      <packaging>jar</packaging>
      <name>Hook your customizations tutorial</name>
      <description/>
- 
+
      <licenses>
        <license>
          <name>General Public License (GPL)</name>
@@ -51,7 +51,7 @@ Then we have to tell Maven this is a new project that can be built. So we add a 
          <distribution>repo</distribution>
        </license>
      </licenses>
- 
+
      <properties>
        <geonetwork.build.dir>${project.build.directory}/${project.build.finalName}</geonetwork.build.dir>
        <closure.compile.level/>
@@ -74,11 +74,11 @@ Then you should add it to the list of projects Maven will automatically build. O
 .. code:: xml
 
    <modules>
-     <module>schemas-test</module>		          
+     <module>schemas-test</module>
      <module>web-ui</module>
-     <module>custom</module>		          
-     <module>web-ui-docs</module>		          
-     <module>web-client</module>		          
+     <module>custom</module>
+     <module>web-ui-docs</module>
+     <module>web-client</module>
      <module>web</module>
    </modules>
 
@@ -103,10 +103,10 @@ And on the same file, we should also add our resources folder to the build (if w
 .. code:: xml
 
    <resourcesAsCSV>
-   ${project.basedir}/src/main/webapp,
-   ${rootProjectDir}/web-ui/src/main/resources/,	
-   ${rootProjectDir}/custom/src/main/resources/,
-   ${build.webapp.resources}
+     ${project.basedir}/src/main/webapp,
+     ${rootProjectDir}/web-ui/src/main/resources/,
+     ${rootProjectDir}/custom/src/main/resources/,
+     ${build.webapp.resources}
    </resourcesAsCSV>
 
 Now, if we build GeoNetwork, it will also build and add our project.
