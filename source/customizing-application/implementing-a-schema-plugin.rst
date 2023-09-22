@@ -94,7 +94,6 @@ GeoNetwork data directory.
   A template module is available here https://github.com/geonetwork/schema-plugins/tree/develop/iso19139.xyz
   and is a good example to start with.
 
-
 Contents of a GeoNetwork schema
 ```````````````````````````````
 
@@ -215,8 +214,6 @@ Then you could check out the schema plugin repository containing examples:
 .. code-block:: shell
 
   git clone --recursive https://github.com/geonetwork/schema-plugins
-
-
 
 To work with the example shown here, you should create your new schema plugin
 in a subdirectory of the schemas Maven module (see :code:`schemas`). The
@@ -617,7 +614,7 @@ After setting up schema-ident.xml, our new GeoNetwork plugin schema for MCP cont
 
 ::
 
- schema-ident.xml
+  schema-ident.xml
 
 .. _schema_conversions:
 
@@ -628,7 +625,6 @@ This file describes the converters that can be applied to metadata records that
 belong to the schema. Each converter must be manually defined as a
 GeoNetwork (Jeeves) service that can be called to transform a particular metadata
 record to a different schema. The schema-conversions.xml file for the MCP is as follows:
-
 
 .. code-block:: xml
 
@@ -655,7 +651,7 @@ Each converter has the following attributes:
 
 - **name** - the name of the converter. This is the service name of the GeoNetwork
   (Jeeves) service and should be unique (prefixing the service name with
-  xml_<schema_name> is a good way to make this name unique).
+  `xml_<schema_name>` is a good way to make this name unique).
 - **nsUri** - the primary namespace of the schema produced by the converter.
   eg. xml_iso19139.mcpTorifcs transforms metadata records from iso19139.mcp
   to the RIFCS schema. Metadata records in the RIFCS metadata schema have primary
@@ -665,14 +661,11 @@ Each converter has the following attributes:
 - **xslt** - the name of the XSLT that actually carries out the transformation.
   This XSLT should be located in the convert subdirectory of the schema plugin.
 
-
 After setting up schema-conversions.xml, our new GeoNetwork plugin schema for MCP contains:
 
 ::
+
   schema-conversions.xml schema-ident.xml
-
-
-
 
 .. _schema_and_schema_xsd:
 
@@ -703,7 +696,6 @@ of extensions to the base standard ISO19115/19139. These extensions are defined
 using the XSD extension mechanism on the types defined in ISO19139. The
 following snippet shows how the Marine Community Profile extends the
 gmd:MD_Metadata element to add a new element called revisionDate:
-
 
 .. code-block:: xml
 
