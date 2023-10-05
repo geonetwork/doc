@@ -1,17 +1,26 @@
-# Project documentation module
+# Archived GeoNetwork sphinx-build documentation module
 
-Documentation for GeoNetwork opensource is available via https://geonetwork-opensource.org.
-This manual is included in each build in the `docs` folder as a git submodule.
+**This repository is archived and the changes won't be published in the GeoNetwork website anymore**
 
-This documentation is written under the creative commons license [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
+This repository contains archived reStructured text documentation for GeoNetwork 4.2, 3.12, and 2.10 releases. 
 
-![GeoNetwork Logo](source/_static/GN3.png "GeoNetwork")
+The archived reStructuredText documentation is available here:
 
-# Writing Guide
+* https://geonetwork-opensource.org/manuals/
+
+This content has migrated to markdown in the core-geonetwork repository:
+
+* https://github.com/geonetwork/core-geonetwork/tree/main/docs/manual
+
+## License
+
+This documentation is written under the Creative Commons license [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
+
+## Writing Guide
 
 Check the ["Writing documentation" guide](https://geonetwork-opensource.org/manuals/3.8.x/en/contributing/writing-documentation.html).
 
-# Build
+## Build
 
 To quickly build the English docs:
 
@@ -48,7 +57,7 @@ A subset of languages (for example: English, French and Spanish):
 mvn package -Platest -Dlangs='"en" "fr" "es"' -Dtranslations='en,fr,es'
 ```
 
-# Before you start
+## Before you start
 
 The Maven build above makes use of the Transifex command line client `tx`: 
 
