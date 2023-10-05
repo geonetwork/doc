@@ -1,6 +1,8 @@
 # Archived GeoNetwork sphinx-build documentation module
 
-This repository conatains archived reStructured text documentation for GeoNetwork 4.2, 3.12, and 2.10 releases. 
+**This repository is archived and the changes won't be published in the GeoNetwork website anymore**
+
+This repository contains archived reStructured text documentation for GeoNetwork 4.2, 3.12, and 2.10 releases. 
 
 The archived reStructuredText documentation is available here:
 
