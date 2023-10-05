@@ -2,7 +2,7 @@
 
 This repository conatains archived reStructured text documentation for GeoNetwork 4.2, 3.12, and 2.10 releases. 
 
-The archived reStructuredText documentaiton is available here:
+The archived reStructuredText documentation is available here:
 
 * https://geonetwork-opensource.org/manuals/
 
