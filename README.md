@@ -12,7 +12,7 @@ This content has migrated to markdown in the core-geonetwork repository:
 
 ## License
 
-This documentation is written under the creative commons license [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
+This documentation is written under the Creative Commons license [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](LICENSE.md).
 
 ## Writing Guide
 
