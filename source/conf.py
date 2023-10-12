@@ -66,9 +66,9 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = '4.0'
+version = '4.2'
 # The full version, including alpha/beta/rc tags.
-release = '4.0.3'
+release = '4.2.1'
 
 language = 'en'
 
@@ -142,12 +142,8 @@ html_theme = 'theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'display_github': True,
-    'github_user': 'geosource-catalogue',
-    'github_repo': 'doc',
-    'github_version': 'develop',
-    'source_suffix': '.rst',
-    'doc_path': 'source',
+    "style_external_links": True
+
     # Navigation bar title. (Default: ``project`` value)
     # 'navbar_title': "",
 
@@ -398,12 +394,12 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 extlinks = {
-    'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #'),
-    'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #'),
-    'code': ('https://github.com/geonetwork/core-geonetwork/blob/4.0.x/%s', 'source file '),
-    'repo': ('https://github.com/geonetwork/%s', 'code repository '),
-    'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page '),
-    'website': ('http://geonetwork-opensource.org/%s', 'web page')
+    'issue': ('https://github.com/geonetwork/core-geonetwork/issues/%s', 'issue #%s'),
+    'pr': ('https://github.com/geonetwork/core-geonetwork/pull/%s', 'pull request #%s'),
+    'code': ('https://github.com/geonetwork/core-geonetwork/blob/4.0.x/%s', 'source file %s'),
+    'repo': ('https://github.com/geonetwork/%s', 'code repository %s'),
+    'wiki': ('https://github.com/geonetwork/core-geonetwork/wiki/%s', 'wiki page %s'),
+    'website': ('http://geonetwork-opensource.org/%s', 'web page %s')
 }
 
 rst_epilog = """
@@ -417,3 +413,12 @@ rst_epilog = """
 .. |install.homepage| replace:: your installation
 .. _install.homepage: http://localhost:8080/geonetwork
 """
+
+html_context = {
+    "display_github": True,
+    "github_user": "geonetwork",
+    "github_repo": "doc",
+    "github_version": "4.0.x",
+    "source_suffix": ".rst",
+    "conf_py_path": "/source/"
+}
