@@ -59,13 +59,13 @@ Catalog Server
   they are used during metadata editing to create resource links and
   when returning the server's capabilities during a CSW request.
 
- - If your node is publicly accessible from the Internet, you have to use the domain name.
+  - If your node is publicly accessible from the Internet, you have to use the domain name.
 
- - If your node is hidden inside your private network and you have a firewall or web server
-   that redirects incoming requests to the node, you have to enter the public address of
-   the firewall or web server. A typical configuration is to have an Apache web server
-   on address A that is publicly accessible and redirects the requests to a Tomcat server
-   on a private address B. In this case you have to enter A in the host parameter.
+  - If your node is hidden inside your private network and you have a firewall or web server
+    that redirects incoming requests to the node, you have to enter the public address of
+    the firewall or web server. A typical configuration is to have an Apache web server
+    on address A that is publicly accessible and redirects the requests to a Tomcat server
+    on a private address B. In this case you have to enter A in the host parameter.
 
 
 - **Port** The server's port number (usually 80 or 8080). If using HTTP, set it to 80.

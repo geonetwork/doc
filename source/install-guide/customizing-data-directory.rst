@@ -58,44 +58,42 @@ Setting the data directory
 
 The data directory variable can be set using:
 
- - Java environment variable
- - Servlet context parameter
- - System environment variable
- - Bean configuration (added in version 3.0.4)
+- Java environment variable
+- Servlet context parameter
+- System environment variable
+- Bean configuration (added in version 3.0.4)
 
 
 For Java environment variable and servlet context parameter use:
 
- - <webappName>.dir and if not set using geonetwork.dir
+- <webappName>.dir and if not set using geonetwork.dir
 
 
 For system environment variable use:
 
- - <webappName>_dir and if not set using geonetwork_dir
+- <webappName>_dir and if not set using geonetwork_dir
 
 Resolution order is:
 
- #. <webappname>.dir
+#. <webappname>.dir
 
-  #. Java environment variable (ie. -D<webappname>.dir=/a/data/dir)
+   #. Java environment variable (ie. -D<webappname>.dir=/a/data/dir)
 
-  #. Servlet context parameter (ie. web.xml)
+   #. Servlet context parameter (ie. web.xml)
 
-  #. Config.xml appHandler parameter (ie. config.xml)
+   #. Config.xml appHandler parameter (ie. config.xml)
 
-  #. System environment variable (ie. <webappname>_dir=/a/data/dir). "." is not supported in env variables
+   #. System environment variable (ie. <webappname>_dir=/a/data/dir). "." is not supported in env variables
 
- #. geonetwork.dir
+#. geonetwork.dir
 
-  #. Java environment variable (ie. -Dgeonetwork.dir=/a/data/dir)
+   #. Java environment variable (ie. -Dgeonetwork.dir=/a/data/dir)
 
-  #. Servlet context parameter (ie. web.xml)
+   #. Servlet context parameter (ie. web.xml)
 
-  #. Config.xml appHandler parameter (ie. config.xml)
+   #. Config.xml appHandler parameter (ie. config.xml)
 
-  #. System environment variable (ie. geonetwork_dir=/a/data/dir). "." is not supported in env variables
-
-
+   #. System environment variable (ie. geonetwork_dir=/a/data/dir). "." is not supported in env variables
 
 
 Java System Property
@@ -169,13 +167,12 @@ In order to do that, you must use a custom bean configuration. Replace the
 The :code:`s3credentials` bean can be left empty and the following system environment variables
 can be used to configure it (convenient in a container environment):
 
- - AWS_S3_PREFIX
- - AWS_S3_BUCKET
- - AWS_DEFAULT_REGION
- - AWS_S3_ENDPOINT
- - AWS_ACCESS_KEY_ID
- - AWS_SECRET_ACCESS_KEY
-
+- AWS_S3_PREFIX
+- AWS_S3_BUCKET
+- AWS_DEFAULT_REGION
+- AWS_S3_ENDPOINT
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
 
 Structure of the data directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -212,8 +209,8 @@ Advanced data directory configuration
 All sub-directories could be configured separately using Java system property.
 For example, to put the index config directory in a custom location use:
 
- - <webappName>.indexConfig.dir and if not set using:
- - geonetwork.indexConfig.dir
+- <webappName>.indexConfig.dir and if not set using:
+- geonetwork.indexConfig.dir
 
 
 Examples:
@@ -223,7 +220,7 @@ Examples:
 
 .. code-block:: shell
 
-    java -Xms1g -Xmx1g -Xss2M -XX:MaxPermSize=128m -Dgeonetwork.dir=/app/geonetwork_data_dir
+   java -Xms1g -Xmx1g -Xss2M -XX:MaxPermSize=128m -Dgeonetwork.dir=/app/geonetwork_data_dir
 
 
 
@@ -231,7 +228,7 @@ Examples:
 
 .. code-block:: shell
 
-    export geonetwork_dir=/app/geonetwork_data_dir
+   export geonetwork_dir=/app/geonetwork_data_dir
 
 
 * If no changes are made to thesaurus or schema, it could be relevant to use the version
@@ -269,4 +266,4 @@ Check the configuration
 After startup, check the configuration in ``Admin console`` > ``Statistics and status`` > ``Information`` page.
 
 
- .. figure:: img/datadirectory.png
+.. figure:: img/datadirectory.png

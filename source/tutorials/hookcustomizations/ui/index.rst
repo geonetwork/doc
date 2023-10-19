@@ -18,10 +18,10 @@ Then we need to define the basic Angular module that will be used on this style.
 
 .. code:: javascript
 
-   (  function() {
-        goog.provide('gn_search_custom');
-        goog.require('gn_search');
-        var module = angular.module('gn_search_custom', ['gn_search']);
+   ( function() {
+       goog.provide('gn_search_custom');
+       goog.require('gn_search');
+       var module = angular.module('gn_search_custom', ['gn_search']);
    })();
 
 Next we create a new file on custom/src/main/resources/catalog/views/custom/templates/index.html and add the following content:
@@ -62,10 +62,10 @@ Then make the Angular module dependant of the default Angular UI module. Edit cu
 
 .. code:: javascript
 
-   (  function() {
-         goog.provide('gn_search_custom');
-         goog.require('gn_search_default');
-         var module = angular.module('gn_search_custom', ['gn_search_default']);
+   ( function() {
+       goog.provide('gn_search_custom');
+       goog.require('gn_search_default');
+       var module = angular.module('gn_search_custom', ['gn_search_default']);
    })();
 
 
@@ -83,16 +83,16 @@ One of the most common customizations on the styling of GeoNetwork is to modify 
 .. code:: javascript
 
    searchSettings.resultViewTpls = [{
-                   tplUrl: '../../catalog/views/custom/resultsview/' +
-                   'partials/viewtemplates/grid.html',
-                   tooltip: 'Grid',
-                   icon: 'fa-th'
-                 }];
+     tplUrl: '../../catalog/views/custom/resultsview/' +
+     'partials/viewtemplates/grid.html',
+     tooltip: 'Grid',
+     icon: 'fa-th'
+   }];
 
 And now we have to create the referenced file web-ui/src/main/resources/catalog/views/custom/resultsview/partials/viewtemplates/grid.html and use the template we want, like:
 
 .. code:: html
-  
+
    <ul class="list-group gn-resultview gn-resultview-sumup">
      <li class="list-group-item gn-grid"
        data-ng-repeat="md in searchResults.records"

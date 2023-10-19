@@ -3,7 +3,6 @@
 Administrator guide
 ###################
 
-
 .. toctree::
    :maxdepth: 2
 

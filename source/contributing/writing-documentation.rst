@@ -4,6 +4,10 @@
 Writing documentation
 #####################
 
+.. warning:: Warning "Deprecated"
+
+   The Sphinx writing guidelines have been replaced by Markdown Guidelines
+
 This section provides some guidelines for writing consistent documentation
 for GeoNetwork.
 
@@ -152,9 +156,8 @@ When creating a new page, add a reference on top of the file:
 
 This reference could then be used to link to that page or section:
 
-.. code-block:: rst
 
-    :ref:`writing_documentation`
+   :ref:\`writing_documentation\`
 
 
 Link to GitHub resources

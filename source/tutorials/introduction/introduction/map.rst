@@ -28,7 +28,7 @@ The Download and links section shows external resources associated with the meta
 
 .. admonition:: Exercise
 
-    Locate the link labelled as *This dataset is published to the view service (WMS) available at http://data.fao.org/maps/wms with layer name GEONETWORK:basins_296* and select *Add to map*. This step will switch you to the Map tab in the catalog, and after a short delay the WMS layer will be added to the map. 
+    Locate the link labelled as *This dataset is published to the view service (WMS) available at http://data.fao.org/maps/wms with layer name GEONETWORK:basins_296* and select *Add to map*. This step will switch you to the Map tab in the catalog, and after a short delay the WMS layer will be added to the map.
 
 Tools for using the Map are arranged in two groups in the right-hand side of the map. The top group looks like this:
 
@@ -52,13 +52,13 @@ Additionally there is a geographic search tool in the top left.
 
 .. admonition:: Exercise
 
-    Use the Add Layers tool and type *Physiographic* in the Search box. Three results will be returned, for the three Physiographic records in the catalog. Click the + button next to the Physiography of North and Central Eurasia Landform result to add it to the map. 
+   Use the Add Layers tool and type *Physiographic* in the Search box. Three results will be returned, for the three Physiographic records in the catalog. Click the + button next to the Physiography of North and Central Eurasia Landform result to add it to the map.
 
-    Using the Manage Layers tool, select the cog symbol next to Physiography of North and Central Eurasia Landform and select Zoom to layer. The map will zoom to the extent of this layer. Select the paintbrush tool next to this layer to see the legend, showing you the classification used for the display.
+   Using the Manage Layers tool, select the cog symbol next to Physiography of North and Central Eurasia Landform and select Zoom to layer. The map will zoom to the extent of this layer. Select the paintbrush tool next to this layer to see the legend, showing you the classification used for the display.
 
-Layers in the map viewer can be managed from the layer panel: Reorder, change opacity, show legend and set alternative style. The map viewer has some advanced features such as map printing, distance measure and red lining. 
+Layers in the map viewer can be managed from the layer panel: Reorder, change opacity, show legend and set alternative style. The map viewer has some advanced features such as map printing, distance measure and red lining.
 
-The map viewer supports Featureinfo, to retrieve information by clicking on a location in the map. An administrator can activate WFS-indexing. If activated, users can filter the contents of a dataset. 
+The map viewer supports Featureinfo, to retrieve information by clicking on a location in the map. An administrator can activate WFS-indexing. If activated, users can filter the contents of a dataset.
 
 It is possible to add directly WMS, WFS or WMTS layers by entering the endpoint and selecting the layer from the capabilities response.
 

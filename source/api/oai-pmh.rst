@@ -3,7 +3,7 @@
 Open Archive Initiative (OAI)
 #############################
 
-**Not yet available in version 4.**
+.. warning:: Not yet available in version 4.
 
 The OAI-PMH end point exposes the metadata records in your catalog in XML format using the version 2.0 of the OAI-PMH protocol.
 

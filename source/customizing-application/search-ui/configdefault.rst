@@ -11,8 +11,8 @@ In order to enable developers to specify some configuration settings, we tried a
 
 Those settings are mainly stored in 2 AngularJS ``value`` objects:
 
-  - ``gnViewerSettings``
-  - ``gnSearchSettings``
+- ``gnViewerSettings``
+- ``gnSearchSettings``
 
 Those objects are injected via AngularJs ``$inject`` concept into all core services and directives.
 

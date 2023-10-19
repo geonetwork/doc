@@ -10,11 +10,11 @@ From the editor board, editors can do batch editing on multiple records.
 
 Batch editing consists of 3 steps:
 
- - Choose a set of records
+- Choose a set of records
 
- - Define edits
+- Define edits
 
- - Apply changes
+- Apply changes
 
 
 Defining edits
@@ -82,9 +82,7 @@ The batch edit report explains how many records were processed:
 
 .. figure:: img/batch-editing-report.png
 
-
-
-Batch editing can also be applied using the `API <|demo_url|/doc/api/index.html#/records/batchEdit>`_
+Batch editing can also be applied using the API: `doc/api/index.html#/records/batchEdit>`
 
 
 Examples

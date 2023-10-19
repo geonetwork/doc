@@ -3,5 +3,4 @@
 Glossary
 ########
 
-.. glossary::
-
+Empty

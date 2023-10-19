@@ -9,12 +9,12 @@ Facets also known as aggregation in Elasticsearch are used to provide simple sea
 - Home page categories
 
 
-.. figure:: img/agg-home.png
+  .. figure:: img/agg-home.png
 
 
 - Search results
 
-.. figure:: img/agg-search.png
+  .. figure:: img/agg-search.png
 
 
 All facet configurations are stored in the user interface configuration (see :ref:`user-interface-configuration`). The configuration are defined using JSON following Elasticsearch API (See https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket.html).
@@ -433,57 +433,57 @@ Decorate with icons
 * Fixed icon. eg. adding a tag icon to all values
 
 
-.. code-block:: js
+  .. code-block:: js
 
-  "decorator": {
-    "type": "icon",
-    "prefix": "fa fa-fw fa-tag "
-  }
+    "decorator": {
+      "type": "icon",
+      "prefix": "fa fa-fw fa-tag "
+    }
 
-.. figure:: img/agg-decorator-icon-fixed.png
+  .. figure:: img/agg-decorator-icon-fixed.png
 
 
 * Icon defined in a CSS class name using the value. eg. used for resource types ``gn-icon-dataset``
 
-.. code-block:: js
+  .. code-block:: js
 
-  "decorator": {
-    "type": "icon",
-    "prefix": "fa fa-fw gn-icon-"
-  }
+    "decorator": {
+      "type": "icon",
+      "prefix": "fa fa-fw gn-icon-"
+    }
 
 
-.. figure:: img/agg-decorator-icon.png
+  .. figure:: img/agg-decorator-icon.png
 
 
 * Icon defined in a css class name which is using only a portion of the value. eg. used for INSPIRE themes. The expression allows to extract the value
 
-.. code-block:: js
+  .. code-block:: js
 
-  "decorator": {
-    "type": "icon",
-    "prefix": "fa fa-fw gn-icon iti-",
-    "expression": "http://inspire.ec.europa.eu/theme/(.*)"
-  }
+    "decorator": {
+      "type": "icon",
+      "prefix": "fa fa-fw gn-icon iti-",
+      "expression": "http://inspire.ec.europa.eu/theme/(.*)"
+    }
 
 
-.. figure:: img/agg-decorator-icon-inspire.png
+  .. figure:: img/agg-decorator-icon-inspire.png
 
 
 * Icon defined with a map of values for the class name to use.
 
-.. code-block:: js
+  .. code-block:: js
 
-  "decorator": {
-    "type": "icon",
-    "prefix": "fa fa-fw ",
-    "map": {
-      "availableInViewService": "fa-globe",
-      "availableInDownloadService": "fa-download"
+    "decorator": {
+      "type": "icon",
+      "prefix": "fa fa-fw ",
+      "map": {
+        "availableInViewService": "fa-globe",
+        "availableInDownloadService": "fa-download"
+      }
     }
-  }
 
-.. figure:: img/agg-decorator-icon-map.png
+  .. figure:: img/agg-decorator-icon-map.png
 
 
 Decorate with images
@@ -522,8 +522,8 @@ One aggregation from the facet configuration can be selected to be displayed abo
     "search": {
       "facetTabField": "resourceType"
     }
-    
-    
+
+
 
 .. _configuring-facet-graphics:
 

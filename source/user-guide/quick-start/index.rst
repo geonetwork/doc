@@ -18,7 +18,7 @@ This Quick Start also describes:
 Starting the catalog
 --------------------
 
-This topic describes how to start GeoNetwork after installation on your machine. 
+This topic describes how to start GeoNetwork after installation on your machine.
 
 **Before you start:**
 
@@ -26,11 +26,11 @@ Ensure you have successfully installed GeoNetwork using the steps described in `
 
 To start the catalog:
 
-#. From your GeoNetwork folder location, open the bin folder and double-click start.bat (on windows) or startup.sh (on linux). This initiates a web service for GeoNetwork, which you can use to view the catalog. 
+#. From your GeoNetwork folder location, open the bin folder and double-click start.bat (on windows) or startup.sh (on linux). This initiates a web service for GeoNetwork, which you can use to view the catalog.
 
    Tip: If you are using the command line, you can view the log messages directly in the console.
 
-#. Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, use this link `http://localhost:8080/geonetwork`. 
+#. Open a web browser and go to the GeoNetwork homepage. If you installed it on your computer, use this link `http://localhost:8080/geonetwork`.
 
 #. The GeoNetwork catalog page is displayed.
 
@@ -58,14 +58,14 @@ This topic describes how to sign in using your admin login details and load temp
 
 #. On the Metadata  & templates page, select all standards from the Standards available list, and:
 
-   a. Click ``load samples``, and 
-   b. Click ``load templates`` to load examples. 
+   a. Click ``load samples``, and
+   b. Click ``load templates`` to load examples.
 
    .. figure:: ../../install-guide/img/templates.png
 
 #. From the top menu, click Search to view the examples:
 
-  .. figure:: ../../install-guide/img/once-samples-are-loaded.png
+   .. figure:: ../../install-guide/img/once-samples-are-loaded.png
 
 Searching information
 ---------------------
@@ -106,23 +106,21 @@ To view detailed information about the resources, click the record. These detail
 * Technical information
 * Metadata details
 
-.. figure:: img/a-record.png
+  .. figure:: img/a-record.png
 
 * To get more information, switch the advanced view mode.
 * To update the record, click Edit.
 
-.. _quick_start-3D:
+.. _quick_start-3D::
 
 From the results or the record view, you can add WMS layers referenced in
 a metadata record on the map. Using the map, you can:
 
-* Visualize your data, 
-* Choose your background maps, 
-* Query objects, 
+* Visualize your data,
+* Choose your background maps,
+* Query objects,
 * Display on a 3D globe
 
-
-.. figure:: img/map-africa-basin.png
-
+  .. figure:: img/map-africa-basin.png
 
 Read more about use of the :ref:`map-viewer-as-user`
