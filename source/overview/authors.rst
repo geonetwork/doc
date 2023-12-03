@@ -9,7 +9,7 @@ Project Steering Committee (PSC)
 The GeoNetwork Project Steering Committee (PSC) makes decisions on
 GeoNetwork opensource project issues.
 
-In brief the committee votes on proposals on the  geonetwork-dev mailinglist.
+In brief the committee votes on proposals on the `geonetwork-dev mailinglist <https://sourceforge.net/p/geonetwork/mailman/geonetwork-devel/>`_.
 Proposals are available for review for at least two days, and a single veto
 is sufficient to delay progress though ultimately a majority of members
 can pass a proposal.
@@ -17,7 +17,6 @@ can pass a proposal.
 Members of the Project Steering Committee
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Emanuele Tajariol
 * Florent Gravin
 * Francois Prunayre
 * Jeroen Ticheler - Chair
@@ -33,6 +32,7 @@ Former members of the PSC
 * Archie Warnock
 * Patrizia Monteduro
 * Jesse Eichar
+* Emanuele Tajariol
 
 Committers
 ----------
