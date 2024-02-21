@@ -6,8 +6,8 @@ Uploading attachments
 .. versionadded:: 3.2
 
 If documents are not available, editors can upload attachments to a
-metadata record. The document is added to the filestore. The filestore
-can contains any kind of files.
+metadata record. The attachment is added to the filestore. The filestore
+can contain any kind of files.
 
 
 .. figure:: img/filestore.png
@@ -43,6 +43,17 @@ quality report, legend).
 Filestore configuration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, the maximum file size is set to 100Mb. This limit is set in
+By default, the maximum file size is set to 100Mb. For building purposes this limit is set in
 :code:`/services/src/main/resources/config-spring-geonetwork.xml` with the
 parameter ``maxUploadSize``.
+
+For deployment or in a running web application the value for ``maxUploadSize`` can be adjusted in ``WEB-INF/config.xml`` accordingly:
+
+.. code-block:: xml
+
+   <general>
+       <!-- Size must be in megabyte (integer), 100MB by default -->
+       <maxUploadSize>5000</maxUploadSize>
+       <uploadDir>./data/tmp</uploadDir>
+       <debug>false</debug>
+   </general>
