@@ -94,4 +94,15 @@ Update Elasticsearch connection details in ```WEB-INF/config.properties``` and r
     es.username=
     es.password=
 
+
+Alternatively these can also be configured as system environment variables:
+
+.. code-block:: shell
+
+    GEONETWORK_ES_HOST=localhost
+    GEONETWORK_ES_PROTOCOL=http
+    GEONETWORK_ES_PORT=9200
+    GEONETWORK_ES_USERNAME=
+    GEONETWORK_ES_PASSWORD=
+
 It is not needed nor recommended to open port 9200 to the outside. GeoNetwork is protecting the Elasticsearch instance exposing only the search API and taking care of user privileges.
