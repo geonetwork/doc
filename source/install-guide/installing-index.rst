@@ -49,13 +49,13 @@ User may want to customize the index settings for example to change language con
 .. code-block:: shell
 
     cd $GN_DATA_DIRECTORY/config/index
-    curl -X DELETE http://localhost:9200/features
-    curl -X DELETE http://localhost:9200/records
-    curl -X DELETE http://localhost:9200/searchlogs
+    curl -X DELETE http://localhost:9200/gn-features
+    curl -X DELETE http://localhost:9200/gn-records
+    curl -X DELETE http://localhost:9200/gn-searchlogs
 
-    curl -X PUT http://localhost:9200/features -H 'Content-Type: application/json' -d @features.json
-    curl -X PUT http://localhost:9200/records -H 'Content-Type: application/json' -d @records.json
-    curl -X PUT http://localhost:9200/searchlogs -H 'Content-Type: application/json' -d @searchlogs.json
+    curl -X PUT http://localhost:9200/gn-features -H 'Content-Type: application/json' -d @features.json
+    curl -X PUT http://localhost:9200/gn-records -H 'Content-Type: application/json' -d @records.json
+    curl -X PUT http://localhost:9200/gn-searchlogs -H 'Content-Type: application/json' -d @searchlogs.json
 
 
 Install using Maven
