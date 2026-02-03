@@ -1,6 +1,0 @@
-:sorted:
-
-Glossary
-########
-
-Empty
